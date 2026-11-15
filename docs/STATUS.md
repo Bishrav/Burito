@@ -11,6 +11,8 @@
   evidence of a host driver failure.
 - Interactive local home education, memory correction, consistent private backups.
 - User-local Node/eve installer and initial agent identity instructions.
+- Versioned eleven-lesson beginner curriculum, local knowledge installation,
+  source provenance, manual review prompts, and separate personal/general stores.
 
 ## Not implemented
 

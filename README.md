@@ -40,6 +40,20 @@ backups or guarantee forensic erasure from the storage medium.
 - [Architecture and trust boundaries](docs/ARCHITECTURE.md)
 - [First milestone and machine setup](docs/SETUP.md)
 - [Progress and next work](docs/STATUS.md)
+- [Teaching Burito together](docs/LEARNING.md)
+
+Start its general education separately from your personal preferences:
+
+```bash
+python3 -m burito school install
+python3 -m burito school list
+python3 -m burito school lesson home.honesty
+```
+
+This installs three home-foundation lessons locally. Eleven introductory lessons
+are available in total, including IT and health literacy. Sources and review
+prompts accompany each lesson. Stored references are not model training or
+demonstrated understanding; AI access to this knowledge is not connected yet.
 
 The agent runtime preparation uses eve (TypeScript), with a local desktop companion.
 This Python foundation checks the machine and stores explicitly supplied

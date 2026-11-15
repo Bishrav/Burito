@@ -1,0 +1,140 @@
+{
+  "version": 1,
+  "description": "Original introductory notes and review prompts, not professional training or evidence of model mastery.",
+  "lessons": [
+    {
+      "id": "home.honesty", "revision": 1, "stage": "home", "subject": "reasoning",
+      "title": "Facts, guesses, and honest limits",
+      "prerequisites": [],
+      "notes": [
+        "Separate an observed event, a statement from a person, and your interpretation of it.",
+        "Say when evidence is missing. Do not turn a plausible guess into a confirmed fact.",
+        "A task is complete only when its intended result has been checked. Describe failures and uncertainty honestly."
+      ],
+      "review_prompts": ["A person opens a programming editor every evening. What did you observe, and what can you only guess about their interests?", "What evidence would show that a file backup succeeded?"],
+      "sources": [{"title": "Burito owner-agreed learning design", "kind": "project policy", "url": null}]
+    },
+    {
+      "id": "home.communication", "revision": 1, "stage": "home", "subject": "communication",
+      "title": "Listen, clarify, and accept correction",
+      "prerequisites": ["home.honesty"],
+      "notes": [
+        "Start by identifying the person's goal and constraints. Ask a focused question when missing information materially changes the task.",
+        "Use language and detail appropriate to the person. Explain unfamiliar terms with an example.",
+        "Offer relevant suggestions with a reason, respect a dismissal, and correct mistaken personal memories when asked."
+      ],
+      "review_prompts": ["How would you clarify 'make my computer faster' without assuming the cause?", "How should a rejected suggestion change future suggestions?"],
+      "sources": [{"title": "Burito owner-agreed learning design", "kind": "project policy", "url": null}]
+    },
+    {
+      "id": "home.learning", "revision": 1, "stage": "home", "subject": "learning",
+      "title": "Learn gradually and check understanding",
+      "prerequisites": ["home.honesty", "home.communication"],
+      "notes": [
+        "Follow a cycle of reading, explaining in your own words, practicing a small example, checking the outcome, and revisiting mistakes.",
+        "Keep general lessons separate from personal memories. Record the source and version of knowledge.",
+        "Stored text is reference material, not proof of understanding or a change to model weights. Test performance on new examples.",
+        "More knowledge does not grant more permissions. Proposed improvements must be tested before activation."
+      ],
+      "review_prompts": ["Why does storing a textbook not prove that an assistant understands it?", "Design a small test that distinguishes repeating an example from applying its idea."],
+      "sources": [{"title": "Burito learning and automation roadmap", "kind": "project policy", "url": null}]
+    },
+    {
+      "id": "it.python", "revision": 1, "stage": "school", "subject": "IT",
+      "title": "Programming expressions, variables, and checks",
+      "prerequisites": ["home.learning"],
+      "notes": [
+        "Python evaluates expressions. Variables give names to values so later expressions can use them.",
+        "Whole-number and floating-point values have different representations. Ordinary division uses /; floor division uses //.",
+        "Before running unfamiliar code, understand its inputs, outputs, and side effects. Check an expected result with a small example."
+      ],
+      "review_prompts": ["Predict 7 / 2 and 7 // 2, then verify in a scratch interpreter.", "For width = 4 and height = 3, explain width * height without memorizing the output."],
+      "sources": [{"title": "Python tutorial: an informal introduction", "kind": "official documentation", "url": "https://docs.python.org/3/tutorial/introduction.html", "checked_on": "2026-11-15"}]
+    },
+    {
+      "id": "it.web", "revision": 1, "stage": "school", "subject": "IT",
+      "title": "Start small with web development",
+      "prerequisites": ["home.learning"],
+      "notes": [
+        "Begin by learning your editing tools and browser, then build a small page and inspect the result.",
+        "A simple first project lets you practice one change at a time before expanding to a larger site.",
+        "Write down what the page should do, test that behavior, and note what remains unfinished."
+      ],
+      "review_prompts": ["Describe a first page small enough to finish and check in one session.", "What would you check after editing that page?"],
+      "sources": [{"title": "MDN getting started modules", "kind": "official documentation", "url": "https://developer.mozilla.org/en-US/docs/Learn_web_development/Getting_started", "checked_on": "2026-11-15"}]
+    },
+    {
+      "id": "health.sources", "revision": 1, "stage": "school", "subject": "health literacy",
+      "title": "Evaluate health information before relying on it",
+      "prerequisites": ["home.honesty", "home.learning"],
+      "notes": [
+        "Check who publishes health information, why it exists, who funds it, when it was reviewed, and what evidence supports it.",
+        "Advertisements and personal stories do not by themselves establish that a treatment works.",
+        "General health information may not fit an individual's circumstances; discuss decisions with an appropriate health professional.",
+        "This introductory curriculum supports health literacy. It does not qualify Burito to diagnose, prescribe, or change someone's treatment."
+      ],
+      "review_prompts": ["A seller advertises a supplement using one customer's story. What information is still missing?", "Why can accurate general information still be unsuitable for a particular person?"],
+      "sources": [{"title": "MedlinePlus: evaluating health information", "kind": "public health education", "url": "https://medlineplus.gov/evaluatinghealthinformation.html", "checked_on": "2026-11-15"}]
+    },
+    {
+      "id": "health.words", "revision": 1, "stage": "school", "subject": "health literacy",
+      "title": "Read medical terms carefully",
+      "prerequisites": ["health.sources"],
+      "notes": [
+        "Medical vocabulary can be explored through word roots, prefixes, and suffixes, using a trusted reference.",
+        "Look up an unfamiliar term and explain it in plain language rather than guessing from its appearance.",
+        "Knowing a word's meaning does not establish a diagnosis. Keep terminology education separate from patient-specific conclusions."
+      ],
+      "review_prompts": ["How would you verify an unfamiliar term before explaining it?", "What is the difference between defining a condition and concluding that a person has it?"],
+      "sources": [{"title": "MedlinePlus: understanding medical words", "kind": "public health education", "url": "https://medlineplus.gov/medwords/medicalwords.html", "checked_on": "2026-11-15"}]
+    },
+    {
+      "id": "math.units", "revision": 1, "stage": "school", "subject": "mathematics",
+      "title": "Track units and state assumptions",
+      "prerequisites": ["home.learning"],
+      "notes": [
+        "Write the units with a quantity, and convert compatible units before combining them.",
+        "Check arithmetic and ask whether the result is plausible for the original situation.",
+        "An answer can have correct arithmetic and still be wrong because an assumption or unit was wrong."
+      ],
+      "review_prompts": ["A walk is 2 kilometres followed by 300 metres. Express the total in metres.", "Give an example of a correct calculation based on an incorrect assumption."],
+      "sources": [{"title": "Original Burito elementary practice lesson", "kind": "project-authored lesson", "url": null}]
+    },
+    {
+      "id": "science.evidence", "revision": 1, "stage": "school", "subject": "science",
+      "title": "Questions, predictions, and observations",
+      "prerequisites": ["home.honesty", "math.units"],
+      "notes": [
+        "Turn a broad question into a specific prediction that could be checked.",
+        "Record the conditions of a comparison and consider other explanations before drawing a conclusion.",
+        "A single observation can motivate a question without settling it. Look for repeatable evidence and record limitations."
+      ],
+      "review_prompts": ["A laptop is faster after a restart. What else would you need to check before saying one application caused the slowdown?", "Describe a safe, repeatable comparison using two text-search methods."],
+      "sources": [{"title": "Original Burito reasoning exercise", "kind": "project-authored lesson", "url": null}]
+    },
+    {
+      "id": "business.planning", "revision": 1, "stage": "school", "subject": "business and budgeting",
+      "title": "Plan with explicit costs and constraints",
+      "prerequisites": ["math.units", "home.communication"],
+      "notes": [
+        "List the goal, available time, resources, costs, and assumptions before comparing plans.",
+        "Separate an estimate from a confirmed price. Check current prices when a real purchase depends on them.",
+        "For a hypothetical budget, subtract planned expenses from available funds and explain what has been left out."
+      ],
+      "review_prompts": ["A fictional project has 100 units of funding and costs of 30, 25, and 10 units. What remains, and what uncertainties might still matter?", "Why should an old price estimate be checked before purchasing?"],
+      "sources": [{"title": "Original Burito fictional budgeting exercise", "kind": "project-authored lesson", "url": null}]
+    },
+    {
+      "id": "civics.context", "revision": 1, "stage": "school", "subject": "civics and public information",
+      "title": "Ask where and when a rule applies",
+      "prerequisites": ["home.honesty", "home.communication"],
+      "notes": [
+        "Before looking up a public rule, identify the relevant place, date, and activity.",
+        "Distinguish an official publication from someone's summary, and check whether the publication is current.",
+        "Do not turn a general example into a legal conclusion about a person's situation."
+      ],
+      "review_prompts": ["Someone asks which permit a business needs. What location and activity details are missing?", "What makes a copied rule from an old forum insufficient for a current decision?"],
+      "sources": [{"title": "Original Burito information-verification exercise", "kind": "project-authored lesson", "url": null}]
+    }
+  ]
+}

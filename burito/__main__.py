@@ -7,6 +7,7 @@ import sys
 from .doctor import report
 from .memory import Memory
 from .education import teach
+from .school import School, catalog
 
 
 def main(argv=None):
@@ -26,10 +27,33 @@ def main(argv=None):
     backup.add_argument("destination", help="Absolute path to a new file in an existing directory")
     forget = commands.add_parser("forget", help="Delete one fact by its full ID")
     forget.add_argument("id")
+    school = commands.add_parser("school", help="General curriculum, separate from personal facts")
+    school_commands = school.add_subparsers(dest="school_command", required=True)
+    school_commands.add_parser("list", help="List available lessons in teaching order")
+    lesson = school_commands.add_parser("lesson", help="Read a reference lesson and review prompts")
+    lesson.add_argument("id")
+    install = school_commands.add_parser("install", help="Store selected lessons locally; not model training")
+    install.add_argument("--stage", choices=["home", "school", "all"], default="home")
+    school_commands.add_parser("status", help="List installed references; does not assess understanding")
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
             print(json.dumps(report(), indent=2))
+        elif args.command == "school":
+            if args.school_command == "list":
+                for lesson in catalog():
+                    print(f"{lesson['id']} [{lesson['stage']}; {lesson['subject']}] {lesson['title']}")
+            elif args.school_command == "lesson":
+                lessons = {lesson["id"]: lesson for lesson in catalog()}
+                if args.id not in lessons:
+                    raise ValueError("Unknown lesson ID; use 'school list'")
+                print(json.dumps(lessons[args.id], indent=2))
+            elif args.school_command == "install":
+                print(f"Stored {School().install(args.stage)} new or updated reference lesson(s). Not model training.")
+            else:
+                lessons = School().installed()
+                print(json.dumps({"reference_lessons": len(lessons), "understanding_assessed": False,
+                                  "installed_ids": [lesson["id"] for lesson in lessons]}, indent=2))
         else:
             memory = Memory()
             if args.command == "init":
