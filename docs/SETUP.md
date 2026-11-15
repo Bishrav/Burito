@@ -20,10 +20,12 @@ sharing it. An NVIDIA failure is a readiness finding, not proof the card is abse
   kernel module is loaded, but `/dev/nvidia*` is absent in the restricted session.
   `nvidia-smi` here therefore does not establish a broken host driver. Verify it
   in the normal desktop terminal before changing drivers.
-- Linux partition exposes approximately 76 GB free; intended 4 TB storage is
-  not visible in this session. Do not partition, format, or download models
-  until the correct physical volume and mount are confirmed.
-- Python 3.14 available; Node/npm not found on PATH.
+- The owner verified a working RTX 5070 with 12227 MiB VRAM and driver 595.99.02
+  in the normal terminal. No driver repair is indicated by that output.
+- Linux partition exposes roughly 73 GiB free; intended 4 TB storage is
+  not visible in this session. The first small model can use the existing Linux
+  filesystem. Do not partition or format disks, or assume Windows space is free.
+- Python 3.14 and checkout-local Node 26.13.1/npm are available.
 - Shell cannot resolve github.com; connected GitHub tools can access repository.
 
 These observations describe the exposed development environment; it may not

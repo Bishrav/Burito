@@ -26,8 +26,29 @@ Reference design uses the official eve documentation for
 
 ## 2. Verify the GPU and choose a local model
 
-Run `nvidia-smi` in the normal terminal. Confirm usable VRAM and storage before
-choosing or downloading a tool-capable model. The prepared adapter expects an
+The owner verified a working RTX 5070 with about 12 GB VRAM, including about
+10.5 GiB free in the supplied snapshot. Start conservatively with
+[`qwen3:8b`](https://ollama.com/library/qwen3:8b): its listed quantized download
+is 5.2 GB. Runtime memory also includes context/cache and other overhead; model
+download size is not total VRAM usage. Start with an 8192-token context and
+measure actual placement and responsiveness. This is an initial compatibility
+choice, not a benchmark or a claim that it is the strongest available model.
+
+Install Ollama in the normal terminal using its
+[official Linux instructions](https://docs.ollama.com/linux):
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+ollama --version
+```
+
+The official installer installs a system service and may ask for sudo. This is
+separate from Burito's user-local Node installer. Verify installation first;
+the next step is the model pull and context configuration. No model is pulled
+by these two commands. The restricted development session cannot perform this
+download on the owner's behalf.
+
+The prepared adapter expects an
 OpenAI-compatible local server, by default `http://127.0.0.1:11434/v1`.
 No server or model is bundled. Do not copy a model recommendation without
 checking the memory needed for both weights and context.

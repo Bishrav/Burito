@@ -35,8 +35,19 @@ and trace content capture are disabled by the launcher.
 
 ## Next
 
-1. Verify host GPU with `nvidia-smi` in a normal terminal and identify the intended storage.
-2. Select and install a local model after measuring VRAM, then verify offline text chat.
+Host GPU verification succeeded in the owner's normal terminal: RTX 5070,
+12227 MiB VRAM, NVIDIA driver 595.99.02. The restricted session's missing GPU
+device files do not require a driver reinstall.
+
+1. Install Ollama in the normal terminal, then prepare the first small local model.
+2. Start with `qwen3:8b` and an 8192-token context; verify actual GPU placement
+   and response behavior before increasing size. This is a starter choice,
+   not a claim of best possible model quality or measured performance.
 3. Verify the lesson bridge and optional personal memory, including correction.
 4. Add the basic desktop interface around working text chat, followed by voice.
 5. Add optional cloud routing with explicit context and budget configuration.
+
+The intended 4 TB volume remains unidentified. The current Linux filesystem has
+enough free space for this initial small model; use it for the first smoke test,
+without repartitioning or changing Windows volumes. Plan large libraries and
+model collections only after confirming the intended storage mount.
