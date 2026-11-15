@@ -8,6 +8,8 @@ from .doctor import report
 from .memory import Memory
 from .education import teach
 from .school import School, catalog
+from .context import build_context
+from .chat import chat
 
 
 def main(argv=None):
@@ -35,10 +37,23 @@ def main(argv=None):
     install = school_commands.add_parser("install", help="Store selected lessons locally; not model training")
     install.add_argument("--stage", choices=["home", "school", "all"], default="home")
     school_commands.add_parser("status", help="List installed references; does not assess understanding")
+    context = commands.add_parser("context", help="Preview one installed lesson for local AI context")
+    context.add_argument("--lesson", default="home.honesty")
+    context.add_argument("--include-personal", action="store_true")
+    conversation = commands.add_parser("chat", help="Start local eve chat after runtime and model setup")
+    conversation.add_argument("--model", required=True, help="Name of an installed local model")
+    conversation.add_argument("--context-tokens", type=int, required=True,
+                              help="Context size actually configured on the local model server")
+    conversation.add_argument("--lesson", default="home.honesty")
+    conversation.add_argument("--include-personal", action="store_true")
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
             print(json.dumps(report(), indent=2))
+        elif args.command == "context":
+            print(json.dumps(build_context(args.lesson, args.include_personal), indent=2))
+        elif args.command == "chat":
+            return chat(args.model, args.context_tokens, args.lesson, args.include_personal)
         elif args.command == "school":
             if args.school_command == "list":
                 for lesson in catalog():

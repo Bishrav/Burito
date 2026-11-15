@@ -53,7 +53,14 @@ python3 -m burito school lesson home.honesty
 This installs three home-foundation lessons locally. Eleven introductory lessons
 are available in total, including IT and health literacy. Sources and review
 prompts accompany each lesson. Stored references are not model training or
-demonstrated understanding; AI access to this knowledge is not connected yet.
+demonstrated understanding.
+The read-only chat bridge is now prepared but has not been verified with an
+installed model. See [first local conversation](docs/FIRST_CHAT.md) for its setup
+gates and limitations. Preview the selected lesson with:
+
+```bash
+python3 -m burito context --lesson home.honesty
+```
 
 The agent runtime preparation uses eve (TypeScript), with a local desktop companion.
 This Python foundation checks the machine and stores explicitly supplied
@@ -67,7 +74,8 @@ bash scripts/setup-runtime.sh
 
 This downloads Node 26.13.1 from nodejs.org if Node 24+ and npm are unavailable,
 checks the archive against its HTTPS-served SHA-256 manifest, and installs it
-inside `.tools/`. It then installs eve, ai, and zod in `runtime/`, saving exact
+inside `.tools/`. It then installs eve, ai, zod, and the OpenAI-compatible adapter
+in `runtime/`, saving exact
 versions and a lockfile. This can take several minutes. It does not use sudo,
 change drivers, download AI models, start a chat, or enable observation.
 No dependency lockfile exists until this installation succeeds. Subsequent

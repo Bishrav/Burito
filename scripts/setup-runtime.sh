@@ -85,7 +85,10 @@ export npm_config_fetch_timeout=60000
 if [[ -f package-lock.json ]]; then
     npm ci --no-audit --no-fund
 else
-    npm install --save-exact --no-audit --no-fund eve@latest ai@latest zod@latest
+    npm install --save-exact --no-audit --no-fund eve@latest ai@latest zod@latest @ai-sdk/openai-compatible@latest
+fi
+if [[ ! -d node_modules/@ai-sdk/openai-compatible ]]; then
+    npm install --save-exact --no-audit --no-fund @ai-sdk/openai-compatible@latest
 fi
 echo 'Runtime packages installed. No agent or cloud model has been started.'
 echo 'Next: inspect runtime/node_modules/eve/docs/README.md and select a model.'

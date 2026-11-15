@@ -44,7 +44,8 @@ cybersecurity in authorized labs, engineering, biological sciences, economics,
 agriculture, education, and creative work. Add domain-specific sources before
 claiming coverage. A source list alone is not a completed course.
 
-After AI chat works, connect retrieval to the lesson store. Evaluate explanations
+The prepared chat bridge reads one installed lesson at a time. After AI chat
+works and the bridge is verified, evaluate explanations
 and novel practice tasks, record mistakes separately, and revisit weak areas.
 Do not automatically count a lesson as understood because the model says so.
 Use held-out tasks and owner/domain-expert review when the stakes justify it.
