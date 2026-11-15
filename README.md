@@ -3,10 +3,10 @@
 A personal hybrid assistant for Kubuntu: local memory, offline reasoning,
 online research, useful suggestions, and progressively verified automation.
 
-**Status: foundation and runtime preparation.** This is not yet a talking AI or a desktop
-observer. The Python foundation performs no background monitoring, network
-requests, or automatic actions. The separate runtime installer downloads packages
-only when you explicitly run it.
+**Status: local inventory and runtime preparation.** A live model conversation
+and screen observation are not yet verified. The optional PC inventory timer
+collects local metadata when enabled; it does not capture screens or file contents.
+The separate runtime installer downloads packages only when explicitly run.
 
 ## Start here
 
@@ -41,6 +41,19 @@ backups or guarantee forensic erasure from the storage medium.
 - [First milestone and machine setup](docs/SETUP.md)
 - [Progress and next work](docs/STATUS.md)
 - [Teaching Burito together](docs/LEARNING.md)
+- [Local PC inventory and change detection](docs/PC_AWARENESS.md)
+
+To establish a computer inventory and enable periodic metadata checks after login:
+
+```bash
+python3 -m burito pc scan
+python3 -m burito pc enable
+python3 -m burito pc monitor-status
+```
+
+These commands collect local inventory and file metadata, not screenshots or
+file contents. Run `python3 -m burito pc pause` to stop collection. See the scope
+and limits in the PC-awareness guide before treating the inventory as complete.
 
 Start its general education separately from your personal preferences:
 

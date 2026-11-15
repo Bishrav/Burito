@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def chat(model, context_tokens, lesson="home.honesty", include_personal=False):
+def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True):
     runtime = ROOT / "runtime"
     environment = os.environ.copy()
     candidates = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
@@ -24,13 +24,14 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False):
         raise ValueError("Choose a local model and a server context size between 4096 and 131072 tokens")
     # Validate the selected local data before starting the model runtime.
     from .context import build_context
-    build_context(lesson, include_personal)
+    build_context(lesson, include_personal, include_system=include_system)
     environment.update({
         "BURITO_MODE": "local",
         "BURITO_LOCAL_MODEL": model,
         "BURITO_CONTEXT_TOKENS": str(context_tokens),
         "BURITO_LESSON_ID": lesson,
         "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
+        "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
         "BURITO_PROJECT_ROOT": str(ROOT),
         "BURITO_PYTHON": sys.executable,
         "EVE_TELEMETRY_DISABLED": "1",

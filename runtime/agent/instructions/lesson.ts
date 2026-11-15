@@ -11,10 +11,11 @@ export default defineDynamic(async (ctx) => {
   const python = process.env.BURITO_PYTHON;
   if (!root || !python) throw new Error('Start Burito with python3 -m burito chat.');
   const context = await ctx.memo(
-    ['lesson', ctx.turn?.id ?? null, settings.lesson, settings.includePersonal],
+    ['lesson', ctx.turn?.id ?? null, settings.lesson, settings.includePersonal, settings.includeSystem],
     async () => {
       const args = ['-m', 'burito', 'context', '--lesson', settings.lesson];
       if (settings.includePersonal) args.push('--include-personal');
+      if (!settings.includeSystem) args.push('--no-system');
       const result = await execute(python, args, {
         cwd: root, timeout: 5000, maxBuffer: 65536,
       });

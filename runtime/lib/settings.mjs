@@ -18,5 +18,6 @@ export function readSettings(environment) {
     model, contextTokens, baseURL: endpoint.href,
     lesson: environment.BURITO_LESSON_ID || 'home.honesty',
     includePersonal: environment.BURITO_INCLUDE_PERSONAL_MEMORY === '1',
+    includeSystem: environment.BURITO_INCLUDE_SYSTEM !== '0',
   };
 }

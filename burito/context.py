@@ -7,7 +7,7 @@ from .school import School
 
 
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
-                  max_chars=12000):
+                  max_chars=12000, include_system=True):
     memory = memory if memory is not None else Memory()
     lessons = {item["id"]: item for item in School(memory).installed()}
     if lesson_id not in lessons:
@@ -22,6 +22,19 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
     }
     if len(json.dumps(context)) > max_chars:
         raise ValueError("Selected lesson exceeds the context size limit")
+    if include_system:
+        from .awareness import Awareness
+        summary = Awareness(memory).summary()
+        context["pc_inventory"] = summary
+        if len(json.dumps(context)) > max_chars:
+            # Keep the source timestamp and uncertainty even when trimming details.
+            context["pc_inventory"] = {key: summary[key] for key in
+                                       ("available", "last_scan", "scope") if key in summary}
+            context["pc_inventory"]["partial_categories"] = list(summary.get("partial_or_unavailable", {}))
+            context["pc_inventory"]["details_omitted"] = True
+            context["truncated"] = True
+        if len(json.dumps(context)) > max_chars:
+            context.pop("pc_inventory")
     if include_personal:
         facts = memory.list()
         for record in facts[-10:]:

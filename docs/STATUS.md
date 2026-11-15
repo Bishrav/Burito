@@ -14,6 +14,9 @@
 - Versioned eleven-lesson beginner curriculum, local knowledge installation,
   source provenance, manual review prompts, and separate personal/general stores.
 - Bounded, one-lesson context builder; personal facts excluded by default.
+- Local machine inventory, bounded home-file metadata change detection, a
+  systemd user timer installer, pause/status controls, and bounded local chat
+  inventory summaries. Timer activation must be verified in Konsole.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles successfully and exposes no action tools.
@@ -21,8 +24,8 @@
 
 ## Not implemented
 
-Verified AI chat, hybrid routing, semantic retrieval, voice, desktop observation,
-proactive suggestions, autostart, desktop actions, automatic training,
+Verified AI chat, hybrid routing, semantic retrieval, voice, screen observation,
+proactive suggestions, chat autostart, desktop actions, automatic training,
 encryption, scheduled backups, restore tooling, and autonomous execution.
 Runtime dependency installation succeeded through the normal desktop terminal.
 Node 26.13.1 and eve 1.0.0-rc.18 are installed. Exact package versions and the

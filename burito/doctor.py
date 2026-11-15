@@ -77,7 +77,7 @@ def report():
         "node": node,
         "npm": probe(["npm", "--version"], environment),
         "block_devices": probe(["lsblk", "-o", "NAME,SIZE,TYPE,FSTYPE,MOUNTPOINTS"]),
-        "observation": "not implemented; disabled",
+        "observation": "PC metadata collector available; use pc monitor-status. Screen capture is not implemented.",
         "cloud": "not configured; disabled",
     }
     result["next_steps"] = []

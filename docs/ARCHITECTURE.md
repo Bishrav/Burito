@@ -50,5 +50,6 @@ against current owner-granted scopes. Credentials stay in local secret storage
 or environment configuration. The GitHub repository contains code and synthetic
 examples, never the owner's memory, conversations, observations, or tokens.
 
-No automatic startup is installed in this milestone. Startup, capture, internet
-tools, cloud inference, and action execution are separate capabilities.
+An optional systemd user timer now supports periodic local inventory after user
+manager startup. It is separate from chat startup, screen capture, internet tools,
+cloud inference, and action execution. See PC_AWARENESS.md for scope and controls.

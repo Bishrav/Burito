@@ -4,12 +4,14 @@ import argparse
 import json
 import sqlite3
 import sys
+import subprocess
 from .doctor import report
 from .memory import Memory
 from .education import teach
 from .school import School, catalog
 from .context import build_context
 from .chat import chat
+from .awareness import Awareness, enable, pause, monitor_status
 
 
 def main(argv=None):
@@ -46,14 +48,32 @@ def main(argv=None):
                               help="Context size actually configured on the local model server")
     conversation.add_argument("--lesson", default="home.honesty")
     conversation.add_argument("--include-personal", action="store_true")
+    context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
+    conversation.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
+    pc = commands.add_parser("pc", help="Local computer inventory and metadata changes")
+    pc_commands = pc.add_subparsers(dest="pc_command", required=True)
+    for name in ("scan", "status", "changes", "enable", "pause", "monitor-status"):
+        pc_commands.add_parser(name)
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
             print(json.dumps(report(), indent=2))
         elif args.command == "context":
-            print(json.dumps(build_context(args.lesson, args.include_personal), indent=2))
+            print(json.dumps(build_context(args.lesson, args.include_personal, include_system=not args.no_system), indent=2))
         elif args.command == "chat":
-            return chat(args.model, args.context_tokens, args.lesson, args.include_personal)
+            return chat(args.model, args.context_tokens, args.lesson, args.include_personal,
+                        include_system=not args.no_system)
+        elif args.command == "pc":
+            if args.pc_command == "enable":
+                print(enable())
+            elif args.pc_command == "pause":
+                print(pause())
+            elif args.pc_command == "monitor-status":
+                print(json.dumps(monitor_status(), indent=2))
+            else:
+                awareness = Awareness()
+                result = awareness.scan() if args.pc_command == "scan" else awareness.summary() if args.pc_command == "status" else awareness.changes()
+                print(json.dumps(result, indent=2))
         elif args.command == "school":
             if args.school_command == "list":
                 for lesson in catalog():
@@ -91,7 +111,7 @@ def main(argv=None):
                     print("Memory ID not found", file=sys.stderr)
                     return 1
                 print("Memory deleted from the live database")
-    except (ValueError, OSError, sqlite3.Error) as error:
+    except (ValueError, OSError, sqlite3.Error, subprocess.TimeoutExpired) as error:
         print(f"Burito: {error}", file=sys.stderr)
         return 1
     return 0
