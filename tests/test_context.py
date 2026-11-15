@@ -62,6 +62,8 @@ class ContextTests(unittest.TestCase):
                  patch('builtins.print'):
                 self.assertEqual(chat('synthetic-model', 8192), 0)
             args, kwargs = run.call_args
-            self.assertEqual(args[0], ['/fake/node', str(cli), 'dev'])
+            self.assertEqual(args[0], ['/fake/node', str(cli), 'dev', '--no-default-extensions'])
             self.assertEqual(kwargs['env']['BURITO_MODE'], 'local')
             self.assertEqual(kwargs['env']['BURITO_INCLUDE_PERSONAL_MEMORY'], '0')
+            self.assertEqual(kwargs['env']['EVE_TELEMETRY_DISABLED'], '1')
+            self.assertEqual(kwargs['env']['EVE_TRACES_CONTENT'], 'off')

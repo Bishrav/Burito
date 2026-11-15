@@ -33,11 +33,14 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False):
         "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
         "BURITO_PROJECT_ROOT": str(ROOT),
         "BURITO_PYTHON": sys.executable,
+        "EVE_TELEMETRY_DISABLED": "1",
+        "EVE_TRACES_CONTENT": "off",
+        "EVE_SCHEDULES_DISABLED": "1",
     })
     print(f"Starting local Burito with lesson {lesson}. No automatic cloud fallback.")
     print("Personal memory included." if include_personal else "Personal memory excluded.")
     try:
-        return subprocess.run([node, str(cli), "dev"], cwd=runtime, env=environment,
+        return subprocess.run([node, str(cli), "dev", "--no-default-extensions"], cwd=runtime, env=environment,
                               check=False).returncode
     except KeyboardInterrupt:
         return 130

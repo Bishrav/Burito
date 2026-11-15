@@ -1,9 +1,9 @@
 # First local text conversation
 
-Status: connection code prepared; not yet verified against an installed eve
-version or a live model. This session cannot download Node or runtime packages.
-The Python context boundary has local tests; runtime settings have Node tests
-in CI. Passing those is not evidence of a successful model conversation.
+Status: runtime installed, installed-version APIs checked, and agent discovery
+compiles with no action tools. A live model conversation is not yet verified.
+The Python context boundary, runtime settings, and actual eve discovery have
+tests. Passing those is not evidence of a successful model conversation.
 
 ## 1. Install the runtime
 
@@ -14,11 +14,10 @@ cd ~/Burito
 bash scripts/setup-runtime.sh
 ```
 
-The installer adds eve, ai, zod, and the AI SDK OpenAI-compatible adapter with
-exact resolved versions. It does not install or download a model. After it
-finishes, inspect `runtime/node_modules/eve/docs/README.md` and the relevant
-guides. Compare this prepared integration to those versioned APIs before use,
-then commit the generated package changes and lockfile after verification.
+The installer uses the committed lockfile with exact resolved versions of eve,
+ai, zod, and the AI SDK OpenAI-compatible adapter. It does not install or download
+a model. The current integration was checked against eve 1.0.0-rc.18's bundled
+documentation. Recheck that documentation when upgrading packages.
 
 Reference design uses the official eve documentation for
 [local models](https://eve.dev/docs/agent-config),
@@ -59,7 +58,7 @@ python3 -m burito chat --model YOUR_INSTALLED_MODEL --context-tokens YOUR_SERVER
 ```
 
 These uppercase values are placeholders, not a model to download. The launcher
-uses an installed system or checkout-local Node and starts `eve dev` in
+uses an installed system or checkout-local Node and starts `eve dev --no-default-extensions` in
 `runtime/`. It sets the Python interpreter and project location for the read-only
 context bridge. Personal facts require `--include-personal`; the default is off.
 Use a fresh local development session; do not resume unrelated historical chats.
@@ -67,6 +66,10 @@ Use a fresh local development session; do not resume unrelated historical chats.
 The dynamic model configuration accepts literal loopback endpoints only and
 rejects cloud mode. It does not silently fall back to a hosted model. No web
 tools, cloud routing, desktop tools, or self-modification extensions are added.
+The agent sets `defaultTools: false`, so eve's shell, file, web, and generic agent
+tools are absent. The launcher also disables CLI telemetry, trace content
+capture, and schedules. Session history still exists; this is not a guarantee
+that conversation text is never stored.
 Cloud/hybrid routing needs a separate implementation with session isolation,
 context-sharing policy, budget limits, and failure handling.
 

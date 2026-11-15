@@ -16,3 +16,4 @@ dist/
 .tools/
 runtime/.vercel/
 runtime/.env*
+runtime/.eve-info.json

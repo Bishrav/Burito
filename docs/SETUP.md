@@ -69,10 +69,16 @@ runtime with its implicit default model: choose and configure the intended
 local/cloud model first. Instructions alone are not a permission boundary;
 the executor remains a later implementation task.
 
-The installer cannot be completed in this restricted development shell because
-nodejs.org cannot be resolved. This is a session limitation, not a diagnosis of
-the desktop internet connection. The script's syntax and local failure path
-are testable here; package installation and AI conversation are not yet verified.
+Installation completed successfully from the normal desktop terminal. This
+restricted shell still cannot resolve download hosts or access GPU devices;
+those are session limitations, not diagnoses of the desktop connection or driver.
+The installed eve APIs and agent discovery were checked locally. Discovery
+reports zero errors and no model action tools; conversation with a real model
+remains unverified until the local server/model is installed.
+
+For a fresh runtime check after installation, run `npm run check:discovery`,
+then `npm test` inside `runtime/` with the selected Node version on PATH.
+Discovery uses the public eve CLI, and the tests inspect its fresh output.
 
 ## Storage override
 

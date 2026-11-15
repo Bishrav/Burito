@@ -14,11 +14,19 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - run: python -m unittest discover -s tests -v
-  runtime-settings:
+  runtime-checks:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: '26'
-      - run: node --test runtime/tests/settings.test.mjs
+      - run: npm ci --no-audit --no-fund
+        working-directory: runtime
+      - run: npm run check:discovery
+        working-directory: runtime
+        env:
+          EVE_TELEMETRY_DISABLED: '1'
+          EVE_TRACES_CONTENT: 'off'
+      - run: npm test
+        working-directory: runtime

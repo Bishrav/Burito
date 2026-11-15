@@ -78,9 +78,9 @@ inside `.tools/`. It then installs eve, ai, zod, and the OpenAI-compatible adapt
 in `runtime/`, saving exact
 versions and a lockfile. This can take several minutes. It does not use sudo,
 change drivers, download AI models, start a chat, or enable observation.
-No dependency lockfile exists until this installation succeeds. Subsequent
-runs use `npm ci` against that lockfile. Runtime installation is not yet verified
-in the development environment because direct network access is unavailable.
+The runtime is installed and its generated lockfile is committed. Subsequent
+runs use `npm ci` against that lockfile. Installed-version discovery and tests
+pass; a live model conversation is still pending GPU/model setup.
 
 See the [eve setup documentation](https://eve.dev/docs/getting-started).
 
