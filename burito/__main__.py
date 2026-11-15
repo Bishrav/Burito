@@ -1,0 +1,46 @@
+"""Run with python3 -m burito from the checkout."""
+
+import argparse
+import json
+import sqlite3
+import sys
+from .doctor import report
+from .memory import Memory
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(description="Burito foundation: diagnostics and local memory")
+    commands = parser.add_subparsers(dest="command", required=True)
+    commands.add_parser("doctor", help="Read-only readiness report; no network calls")
+    commands.add_parser("init", help="Create private local memory storage")
+    remember = commands.add_parser("remember", help="Store an explicitly provided fact")
+    remember.add_argument("content")
+    remember.add_argument("--source", default="owner")
+    commands.add_parser("memories", help="List stored facts as JSON")
+    forget = commands.add_parser("forget", help="Delete one fact by its full ID")
+    forget.add_argument("id")
+    args = parser.parse_args(argv)
+    try:
+        if args.command == "doctor":
+            print(json.dumps(report(), indent=2))
+        else:
+            memory = Memory()
+            if args.command == "init":
+                print(f"Local memory ready: {memory.initialize()}")
+            elif args.command == "remember":
+                print(memory.remember(args.content, args.source))
+            elif args.command == "memories":
+                print(json.dumps(memory.list(), indent=2))
+            elif args.command == "forget":
+                if not memory.forget(args.id):
+                    print("Memory ID not found", file=sys.stderr)
+                    return 1
+                print("Memory deleted from the live database")
+    except (ValueError, OSError, sqlite3.Error) as error:
+        print(f"Burito: {error}", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
