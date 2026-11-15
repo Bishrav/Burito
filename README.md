@@ -42,6 +42,7 @@ backups or guarantee forensic erasure from the storage medium.
 - [Progress and next work](docs/STATUS.md)
 - [Teaching Burito together](docs/LEARNING.md)
 - [Local PC inventory and change detection](docs/PC_AWARENESS.md)
+- [Using files and applications from chat](docs/PC_ACCESS.md)
 
 To establish a computer inventory and enable periodic metadata checks after login:
 

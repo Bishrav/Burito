@@ -10,7 +10,7 @@ import sys
 ROOT = Path(__file__).resolve().parent.parent
 
 
-def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True):
+def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True, pc_access=True):
     runtime = ROOT / "runtime"
     environment = os.environ.copy()
     candidates = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
@@ -32,6 +32,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         "BURITO_LESSON_ID": lesson,
         "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
         "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
+        "BURITO_PC_ACCESS": "1" if pc_access else "0",
         "BURITO_PROJECT_ROOT": str(ROOT),
         "BURITO_PYTHON": sys.executable,
         "EVE_TELEMETRY_DISABLED": "1",
@@ -40,6 +41,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     })
     print(f"Starting local Burito with lesson {lesson}. No automatic cloud fallback.")
     print("Personal memory included." if include_personal else "Personal memory excluded.")
+    print("Local file/application tools enabled; application launches require approval." if pc_access else "PC file/application tools disabled.")
     try:
         return subprocess.run([node, str(cli), "dev", "--no-default-extensions"], cwd=runtime, env=environment,
                               check=False).returncode

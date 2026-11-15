@@ -75,7 +75,7 @@ Installation completed successfully from the normal desktop terminal. This
 restricted shell still cannot resolve download hosts or access GPU devices;
 those are session limitations, not diagnoses of the desktop connection or driver.
 The installed eve APIs and agent discovery were checked locally. Discovery
-reports zero errors and no model action tools. The owner completed a first local
+reports zero errors and only the explicitly authored PC tools. The owner completed a first local
 model exchange; answer quality, GPU placement, and offline behavior need further
 verification.
 

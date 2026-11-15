@@ -12,6 +12,7 @@ from .school import School, catalog
 from .context import build_context
 from .chat import chat
 from .awareness import Awareness, enable, pause, monitor_status
+from .access import dispatch
 
 
 def main(argv=None):
@@ -50,6 +51,8 @@ def main(argv=None):
     conversation.add_argument("--include-personal", action="store_true")
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
+    conversation.add_argument("--no-files", action="store_true", help="Disable file and application tools")
+    commands.add_parser("access-bridge", help=argparse.SUPPRESS)
     pc = commands.add_parser("pc", help="Local computer inventory and metadata changes")
     pc_commands = pc.add_subparsers(dest="pc_command", required=True)
     for name in ("scan", "status", "changes", "enable", "pause", "monitor-status"):
@@ -58,11 +61,19 @@ def main(argv=None):
     try:
         if args.command == "doctor":
             print(json.dumps(report(), indent=2))
+        elif args.command == "access-bridge":
+            raw = sys.stdin.read(20001)
+            if len(raw) > 20000:
+                raise ValueError('PC access request is too large')
+            request = json.loads(raw)
+            if not isinstance(request, dict):
+                raise ValueError('Expected a PC access request object')
+            print(json.dumps(dispatch(request)))
         elif args.command == "context":
             print(json.dumps(build_context(args.lesson, args.include_personal, include_system=not args.no_system), indent=2))
         elif args.command == "chat":
             return chat(args.model, args.context_tokens, args.lesson, args.include_personal,
-                        include_system=not args.no_system)
+                        include_system=not args.no_system, pc_access=not args.no_files)
         elif args.command == "pc":
             if args.pc_command == "enable":
                 print(enable())

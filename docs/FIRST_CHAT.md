@@ -1,7 +1,7 @@
 # First local text conversation
 
 Status: runtime installed, installed-version APIs checked, and agent discovery
-compiles with no action tools. The owner completed the first local model exchange.
+compiles with only the explicitly authored PC tools. The owner completed the first local model exchange.
 Its response showed a source-attribution error; a revised prompt/lesson awaits retest.
 The Python context boundary, runtime settings, and actual eve discovery have
 tests. Passing those is not evidence of a successful model conversation.
@@ -101,9 +101,10 @@ Use a fresh local development session; do not resume unrelated historical chats.
 
 The dynamic model configuration accepts literal loopback endpoints only and
 rejects cloud mode. It does not silently fall back to a hosted model. No web
-tools, cloud routing, desktop tools, or self-modification extensions are added.
-The agent sets `defaultTools: false`, so eve's shell, file, web, and generic agent
-tools are absent. The launcher also disables CLI telemetry, trace content
+tools, cloud routing, or self-modification extensions are added. Authored file,
+application-discovery, and approved launch tools are described in PC_ACCESS.md.
+The agent sets `defaultTools: false`, so eve's built-in shell, file, web, and
+generic agent tools are absent. The launcher also disables CLI telemetry, trace content
 capture, and schedules. Session history still exists; this is not a guarantee
 that conversation text is never stored.
 Cloud/hybrid routing needs a separate implementation with session isolation,

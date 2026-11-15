@@ -92,6 +92,7 @@ hardware report is committed to GitHub; only source and synthetic tests belong t
 
 ## Next layers
 
-Selected document-content search, active-window observation, and scoped computer
-actions are separate future integrations. This inventory alone cannot answer
-questions about a file's contents or perform arbitrary tasks on the PC.
+The separate tools in PC_ACCESS.md now support bounded text-file reads, filename
+search, and approved application-launch requests. This inventory alone does not
+perform those operations. Document-content search, active-window observation,
+and general desktop actions remain future integrations.
