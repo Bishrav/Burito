@@ -84,3 +84,44 @@ class Memory:
                 ).rowcount == 1
         finally:
             connection.close()
+
+    def correct(self, identifier, content):
+        content = content.strip()
+        if not content or len(content) > 20000:
+            raise ValueError("Corrected memory must contain 1 to 20000 characters")
+        connection = self._connect()
+        try:
+            with connection:
+                connection.execute("PRAGMA secure_delete = ON")
+                return connection.execute(
+                    "UPDATE memories SET content = ?, source = 'owner correction' WHERE id = ?",
+                    (content, identifier),
+                ).rowcount == 1
+        finally:
+            connection.close()
+
+    def backup(self, destination):
+        """Produce a consistent SQLite snapshot; never replace an existing file."""
+        destination = Path(destination)
+        if not destination.is_absolute():
+            raise ValueError("Backup destination must be an absolute path")
+        # The parent must already exist: do not create folders on an unmounted disk.
+        fd = os.open(destination, os.O_CREAT | os.O_EXCL | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+        os.close(fd)
+        source = target = None
+        try:
+            source = self._connect()
+            target = sqlite3.connect(destination)
+            source.backup(target)
+        except BaseException:
+            if target is not None:
+                target.close()
+                target = None
+            destination.unlink(missing_ok=True)
+            raise
+        finally:
+            if target is not None:
+                target.close()
+            if source is not None:
+                source.close()
+        return destination

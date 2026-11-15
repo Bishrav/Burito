@@ -7,18 +7,25 @@
 - Local SQLite memory: explicit creation, listing, deletion, provenance.
 - Private storage defaults outside Git; no observation or networking.
 - Standard-library tests and GitHub Actions test configuration.
+- Diagnostics distinguish a loaded NVIDIA driver with hidden device files from
+  evidence of a host driver failure.
+- Interactive local home education, memory correction, consistent private backups.
+- User-local Node/eve installer and initial agent identity instructions.
 
 ## Not implemented
 
 AI chat, local/cloud inference, semantic retrieval, voice, desktop observation,
 proactive suggestions, autostart, desktop actions, automatic training,
-encryption, backups, and autonomous execution.
+encryption, scheduled backups, restore tooling, and autonomous execution.
+Runtime dependency installation and live conversation remain unverified: the
+restricted development shell has no direct download access. The runtime skeleton
+does not connect to the Python memory yet.
 
 ## Next
 
-1. Verify host GPU and intended 4 TB storage mount.
-2. Make a supported Node/npm runtime available.
-3. Install and inspect the eve scaffold and bundled docs.
+1. Verify host GPU with `nvidia-smi` in a normal terminal and identify the intended storage.
+2. Run `bash scripts/setup-runtime.sh` in the normal terminal with internet.
+3. Inspect installed eve docs, review and commit resolved dependencies/lockfile.
 4. Select a local model after measuring VRAM, then add offline text chat.
 5. Connect personal memory and demonstrate correction across sessions.
 6. Add optional cloud routing with explicit context and budget configuration.

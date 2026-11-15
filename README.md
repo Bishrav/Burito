@@ -3,9 +3,10 @@
 A personal hybrid assistant for Kubuntu: local memory, offline reasoning,
 online research, useful suggestions, and progressively verified automation.
 
-**Status: milestone 0 foundation.** This is not yet a talking AI or a desktop
-observer. No background monitoring, network requests, or automatic actions
-are enabled by this code.
+**Status: foundation and runtime preparation.** This is not yet a talking AI or a desktop
+observer. The Python foundation performs no background monitoring, network
+requests, or automatic actions. The separate runtime installer downloads packages
+only when you explicitly run it.
 
 ## Start here
 
@@ -14,9 +15,12 @@ Python 3.11+ is sufficient; the foundation uses only the standard library.
 ```bash
 python3 -m burito doctor
 python3 -m burito init
+python3 -m burito teach
 python3 -m burito remember "I prefer short explanations" --source owner
 python3 -m burito memories
+python3 -m burito correct MEMORY_ID "I prefer detailed explanations"
 python3 -m burito forget MEMORY_ID
+python3 -m burito backup /absolute/path/to/an/existing/folder/burito-backup.sqlite3
 python3 -m unittest discover -s tests -v
 ```
 
@@ -37,9 +41,25 @@ backups or guarantee forensic erasure from the storage medium.
 - [First milestone and machine setup](docs/SETUP.md)
 - [Progress and next work](docs/STATUS.md)
 
-The planned agent runtime is eve (TypeScript), with a local desktop companion.
+The agent runtime preparation uses eve (TypeScript), with a local desktop companion.
 This Python foundation checks the machine and stores explicitly supplied
-memories while Node, GPU, storage, and model setup are resolved.
+memories while GPU, storage, and model setup are resolved. In a normal Kubuntu
+terminal with internet access, install runtime packages with:
+
+```bash
+cd ~/Burito
+bash scripts/setup-runtime.sh
+```
+
+This downloads Node 26.13.1 from nodejs.org if Node 24+ and npm are unavailable,
+checks the archive against its HTTPS-served SHA-256 manifest, and installs it
+inside `.tools/`. It then installs eve, ai, and zod in `runtime/`, saving exact
+versions and a lockfile. This can take several minutes. It does not use sudo,
+change drivers, download AI models, start a chat, or enable observation.
+No dependency lockfile exists until this installation succeeds. Subsequent
+runs use `npm ci` against that lockfile. Runtime installation is not yet verified
+in the development environment because direct network access is unavailable.
+
 See the [eve setup documentation](https://eve.dev/docs/getting-started).
 
 Learning initially means retrieving knowledge, remembering approved facts,

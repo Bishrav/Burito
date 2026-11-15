@@ -13,3 +13,6 @@ logs/
 *.db
 reports/
 dist/
+.tools/
+runtime/.vercel/
+runtime/.env*

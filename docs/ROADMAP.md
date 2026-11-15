@@ -20,7 +20,7 @@ tests pass, GPU and intended storage are verified before model downloads.
 
 ## 1 — Home education and text conversation
 
-Install eve using its current initializer and commit exact dependency versions
+Install eve using its documented initializer or manual installation and commit exact dependency versions
 and lockfile. Read its installed docs before implementing integrations.
 Evaluate local models against measured GPU memory and response latency.
 Create a text chat interface and shared local memory service. Collect owner

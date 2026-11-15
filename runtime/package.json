@@ -1,0 +1,8 @@
+{
+  "name": "burito-runtime",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=24" },
+  "description": "Burito agent runtime preparation; model and tools not configured"
+}
