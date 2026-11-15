@@ -51,3 +51,8 @@ The intended 4 TB volume remains unidentified. The current Linux filesystem has
 enough free space for this initial small model; use it for the first smoke test,
 without repartitioning or changing Windows volumes. Plan large libraries and
 model collections only after confirming the intended storage mount.
+
+The owner reports Ollama installed and the `qwen3:8b` pull completed. The
+restricted session cannot access loopback sockets to independently verify the
+server. Next run `ollama create burito-local:8b -f config/ollama/Modelfile` in
+Konsole, then start chat with that model and `--context-tokens 8192`.

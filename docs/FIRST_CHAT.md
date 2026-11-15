@@ -53,6 +53,20 @@ OpenAI-compatible local server, by default `http://127.0.0.1:11434/v1`.
 No server or model is bundled. Do not copy a model recommendation without
 checking the memory needed for both weights and context.
 
+After `ollama pull qwen3:8b` completes, create a named local configuration:
+
+```bash
+cd ~/Burito
+ollama create burito-local:8b -f config/ollama/Modelfile
+ollama show --modelfile burito-local:8b
+```
+
+The committed Modelfile sets `num_ctx 8192`; the corresponding Burito launcher
+argument must match. This is a local model configuration, not fine-tuning. It
+references the downloaded base weights. No personality or personal memories
+are baked into that model; they remain in Burito's application/context layer.
+Reference: [Ollama Modelfile documentation](https://docs.ollama.com/modelfile).
+
 Configure a context size the server actually allocates, and use that same size
 in Burito. The launcher accepts 4096–131072 tokens; acceptance does not mean
 that a model/server/GPU supports the size or can run it efficiently. Model and
@@ -75,10 +89,10 @@ Preview only in a private terminal; this flag can display personal information.
 Use the actual installed model name and allocated context size:
 
 ```bash
-python3 -m burito chat --model YOUR_INSTALLED_MODEL --context-tokens YOUR_SERVER_CONTEXT_SIZE
+python3 -m burito chat --model burito-local:8b --context-tokens 8192
 ```
 
-These uppercase values are placeholders, not a model to download. The launcher
+This command assumes the named local configuration above was created. The launcher
 uses an installed system or checkout-local Node and starts `eve dev --no-default-extensions` in
 `runtime/`. It sets the Python interpreter and project location for the read-only
 context bridge. Personal facts require `--include-personal`; the default is off.
