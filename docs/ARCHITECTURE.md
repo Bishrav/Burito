@@ -29,8 +29,9 @@ for offline operation before selecting the production integration.
 - Procedures: versioned instructions verified by task outcomes.
 - Episodes: task history, results, and feedback with retention limits.
 
-The foundation implements only explicitly supplied owner facts, with correction,
-local onboarding, and consistent backups. It is not a vector
+Personal memory stores explicitly supplied owner facts, with correction,
+local onboarding, and consistent backups. Lessons and PC inventory live in
+separate tables. The foundation is not a vector
 index, conversational memory, or training pipeline. Private SQLite storage is
 outside the checkout; future services must enforce access control too.
 

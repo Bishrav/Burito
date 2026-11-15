@@ -5,7 +5,7 @@
 - Full staged roadmap and architecture decisions.
 - Read-only machine diagnostics with bounded command execution.
 - Local SQLite memory: explicit creation, listing, deletion, provenance.
-- Private storage defaults outside Git; no observation or networking.
+- Private storage defaults outside Git; no screen capture or inventory uploads.
 - Standard-library tests and GitHub Actions test configuration.
 - Diagnostics distinguish a loaded NVIDIA driver with hidden device files from
   evidence of a host driver failure.
