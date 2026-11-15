@@ -3,8 +3,8 @@
 A personal hybrid assistant for Kubuntu: local memory, offline reasoning,
 online research, useful suggestions, and progressively verified automation.
 
-**Status: local inventory and runtime preparation.** A live model conversation
-and screen observation are not yet verified. The optional PC inventory timer
+**Status: first local text conversation completed; quality checks in progress.**
+Screen observation is not implemented. The optional PC inventory timer
 collects local metadata when enabled; it does not capture screens or file contents.
 The separate runtime installer downloads packages only when explicitly run.
 
@@ -67,8 +67,8 @@ This installs three home-foundation lessons locally. Eleven introductory lessons
 are available in total, including IT and health literacy. Sources and review
 prompts accompany each lesson. Stored references are not model training or
 demonstrated understanding.
-The read-only chat bridge is now prepared but has not been verified with an
-installed model. See [first local conversation](docs/FIRST_CHAT.md) for its setup
+The owner completed a first exchange through the chat launcher. The lesson and
+personal-memory bridge still need behavioral checks. See [first local conversation](docs/FIRST_CHAT.md) for setup
 gates and limitations. Preview the selected lesson with:
 
 ```bash
@@ -93,7 +93,7 @@ versions and a lockfile. This can take several minutes. It does not use sudo,
 change drivers, download AI models, start a chat, or enable observation.
 The runtime is installed and its generated lockfile is committed. Subsequent
 runs use `npm ci` against that lockfile. Installed-version discovery and tests
-pass; a live model conversation is still pending GPU/model setup.
+pass; a first local model exchange completed, with answer-quality issues being retested.
 
 See the [eve setup documentation](https://eve.dev/docs/getting-started).
 

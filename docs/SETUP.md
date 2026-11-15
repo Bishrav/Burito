@@ -75,8 +75,9 @@ Installation completed successfully from the normal desktop terminal. This
 restricted shell still cannot resolve download hosts or access GPU devices;
 those are session limitations, not diagnoses of the desktop connection or driver.
 The installed eve APIs and agent discovery were checked locally. Discovery
-reports zero errors and no model action tools; conversation with a real model
-remains unverified until the local server/model is installed.
+reports zero errors and no model action tools. The owner completed a first local
+model exchange; answer quality, GPU placement, and offline behavior need further
+verification.
 
 For a fresh runtime check after installation, run `npm run check:discovery`,
 then `npm test` inside `runtime/` with the selected Node version on PATH.

@@ -20,11 +20,11 @@
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles successfully and exposes no action tools.
-  Live model conversation is not yet verified.
+  The owner completed a local model conversation; answer-quality retesting remains.
 
 ## Not implemented
 
-Verified AI chat, hybrid routing, semantic retrieval, voice, screen observation,
+Fully evaluated AI chat, hybrid routing, semantic retrieval, voice, screen observation,
 proactive suggestions, chat autostart, desktop actions, automatic training,
 encryption, scheduled backups, restore tooling, and autonomous execution.
 Runtime dependency installation succeeded through the normal desktop terminal.
@@ -32,7 +32,11 @@ Node 26.13.1 and eve 1.0.0-rc.18 are installed. Exact package versions and the
 generated lockfile are committed. Installed-version documentation was checked;
 discovery reports zero errors. The gateway-catalog warning in the restricted
 shell does not block this local configuration, which supplies its context size.
-The read-only Python context bridge and live model remain to be tested together.
+The owner completed a first chat with `burito-local:8b` through the launcher.
+The answer separated guesses but confused user-reported evidence with direct
+observation. Home honesty lesson revision 2 and standing instructions now make
+that distinction explicit; revised model behavior awaits an owner-run retest.
+Personal-memory retrieval/correction and actual GPU placement remain unverified.
 Default model action tools and development extensions are disabled; CLI telemetry
 and trace content capture are disabled by the launcher.
 
@@ -42,11 +46,11 @@ Host GPU verification succeeded in the owner's normal terminal: RTX 5070,
 12227 MiB VRAM, NVIDIA driver 595.99.02. The restricted session's missing GPU
 device files do not require a driver reinstall.
 
-1. Install Ollama in the normal terminal, then prepare the first small local model.
-2. Start with `qwen3:8b` and an 8192-token context; verify actual GPU placement
-   and response behavior before increasing size. This is a starter choice,
-   not a claim of best possible model quality or measured performance.
-3. Verify the lesson bridge and optional personal memory, including correction.
+1. Retest the honesty question in a fresh chat after installing lesson revision 2.
+2. Inspect `ollama ps` during an active model session to verify GPU placement;
+   measure warm response times separately from the first observed 48-second exchange.
+3. Verify optional personal memory and correction, and verify the inventory timer
+   in Konsole if PC awareness is enabled.
 4. Add the basic desktop interface around working text chat, followed by voice.
 5. Add optional cloud routing with explicit context and budget configuration.
 
@@ -57,5 +61,5 @@ model collections only after confirming the intended storage mount.
 
 The owner reports Ollama installed and the `qwen3:8b` pull completed. The
 restricted session cannot access loopback sockets to independently verify the
-server. Next run `ollama create burito-local:8b -f config/ollama/Modelfile` in
-Konsole, then start chat with that model and `--context-tokens 8192`.
+server. The owner started a conversation using `burito-local:8b` with an
+8192-token context. Continue with the targeted verification steps above.

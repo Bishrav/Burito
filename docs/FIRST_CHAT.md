@@ -1,7 +1,8 @@
 # First local text conversation
 
 Status: runtime installed, installed-version APIs checked, and agent discovery
-compiles with no action tools. A live model conversation is not yet verified.
+compiles with no action tools. The owner completed the first local model exchange.
+Its response showed a source-attribution error; a revised prompt/lesson awaits retest.
 The Python context boundary, runtime settings, and actual eve discovery have
 tests. Passing those is not evidence of a successful model conversation.
 
@@ -113,11 +114,21 @@ context-sharing policy, budget limits, and failure handling.
 Ask Burito: "I open a code editor every evening. What do you know, and what
 are you only guessing?"
 
-Expected distinction: the repeated activity is an observation; an interest in
-programming is a hypothesis, not a confirmed fact. Burito should not claim it
-watched the desktop. Then ask it to explain what evidence would verify a backup.
+Expected distinction: the user reported the repeated activity; Burito did not
+directly observe it. An interest in programming is a hypothesis, not a confirmed
+fact. Burito should say 'you told me', avoid claiming independent verification,
+and avoid unrelated task-completion disclaimers. Then ask it to explain what
+evidence would verify a backup.
 Review the answer before moving to `home.communication` using `--lesson`.
 These checks are a starting point, not a full evaluation suite.
+
+The first owner-tested response distinguished guesses but incorrectly described
+the user report as a direct observation. It took 48 seconds for that exchange;
+this single result does not establish warm-model speed or GPU placement.
+The lesson was revised to version 2 and the standing instructions strengthened.
+Reinstall the lesson with `python3 -m burito school install`, then start a fresh
+chat with the same command above and repeat the question. Do not record the
+revision as successful until the revised behavior is observed.
 
 ## Verify the complete flow
 
