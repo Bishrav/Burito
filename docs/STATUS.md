@@ -19,8 +19,11 @@
   inventory summaries. Timer activation must be verified in Konsole.
 - Explicit host file browsing, bounded UTF-8 reading, filename search, desktop
   application discovery, and approved launch requests. `--no-files` disables
-  these tools. Backend and discovery checks pass; model tool calls and actual
-  desktop launches need owner-run verification.
+  these tools. The owner verified folder listing, a README excerpt/line count,
+  application discovery, and a visible Dolphin launch.
+- Fixed the inventory service's quoted WorkingDirectory path, which systemd
+  rejected at startup. Status now reports both timer and service details.
+  Updated unit files are prepared; activation needs an owner-session retry.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -52,7 +55,7 @@ Host GPU verification succeeded in the owner's normal terminal: RTX 5070,
 device files do not require a driver reinstall.
 
 1. Retest the honesty question in a fresh chat after installing lesson revision 2.
-   Then verify file/application tool calls using docs/PC_ACCESS.md.
+   File/application tool calls have passed the initial owner-run checks.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
 3. Verify optional personal memory and correction, and verify the inventory timer

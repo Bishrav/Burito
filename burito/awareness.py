@@ -275,26 +275,45 @@ def quote_unit(value):
     return '"' + value.replace("\\", "\\\\").replace('"', '\\"').replace("%", "%%") + '"'
 
 
-def enable():
-    directory = service_directory()
-    directory.mkdir(parents=True, exist_ok=True)
-    # Pass the current storage destination explicitly; changing data location requires re-enabling.
-    environment = quote_unit("BURITO_DATA_DIR=" + str(Memory().directory))
+def working_directory_value(value):
+    value = str(value)
+    if (not Path(value).is_absolute() or value != value.strip() or value.endswith('\\')
+            or '..' in Path(value).parts or any(character in value for character in ('\n', '\r', '\0'))):
+        raise ValueError('Working directory must be an absolute single-line path')
+    # WorkingDirectory is a path setting, not an ExecStart argument. Quotes are literal.
+    return value.replace('%', '%%')
+
+
+def render_units(root, python, data_directory):
+    environment = quote_unit("BURITO_DATA_DIR=" + str(data_directory))
     service = ("[Unit]\nDescription=Burito local PC inventory\n\n[Service]\nType=oneshot\n"
-               f"WorkingDirectory={quote_unit(ROOT)}\nEnvironment={environment}\n"
-               f"ExecStart={quote_unit(sys.executable)} -m burito pc scan\n"
+               f"WorkingDirectory={working_directory_value(root)}\nEnvironment={environment}\n"
+               f"ExecStart={quote_unit(python)} -m burito pc scan\n"
                "TimeoutStartSec=90\nUMask=0077\nNoNewPrivileges=true\n")
     timer = ("[Unit]\nDescription=Check for PC changes after login\n\n[Timer]\n"
              "OnStartupSec=30\nOnUnitInactiveSec=60\nAccuracySec=5\nUnit=burito-awareness.service\n"
              "\n[Install]\nWantedBy=timers.target\n")
+    return service, timer
+
+
+def enable():
+    directory = service_directory()
+    directory.mkdir(parents=True, exist_ok=True)
+    # Pass the current storage destination explicitly; changing data location requires re-enabling.
+    service, timer = render_units(ROOT, sys.executable, Memory().directory)
     (directory / "burito-awareness.service").write_text(service)
     (directory / "burito-awareness.timer").write_text(timer)
     for arguments in (["systemctl", "--user", "daemon-reload"],
                       ["systemctl", "--user", "enable", "--now", "burito-awareness.timer"]):
         result = subprocess.run(arguments, capture_output=True, text=True, timeout=15, check=False)
         if result.returncode:
-            raise ValueError("Unit files are prepared but enabling failed. Run 'python3 -m burito pc enable' in Konsole. "
-                             + result.stderr.strip()[:300])
+            detail = (result.stderr or result.stdout).strip()[:1200]
+            if 'Failed to connect' in detail or 'Operation not permitted' in detail:
+                raise ValueError("Unit files are prepared, but the user service manager is unavailable here. "
+                                 "Run 'python3 -m burito pc enable' in Konsole. " + detail)
+            raise ValueError("Timer activation failed. Inspect 'systemctl --user status burito-awareness.timer "
+                             "burito-awareness.service --no-pager' and 'journalctl --user "
+                             "-u burito-awareness.service -u burito-awareness.timer -n 30 --no-pager'. " + detail)
     return "PC inventory timer enabled for the user session; about one scan per minute."
 
 
@@ -309,7 +328,16 @@ def pause():
 
 
 def monitor_status():
-    result = subprocess.run(["systemctl", "--user", "is-active", "burito-awareness.timer"],
+    result = subprocess.run(["systemctl", "--user", "show", "burito-awareness.timer", "burito-awareness.service",
+                             "--property=Id,LoadState,ActiveState,SubState,UnitFileState,Result,ExecMainStatus",
+                             "--no-pager"],
                             capture_output=True, text=True, timeout=10, check=False)
-    return {"timer_state": result.stdout.strip() or "unknown", "verified_active": result.returncode == 0,
-            "detail": result.stderr.strip()[:300]}
+    units = {}
+    for block in result.stdout.strip().split('\n\n'):
+        fields = dict(line.split('=', 1) for line in block.splitlines() if '=' in line)
+        if fields.get('Id'):
+            units[fields['Id']] = fields
+    timer = units.get('burito-awareness.timer', {})
+    return {"timer_state": timer.get('ActiveState', 'unknown'),
+            "verified_active": result.returncode == 0 and timer.get('ActiveState') == 'active',
+            "units": units, "detail": result.stderr.strip()[:600]}

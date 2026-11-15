@@ -68,6 +68,12 @@ python3 -m burito pc pause
 ```
 
 Inspect failures with `journalctl --user -u burito-awareness.service -n 30`.
+`pc monitor-status` reports both unit load/active states and the service's last
+result/exit status, so an enabled timer is not mistaken for a running timer.
+The generated `WorkingDirectory` uses a raw absolute path; it must not reuse
+the command-argument quoting used by `ExecStart`. Older generated units with
+literal path quotes were rejected by systemd. Run `pc enable` after updating
+to regenerate them and reload the user manager.
 Changing the code directory, Python location, or memory location requires running
 `pc enable` again to update the unit. Turning monitoring off keeps existing data.
 

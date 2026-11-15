@@ -4,8 +4,11 @@ from pathlib import Path
 import tempfile
 import unittest
 from unittest.mock import patch
+from types import SimpleNamespace
+import shutil
+import subprocess
 
-from burito.awareness import Awareness, files, enable, quote_unit
+from burito.awareness import Awareness, files, enable, quote_unit, render_units, working_directory_value, monitor_status
 from burito.memory import Memory
 from burito.context import build_context
 from burito.school import School
@@ -72,7 +75,7 @@ class AwarenessTests(unittest.TestCase):
             with patch.dict(os.environ, {'XDG_CONFIG_HOME': directory}):
                 with patch('burito.awareness.subprocess.run') as run:
                     run.return_value.returncode = 1
-                    run.return_value.stderr = 'test bus unavailable'
+                    run.return_value.stderr = 'Failed to connect to user scope bus: Operation not permitted'
                     with self.assertRaisesRegex(ValueError, 'Konsole'):
                         enable()
                 unit = Path(directory) / 'systemd/user/burito-awareness.service'
@@ -85,3 +88,52 @@ class AwarenessTests(unittest.TestCase):
         self.assertEqual(quote_unit('/tmp/a b%f'), '"/tmp/a b%%f"')
         with self.assertRaises(ValueError):
             quote_unit('/tmp/a\nExecStart=bad')
+
+    def test_working_directory_is_absolute_not_a_quoted_command_argument(self):
+        service, timer = render_units('/tmp/project folder', '/usr/bin/python3', '/tmp/private')
+        value = next(line.split('=', 1)[1] for line in service.splitlines() if line.startswith('WorkingDirectory='))
+        self.assertTrue(Path(value).is_absolute())
+        self.assertEqual(value, '/tmp/project folder')
+        self.assertEqual(working_directory_value('/tmp/100%'), '/tmp/100%%')
+        for invalid in ('relative', '/tmp/a\nExecStart=bad', '/tmp/a/../b'):
+            with self.assertRaises(ValueError):
+                working_directory_value(invalid)
+
+    @unittest.skipUnless(shutil.which('systemd-analyze'), 'systemd analyzer unavailable')
+    def test_generated_units_pass_native_systemd_verification(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            service, timer = render_units(root, '/usr/bin/python3', root / 'private')
+            paths = [root / 'burito-awareness.service', root / 'burito-awareness.timer']
+            paths[0].write_text(service)
+            paths[1].write_text(timer)
+            result = subprocess.run(['systemd-analyze', 'verify', '--man=no', *map(str, paths)],
+                                    capture_output=True, text=True, timeout=15, check=False)
+            errors = [line for line in result.stderr.splitlines() if line.strip()]
+            if result.returncode and errors and all('Operation not permitted' in line for line in errors):
+                self.skipTest('Native systemd verification needs sockets blocked by this sandbox')
+            self.assertEqual(result.returncode, 0, result.stderr)
+            # The same native parser must reject the exact original regression.
+            bad = root / 'burito-invalid.service'
+            bad.write_text(service.replace(f'WorkingDirectory={root}', f'WorkingDirectory="{root}"'))
+            invalid = subprocess.run(['systemd-analyze', 'verify', '--man=no', str(bad)],
+                                     capture_output=True, text=True, timeout=15, check=False)
+            self.assertNotEqual(invalid.returncode, 0, 'Native verifier accepted the original invalid WorkingDirectory')
+
+    def test_start_failure_points_to_journal_instead_of_blind_retry(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(os.environ, {'XDG_CONFIG_HOME': directory}), \
+                 patch('burito.awareness.subprocess.run', side_effect=[
+                     SimpleNamespace(returncode=0, stdout='', stderr=''),
+                     SimpleNamespace(returncode=1, stdout='', stderr='Job failed')]):
+                with self.assertRaisesRegex(ValueError, 'journalctl --user'):
+                    enable()
+
+    def test_status_distinguishes_enabled_timer_from_an_active_one(self):
+        data = ('Id=burito-awareness.timer\nLoadState=loaded\nActiveState=inactive\n'
+                'UnitFileState=enabled\n\nId=burito-awareness.service\nResult=exit-code\nExecMainStatus=1\n')
+        with patch('burito.awareness.subprocess.run', return_value=SimpleNamespace(
+                returncode=0, stdout=data, stderr='')):
+            result = monitor_status()
+        self.assertFalse(result['verified_active'])
+        self.assertEqual(result['units']['burito-awareness.service']['ExecMainStatus'], '1')
