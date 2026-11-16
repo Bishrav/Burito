@@ -8,11 +8,12 @@ from .school import School
 
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                   max_chars=12000, include_system=True, include_activity=False,
-                  activity_only=False):
+                  activity_only=False, include_feedback=False):
     if activity_only:
         include_personal = False
         include_system = False
         include_activity = True
+        include_feedback = False
     memory = memory if memory is not None else Memory()
     lessons = {item["id"]: item for item in School(memory).installed()}
     if lesson_id not in lessons:
@@ -22,6 +23,7 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         "lesson": lessons[lesson_id],
         "personal_memory_included": include_personal,
         "personal_facts": [],
+        "owner_feedback_included": include_feedback,
         "activity_included": include_activity,
         "activity_only": activity_only,
         "understanding_assessed": False,
@@ -70,5 +72,16 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                 context["truncated"] = True
                 break
         if len(facts) > len(context["personal_facts"]):
+            context["truncated"] = True
+    if include_feedback:
+        from .feedback import Feedback
+        records = Feedback(memory).list(limit=10)
+        context["owner_feedback"] = [
+            {key: record[key] for key in ("rating", "note", "created_at")}
+            for record in reversed(records)
+        ]
+        if len(json.dumps(context)) > max_chars:
+            context.pop("owner_feedback")
+            context["owner_feedback_included"] = False
             context["truncated"] = True
     return context

@@ -153,4 +153,10 @@ an unavailable server or model. Context reads are memoized once per turn.
 Current records can change on a later turn, but prior session messages may
 still contain earlier facts. Deleting SQLite records does not erase eve's
 session history; session retention/deletion needs separate handling before
-privacy-sensitive use. The agent cannot write memories from chat yet.
+privacy-sensitive use. The agent cannot write memories or feedback from chat.
+To keep a reviewed note for later ordinary chats, record it yourself with
+`python3 -m burito feedback add correction "Ask about project goals before inferring them."`,
+then opt in with `--include-feedback`. Use `useful` or `not_useful` for the other
+ratings. Inspect or remove entries with
+`feedback list` and `feedback forget ID`. This is local context retrieval, not
+model training. Activity-only chats always exclude personal facts and feedback.

@@ -59,3 +59,17 @@ decisions similarly require current, relevant evidence and appropriate expertise
 There is no background teaching service or autonomous self-training in this
 milestone. We add lessons during development; the owner can teach personal
 facts with `teach` or `remember`. Neither silently expands action permissions.
+
+After reviewing a suggestion, owner feedback can be saved separately from
+personal facts:
+
+```bash
+python3 -m burito feedback add useful "The next step matched my current task."
+python3 -m burito feedback add correction "Ask about project goals before inferring them."
+python3 -m burito feedback list
+python3 -m burito feedback forget FEEDBACK_ID
+```
+
+An ordinary chat can receive these notes only with `--include-feedback`.
+Activity-only chats do not receive them. Burito never writes feedback from its
+own suggestions, and storing a note does not update model weights.

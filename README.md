@@ -20,6 +20,8 @@ python3 -m burito remember "I prefer short explanations" --source owner
 python3 -m burito memories
 python3 -m burito correct MEMORY_ID "I prefer detailed explanations"
 python3 -m burito forget MEMORY_ID
+python3 -m burito feedback add correction "Prefer suggestions grounded in a named project task."
+python3 -m burito feedback list
 python3 -m burito backup /absolute/path/to/an/existing/folder/burito-backup.sqlite3
 python3 -m unittest discover -s tests -v
 ```
@@ -33,6 +35,11 @@ at-rest protection. Never commit personal data, hardware reports, or secrets.
 
 `forget` removes an entry from the live database; it does not erase external
 backups or guarantee forensic erasure from the storage medium.
+
+Feedback is separate from confirmed personal facts. Add it only after reviewing
+a suggestion yourself. A future ordinary chat can use it with
+`--include-feedback`; activity-only chats always exclude it. This records owner
+guidance locally and does not train model weights.
 
 ## Plan
 

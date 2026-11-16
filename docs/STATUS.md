@@ -36,6 +36,9 @@
   explicit `--include-activity` flag. `--activity-only` additionally excludes
   PC inventory, personal facts, and PC tools. Activity remains excluded from
   normal chat.
+- Owner feedback can be explicitly recorded, listed, and deleted in the private
+  local database. Normal chat receives it only with `--include-feedback`;
+  activity-only chat excludes it. Feedback is context, not model-weight training.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -74,8 +77,9 @@ device files do not require a driver reinstall.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
 3. Verify optional personal memory and correction.
-4. Add owner-reviewed suggestion records, feedback, duplicate suppression, and
-   evidence links before making suggestions recurring.
+4. Add owner-reviewed suggestion records, duplicate suppression, and evidence
+   links before making suggestions recurring. Feedback currently requires an
+   explicit CLI entry and has not yet been verified by the owner.
 5. Add the basic desktop interface around working text chat, followed by voice.
 6. Add optional cloud routing with explicit context and budget configuration.
 

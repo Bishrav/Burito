@@ -14,6 +14,7 @@ from .chat import chat
 from .awareness import Awareness, enable, pause, monitor_status
 from . import activity
 from .access import dispatch
+from .feedback import Feedback, RATINGS
 
 
 def main(argv=None):
@@ -33,6 +34,14 @@ def main(argv=None):
     backup.add_argument("destination", help="Absolute path to a new file in an existing directory")
     forget = commands.add_parser("forget", help="Delete one fact by its full ID")
     forget.add_argument("id")
+    feedback = commands.add_parser("feedback", help="Store explicit private feedback for future chats")
+    feedback_commands = feedback.add_subparsers(dest="feedback_command", required=True)
+    feedback_add = feedback_commands.add_parser("add", help="Record your rating and correction or note")
+    feedback_add.add_argument("rating", choices=RATINGS)
+    feedback_add.add_argument("note")
+    feedback_commands.add_parser("list", help="List owner-provided feedback records")
+    feedback_forget = feedback_commands.add_parser("forget", help="Delete one feedback record by ID")
+    feedback_forget.add_argument("id")
     school = commands.add_parser("school", help="General curriculum, separate from personal facts")
     school_commands = school.add_subparsers(dest="school_command", required=True)
     school_commands.add_parser("list", help="List available lessons in teaching order")
@@ -46,6 +55,8 @@ def main(argv=None):
     context.add_argument("--include-personal", action="store_true")
     context.add_argument("--include-activity", action="store_true",
                          help="Include a bounded local 7-day foreground-app summary")
+    context.add_argument("--include-feedback", action="store_true",
+                         help="Include explicit owner feedback in this context")
     context.add_argument("--activity-only", action="store_true",
                          help="Preview only activity data; exclude PC inventory and personal facts")
     conversation = commands.add_parser("chat", help="Start local eve chat after runtime and model setup")
@@ -56,6 +67,8 @@ def main(argv=None):
     conversation.add_argument("--include-personal", action="store_true")
     conversation.add_argument("--include-activity", action="store_true",
                               help="Include a bounded local 7-day foreground-app summary")
+    conversation.add_argument("--include-feedback", action="store_true",
+                              help="Include explicit owner feedback in this chat")
     conversation.add_argument("--activity-only", action="store_true",
                               help="Use only activity data; exclude PC inventory, personal facts, and PC tools")
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
@@ -96,11 +109,13 @@ def main(argv=None):
             print(json.dumps(build_context(args.lesson, args.include_personal,
                                            include_system=not args.no_system,
                                            include_activity=args.include_activity,
-                                           activity_only=args.activity_only), indent=2))
+                                           activity_only=args.activity_only,
+                                           include_feedback=args.include_feedback), indent=2))
         elif args.command == "chat":
             return chat(args.model, args.context_tokens, args.lesson, args.include_personal,
                         include_system=not args.no_system, pc_access=not args.no_files,
-                        include_activity=args.include_activity, activity_only=args.activity_only)
+                        include_activity=args.include_activity, activity_only=args.activity_only,
+                        include_feedback=args.include_feedback)
         elif args.command == "pc":
             if args.pc_command == "enable":
                 print(enable())
@@ -134,6 +149,19 @@ def main(argv=None):
                 print("Application label removed")
             elif args.activity_command == "clear":
                 print(json.dumps(activity.clear(), indent=2))
+        elif args.command == "feedback":
+            feedback_store = Feedback()
+            if args.feedback_command == "add":
+                identifier = feedback_store.add(args.rating, args.note)
+                print(json.dumps({"id": identifier, "rating": args.rating,
+                                  "stored": True, "source": "owner_provided"}, indent=2))
+            elif args.feedback_command == "list":
+                print(json.dumps(feedback_store.list(), indent=2))
+            elif args.feedback_command == "forget":
+                if not feedback_store.forget(args.id):
+                    print("Feedback ID not found", file=sys.stderr)
+                    return 1
+                print("Feedback deleted from the live database")
         elif args.command == "school":
             if args.school_command == "list":
                 for lesson in catalog():

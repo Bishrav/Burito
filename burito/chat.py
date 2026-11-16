@@ -11,12 +11,13 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True,
-         pc_access=True, include_activity=False, activity_only=False):
+         pc_access=True, include_activity=False, activity_only=False, include_feedback=False):
     if activity_only:
         include_personal = False
         include_system = False
         include_activity = True
         pc_access = False
+        include_feedback = False
     runtime = ROOT / "runtime"
     environment = os.environ.copy()
     candidates = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
@@ -31,7 +32,8 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     # Validate the selected local data before starting the model runtime.
     from .context import build_context
     build_context(lesson, include_personal, include_system=include_system,
-                  include_activity=include_activity, activity_only=activity_only)
+                  include_activity=include_activity, activity_only=activity_only,
+                  include_feedback=include_feedback)
     environment.update({
         "BURITO_MODE": "local",
         "BURITO_LOCAL_MODEL": model,
@@ -40,6 +42,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
         "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
         "BURITO_INCLUDE_ACTIVITY": "1" if include_activity else "0",
+        "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
         "BURITO_PC_ACCESS": "1" if pc_access else "0",
         "BURITO_PROJECT_ROOT": str(ROOT),
         "BURITO_PYTHON": sys.executable,
@@ -50,6 +53,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     print(f"Starting local Burito with lesson {lesson}. No automatic cloud fallback.")
     print("Personal memory included." if include_personal else "Personal memory excluded.")
     print("Local activity summary included for this chat." if include_activity else "Activity summary excluded.")
+    print("Owner feedback included for this chat." if include_feedback else "Owner feedback excluded.")
     if activity_only:
         print("Activity-only scope: PC inventory, personal memory, and PC tools are excluded.")
     print("Local file/application tools enabled; application launches require approval." if pc_access else "PC file/application tools disabled.")
