@@ -1,0 +1,12 @@
+{
+  "KPlugin": {
+    "Name": "Burito Activity Observer",
+    "Description": "Locally records foreground application IDs for Burito",
+    "Id": "buritoactivity",
+    "Version": "0.1.0",
+    "License": "MIT"
+  },
+  "X-Plasma-API": "javascript",
+  "X-Plasma-MainScript": "code/main.js",
+  "KPackageStructure": "KWin/Script"
+}

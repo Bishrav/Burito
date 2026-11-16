@@ -100,5 +100,37 @@ hardware report is committed to GitHub; only source and synthetic tests belong t
 
 The separate tools in PC_ACCESS.md now support bounded text-file reads, filename
 search, and approved application-launch requests. This inventory alone does not
-perform those operations. Document-content search, active-window observation,
-and general desktop actions remain future integrations.
+perform those operations. Document-content search and general desktop actions
+remain future integrations.
+
+## Optional foreground-app activity
+
+Burito includes an opt-in KWin script for Plasma on Wayland. It records only the
+active window's desktop application ID and `idle` transitions in Burito's private
+SQLite database. It never reads window titles, document names, screen contents,
+keystrokes, or process command lines. Local KWin debug logging must be enabled
+for the script-to-collector bridge; the collector ignores all journal lines
+except its own `BURITO_ACTIVITY:` records. No activity data is sent to chat,
+cloud services, or GitHub. KWin's local journal also contains these app IDs;
+its retention is controlled by systemd-journald, so `activity clear` deletes
+Burito's SQLite records but does not erase journal history.
+
+Enable, inspect, pause, review, and delete activity records with:
+
+```bash
+python3 -m burito activity enable
+python3 -m burito activity status
+python3 -m burito activity report --days 7
+python3 -m burito activity pause
+python3 -m burito activity clear
+```
+
+Enable starts a user-level journal collector and installs/enables the KWin
+script. Pause disables the script and collector but preserves records. Clear
+removes the recorded events. Burito retains at most 30 days and 20,000 events.
+Reports estimate elapsed foreground time between app switches; they do not
+prove keyboard use or personal interest. Long gaps are capped at four hours,
+and inactivity away from the computer can still be counted as foreground time.
+This observer is not enabled by `pc enable` and does not capture screenshots.
+To remove old journal entries, use Kubuntu's journal retention controls; do not
+vacuum the journal unless you intend to remove unrelated system logs as well.

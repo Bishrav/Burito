@@ -12,6 +12,7 @@ from .school import School, catalog
 from .context import build_context
 from .chat import chat
 from .awareness import Awareness, enable, pause, monitor_status
+from . import activity
 from .access import dispatch
 
 
@@ -57,6 +58,12 @@ def main(argv=None):
     pc_commands = pc.add_subparsers(dest="pc_command", required=True)
     for name in ("scan", "status", "changes", "enable", "pause", "monitor-status"):
         pc_commands.add_parser(name)
+    activity_parser = commands.add_parser("activity", help="Opt-in local foreground-app tracking")
+    activity_commands = activity_parser.add_subparsers(dest="activity_command", required=True)
+    for name in ("enable", "pause", "status", "report", "clear"):
+        activity_subcommand = activity_commands.add_parser(name)
+        if name == "report":
+            activity_subcommand.add_argument("--days", type=int, default=7)
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
@@ -85,6 +92,17 @@ def main(argv=None):
                 awareness = Awareness()
                 result = awareness.scan() if args.pc_command == "scan" else awareness.summary() if args.pc_command == "status" else awareness.changes()
                 print(json.dumps(result, indent=2))
+        elif args.command == "activity":
+            if args.activity_command == "enable":
+                print(activity.enable())
+            elif args.activity_command == "pause":
+                print(activity.pause())
+            elif args.activity_command == "status":
+                print(json.dumps(activity.status(), indent=2))
+            elif args.activity_command == "report":
+                print(json.dumps(activity.report(args.days), indent=2))
+            elif args.activity_command == "clear":
+                print(f"Deleted {activity.clear()} local activity event(s)")
         elif args.command == "school":
             if args.school_command == "list":
                 for lesson in catalog():

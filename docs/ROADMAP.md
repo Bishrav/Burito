@@ -69,7 +69,9 @@ disappear from retrieval; conflicting and missing evidence are acknowledged.
 ## 5 — Observation and interests
 
 Build an opt-in session observer that starts after graphical login only when
-enabled by the owner. Begin with selected app/activity metadata, then add
+enabled by the owner. The first KWin integration now records foreground app IDs
+and bounded elapsed intervals locally; verify the host install, pause, and
+deletion controls before extending it. Begin with selected app/activity metadata, then add
 explicitly enabled screen capture through supported KDE/Wayland interfaces.
 Verify what those interfaces actually expose; do not claim password detection
 or complete screen exclusion without testing it. Avoid keylogging. Pause on
