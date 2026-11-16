@@ -22,6 +22,7 @@ python3 -m burito correct MEMORY_ID "I prefer detailed explanations"
 python3 -m burito forget MEMORY_ID
 python3 -m burito feedback add correction "Prefer suggestions grounded in a named project task."
 python3 -m burito feedback list
+python3 -m burito suggestions list --status pending
 python3 -m burito backup /absolute/path/to/an/existing/folder/burito-backup.sqlite3
 python3 -m unittest discover -s tests -v
 ```
@@ -47,6 +48,7 @@ guidance locally and does not train model weights.
 - [Architecture and trust boundaries](docs/ARCHITECTURE.md)
 - [First milestone and machine setup](docs/SETUP.md)
 - [Progress and next work](docs/STATUS.md)
+- [Owner-reviewed suggestions](docs/SUGGESTIONS.md)
 - [Teaching Burito together](docs/LEARNING.md)
 - [Local PC inventory and change detection](docs/PC_AWARENESS.md)
 - [Using files and applications from chat](docs/PC_ACCESS.md)

@@ -15,6 +15,7 @@ from .awareness import Awareness, enable, pause, monitor_status
 from . import activity
 from .access import dispatch
 from .feedback import Feedback, RATINGS
+from .suggestions import Suggestions, EVIDENCE_SOURCES, REVIEW_STATES
 
 
 def main(argv=None):
@@ -42,6 +43,22 @@ def main(argv=None):
     feedback_commands.add_parser("list", help="List owner-provided feedback records")
     feedback_forget = feedback_commands.add_parser("forget", help="Delete one feedback record by ID")
     feedback_forget.add_argument("id")
+    suggestions = commands.add_parser("suggestions", help="Record and review evidence-backed suggestions locally")
+    suggestions_commands = suggestions.add_subparsers(dest="suggestions_command", required=True)
+    suggestion_add = suggestions_commands.add_parser("add", help="Record a suggestion and its evidence")
+    suggestion_add.add_argument("content")
+    suggestion_add.add_argument("--evidence-source", required=True, choices=EVIDENCE_SOURCES)
+    suggestion_add.add_argument("--evidence", required=True)
+    suggestion_add.add_argument("--reference", default="",
+                                help="Optional local event ID, date, or other provenance reference")
+    suggestion_list = suggestions_commands.add_parser("list", help="List reviewed suggestions")
+    suggestion_list.add_argument("--status", choices=REVIEW_STATES)
+    suggestion_review = suggestions_commands.add_parser("review", help="Accept or dismiss a suggestion")
+    suggestion_review.add_argument("id")
+    suggestion_review.add_argument("status", choices=REVIEW_STATES)
+    suggestion_review.add_argument("--note", default="")
+    suggestion_forget = suggestions_commands.add_parser("forget", help="Delete a suggestion and its evidence")
+    suggestion_forget.add_argument("id")
     school = commands.add_parser("school", help="General curriculum, separate from personal facts")
     school_commands = school.add_subparsers(dest="school_command", required=True)
     school_commands.add_parser("list", help="List available lessons in teaching order")
@@ -162,6 +179,23 @@ def main(argv=None):
                     print("Feedback ID not found", file=sys.stderr)
                     return 1
                 print("Feedback deleted from the live database")
+        elif args.command == "suggestions":
+            store = Suggestions()
+            if args.suggestions_command == "add":
+                result = store.add(args.content, args.evidence_source, args.evidence, args.reference)
+                print(json.dumps(result, indent=2))
+            elif args.suggestions_command == "list":
+                print(json.dumps(store.list(args.status), indent=2))
+            elif args.suggestions_command == "review":
+                if not store.review(args.id, args.status, args.note):
+                    print("Suggestion ID not found", file=sys.stderr)
+                    return 1
+                print(f"Suggestion marked {args.status}")
+            elif args.suggestions_command == "forget":
+                if not store.forget(args.id):
+                    print("Suggestion ID not found", file=sys.stderr)
+                    return 1
+                print("Suggestion and its evidence deleted from the live database")
         elif args.command == "school":
             if args.school_command == "list":
                 for lesson in catalog():
