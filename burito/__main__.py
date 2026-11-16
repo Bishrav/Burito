@@ -64,6 +64,7 @@ def main(argv=None):
         activity_subcommand = activity_commands.add_parser(name)
         if name == "report":
             activity_subcommand.add_argument("--days", type=int, default=7)
+    activity_commands.add_parser("collect", help=argparse.SUPPRESS)
     args = parser.parse_args(argv)
     try:
         if args.command == "doctor":
@@ -93,7 +94,9 @@ def main(argv=None):
                 result = awareness.scan() if args.pc_command == "scan" else awareness.summary() if args.pc_command == "status" else awareness.changes()
                 print(json.dumps(result, indent=2))
         elif args.command == "activity":
-            if args.activity_command == "enable":
+            if args.activity_command == "collect":
+                activity.collect()
+            elif args.activity_command == "enable":
                 print(activity.enable())
             elif args.activity_command == "pause":
                 print(activity.pause())
