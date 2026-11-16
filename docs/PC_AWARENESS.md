@@ -90,6 +90,19 @@ Personal facts continue to require the separate `--include-personal` option.
 Cloud model routing remains disabled. Future cloud support must explicitly
 decide what PC information can leave the machine.
 
+Activity summaries stay out of ordinary chat. The explicit `--include-activity`
+flag adds a bounded seven-day summary of up to five app IDs, their locally
+estimated foreground minutes, and their provenance-labeled context notes to
+that one local context. Preview it with:
+
+```bash
+python3 -m burito context --include-activity
+```
+
+The model must treat time as an estimate, not proof of
+interest, skill, or active use; it cannot write memories or take actions from
+this data.
+
 Snapshots and the newest 2,000 change events live in the private local SQLite
 database outside the repository. The newest 30 scan results are retained.
 Existing database backups include this inventory. It is not encrypted by Burito,

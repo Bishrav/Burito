@@ -7,7 +7,7 @@ from .school import School
 
 
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
-                  max_chars=12000, include_system=True):
+                  max_chars=12000, include_system=True, include_activity=False):
     memory = memory if memory is not None else Memory()
     lessons = {item["id"]: item for item in School(memory).installed()}
     if lesson_id not in lessons:
@@ -17,6 +17,7 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         "lesson": lessons[lesson_id],
         "personal_memory_included": include_personal,
         "personal_facts": [],
+        "activity_included": include_activity,
         "understanding_assessed": False,
         "truncated": False,
     }
@@ -35,6 +36,24 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
             context["truncated"] = True
         if len(json.dumps(context)) > max_chars:
             context.pop("pc_inventory")
+    if include_activity:
+        from .activity import report as activity_report
+        report = activity_report(days=7, memory=memory)
+        context["activity_observations"] = {
+            "period_days": report["period_days"],
+            "event_count": report["event_count"],
+            "last_observed": report["last_observed"],
+            "applications": report["foreground_estimates"][:5],
+            "interpretation": report["interpretation"],
+            "scope": report["scope"],
+        }
+        if len(json.dumps(context)) > max_chars:
+            context["activity_observations"]["applications"] = report["foreground_estimates"][:3]
+            context["activity_observations"]["details_omitted"] = True
+            context["truncated"] = True
+        if len(json.dumps(context)) > max_chars:
+            context.pop("activity_observations")
+            raise ValueError("Activity summary exceeds the local context size limit")
     if include_personal:
         facts = memory.list()
         for record in facts[-10:]:

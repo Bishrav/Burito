@@ -110,6 +110,19 @@ that conversation text is never stored.
 Cloud/hybrid routing needs a separate implementation with session isolation,
 context-sharing policy, budget limits, and failure handling.
 
+To ask Burito for patterns and possible next steps using the explicitly enabled
+local app summary, add `--include-activity` to the chat command. Activity data
+is excluded from ordinary chats and is not sent to a cloud model. Example:
+
+```bash
+python3 -m burito chat --model burito-local:8b --context-tokens 8192 --include-activity
+```
+
+Treat any pattern as a hypothesis and review its evidence. Time in a foreground
+app can include idle time; an app's generic role does not explain your personal
+reason for using it. Burito can suggest a next step, but this milestone has no
+tool to save a new personal interest or act on the suggestion.
+
 ## First practice task
 
 Ask Burito: "I open a code editor every evening. What do you know, and what

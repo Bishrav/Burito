@@ -32,6 +32,8 @@
   separating owner-confirmed notes from generic app-role descriptions. Reports
   do not treat either as inferred interests. Activity clear removes the local
   events and labels together.
+- Local chat can receive a bounded seven-day activity summary only with the
+  explicit `--include-activity` flag. Activity remains excluded from normal chat.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -70,9 +72,8 @@ device files do not require a driver reinstall.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
 3. Verify optional personal memory and correction.
-4. Let the owner collect useful app metadata and add explicit app context;
-   then build owner-reviewed summaries and suggestions with evidence and
-   correction controls.
+4. Add owner-reviewed suggestion records, feedback, duplicate suppression, and
+   evidence links before making suggestions recurring.
 5. Add the basic desktop interface around working text chat, followed by voice.
 6. Add optional cloud routing with explicit context and budget configuration.
 

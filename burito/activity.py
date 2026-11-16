@@ -130,17 +130,18 @@ def report(days=7, memory=None):
     finally:
         connection.close()
 
+    def parse_time(value):
+        result = datetime.fromisoformat(value)
+        return result if result.tzinfo is not None else result.replace(tzinfo=timezone.utc)
+
+    period_rows = [row for row in rows if parse_time(row["observed_at"]) >= since]
     totals = {}
     max_interval = timedelta(hours=MAX_INTERVAL_HOURS)
     for index, row in enumerate(rows):
-        start = datetime.fromisoformat(row["observed_at"])
-        if start.tzinfo is None:
-            start = start.replace(tzinfo=timezone.utc)
+        start = parse_time(row["observed_at"])
         next_time = now
         if index + 1 < len(rows):
-            next_time = datetime.fromisoformat(rows[index + 1]["observed_at"])
-            if next_time.tzinfo is None:
-                next_time = next_time.replace(tzinfo=timezone.utc)
+            next_time = parse_time(rows[index + 1]["observed_at"])
         end = min(next_time, start + max_interval, now)
         interval_start = max(start, since)
         if row["app_id"] == "idle" or end <= interval_start:
@@ -148,8 +149,8 @@ def report(days=7, memory=None):
         totals[row["app_id"]] = totals.get(row["app_id"], 0) + (end - interval_start).total_seconds()
     return {
         "period_days": days,
-        "event_count": len(rows),
-        "last_observed": rows[-1]["observed_at"] if rows else None,
+        "event_count": len(period_rows),
+        "last_observed": period_rows[-1]["observed_at"] if period_rows else None,
         "foreground_estimates": [
             {"app_id": app_id, **labels.get(app_id, {"context_note": None, "context_source": None}),
              "seconds": round(seconds), "minutes": round(seconds / 60, 1)}

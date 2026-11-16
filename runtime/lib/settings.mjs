@@ -19,5 +19,6 @@ export function readSettings(environment) {
     lesson: environment.BURITO_LESSON_ID || 'home.honesty',
     includePersonal: environment.BURITO_INCLUDE_PERSONAL_MEMORY === '1',
     includeSystem: environment.BURITO_INCLUDE_SYSTEM !== '0',
+    includeActivity: environment.BURITO_INCLUDE_ACTIVITY === '1',
   };
 }
