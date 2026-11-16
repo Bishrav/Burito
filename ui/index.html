@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080d12">
+  <title>Burito // Local Assistant Console</title>
+  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./style-2.css"><link rel="stylesheet" href="./style-3.css"><link rel="stylesheet" href="./style-4.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="#overview" aria-label="Burito home">
+        <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span><b>BURITO</b><small>PERSONAL ASSISTANT // LOCAL CONSOLE</small></span>
+      </a>
+      <div class="top-state"><span class="state-dot"></span><span>INTERFACE PREVIEW</span><span class="divider">/</span><span class="muted">ASSISTANT CONNECTION NOT CONFIGURED</span></div>
+      <div class="top-right"><time id="clock">--:--:--</time><button class="icon-button" type="button" aria-label="Open settings" data-nav="settings">⌘</button></div>
+    </header>
+
+    <aside class="rail">
+      <div class="rail-label">WORKSPACE</div>
+      <nav aria-label="Main navigation">
+        <button class="nav-item active" data-nav="overview"><span class="nav-icon">◉</span>Overview<span class="nav-key">01</span></button>
+        <button class="nav-item" data-nav="assistant"><span class="nav-icon">⌁</span>Assistant<span class="nav-key">02</span></button>
+        <button class="nav-item" data-nav="memory"><span class="nav-icon">▤</span>Memory<span class="nav-key">03</span></button>
+        <button class="nav-item" data-nav="activity"><span class="nav-icon">⌗</span>Activity<span class="nav-key">04</span></button>
+        <button class="nav-item" data-nav="suggestions"><span class="nav-icon">✳</span>Suggestions<span class="nav-key">05</span></button>
+        <button class="nav-item" data-nav="projects"><span class="nav-icon">⌘</span>Projects<span class="nav-key">06</span></button>
+      </nav>
+      <div class="rail-bottom"><span class="small-orbit" aria-hidden="true"></span><div><b>CORE STATUS</b><small>Awaiting local runtime</small></div></div>
+    </aside>
+
+    <main id="overview" class="main-content">
+      <section class="welcome-row">
+        <div><p class="eyebrow">PERSONAL COMPUTING SYSTEM <span>•</span> PREVIEW BUILD</p><h1>Your workspace,<br><em>at a glance.</em></h1><p class="intro">A local-first command surface for Burito. The interface is ready; live assistant data will appear after the runtime is connected.</p></div>
+        <div class="connection-card"><div class="card-top"><span class="eyebrow">LOCAL RUNTIME</span><span class="pill amber"><i></i> NOT CONNECTED</span></div><div class="connection-body"><span class="connection-glyph">⌬</span><div><b>Burito agent</b><small>Runtime health has not been checked.</small></div></div><div class="connection-foot"><span>MODEL</span><b>Unknown</b><span class="foot-sep">·</span><span>MODE</span><b>Local-first</b></div></div>
+      </section>
+
+      <section class="engine-panel panel" aria-label="Burito engine visualization">
+        <div class="panel-heading"><div><span class="eyebrow">01 / CORE VISUALIZATION</span><h2>Burito cognitive engine</h2></div><span class="pill neutral"><i></i> VISUAL ONLY</span></div>
+        <div class="engine-stage">
+          <div class="scanline"></div><div class="engine-rings" aria-hidden="true"><span class="ring ring-a"></span><span class="ring ring-b"></span><span class="ring ring-c"></span><span class="ring ring-d"></span><span class="orbit-dot"></span><span class="core"><i></i></span><span class="crosshair cross-x"></span><span class="crosshair cross-y"></span></div>
+          <div class="engine-readout readout-left"><small>PROCESS</small><b>STANDBY</b><small>NO TASK RUNNING</small></div>
+          <div class="engine-readout readout-right"><small>INFERENCE</small><b>—</b><small>WAITING FOR RUNTIME</small></div>
+          <div class="engine-caption"><span class="live-pip"></span> CORE VISUALIZATION <span class="caption-divider">/</span> DECORATIVE ANIMATION</div>
+        </div>
+        <div class="telemetry-strip"><div><small>MODEL</small><b>Not reported</b></div><div><small>GPU</small><b>Not connected</b></div><div><small>SESSION</small><b>Not started</b></div><div><small>NETWORK</small><b>Not measured</b></div></div>
+      </section>
+
+      <div class="content-grid">
+        <section class="panel assistant-panel" id="assistant">
+          <div class="panel-heading"><div><span class="eyebrow">02 / INTERACTION</span><h2>Assistant channel</h2></div><span class="pill neutral">IDLE</span></div>
+          <div class="empty-chat"><div class="empty-glyph">✳</div><b>Conversation will start here</b><p>Connect the local Eve runtime to send a message and stream Burito’s reply in this panel.</p></div>
+          <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Runtime connection required" disabled><button type="submit" disabled aria-label="Send message">↑</button></div><div class="composer-meta"><span>LOCAL SESSION</span><span>ENTER TO SEND · SHIFT+ENTER FOR NEW LINE</span></div></form>
+        </section>
+        <section class="panel context-panel">
+          <div class="panel-heading"><div><span class="eyebrow">03 / CONTEXT CONTROL</span><h2>What Burito may use</h2></div><span class="pill neutral">PREVIEW ONLY</span></div>
+          <p class="panel-copy">These switches show the planned per-chat controls. They do not grant access or change Burito’s runtime settings yet.</p>
+          <div class="scope-list">
+            <label class="scope-row"><span class="scope-symbol">⌖</span><span><b>System inventory</b><small>Previously collected hardware and software summary</small></span><input type="checkbox" disabled><i class="toggle"></i></label>
+            <label class="scope-row"><span class="scope-symbol">◷</span><span><b>Activity summary</b><small>App IDs and estimated foreground time</small></span><input type="checkbox" disabled><i class="toggle"></i></label>
+            <label class="scope-row"><span class="scope-symbol">▤</span><span><b>Owner feedback</b><small>Corrections you explicitly saved</small></span><input type="checkbox" disabled><i class="toggle"></i></label>
+            <label class="scope-row"><span class="scope-symbol">⌘</span><span><b>Burito project notes</b><small>Curated repository context</small></span><input type="checkbox" disabled><i class="toggle"></i></label>
+          </div>
+          <div class="privacy-note"><span>◇</span><p><b>Explicit context, visible boundaries.</b><br>Nothing on this screen claims to watch your desktop. Activity tracking is a separate opt-in feature.</p></div>
+        </section>
+      </div>
+
+      <div class="content-grid lower-grid">
+        <section class="panel compact-panel" id="memory"><div class="panel-heading"><div><span class="eyebrow">04 / MEMORY</span><h2>Personal memory</h2></div><span class="pill neutral">NOT LOADED</span></div><p class="panel-copy">Your saved facts stay local. They are excluded from a chat unless you explicitly include them.</p><button class="text-button" data-nav="memory">Explore memory <span>↗</span></button></section>
+        <section class="panel compact-panel" id="activity"><div class="panel-heading"><div><span class="eyebrow">05 / OBSERVATION</span><h2>Activity summary</h2></div><span class="pill neutral">NOT LOADED</span></div><p class="panel-copy">No activity records are displayed because the interface is not connected to Burito’s local data.</p><button class="text-button" data-nav="activity">Review privacy controls <span>↗</span></button></section>
+      </div>
+      <footer><span>BURITO / LOCAL-FIRST ASSISTANT</span><span>PREVIEW UI · NO LIVE DATA · NO PC ACTIONS</span><span id="date">—</span></footer>
+    </main>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="./app.js" defer></script>
+</body>
+</html>
