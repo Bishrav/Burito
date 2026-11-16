@@ -34,8 +34,12 @@ def _connect(memory=None):
     connection.execute("""CREATE TABLE IF NOT EXISTS activity_labels (
         app_id TEXT PRIMARY KEY,
         owner_note TEXT NOT NULL,
+        source TEXT NOT NULL DEFAULT 'owner_confirmed',
         updated_at TEXT NOT NULL
     )""")
+    label_columns = {row["name"] for row in connection.execute("PRAGMA table_info(activity_labels)")}
+    if "source" not in label_columns:
+        connection.execute("ALTER TABLE activity_labels ADD COLUMN source TEXT NOT NULL DEFAULT 'owner_confirmed'")
     return connection
 
 
@@ -121,9 +125,8 @@ def report(days=7, memory=None):
         rows = [dict(row) for row in connection.execute(
             "SELECT observed_at, app_id FROM app_activity ORDER BY observed_at, id"
         )]
-        labels = {row["app_id"]: row["owner_note"] for row in connection.execute(
-            "SELECT app_id, owner_note FROM activity_labels"
-        )}
+        labels = {row["app_id"]: {"context_note": row["owner_note"], "context_source": row["source"]}
+                  for row in connection.execute("SELECT app_id, owner_note, source FROM activity_labels")}
     finally:
         connection.close()
 
@@ -148,7 +151,7 @@ def report(days=7, memory=None):
         "event_count": len(rows),
         "last_observed": rows[-1]["observed_at"] if rows else None,
         "foreground_estimates": [
-            {"app_id": app_id, "owner_note": labels.get(app_id),
+            {"app_id": app_id, **labels.get(app_id, {"context_note": None, "context_source": None}),
              "seconds": round(seconds), "minutes": round(seconds / 60, 1)}
             for app_id, seconds in sorted(totals.items(), key=lambda item: (-item[1], item[0]))
         ],
@@ -158,22 +161,23 @@ def report(days=7, memory=None):
     }
 
 
-def label(app_id, owner_note, memory=None):
+def label(app_id, context_note, memory=None, source="owner_confirmed"):
     app_id = str(app_id).strip()
-    owner_note = str(owner_note).strip()
+    context_note = str(context_note).strip()
     if not APP_ID.fullmatch(app_id) or app_id == "idle":
         raise ValueError("Enter a valid application desktop ID")
-    if not owner_note or len(owner_note) > 500:
-        raise ValueError("Owner note must contain 1 to 500 characters")
+    if source not in ("owner_confirmed", "assistant_app_role"):
+        raise ValueError("Context source must be owner_confirmed or assistant_app_role")
+    if not context_note or len(context_note) > 500:
+        raise ValueError("App context must contain 1 to 500 characters")
     connection = _connect(memory)
     try:
         with connection:
-            connection.execute("""INSERT INTO activity_labels(app_id, owner_note, updated_at)
-                VALUES (?, ?, ?) ON CONFLICT(app_id) DO UPDATE SET
-                owner_note=excluded.owner_note, updated_at=excluded.updated_at""",
-                (app_id, owner_note, datetime.now(timezone.utc).isoformat()))
-        return {"app_id": app_id, "owner_note": owner_note,
-                "source": "owner-provided context; not an inferred interest"}
+            connection.execute("""INSERT INTO activity_labels(app_id, owner_note, source, updated_at)
+                VALUES (?, ?, ?, ?) ON CONFLICT(app_id) DO UPDATE SET
+                owner_note=excluded.owner_note, source=excluded.source, updated_at=excluded.updated_at""",
+                (app_id, context_note, source, datetime.now(timezone.utc).isoformat()))
+        return {"app_id": app_id, "context_note": context_note, "context_source": source}
     finally:
         connection.close()
 
@@ -181,9 +185,11 @@ def label(app_id, owner_note, memory=None):
 def labels(memory=None):
     connection = _connect(memory)
     try:
-        return [dict(row) for row in connection.execute(
-            "SELECT app_id, owner_note, updated_at FROM activity_labels ORDER BY app_id"
-        )]
+        return [{"app_id": row["app_id"], "context_note": row["owner_note"],
+                 "context_source": row["source"], "updated_at": row["updated_at"]}
+                for row in connection.execute(
+                    "SELECT app_id, owner_note, source, updated_at FROM activity_labels ORDER BY app_id"
+                )]
     finally:
         connection.close()
 

@@ -28,9 +28,10 @@
 - Opt-in KWin observer records foreground app IDs into the private local
   database. The owner verified Konsole and Dolphin events and confirmed pause
   disables both the KWin script and collector while retaining Burito records.
-- Owner-provided app context labels can be added, listed, updated, or removed;
-  reports show these as notes, not inferred interests. Activity clear removes
-  the local events and labels together.
+- App context labels can be added, listed, updated, or removed with provenance
+  separating owner-confirmed notes from generic app-role descriptions. Reports
+  do not treat either as inferred interests. Activity clear removes the local
+  events and labels together.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.

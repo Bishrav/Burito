@@ -64,9 +64,11 @@ def main(argv=None):
         activity_subcommand = activity_commands.add_parser(name)
         if name == "report":
             activity_subcommand.add_argument("--days", type=int, default=7)
-    activity_label = activity_commands.add_parser("label", help="Save your own context for an app ID")
+    activity_label = activity_commands.add_parser("label", help="Save app context with its source")
     activity_label.add_argument("app_id")
-    activity_label.add_argument("owner_note")
+    activity_label.add_argument("context_note")
+    activity_label.add_argument("--source", choices=("owner_confirmed", "assistant_app_role"),
+                                default="owner_confirmed")
     activity_unlabel = activity_commands.add_parser("unlabel", help="Remove your context for an app ID")
     activity_unlabel.add_argument("app_id")
     activity_commands.add_parser("collect", help=argparse.SUPPRESS)
@@ -112,7 +114,7 @@ def main(argv=None):
             elif args.activity_command == "labels":
                 print(json.dumps(activity.labels(), indent=2))
             elif args.activity_command == "label":
-                print(json.dumps(activity.label(args.app_id, args.owner_note), indent=2))
+                print(json.dumps(activity.label(args.app_id, args.context_note, source=args.source), indent=2))
             elif args.activity_command == "unlabel":
                 if not activity.unlabel(args.app_id):
                     print("Application label not found", file=sys.stderr)

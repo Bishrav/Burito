@@ -132,7 +132,9 @@ Enable starts a user-level journal collector and installs/enables the KWin
 script. Pause disables the script and collector but preserves records. Clear
 removes the recorded events. Burito retains at most 30 days and 20,000 events.
 App labels are context you provide explicitly; Burito does not infer interests
-from app IDs or durations. `activity clear` also removes these local labels.
+from app IDs or durations. Labels record their provenance: owner-confirmed notes
+and generic assistant app-role descriptions are shown separately. `activity clear`
+also removes these local labels.
 Reports estimate elapsed foreground time between app switches; they do not
 prove keyboard use or personal interest. Long gaps are capped at four hours,
 and inactivity away from the computer can still be counted as foreground time.
