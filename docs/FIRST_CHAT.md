@@ -97,6 +97,9 @@ This command assumes the named local configuration above was created. The launch
 uses an installed system or checkout-local Node and starts `eve dev --no-default-extensions` in
 `runtime/`. It sets the Python interpreter and project location for the read-only
 context bridge. Personal facts require `--include-personal`; the default is off.
+Use `--include-project` to give Burito a small curated repository map and current
+milestone. This does not enable file tools; paths outside the supplied map are
+unverified. Use `--include-feedback` separately to include your explicit feedback.
 Use a fresh local development session; do not resume unrelated historical chats.
 
 The dynamic model configuration accepts literal loopback endpoints only and

@@ -74,6 +74,8 @@ def main(argv=None):
                          help="Include a bounded local 7-day foreground-app summary")
     context.add_argument("--include-feedback", action="store_true",
                          help="Include explicit owner feedback in this context")
+    context.add_argument("--include-project", action="store_true",
+                         help="Include the curated Burito repository map and current milestone")
     context.add_argument("--activity-only", action="store_true",
                          help="Preview only activity data; exclude PC inventory and personal facts")
     conversation = commands.add_parser("chat", help="Start local eve chat after runtime and model setup")
@@ -86,6 +88,8 @@ def main(argv=None):
                               help="Include a bounded local 7-day foreground-app summary")
     conversation.add_argument("--include-feedback", action="store_true",
                               help="Include explicit owner feedback in this chat")
+    conversation.add_argument("--include-project", action="store_true",
+                              help="Include a curated Burito repository map and current milestone")
     conversation.add_argument("--activity-only", action="store_true",
                               help="Use only activity data; exclude PC inventory, personal facts, and PC tools")
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
@@ -127,88 +131,18 @@ def main(argv=None):
                                            include_system=not args.no_system,
                                            include_activity=args.include_activity,
                                            activity_only=args.activity_only,
-                                           include_feedback=args.include_feedback), indent=2))
+                                           include_feedback=args.include_feedback,
+                                           include_project=args.include_project), indent=2))
         elif args.command == "chat":
             return chat(args.model, args.context_tokens, args.lesson, args.include_personal,
                         include_system=not args.no_system, pc_access=not args.no_files,
                         include_activity=args.include_activity, activity_only=args.activity_only,
-                        include_feedback=args.include_feedback)
+                        include_feedback=args.include_feedback, include_project=args.include_project)
         elif args.command == "pc":
             if args.pc_command == "enable":
                 print(enable())
             elif args.pc_command == "pause":
-                print(pause())
-            elif args.pc_command == "monitor-status":
-                print(json.dumps(monitor_status(), indent=2))
-            else:
-                awareness = Awareness()
-                result = awareness.scan() if args.pc_command == "scan" else awareness.summary() if args.pc_command == "status" else awareness.changes()
-                print(json.dumps(result, indent=2))
-        elif args.command == "activity":
-            if args.activity_command == "collect":
-                activity.collect()
-            elif args.activity_command == "enable":
-                print(activity.enable())
-            elif args.activity_command == "pause":
-                print(activity.pause())
-            elif args.activity_command == "status":
-                print(json.dumps(activity.status(), indent=2))
-            elif args.activity_command == "report":
-                print(json.dumps(activity.report(args.days), indent=2))
-            elif args.activity_command == "labels":
-                print(json.dumps(activity.labels(), indent=2))
-            elif args.activity_command == "label":
-                print(json.dumps(activity.label(args.app_id, args.context_note, source=args.source), indent=2))
-            elif args.activity_command == "unlabel":
-                if not activity.unlabel(args.app_id):
-                    print("Application label not found", file=sys.stderr)
-                    return 1
-                print("Application label removed")
-            elif args.activity_command == "clear":
-                print(json.dumps(activity.clear(), indent=2))
-        elif args.command == "feedback":
-            feedback_store = Feedback()
-            if args.feedback_command == "add":
-                identifier = feedback_store.add(args.rating, args.note)
-                print(json.dumps({"id": identifier, "rating": args.rating,
-                                  "stored": True, "source": "owner_provided"}, indent=2))
-            elif args.feedback_command == "list":
-                print(json.dumps(feedback_store.list(), indent=2))
-            elif args.feedback_command == "forget":
-                if not feedback_store.forget(args.id):
-                    print("Feedback ID not found", file=sys.stderr)
-                    return 1
-                print("Feedback deleted from the live database")
-        elif args.command == "suggestions":
-            store = Suggestions()
-            if args.suggestions_command == "add":
-                result = store.add(args.content, args.evidence_source, args.evidence, args.reference)
-                print(json.dumps(result, indent=2))
-            elif args.suggestions_command == "list":
-                print(json.dumps(store.list(args.status), indent=2))
-            elif args.suggestions_command == "review":
-                if not store.review(args.id, args.status, args.note):
-                    print("Suggestion ID not found", file=sys.stderr)
-                    return 1
-                print(f"Suggestion marked {args.status}")
-            elif args.suggestions_command == "forget":
-                if not store.forget(args.id):
-                    print("Suggestion ID not found", file=sys.stderr)
-                    return 1
-                print("Suggestion and its evidence deleted from the live database")
-        elif args.command == "school":
-            if args.school_command == "list":
-                for lesson in catalog():
-                    print(f"{lesson['id']} [{lesson['stage']}; {lesson['subject']}] {lesson['title']}")
-            elif args.school_command == "lesson":
-                lessons = {lesson["id"]: lesson for lesson in catalog()}
-                if args.id not in lessons:
-                    raise ValueError("Unknown lesson ID; use 'school list'")
-                print(json.dumps(lessons[args.id], indent=2))
-            elif args.school_command == "install":
-                print(f"Stored {School().install(args.stage)} new or updated reference lesson(s). Not model training.")
-            else:
-                lessons = School().installed()
+                print(pause()…1048 tokens truncated…        lessons = School().installed()
                 print(json.dumps({"reference_lessons": len(lessons), "understanding_assessed": False,
                                   "installed_ids": [lesson["id"] for lesson in lessons]}, indent=2))
         else:

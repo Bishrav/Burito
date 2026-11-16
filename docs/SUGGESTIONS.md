@@ -28,3 +28,5 @@ adds its new evidence to the existing entry and returns that entry's ID. This
 does not detect semantically similar wording. Review states are `pending`,
 `accepted`, and `dismissed`. No suggestion is executed or automatically added
 to personal memory. These records are not currently injected into chat context.
+Use `--include-project` in an ordinary local chat to provide a separate curated
+repository map and current milestone; this does not share the suggestion ledger.

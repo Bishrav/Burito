@@ -8,12 +8,13 @@ from .school import School
 
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                   max_chars=12000, include_system=True, include_activity=False,
-                  activity_only=False, include_feedback=False):
+                  activity_only=False, include_feedback=False, include_project=False):
     if activity_only:
         include_personal = False
         include_system = False
         include_activity = True
         include_feedback = False
+        include_project = False
     memory = memory if memory is not None else Memory()
     lessons = {item["id"]: item for item in School(memory).installed()}
     if lesson_id not in lessons:
@@ -24,6 +25,7 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         "personal_memory_included": include_personal,
         "personal_facts": [],
         "owner_feedback_included": include_feedback,
+        "project_context_included": include_project,
         "activity_included": include_activity,
         "activity_only": activity_only,
         "understanding_assessed": False,
@@ -83,5 +85,32 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         if len(json.dumps(context)) > max_chars:
             context.pop("owner_feedback")
             context["owner_feedback_included"] = False
+            context["truncated"] = True
+    if include_project:
+        context["project_context"] = {
+            "repository": "Burito",
+            "verified_paths": {
+                "burito/__main__.py": "Python command-line interface",
+                "burito/context.py": "Bounded local chat context builder",
+                "burito/suggestions.py": "Private evidence-backed suggestion records and duplicate checks",
+                "runtime/agent/instructions.md": "Persistent local assistant instructions",
+                "runtime/agent/instructions/lesson.ts": "Per-session local context bridge",
+                "docs/ROADMAP.md": "Project stages and longer-term design",
+                "docs/STATUS.md": "Implemented features and current next steps",
+            },
+            "current_milestone": (
+                "The owner-reviewed suggestion store now supports evidence, review states, and exact normalized duplicates. "
+                "It is not yet surfaced in chat. The next design step is opt-in display of accepted or pending records, "
+                "with evidence, before considering recurring suggestions."
+            ),
+            "limits": (
+                "Only the listed paths and their stated roles are verified in this context. "
+                "Do not invent other repository paths, commands, implementations, or claim to have inspected their contents. "
+                "This context grants no file or action access."
+            ),
+        }
+        if len(json.dumps(context)) > max_chars:
+            context.pop("project_context")
+            context["project_context_included"] = False
             context["truncated"] = True
     return context

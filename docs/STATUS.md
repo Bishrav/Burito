@@ -44,6 +44,9 @@
   duplicates reuse the original entry and append evidence. Similar-but-different
   wording is not yet detected; suggestions are not yet generated or surfaced by
   Burito automatically.
+- Local chat can optionally receive a curated Burito repository map and current
+  milestone with `--include-project`. Activity-only sessions exclude it; the map
+  does not grant file access and instructs the model not to invent unlisted paths.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -82,9 +85,9 @@ device files do not require a driver reinstall.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
 3. Verify optional personal memory and correction.
-4. Verify the owner-reviewed suggestion log in Konsole. Later add semantic
-   duplicate detection and opt-in presentation of pending suggestions, with
-   evidence links and owner approval before recurrence.
+4. Verify project-grounded answers and the owner-reviewed suggestion log in
+   Konsole. Later add semantic duplicate detection and opt-in presentation of
+   pending suggestions, with evidence links and owner approval before recurrence.
 5. Add the basic desktop interface around working text chat, followed by voice.
 6. Add optional cloud routing with explicit context and budget configuration.
 
