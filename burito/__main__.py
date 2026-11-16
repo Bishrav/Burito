@@ -46,6 +46,8 @@ def main(argv=None):
     context.add_argument("--include-personal", action="store_true")
     context.add_argument("--include-activity", action="store_true",
                          help="Include a bounded local 7-day foreground-app summary")
+    context.add_argument("--activity-only", action="store_true",
+                         help="Preview only activity data; exclude PC inventory and personal facts")
     conversation = commands.add_parser("chat", help="Start local eve chat after runtime and model setup")
     conversation.add_argument("--model", required=True, help="Name of an installed local model")
     conversation.add_argument("--context-tokens", type=int, required=True,
@@ -54,6 +56,8 @@ def main(argv=None):
     conversation.add_argument("--include-personal", action="store_true")
     conversation.add_argument("--include-activity", action="store_true",
                               help="Include a bounded local 7-day foreground-app summary")
+    conversation.add_argument("--activity-only", action="store_true",
+                              help="Use only activity data; exclude PC inventory, personal facts, and PC tools")
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-files", action="store_true", help="Disable file and application tools")
@@ -91,11 +95,12 @@ def main(argv=None):
         elif args.command == "context":
             print(json.dumps(build_context(args.lesson, args.include_personal,
                                            include_system=not args.no_system,
-                                           include_activity=args.include_activity), indent=2))
+                                           include_activity=args.include_activity,
+                                           activity_only=args.activity_only), indent=2))
         elif args.command == "chat":
             return chat(args.model, args.context_tokens, args.lesson, args.include_personal,
                         include_system=not args.no_system, pc_access=not args.no_files,
-                        include_activity=args.include_activity)
+                        include_activity=args.include_activity, activity_only=args.activity_only)
         elif args.command == "pc":
             if args.pc_command == "enable":
                 print(enable())

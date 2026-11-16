@@ -110,12 +110,13 @@ that conversation text is never stored.
 Cloud/hybrid routing needs a separate implementation with session isolation,
 context-sharing policy, budget limits, and failure handling.
 
-To ask Burito for patterns and possible next steps using the explicitly enabled
-local app summary, add `--include-activity` to the chat command. Activity data
-is excluded from ordinary chats and is not sent to a cloud model. Example:
+To ask Burito for patterns and possible next steps using only the activity
+summary, add `--activity-only` to the chat command. This excludes PC inventory,
+personal facts, and PC tools for that chat. Activity data is excluded from
+ordinary chats and is not sent to a cloud model. Example:
 
 ```bash
-python3 -m burito chat --model burito-local:8b --context-tokens 8192 --include-activity
+python3 -m burito chat --model burito-local:8b --context-tokens 8192 --activity-only
 ```
 
 Treat any pattern as a hypothesis and review its evidence. Time in a foreground

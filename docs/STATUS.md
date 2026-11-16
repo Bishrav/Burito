@@ -33,7 +33,9 @@
   do not treat either as inferred interests. Activity clear removes the local
   events and labels together.
 - Local chat can receive a bounded seven-day activity summary only with the
-  explicit `--include-activity` flag. Activity remains excluded from normal chat.
+  explicit `--include-activity` flag. `--activity-only` additionally excludes
+  PC inventory, personal facts, and PC tools. Activity remains excluded from
+  normal chat.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.

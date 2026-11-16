@@ -93,10 +93,12 @@ decide what PC information can leave the machine.
 Activity summaries stay out of ordinary chat. The explicit `--include-activity`
 flag adds a bounded seven-day summary of up to five app IDs, their locally
 estimated foreground minutes, and their provenance-labeled context notes to
-that one local context. Preview it with:
+that one local context. For a request based only on activity, use `--activity-only`;
+it also excludes PC inventory, personal facts, and PC file/application tools.
+Preview that isolated context with:
 
 ```bash
-python3 -m burito context --include-activity
+python3 -m burito context --activity-only
 ```
 
 The model must treat time as an estimate, not proof of
