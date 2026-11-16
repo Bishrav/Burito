@@ -25,6 +25,9 @@
   rejected at startup. Status now reports both timer and service details.
   The owner manually corrected the generated unit and confirmed the timer is
   active; its first scan completed and a synthetic file-addition event appeared.
+- Opt-in KWin observer records foreground app IDs into the private local
+  database. The owner verified Konsole and Dolphin events and confirmed pause
+  disables both the KWin script and collector while retaining Burito records.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -35,9 +38,9 @@
 Fully evaluated AI chat, hybrid routing, semantic retrieval, voice, screen observation,
 proactive suggestions, chat autostart, general desktop control, automatic training,
 encryption, scheduled backups, restore tooling, and autonomous execution.
-The opt-in KWin activity observer is implemented in source. The owner confirmed
-KWin can report foreground app IDs, but the persistent Burito observer has not
-yet been enabled or verified on the host.
+Application-to-interest labels, owner-reviewed suggestions, lock-state handling,
+and a visible observer status indicator are still future work. App foreground
+time is not treated as proof of active use or interest.
 Runtime dependency installation succeeded through the normal desktop terminal.
 Node 26.13.1 and eve 1.0.0-rc.18 are installed. Exact package versions and the
 generated lockfile are committed. Installed-version documentation was checked;
@@ -63,8 +66,8 @@ device files do not require a driver reinstall.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
 3. Verify optional personal memory and correction.
-4. Enable and verify the opt-in KWin app observer; inspect its local report and
-   pause/delete controls before using observations for suggestions.
+4. Let the owner collect useful app metadata, then build owner-reviewed
+   summaries and suggestions with evidence and correction controls.
 5. Add the basic desktop interface around working text chat, followed by voice.
 6. Add optional cloud routing with explicit context and budget configuration.
 
