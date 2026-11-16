@@ -121,6 +121,9 @@ Enable, inspect, pause, review, and delete activity records with:
 python3 -m burito activity enable
 python3 -m burito activity status
 python3 -m burito activity report --days 7
+python3 -m burito activity label org.kde.konsole "Owner-provided description"
+python3 -m burito activity labels
+python3 -m burito activity unlabel org.kde.konsole
 python3 -m burito activity pause
 python3 -m burito activity clear
 ```
@@ -128,6 +131,8 @@ python3 -m burito activity clear
 Enable starts a user-level journal collector and installs/enables the KWin
 script. Pause disables the script and collector but preserves records. Clear
 removes the recorded events. Burito retains at most 30 days and 20,000 events.
+App labels are context you provide explicitly; Burito does not infer interests
+from app IDs or durations. `activity clear` also removes these local labels.
 Reports estimate elapsed foreground time between app switches; they do not
 prove keyboard use or personal interest. Long gaps are capped at four hours,
 and inactivity away from the computer can still be counted as foreground time.

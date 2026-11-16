@@ -31,6 +31,11 @@ def _connect(memory=None):
         app_id TEXT NOT NULL
     )""")
     connection.execute("CREATE INDEX IF NOT EXISTS app_activity_time ON app_activity(observed_at)")
+    connection.execute("""CREATE TABLE IF NOT EXISTS activity_labels (
+        app_id TEXT PRIMARY KEY,
+        owner_note TEXT NOT NULL,
+        updated_at TEXT NOT NULL
+    )""")
     return connection
 
 
@@ -116,6 +121,9 @@ def report(days=7, memory=None):
         rows = [dict(row) for row in connection.execute(
             "SELECT observed_at, app_id FROM app_activity ORDER BY observed_at, id"
         )]
+        labels = {row["app_id"]: row["owner_note"] for row in connection.execute(
+            "SELECT app_id, owner_note FROM activity_labels"
+        )}
     finally:
         connection.close()
 
@@ -140,7 +148,8 @@ def report(days=7, memory=None):
         "event_count": len(rows),
         "last_observed": rows[-1]["observed_at"] if rows else None,
         "foreground_estimates": [
-            {"app_id": app_id, "seconds": round(seconds), "minutes": round(seconds / 60, 1)}
+            {"app_id": app_id, "owner_note": labels.get(app_id),
+             "seconds": round(seconds), "minutes": round(seconds / 60, 1)}
             for app_id, seconds in sorted(totals.items(), key=lambda item: (-item[1], item[0]))
         ],
         "interpretation": "Estimated foreground time from app switches, not proof of active use or interest. "
@@ -149,14 +158,57 @@ def report(days=7, memory=None):
     }
 
 
+def label(app_id, owner_note, memory=None):
+    app_id = str(app_id).strip()
+    owner_note = str(owner_note).strip()
+    if not APP_ID.fullmatch(app_id) or app_id == "idle":
+        raise ValueError("Enter a valid application desktop ID")
+    if not owner_note or len(owner_note) > 500:
+        raise ValueError("Owner note must contain 1 to 500 characters")
+    connection = _connect(memory)
+    try:
+        with connection:
+            connection.execute("""INSERT INTO activity_labels(app_id, owner_note, updated_at)
+                VALUES (?, ?, ?) ON CONFLICT(app_id) DO UPDATE SET
+                owner_note=excluded.owner_note, updated_at=excluded.updated_at""",
+                (app_id, owner_note, datetime.now(timezone.utc).isoformat()))
+        return {"app_id": app_id, "owner_note": owner_note,
+                "source": "owner-provided context; not an inferred interest"}
+    finally:
+        connection.close()
+
+
+def labels(memory=None):
+    connection = _connect(memory)
+    try:
+        return [dict(row) for row in connection.execute(
+            "SELECT app_id, owner_note, updated_at FROM activity_labels ORDER BY app_id"
+        )]
+    finally:
+        connection.close()
+
+
+def unlabel(app_id, memory=None):
+    app_id = str(app_id).strip()
+    if not APP_ID.fullmatch(app_id) or app_id == "idle":
+        raise ValueError("Enter a valid application desktop ID")
+    connection = _connect(memory)
+    try:
+        with connection:
+            return connection.execute("DELETE FROM activity_labels WHERE app_id = ?", (app_id,)).rowcount == 1
+    finally:
+        connection.close()
+
+
 def clear(memory=None):
     connection = _connect(memory)
     try:
         with connection:
             connection.execute("PRAGMA secure_delete = ON")
-            deleted = connection.execute("DELETE FROM app_activity").rowcount
+            events = connection.execute("DELETE FROM app_activity").rowcount
+            labels_deleted = connection.execute("DELETE FROM activity_labels").rowcount
         connection.execute("VACUUM")
-        return deleted
+        return {"events_deleted": events, "labels_deleted": labels_deleted}
     finally:
         connection.close()
 

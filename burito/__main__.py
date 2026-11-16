@@ -60,10 +60,15 @@ def main(argv=None):
         pc_commands.add_parser(name)
     activity_parser = commands.add_parser("activity", help="Opt-in local foreground-app tracking")
     activity_commands = activity_parser.add_subparsers(dest="activity_command", required=True)
-    for name in ("enable", "pause", "status", "report", "clear"):
+    for name in ("enable", "pause", "status", "report", "clear", "labels"):
         activity_subcommand = activity_commands.add_parser(name)
         if name == "report":
             activity_subcommand.add_argument("--days", type=int, default=7)
+    activity_label = activity_commands.add_parser("label", help="Save your own context for an app ID")
+    activity_label.add_argument("app_id")
+    activity_label.add_argument("owner_note")
+    activity_unlabel = activity_commands.add_parser("unlabel", help="Remove your context for an app ID")
+    activity_unlabel.add_argument("app_id")
     activity_commands.add_parser("collect", help=argparse.SUPPRESS)
     args = parser.parse_args(argv)
     try:
@@ -104,8 +109,17 @@ def main(argv=None):
                 print(json.dumps(activity.status(), indent=2))
             elif args.activity_command == "report":
                 print(json.dumps(activity.report(args.days), indent=2))
+            elif args.activity_command == "labels":
+                print(json.dumps(activity.labels(), indent=2))
+            elif args.activity_command == "label":
+                print(json.dumps(activity.label(args.app_id, args.owner_note), indent=2))
+            elif args.activity_command == "unlabel":
+                if not activity.unlabel(args.app_id):
+                    print("Application label not found", file=sys.stderr)
+                    return 1
+                print("Application label removed")
             elif args.activity_command == "clear":
-                print(f"Deleted {activity.clear()} local activity event(s)")
+                print(json.dumps(activity.clear(), indent=2))
         elif args.command == "school":
             if args.school_command == "list":
                 for lesson in catalog():
