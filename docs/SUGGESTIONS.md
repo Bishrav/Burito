@@ -27,6 +27,8 @@ case folding, punctuation removal, and whitespace normalization. A duplicate
 adds its new evidence to the existing entry and returns that entry's ID. This
 does not detect semantically similar wording. Review states are `pending`,
 `accepted`, and `dismissed`. No suggestion is executed or automatically added
-to personal memory. These records are not currently injected into chat context.
-Use `--include-project` in an ordinary local chat to provide a separate curated
-repository map and current milestone; this does not share the suggestion ledger.
+to personal memory. An ordinary chat can opt in to up to five latest pending and
+accepted records, with their evidence, using `--include-suggestions`. Dismissed
+records are excluded. The suggestion text and evidence are data, not instructions;
+an accepted record never authorizes Burito to act. Activity-only chats exclude
+suggestions. Use `--include-project` separately for the curated repository map.

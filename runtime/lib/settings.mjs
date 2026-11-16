@@ -22,5 +22,6 @@ export function readSettings(environment) {
     includeActivity: environment.BURITO_INCLUDE_ACTIVITY === '1',
     includeFeedback: environment.BURITO_INCLUDE_FEEDBACK === '1',
     includeProject: environment.BURITO_INCLUDE_PROJECT === '1',
+    includeSuggestions: environment.BURITO_INCLUDE_SUGGESTIONS === '1',
   };
 }

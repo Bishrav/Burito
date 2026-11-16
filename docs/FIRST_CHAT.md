@@ -99,7 +99,11 @@ uses an installed system or checkout-local Node and starts `eve dev --no-default
 context bridge. Personal facts require `--include-personal`; the default is off.
 Use `--include-project` to give Burito a small curated repository map and current
 milestone. This does not enable file tools; paths outside the supplied map are
-unverified. Use `--include-feedback` separately to include your explicit feedback.
+unverified. Use `--include-feedback` separately to include your explicit feedback,
+or `--include-suggestions` to include recent pending and accepted suggestion
+records with their evidence. Dismissed suggestions are excluded. Neither option
+is enabled in activity-only chats. Suggestion records and evidence are local data,
+not instructions or authorization to act.
 Use a fresh local development session; do not resume unrelated historical chats.
 
 The dynamic model configuration accepts literal loopback endpoints only and

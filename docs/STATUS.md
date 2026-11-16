@@ -47,6 +47,10 @@
 - Local chat can optionally receive a curated Burito repository map and current
   milestone with `--include-project`. Activity-only sessions exclude it; the map
   does not grant file access and instructs the model not to invent unlisted paths.
+- Ordinary local chats can opt in to up to five recent pending or accepted
+  suggestions with their evidence using `--include-suggestions`. Dismissed items
+  are excluded, activity-only mode forces this off, and the context is not
+  permission to act.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -85,9 +89,9 @@ device files do not require a driver reinstall.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
 3. Verify optional personal memory and correction.
-4. Verify project-grounded answers and the owner-reviewed suggestion log in
-   Konsole. Later add semantic duplicate detection and opt-in presentation of
-   pending suggestions, with evidence links and owner approval before recurrence.
+4. Verify project-grounded answers and opt-in suggestion context in Konsole.
+   Later add semantic duplicate detection and suggestion generation only with
+   explicit evidence and owner review before recurrence.
 5. Add the basic desktop interface around working text chat, followed by voice.
 6. Add optional cloud routing with explicit context and budget configuration.
 

@@ -112,6 +112,18 @@ class Suggestions:
         finally:
             connection.close()
 
+    def active(self, limit=5):
+        """Return recent pending/accepted records for explicit chat context."""
+        connection = self._connect()
+        try:
+            rows = connection.execute(
+                "SELECT * FROM suggestions WHERE status IN ('pending', 'accepted') "
+                "ORDER BY created_at DESC, id DESC LIMIT ?", (limit,)
+            )
+            return [self._record(connection, row) for row in rows]
+        finally:
+            connection.close()
+
     def review(self, identifier, status, note=""):
         if status not in REVIEW_STATES:
             raise ValueError("Choose pending, accepted, or dismissed")

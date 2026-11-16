@@ -8,13 +8,15 @@ from .school import School
 
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                   max_chars=12000, include_system=True, include_activity=False,
-                  activity_only=False, include_feedback=False, include_project=False):
+                  activity_only=False, include_feedback=False, include_project=False,
+                  include_suggestions=False):
     if activity_only:
         include_personal = False
         include_system = False
         include_activity = True
         include_feedback = False
         include_project = False
+        include_suggestions = False
     memory = memory if memory is not None else Memory()
     lessons = {item["id"]: item for item in School(memory).installed()}
     if lesson_id not in lessons:
@@ -26,6 +28,7 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         "personal_facts": [],
         "owner_feedback_included": include_feedback,
         "project_context_included": include_project,
+        "suggestions_included": include_suggestions,
         "activity_included": include_activity,
         "activity_only": activity_only,
         "understanding_assessed": False,
@@ -100,8 +103,8 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
             },
             "current_milestone": (
                 "The owner-reviewed suggestion store now supports evidence, review states, and exact normalized duplicates. "
-                "It is not yet surfaced in chat. The next design step is opt-in display of accepted or pending records, "
-                "with evidence, before considering recurring suggestions."
+                "Ordinary chats can opt in to recent pending and accepted records with evidence. "
+                "The next step is owner verification and review of duplicate and evidence handling."
             ),
             "limits": (
                 "Only the listed paths and their stated roles are verified in this context. "
@@ -113,4 +116,36 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
             context.pop("project_context")
             context["project_context_included"] = False
             context["truncated"] = True
+    if include_suggestions:
+        from .suggestions import Suggestions
+        records = Suggestions(memory).active(limit=5)
+        context["owner_suggestions"] = []
+        context["suggestions_included"] = True
+        if len(json.dumps(context)) > max_chars:
+            context.pop("owner_suggestions")
+            context["suggestions_included"] = False
+            context["truncated"] = True
+            return context
+        for record in records:
+            selected = {
+                "id": record["id"],
+                "content": record["content"],
+                "status": record["status"],
+                "review_note": record["review_note"][:300],
+                "evidence": [
+                    {"source": item["source"], "detail": item["detail"][:500],
+                     "reference": item["reference"][:160], "added_at": item["added_at"]}
+                    for item in record["evidence"][-3:]
+                ],
+            }
+            context["owner_suggestions"].append(selected)
+            if len(json.dumps(context)) > max_chars:
+                context["owner_suggestions"].pop()
+                context["truncated"] = True
+                break
+        if len(records) > len(context["owner_suggestions"]):
+            context["truncated"] = True
+        if records and not context["owner_suggestions"]:
+            context.pop("owner_suggestions")
+            context["suggestions_included"] = False
     return context
