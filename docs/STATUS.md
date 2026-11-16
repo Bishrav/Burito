@@ -47,6 +47,9 @@
 - Local chat can optionally receive a curated Burito repository map and current
   milestone with `--include-project`. Activity-only sessions exclude it; the map
   does not grant file access and instructs the model not to invent unlisted paths.
+- The chat launcher clears inherited eve development queue-routing variables
+  and takes a per-runtime lock so a second Burito chat cannot share the same
+  local workflow state concurrently.
 - Ordinary local chats can opt in to up to five recent pending or accepted
   suggestions with their evidence using `--include-suggestions`. Dismissed items
   are excluded, activity-only mode forces this off, and the context is not

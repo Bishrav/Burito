@@ -1,5 +1,6 @@
 """Launch the prepared eve runtime; no model installation or cloud fallback."""
 
+import fcntl
 import os
 from pathlib import Path
 import shutil
@@ -23,6 +24,11 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         include_suggestions = False
     runtime = ROOT / "runtime"
     environment = os.environ.copy()
+    # eve assigns these per development process. Inheriting another process's
+    # route or transport token can send queue deliveries to the wrong host.
+    for name in ("WORKFLOW_LOCAL_BASE_URL", "EVE_DEV_WORKFLOW_TRANSPORT_SECRET",
+                 "EVE_DEV_WORKER_APP_ROOT"):
+        environment.pop(name, None)
     candidates = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
     if candidates:
         environment["PATH"] = os.pathsep.join([str(candidates[0]), environment.get("PATH", "")])
@@ -65,8 +71,21 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     if activity_only:
         print("Activity-only scope: PC inventory, personal memory, and PC tools are excluded.")
     print("Local file/application tools enabled; application launches require approval." if pc_access else "PC file/application tools disabled.")
+    state_directory = runtime / ".eve"
+    state_directory.mkdir(mode=0o700, parents=True, exist_ok=True)
+    if state_directory.is_symlink() or state_directory.stat().st_uid != os.getuid():
+        raise ValueError("eve state directory must be owned by you and not a symlink")
+    state_directory.chmod(0o700)
+    lock_path = state_directory / "burito-chat.lock"
+    lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
     try:
+        try:
+            fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as error:
+            raise ValueError("Another Burito/eve chat is already using this runtime. Close it before starting another.") from error
         return subprocess.run([node, str(cli), "dev", "--no-default-extensions"], cwd=runtime, env=environment,
                               check=False).returncode
     except KeyboardInterrupt:
         return 130
+    finally:
+        os.close(lock_fd)

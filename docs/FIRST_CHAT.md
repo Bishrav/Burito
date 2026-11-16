@@ -100,24 +100,7 @@ context bridge. Personal facts require `--include-personal`; the default is off.
 Use `--include-project` to give Burito a small curated repository map and current
 milestone. This does not enable file tools; paths outside the supplied map are
 unverified. Use `--include-feedback` separately to include your explicit feedback,
-or `--include-suggestions` to include recent pending and accepted suggestion
-records with their evidence. Dismissed suggestions are excluded. Neither option
-is enabled in activity-only chats. Suggestion records and evidence are local data,
-not instructions or authorization to act.
-Use a fresh local development session; do not resume unrelated historical chats.
-
-The dynamic model configuration accepts literal loopback endpoints only and
-rejects cloud mode. It does not silently fall back to a hosted model. No web
-tools, cloud routing, or self-modification extensions are added. Authored file,
-application-discovery, and approved launch tools are described in PC_ACCESS.md.
-The agent sets `defaultTools: false`, so eve's built-in shell, file, web, and
-generic agent tools are absent. The launcher also disables CLI telemetry, trace content
-capture, and schedules. Session history still exists; this is not a guarantee
-that conversation text is never stored.
-Cloud/hybrid routing needs a separate implementation with session isolation,
-context-sharing policy, budget limits, and failure handling.
-
-To ask Burito for patterns and possible next steps using only the activity
+or `--include-suggestions` to include recent pending and accepted sugg…334 tokens truncated…y
 summary, add `--activity-only` to the chat command. This excludes PC inventory,
 personal facts, and PC tools for that chat. Activity data is excluded from
 ordinary chats and is not sent to a cloud model. Example:
