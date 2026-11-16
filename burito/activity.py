@@ -74,7 +74,7 @@ def collect(memory=None):
     if not journalctl:
         raise ValueError("journalctl is required for the KWin activity collector")
     arguments = [journalctl, "--follow", "--since=now", "--output=json",
-                 "QT_CATEGORY=js", "QT_CATEGORY=kwin_scripting"]
+                 "_COMM=kwin_wayland"]
     process = subprocess.Popen(arguments, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
                                text=True, encoding="utf-8", errors="replace", bufsize=1)
     if process.stdout is None:
@@ -86,9 +86,10 @@ def collect(memory=None):
             except (json.JSONDecodeError, TypeError):
                 continue
             message = entry.get("MESSAGE", "")
-            if not isinstance(message, str) or not message.startswith(EVENT_PREFIX):
+            prefix = "js: " + EVENT_PREFIX
+            if not isinstance(message, str) or not message.startswith(prefix):
                 continue
-            app_id = message[len(EVENT_PREFIX):].strip()
+            app_id = message[len(prefix):].strip()
             if app_id != "idle" and not APP_ID.fullmatch(app_id):
                 continue
             record(app_id, _timestamp_from_journal(entry), memory)
