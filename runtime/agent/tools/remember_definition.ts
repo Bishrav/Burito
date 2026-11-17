@@ -25,4 +25,9 @@ const rememberDefinition = defineTool({
   },
 });
 
-export default defineDynamic(() => rememberDefinition);
+export default defineDynamic(() =>
+  process.env.BURITO_INCLUDE_PERSONAL_MEMORY === '1' &&
+  process.env.BURITO_GLOSSARY_WRITES === '1'
+    ? rememberDefinition
+    : null,
+);
