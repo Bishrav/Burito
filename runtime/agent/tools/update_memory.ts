@@ -16,7 +16,7 @@ const updateMemory = defineTool({
   approval: {
     request: always(),
     prompt: ({ input }) =>
-      `Update this saved personal fact?\\nCurrent: ${input.expectedCurrentContent}\\nReplace with: ${input.correctedContent}`,
+      `Update saved personal fact? Current: ${input.expectedCurrentContent} -> Replace with: ${input.correctedContent}`,
   },
   execute: async ({ memoryId, expectedCurrentContent, correctedContent }) => {
     const root = process.env.BURITO_PROJECT_ROOT;
