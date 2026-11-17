@@ -1,0 +1,11 @@
+[Unit]
+Description=Check the Burito GitHub checkout for safe updates
+
+[Timer]
+OnBootSec=3min
+OnUnitActiveSec=15min
+Persistent=true
+Unit=burito-auto-update.service
+
+[Install]
+WantedBy=timers.target

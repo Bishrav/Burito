@@ -65,6 +65,11 @@
   is sent; conversation context is not forwarded. Activity-only chat rejects
   online mode. Live provider success, denial, timeout, and outage paths remain
   unverified; see `docs/ONLINE_RESEARCH.md`.
+- Safe checkout auto-update scripts and a per-user systemd timer are prepared.
+  They fetch every 15 minutes and fast-forward only a clean `main` tracking
+  `origin/main`; they defer while Eve is active, reject divergence, and defer
+  dependency-manifest changes. The timer still needs to be enabled from the
+  owner's Konsole. See `docs/AUTO_UPDATE.md`.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.

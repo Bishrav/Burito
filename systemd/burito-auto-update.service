@@ -1,0 +1,9 @@
+[Unit]
+Description=Safely fast-forward the Burito checkout from GitHub
+
+[Service]
+Type=oneshot
+WorkingDirectory=%h/Burito
+Environment=GIT_TERMINAL_PROMPT=0
+UMask=0077
+ExecStart=%h/Burito/scripts/auto-update.sh
