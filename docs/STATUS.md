@@ -54,6 +54,11 @@
   suggestions with their evidence using `--include-suggestions`. Dismissed items
   are excluded, activity-only mode forces this off, and the context is not
   permission to act.
+- Private owner glossary supports explicit term definitions, retrieval alongside
+  personal memory, duplicate detection, update, listing, and deletion. An
+  approval-gated Eve tool saves a definition only after the owner confirms both
+  the meaning and the save request. The web UI does not yet expose Eve approval
+  interactions; use the interactive local Eve chat for this workflow.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.

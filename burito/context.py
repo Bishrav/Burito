@@ -80,6 +80,21 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                 break
         if len(facts) > len(context["personal_facts"]):
             context["truncated"] = True
+        # Owner-defined meanings are private and follow the same opt-in as
+        # personal facts. Keep retrieval focused on the current user turn.
+        query = knowledge_query.strip()
+        if query:
+            from .glossary import Glossary
+            matches = Glossary(memory).search(query, limit=5)
+            if matches:
+                context["glossary_matches"] = [
+                    {"term": item["term"], "definition": item["definition"],
+                     "source": item["source"]}
+                    for item in matches
+                ]
+                if len(json.dumps(context)) > max_chars:
+                    context.pop("glossary_matches")
+                    context["truncated"] = True
     if include_feedback:
         from .feedback import Feedback
         records = Feedback(memory).list(limit=10)

@@ -17,6 +17,7 @@ from .access import dispatch
 from .feedback import Feedback, RATINGS
 from .suggestions import Suggestions, EVIDENCE_SOURCES, REVIEW_STATES
 from .knowledge import Knowledge
+from .glossary import Glossary
 
 
 def main(argv=None):
@@ -34,6 +35,17 @@ def main(argv=None):
     knowledge_search.add_argument("--limit", type=int, default=5)
     knowledge_forget = knowledge_commands.add_parser("forget", help="Remove one imported document and its index")
     knowledge_forget.add_argument("id")
+    glossary = commands.add_parser("glossary", help="Manage owner-confirmed term definitions")
+    glossary_commands = glossary.add_subparsers(dest="glossary_command", required=True)
+    glossary_define = glossary_commands.add_parser("define", help="Save or update an explicitly confirmed term")
+    glossary_define.add_argument("term")
+    glossary_define.add_argument("definition")
+    glossary_define.add_argument("--source", default="owner")
+    glossary_commands.add_parser("list", help="List saved definitions")
+    glossary_search = glossary_commands.add_parser("search", help="Find definitions matching a query")
+    glossary_search.add_argument("query")
+    glossary_forget = glossary_commands.add_parser("forget", help="Remove a saved term")
+    glossary_forget.add_argument("id")
     remember = commands.add_parser("remember", help="Store an explicitly provided fact")
     remember.add_argument("content")
     remember.add_argument("--source", default="owner")
@@ -269,6 +281,19 @@ def main(argv=None):
                         print("Knowledge document ID not found", file=sys.stderr)
                         return 1
                     print("Document and its searchable chunks removed")
+            elif args.command == "glossary":
+                store = Glossary(memory)
+                if args.glossary_command == "define":
+                    print(json.dumps(store.define(args.term, args.definition, args.source), indent=2))
+                elif args.glossary_command == "list":
+                    print(json.dumps(store.list(), indent=2))
+                elif args.glossary_command == "search":
+                    print(json.dumps(store.search(args.query), indent=2))
+                elif args.glossary_command == "forget":
+                    if not store.forget(args.id):
+                        print("Glossary ID not found", file=sys.stderr)
+                        return 1
+                    print("Glossary term deleted")
             elif args.command == "remember":
                 print(memory.remember(args.content, args.source))
             elif args.command == "memories":
