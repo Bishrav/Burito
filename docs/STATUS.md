@@ -68,13 +68,8 @@
 - Safe checkout auto-update scripts and a per-user systemd timer are prepared.
   They fetch every 15 minutes and fast-forward only a clean `main` tracking
   `origin/main`; they defer while Eve is active, reject divergence, and defer
-  dependency-manifest changes. The owner confirmed the timer is enabled and
-  active. See `docs/AUTO_UPDATE.md`.
-- The local web console now shows Eve-reported token counts: latest model pass,
-  estimated context remaining against the configured window, and cumulative
-  input/output for the current chat session. If the model provides no usage,
-  the meter says so instead of estimating. Remaining context is not an account
-  quota; see `ui/README.md`.
+  dependency-manifest changes. The timer still needs to be enabled from the
+  owner's Konsole. See `docs/AUTO_UPDATE.md`.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.

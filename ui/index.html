@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#080d12">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <title>Burito // Local Assistant Console</title>
-  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./style-2.css"><link rel="stylesheet" href="./style-3.css"><link rel="stylesheet" href="./style-4.css"><link rel="stylesheet" href="./style-5.css">
+  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./style-2.css"><link rel="stylesheet" href="./style-3.css"><link rel="stylesheet" href="./style-4.css">
 </head>
 <body>
   <div class="app-shell">
@@ -15,7 +15,7 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
         <span><b>BURITO</b><small>PERSONAL ASSISTANT // LOCAL CONSOLE</small></span>
       </a>
-      <div class="top-state"><span class="state-dot"></span><span>LOCAL RUNTIME</span><span class="divider">/</span><span class="muted">CHAT + REPORTED TOKEN TELEMETRY</span></div>
+      <div class="top-state"><span class="state-dot"></span><span>INTERFACE PREVIEW</span><span class="divider">/</span><span class="muted">ASSISTANT CONNECTION NOT CONFIGURED</span></div>
       <div class="top-right"><time id="clock">--:--:--</time><button class="icon-button" type="button" aria-label="Open settings" data-nav="settings">⌘</button></div>
     </header>
 
@@ -34,7 +34,7 @@
 
     <main id="overview" class="main-content">
       <section class="welcome-row">
-        <div><p class="eyebrow">PERSONAL COMPUTING SYSTEM <span>•</span> LOCAL-FIRST CONSOLE</p><h1>Your workspace,<br><em>at a glance.</em></h1><p class="intro">Chat with Burito locally and inspect model-reported token usage. Other telemetry appears only when its source is connected and verified.</p></div>
+        <div><p class="eyebrow">PERSONAL COMPUTING SYSTEM <span>•</span> PREVIEW BUILD</p><h1>Your workspace,<br><em>at a glance.</em></h1><p class="intro">A local-first command surface for Burito. The interface is ready; live assistant data will appear after the runtime is connected.</p></div>
         <div class="connection-card"><div class="card-top"><span class="eyebrow">LOCAL RUNTIME</span><span class="pill amber"><i></i> NOT CONNECTED</span></div><div class="connection-body"><span class="connection-glyph">⌬</span><div><b>Burito agent</b><small>Runtime health has not been checked.</small></div></div><div class="connection-foot"><span>MODEL</span><b>Unknown</b><span class="foot-sep">·</span><span>MODE</span><b>Local-first</b></div></div>
       </section>
 
@@ -53,13 +53,6 @@
         <section class="panel assistant-panel" id="assistant">
           <div class="panel-heading"><div><span class="eyebrow">02 / INTERACTION</span><h2>Assistant channel</h2></div><span class="pill neutral">IDLE</span></div>
           <div class="empty-chat" id="conversation"><div class="empty-glyph">✳</div><b>Local assistant channel</b><p id="connectionMessage">Checking the Burito runtime on this computer…</p></div>
-          <section class="token-meter" aria-labelledby="tokenMeterTitle" aria-live="polite">
-            <div class="token-meter-heading"><div><span class="eyebrow">RUNTIME TELEMETRY</span><h3 id="tokenMeterTitle">Context token meter</h3></div><span class="token-state" id="tokenState">WAITING FOR MODEL USAGE</span></div>
-            <div class="token-primary"><strong id="contextUsed">—</strong><span id="contextCapacity">/ — context tokens used</span><b id="contextRemaining">— left</b></div>
-            <div class="token-track" role="progressbar" aria-label="Estimated context used" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span id="tokenProgress"></span></div>
-            <div class="token-breakdown"><span>LAST INPUT <b id="latestInput">—</b></span><span>LAST OUTPUT <b id="latestOutput">—</b></span><span>SESSION TOTAL <b id="sessionTotal">—</b></span></div>
-            <p class="token-note" id="tokenNote">Token counts appear after Burito receives model-reported usage. Remaining context is estimated from the latest model request, not an account quota.</p>
-          </section>
           <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Ask Burito something…" autocomplete="off"><button type="submit" aria-label="Send message">↑</button></div><div class="composer-meta"><span id="connectionStatus">CHECKING LOCAL CONNECTION</span><span>ENTER TO SEND</span></div></form>
         </section>
         <section class="panel context-panel">
@@ -79,7 +72,7 @@
         <section class="panel compact-panel" id="memory"><div class="panel-heading"><div><span class="eyebrow">04 / MEMORY</span><h2>Personal memory</h2></div><span class="pill neutral">NOT LOADED</span></div><p class="panel-copy">Your saved facts stay local. They are excluded from a chat unless you explicitly include them.</p><button class="text-button" data-nav="memory">Explore memory <span>↗</span></button></section>
         <section class="panel compact-panel" id="activity"><div class="panel-heading"><div><span class="eyebrow">05 / OBSERVATION</span><h2>Activity summary</h2></div><span class="pill neutral">NOT LOADED</span></div><p class="panel-copy">No activity records are displayed because the interface is not connected to Burito’s local data.</p><button class="text-button" data-nav="activity">Review privacy controls <span>↗</span></button></section>
       </div>
-      <footer><span>BURITO / LOCAL-FIRST ASSISTANT</span><span>LOCAL CHAT · REPORTED TOKEN USAGE · NO PC ACTIONS</span><span id="date">—</span></footer>
+      <footer><span>BURITO / LOCAL-FIRST ASSISTANT</span><span>PREVIEW UI · NO LIVE DATA · NO PC ACTIONS</span><span id="date">—</span></footer>
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

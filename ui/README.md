@@ -1,7 +1,7 @@
 # Burito interface preview
 
-This is Burito's local, dependency-free assistant console, built with plain HTML, CSS, and JavaScript.
+This is the first local interface design pass for Burito. It is a static, dependency-free preview of the intended assistant console, built with plain HTML, CSS, and JavaScript.
 
-Run `python3 -m burito web --model burito-local:8b --context-tokens 8192` from the repository root and open `http://127.0.0.1:8765`. The chat uses the local Eve runtime. The token meter appears after a turn when the model reports usage; it distinguishes the latest model pass from session totals and labels remaining context as an estimate. It is not a billing quota. No sample hardware readings, activity records, model telemetry, or successful PC actions are presented as real.
+Open `index.html` in a browser. The orbiting core, clock, responsive navigation, and preview notices are UI behavior only. The assistant runtime is not connected, so chat and context controls are deliberately disabled. No sample hardware readings, activity records, model telemetry, or successful PC actions are presented as real.
 
-Context switches remain preview-only. Approval prompts must stay tied to actual tool requests and show the exact proposed action before execution.
+The next integration milestone is to serve this UI from a local frontend process and connect its chat panel to Burito's Eve session API, then replace each status placeholder only with data returned by the local runtime. Keep approval prompts tied to actual tool requests and show the exact proposed action before execution.
