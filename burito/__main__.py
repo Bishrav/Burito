@@ -111,7 +111,51 @@ def main(argv=None):
     conversation.add_argument("--activity-only", action="store_true",
                               help="Use only activity data; exclude PC inventory, personal facts, and PC tools")
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
-    conversation.add_…705 tokens truncated…             include_system=not args.no_system,
+    conversation.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
+    conversation.add_argument("--no-files", action="store_true", help="Disable file and application tools")
+    web = commands.add_parser("web", help="Start the local-only Burito desktop web console")
+    web.add_argument("--model", required=True, help="Installed local model name")
+    web.add_argument("--context-tokens", type=int, required=True)
+    web.add_argument("--port", type=int, default=8765)
+    web.add_argument("--lesson", default="home.honesty")
+    web.add_argument("--include-project", action="store_true")
+    web.add_argument("--include-feedback", action="store_true")
+    web.add_argument("--include-suggestions", action="store_true")
+    web.add_argument("--include-activity", action="store_true")
+    commands.add_parser("access-bridge", help=argparse.SUPPRESS)
+    pc = commands.add_parser("pc", help="Local computer inventory and metadata changes")
+    pc_commands = pc.add_subparsers(dest="pc_command", required=True)
+    for name in ("scan", "status", "changes", "enable", "pause", "monitor-status"):
+        pc_commands.add_parser(name)
+    activity_parser = commands.add_parser("activity", help="Opt-in local foreground-app tracking")
+    activity_commands = activity_parser.add_subparsers(dest="activity_command", required=True)
+    for name in ("enable", "pause", "status", "report", "clear", "labels"):
+        activity_subcommand = activity_commands.add_parser(name)
+        if name == "report":
+            activity_subcommand.add_argument("--days", type=int, default=7)
+    activity_label = activity_commands.add_parser("label", help="Save app context with its source")
+    activity_label.add_argument("app_id")
+    activity_label.add_argument("context_note")
+    activity_label.add_argument("--source", choices=("owner_confirmed", "assistant_app_role"),
+                                default="owner_confirmed")
+    activity_unlabel = activity_commands.add_parser("unlabel", help="Remove your context for an app ID")
+    activity_unlabel.add_argument("app_id")
+    activity_commands.add_parser("collect", help=argparse.SUPPRESS)
+    args = parser.parse_args(argv)
+    try:
+        if args.command == "doctor":
+            print(json.dumps(report(), indent=2))
+        elif args.command == "access-bridge":
+            raw = sys.stdin.read(20001)
+            if len(raw) > 20000:
+                raise ValueError('PC access request is too large')
+            request = json.loads(raw)
+            if not isinstance(request, dict):
+                raise ValueError('Expected a PC access request object')
+            print(json.dumps(dispatch(request)))
+        elif args.command == "context":
+            print(json.dumps(build_context(args.lesson, args.include_personal,
+                                           include_system=not args.no_system,
                                            include_activity=args.include_activity,
                                            activity_only=args.activity_only,
                                            include_feedback=args.include_feedback,
