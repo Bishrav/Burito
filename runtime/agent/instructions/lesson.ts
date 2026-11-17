@@ -13,7 +13,7 @@ export default defineDynamic(async (ctx) => {
   const context = await ctx.memo(
     ['lesson', ctx.turn?.id ?? null, settings.lesson, settings.includePersonal,
       settings.includeSystem, settings.includeActivity, settings.includeFeedback,
-      settings.includeProject, settings.includeSuggestions],
+      settings.includeProject, settings.includeSuggestions, settings.includeKnowledge],
     async () => {
       const args = ['-m', 'burito', 'context', '--lesson', settings.lesson];
       if (settings.includePersonal) args.push('--include-personal');
@@ -23,7 +23,11 @@ export default defineDynamic(async (ctx) => {
       if (settings.includeProject) args.push('--include-project');
       if (settings.includeSuggestions) args.push('--include-suggestions');
       if (settings.includeKnowledge) {
-        args.push('--include-knowledge', '--query', String(ctx.turn?.input ?? ''));
+        const query = (ctx.turn?.input ?? [])
+          .filter((part) => part.kind === 'text')
+          .map((part) => part.text)
+          .join(' ');
+        args.push('--include-knowledge', '--query', query);
       }
       const result = await execute(python, args, {
         cwd: root, timeout: 5000, maxBuffer: 65536,
