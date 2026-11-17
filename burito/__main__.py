@@ -54,6 +54,7 @@ def main(argv=None):
     correct = commands.add_parser("correct", help="Correct an existing owner-provided fact")
     correct.add_argument("id")
     correct.add_argument("content")
+    correct.add_argument("--expected", help="Only correct if the current content still matches")
     backup = commands.add_parser("backup", help="Create a consistent private database backup")
     backup.add_argument("destination", help="Absolute path to a new file in an existing directory")
     forget = commands.add_parser("forget", help="Delete one fact by its full ID")
@@ -304,8 +305,8 @@ def main(argv=None):
             elif args.command == "teach":
                 teach(memory)
             elif args.command == "correct":
-                if not memory.correct(args.id, args.content):
-                    print("Memory ID not found", file=sys.stderr)
+                if not memory.correct(args.id, args.content, expected_content=args.expected):
+                    print("Memory ID not found or its current content changed", file=sys.stderr)
                     return 1
                 print("Memory corrected")
             elif args.command == "backup":

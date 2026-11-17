@@ -59,6 +59,11 @@
   approval-gated Eve tool saves a definition only after the owner confirms both
   the meaning and the save request. The web UI does not yet expose Eve approval
   interactions; use the interactive local Eve chat for this workflow.
+- An approval-gated local chat tool can correct an existing owner fact when
+  personal memory is explicitly included. It requires an explicit owner request,
+  shows the old and replacement text for approval, and checks the original value
+  has not changed before writing. New facts are not silently saved. This path
+  still needs owner verification in a fresh chat.
 - Optional CLI online research is isolated from the local chat model. It is
   absent unless `--enable-online` is passed, requires an explicit Gateway key
   and answer model, and asks for approval for each exact query. Only that query
@@ -107,7 +112,9 @@ device files do not require a driver reinstall.
    File/application tool calls have passed the initial owner-run checks.
 2. Inspect `ollama ps` during an active model session to verify GPU placement;
    measure warm response times separately from the first observed 48-second exchange.
-3. Verify optional personal memory and correction.
+3. Verify personal-memory retrieval and the approval-gated correction tool in a
+   fresh chat; confirm the edited fact is used in a later chat and can be
+   deleted. New facts are still added through the CLI.
 4. Verify project-grounded answers and opt-in suggestion context in Konsole.
    Later add semantic duplicate detection and suggestion generation only with
    explicit evidence and owner review before recurrence.

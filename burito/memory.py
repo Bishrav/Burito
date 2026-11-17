@@ -85,14 +85,22 @@ class Memory:
         finally:
             connection.close()
 
-    def correct(self, identifier, content):
+    def correct(self, identifier, content, expected_content=None):
         content = content.strip()
         if not content or len(content) > 20000:
             raise ValueError("Corrected memory must contain 1 to 20000 characters")
+        if expected_content is not None and (not expected_content or len(expected_content) > 20000):
+            raise ValueError("Expected memory content must contain 1 to 20000 characters")
         connection = self._connect()
         try:
             with connection:
                 connection.execute("PRAGMA secure_delete = ON")
+                if expected_content is not None:
+                    return connection.execute(
+                        "UPDATE memories SET content = ?, source = 'owner correction' "
+                        "WHERE id = ? AND content = ?",
+                        (content, identifier, expected_content),
+                    ).rowcount == 1
                 return connection.execute(
                     "UPDATE memories SET content = ?, source = 'owner correction' WHERE id = ?",
                     (content, identifier),

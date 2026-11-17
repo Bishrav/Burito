@@ -73,6 +73,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
         "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
         "BURITO_GLOSSARY_WRITES": "1" if include_personal else "0",
+        "BURITO_MEMORY_WRITES": "1" if include_personal else "0",
         "BURITO_PC_ACCESS": "1" if pc_access else "0",
         "BURITO_PROJECT_ROOT": str(ROOT),
         "BURITO_PYTHON": sys.executable,
@@ -82,7 +83,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     })
     print(f"Starting local Burito with lesson {lesson}. No automatic cloud fallback.")
     print("Personal memory included." if include_personal else "Personal memory excluded.")
-    print("Private glossary available; writes require approval." if include_personal else "Private glossary excluded.")
+    print("Private glossary and memory corrections available; writes require approval." if include_personal else "Private glossary and memory writes excluded.")
     print("Local activity summary included for this chat." if include_activity else "Activity summary excluded.")
     print("Owner feedback included for this chat." if include_feedback else "Owner feedback excluded.")
     print("Verified Burito project context included." if include_project else "Project context excluded.")
