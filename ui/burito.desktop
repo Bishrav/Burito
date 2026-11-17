@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Burito Assistant
+Comment=Start Burito and open its local assistant console
+Exec=/home/bishravs/Burito/scripts/open-ui.sh
+Icon=applications-internet
+Terminal=false
+Categories=Utility;System;
+StartupNotify=true

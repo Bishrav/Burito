@@ -1,29 +1,10 @@
-const clock = document.querySelector("#clock");
-const date = document.querySelector("#date");
-const toast = document.querySelector("#toast");
-
-function updateClock() {
-  const now = new Date();
-  clock.textContent = now.toLocaleTimeString([], { hour12: false });
-  date.textContent = now.toLocaleDateString([], { year: "numeric", month: "short", day: "2-digit" }).toUpperCase();
-}
-updateClock();
-setInterval(updateClock, 1000);
-
-document.querySelectorAll("[data-nav]").forEach((button) => {
-  button.addEventListener("click", () => {
-    const target = button.dataset.nav;
-    const section = document.getElementById(target);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth", block: "start" });
-      document.querySelectorAll(".nav-item").forEach((item) => item.classList.toggle("active", item.dataset.nav === target));
-    } else {
-      toast.textContent = `${target.toUpperCase()} view is planned; no live data connection is configured.`;
-      toast.classList.add("show");
-      window.clearTimeout(window.buritoToastTimer);
-      window.buritoToastTimer = window.setTimeout(() => toast.classList.remove("show"), 2600);
-    }
-  });
-});
-
-document.querySelector("#composer").addEventListener("submit", (event) => event.preventDefault());
+const clock=document.querySelector('#clock'),date=document.querySelector('#date'),toast=document.querySelector('#toast');
+const form=document.querySelector('#composer'),input=document.querySelector('#message'),conversation=document.querySelector('#conversation');
+const status=document.querySelector('#connectionStatus'),connectionMessage=document.querySelector('#connectionMessage');
+let sessionId=null,busy=false;
+function tick(){const now=new Date();clock.textContent=now.toLocaleTimeString([],{hour12:false});date.textContent=now.toLocaleDateString([],{year:'numeric',month:'short',day:'2-digit'}).toUpperCase()}tick();setInterval(tick,1000);
+document.querySelectorAll('[data-nav]').forEach(button=>button.addEventListener('click',()=>{const target=button.dataset.nav,section=document.getElementById(target);if(section){section.scrollIntoView({behavior:'smooth',block:'start'});document.querySelectorAll('.nav-item').forEach(item=>item.classList.toggle('active',item.dataset.nav===target))}else{toast.textContent=`${target.toUpperCase()} view is planned.`;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2400)}}));
+function addMessage(role,text){const row=document.createElement('div');row.className=`chat-message ${role}`;const who=document.createElement('b');who.textContent=role==='user'?'YOU':'BURITO';const body=document.createElement('p');body.textContent=text;row.append(who,body);conversation.append(row);row.scrollIntoView({block:'nearest'})}
+async function checkHealth(){try{const response=await fetch('/eve/v1/health');if(!response.ok)throw Error(`HTTP ${response.status}`);const result=await response.json();if(result.status!=='ready')throw Error('not ready');status.textContent='LOCAL RUNTIME READY';connectionMessage.textContent='Connected to Burito’s local Eve runtime. Messages stay on this computer.';input.disabled=false;document.querySelector('.composer button').disabled=false;document.querySelector('.connection-card .pill').className='pill neutral';document.querySelector('.connection-card .pill').textContent='LOCAL READY'}catch(error){status.textContent='RUNTIME OFFLINE';connectionMessage.textContent='Start Burito with the web command in Konsole. The interface will connect automatically.'}}
+form.addEventListener('submit',async event=>{event.preventDefault();const text=input.value.trim();if(!text||busy)return;busy=true;input.value='';addMessage('user',text);const bubble=document.createElement('div');bubble.className='chat-message assistant';const who=document.createElement('b');who.textContent='BURITO';const reply=document.createElement('p');reply.textContent='Thinking…';bubble.append(who,reply);conversation.append(bubble);status.textContent='BURITO IS RESPONDING';try{const response=await fetch('/api/chat',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text,sessionId})});const data=await response.json();if(!response.ok||data.status==='failed')throw Error(data.error||`Local chat returned ${response.status}`);sessionId=data.sessionId;reply.textContent=data.reply||'(Burito returned no text. Check the runtime log in Konsole.)';status.textContent='LOCAL RUNTIME READY'}catch(error){reply.textContent=`Could not complete the local chat turn: ${error.message}`;status.textContent='CHAT ERROR'}finally{busy=false;input.focus()}});
+checkHealth();

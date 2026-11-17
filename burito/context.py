@@ -9,7 +9,7 @@ from .school import School
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                   max_chars=12000, include_system=True, include_activity=False,
                   activity_only=False, include_feedback=False, include_project=False,
-                  include_suggestions=False):
+                  include_suggestions=False, include_knowledge=False, knowledge_query=""):
     if activity_only:
         include_personal = False
         include_system = False
@@ -17,6 +17,7 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         include_feedback = False
         include_project = False
         include_suggestions = False
+        include_knowledge = False
     memory = memory if memory is not None else Memory()
     lessons = {item["id"]: item for item in School(memory).installed()}
     if lesson_id not in lessons:
@@ -29,6 +30,7 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
         "owner_feedback_included": include_feedback,
         "project_context_included": include_project,
         "suggestions_included": include_suggestions,
+        "knowledge_included": include_knowledge,
         "activity_included": include_activity,
         "activity_only": activity_only,
         "understanding_assessed": False,
@@ -125,13 +127,10 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
             context.pop("owner_suggestions")
             context["suggestions_included"] = False
             context["truncated"] = True
-            return context
-        for record in records:
+        for record in records if context["suggestions_included"] else []:
             selected = {
-                "id": record["id"],
-                "content": record["content"],
-                "status": record["status"],
-                "review_note": record["review_note"][:300],
+                "id": record["id"], "content": record["content"],
+                "status": record["status"], "review_note": record["review_note"][:300],
                 "evidence": [
                     {"source": item["source"], "detail": item["detail"][:500],
                      "reference": item["reference"][:160], "added_at": item["added_at"]}
@@ -143,9 +142,24 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
                 context["owner_suggestions"].pop()
                 context["truncated"] = True
                 break
-        if len(records) > len(context["owner_suggestions"]):
+        if len(records) > len(context.get("owner_suggestions", [])):
             context["truncated"] = True
-        if records and not context["owner_suggestions"]:
-            context.pop("owner_suggestions")
+        if records and not context.get("owner_suggestions") and context["suggestions_included"]:
+            context.pop("owner_suggestions", None)
             context["suggestions_included"] = False
+    if include_knowledge and knowledge_query.strip():
+        from .knowledge import Knowledge
+        matches = Knowledge(memory).search(knowledge_query, limit=5)
+        passages = []
+        for match in matches:
+            passages.append({"source": match["source_path"], "title": match["title"],
+                             "excerpt": match["content"][:1800]})
+        context["knowledge_matches"] = passages
+        if len(json.dumps(context)) > max_chars:
+            context["knowledge_matches"] = passages[:2]
+            context["truncated"] = True
+        if len(json.dumps(context)) > max_chars:
+            context.pop("knowledge_matches", None)
+            context["knowledge_included"] = False
+            context["truncated"] = True
     return context

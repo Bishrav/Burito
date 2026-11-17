@@ -4,6 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#080d12">
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <title>Burito // Local Assistant Console</title>
   <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./style-2.css"><link rel="stylesheet" href="./style-3.css"><link rel="stylesheet" href="./style-4.css">
 </head>
@@ -51,8 +52,8 @@
       <div class="content-grid">
         <section class="panel assistant-panel" id="assistant">
           <div class="panel-heading"><div><span class="eyebrow">02 / INTERACTION</span><h2>Assistant channel</h2></div><span class="pill neutral">IDLE</span></div>
-          <div class="empty-chat"><div class="empty-glyph">✳</div><b>Conversation will start here</b><p>Connect the local Eve runtime to send a message and stream Burito’s reply in this panel.</p></div>
-          <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Runtime connection required" disabled><button type="submit" disabled aria-label="Send message">↑</button></div><div class="composer-meta"><span>LOCAL SESSION</span><span>ENTER TO SEND · SHIFT+ENTER FOR NEW LINE</span></div></form>
+          <div class="empty-chat" id="conversation"><div class="empty-glyph">✳</div><b>Local assistant channel</b><p id="connectionMessage">Checking the Burito runtime on this computer…</p></div>
+          <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Ask Burito something…" autocomplete="off"><button type="submit" aria-label="Send message">↑</button></div><div class="composer-meta"><span id="connectionStatus">CHECKING LOCAL CONNECTION</span><span>ENTER TO SEND</span></div></form>
         </section>
         <section class="panel context-panel">
           <div class="panel-heading"><div><span class="eyebrow">03 / CONTEXT CONTROL</span><h2>What Burito may use</h2></div><span class="pill neutral">PREVIEW ONLY</span></div>
