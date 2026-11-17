@@ -59,6 +59,12 @@
   approval-gated Eve tool saves a definition only after the owner confirms both
   the meaning and the save request. The web UI does not yet expose Eve approval
   interactions; use the interactive local Eve chat for this workflow.
+- Optional CLI online research is isolated from the local chat model. It is
+  absent unless `--enable-online` is passed, requires an explicit Gateway key
+  and answer model, and asks for approval for each exact query. Only that query
+  is sent; conversation context is not forwarded. Activity-only chat rejects
+  online mode. Live provider success, denial, timeout, and outage paths remain
+  unverified; see `docs/ONLINE_RESEARCH.md`.
 - Prepared local-model configuration, read-only lesson bridge, and chat launcher.
   Local Python tests cover context selection, correction, and launcher boundaries;
   Installed eve discovery compiles and exposes only the three authored PC tools.
@@ -66,7 +72,7 @@
 
 ## Not implemented
 
-Fully evaluated AI chat, hybrid routing, semantic retrieval, voice, screen observation,
+Fully evaluated AI chat, complete hybrid routing, semantic retrieval, voice, screen observation,
 proactive suggestions, chat autostart, general desktop control, automatic training,
 encryption, scheduled backups, restore tooling, and autonomous execution.
 Automatic interest inference, owner-reviewed suggestions, lock-state handling,
@@ -101,7 +107,9 @@ device files do not require a driver reinstall.
    Later add semantic duplicate detection and suggestion generation only with
    explicit evidence and owner review before recurrence.
 5. Add the basic desktop interface around working text chat, followed by voice.
-6. Add optional cloud routing with explicit context and budget configuration.
+6. Verify optional online research approval, query-only context boundaries,
+   offline behavior, and failure cases; then add persistent budget limits and
+   routing telemetry before considering any cloud chat mode.
 
 The intended 4 TB volume remains unidentified. The current Linux filesystem has
 enough free space for this initial small model; use it for the first smoke test,

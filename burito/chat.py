@@ -13,8 +13,10 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True,
          pc_access=True, include_activity=False, activity_only=False, include_feedback=False,
-         include_project=False, include_suggestions=False):
+         include_project=False, include_suggestions=False, enable_online=False):
     if activity_only:
+        if enable_online:
+            raise ValueError("Online research cannot be enabled in activity-only chats")
         include_personal = False
         include_system = False
         include_activity = True
@@ -24,6 +26,21 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         include_suggestions = False
     runtime = ROOT / "runtime"
     environment = os.environ.copy()
+    # Never pass inherited gateway credentials to the local agent unless this
+    # chat explicitly enables the separately approved research tool.
+    gateway_key = environment.pop("AI_GATEWAY_API_KEY", None)
+    gateway_model = environment.pop("BURITO_GATEWAY_MODEL", None)
+    environment.pop("BURITO_ONLINE_ENABLED", None)
+    if enable_online:
+        if not gateway_key or not gateway_model:
+            raise ValueError(
+                "Online research needs AI_GATEWAY_API_KEY and BURITO_GATEWAY_MODEL in this terminal"
+            )
+        if "/" not in gateway_model or len(gateway_model) > 160:
+            raise ValueError("BURITO_GATEWAY_MODEL must be a provider/model ID, such as openai/gpt-5.4-nano")
+        environment["AI_GATEWAY_API_KEY"] = gateway_key
+        environment["BURITO_GATEWAY_MODEL"] = gateway_model
+        environment["BURITO_ONLINE_ENABLED"] = "1"
     # eve assigns these per development process. Inheriting another process's
     # route or transport token can send queue deliveries to the wrong host.
     for name in ("WORKFLOW_LOCAL_BASE_URL", "EVE_DEV_WORKFLOW_TRANSPORT_SECRET",

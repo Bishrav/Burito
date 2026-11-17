@@ -122,6 +122,8 @@ def main(argv=None):
                               help="Include recent pending and accepted suggestions with evidence")
     conversation.add_argument("--activity-only", action="store_true",
                               help="Use only activity data; exclude PC inventory, personal facts, and PC tools")
+    conversation.add_argument("--enable-online", action="store_true",
+                              help="Expose the paid online research tool; each exact query requires approval")
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-files", action="store_true", help="Disable file and application tools")
@@ -180,7 +182,8 @@ def main(argv=None):
                         include_system=not args.no_system, pc_access=not args.no_files,
                         include_activity=args.include_activity, activity_only=args.activity_only,
                         include_feedback=args.include_feedback, include_project=args.include_project,
-                        include_suggestions=args.include_suggestions)
+                        include_suggestions=args.include_suggestions,
+                        enable_online=args.enable_online)
         elif args.command == "web":
             from .web import serve
             serve(args.model, args.context_tokens, port=args.port, lesson=args.lesson,

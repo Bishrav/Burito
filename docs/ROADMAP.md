@@ -43,6 +43,12 @@ upload screenshots, complete memory, credentials, or unrelated files.
 Exit: tested offline, online, timeout, exhausted-budget, provider-failure, and
 connection-loss paths. Failed external writes are reconciled before retrying.
 
+Current progress: an optional CLI-only online research tool is implemented as
+an explicitly enabled, per-query approval-gated capability. It sends only the
+approved query. Live provider calls, approval denial, timeout, budget limits,
+and provider-failure behavior still need verification; this does not complete
+milestone 2. See `docs/ONLINE_RESEARCH.md`.
+
 ## 3 — Voice and desktop presence
 
 Add local speech recognition and speech synthesis, push-to-talk first, then
