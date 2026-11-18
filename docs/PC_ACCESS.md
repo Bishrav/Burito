@@ -7,6 +7,9 @@ Burito now has explicit host tools, in addition to the inventory summary:
 | `files` | Browse folders, read bounded UTF-8 text, search filenames | No extra prompt |
 | `applications` | Find registered desktop launchers and their exact IDs/hashes | No extra prompt |
 | `open_application` | Submit a launch request for a selected, unchanged launcher | Every launch |
+| `desktop_windows` | On-demand snapshot of KWin internal IDs, resource classes, captions, desktop/minimized/active state | No extra prompt; only exposed by `--enable-desktop-control` |
+| `focus_window` | Unminimize and focus one exact window by internal ID | Every focus |
+| `inspect_window` | After approval, focus one exact window and immediately OCR its active window | One approval covers focus and capture |
 
 These run through a local Python bridge using the normal account's permissions.
 They are not eve's built-in sandbox file tools. Default shell, file-write, web,
@@ -66,8 +69,38 @@ No executable command line or URL is accepted from the model for launching.
 
 ## Boundaries
 
-There is no arbitrary shell execution, file editing/deletion, screen capture,
-application-window control, account access, or outbound messaging in these tools.
+There is no arbitrary shell execution, file editing/deletion, account access,
+or outbound messaging in these tools. Application-window control is a separate
+opt-in KWin integration described below.
+An optional one-shot screen OCR tool is available only when a chat is started
+with `--enable-screen-read` (and without `--no-files`). Each capture requires
+approval. KDE Spectacle captures the full screen or active app window to a private temporary folder;
+Tesseract reads the image locally, and the image is deleted immediately after
+processing. Only bounded recognized text and approximate line coordinates are
+returned to help Burito distinguish split-screen regions. OCR can misread text
+and does not identify objects or which app owns a region. Returned text may remain
+in local Eve session history. No background capture occurs. The approval
+reservation and dynamic tool list limit Burito to one attempted capture per
+user message; send a new message to request another view.
+
+Start with `--enable-desktop-control` as well when Burito should locate an app
+window and focus it before capturing only the active window. The combined
+`inspect_window` approval keeps a second dialog from stealing focus between
+activation and capture. KDE's KWin window
+snapshot includes captions for the current request only. It is queried on
+demand through a temporary KWin script and a private, correlated, one-request
+D-Bus service. Captions are returned to local chat history but are not written
+to logs, the access audit target, or app activity summaries. The focus tool
+rechecks the exact internal ID at execution time, then unminimizes and activates
+that window. It may switch virtual desktops and cannot click or type. Visible
+text OCR remains a separate approved step.
+A missing KWin window does not prove the app process is stopped, since tray-only
+and background apps may have no managed window. `active_window` OCR reads the
+focused window after approval; `full_screen` remains available for desktop-wide
+questions. KWin window control is currently scoped to KDE Wayland.
+Run the local probe with `bash scripts/probe_kwin_windows.sh`. It prints the
+script load ID, run result, whether the D-Bus report arrived, and the raw JSON
+payload, then unloads the unique script and removes its temporary source.
 Opening an app does not grant access to everything inside it. App-specific APIs,
 accessibility controls, document parsers, and scoped write actions are later
 integrations. Read access does not mean every file has been indexed or memorized.
@@ -79,6 +112,26 @@ the newest 2,000 audit records; file contents are not copied into the audit log.
 Approved launcher snapshots are retained under private Burito storage. Source
 code and synthetic tests are pushed to GitHub, not file contents, inventory,
 application lists, launcher snapshots, or audit records.
+
+To enable the one-shot screen OCR tool for a session:
+
+```bash
+cd ~/Burito
+python3 -m burito chat --model burito-local:8b --context-tokens 8192 --enable-screen-read
+```
+
+For named-app window detection, focus, and active-window OCR, enable both:
+
+```bash
+python3 -m burito chat --model burito-local:8b --context-tokens 8192 \
+  --enable-screen-read --enable-desktop-control
+```
+
+Then explicitly ask Burito to read the current screen and approve the exact
+capture in the chat. `spectacle` and `tesseract` must already be installed. The
+tool is absent by default and unavailable when `--no-files` or `--activity-only`
+is used. This is a first desktop-context slice; visual scene understanding and
+typing/clicking controls are separate future integrations.
 
 The backend and compiled tool discovery were tested locally. The restricted
 development session cannot reach the model server or launch desktop apps;

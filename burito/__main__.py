@@ -128,6 +128,10 @@ def main(argv=None):
     context.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-system", action="store_true", help="Exclude stored PC inventory")
     conversation.add_argument("--no-files", action="store_true", help="Disable file and application tools")
+    conversation.add_argument("--enable-screen-read", action="store_true",
+                              help="Enable one-shot local screen OCR; every capture requires approval")
+    conversation.add_argument("--enable-desktop-control", action="store_true",
+                              help="Enable on-demand KDE window listing and approval-gated focus")
     web = commands.add_parser("web", help="Start the local-only Burito desktop web console")
     web.add_argument("--model", required=True, help="Installed local model name")
     web.add_argument("--context-tokens", type=int, required=True)
@@ -184,7 +188,9 @@ def main(argv=None):
                         include_activity=args.include_activity, activity_only=args.activity_only,
                         include_feedback=args.include_feedback, include_project=args.include_project,
                         include_suggestions=args.include_suggestions,
-                        enable_online=args.enable_online)
+                        enable_online=args.enable_online,
+                        enable_screen_read=args.enable_screen_read,
+                        enable_desktop_control=args.enable_desktop_control)
         elif args.command == "web":
             from .web import serve
             serve(args.model, args.context_tokens, port=args.port, lesson=args.lesson,

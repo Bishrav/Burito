@@ -64,6 +64,23 @@
   shows the old and replacement text for approval, and checks the original value
   has not changed before writing. New facts are not silently saved. This path
   still needs owner verification in a fresh chat.
+- An opt-in, approval-gated screen OCR tool captures one full screen with KDE
+  Spectacle and extracts text locally with Tesseract. Images use a private
+  temporary directory and are deleted after OCR; OCR text may remain in Eve
+  session history. This is not continuous observation or visual scene
+  understanding. OCR preserves approximate text
+  coordinates for split-screen summaries. A per-turn reservation limits it to
+  one attempted capture per user message. It requires owner-run verification.
+- An additional opt-in KDE window bridge lists KWin-managed windows on demand,
+  including transient captions, resource class, internal ID, desktop and
+  minimized/active state. Responses use a short-lived correlated D-Bus service;
+  captions are not written to logs or audit targets. Focusing one exact window
+  requires approval and revalidates its internal ID before
+  unminimizing/activating it. A combined approved inspect
+  action focuses the exact window and immediately captures it for local OCR.
+  Titles appear in local chat tool results but are not added to the continuous
+  activity database. Fake-D-Bus tests cover the bridge; live KWin behavior is
+  still unverified. See `docs/PC_ACCESS.md` for the desktop probe.
 - Optional CLI online research is isolated from the local chat model. It is
   absent unless `--enable-online` is passed, requires an explicit Gateway key
   and answer model, and asks for approval for each exact query. Only that query
@@ -82,7 +99,7 @@
 
 ## Not implemented
 
-Fully evaluated AI chat, complete hybrid routing, semantic retrieval, voice, screen observation,
+Fully evaluated AI chat, complete hybrid routing, semantic retrieval, voice, continuous screen observation,
 proactive suggestions, chat autostart, general desktop control, automatic training,
 encryption, scheduled backups, restore tooling, and autonomous execution.
 Automatic interest inference, owner-reviewed suggestions, lock-state handling,

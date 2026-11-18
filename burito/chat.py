@@ -13,7 +13,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True,
          pc_access=True, include_activity=False, activity_only=False, include_feedback=False,
-         include_project=False, include_suggestions=False, enable_online=False):
+         include_project=False, include_suggestions=False, enable_online=False,
+         enable_screen_read=False, enable_desktop_control=False):
     if activity_only:
         if enable_online:
             raise ValueError("Online research cannot be enabled in activity-only chats")
@@ -21,6 +22,8 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         include_system = False
         include_activity = True
         pc_access = False
+        enable_screen_read = False
+        enable_desktop_control = False
         include_feedback = False
         include_project = False
         include_suggestions = False
@@ -75,6 +78,8 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         "BURITO_GLOSSARY_WRITES": "1" if include_personal else "0",
         "BURITO_MEMORY_WRITES": "1" if include_personal else "0",
         "BURITO_PC_ACCESS": "1" if pc_access else "0",
+        "BURITO_SCREEN_READ": "1" if pc_access and enable_screen_read else "0",
+        "BURITO_DESKTOP_CONTROL": "1" if pc_access and enable_desktop_control else "0",
         "BURITO_PROJECT_ROOT": str(ROOT),
         "BURITO_PYTHON": sys.executable,
         "EVE_TELEMETRY_DISABLED": "1",
@@ -91,6 +96,14 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     if activity_only:
         print("Activity-only scope: PC inventory, personal memory, and PC tools are excluded.")
     print("Local file/application tools enabled; application launches require approval." if pc_access else "PC file/application tools disabled.")
+    if pc_access and enable_screen_read:
+        print("On-demand screen OCR enabled; each capture requires approval and is processed locally.")
+    else:
+        print("Screen reading disabled. Start with --enable-screen-read to expose the approval-gated tool.")
+    if pc_access and enable_desktop_control:
+        print("On-demand KDE window listing and approval-gated focus enabled; no continuous title logging.")
+    else:
+        print("Desktop window control disabled. Start with --enable-desktop-control to expose it.")
     state_directory = runtime / ".eve"
     state_directory.mkdir(mode=0o700, parents=True, exist_ok=True)
     if state_directory.is_symlink() or state_directory.stat().st_uid != os.getuid():

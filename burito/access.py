@@ -1,13 +1,18 @@
 """Bounded host file access and registered application discovery. No shell tool."""
 
 import configparser
-from datetime import datetime, timezone
+import csv
+from datetime import datetime, timedelta, timezone
 import hashlib
 import json
 import os
 from pathlib import Path
+import re
+import shutil
+import sqlite3
 import stat
 import subprocess
+import tempfile
 
 from .memory import Memory
 
@@ -224,6 +229,145 @@ def launch_application(app_id, expected_sha256, directories=None):
             'detail': 'Desktop accepted the launch request; window visibility and readiness are not verified.'}
 
 
+def read_screen_text(scope='full_screen'):
+    """Capture one screen or active window on demand, OCR locally, delete image."""
+    spectacle = shutil.which('spectacle')
+    tesseract = shutil.which('tesseract')
+    if not spectacle or not tesseract:
+        raise ValueError('Screen reading needs KDE Spectacle and Tesseract installed.')
+    with tempfile.TemporaryDirectory(prefix='burito-screen-') as directory:
+        os.chmod(directory, 0o700)
+        image = Path(directory) / 'capture.png'
+        if scope not in ('full_screen', 'active_window'):
+            raise ValueError('Screen reader accepts full_screen or active_window scope')
+        area = '--activewindow' if scope == 'active_window' else '--fullscreen'
+        capture = subprocess.run(
+            [spectacle, '--background', '--nonotify', area, '--output', str(image)],
+            capture_output=True, text=True, timeout=30, check=False,
+        )
+        if capture.returncode or not image.is_file():
+            detail = (capture.stderr or capture.stdout).strip()[:300]
+            raise ValueError('Screen capture failed' + (': ' + detail if detail else '.'))
+        if image.stat().st_size > 30 * 1024 * 1024:
+            raise ValueError('Screen image exceeds the 30 MiB processing limit.')
+        ocr = subprocess.run([tesseract, str(image), 'stdout', 'tsv'], capture_output=True,
+                             text=True, timeout=30, check=False)
+        if ocr.returncode:
+            raise ValueError('Local OCR failed: ' + ocr.stderr.strip()[:300])
+        rows = list(csv.DictReader(ocr.stdout.splitlines(), delimiter='\t'))
+        page = next((row for row in rows if row.get('level') == '1'), {})
+        try:
+            page_width, page_height = int(page['width']), int(page['height'])
+        except (KeyError, TypeError, ValueError):
+            raise ValueError('Local OCR did not return screen dimensions.')
+        grouped = {}
+        for row in rows:
+            if row.get('level') != '5' or not row.get('text', '').strip():
+                continue
+            try:
+                key = (row['page_num'], row['block_num'], row['par_num'], row['line_num'])
+                left, top = int(row['left']), int(row['top'])
+                width, height = int(row['width']), int(row['height'])
+                confidence = float(row['conf'])
+            except (KeyError, TypeError, ValueError):
+                continue
+            line = grouped.setdefault(key, {'left': left, 'top': top, 'right': left + width,
+                                             'bottom': top + height, 'words': [], 'confidence': []})
+            line['left'] = min(line['left'], left)
+            line['top'] = min(line['top'], top)
+            line['right'] = max(line['right'], left + width)
+            line['bottom'] = max(line['bottom'], top + height)
+            line['words'].append((left, row['text'].strip()))
+            if confidence >= 0:
+                line['confidence'].append(confidence)
+        positioned_lines = []
+        redacted_count = 0
+        for line in sorted(grouped.values(), key=lambda item: (item['top'], item['left'])):
+            text = ' '.join(word for _, word in sorted(line['words']))
+            text, redacted = redact_screen_secrets(text)
+            redacted_count += redacted
+            positioned_lines.append({
+                'x_percent': [round(100 * line['left'] / page_width),
+                              round(100 * line['right'] / page_width)],
+                'y_percent': [round(100 * line['top'] / page_height),
+                              round(100 * line['bottom'] / page_height)],
+                'confidence_percent': round(sum(line['confidence']) / len(line['confidence']))
+                    if line['confidence'] else None,
+                'text': text,
+            })
+        compact_size = sum(len(line['text']) for line in positioned_lines)
+        truncated = len(positioned_lines) > 250 or compact_size > 12000
+        remaining, bounded_lines = 12000, []
+        for line in positioned_lines[:250]:
+            if remaining <= 0:
+                break
+            line['text'] = line['text'][:remaining]
+            remaining -= len(line['text'])
+            bounded_lines.append(line)
+        return {'screen_size_px': [page_width, page_height], 'scope': scope,
+                'lines': bounded_lines, 'truncated': truncated,
+                'method': 'KDE Spectacle one-shot capture + local Tesseract OCR',
+                'image_retained': False,
+                'redacted_values': redacted_count,
+                'note': ('OCR lines include approximate coordinates within the captured image. OCR can misread text and does not identify visual objects. '
+                         + ('This was a capture of the active window, whose app identity was separately checked by KWin.'
+                            if scope == 'active_window' else 'This was a full-screen capture and does not verify which application owns a region.'))}
+
+
+def redact_screen_secrets(text):
+    """Mask obvious credential assignments and common token formats in OCR output."""
+    assignment = re.compile(
+        r'(?i)\b((?:[A-Z0-9_.-]*(?:API[_ -]?KEY|ACCESS[_ -]?TOKEN|AUTHORIZATION|PASSWORD|CLIENT[_ -]?SECRET)[A-Z0-9_.-]*))'
+        r'(\s*[:=]\s*)([^\s"\'`]+)'
+    )
+    text, assignments = assignment.subn(r'\1\2[REDACTED]', text)
+    token = re.compile(r'\b(?:sk-[A-Za-z0-9_-]{16,}|gh[pousr]_[A-Za-z0-9]{16,}|github_pat_[A-Za-z0-9_]{20,}|vck_[A-Za-z0-9_-]{16,})\b')
+    text, tokens = token.subn('[REDACTED TOKEN]', text)
+    return text, assignments + tokens
+
+
+def reserve_screen_capture(session_id, turn_id, memory=None):
+    """Atomically allow at most one requested capture for an Eve turn."""
+    if not isinstance(session_id, str) or not session_id or len(session_id) > 300:
+        raise ValueError('Screen capture needs a valid Eve session ID.')
+    if not isinstance(turn_id, str) or not turn_id or len(turn_id) > 300:
+        raise ValueError('Screen capture needs a valid Eve turn ID.')
+    connection = (memory or Memory())._connect()
+    try:
+        with connection:
+            connection.execute('''CREATE TABLE IF NOT EXISTS pc_screen_capture_turns (
+                session_id TEXT NOT NULL, turn_id TEXT NOT NULL, reserved_at TEXT NOT NULL,
+                PRIMARY KEY(session_id, turn_id))''')
+            connection.execute(
+                'DELETE FROM pc_screen_capture_turns WHERE reserved_at < ?',
+                ((datetime.now(timezone.utc) - timedelta(days=30)).isoformat(),),
+            )
+            connection.execute(
+                'INSERT INTO pc_screen_capture_turns(session_id, turn_id, reserved_at) VALUES (?, ?, ?)',
+                (session_id, turn_id, datetime.now(timezone.utc).isoformat()),
+            )
+    except sqlite3.IntegrityError as error:
+        raise ValueError('One screen capture was already attempted in this turn. Answer using its result, or ask the owner to send a new message for another capture.') from error
+    finally:
+        connection.close()
+
+
+def screen_capture_reserved(session_id, turn_id, memory=None):
+    if not isinstance(session_id, str) or not session_id or not isinstance(turn_id, str) or not turn_id:
+        return False
+    connection = (memory or Memory())._connect()
+    try:
+        row = connection.execute(
+            'SELECT 1 FROM pc_screen_capture_turns WHERE session_id = ? AND turn_id = ?',
+            (session_id, turn_id),
+        ).fetchone()
+        return row is not None
+    except sqlite3.OperationalError:
+        return False
+    finally:
+        connection.close()
+
+
 def dispatch(request, memory=None, allowed_roots=None):
     """Bridge used by model tools; read operations require no approval prompt."""
     action = request.get('action')
@@ -242,6 +386,36 @@ def dispatch(request, memory=None, allowed_roots=None):
             if os.environ.get('BURITO_APPROVED_APP_LAUNCH') != '1':
                 raise ValueError('Application launch requires the approved eve tool path')
             result = launch_application(request['app_id'], request['sha256'])
+        elif action in ('windows', 'focus_window', 'inspect_window'):
+            if os.environ.get('BURITO_DESKTOP_CONTROL') != '1':
+                raise ValueError('Desktop window access is disabled for this chat')
+            from . import windows
+            if action == 'windows':
+                result = windows.list_windows()
+            else:
+                if os.environ.get('BURITO_APPROVED_WINDOW_FOCUS') != '1':
+                    raise ValueError('Window focus requires the approved eve tool path')
+                if action == 'focus_window':
+                    result = windows.focus_window(request.get('internalId'))
+                else:
+                    if os.environ.get('BURITO_SCREEN_READ') != '1':
+                        raise ValueError('Active-window OCR is disabled for this chat')
+                    if not screen_capture_reserved(request.get('session_id'), request.get('turn_id'), memory):
+                        raise ValueError('Window capture was not reserved for this turn; request approval in a new message.')
+                    result = windows.focus_and_read_window(request.get('internalId'))
+        elif action == 'screen_read':
+            if os.environ.get('BURITO_SCREEN_READ') != '1':
+                raise ValueError('Screen reading was not enabled for this chat')
+            if request.get('scope') not in ('full_screen', 'active_window'):
+                raise ValueError('Screen reader only accepts the approved full_screen or active_window scope')
+            if not screen_capture_reserved(request.get('session_id'), request.get('turn_id'), memory):
+                raise ValueError('Screen capture was not reserved for this turn; request approval again in a new user message.')
+            result = read_screen_text(request['scope'])
+        elif action == 'screen_reserve':
+            if os.environ.get('BURITO_SCREEN_READ') != '1':
+                raise ValueError('Screen reading was not enabled for this chat')
+            reserve_screen_capture(request.get('session_id'), request.get('turn_id'), memory)
+            result = {'reserved': True}
         else:
             raise ValueError('Unknown PC access action')
     except (ValueError, OSError, KeyError, subprocess.TimeoutExpired) as error:
@@ -258,7 +432,11 @@ def audit(action, request, outcome, memory=None):
         with connection:
             connection.execute('''CREATE TABLE IF NOT EXISTS pc_access_audit (
                 id INTEGER PRIMARY KEY, observed_at TEXT, action TEXT, target TEXT, outcome TEXT)''')
-            target = str(request.get('path') or request.get('root') or request.get('app_id') or '')[:4096]
+            if action in ('windows', 'focus_window', 'inspect_window'):
+                # Window captions are transient response data and never enter the audit log.
+                target = 'KWin window request'
+            else:
+                target = str(request.get('path') or request.get('root') or request.get('app_id') or request.get('title') or request.get('scope') or '')[:4096]
             connection.execute('INSERT INTO pc_access_audit(observed_at, action, target, outcome) VALUES (?, ?, ?, ?)',
                                (datetime.now(timezone.utc).isoformat(), str(action)[:30], target, outcome))
             connection.execute('DELETE FROM pc_access_audit WHERE id NOT IN (SELECT id FROM pc_access_audit ORDER BY id DESC LIMIT 2000)')

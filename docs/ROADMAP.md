@@ -109,7 +109,10 @@ suggestions, interruption settings respected. Suggestions do not execute work.
 ## 7 — Assisted computer tasks
 
 Implement typed, narrow tools for selected applications, files, browser tasks,
-and terminal procedures. Enforce policy in the executor, outside model prompts.
+and terminal procedures. The first optional desktop-context slice is one-shot
+local OCR via KDE Spectacle and Tesseract, enabled per chat and approved per
+capture. Add tested accessibility/app-specific integrations for richer visual
+context and UI control next. Enforce policy in the executor, outside prompts.
 Use minimum privileges, scoped folders, argument validation, timeouts,
 previews, meaningful approvals, outcome checks, and recoverable changes.
 External content is task data, never authority to override permissions.

@@ -106,3 +106,28 @@ class AccessTests(unittest.TestCase):
             with patch.dict(os.environ, {'BURITO_APPROVED_APP_LAUNCH': '0'}):
                 with self.assertRaisesRegex(ValueError, 'approved eve'):
                     dispatch({'action': 'launch', 'app_id': 'anything', 'sha256': 'x'}, Memory(directory))
+
+    def test_window_captions_are_not_written_to_access_audit(self):
+        with tempfile.TemporaryDirectory() as directory, \
+             patch.dict(os.environ, {'BURITO_DESKTOP_CONTROL': '1'}), \
+             patch('burito.windows.list_windows', return_value={
+                 'windows': [{'internalId': 'a' * 36, 'caption': 'synthetic private title'}]}):
+            memory = Memory(Path(directory) / 'private')
+            result = dispatch({'action': 'windows'}, memory)
+            self.assertEqual(result['windows'][0]['caption'], 'synthetic private title')
+            connection = memory._connect()
+            try:
+                target = connection.execute('SELECT target FROM pc_access_audit').fetchone()[0]
+                self.assertEqual(target, 'KWin window request')
+                self.assertNotIn('synthetic private title', target)
+            finally:
+                connection.close()
+
+    def test_window_focus_bridge_still_requires_the_approved_tool_path(self):
+        with tempfile.TemporaryDirectory() as directory, \
+             patch.dict(os.environ, {
+                 'BURITO_DESKTOP_CONTROL': '1',
+                 'BURITO_APPROVED_WINDOW_FOCUS': '0',
+             }):
+            with self.assertRaisesRegex(ValueError, 'approved eve tool path'):
+                dispatch({'action': 'focus_window', 'internalId': 'a' * 36}, Memory(directory))
