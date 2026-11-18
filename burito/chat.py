@@ -1,11 +1,12 @@
 """Launch the prepared eve runtime; no model installation or cloud fallback."""
 
-import fcntl
 import os
 from pathlib import Path
 import shutil
 import subprocess
 import sys
+
+from .runtime_lock import acquire_runtime_lock
 
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -104,18 +105,8 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         print("On-demand KDE window listing and approval-gated focus enabled; no continuous title logging.")
     else:
         print("Desktop window control disabled. Start with --enable-desktop-control to expose it.")
-    state_directory = runtime / ".eve"
-    state_directory.mkdir(mode=0o700, parents=True, exist_ok=True)
-    if state_directory.is_symlink() or state_directory.stat().st_uid != os.getuid():
-        raise ValueError("eve state directory must be owned by you and not a symlink")
-    state_directory.chmod(0o700)
-    lock_path = state_directory / "burito-chat.lock"
-    lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+    lock_fd = acquire_runtime_lock(runtime)
     try:
-        try:
-            fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
-        except BlockingIOError as error:
-            raise ValueError("Another Burito/eve chat is already using this runtime. Close it before starting another.") from error
         return subprocess.run([node, str(cli), "dev", "--no-default-extensions"], cwd=runtime, env=environment,
                               check=False).returncode
     except KeyboardInterrupt:

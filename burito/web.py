@@ -9,6 +9,7 @@ import sys
 from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
 
 from .chat import ROOT
+from .runtime_lock import acquire_runtime_lock
 
 
 class BuritoHandler(SimpleHTTPRequestHandler):
@@ -107,16 +108,20 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
                 "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1"})
     print(f"Starting Burito web console at http://127.0.0.1:{port}")
     print("Local model only. PC tools disabled. Press Ctrl+C to stop.", flush=True)
-    process = subprocess.Popen([node, str(eve), "dev", "--host", "127.0.0.1", "--port", "2000",
-                                "--no-ui", "--no-default-extensions"], cwd=runtime, env=env)
-    bridge = subprocess.Popen([node, str(runtime / "lib/web-bridge.mjs")], cwd=runtime, env=env)
-    BuritoHandler.eve_port = 2000
+    lock_fd = acquire_runtime_lock(runtime)
     try:
-        server = ThreadingHTTPServer(("127.0.0.1", port), BuritoHandler)
-        with server:
-            server.serve_forever()
+        process = subprocess.Popen([node, str(eve), "dev", "--host", "127.0.0.1", "--port", "2000",
+                                    "--no-ui", "--no-default-extensions"], cwd=runtime, env=env)
+        bridge = subprocess.Popen([node, str(runtime / "lib/web-bridge.mjs")], cwd=runtime, env=env)
+        BuritoHandler.eve_port = 2000
+        try:
+            server = ThreadingHTTPServer(("127.0.0.1", port), BuritoHandler)
+            with server:
+                server.serve_forever()
+        finally:
+            bridge.terminate()
+            bridge.wait(timeout=15)
+            process.terminate()
+            process.wait(timeout=15)
     finally:
-        bridge.terminate()
-        bridge.wait(timeout=15)
-        process.terminate()
-        process.wait(timeout=15)
+        os.close(lock_fd)
