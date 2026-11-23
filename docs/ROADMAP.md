@@ -1,159 +1,1 @@
-# Burito roadmap
-
-## Product direction
-
-Build a personal second brain that understands the owner's goals, remembers
-useful context, offers timely suggestions, and earns permission to automate
-specific tasks. Local operation is the baseline; online research and optional
-cloud reasoning extend it. Progress depends on demonstrated results, not time
-spent watching the user. No promise of movie-level intelligence.
-
-## 0 â€” Foundation and machine readiness (started)
-
-Deliver versioned source, diagnostics, explicit local memory, architecture,
-privacy defaults, and repeatable checks. Verify GPU driver, VRAM, audio,
-Wayland session, storage mount, and Node runtime. Keep personal records out
-of GitHub. Establish a backup destination separate from the primary disk.
-
-Exit: diagnostics run, memory survives restart and supports deletion, automated
-tests pass, GPU and intended storage are verified before model downloads.
-
-## 1 â€” Home education and text conversation
-
-Install eve using its documented initializer or manual installation and commit exact dependency versions
-and lockfile. Read its installed docs before implementing integrations.
-Evaluate local models against measured GPU memory and response latency.
-Create a text chat interface and shared local memory service. Collect owner
-preferences, goals, terminology, communication style, and examples through an
-editable onboarding profile. Never put the filled profile in the repository.
-
-Exit: offline conversation works after disconnecting the network; a corrected
-memory is used in a later session; unavailable models produce an honest error.
-
-## 2 â€” Hybrid reasoning and online knowledge
-
-Separate internet tools from model routing. Route routine/private work locally;
-use online services for explicitly online tasks; use cloud reasoning only when
-enabled and relevant. Default cloud integration: Vercel AI Gateway, configured
-outside source control. Apply context-sharing rules, request timeouts, budget
-limits, and an observable routing reason. Check provider availability rather
-than treating internet connectivity as proof of model access. Never silently
-upload screenshots, complete memory, credentials, or unrelated files.
-
-Exit: tested offline, online, timeout, exhausted-budget, provider-failure, and
-connection-loss paths. Failed external writes are reconciled before retrying.
-
-Current progress: an optional CLI-only online research tool is implemented as
-an explicitly enabled, per-query approval-gated capability. It sends only the
-approved query. Live provider calls, approval denial, timeout, budget limits,
-and provider-failure behavior still need verification; this does not complete
-milestone 2. See `docs/ONLINE_RESEARCH.md`.
-
-## 3 â€” Voice and desktop presence
-
-Add local speech recognition and speech synthesis, push-to-talk first, then
-optional wake word. Provide listening/speaking indicators, interruption,
-mute, and text fallback. Add a desktop panel showing current task, memory,
-connection mode, and approvals. Measure accuracy with the owner's microphone
-and languages instead of assuming it.
-
-Exit: voice task completed end to end; mute stops capture; restart recovers
-cleanly; no audio is retained by default.
-
-## 4 â€” Knowledge school
-
-Import explicitly selected folders and trusted learning material. Track source,
-licensing where relevant, timestamps, versions, and document permissions.
-Build local search and retrieval with citations. Handle changed and deleted
-documents, indexing limits, and prompt injection in retrieved content. Teach
-reusable skills through examples and practice tasks. Support export and
-deletion of the library and derived indexes.
-
-Exit: relevant evidence is retrieved on a fixed question set; deleted sources
-disappear from retrieval; conflicting and missing evidence are acknowledged.
-
-## 5 â€” Observation and interests
-
-Build an opt-in session observer that starts after graphical login only when
-enabled by the owner. The first KWin integration now records foreground app IDs
-and bounded elapsed intervals locally; verify the host install, pause, and
-deletion controls before extending it. Begin with selected app/activity metadata, then add
-explicitly enabled screen capture through supported KDE/Wayland interfaces.
-Verify what those interfaces actually expose; do not claim password detection
-or complete screen exclusion without testing it. Avoid keylogging. Pause on
-session lock and excluded contexts; show capture state and a global pause.
-Prefer events and summaries to continuous screenshots. Bound retention and
-storage; raw screenshots/audio are off by default. Observation never grants
-permission to execute commands.
-
-Interest inference is a hypothesis with evidence and confidence. Time spent
-on an activity may reflect obligation, not interest. Ask before promoting
-inferences to confirmed personal facts. Let the owner inspect, correct, export,
-and remove memories, observations, and derived profiles.
-
-Exit: pause, lock, exclusions, restart, expiry, and deletion verified with real
-desktop sessions. Zero capture while disabled. Cloud receives no observation
-data unless explicitly permitted.
-
-## 6 â€” Proactive suggestions
-
-Offer relevant next steps, reminders, workflow shortcuts, learning resources,
-and project ideas using confirmed goals and recent context. Show why a
-suggestion appeared. Respect quiet hours, focus mode, frequency limits, and
-"do not suggest this again." Track helpful/dismissed feedback. Do not infer
-sensitive traits or promote guesses into facts.
-
-Exit: useful suggestions on owner-reviewed scenarios, no repeated dismissed
-suggestions, interruption settings respected. Suggestions do not execute work.
-
-## 7 â€” Assisted computer tasks
-
-Implement typed, narrow tools for selected applications, files, browser tasks,
-and terminal procedures. The first optional desktop-context slice is one-shot
-local OCR via KDE Spectacle and Tesseract, enabled per chat and approved per
-capture. Add tested accessibility/app-specific integrations for richer visual
-context and UI control next. Enforce policy in the executor, outside prompts.
-Use minimum privileges, scoped folders, argument validation, timeouts,
-previews, meaningful approvals, outcome checks, and recoverable changes.
-External content is task data, never authority to override permissions.
-
-Exit: each tool has success/failure verification, audit records, and recovery
-instructions; hostile documents cannot trigger unauthorized actions.
-
-## 8 â€” Earned automation
-
-Progress per workflow: suggest â†’ preview â†’ execute with approval â†’ run within
-an explicitly approved scope. Promotion requires repeatable success, known
-failure cases, rollback, and owner consent. Add schedules, login tasks,
-notifications, cancellation, duplicate prevention, and an emergency stop.
-Elapsed training time alone never expands permissions. Purchases, outbound
-messages, destructive edits, and system administration keep explicit approval
-unless the owner separately grants a precise standing permission.
-
-Exit: selected workflows run reliably across restarts and offline periods;
-approvals cannot be bypassed; stop prevents new execution; permissions revoke.
-
-## 9 â€” Continuous improvement and specialist training
-
-Use feedback to maintain a curated evaluation set and improve retrieval,
-instructions, and versioned skills. Experiment with fine-tuning only when
-baseline measurements show a specific need and data rights/compute permit.
-Test proposed code or policy changes in isolation and compare against a frozen
-baseline. Require review before activating self-generated changes. Preserve
-the previous working version and protect the policy executor from self-editing.
-
-Exit: measurable gains without regression in privacy, tool correctness, or
-offline performance; rollback demonstrated.
-
-## Release scorecard
-
-Measure task success, false success claims, retrieval accuracy, voice accuracy,
-latency, RAM/VRAM/disk use, cloud spend, unwanted interruptions, and unauthorized
-data sharing/actions. Publish synthetic evaluation results, never private
-activity logs. Avoid "100% automated" as a target; automate proven workflows.
-
-## Work order
-
-Complete milestone 0 hardware/storage work, then one end-to-end text workflow
-in milestone 1. Keep the later roadmap adaptable. Voice, observation, and
-autonomy must build on a working memory and reasoning layer.
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tŒ	ÕÉ¥Ñ¼É½…‘µ…À((ŒŒAÉ½‘ÕĞ‘¥É•Ñ¥½¸()	Õ¥±„Á•ÉÍ½¹…°Í•½¹‰É…¥¸Ñ¡…ĞÕ¹‘•ÉÍÑ…¹‘ÌÑ¡”½İ¹•ÈÌ½…±Ì°É•µ•µ‰•ÉÌ)ÕÍ•™Õ°½¹Ñ•áĞ°½™™•ÉÌÑ¥µ•±äÍÕ•ÍÑ¥½¹Ì°…¹•…É¹ÌÁ•Éµ¥ÍÍ¥½¸Ñ¼…ÕÑ½µ…Ñ”)ÍÁ•¥™¥ŒÑ…Í­Ì¸1½…°½Á•É…Ñ¥½¸¥ÌÑ¡”‰…Í•±¥¹”ì½¹±¥¹”É•Í•…É …¹½ÁÑ¥½¹…°)±½ÕÉ•…Í½¹¥¹œ•áÑ•¹¥Ğ¸AÉ½É•ÍÌ‘•Á•¹‘Ì½¸‘•µ½¹ÍÑÉ…Ñ•É•ÍÕ±ÑÌ°¹½ĞÑ¥µ”)ÍÁ•¹Ğİ…Ñ¡¥¹œÑ¡”ÕÍ•È¸9¼ÁÉ½µ¥Í”½˜µ½Ù¥”µ±•Ù•°¥¹Ñ•±±¥•¹”¸((ŒŒ€ÀƒŠP½Õ¹‘…Ñ¥½¸…¹µ…¡¥¹”É•…‘¥¹•ÍÌ€¡ÍÑ…ÉÑ•¤()•±¥Ù•ÈÙ•ÉÍ¥½¹•Í½ÕÉ”°‘¥…¹½ÍÑ¥Ì°•áÁ±¥¥Ğ±½…°µ•µ½Éä°…É¡¥Ñ•ÑÕÉ”°)ÁÉ¥Ù…ä‘•™…Õ±ÑÌ°…¹É•Á•…Ñ…‰±”¡•­Ì¸Y•É¥™äAT‘É¥Ù•È°YI4°…Õ‘¥¼°)]…å±…¹Í•ÍÍ¥½¸°ÍÑ½É…”µ½Õ¹Ğ°…¹9½‘”ÉÕ¹Ñ¥µ”¸-••ÀÁ•ÉÍ½¹…°É•½É‘Ì½ÕĞ)½˜¥Ñ!Õˆ¸ÍÑ…‰±¥Í „‰…­ÕÀ‘•ÍÑ¥¹…Ñ¥½¸Í•Á…É…Ñ”™É½´Ñ¡”ÁÉ¥µ…Éä‘¥Í¬¸()á¥Ğè‘¥…¹½ÍÑ¥ÌÉÕ¸°µ•µ½ÉäÍÕÉÙ¥Ù•ÌÉ•ÍÑ…ÉĞ…¹ÍÕÁÁ½ÉÑÌ‘•±•Ñ¥½¸°…ÕÑ½µ…Ñ•)Ñ•ÍÑÌÁ…ÍÌ°AT…¹¥¹Ñ•¹‘•ÍÑ½É…”…É”Ù•É¥™¥•‰•™½É”µ½‘•°‘½İ¹±½…‘Ì¸((ŒŒ€ÄƒŠP!½µ”•‘Õ…Ñ¥½¸…¹Ñ•áĞ½¹Ù•ÉÍ…Ñ¥½¸()%¹ÍÑ…±°•Ù”ÕÍ¥¹œ¥ÑÌ‘½Õµ•¹Ñ•¥¹¥Ñ¥…±¥é•È½Èµ…¹Õ…°¥¹ÍÑ…±±…Ñ¥½¸…¹½µµ¥Ğ•á…Ğ‘•Á•¹‘•¹äÙ•ÉÍ¥½¹Ì)…¹±½­™¥±”¸I•…¥ÑÌ¥¹ÍÑ…±±•‘½Ì‰•™½É”¥µÁ±•µ•¹Ñ¥¹œ¥¹Ñ•É…Ñ¥½¹Ì¸)Ù…±Õ…Ñ”±½…°µ½‘•±Ì……¥¹ÍĞµ•…ÍÕÉ•ATµ•µ½Éä…¹É•ÍÁ½¹Í”±…Ñ•¹ä¸)É•…Ñ”„Ñ•áĞ¡…Ğ¥¹Ñ•É™…”…¹Í¡…É•±½…°µ•µ½ÉäÍ•ÉÙ¥”¸½±±•Ğ½İ¹•È)ÁÉ•™•É•¹•Ì°½…±Ì°Ñ•Éµ¥¹½±½ä°½µµÕ¹¥…Ñ¥½¸ÍÑå±”°…¹•á…µÁ±•ÌÑ¡É½Õ …¸)•‘¥Ñ…‰±”½¹‰½…É‘¥¹œÁÉ½™¥±”¸9•Ù•ÈÁÕĞÑ¡”™¥±±•ÁÉ½™¥±”¥¸Ñ¡”É•Á½Í¥Ñ½Éä¸()á¥Ğè½™™±¥¹”½¹Ù•ÉÍ…Ñ¥½¸İ½É­Ì…™Ñ•È‘¥Í½¹¹•Ñ¥¹œÑ¡”¹•Ñİ½É¬ì„½ÉÉ•Ñ•)µ•µ½Éä¥ÌÕÍ•¥¸„±…Ñ•ÈÍ•ÍÍ¥½¸ìÕ¹…Ù…¥±…‰±”µ½‘•±ÌÁÉ½‘Õ”…¸¡½¹•ÍĞ•ÉÉ½È¸((ŒŒ€ÈƒŠP!å‰É¥É•…Í½¹¥¹œ…¹½¹±¥¹”­¹½İ±•‘”()M•Á…É…Ñ”¥¹Ñ•É¹•ĞÑ½½±Ì™É½´µ½‘•°É½ÕÑ¥¹œ¸I½ÕÑ”É½ÕÑ¥¹”½ÁÉ¥Ù…Ñ”İ½É¬±½…±±äì)ÕÍ”½¹±¥¹”Í•ÉÙ¥•Ì™½È•áÁ±¥¥Ñ±ä½¹±¥¹”Ñ…Í­ÌìÕÍ”±½ÕÉ•…Í½¹¥¹œ½¹±äİ¡•¸)•¹…‰±•…¹É•±•Ù…¹Ğ¸•™…Õ±Ğ±½Õ¥¹Ñ•É…Ñ¥½¸èY•É•°$…Ñ•İ…ä°½¹™¥ÕÉ•)½ÕÑÍ¥‘”Í½ÕÉ”½¹ÑÉ½°¸ÁÁ±ä½¹Ñ•áĞµÍ¡…É¥¹œÉÕ±•Ì°É•ÅÕ•ÍĞÑ¥µ•½ÕÑÌ°‰Õ‘•Ğ)±¥µ¥ÑÌ°…¹…¸½‰Í•ÉÙ…‰±”É½ÕÑ¥¹œÉ•…Í½¸¸¡•¬ÁÉ½Ù¥‘•È…Ù…¥±…‰¥±¥ÑäÉ…Ñ¡•È)Ñ¡…¸ÑÉ•…Ñ¥¹œ¥¹Ñ•É¹•Ğ½¹¹•Ñ¥Ù¥Ñä…ÌÁÉ½½˜½˜µ½‘•°…•ÍÌ¸9•Ù•ÈÍ¥±•¹Ñ±ä)ÕÁ±½…ÍÉ••¹Í¡½ÑÌ°½µÁ±•Ñ”µ•µ½Éä°É•‘•¹Ñ¥…±Ì°½ÈÕ¹É•±…Ñ•™¥±•Ì¸()á¥ĞèÑ•ÍÑ•½™™±¥¹”°½¹±¥¹”°Ñ¥µ•½ÕĞ°•á¡…ÕÍÑ•µ‰Õ‘•Ğ°ÁÉ½Ù¥‘•Èµ™…¥±ÕÉ”°…¹)½¹¹•Ñ¥½¸µ±½ÍÌÁ…Ñ¡Ì¸…¥±••áÑ•É¹…°İÉ¥Ñ•Ì…É”É•½¹¥±•‰•™½É”É•ÑÉå¥¹œ¸()ÕÉÉ•¹ĞÁÉ½É•ÍÌè…¸½ÁÑ¥½¹…°1$µ½¹±ä½¹±¥¹”É•Í•…É Ñ½½°¥Ì¥µÁ±•µ•¹Ñ•…Ì)…¸•áÁ±¥¥Ñ±ä•¹…‰±•°Á•ÈµÅÕ•Éä…ÁÁÉ½Ù…°µ…Ñ•…Á…‰¥±¥Ñä¸%ĞÍ•¹‘Ì½¹±äÑ¡”)…ÁÁÉ½Ù•ÅÕ•Éä¸1¥Ù”ÁÉ½Ù¥‘•È…±±Ì°…ÁÁÉ½Ù…°‘•¹¥…°°Ñ¥µ•½ÕĞ°‰Õ‘•Ğ±¥µ¥ÑÌ°)…¹ÁÉ½Ù¥‘•Èµ™…¥±ÕÉ”‰•¡…Ù¥½ÈÍÑ¥±°¹••Ù•É¥™¥…Ñ¥½¸ìÑ¡¥Ì‘½•Ì¹½Ğ½µÁ±•Ñ”)µ¥±•ÍÑ½¹”€È¸M•”‘½Ì½=91%9}IMI ¹µ‘€¸((ŒŒ€ÌƒŠPY½¥”…¹‘•Í­Ñ½ÀÁÉ•Í•¹”()‘±½…°ÍÁ•• É•½¹¥Ñ¥½¸…¹ÍÁ•• Íå¹Ñ¡•Í¥Ì°ÁÕÍ µÑ¼µÑ…±¬™¥ÉÍĞ°Ñ¡•¸)½ÁÑ¥½¹…°İ…­”İ½É¸AÉ½Ù¥‘”±¥ÍÑ•¹¥¹œ½ÍÁ•…­¥¹œ¥¹‘¥…Ñ½ÉÌ°¥¹Ñ•ÉÉÕÁÑ¥½¸°)µÕÑ”°…¹Ñ•áĞ™…±±‰…¬¸‘„‘•Í­Ñ½ÀÁ…¹•°Í¡½İ¥¹œÕÉÉ•¹ĞÑ…Í¬°µ•µ½Éä°)½¹¹•Ñ¥½¸µ½‘”°…¹…ÁÁÉ½Ù…±Ì¸5•…ÍÕÉ”…ÕÉ…äİ¥Ñ Ñ¡”½İ¹•ÈÌµ¥É½Á¡½¹”)…¹±…¹Õ…•Ì¥¹ÍÑ•…½˜…ÍÍÕµ¥¹œ¥Ğ¸()á¥ĞèÙ½¥”Ñ…Í¬½µÁ±•Ñ••¹Ñ¼•¹ìµÕÑ”ÍÑ½ÁÌ…ÁÑÕÉ”ìÉ•ÍÑ…ÉĞÉ•½Ù•ÉÌ)±•…¹±äì¹¼…Õ‘¥¼¥ÌÉ•Ñ…¥¹•‰ä‘•™…Õ±Ğ¸((ŒŒ€ĞƒŠP-¹½İ±•‘”Í¡½½°()%µÁ½ÉĞ•áÁ±¥¥Ñ±äÍ•±•Ñ•™½±‘•ÉÌ…¹ÑÉÕÍÑ•±•…É¹¥¹œµ…Ñ•É¥…°¸QÉ…¬Í½ÕÉ”°)±¥•¹Í¥¹œİ¡•É”É•±•Ù…¹Ğ°Ñ¥µ•ÍÑ…µÁÌ°Ù•ÉÍ¥½¹Ì°…¹‘½Õµ•¹ĞÁ•Éµ¥ÍÍ¥½¹Ì¸)	Õ¥±±½…°Í•…É …¹É•ÑÉ¥•Ù…°İ¥Ñ ¥Ñ…Ñ¥½¹Ì¸!…¹‘±”¡…¹•…¹‘•±•Ñ•)‘½Õµ•¹ÑÌ°¥¹‘•á¥¹œ±¥µ¥ÑÌ°…¹ÁÉ½µÁĞ¥¹©•Ñ¥½¸¥¸É•ÑÉ¥•Ù•½¹Ñ•¹Ğ¸Q•… )É•ÕÍ…‰±”Í­¥±±ÌÑ¡É½Õ •á…µÁ±•Ì…¹ÁÉ…Ñ¥”Ñ…Í­Ì¸MÕÁÁ½ÉĞ•áÁ½ÉĞ…¹)‘•±•Ñ¥½¸½˜Ñ¡”±¥‰É…Éä…¹‘•É¥Ù•¥¹‘•á•Ì¸()á¥ĞèÉ•±•Ù…¹Ğ•Ù¥‘•¹”¥ÌÉ•ÑÉ¥•Ù•½¸„™¥á•ÅÕ•ÍÑ¥½¸Í•Ğì‘•±•Ñ•Í½ÕÉ•Ì)‘¥Í…ÁÁ•…È™É½´É•ÑÉ¥•Ù…°ì½¹™±¥Ñ¥¹œ…¹µ¥ÍÍ¥¹œ•Ù¥‘•¹”…É”…­¹½İ±•‘•¸((ŒŒ€ÔƒŠP=‰Í•ÉÙ…Ñ¥½¸…¹¥¹Ñ•É•ÍÑÌ()	Õ¥±…¸½ÁĞµ¥¸Í•ÍÍ¥½¸½‰Í•ÉÙ•ÈÑ¡…ĞÍÑ…ÉÑÌ…™Ñ•ÈÉ…Á¡¥…°±½¥¸½¹±äİ¡•¸)•¹…‰±•‰äÑ¡”½İ¹•È¸Q¡”™¥ÉÍĞ-]¥¸¥¹Ñ•É…Ñ¥½¸¹½ÜÉ•½É‘Ì™½É•É½Õ¹…ÁÀ%Ì)…¹‰½Õ¹‘••±…ÁÍ•¥¹Ñ•ÉÙ…±Ì±½…±±äìÙ•É¥™äÑ¡”¡½ÍĞ¥¹ÍÑ…±°°Á…ÕÍ”°…¹)‘•±•Ñ¥½¸½¹ÑÉ½±Ì‰•™½É”•áÑ•¹‘¥¹œ¥Ğ¸	•¥¸İ¥Ñ Í•±•Ñ•…ÁÀ½…Ñ¥Ù¥Ñäµ•Ñ…‘…Ñ„°Ñ¡•¸…‘)•áÁ±¥¥Ñ±ä•¹…‰±•ÍÉ••¸…ÁÑÕÉ”Ñ¡É½Õ ÍÕÁÁ½ÉÑ•-½]…å±…¹¥¹Ñ•É™…•Ì¸)Y•É¥™äİ¡…ĞÑ¡½Í”¥¹Ñ•É™…•Ì…ÑÕ…±±ä•áÁ½Í”ì‘¼¹½Ğ±…¥´Á…ÍÍİ½É‘•Ñ•Ñ¥½¸)½È½µÁ±•Ñ”ÍÉ••¸•á±ÕÍ¥½¸İ¥Ñ¡½ÕĞÑ•ÍÑ¥¹œ¥Ğ¸Ù½¥­•å±½¥¹œ¸A…ÕÍ”½¸)Í•ÍÍ¥½¸±½¬…¹•á±Õ‘•½¹Ñ•áÑÌìÍ¡½Ü…ÁÑÕÉ”ÍÑ…Ñ”…¹„±½‰…°Á…ÕÍ”¸)AÉ•™•È•Ù•¹ÑÌ…¹ÍÕµµ…É¥•ÌÑ¼½¹Ñ¥¹Õ½ÕÌÍÉ••¹Í¡½ÑÌ¸	½Õ¹É•Ñ•¹Ñ¥½¸…¹)ÍÑ½É…”ìÉ…ÜÍÉ••¹Í¡½ÑÌ½…Õ‘¥¼…É”½™˜‰ä‘•™…Õ±Ğ¸=‰Í•ÉÙ…Ñ¥½¸¹•Ù•ÈÉ…¹ÑÌ)Á•Éµ¥ÍÍ¥½¸Ñ¼•á•ÕÑ”½µµ…¹‘Ì¸()%¹Ñ•É•ÍĞ¥¹™•É•¹”¥Ì„¡åÁ½Ñ¡•Í¥Ìİ¥Ñ •Ù¥‘•¹”…¹½¹™¥‘•¹”¸Q¥µ”ÍÁ•¹Ğ)½¸…¸…Ñ¥Ù¥Ñäµ…äÉ•™±•Ğ½‰±¥…Ñ¥½¸°¹½Ğ¥¹Ñ•É•ÍĞ¸Í¬‰•™½É”ÁÉ½µ½Ñ¥¹œ)¥¹™•É•¹•ÌÑ¼½¹™¥Éµ•Á•ÉÍ½¹…°™…ÑÌ¸1•ĞÑ¡”½İ¹•È¥¹ÍÁ•Ğ°½ÉÉ•Ğ°•áÁ½ÉĞ°)…¹É•µ½Ù”µ•µ½É¥•Ì°½‰Í•ÉÙ…Ñ¥½¹Ì°…¹‘•É¥Ù•ÁÉ½™¥±•Ì¸()á¥ĞèÁ…ÕÍ”°±½¬°•á±ÕÍ¥½¹Ì°É•ÍÑ…ÉĞ°•áÁ¥Éä°…¹‘•±•Ñ¥½¸Ù•É¥™¥•İ¥Ñ É•…°)‘•Í­Ñ½ÀÍ•ÍÍ¥½¹Ì¸i•É¼…ÁÑÕÉ”İ¡¥±”‘¥Í…‰±•¸±½ÕÉ••¥Ù•Ì¹¼½‰Í•ÉÙ…Ñ¥½¸)‘…Ñ„Õ¹±•ÍÌ•áÁ±¥¥Ñ±äÁ•Éµ¥ÑÑ•¸((ŒŒ€ØƒŠPAÉ½…Ñ¥Ù”ÍÕ•ÍÑ¥½¹Ì()=™™•ÈÉ•±•Ù…¹Ğ¹•áĞÍÑ•ÁÌ°É•µ¥¹‘•ÉÌ°İ½É­™±½ÜÍ¡½ÉÑÕÑÌ°±•…É¹¥¹œÉ•Í½ÕÉ•Ì°)…¹ÁÉ½©•Ğ¥‘•…ÌÕÍ¥¹œ½¹™¥Éµ•½…±Ì…¹É••¹Ğ½¹Ñ•áĞ¸M¡½Üİ¡ä„)ÍÕ•ÍÑ¥½¸…ÁÁ•…É•¸I•ÍÁ•ĞÅÕ¥•Ğ¡½ÕÉÌ°™½ÕÌµ½‘”°™É•ÅÕ•¹ä±¥µ¥ÑÌ°…¹(‰‘¼¹½ĞÍÕ•ÍĞÑ¡¥Ì……¥¸¸ˆQÉ…¬¡•±Á™Õ°½‘¥Íµ¥ÍÍ•™••‘‰…¬¸¼¹½Ğ¥¹™•È)Í•¹Í¥Ñ¥Ù”ÑÉ…¥ÑÌ½ÈÁÉ½µ½Ñ”Õ•ÍÍ•Ì¥¹Ñ¼™…ÑÌ¸()á¥ĞèÕÍ•™Õ°ÍÕ•ÍÑ¥½¹Ì½¸½İ¹•ÈµÉ•Ù¥•İ•Í•¹…É¥½Ì°¹¼É•Á•…Ñ•‘¥Íµ¥ÍÍ•)ÍÕ•ÍÑ¥½¹Ì°¥¹Ñ•ÉÉÕÁÑ¥½¸Í•ÑÑ¥¹ÌÉ•ÍÁ•Ñ•¸MÕ•ÍÑ¥½¹Ì‘¼¹½Ğ•á•ÕÑ”İ½É¬¸((ŒŒ€ÜƒŠPÍÍ¥ÍÑ•½µÁÕÑ•ÈÑ…Í­Ì()%µÁ±•µ•¹ĞÑåÁ•°¹…ÉÉ½ÜÑ½½±Ì™½ÈÍ•±•Ñ•…ÁÁ±¥…Ñ¥½¹Ì°™¥±•Ì°‰É½İÍ•ÈÑ…Í­Ì°)…¹Ñ•Éµ¥¹…°ÁÉ½•‘ÕÉ•Ì¸Q¡”™¥ÉÍĞ½ÁÑ¥½¹…°‘•Í­Ñ½Àµ½¹Ñ•áĞÍ±¥”¥Ì½¹”µÍ¡½Ğ)±½…°=HÙ¥„-MÁ•Ñ…±”…¹Q•ÍÍ•É…Ğ°•¹…‰±•Á•È¡…Ğ…¹…ÁÁÉ½Ù•Á•È)…ÁÑÕÉ”¸‘Ñ•ÍÑ•…•ÍÍ¥‰¥±¥Ñä½…ÁÀµÍÁ•¥™¥Œ¥¹Ñ•É…Ñ¥½¹Ì™½ÈÉ¥¡•ÈÙ¥ÍÕ…°)½¹Ñ•áĞ…¹U$½¹ÑÉ½°¹•áĞ¸¹™½É”Á½±¥ä¥¸Ñ¡”•á•ÕÑ½È°½ÕÑÍ¥‘”ÁÉ½µÁÑÌ¸)UÍ”µ¥¹¥µÕ´ÁÉ¥Ù¥±••Ì°Í½Á•™½±‘•ÉÌ°…ÉÕµ•¹ĞÙ…±¥‘…Ñ¥½¸°Ñ¥µ•½ÕÑÌ°)ÁÉ•Ù¥•İÌ°µ•…¹¥¹™Õ°…ÁÁÉ½Ù…±Ì°½ÕÑ½µ”¡•­Ì°…¹É•½Ù•É…‰±”¡…¹•Ì¸)áÑ•É¹…°½¹Ñ•¹Ğ¥ÌÑ…Í¬‘…Ñ„°¹•Ù•È…ÕÑ¡½É¥ÑäÑ¼½Ù•ÉÉ¥‘”Á•Éµ¥ÍÍ¥½¹Ì¸()á¥Ğè•… Ñ½½°¡…ÌÍÕ•ÍÌ½™…¥±ÕÉ”Ù•É¥™¥…Ñ¥½¸°…Õ‘¥ĞÉ•½É‘Ì°…¹É•½Ù•Éä)¥¹ÍÑÉÕÑ¥½¹Ìì¡½ÍÑ¥±”‘½Õµ•¹ÑÌ…¹¹½ĞÑÉ¥•ÈÕ¹…ÕÑ¡½É¥é•…Ñ¥½¹Ì¸()ÕÉÉ•¹ĞÁÉ½É•ÍÌèÑ¡”½ÁÑ¥½¹…°‰É½İÍ•È½¹ÑÉ½±Ì…¸É•…Á…”Ñ•áĞ°±½…Ñ”)Á¡É…Í•Ì¥¸…ÁÑÕÉ•Ñ•áĞ°¹…Ù¥…Ñ”°±¥¬°™¥±°„¹½¸µÁ…ÍÍİ½É™¥•±°ÍÉ½±°°)…¹µ½Ù”‰…¬½™½Éİ…Éİ¥Ñ Á•Èµ…Ñ¥½¸…ÁÁÉ½Ù…°¸-]¥¸İ¥¹‘½ÜÍ•±•Ñ¥½¸…¹)™½ÕÌ…É”Í•Á…É…Ñ”°½¸µ‘•µ…¹Ñ½½±Ì¸¹…ÉÉ½ÜPµMA$¥¹Í•ÉÑ¥½¸Á…Ñ …¸Á±…”)½İ¹•Èµ…ÁÁÉ½Ù•Ñ•áĞ…ĞÑ¡”…É•Ğ¥¸…¸…•ÍÍ¥‰±”¹…Ñ¥Ù”Ñ•áĞ™¥•±…™Ñ•È)É•Ù…±¥‘…Ñ¥¹œÑ¡”•á…Ğ…Ñ¥Ù”-]¥¸İ¥¹‘½Ü¸%Ğ‘½•Ì¹½Ğ¡…¹”Ñ¡”ÍåÍÑ•´)±¥Á‰½…É¸İÉ¥Ñ”µ½¹±ä‰É½İÍ•È±¥Á‰½…ÉÑ½½°¥Ì…±Í¼…Ù…¥±…‰±”‰•¡¥¹…¸)½ÁÑ¥½¹…°•áÑ•¹Í¥½¸Á•Éµ¥ÍÍ¥½¸…¹Á•Èµ½Áä…ÁÁÉ½Ù…°ì¥Ğ…¹¹½ĞÉ•…±¥Á‰½…É)½¹Ñ•¹ÑÌ¸9…Ñ¥Ù”¥¹Í•ÉÑ¥½¸…™Ñ•È½Áä¥ÌÍ•Á…É…Ñ”…¹¥Ì¹½Ğ„Í¥µÕ±…Ñ•ÑÉ°­X¸)	É½İÍ•ÈµÑ¼µ¹…Ñ¥Ù”µ…ÁÀÕÍ”ÍÑ¥±°É•ÅÕ¥É•Ì½İ¹•ÈµÉÕ¸¡•­ÌìÑ¡¥Ì‘½•Ì¹½Ğ)½µÁ±•Ñ”µ¥±•ÍÑ½¹”€Ü½È…ÕÑ¡½É¥é”•¹•É…°½µÁÕÑ•È½¹ÑÉ½°¸((ŒŒ€àƒŠP…É¹•…ÕÑ½µ…Ñ¥½¸()AÉ½É•ÍÌÁ•Èİ½É­™±½ÜèÍÕ•ÍĞƒŠHÁÉ•Ù¥•ÜƒŠH•á•ÕÑ”İ¥Ñ …ÁÁÉ½Ù…°ƒŠHÉÕ¸İ¥Ñ¡¥¸)…¸•áÁ±¥¥Ñ±ä…ÁÁÉ½Ù•Í½Á”¸AÉ½µ½Ñ¥½¸É•ÅÕ¥É•ÌÉ•Á•…Ñ…‰±”ÍÕ•ÍÌ°­¹½İ¸)™…¥±ÕÉ”…Í•Ì°É½±±‰…¬°…¹½İ¹•È½¹Í•¹Ğ¸‘Í¡•‘Õ±•Ì°±½¥¸Ñ…Í­Ì°)¹½Ñ¥™¥…Ñ¥½¹Ì°…¹•±±…Ñ¥½¸°‘ÕÁ±¥…Ñ”ÁÉ•Ù•¹Ñ¥½¸°…¹…¸•µ•É•¹äÍÑ½À¸)±…ÁÍ•ÑÉ…¥¹¥¹œÑ¥µ”…±½¹”¹•Ù•È•áÁ…¹‘ÌÁ•Éµ¥ÍÍ¥½¹Ì¸AÕÉ¡…Í•Ì°½ÕÑ‰½Õ¹)µ•ÍÍ…•Ì°‘•ÍÑÉÕÑ¥Ù”•‘¥ÑÌ°…¹ÍåÍÑ•´…‘µ¥¹¥ÍÑÉ…Ñ¥½¸­••À•áÁ±¥¥Ğ…ÁÁÉ½Ù…°)Õ¹±•ÍÌÑ¡”½İ¹•ÈÍ•Á…É…Ñ•±äÉ…¹ÑÌ„ÁÉ•¥Í”ÍÑ…¹‘¥¹œÁ•Éµ¥ÍÍ¥½¸¸()á¥ĞèÍ•±•Ñ•İ½É­™±½İÌÉÕ¸É•±¥…‰±ä…É½ÍÌÉ•ÍÑ…ÉÑÌ…¹½™™±¥¹”Á•É¥½‘Ìì)…ÁÁÉ½Ù…±Ì…¹¹½Ğ‰”‰åÁ…ÍÍ•ìÍÑ½ÀÁÉ•Ù•¹ÑÌ¹•Ü•á•ÕÑ¥½¸ìÁ•Éµ¥ÍÍ¥½¹ÌÉ•Ù½­”¸((ŒŒ€äƒŠP½¹Ñ¥¹Õ½ÕÌ¥µÁÉ½Ù•µ•¹Ğ…¹ÍÁ•¥…±¥ÍĞÑÉ…¥¹¥¹œ()UÍ”™••‘‰…¬Ñ¼µ…¥¹Ñ…¥¸„ÕÉ…Ñ••Ù…±Õ…Ñ¥½¸Í•Ğ…¹¥µÁÉ½Ù”É•ÑÉ¥•Ù…°°)¥¹ÍÑÉÕÑ¥½¹Ì°…¹Ù•ÉÍ¥½¹•Í­¥±±Ì¸áÁ•É¥µ•¹Ğİ¥Ñ ™¥¹”µÑÕ¹¥¹œ½¹±äİ¡•¸)‰…Í•±¥¹”µ•…ÍÕÉ•µ•¹ÑÌÍ¡½Ü„ÍÁ•¥™¥Œ¹••…¹‘…Ñ„É¥¡ÑÌ½½µÁÕÑ”Á•Éµ¥Ğ¸)Q•ÍĞÁÉ½Á½Í•½‘”½ÈÁ½±¥ä¡…¹•Ì¥¸¥Í½±…Ñ¥½¸…¹½µÁ…É”……¥¹ÍĞ„™É½é•¸)‰…Í•±¥¹”¸I•ÅÕ¥É”É•Ù¥•Ü‰•™½É”…Ñ¥Ù…Ñ¥¹œÍ•±˜µ•¹•É…Ñ•¡…¹•Ì¸AÉ•Í•ÉÙ”)Ñ¡”ÁÉ•Ù¥½ÕÌİ½É­¥¹œÙ•ÉÍ¥½¸…¹ÁÉ½Ñ•ĞÑ¡”Á½±¥ä•á•ÕÑ½È™É½´Í•±˜µ•‘¥Ñ¥¹œ¸()á¥Ğèµ•…ÍÕÉ…‰±”…¥¹Ìİ¥Ñ¡½ÕĞÉ•É•ÍÍ¥½¸¥¸ÁÉ¥Ù…ä°Ñ½½°½ÉÉ•Ñ¹•ÍÌ°½È)½™™±¥¹”Á•É™½Éµ…¹”ìÉ½±±‰…¬‘•µ½¹ÍÑÉ…Ñ•¸((ŒŒI•±•…Í”Í½É•…É()5•…ÍÕÉ”Ñ…Í¬ÍÕ•ÍÌ°™…±Í”ÍÕ•ÍÌ±…¥µÌ°É•ÑÉ¥•Ù…°…ÕÉ…ä°Ù½¥”…ÕÉ…ä°)±…Ñ•¹ä°I4½YI4½‘¥Í¬ÕÍ”°±½ÕÍÁ•¹°Õ¹İ…¹Ñ•¥¹Ñ•ÉÉÕÁÑ¥½¹Ì°…¹Õ¹…ÕÑ¡½É¥é•)‘…Ñ„Í¡…É¥¹œ½…Ñ¥½¹Ì¸AÕ‰±¥Í Íå¹Ñ¡•Ñ¥Œ•Ù…±Õ…Ñ¥½¸É•ÍÕ±ÑÌ°¹•Ù•ÈÁÉ¥Ù…Ñ”)…Ñ¥Ù¥Ñä±½Ì¸Ù½¥€ˆÄÀÀ”…ÕÑ½µ…Ñ•ˆ…Ì„Ñ…É•Ğì…ÕÑ½µ…Ñ”ÁÉ½Ù•¸İ½É­™±½İÌ¸((ŒŒ]½É¬½É‘•È()½µÁ±•Ñ”µ¥±•ÍÑ½¹”€À¡…É‘İ…É”½ÍÑ½É…”İ½É¬°Ñ¡•¸½¹”•¹µÑ¼µ•¹Ñ•áĞİ½É­™±½Ü)¥¸µ¥±•ÍÑ½¹”€Ä¸-••ÀÑ¡”±…Ñ•ÈÉ½…‘µ…À…‘…ÁÑ…‰±”¸Y½¥”°½‰Í•ÉÙ…Ñ¥½¸°…¹)…ÕÑ½¹½µäµÕÍĞ‰Õ¥±½¸„İ½É­¥¹œµ•µ½Éä…¹É•…Í½¹¥¹œ±…å•È¸(

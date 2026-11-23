@@ -1,115 +1,1 @@
-"""Launch the prepared eve runtime; no model installation or cloud fallback."""
-
-import os
-from pathlib import Path
-import shutil
-import subprocess
-import sys
-
-from .runtime_lock import acquire_runtime_lock
-
-
-ROOT = Path(__file__).resolve().parent.parent
-
-
-def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True,
-         pc_access=True, include_activity=False, activity_only=False, include_feedback=False,
-         include_project=False, include_suggestions=False, enable_online=False,
-         enable_screen_read=False, enable_desktop_control=False):
-    if activity_only:
-        if enable_online:
-            raise ValueError("Online research cannot be enabled in activity-only chats")
-        include_personal = False
-        include_system = False
-        include_activity = True
-        pc_access = False
-        enable_screen_read = False
-        enable_desktop_control = False
-        include_feedback = False
-        include_project = False
-        include_suggestions = False
-    runtime = ROOT / "runtime"
-    environment = os.environ.copy()
-    # Never pass inherited gateway credentials to the local agent unless this
-    # chat explicitly enables the separately approved research tool.
-    gateway_key = environment.pop("AI_GATEWAY_API_KEY", None)
-    gateway_model = environment.pop("BURITO_GATEWAY_MODEL", None)
-    environment.pop("BURITO_ONLINE_ENABLED", None)
-    if enable_online:
-        if not gateway_key or not gateway_model:
-            raise ValueError(
-                "Online research needs AI_GATEWAY_API_KEY and BURITO_GATEWAY_MODEL in this terminal"
-            )
-        if "/" not in gateway_model or len(gateway_model) > 160:
-            raise ValueError("BURITO_GATEWAY_MODEL must be a provider/model ID, such as openai/gpt-5.4-nano")
-        environment["AI_GATEWAY_API_KEY"] = gateway_key
-        environment["BURITO_GATEWAY_MODEL"] = gateway_model
-        environment["BURITO_ONLINE_ENABLED"] = "1"
-    # eve assigns these per development process. Inheriting another process's
-    # route or transport token can send queue deliveries to the wrong host.
-    for name in ("WORKFLOW_LOCAL_BASE_URL", "EVE_DEV_WORKFLOW_TRANSPORT_SECRET",
-                 "EVE_DEV_WORKER_APP_ROOT"):
-        environment.pop(name, None)
-    candidates = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
-    if candidates:
-        environment["PATH"] = os.pathsep.join([str(candidates[0]), environment.get("PATH", "")])
-    node = shutil.which("node", path=environment.get("PATH"))
-    cli = runtime / "node_modules/.bin/eve"
-    if node is None or not cli.exists():
-        raise ValueError("Runtime is missing. In Konsole run: bash scripts/setup-runtime.sh")
-    if not model.strip() or not 4096 <= context_tokens <= 131072:
-        raise ValueError("Choose a local model and a server context size between 4096 and 131072 tokens")
-    # Validate the selected local data before starting the model runtime.
-    from .context import build_context
-    build_context(lesson, include_personal, include_system=include_system,
-                  include_activity=include_activity, activity_only=activity_only,
-                  include_feedback=include_feedback, include_project=include_project,
-                  include_suggestions=include_suggestions)
-    environment.update({
-        "BURITO_MODE": "local",
-        "BURITO_LOCAL_MODEL": model,
-        "BURITO_CONTEXT_TOKENS": str(context_tokens),
-        "BURITO_LESSON_ID": lesson,
-        "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
-        "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
-        "BURITO_INCLUDE_ACTIVITY": "1" if include_activity else "0",
-        "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
-        "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
-        "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
-        "BURITO_GLOSSARY_WRITES": "1" if include_personal else "0",
-        "BURITO_MEMORY_WRITES": "1" if include_personal else "0",
-        "BURITO_PC_ACCESS": "1" if pc_access else "0",
-        "BURITO_SCREEN_READ": "1" if pc_access and enable_screen_read else "0",
-        "BURITO_DESKTOP_CONTROL": "1" if pc_access and enable_desktop_control else "0",
-        "BURITO_PROJECT_ROOT": str(ROOT),
-        "BURITO_PYTHON": sys.executable,
-        "EVE_TELEMETRY_DISABLED": "1",
-        "EVE_TRACES_CONTENT": "off",
-        "EVE_SCHEDULES_DISABLED": "1",
-    })
-    print(f"Starting local Burito with lesson {lesson}. No automatic cloud fallback.")
-    print("Personal memory included." if include_personal else "Personal memory excluded.")
-    print("Private glossary and memory corrections available; writes require approval." if include_personal else "Private glossary and memory writes excluded.")
-    print("Local activity summary included for this chat." if include_activity else "Activity summary excluded.")
-    print("Owner feedback included for this chat." if include_feedback else "Owner feedback excluded.")
-    print("Verified Burito project context included." if include_project else "Project context excluded.")
-    print("Owner-reviewed suggestions included for this chat." if include_suggestions else "Suggestions excluded.")
-    if activity_only:
-        print("Activity-only scope: PC inventory, personal memory, and PC tools are excluded.")
-    print("Local file/application tools enabled; application launches require approval." if pc_access else "PC file/application tools disabled.")
-    if pc_access and enable_screen_read:
-        print("On-demand screen OCR enabled; each capture requires approval and is processed locally.")
-    else:
-        print("Screen reading disabled. Start with --enable-screen-read to expose the approval-gated tool.")
-    if pc_access and enable_desktop_control:
-        print("On-demand KDE window listing and approval-gated focus enabled; no continuous title logging.")
-    else:
-        print("Desktop window control disabled. Start with --enable-desktop-control to expose it.")
-    lock_fd = acquire_runtime_lock(runtime)
-    try:
-        return subprocess.run([node, str(cli), "dev", "--no-default-extensions"], cwd=runtime, env=environment,
-                              check=False).returncode
-    except KeyboardInterrupt:
-        return 130
-    finally:
-        os.close(lock_fd)
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^tˆˆ‰1…Õ¹ Ñ¡”ÁÉ•Á…É••Ù”ÉÕ¹Ñ¥µ”ì¹¼µ½‘•°¥¹ÍÑ…±±…Ñ¥½¸½È±½Õ™…±±‰…¬¸ˆˆˆ()¥µÁ½ÉÐ½Ì)™É½´Á…Ñ¡±¥ˆ¥µÁ½ÉÐA…Ñ )¥µÁ½ÉÐÍ¡ÕÑ¥°)¥µÁ½ÉÐÍÕ‰ÁÉ½•ÍÌ)¥µÁ½ÉÐÍåÌ()™É½´€¹ÉÕ¹Ñ¥µ•}±½¬¥µÁ½ÉÐ…ÅÕ¥É•}ÉÕ¹Ñ¥µ•}±½¬°…É¡¥Ù•}Ý½É­™±½Ý}‘…Ñ„(()I==P€ôA…Ñ ¡}}™¥±•}|¤¹É•Í½±Ù” ¤¹Á…É•¹Ð¹Á…É•¹Ð(()‘•˜¡…Ð¡µ½‘•°°½¹Ñ•áÑ}Ñ½­•¹Ì°±•ÍÍ½¸ô‰¡½µ”¹¡½¹•ÍÑäˆ°¥¹±Õ‘•}Á•ÉÍ½¹…°õ…±Í”°¥¹±Õ‘•}ÍåÍÑ•´õQÉÕ”°(€€€€€€€€Á}…•ÍÌõQÉÕ”°¥¹±Õ‘•}…Ñ¥Ù¥Ñäõ…±Í”°…Ñ¥Ù¥Ñå}½¹±äõ…±Í”°¥¹±Õ‘•}™••‘‰…¬õ…±Í”°(€€€€€€€€¥¹±Õ‘•}ÁÉ½©•Ðõ…±Í”°¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ìõ…±Í”°•¹…‰±•}½¹±¥¹”õ…±Í”°(€€€€€€€€•¹…‰±•}ÍÉ••¹}É•…õ…±Í”°•¹…‰±•}‘•Í­Ñ½Á}½¹ÑÉ½°õ…±Í”°•¹…‰±•}‰É½ÝÍ•É}Í•…É õ…±Í”°(€€€€€€€€•¹…‰±•}‰É…Ù•}Ñ…‰Ìõ…±Í”°•¹…‰±•}‰É½ÝÍ•É}½¹ÑÉ½°õ…±Í”¤è(€€€¥˜…Ñ¥Ù¥Ñå}½¹±äè(€€€€€€€¥˜•¹…‰±•}½¹±¥¹”è(€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰=¹±¥¹”É•Í•…É …¹¹½Ð‰”•¹…‰±•¥¸…Ñ¥Ù¥Ñäµ½¹±ä¡…ÑÌˆ¤(€€€€€€€¥¹±Õ‘•}Á•ÉÍ½¹…°€ô…±Í”(€€€€€€€¥¹±Õ‘•}ÍåÍÑ•´€ô…±Í”(€€€€€€€¥¹±Õ‘•}…Ñ¥Ù¥Ñä€ôQÉÕ”(€€€€€€€Á}…•ÍÌ€ô…±Í”(€€€€€€€•¹…‰±•}ÍÉ••¹}É•…€ô…±Í”(€€€€€€€•¹…‰±•}‘•Í­Ñ½Á}½¹ÑÉ½°€ô…±Í”(€€€€€€€•¹…‰±•}‰É½ÝÍ•É}Í•…É €ô…±Í”(€€€€€€€•¹…‰±•}‰É…Ù•}Ñ…‰Ì€ô…±Í”(€€€€€€€•¹…‰±•}‰É½ÝÍ•É}½¹ÑÉ½°€ô…±Í”(€€€€€€€¥¹±Õ‘•}™••‘‰…¬€ô…±Í”(€€€€€€€¥¹±Õ‘•}ÁÉ½©•Ð€ô…±Í”(€€€€€€€¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ì€ô…±Í”(€€€ÉÕ¹Ñ¥µ”€ôI==P€¼€‰ÉÕ¹Ñ¥µ”ˆ(€€€•¹Ù¥É½¹µ•¹Ð€ô½Ì¹•¹Ù¥É½¸¹½Áä ¤(€€€€Œ9•Ù•ÈÁ…ÍÌ¥¹¡•É¥Ñ•…Ñ•Ý…äÉ•‘•¹Ñ¥…±ÌÑ¼Ñ¡”±½…°…•¹ÐÕ¹±•ÍÌÑ¡¥Ì(€€€€Œ¡…Ð•áÁ±¥¥Ñ±ä•¹…‰±•ÌÑ¡”Í•Á…É…Ñ•±ä…ÁÁÉ½Ù•É•Í•…É Ñ½½°¸(€€€…Ñ•Ý…å}­•ä€ô•¹Ù¥É½¹µ•¹Ð¹Á½À ‰%}Q]e}A%}-dˆ°9½¹”¤(€€€…Ñ•Ý…å}µ½‘•°€ô•¹Ù¥É½¹µ•¹Ð¹Á½À ‰	UI%Q=}Q]e}5=0ˆ°9½¹”¤(€€€•¹Ù¥É½¹µ•¹Ð¹Á½À ‰	UI%Q=}=91%9}9	1ˆ°9½¹”¤(€€€¥˜•¹…‰±•}½¹±¥¹”è(€€€€€€€¥˜¹½Ð…Ñ•Ý…å}­•ä½È¹½Ð…Ñ•Ý…å}µ½‘•°è(€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È (€€€€€€€€€€€€€€€€‰=¹±¥¹”É•Í•…É ¹••‘Ì%}Q]e}A%}-d…¹	UI%Q=}Q]e}5=0¥¸Ñ¡¥ÌÑ•Éµ¥¹…°ˆ(€€€€€€€€€€€€¤(€€€€€€€¥˜€ˆ¼ˆ¹½Ð¥¸…Ñ•Ý…å}µ½‘•°½È±•¸¡…Ñ•Ý…å}µ½‘•°¤€ø€ÄØÀè(€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰	UI%Q=}Q]e}5=0µÕÍÐ‰”„ÁÉ½Ù¥‘•È½µ½‘•°%°ÍÕ …Ì½Á•¹…¤½ÁÐ´Ô¸Ðµ¹…¹¼ˆ¤(€€€€€€€•¹Ù¥É½¹µ•¹Ñl‰%}Q]e}A%}-d‰t€ô…Ñ•Ý…å}­•ä(€€€€€€€•¹Ù¥É½¹µ•¹Ñl‰	UI%Q=}Q]e}5=0‰t€ô…Ñ•Ý…å}µ½‘•°(€€€€€€€•¹Ù¥É½¹µ•¹Ñl‰	UI%Q=}=91%9}9	1‰t€ô€ˆÄˆ(€€€€Œ•Ù”…ÍÍ¥¹ÌÑ¡•Í”Á•È‘•Ù•±½Áµ•¹ÐÁÉ½•ÍÌ¸%¹¡•É¥Ñ¥¹œ…¹½Ñ¡•ÈÁÉ½•ÍÌÌ(€€€€ŒÉ½ÕÑ”½ÈÑÉ…¹ÍÁ½ÉÐÑ½­•¸…¸Í•¹ÅÕ•Õ”‘•±¥Ù•É¥•ÌÑ¼Ñ¡”ÝÉ½¹œ¡½ÍÐ¸(€€€™½È¹…µ”¥¸€ ‰]=I-1=]}1=1}	M}UI0ˆ°€‰Y}Y}]=I-1=]}QI9MA=IQ}MIPˆ°(€€€€€€€€€€€€€€€€€‰Y}Y}]=I-I}AA}I==Pˆ¤è(€€€€€€€•¹Ù¥É½¹µ•¹Ð¹Á½À¡¹…µ”°9½¹”¤(€€€…¹‘¥‘…Ñ•Ì€ôÍ½ÉÑ• ¡I==P€¼€ˆ¹Ñ½½±Ìˆ¤¹±½ˆ ‰¹½‘”´¨½‰¥¸ˆ¤°É•Ù•ÉÍ”õQÉÕ”¤(€€€¥˜…¹‘¥‘…Ñ•Ìè(€€€€€€€•¹Ù¥É½¹µ•¹Ñl‰AQ ‰t€ô½Ì¹Á…Ñ¡Í•À¹©½¥¸¡mÍÑÈ¡…¹‘¥‘…Ñ•ÍlÁt¤°•¹Ù¥É½¹µ•¹Ð¹•Ð ‰AQ ˆ°€ˆˆ¥t¤(€€€¹½‘”€ôÍ¡ÕÑ¥°¹Ý¡¥  ‰¹½‘”ˆ°Á…Ñ õ•¹Ù¥É½¹µ•¹Ð¹•Ð ‰AQ ˆ¤¤(€€€±¤€ôÉÕ¹Ñ¥µ”€¼€‰¹½‘•}µ½‘Õ±•Ì¼¹‰¥¸½•Ù”ˆ(€€€¥˜¹½‘”¥Ì9½¹”½È¹½Ð±¤¹•á¥ÍÑÌ ¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰IÕ¹Ñ¥µ”¥Ìµ¥ÍÍ¥¹œ¸%¸-½¹Í½±”ÉÕ¸è‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í ˆ¤(€€€¥˜¹½Ðµ½‘•°¹ÍÑÉ¥À ¤½È¹½Ð€ÐÀäØ€ðô½¹Ñ•áÑ}Ñ½­•¹Ì€ðô€ÄÌÄÀÜÈè(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰¡½½Í”„±½…°µ½‘•°…¹„Í•ÉÙ•È½¹Ñ•áÐÍ¥é”‰•ÑÝ••¸€ÐÀäØ…¹€ÄÌÄÀÜÈÑ½­•¹Ìˆ¤(€€€€ŒY…±¥‘…Ñ”Ñ¡”Í•±•Ñ•±½…°‘…Ñ„‰•™½É”ÍÑ…ÉÑ¥¹œÑ¡”µ½‘•°ÉÕ¹Ñ¥µ”¸(€€€™É½´€¹½¹Ñ•áÐ¥µÁ½ÉÐ‰Õ¥±‘}½¹Ñ•áÐ(€€€‰Õ¥±‘}½¹Ñ•áÐ¡±•ÍÍ½¸°¥¹±Õ‘•}Á•ÉÍ½¹…°°¥¹±Õ‘•}ÍåÍÑ•´õ¥¹±Õ‘•}ÍåÍÑ•´°(€€€€€€€€€€€€€€€€€¥¹±Õ‘•}…Ñ¥Ù¥Ñäõ¥¹±Õ‘•}…Ñ¥Ù¥Ñä°…Ñ¥Ù¥Ñå}½¹±äõ…Ñ¥Ù¥Ñå}½¹±ä°(€€€€€€€€€€€€€€€€€¥¹±Õ‘•}™••‘‰…¬õ¥¹±Õ‘•}™••‘‰…¬°¥¹±Õ‘•}ÁÉ½©•Ðõ¥¹±Õ‘•}ÁÉ½©•Ð°(€€€€€€€€€€€€€€€€€¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ìõ¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ì¤(€€€•¹Ù¥É½¹µ•¹Ð¹ÕÁ‘…Ñ”¡ì(€€€€€€€€‰	UI%Q=}5=ˆè€‰±½…°ˆ°(€€€€€€€€‰	UI%Q=}1=1}5=0ˆèµ½‘•°°(€€€€€€€€‰	UI%Q=}=9QaQ}Q=-9LˆèÍÑÈ¡½¹Ñ•áÑ}Ñ½­•¹Ì¤°(€€€€€€€€‰	UI%Q=}1MM=9}%ˆè±•ÍÍ½¸°(€€€€€€€€‰	UI%Q=}%91U}AIM=91}55=Idˆè€ˆÄˆ¥˜¥¹±Õ‘•}Á•ÉÍ½¹…°•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}%91U}MeMQ4ˆè€ˆÄˆ¥˜¥¹±Õ‘•}ÍåÍÑ•´•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}%91U}Q%Y%Qdˆè€ˆÄˆ¥˜¥¹±Õ‘•}…Ñ¥Ù¥Ñä•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}%91U}	,ˆè€ˆÄˆ¥˜¥¹±Õ‘•}™••‘‰…¬•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}%91U}AI=)Pˆè€ˆÄˆ¥˜¥¹±Õ‘•}ÁÉ½©•Ð•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}%91U}MUMQ%=9Lˆè€ˆÄˆ¥˜¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ì•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}1=MMIe}]I%QLˆè€ˆÄˆ¥˜¥¹±Õ‘•}Á•ÉÍ½¹…°•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}55=Ie}]I%QLˆè€ˆÄˆ¥˜¥¹±Õ‘•}Á•ÉÍ½¹…°•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}A}MLˆè€ˆÄˆ¥˜Á}…•ÍÌ•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}MI9}Iˆè€ˆÄˆ¥˜Á}…•ÍÌ…¹•¹…‰±•}ÍÉ••¹}É•…•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}M-Q=A}=9QI=0ˆè€ˆÄˆ¥˜Á}…•ÍÌ…¹•¹…‰±•}‘•Í­Ñ½Á}½¹ÑÉ½°•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}	I=]MI}MI ˆè€ˆÄˆ¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É½ÝÍ•É}Í•…É •±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}	IY}Q	Lˆè€ˆÄˆ¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É…Ù•}Ñ…‰Ì•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}	I=]MI}=9QI=0ˆè€ˆÄˆ¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É½ÝÍ•É}½¹ÑÉ½°•±Í”€ˆÀˆ°(€€€€€€€€‰	UI%Q=}AI=)Q}I==PˆèÍÑÈ¡I==P¤°(€€€€€€€€‰	UI%Q=}AeQ!=8ˆèÍåÌ¹•á•ÕÑ…‰±”°(€€€€€€€€‰Y}Q15QIe}%M	1ˆè€ˆÄˆ°(€€€€€€€€‰Y}QIM}=9Q9Pˆè€‰½™˜ˆ°(€€€€€€€€‰Y}M!U1M}%M	1ˆè€ˆÄˆ°(€€€ô¤(€€€ÁÉ¥¹Ð¡˜‰MÑ…ÉÑ¥¹œ±½…°	ÕÉ¥Ñ¼Ý¥Ñ ±•ÍÍ½¸í±•ÍÍ½¹ô¸9¼…ÕÑ½µ…Ñ¥Œ±½Õ™…±±‰…¬¸ˆ¤(€€€ÁÉ¥¹Ð ‰A•ÉÍ½¹…°µ•µ½Éä¥¹±Õ‘•¸ˆ¥˜¥¹±Õ‘•}Á•ÉÍ½¹…°•±Í”€‰A•ÉÍ½¹…°µ•µ½Éä•á±Õ‘•¸ˆ¤(€€€ÁÉ¥¹Ð ‰AÉ¥Ù…Ñ”±½ÍÍ…Éä…¹µ•µ½Éä½ÉÉ•Ñ¥½¹Ì…Ù…¥±…‰±”ìÝÉ¥Ñ•ÌÉ•ÅÕ¥É”…ÁÁÉ½Ù…°¸ˆ¥˜¥¹±Õ‘•}Á•ÉÍ½¹…°•±Í”€‰AÉ¥Ù…Ñ”±½ÍÍ…Éä…¹µ•µ½ÉäÝÉ¥Ñ•Ì•á±Õ‘•¸ˆ¤(€€€ÁÉ¥¹Ð ‰1½…°…Ñ¥Ù¥ÑäÍÕµµ…Éä¥¹±Õ‘•™½ÈÑ¡¥Ì¡…Ð¸ˆ¥˜¥¹±Õ‘•}…Ñ¥Ù¥Ñä•±Í”€‰Ñ¥Ù¥ÑäÍÕµµ…Éä•á±Õ‘•¸ˆ¤(€€€ÁÉ¥¹Ð ‰=Ý¹•È™••‘‰…¬¥¹±Õ‘•™½ÈÑ¡¥Ì¡…Ð¸ˆ¥˜¥¹±Õ‘•}™••‘‰…¬•±Í”€‰=Ý¹•È™••‘‰…¬•á±Õ‘•¸ˆ¤(€€€ÁÉ¥¹Ð ‰Y•É¥™¥•	ÕÉ¥Ñ¼ÁÉ½©•Ð½¹Ñ•áÐ¥¹±Õ‘•¸ˆ¥˜¥¹±Õ‘•}ÁÉ½©•Ð•±Í”€‰AÉ½©•Ð½¹Ñ•áÐ•á±Õ‘•¸ˆ¤(€€€ÁÉ¥¹Ð ‰=Ý¹•ÈµÉ•Ù¥•Ý•ÍÕ•ÍÑ¥½¹Ì¥¹±Õ‘•™½ÈÑ¡¥Ì¡…Ð¸ˆ¥˜¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ì•±Í”€‰MÕ•ÍÑ¥½¹Ì•á±Õ‘•¸ˆ¤(€€€¥˜…Ñ¥Ù¥Ñå}½¹±äè(€€€€€€€ÁÉ¥¹Ð ‰Ñ¥Ù¥Ñäµ½¹±äÍ½Á”èA¥¹Ù•¹Ñ½Éä°Á•ÉÍ½¹…°µ•µ½Éä°…¹AÑ½½±Ì…É”•á±Õ‘•¸ˆ¤(€€€ÁÉ¥¹Ð ‰1½…°™¥±”½…ÁÁ±¥…Ñ¥½¸Ñ½½±Ì•¹…‰±•ì…ÁÁ±¥…Ñ¥½¸±…Õ¹¡•ÌÉ•ÅÕ¥É”…ÁÁÉ½Ù…°¸ˆ¥˜Á}…•ÍÌ•±Í”€‰A™¥±”½…ÁÁ±¥…Ñ¥½¸Ñ½½±Ì‘¥Í…‰±•¸ˆ¤(€€€¥˜Á}…•ÍÌ…¹•¹…‰±•}ÍÉ••¹}É•…è(€€€€€€€ÁÉ¥¹Ð ‰=¸µ‘•µ…¹ÍÉ••¸=H•¹…‰±•ì•… …ÁÑÕÉ”É•ÅÕ¥É•Ì…ÁÁÉ½Ù…°…¹¥ÌÁÉ½•ÍÍ•±½…±±ä¸ˆ¤(€€€•±¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É½ÝÍ•É}Í•…É è(€€€€€€€ÁÉ¥¹Ð ‰•¹•É…°ÍÉ••¸É•…‘¥¹œ‘¥Í…‰±•ì…ÁÁÉ½Ù•	É…Ù”Í•…É¡•Ìµ…ä=H½¹±äÑ¡”…Ñ¥Ù”	É…Ù”Ý¥¹‘½Ü¸ˆ¤(€€€•±Í”è(€€€€€€€ÁÉ¥¹Ð ‰MÉ••¸É•…‘¥¹œ‘¥Í…‰±•¸MÑ…ÉÐÝ¥Ñ €´µ•¹…‰±”µÍÉ••¸µÉ•…Ñ¼•áÁ½Í”Ñ¡”…ÁÁÉ½Ù…°µ…Ñ•Ñ½½°¸ˆ¤(€€€¥˜Á}…•ÍÌ…¹•¹…‰±•}‘•Í­Ñ½Á}½¹ÑÉ½°è(€€€€€€€ÁÉ¥¹Ð ‰=¸µ‘•µ…¹-Ý¥¹‘½ÝÌ½™½ÕÌ…¹…ÁÁÉ½Ù…°µ…Ñ•¹…Ñ¥Ù”µ™¥•±¥¹Í•ÉÑ¥½¸•¹…‰±•ì¥¹Í•ÉÑ¥½¸‘½•Ì¹½ÐÕÍ”Ñ¡”±¥Á‰½…É¸ˆ¤(€€€€€€€±¥Á‰½…É‘}ÝÉ¥Ñ•ÉÌ€ôm¹…µ”™½È¹…µ”¥¸€ ‰Ý°µ½Áäˆ°€‰á±¥Àˆ¤¥˜Í¡ÕÑ¥°¹Ý¡¥ ¡¹…µ”¥t(€€€€€€€¥˜±¥Á‰½…É‘}ÝÉ¥Ñ•ÉÌè(€€€€€€€€€€€ÁÉ¥¹Ð¡˜‰ÁÁÉ½Ù…°µ…Ñ•±½…°±¥Á‰½…ÉÝÉ¥Ñ¥¹œ•¹…‰±•Ù¥„ìœ°€œ¹©½¥¸¡±¥Á‰½…É‘}ÝÉ¥Ñ•ÉÌ¥ôì±¥Á‰½…ÉÉ•…‘¥¹œ¥ÌÕ¹…Ù…¥±…‰±”¸ˆ¤(€€€€€€€•±¥˜•¹…‰±•}‰É½ÝÍ•É}½¹ÑÉ½°è(€€€€€€€€€€€ÁÉ¥¹Ð ‰9¼¹…Ñ¥Ù”±¥Á‰½…ÉÝÉ¥Ñ•È™½Õ¹ì…ÁÁÉ½Ù•±¥Á‰½…ÉÝÉ¥Ñ•Ì…¸™…±°‰…¬Ñ¼Ñ¡”½¹¹•Ñ•	É…Ù”•áÑ•¹Í¥½¸¸ˆ¤(€€€€€€€•±Í”è(€€€€€€€€€€€ÁÉ¥¹Ð ‰1½…°±¥Á‰½…ÉÝÉ¥Ñ¥¹œ¹••‘ÌÝ°µ½Áä½Èá±¥Àì¹¼±¥Á‰½…ÉÝÉ¥Ñ•ÈÝ…Ì™½Õ¹¸ˆ¤(€€€•±¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É½ÝÍ•É}Í•…É è(€€€€€€€ÁÉ¥¹Ð ‰•¹•É…°‘•Í­Ñ½ÀµÝ¥¹‘½ÜÑ½½±Ì‘¥Í…‰±•ì…ÁÁÉ½Ù•	É…Ù”Í•…É¡•ÌÕÍ”-]¥¸½¹±äÑ¼±½…Ñ”½™½ÕÌ	É…Ù”¸ˆ¤(€€€•±Í”è(€€€€€€€ÁÉ¥¹Ð ‰•Í­Ñ½ÀÝ¥¹‘½Ü½¹ÑÉ½°‘¥Í…‰±•¸MÑ…ÉÐÝ¥Ñ €´µ•¹…‰±”µ‘•Í­Ñ½Àµ½¹ÑÉ½°Ñ¼•áÁ½Í”¥Ð¸ˆ¤(€€€¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É½ÝÍ•É}Í•…É è(€€€€€€€ÁÉ¥¹Ð ‰ÁÁÉ½Ù…°µ…Ñ•	É…Ù”Í•…É •¹…‰±•ìÕÍ•Ìå½ÕÈÉ•Õ±…È	É…Ù”ÁÉ½™¥±”…¹½¹”±½…°=H…ÁÑÕÉ”½˜¥ÑÌ…Ñ¥Ù”Ý¥¹‘½Ü¸ˆ¤(€€€•±¥˜•¹…‰±•}‰É½ÝÍ•É}Í•…É è(€€€€€€€ÁÉ¥¹Ð ‰	É…Ù”Í•…É ‘¥Í…‰±•èA…•ÍÌµÕÍÐ‰”•¹…‰±•¸ˆ¤(€€€•±Í”è(€€€€€€€ÁÉ¥¹Ð ‰	É…Ù”Í•…É ‘¥Í…‰±•¸MÑ…ÉÐÝ¥Ñ €´µ•¹…‰±”µ‰É½ÝÍ•ÈµÍ•…É Ñ¼•áÁ½Í”Ñ¡”…ÁÁÉ½Ù•Í•…É Ñ½½°¸ˆ¤(€€€¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É…Ù•}Ñ…‰Ìè(€€€€€€€ÁÉ¥¹Ð ‰ÁÁÉ½Ù…°µ…Ñ•	É…Ù”Ñ…ˆÑ½½±Ì•¹…‰±•ìÑ…ˆ½Õ¹Ð¥Ì…±Ý…åÌµ•Ñ…‘…Ñ„µ½¹±ä°…¹Ñ¥Ñ±”±½½­ÕÀ½ÍÝ¥Ñ¡¥¹œÉ•ÅÕ¥É•ÌÑ¡”•áÑ•¹Í¥½¸Ì½ÁÑ¥½¹…°Á•Éµ¥ÍÍ¥½¸…¹Í•Á…É…Ñ”…ÁÁÉ½Ù…±Ì¸ˆ¤(€€€•±¥˜•¹…‰±•}‰É…Ù•}Ñ…‰Ìè(€€€€€€€ÁÉ¥¹Ð ‰	É…Ù”Ñ…ˆ½Õ¹Ð‘¥Í…‰±•èA…•ÍÌµÕÍÐ‰”•¹…‰±•¸ˆ¤(€€€•±Í”è(€€€€€€€ÁÉ¥¹Ð ‰	É…Ù”Ñ…ˆ½Õ¹Ð‘¥Í…‰±•¸MÑ…ÉÐÝ¥Ñ €´µ•¹…‰±”µ‰É…Ù”µÑ…‰Ì…™Ñ•È¥¹ÍÑ…±±¥¹œÑ¡”±½…°•áÑ•¹Í¥½¸¸ˆ¤(€€€¥˜Á}…•ÍÌ…¹•¹…‰±•}‰É½ÝÍ•É}½¹ÑÉ½°è(€€€€€€€ÁÉ¥¹Ð ‰ÁÁÉ½Ù…°µ…Ñ•	É…Ù”Á…”É•…‘¥¹œ°‰…Í¥Œ½¹ÑÉ½±Ì°…¹½ÁÑ¥½¹…°ÝÉ¥Ñ”µ½¹±ä±¥Á‰½…É½Áå¥¹œ•¹…‰±•ìÉ…¹ÐÍ¥Ñ”…¹±¥Á‰½…ÉÁ•Éµ¥ÍÍ¥½¹Ì™É½´Ñ¡”•áÑ•¹Í¥½¸Á½ÁÕÀ°Ñ¡•¸…ÁÁÉ½Ù”•… ½Á•É…Ñ¥½¸¸ˆ¤(€€€•±¥˜•¹…‰±•}‰É½ÝÍ•É}½¹ÑÉ½°è(€€€€€€€ÁÉ¥¹Ð ‰	É…Ù”Á…”½¹ÑÉ½°‘¥Í…‰±•èA…•ÍÌµÕÍÐ‰”•¹…‰±•¸ˆ¤(€€€•±Í”è(€€€€€€€ÁÉ¥¹Ð ‰	É…Ù”Á…”É•…‘¥¹œ…¹½¹ÑÉ½±Ì‘¥Í…‰±•¸MÑ…ÉÐÝ¥Ñ €´µ•¹…‰±”µ‰É½ÝÍ•Èµ½¹ÑÉ½°Ñ¼•áÁ½Í”Ñ¡”…ÁÁÉ½Ù•Ñ½½±Ì¸ˆ¤(€€€±½­}™€ô…ÅÕ¥É•}ÉÕ¹Ñ¥µ•}±½¬¡ÉÕ¹Ñ¥µ”¤(€€€ÑÉäè(€€€€€€€…É¡¥Ù•€ô…É¡¥Ù•}Ý½É­™±½Ý}‘…Ñ„¡ÉÕ¹Ñ¥µ”¤(€€€€€€€¥˜…É¡¥Ù•è(€€€€€€€€€€€ÁÉ¥¹Ð¡˜‰É¡¥Ù•ÁÉ¥½ÈÙ”Ý½É­™±½ÜÍÑ…Ñ”…Ðí…É¡¥Ù•‘ôì±½…°	ÕÉ¥Ñ¼µ•µ½Éä¥ÌÕ¹¡…¹•¸ˆ¤(€€€€€€€É•ÑÕÉ¸ÍÕ‰ÁÉ½•ÍÌ¹ÉÕ¸¡m¹½‘”°ÍÑÈ¡±¤¤°€‰‘•Øˆ°€ˆ´µ¹¼µ‘•™…Õ±Ðµ•áÑ•¹Í¥½¹Ì‰t°ÝõÉÕ¹Ñ¥µ”°•¹Øõ•¹Ù¥É½¹µ•¹Ð°(€€€€€€€€€€€€€€€€€€€€€€€€€€€€€¡•¬õ…±Í”¤¹É•ÑÕÉ¹½‘”(€€€•á•ÁÐ-•å‰½…É‘%¹Ñ•ÉÉÕÁÐè(€€€€€€€É•ÑÕÉ¸€ÄÌÀ(€€€™¥¹…±±äè(€€€€€€€½Ì¹±½Í”¡±½­}™¤(

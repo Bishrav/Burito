@@ -1,30 +1,1 @@
-import { calls } from 'eve/events';
-import { defineDynamic, defineTool } from 'eve/tools';
-import { always } from 'eve/tools/approval';
-import { z } from 'zod';
-import { hostAccess } from '../../lib/host-access.mjs';
-
-const inspectWindow = defineTool({
-  description: 'After desktop_windows identifies one unique target and the owner asks what that app shows, request one approval that will unminimize/focus that exact window and immediately capture only its active window for local OCR. Provide the exact internalId from the latest snapshot. It does not click, type, or store the screenshot.',
-  inputSchema: z.object({
-    internalId: z.string().regex(/^[0-9a-fA-F-]{36}$/),
-  }),
-  approval: {
-    prompt: () => 'Unminimize/focus the selected app window (this may switch virtual desktops), then immediately capture that active window once for local OCR? The temporary image is deleted; OCR text may remain in local chat history.',
-    request: async (ctx) => {
-      await hostAccess({ action: 'screen_reserve', session_id: ctx.session.id,
-        turn_id: ctx.session.turn.id }, ctx.abortSignal);
-      return 'user-approval';
-    },
-  },
-  execute: (input, ctx) => hostAccess({ action: 'inspect_window', ...input,
-    session_id: ctx.session.id, turn_id: ctx.session.turn.id }, ctx.abortSignal, true),
-});
-
-export default defineDynamic((ctx) => {
-  if (process.env.BURITO_PC_ACCESS !== '1' || process.env.BURITO_DESKTOP_CONTROL !== '1' ||
-      process.env.BURITO_SCREEN_READ !== '1') return null;
-  if (ctx.turn?.id && calls(ctx.view, { name: 'read_screen', turnId: ctx.turn.id }).length > 0) return null;
-  if (ctx.turn?.id && calls(ctx.view, { name: 'inspect_window', turnId: ctx.turn.id }).length > 0) return null;
-  return inspectWindow;
-});
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì…±±Ìô™É½´€•Ù”½•Ù•¹ÑÌœì)¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ¥¹ÍÁ•Ñ]¥¹‘½Ü€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€™Ñ•È‘•Í­Ñ½Á}Ý¥¹‘½ÝÌ¥‘•¹Ñ¥™¥•Ì½¹”Õ¹¥ÅÕ”Ñ…É•Ð…¹Ñ¡”½Ý¹•È…Í­ÌÝ¡…ÐÑ¡…Ð…ÁÀÍ¡½ÝÌ°É•ÅÕ•ÍÐ½¹”…ÁÁÉ½Ù…°Ñ¡…ÐÝ¥±°Õ¹µ¥¹¥µ¥é”½™½ÕÌÑ¡…Ð•á…ÐÝ¥¹‘½Ü…¹¥µµ•‘¥…Ñ•±ä…ÁÑÕÉ”½¹±ä¥ÑÌ…Ñ¥Ù”Ý¥¹‘½Ü™½È±½…°=H¸AÉ½Ù¥‘”Ñ¡”•á…Ð¥¹Ñ•É¹…±%™É½´Ñ¡”±…Ñ•ÍÐÍ¹…ÁÍ¡½Ð¸Q¡”É•ÍÕ±Ð¥¹±Õ‘•ÌÑ…‰}ÍÑÉ¥Á}…¹‘¥‘…Ñ•}±¥¹•Ì™É½´Ñ¡”Ñ½À€ÄÔ”½˜Ñ¡”Ý¥¹‘½Ü™½ÈÑ…ˆµ‰…ÈÅÕ•ÍÑ¥½¹ÌìÑ¡•Í”…É”=H…¹‘¥‘…Ñ•Ì°¹½Ð„Ù•É¥™¥•½Õ¹Ð¸™Ñ•È½¹”ÍÕ•ÍÍ™Õ°…ÁÑÕÉ”°…¹ÍÝ•ÈÑ¡”½Ý¹•È¥¹ÍÑ•…½˜•¹‘¥¹œ½¸Ñ¡”Ñ½½°É•ÍÕ±Ð¸%Ð‘½•Ì¹½Ð±¥¬°ÑåÁ”°½ÈÍÑ½É”Ñ¡”ÍÉ••¹Í¡½Ð¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ì(€€€¥¹Ñ•É¹…±%èè¹ÍÑÉ¥¹œ ¤¹É••à ½ylÀ´å„µ™µµuìÌÙô¼¤°(€ô¤°(€…ÁÁÉ½Ù…°èì(€€€ÁÉ½µÁÐè€ ¤€ôø€U¹µ¥¹¥µ¥é”½™½ÕÌÑ¡”Í•±•Ñ•…ÁÀÝ¥¹‘½Ü€¡Ñ¡¥Ìµ…äÍÝ¥Ñ Ù¥ÉÑÕ…°‘•Í­Ñ½ÁÌ¤°Ñ¡•¸¥µµ•‘¥…Ñ•±ä…ÁÑÕÉ”Ñ¡…Ð…Ñ¥Ù”Ý¥¹‘½Ü½¹”™½È±½…°=HüQ¡”Ñ•µÁ½É…Éä¥µ…”¥Ì‘•±•Ñ•ì=HÑ•áÐµ…äÉ•µ…¥¸¥¸±½…°¡…Ð¡¥ÍÑ½Éä¸œ°(€€€É•ÅÕ•ÍÐè…Íå¹Œ€¡Ñà¤€ôøì(€€€€€…Ý…¥Ð¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€ÍÉ••¹}É•Í•ÉÙ”œ°Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°(€€€€€€€ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°¤ì(€€€€€É•ÑÕÉ¸€ÕÍ•Èµ…ÁÁÉ½Ù…°œì(€€€ô°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€¥¹ÍÁ•Ñ}Ý¥¹‘½Üœ°€¸¸¹¥¹ÁÕÐ°(€€€Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ ¡Ñà¤€ôøì(€¥˜€¡ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€„ôô€œÄœñðÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}M-Q=A}=9QI=0€„ôô€œÄœñð(€€€€€ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}MI9}I€„ôô€œÄœ¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€É•…‘}ÍÉ••¸œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€¥¹ÍÁ•Ñ}Ý¥¹‘½Üœ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€‰É½ÝÍ•É}Í•…É œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€É•ÑÕÉ¸¥¹ÍÁ•Ñ]¥¹‘½Üì)ô¤ì

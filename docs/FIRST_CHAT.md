@@ -1,152 +1,1 @@
-# First local text conversation
-
-Status: runtime installed, installed-version APIs checked, and agent discovery
-compiles with only the explicitly authored PC tools. The owner completed the first local model exchange.
-Its response showed a source-attribution error; a revised prompt/lesson awaits retest.
-The Python context boundary, runtime settings, and actual eve discovery have
-tests. Passing those is not evidence of a successful model conversation.
-
-## 1. Install the runtime
-
-In the normal Kubuntu terminal:
-
-```bash
-cd ~/Burito
-bash scripts/setup-runtime.sh
-```
-
-The installer uses the committed lockfile with exact resolved versions of eve,
-ai, zod, and the AI SDK OpenAI-compatible adapter. It does not install or download
-a model. The current integration was checked against eve 1.0.0-rc.18's bundled
-documentation. Recheck that documentation when upgrading packages.
-
-Reference design uses the official eve documentation for
-[local models](https://eve.dev/docs/agent-config),
-[dynamic instructions](https://eve.dev/docs/instructions), and
-[memoized runtime reads](https://eve.dev/docs/guides/dynamic-capabilities).
-
-## 2. Verify the GPU and choose a local model
-
-The owner verified a working RTX 5070 with about 12 GB VRAM, including about
-10.5 GiB free in the supplied snapshot. Start conservatively with
-[`qwen3:8b`](https://ollama.com/library/qwen3:8b): its listed quantized download
-is 5.2 GB. Runtime memory also includes context/cache and other overhead; model
-download size is not total VRAM usage. Start with an 8192-token context and
-measure actual placement and responsiveness. This is an initial compatibility
-choice, not a benchmark or a claim that it is the strongest available model.
-
-Install Ollama in the normal terminal using its
-[official Linux instructions](https://docs.ollama.com/linux):
-
-```bash
-curl -fsSL https://ollama.com/install.sh | sh
-ollama --version
-```
-
-The official installer installs a system service and may ask for sudo. This is
-separate from Burito's user-local Node installer. Verify installation first;
-the next step is the model pull and context configuration. No model is pulled
-by these two commands. The restricted development session cannot perform this
-download on the owner's behalf.
-
-The prepared adapter expects an
-OpenAI-compatible local server, by default `http://127.0.0.1:11434/v1`.
-No server or model is bundled. Do not copy a model recommendation without
-checking the memory needed for both weights and context.
-
-After `ollama pull qwen3:8b` completes, create a named local configuration:
-
-```bash
-cd ~/Burito
-ollama create burito-local:8b -f config/ollama/Modelfile
-ollama show --modelfile burito-local:8b
-```
-
-The committed Modelfile sets `num_ctx 8192`; the corresponding Burito launcher
-argument must match. This is a local model configuration, not fine-tuning. It
-references the downloaded base weights. No personality or personal memories
-are baked into that model; they remain in Burito's application/context layer.
-Reference: [Ollama Modelfile documentation](https://docs.ollama.com/modelfile).
-
-Configure a context size the server actually allocates, and use that same size
-in Burito. The launcher accepts 4096â€“131072 tokens; acceptance does not mean
-that a model/server/GPU supports the size or can run it efficiently. Model and
-context selection remain part of host setup.
-
-## 3. Inspect the lesson context
-
-```bash
-python3 -m burito school install
-python3 -m burito context --lesson home.honesty
-```
-
-The context contains exactly one installed lesson, its provenance, and practice
-questions. It contains no personal facts by default. `--include-personal`
-explicitly adds up to ten recent facts within a fixed context-size limit.
-Preview only in a private terminal; this flag can display personal information.
-
-## 4. Start chat after model setup
-
-Use the actual installed model name and allocated context size:
-
-```bash
-python3 -m burito chat --model burito-local:8b --context-tokens 8192
-```
-
-This command assumes the named local configuration above was created. The launcher
-uses an installed system or checkout-local Node and starts `eve dev --no-default-extensions` in
-`runtime/`. It sets the Python interpreter and project location for the read-only
-context bridge. Personal facts require `--include-personal`; the default is off.
-Use `--include-project` to give Burito a small curated repository map and current
-milestone. This does not enable file tools; paths outside the supplied map are
-unverified. Use `--include-feedback` separately to include your explicit feedback,
-or `--include-suggestions` to include recent pending and accepted suggâ€¦334 tokens truncatedâ€¦y
-summary, add `--activity-only` to the chat command. This excludes PC inventory,
-personal facts, and PC tools for that chat. Activity data is excluded from
-ordinary chats and is not sent to a cloud model. Example:
-
-```bash
-python3 -m burito chat --model burito-local:8b --context-tokens 8192 --activity-only
-```
-
-Treat any pattern as a hypothesis and review its evidence. Time in a foreground
-app can include idle time; an app's generic role does not explain your personal
-reason for using it. Burito can suggest a next step, but this milestone has no
-tool to save a new personal interest or act on the suggestion.
-
-## First practice task
-
-Ask Burito: "I open a code editor every evening. What do you know, and what
-are you only guessing?"
-
-Expected distinction: the user reported the repeated activity; Burito did not
-directly observe it. An interest in programming is a hypothesis, not a confirmed
-fact. Burito should say 'you told me', avoid claiming independent verification,
-and avoid unrelated task-completion disclaimers. Then ask it to explain what
-evidence would verify a backup.
-Review the answer before moving to `home.communication` using `--lesson`.
-These checks are a starting point, not a full evaluation suite.
-
-The first owner-tested response distinguished guesses but incorrectly described
-the user report as a direct observation. It took 48 seconds for that exchange;
-this single result does not establish warm-model speed or GPU placement.
-The lesson was revised to version 2 and the standing instructions strengthened.
-Reinstall the lesson with `python3 -m burito school install`, then start a fresh
-chat with the same command above and repeat the question. Do not record the
-revision as successful until the revised behavior is observed.
-
-## Verify the complete flow
-
-Confirm offline operation after dependencies and the local model are present,
-lesson retrieval, correction appearing on the next turn, and clear errors for
-an unavailable server or model. Context reads are memoized once per turn.
-Current records can change on a later turn, but prior session messages may
-still contain earlier facts. Deleting SQLite records does not erase eve's
-session history; session retention/deletion needs separate handling before
-privacy-sensitive use. The agent cannot write memories or feedback from chat.
-To keep a reviewed note for later ordinary chats, record it yourself with
-`python3 -m burito feedback add correction "Ask about project goals before inferring them."`,
-then opt in with `--include-feedback`. Use `useful` or `not_useful` for the other
-ratings. Inspect or remove entries with
-`feedback list` and `feedback forget ID`. This is local context retrieval, not
-model training. Activity-only chats always exclude personal facts and feedback.
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tŒ¥ÉÍĞ±½…°Ñ•áĞ½¹Ù•ÉÍ…Ñ¥½¸()MÑ…ÑÕÌèÉÕ¹Ñ¥µ”¥¹ÍÑ…±±•°¥¹ÍÑ…±±•µÙ•ÉÍ¥½¸A%Ì¡•­•°…¹…•¹Ğ‘¥Í½Ù•Éä)½µÁ¥±•Ìİ¥Ñ ½¹±äÑ¡”•áÁ±¥¥Ñ±ä…ÕÑ¡½É•AÑ½½±Ì¸Q¡”½İ¹•È½µÁ±•Ñ•Ñ¡”™¥ÉÍĞ±½…°µ½‘•°•á¡…¹”¸)%ÑÌÉ•ÍÁ½¹Í”Í¡½İ•„Í½ÕÉ”µ…ÑÑÉ¥‰ÕÑ¥½¸•ÉÉ½Èì„É•Ù¥Í•ÁÉ½µÁĞ½±•ÍÍ½¸…İ…¥ÑÌÉ•Ñ•ÍĞ¸)Q¡”AåÑ¡½¸½¹Ñ•áĞ‰½Õ¹‘…Éä°ÉÕ¹Ñ¥µ”Í•ÑÑ¥¹Ì°…¹…ÑÕ…°•Ù”‘¥Í½Ù•Éä¡…Ù”)Ñ•ÍÑÌ¸A…ÍÍ¥¹œÑ¡½Í”¥Ì¹½Ğ•Ù¥‘•¹”½˜„ÍÕ•ÍÍ™Õ°µ½‘•°½¹Ù•ÉÍ…Ñ¥½¸¸((ŒŒ€Ä¸%¹ÍÑ…±°Ñ¡”ÉÕ¹Ñ¥µ”()%¸Ñ¡”¹½Éµ…°-Õ‰Õ¹ÑÔÑ•Éµ¥¹…°è()‰…Í )ø½	ÕÉ¥Ñ¼)‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í )€()Q¡”¥¹ÍÑ…±±•ÈÕÍ•ÌÑ¡”½µµ¥ÑÑ•±½­™¥±”İ¥Ñ •á…ĞÉ•Í½±Ù•Ù•ÉÍ¥½¹Ì½˜•Ù”°)…¤°é½°…¹Ñ¡”$M,=Á•¹$µ½µÁ…Ñ¥‰±”…‘…ÁÑ•È¸%Ğ‘½•Ì¹½Ğ¥¹ÍÑ…±°½È‘½İ¹±½…)„µ½‘•°¸Q¡”ÕÉÉ•¹Ğ¥¹Ñ•É…Ñ¥½¸İ…Ì¡•­•……¥¹ÍĞ•Ù”€Ä¸À¸ÀµÉŒ¸ÄàÌ‰Õ¹‘±•)‘½Õµ•¹Ñ…Ñ¥½¸¸I•¡•¬Ñ¡…Ğ‘½Õµ•¹Ñ…Ñ¥½¸İ¡•¸ÕÁÉ…‘¥¹œÁ…­…•Ì¸()I•™•É•¹”‘•Í¥¸ÕÍ•ÌÑ¡”½™™¥¥…°•Ù”‘½Õµ•¹Ñ…Ñ¥½¸™½È)m±½…°µ½‘•±Ít¡¡ÑÑÁÌè¼½•Ù”¹‘•Ø½‘½Ì½…•¹Ğµ½¹™¥œ¤°)m‘å¹…µ¥Œ¥¹ÍÑÉÕÑ¥½¹Ít¡¡ÑÑÁÌè¼½•Ù”¹‘•Ø½‘½Ì½¥¹ÍÑÉÕÑ¥½¹Ì¤°…¹)mµ•µ½¥é•ÉÕ¹Ñ¥µ”É•…‘Ít¡¡ÑÑÁÌè¼½•Ù”¹‘•Ø½‘½Ì½Õ¥‘•Ì½‘å¹…µ¥Œµ…Á…‰¥±¥Ñ¥•Ì¤¸((ŒŒ€È¸Y•É¥™äÑ¡”AT…¹¡½½Í”„±½…°µ½‘•°()Q¡”½İ¹•ÈÙ•É¥™¥•„İ½É­¥¹œIQ`€ÔÀÜÀİ¥Ñ …‰½ÕĞ€ÄÈYI4°¥¹±Õ‘¥¹œ…‰½ÕĞ(ÄÀ¸Ô¥™É•”¥¸Ñ¡”ÍÕÁÁ±¥•Í¹…ÁÍ¡½Ğ¸MÑ…ÉĞ½¹Í•ÉÙ…Ñ¥Ù•±äİ¥Ñ )mÅİ•¸Ìèá‰t¡¡ÑÑÁÌè¼½½±±…µ„¹½´½±¥‰É…Éä½Åİ•¸Ìèáˆ¤è¥ÑÌ±¥ÍÑ•ÅÕ…¹Ñ¥é•‘½İ¹±½…)¥Ì€Ô¸È¸IÕ¹Ñ¥µ”µ•µ½Éä…±Í¼¥¹±Õ‘•Ì½¹Ñ•áĞ½…¡”…¹½Ñ¡•È½Ù•É¡•…ìµ½‘•°)‘½İ¹±½…Í¥é”¥Ì¹½ĞÑ½Ñ…°YI4ÕÍ…”¸MÑ…ÉĞİ¥Ñ …¸€àÄäÈµÑ½­•¸½¹Ñ•áĞ…¹)µ•…ÍÕÉ”…ÑÕ…°Á±…•µ•¹Ğ…¹É•ÍÁ½¹Í¥Ù•¹•ÍÌ¸Q¡¥Ì¥Ì…¸¥¹¥Ñ¥…°½µÁ…Ñ¥‰¥±¥Ñä)¡½¥”°¹½Ğ„‰•¹¡µ…É¬½È„±…¥´Ñ¡…Ğ¥Ğ¥ÌÑ¡”ÍÑÉ½¹•ÍĞ…Ù…¥±…‰±”µ½‘•°¸()%¹ÍÑ…±°=±±…µ„¥¸Ñ¡”¹½Éµ…°Ñ•Éµ¥¹…°ÕÍ¥¹œ¥ÑÌ)m½™™¥¥…°1¥¹Õà¥¹ÍÑÉÕÑ¥½¹Ít¡¡ÑÑÁÌè¼½‘½Ì¹½±±…µ„¹½´½±¥¹Õà¤è()‰…Í )ÕÉ°€µ™ÍM0¡ÑÑÁÌè¼½½±±…µ„¹½´½¥¹ÍÑ…±°¹Í ğÍ )½±±…µ„€´µÙ•ÉÍ¥½¸)€()Q¡”½™™¥¥…°¥¹ÍÑ…±±•È¥¹ÍÑ…±±Ì„ÍåÍÑ•´Í•ÉÙ¥”…¹µ…ä…Í¬™½ÈÍÕ‘¼¸Q¡¥Ì¥Ì)Í•Á…É…Ñ”™É½´	ÕÉ¥Ñ¼ÌÕÍ•Èµ±½…°9½‘”¥¹ÍÑ…±±•È¸Y•É¥™ä¥¹ÍÑ…±±…Ñ¥½¸™¥ÉÍĞì)Ñ¡”¹•áĞÍÑ•À¥ÌÑ¡”µ½‘•°ÁÕ±°…¹½¹Ñ•áĞ½¹™¥ÕÉ…Ñ¥½¸¸9¼µ½‘•°¥ÌÁÕ±±•)‰äÑ¡•Í”Ñİ¼½µµ…¹‘Ì¸Q¡”É•ÍÑÉ¥Ñ•‘•Ù•±½Áµ•¹ĞÍ•ÍÍ¥½¸…¹¹½ĞÁ•É™½É´Ñ¡¥Ì)‘½İ¹±½…½¸Ñ¡”½İ¹•ÈÌ‰•¡…±˜¸()Q¡”ÁÉ•Á…É•…‘…ÁÑ•È•áÁ•ÑÌ…¸)=Á•¹$µ½µÁ…Ñ¥‰±”±½…°Í•ÉÙ•È°‰ä‘•™…Õ±Ğ¡ÑÑÀè¼¼ÄÈÜ¸À¸À¸ÄèÄÄĞÌĞ½ØÅ€¸)9¼Í•ÉÙ•È½Èµ½‘•°¥Ì‰Õ¹‘±•¸¼¹½Ğ½Áä„µ½‘•°É•½µµ•¹‘…Ñ¥½¸İ¥Ñ¡½ÕĞ)¡•­¥¹œÑ¡”µ•µ½Éä¹••‘•™½È‰½Ñ İ•¥¡ÑÌ…¹½¹Ñ•áĞ¸()™Ñ•È½±±…µ„ÁÕ±°Åİ•¸Ìèá‰€½µÁ±•Ñ•Ì°É•…Ñ”„¹…µ•±½…°½¹™¥ÕÉ…Ñ¥½¸è()‰…Í )ø½	ÕÉ¥Ñ¼)½±±…µ„É•…Ñ”‰ÕÉ¥Ñ¼µ±½…°èáˆ€µ˜½¹™¥œ½½±±…µ„½5½‘•±™¥±”)½±±…µ„Í¡½Ü€´µµ½‘•±™¥±”‰ÕÉ¥Ñ¼µ±½…°èáˆ)€()Q¡”½µµ¥ÑÑ•5½‘•±™¥±”Í•ÑÌ¹Õµ}Ñà€àÄäÉ€ìÑ¡”½ÉÉ•ÍÁ½¹‘¥¹œ	ÕÉ¥Ñ¼±…Õ¹¡•È)…ÉÕµ•¹ĞµÕÍĞµ…Ñ ¸Q¡¥Ì¥Ì„±½…°µ½‘•°½¹™¥ÕÉ…Ñ¥½¸°¹½Ğ™¥¹”µÑÕ¹¥¹œ¸%Ğ)É•™•É•¹•ÌÑ¡”‘½İ¹±½…‘•‰…Í”İ•¥¡ÑÌ¸9¼Á•ÉÍ½¹…±¥Ñä½ÈÁ•ÉÍ½¹…°µ•µ½É¥•Ì)…É”‰…­•¥¹Ñ¼Ñ¡…Ğµ½‘•°ìÑ¡•äÉ•µ…¥¸¥¸	ÕÉ¥Ñ¼Ì…ÁÁ±¥…Ñ¥½¸½½¹Ñ•áĞ±…å•È¸)I•™•É•¹”èm=±±…µ„5½‘•±™¥±”‘½Õµ•¹Ñ…Ñ¥½¹t¡¡ÑÑÁÌè¼½‘½Ì¹½±±…µ„¹½´½µ½‘•±™¥±”¤¸()½¹™¥ÕÉ”„½¹Ñ•áĞÍ¥é”Ñ¡”Í•ÉÙ•È…ÑÕ…±±ä…±±½…Ñ•Ì°…¹ÕÍ”Ñ¡…ĞÍ…µ”Í¥é”)¥¸	ÕÉ¥Ñ¼¸Q¡”±…Õ¹¡•È…•ÁÑÌ€ĞÀäÛŠLÄÌÄÀÜÈÑ½­•¹Ìì…•ÁÑ…¹”‘½•Ì¹½Ğµ•…¸)Ñ¡…Ğ„µ½‘•°½Í•ÉÙ•È½ATÍÕÁÁ½ÉÑÌÑ¡”Í¥é”½È…¸ÉÕ¸¥Ğ•™™¥¥•¹Ñ±ä¸5½‘•°…¹)½¹Ñ•áĞÍ•±•Ñ¥½¸É•µ…¥¸Á…ÉĞ½˜¡½ÍĞÍ•ÑÕÀ¸((ŒŒ€Ì¸%¹ÍÁ•ĞÑ¡”±•ÍÍ½¸½¹Ñ•áĞ()‰…Í )ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼Í¡½½°¥¹ÍÑ…±°)ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼½¹Ñ•áĞ€´µ±•ÍÍ½¸¡½µ”¹¡½¹•ÍÑä)€()Q¡”½¹Ñ•áĞ½¹Ñ…¥¹Ì•á…Ñ±ä½¹”¥¹ÍÑ…±±•±•ÍÍ½¸°¥ÑÌÁÉ½Ù•¹…¹”°…¹ÁÉ…Ñ¥”)ÅÕ•ÍÑ¥½¹Ì¸%Ğ½¹Ñ…¥¹Ì¹¼Á•ÉÍ½¹…°™…ÑÌ‰ä‘•™…Õ±Ğ¸€´µ¥¹±Õ‘”µÁ•ÉÍ½¹…±€)•áÁ±¥¥Ñ±ä…‘‘ÌÕÀÑ¼Ñ•¸É••¹Ğ™…ÑÌİ¥Ñ¡¥¸„™¥á•½¹Ñ•áĞµÍ¥é”±¥µ¥Ğ¸)AÉ•Ù¥•Ü½¹±ä¥¸„ÁÉ¥Ù…Ñ”Ñ•Éµ¥¹…°ìÑ¡¥Ì™±…œ…¸‘¥ÍÁ±…äÁ•ÉÍ½¹…°¥¹™½Éµ…Ñ¥½¸¸((ŒŒ€Ğ¸MÑ…ÉĞ¡…Ğ…™Ñ•Èµ½‘•°Í•ÑÕÀ()½ÈÑ¡”ÕÍÕ…°±½…°‘•Í­Ñ½ÀÍ•ÍÍ¥½¸İ¥Ñ …±°ÕÉÉ•¹Ñ±ä¥µÁ±•µ•¹Ñ•AÑ½½±Ìè()‰…Í )ø½	ÕÉ¥Ñ¼(¸½ÍÉ¥ÁÑÌ½ÍÑ…ÉĞµ¡…Ğ¹Í )€()Q¡”±…Õ¹¡•ÈÕÍ•ÌÑ¡”¥¹ÍÑ…±±•±½…°µ½‘•°…¹…¸€àÄäÈµÑ½­•¸½¹Ñ•áĞ¸%Ğ)•áÁ½Í•ÌÑ¡”ÕÉÉ•¹Ñ±ä¥µÁ±•µ•¹Ñ•ÍÉ••¸°‘•Í­Ñ½À°…¹‰É½İÍ•ÈÑ½½±Ìİ¡¥±”)­••Á¥¹œ•… Í•¹Í¥Ñ¥Ù”É•…½…Ñ¥½¸…ÁÁÉ½Ù…°µ…Ñ•¸A•ÉÍ½¹…°™…ÑÌÉ•µ…¥¸½™˜)Õ¹±•ÍÌ€´µ¥¹±Õ‘”µÁ•ÉÍ½¹…±€¥Ì•áÁ±¥¥Ñ±ä…‘‘•¸Q¡”±…Õ¹¡•È)ÕÍ•Ì…¸¥¹ÍÑ…±±•ÍåÍÑ•´½È¡•­½ÕĞµ±½…°9½‘”…¹ÍÑ…ÉÑÌ•Ù”‘•Ø€´µ¹¼µ‘•™…Õ±Ğµ•áÑ•¹Í¥½¹Í€¥¸)ÉÕ¹Ñ¥µ”½€¸%ĞÍ•ÑÌÑ¡”AåÑ¡½¸¥¹Ñ•ÉÁÉ•Ñ•È…¹ÁÉ½©•Ğ±½…Ñ¥½¸™½ÈÑ¡”É•…µ½¹±ä)½¹Ñ•áĞ‰É¥‘”¸A•ÉÍ½¹…°™…ÑÌÉ•ÅÕ¥É”€´µ¥¹±Õ‘”µÁ•ÉÍ½¹…±€ìÑ¡”‘•™…Õ±Ğ¥Ì½™˜¸)UÍ”€´µ¥¹±Õ‘”µÁÉ½©•Ñ€Ñ¼¥Ù”	ÕÉ¥Ñ¼„Íµ…±°ÕÉ…Ñ•É•Á½Í¥Ñ½Éäµ…À…¹ÕÉÉ•¹Ğ)µ¥±•ÍÑ½¹”¸Q¡¥Ì‘½•Ì¹½Ğ•¹…‰±”™¥±”Ñ½½±ÌìÁ…Ñ¡Ì½ÕÑÍ¥‘”Ñ¡”ÍÕÁÁ±¥•µ…À…É”)Õ¹Ù•É¥™¥•¸UÍ”€´µ¥¹±Õ‘”µ™••‘‰…­€Í•Á…É…Ñ•±äÑ¼¥¹±Õ‘”å½ÕÈ•áÁ±¥¥Ğ™••‘‰…¬°)½È€´µ¥¹±Õ‘”µÍÕ•ÍÑ¥½¹Í€Ñ¼¥¹±Õ‘”É••¹ĞÁ•¹‘¥¹œ…¹…•ÁÑ•ÍÕŸŠ˜ÌÌĞÑ½­•¹ÌÑÉÕ¹…Ñ•“Š™ä)ÍÕµµ…Éä°…‘€´µ…Ñ¥Ù¥Ñäµ½¹±å€Ñ¼Ñ¡”¡…Ğ½µµ…¹¸Q¡¥Ì•á±Õ‘•ÌA¥¹Ù•¹Ñ½Éä°)Á•ÉÍ½¹…°™…ÑÌ°…¹AÑ½½±Ì™½ÈÑ¡…Ğ¡…Ğ¸Ñ¥Ù¥Ñä‘…Ñ„¥Ì•á±Õ‘•™É½´)½É‘¥¹…Éä¡…ÑÌ…¹¥Ì¹½ĞÍ•¹ĞÑ¼„±½Õµ½‘•°¸á…µÁ±”è()‰…Í )ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼¡…Ğ€´µµ½‘•°‰ÕÉ¥Ñ¼µ±½…°èáˆ€´µ½¹Ñ•áĞµÑ½­•¹Ì€àÄäÈ€´µ…Ñ¥Ù¥Ñäµ½¹±ä)€()QÉ•…Ğ…¹äÁ…ÑÑ•É¸…Ì„¡åÁ½Ñ¡•Í¥Ì…¹É•Ù¥•Ü¥ÑÌ•Ù¥‘•¹”¸Q¥µ”¥¸„™½É•É½Õ¹)…ÁÀ…¸¥¹±Õ‘”¥‘±”Ñ¥µ”ì…¸…ÁÀÌ•¹•É¥ŒÉ½±”‘½•Ì¹½Ğ•áÁ±…¥¸å½ÕÈÁ•ÉÍ½¹…°)É•…Í½¸™½ÈÕÍ¥¹œ¥Ğ¸	ÕÉ¥Ñ¼…¸ÍÕ•ÍĞ„¹•áĞÍÑ•À°‰ÕĞÑ¡¥Ìµ¥±•ÍÑ½¹”¡…Ì¹¼)Ñ½½°Ñ¼Í…Ù”„¹•ÜÁ•ÉÍ½¹…°¥¹Ñ•É•ÍĞ½È…Ğ½¸Ñ¡”ÍÕ•ÍÑ¥½¸¸((ŒŒ¥ÉÍĞÁÉ…Ñ¥”Ñ…Í¬()Í¬	ÕÉ¥Ñ¼è€‰$½Á•¸„½‘”•‘¥Ñ½È•Ù•Éä•Ù•¹¥¹œ¸]¡…Ğ‘¼å½Ô­¹½Ü°…¹İ¡…Ğ)…É”å½Ô½¹±äÕ•ÍÍ¥¹œüˆ()áÁ•Ñ•‘¥ÍÑ¥¹Ñ¥½¸èÑ¡”ÕÍ•ÈÉ•Á½ÉÑ•Ñ¡”É•Á•…Ñ•…Ñ¥Ù¥Ñäì	ÕÉ¥Ñ¼‘¥¹½Ğ)‘¥É•Ñ±ä½‰Í•ÉÙ”¥Ğ¸¸¥¹Ñ•É•ÍĞ¥¸ÁÉ½É…µµ¥¹œ¥Ì„¡åÁ½Ñ¡•Í¥Ì°¹½Ğ„½¹™¥Éµ•)™…Ğ¸	ÕÉ¥Ñ¼Í¡½Õ±Í…ä€å½ÔÑ½±µ”œ°…Ù½¥±…¥µ¥¹œ¥¹‘•Á•¹‘•¹ĞÙ•É¥™¥…Ñ¥½¸°)…¹…Ù½¥Õ¹É•±…Ñ•Ñ…Í¬µ½µÁ±•Ñ¥½¸‘¥Í±…¥µ•ÉÌ¸Q¡•¸…Í¬¥ĞÑ¼•áÁ±…¥¸İ¡…Ğ)•Ù¥‘•¹”İ½Õ±Ù•É¥™ä„‰…­ÕÀ¸)I•Ù¥•ÜÑ¡”…¹Íİ•È‰•™½É”µ½Ù¥¹œÑ¼¡½µ”¹½µµÕ¹¥…Ñ¥½¹€ÕÍ¥¹œ€´µ±•ÍÍ½¹€¸)Q¡•Í”¡•­Ì…É”„ÍÑ…ÉÑ¥¹œÁ½¥¹Ğ°¹½Ğ„™Õ±°•Ù…±Õ…Ñ¥½¸ÍÕ¥Ñ”¸()Q¡”™¥ÉÍĞ½İ¹•ÈµÑ•ÍÑ•É•ÍÁ½¹Í”‘¥ÍÑ¥¹Õ¥Í¡•Õ•ÍÍ•Ì‰ÕĞ¥¹½ÉÉ•Ñ±ä‘•ÍÉ¥‰•)Ñ¡”ÕÍ•ÈÉ•Á½ÉĞ…Ì„‘¥É•Ğ½‰Í•ÉÙ…Ñ¥½¸¸%ĞÑ½½¬€ĞàÍ•½¹‘Ì™½ÈÑ¡…Ğ•á¡…¹”ì)Ñ¡¥ÌÍ¥¹±”É•ÍÕ±Ğ‘½•Ì¹½Ğ•ÍÑ…‰±¥Í İ…É´µµ½‘•°ÍÁ••½ÈATÁ±…•µ•¹Ğ¸)Q¡”±•ÍÍ½¸İ…ÌÉ•Ù¥Í•Ñ¼Ù•ÉÍ¥½¸€È…¹Ñ¡”ÍÑ…¹‘¥¹œ¥¹ÍÑÉÕÑ¥½¹ÌÍÑÉ•¹Ñ¡•¹•¸)I•¥¹ÍÑ…±°Ñ¡”±•ÍÍ½¸İ¥Ñ ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼Í¡½½°¥¹ÍÑ…±±€°Ñ¡•¸ÍÑ…ÉĞ„™É•Í )¡…Ğİ¥Ñ Ñ¡”Í…µ”½µµ…¹…‰½Ù”…¹É•Á•…ĞÑ¡”ÅÕ•ÍÑ¥½¸¸¼¹½ĞÉ•½ÉÑ¡”)É•Ù¥Í¥½¸…ÌÍÕ•ÍÍ™Õ°Õ¹Ñ¥°Ñ¡”É•Ù¥Í•‰•¡…Ù¥½È¥Ì½‰Í•ÉÙ•¸((ŒŒY•É¥™äÑ¡”½µÁ±•Ñ”™±½Ü()½¹™¥É´½™™±¥¹”½Á•É…Ñ¥½¸…™Ñ•È‘•Á•¹‘•¹¥•Ì…¹Ñ¡”±½…°µ½‘•°…É”ÁÉ•Í•¹Ğ°)±•ÍÍ½¸É•ÑÉ¥•Ù…°°½ÉÉ•Ñ¥½¸…ÁÁ•…É¥¹œ½¸Ñ¡”¹•áĞÑÕÉ¸°…¹±•…È•ÉÉ½ÉÌ™½È)…¸Õ¹…Ù…¥±…‰±”Í•ÉÙ•È½Èµ½‘•°¸½¹Ñ•áĞÉ•…‘Ì…É”µ•µ½¥é•½¹”Á•ÈÑÕÉ¸¸)ÕÉÉ•¹ĞÉ•½É‘Ì…¸¡…¹”½¸„±…Ñ•ÈÑÕÉ¸°‰ÕĞÁÉ¥½ÈÍ•ÍÍ¥½¸µ•ÍÍ…•Ìµ…ä)ÍÑ¥±°½¹Ñ…¥¸•…É±¥•È™…ÑÌ¸•±•Ñ¥¹œME1¥Ñ”É•½É‘Ì‘½•Ì¹½Ğ•É…Í”•Ù”Ì)Í•ÍÍ¥½¸¡¥ÍÑ½ÉäìÍ•ÍÍ¥½¸É•Ñ•¹Ñ¥½¸½‘•±•Ñ¥½¸¹••‘ÌÍ•Á…É…Ñ”¡…¹‘±¥¹œ‰•™½É”)ÁÉ¥Ù…äµÍ•¹Í¥Ñ¥Ù”ÕÍ”¸Q¡”…•¹Ğ…¹¹½ĞİÉ¥Ñ”µ•µ½É¥•Ì½È™••‘‰…¬™É½´¡…Ğ¸)Q¼­••À„É•Ù¥•İ•¹½Ñ”™½È±…Ñ•È½É‘¥¹…Éä¡…ÑÌ°É•½É¥Ğå½ÕÉÍ•±˜İ¥Ñ )ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼™••‘‰…¬…‘½ÉÉ•Ñ¥½¸€‰Í¬…‰½ÕĞÁÉ½©•Ğ½…±Ì‰•™½É”¥¹™•ÉÉ¥¹œÑ¡•´¸‰€°)Ñ¡•¸½ÁĞ¥¸İ¥Ñ €´µ¥¹±Õ‘”µ™••‘‰…­€¸UÍ”ÕÍ•™Õ±€½È¹½Ñ}ÕÍ•™Õ±€™½ÈÑ¡”½Ñ¡•È)É…Ñ¥¹Ì¸%¹ÍÁ•Ğ½ÈÉ•µ½Ù”•¹ÑÉ¥•Ìİ¥Ñ )™••‘‰…¬±¥ÍÑ€…¹™••‘‰…¬™½É•Ğ%€¸Q¡¥Ì¥Ì±½…°½¹Ñ•áĞÉ•ÑÉ¥•Ù…°°¹½Ğ)µ½‘•°ÑÉ…¥¹¥¹œ¸Ñ¥Ù¥Ñäµ½¹±ä¡…ÑÌ…±İ…åÌ•á±Õ‘”Á•ÉÍ½¹…°™…ÑÌ…¹™••‘‰…¬¸

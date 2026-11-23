@@ -1,127 +1,1 @@
-"""Loopback-only web console and Eve API bridge."""
-
-import http.client
-import os
-from pathlib import Path
-import shutil
-import subprocess
-import sys
-from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
-
-from .chat import ROOT
-from .runtime_lock import acquire_runtime_lock
-
-
-class BuritoHandler(SimpleHTTPRequestHandler):
-    protocol_version = "HTTP/1.1"
-    eve_port = 2000
-
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, directory=str(ROOT / "ui"), **kwargs)
-
-    def do_GET(self):
-        if self.path.startswith("/eve/v1/"):
-            return self.proxy()
-        if self.path == "/" or self.path == "/index.html":
-            self.path = "/index.html"
-        return super().do_GET()
-
-    def do_POST(self):
-        if self.path == "/api/chat":
-            self.proxy(port=2001, path="/chat")
-        elif self.path.startswith("/eve/v1/"):
-            self.proxy()
-        else:
-            self.send_error(404)
-
-    def proxy(self, port=None, path=None):
-        connection = http.client.HTTPConnection("127.0.0.1", port or self.eve_port, timeout=3600)
-        headers = {key: value for key, value in self.headers.items()
-                   if key.lower() not in {"host", "connection", "accept-encoding"}}
-        headers["Host"] = f"127.0.0.1:{self.eve_port}"
-        body = self.rfile.read(int(self.headers.get("Content-Length", "0"))) if self.command == "POST" else None
-        try:
-            connection.request(self.command, path or self.path, body=body, headers=headers)
-            response = connection.getresponse()
-            self.send_response(response.status, response.reason)
-            for key, value in response.getheaders():
-                if key.lower() not in {"connection", "transfer-encoding", "content-length", "content-encoding"}:
-                    self.send_header(key, value)
-            self.send_header("Transfer-Encoding", "chunked")
-            self.send_header("Cache-Control", "no-store")
-            self.end_headers()
-            while True:
-                # read1 returns an available upstream chunk immediately. read(8192)
-                # can buffer the live token stream until the model turn finishes.
-                chunk = response.read1(8192)
-                if not chunk:
-                    break
-                self.wfile.write(f"{len(chunk):X}\r\n".encode() + chunk + b"\r\n")
-                self.wfile.flush()
-            self.wfile.write(b"0\r\n\r\n")
-        except (OSError, http.client.HTTPException) as error:
-            if not self.wfile.closed:
-                try:
-                    self.send_error(502, f"Local Eve runtime unavailable: {error}")
-                except (BrokenPipeError, ConnectionResetError):
-                    pass
-        finally:
-            connection.close()
-
-    def log_message(self, format, *args):
-        print("Burito UI:", format % args)
-
-
-def serve(model, context_tokens, port=8765, lesson="home.honesty", include_personal=False,
-          include_system=False, include_activity=False, include_feedback=False,
-          include_project=False, include_suggestions=False):
-    from .context import build_context
-    build_context(lesson, include_personal, include_system=include_system,
-                  include_activity=include_activity, include_feedback=include_feedback,
-                  include_project=include_project, include_suggestions=include_suggestions)
-    brain_mount = Path("/mnt/burito-brain")
-    if not brain_mount.is_mount():
-        raise ValueError("Burito Brain drive is not mounted at /mnt/burito-brain; refusing to start with local fallback storage")
-    runtime = ROOT / "runtime"
-    env = os.environ.copy()
-    for key in ("WORKFLOW_LOCAL_BASE_URL", "EVE_DEV_WORKFLOW_TRANSPORT_SECRET", "EVE_DEV_WORKER_APP_ROOT"):
-        env.pop(key, None)
-    node_dirs = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
-    if node_dirs:
-        env["PATH"] = os.pathsep.join([str(node_dirs[0]), env.get("PATH", "")])
-    node = shutil.which("node", path=env.get("PATH"))
-    eve = runtime / "node_modules/.bin/eve"
-    if not node or not eve.exists():
-        raise ValueError("Runtime is missing; run bash scripts/setup-runtime.sh")
-    env.update({"BURITO_MODE": "local", "BURITO_LOCAL_MODEL": model,
-                "BURITO_CONTEXT_TOKENS": str(context_tokens), "BURITO_LESSON_ID": lesson,
-                "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
-                "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
-                "BURITO_INCLUDE_ACTIVITY": "1" if include_activity else "0",
-                "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
-                "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
-                "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
-                "BURITO_INCLUDE_KNOWLEDGE": "1",
-                "BURITO_DATA_DIR": str(brain_mount / "data"),
-                "BURITO_PC_ACCESS": "0", "BURITO_PROJECT_ROOT": str(ROOT),
-                "BURITO_PYTHON": sys.executable, "EVE_TELEMETRY_DISABLED": "1",
-                "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1"})
-    print(f"Starting Burito web console at http://127.0.0.1:{port}")
-    print("Local model only. PC tools disabled. Press Ctrl+C to stop.", flush=True)
-    lock_fd = acquire_runtime_lock(runtime)
-    try:
-        process = subprocess.Popen([node, str(eve), "dev", "--host", "127.0.0.1", "--port", "2000",
-                                    "--no-ui", "--no-default-extensions"], cwd=runtime, env=env)
-        bridge = subprocess.Popen([node, str(runtime / "lib/web-bridge.mjs")], cwd=runtime, env=env)
-        BuritoHandler.eve_port = 2000
-        try:
-            server = ThreadingHTTPServer(("127.0.0.1", port), BuritoHandler)
-            with server:
-                server.serve_forever()
-        finally:
-            bridge.terminate()
-            bridge.wait(timeout=15)
-            process.terminate()
-            process.wait(timeout=15)
-    finally:
-        os.close(lock_fd)
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tˆˆ‰1½½Á‰…¬µ½¹±äİ•ˆ½¹Í½±”…¹Ù”A$‰É¥‘”¸ˆˆˆ()¥µÁ½ÉĞ¡ÑÑÀ¹±¥•¹Ğ)¥µÁ½ÉĞ½Ì)™É½´Á…Ñ¡±¥ˆ¥µÁ½ÉĞA…Ñ )¥µÁ½ÉĞÍ¡ÕÑ¥°)¥µÁ½ÉĞÍÕ‰ÁÉ½•ÍÌ)¥µÁ½ÉĞÍåÌ)™É½´¡ÑÑÀ¹Í•ÉÙ•È¥µÁ½ÉĞM¥µÁ±•!QQAI•ÅÕ•ÍÑ!…¹‘±•È°Q¡É•…‘¥¹!QQAM•ÉÙ•È()™É½´€¹¡…Ğ¥µÁ½ÉĞI==P)™É½´€¹ÉÕ¹Ñ¥µ•}±½¬¥µÁ½ÉĞ…ÅÕ¥É•}ÉÕ¹Ñ¥µ•}±½¬°…É¡¥Ù•}İ½É­™±½İ}‘…Ñ„(()±…ÍÌ	ÕÉ¥Ñ½!…¹‘±•È¡M¥µÁ±•!QQAI•ÅÕ•ÍÑ!…¹‘±•È¤è(€€€ÁÉ½Ñ½½±}Ù•ÉÍ¥½¸€ô€‰!QQ@¼Ä¸Äˆ(€€€•Ù•}Á½ÉĞ€ô€ÈÀÀÀ((€€€‘•˜}}¥¹¥Ñ}|¡Í•±˜°€©…ÉÌ°€¨©­İ…ÉÌ¤è(€€€€€€€ÍÕÁ•È ¤¹}}¥¹¥Ñ}| ©…ÉÌ°‘¥É•Ñ½ÉäõÍÑÈ¡I==P€¼€‰Õ¤ˆ¤°€¨©­İ…ÉÌ¤((€€€‘•˜‘½}P¡Í•±˜¤è(€€€€€€€¥˜Í•±˜¹Á…Ñ ¹ÍÑ…ÉÑÍİ¥Ñ  ˆ½•Ù”½ØÄ¼ˆ¤è(€€€€€€€€€€€É•ÑÕÉ¸Í•±˜¹ÁÉ½áä ¤(€€€€€€€¥˜Í•±˜¹Á…Ñ €ôô€ˆ¼ˆ½ÈÍ•±˜¹Á…Ñ €ôô€ˆ½¥¹‘•à¹¡Ñµ°ˆè(€€€€€€€€€€€Í•±˜¹Á…Ñ €ô€ˆ½¥¹‘•à¹¡Ñµ°ˆ(€€€€€€€É•ÑÕÉ¸ÍÕÁ•È ¤¹‘½}P ¤((€€€‘•˜‘½}A=MP¡Í•±˜¤è(€€€€€€€¥˜Í•±˜¹Á…Ñ €ôô€ˆ½…Á¤½¡…Ğˆè(€€€€€€€€€€€Í•±˜¹ÁÉ½áä¡Á½ÉĞôÈÀÀÄ°Á…Ñ ôˆ½¡…Ğˆ¤(€€€€€€€•±¥˜Í•±˜¹Á…Ñ ¹ÍÑ…ÉÑÍİ¥Ñ  ˆ½•Ù”½ØÄ¼ˆ¤è(€€€€€€€€€€€Í•±˜¹ÁÉ½áä ¤(€€€€€€€•±Í”è(€€€€€€€€€€€Í•±˜¹Í•¹‘}•ÉÉ½È ĞÀĞ¤((€€€‘•˜ÁÉ½áä¡Í•±˜°Á½ÉĞõ9½¹”°Á…Ñ õ9½¹”¤è(€€€€€€€½¹¹•Ñ¥½¸€ô¡ÑÑÀ¹±¥•¹Ğ¹!QQA½¹¹•Ñ¥½¸ ˆÄÈÜ¸À¸À¸Äˆ°Á½ÉĞ½ÈÍ•±˜¹•Ù•}Á½ÉĞ°Ñ¥µ•½ÕĞôÌØÀÀ¤(€€€€€€€¡•…‘•ÉÌ€ôí­•äèÙ…±Õ”™½È­•ä°Ù…±Õ”¥¸Í•±˜¹¡•…‘•ÉÌ¹¥Ñ•µÌ ¤(€€€€€€€€€€€€€€€€€€¥˜­•ä¹±½İ•È ¤¹½Ğ¥¸ì‰¡½ÍĞˆ°€‰½¹¹•Ñ¥½¸ˆ°€‰…•ÁĞµ•¹½‘¥¹œ‰õô(€€€€€€€¡•…‘•ÉÍl‰!½ÍĞ‰t€ô˜ˆÄÈÜ¸À¸À¸ÄéíÍ•±˜¹•Ù•}Á½ÉÑôˆ(€€€€€€€‰½‘ä€ôÍ•±˜¹É™¥±”¹É•…¡¥¹Ğ¡Í•±˜¹¡•…‘•ÉÌ¹•Ğ ‰½¹Ñ•¹Ğµ1•¹Ñ ˆ°€ˆÀˆ¤¤¤¥˜Í•±˜¹½µµ…¹€ôô€‰A=MPˆ•±Í”9½¹”(€€€€€€€ÑÉäè(€€€€€€€€€€€½¹¹•Ñ¥½¸¹É•ÅÕ•ÍĞ¡Í•±˜¹½µµ…¹°Á…Ñ ½ÈÍ•±˜¹Á…Ñ °‰½‘äõ‰½‘ä°¡•…‘•ÉÌõ¡•…‘•ÉÌ¤(€€€€€€€€€€€É•ÍÁ½¹Í”€ô½¹¹•Ñ¥½¸¹•ÑÉ•ÍÁ½¹Í” ¤(€€€€€€€€€€€Í•±˜¹Í•¹‘}É•ÍÁ½¹Í”¡É•ÍÁ½¹Í”¹ÍÑ…ÑÕÌ°É•ÍÁ½¹Í”¹É•…Í½¸¤(€€€€€€€€€€€™½È­•ä°Ù…±Õ”¥¸É•ÍÁ½¹Í”¹•Ñ¡•…‘•ÉÌ ¤è(€€€€€€€€€€€€€€€¥˜­•ä¹±½İ•È ¤¹½Ğ¥¸ì‰½¹¹•Ñ¥½¸ˆ°€‰ÑÉ…¹Í™•Èµ•¹½‘¥¹œˆ°€‰½¹Ñ•¹Ğµ±•¹Ñ ˆ°€‰½¹Ñ•¹Ğµ•¹½‘¥¹œ‰ôè(€€€€€€€€€€€€€€€€€€€Í•±˜¹Í•¹‘}¡•…‘•È¡­•ä°Ù…±Õ”¤(€€€€€€€€€€€Í•±˜¹Í•¹‘}¡•…‘•È ‰QÉ…¹Í™•Èµ¹½‘¥¹œˆ°€‰¡Õ¹­•ˆ¤(€€€€€€€€€€€Í•±˜¹Í•¹‘}¡•…‘•È ‰…¡”µ½¹ÑÉ½°ˆ°€‰¹¼µÍÑ½É”ˆ¤(€€€€€€€€€€€Í•±˜¹•¹‘}¡•…‘•ÉÌ ¤(€€€€€€€€€€€İ¡¥±”QÉÕ”è(€€€€€€€€€€€€€€€€ŒÉ•…ÄÉ•ÑÕÉ¹Ì…¸…Ù…¥±…‰±”ÕÁÍÑÉ•…´¡Õ¹¬¥µµ•‘¥…Ñ•±ä¸É•… àÄäÈ¤(€€€€€€€€€€€€€€€€Œ…¸‰Õ™™•ÈÑ¡”±¥Ù”Ñ½­•¸ÍÑÉ•…´Õ¹Ñ¥°Ñ¡”µ½‘•°ÑÕÉ¸™¥¹¥Í¡•Ì¸(€€€€€€€€€€€€€€€¡Õ¹¬€ôÉ•ÍÁ½¹Í”¹É•…Ä àÄäÈ¤(€€€€€€€€€€€€€€€¥˜¹½Ğ¡Õ¹¬è(€€€€€€€€€€€€€€€€€€€‰É•…¬(€€€€€€€€€€€€€€€Í•±˜¹İ™¥±”¹İÉ¥Ñ”¡˜‰í±•¸¡¡Õ¹¬¤éaõqÉq¸ˆ¹•¹½‘” ¤€¬¡Õ¹¬€¬ˆ‰qÉq¸ˆ¤(€€€€€€€€€€€€€€€Í•±˜¹İ™¥±”¹™±ÕÍ  ¤(€€€€€€€€€€€Í•±˜¹İ™¥±”¹İÉ¥Ñ”¡ˆˆÁqÉq¹qÉq¸ˆ¤(€€€€€€€•á•ÁĞ€¡=MÉÉ½È°¡ÑÑÀ¹±¥•¹Ğ¹!QQAá•ÁÑ¥½¸¤…Ì•ÉÉ½Èè(€€€€€€€€€€€¥˜¹½ĞÍ•±˜¹İ™¥±”¹±½Í•è(€€€€€€€€€€€€€€€ÑÉäè(€€€€€€€€€€€€€€€€€€€Í•±˜¹Í•¹‘}•ÉÉ½È ÔÀÈ°˜‰1½…°Ù”ÉÕ¹Ñ¥µ”Õ¹…Ù…¥±…‰±”èí•ÉÉ½Éôˆ¤(€€€€€€€€€€€€€€€•á•ÁĞ€¡	É½­•¹A¥Á•ÉÉ½È°½¹¹•Ñ¥½¹I•Í•ÑÉÉ½È¤è(€€€€€€€€€€€€€€€€€€€Á…ÍÌ(€€€€€€€™¥¹…±±äè(€€€€€€€€€€€½¹¹•Ñ¥½¸¹±½Í” ¤((€€€‘•˜±½}µ•ÍÍ…”¡Í•±˜°™½Éµ…Ğ°€©…ÉÌ¤è(€€€€€€€ÁÉ¥¹Ğ ‰	ÕÉ¥Ñ¼U$èˆ°™½Éµ…Ğ€”…ÉÌ¤(()‘•˜Í•ÉÙ”¡µ½‘•°°½¹Ñ•áÑ}Ñ½­•¹Ì°Á½ÉĞôàÜØÔ°±•ÍÍ½¸ô‰¡½µ”¹¡½¹•ÍÑäˆ°¥¹±Õ‘•}Á•ÉÍ½¹…°õ…±Í”°(€€€€€€€€€¥¹±Õ‘•}ÍåÍÑ•´õ…±Í”°¥¹±Õ‘•}…Ñ¥Ù¥Ñäõ…±Í”°¥¹±Õ‘•}™••‘‰…¬õ…±Í”°(€€€€€€€€€¥¹±Õ‘•}ÁÉ½©•Ğõ…±Í”°¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ìõ…±Í”¤è(€€€™É½´€¹½¹Ñ•áĞ¥µÁ½ÉĞ‰Õ¥±‘}½¹Ñ•áĞ(€€€‰Õ¥±‘}½¹Ñ•áĞ¡±•ÍÍ½¸°¥¹±Õ‘•}Á•ÉÍ½¹…°°¥¹±Õ‘•}ÍåÍÑ•´õ¥¹±Õ‘•}ÍåÍÑ•´°(€€€€€€€€€€€€€€€€€¥¹±Õ‘•}…Ñ¥Ù¥Ñäõ¥¹±Õ‘•}…Ñ¥Ù¥Ñä°¥¹±Õ‘•}™••‘‰…¬õ¥¹±Õ‘•}™••‘‰…¬°(€€€€€€€€€€€€€€€€€¥¹±Õ‘•}ÁÉ½©•Ğõ¥¹±Õ‘•}ÁÉ½©•Ğ°¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ìõ¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ì¤(€€€‰É…¥¹}µ½Õ¹Ğ€ôA…Ñ  ˆ½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸ˆ¤(€€€¥˜¹½Ğ‰É…¥¹}µ½Õ¹Ğ¹¥Í}µ½Õ¹Ğ ¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰	ÕÉ¥Ñ¼	É…¥¸‘É¥Ù”¥Ì¹½Ğµ½Õ¹Ñ•…Ğ€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸ìÉ•™ÕÍ¥¹œÑ¼ÍÑ…ÉĞİ¥Ñ ±½…°™…±±‰…¬ÍÑ½É…”ˆ¤(€€€ÉÕ¹Ñ¥µ”€ôI==P€¼€‰ÉÕ¹Ñ¥µ”ˆ(€€€•¹Ø€ô½Ì¹•¹Ù¥É½¸¹½Áä ¤(€€€™½È­•ä¥¸€ ‰]=I-1=]}1=1}	M}UI0ˆ°€‰Y}Y}]=I-1=]}QI9MA=IQ}MIPˆ°€‰Y}Y}]=I-I}AA}I==Pˆ¤è(€€€€€€€•¹Ø¹Á½À¡­•ä°9½¹”¤(€€€¹½‘•}‘¥ÉÌ€ôÍ½ÉÑ• ¡I==P€¼€ˆ¹Ñ½½±Ìˆ¤¹±½ˆ ‰¹½‘”´¨½‰¥¸ˆ¤°É•Ù•ÉÍ”õQÉÕ”¤(€€€¥˜¹½‘•}‘¥ÉÌè(€€€€€€€•¹Ùl‰AQ ‰t€ô½Ì¹Á…Ñ¡Í•À¹©½¥¸¡mÍÑÈ¡¹½‘•}‘¥ÉÍlÁt¤°•¹Ø¹•Ğ ‰AQ ˆ°€ˆˆ¥t¤(€€€¹½‘”€ôÍ¡ÕÑ¥°¹İ¡¥  ‰¹½‘”ˆ°Á…Ñ õ•¹Ø¹•Ğ ‰AQ ˆ¤¤(€€€•Ù”€ôÉÕ¹Ñ¥µ”€¼€‰¹½‘•}µ½‘Õ±•Ì¼¹‰¥¸½•Ù”ˆ(€€€¥˜¹½Ğ¹½‘”½È¹½Ğ•Ù”¹•á¥ÍÑÌ ¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰IÕ¹Ñ¥µ”¥Ìµ¥ÍÍ¥¹œìÉÕ¸‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í ˆ¤(€€€•¹Ø¹ÕÁ‘…Ñ”¡ì‰	UI%Q=}5=ˆè€‰±½…°ˆ°€‰	UI%Q=}1=1}5=0ˆèµ½‘•°°(€€€€€€€€€€€€€€€€‰	UI%Q=}=9QaQ}Q=-9LˆèÍÑÈ¡½¹Ñ•áÑ}Ñ½­•¹Ì¤°€‰	UI%Q=}1MM=9}%ˆè±•ÍÍ½¸°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}AIM=91}55=Idˆè€ˆÄˆ¥˜¥¹±Õ‘•}Á•ÉÍ½¹…°•±Í”€ˆÀˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}MeMQ4ˆè€ˆÄˆ¥˜¥¹±Õ‘•}ÍåÍÑ•´•±Í”€ˆÀˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}Q%Y%Qdˆè€ˆÄˆ¥˜¥¹±Õ‘•}…Ñ¥Ù¥Ñä•±Í”€ˆÀˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}	,ˆè€ˆÄˆ¥˜¥¹±Õ‘•}™••‘‰…¬•±Í”€ˆÀˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}AI=)Pˆè€ˆÄˆ¥˜¥¹±Õ‘•}ÁÉ½©•Ğ•±Í”€ˆÀˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}MUMQ%=9Lˆè€ˆÄˆ¥˜¥¹±Õ‘•}ÍÕ•ÍÑ¥½¹Ì•±Í”€ˆÀˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}%91U}-9=]1ˆè€ˆÄˆ°(€€€€€€€€€€€€€€€€‰	UI%Q=}Q}%HˆèÍÑÈ¡‰É…¥¹}µ½Õ¹Ğ€¼€‰‘…Ñ„ˆ¤°(€€€€€€€€€€€€€€€€‰	UI%Q=}A}MLˆè€ˆÀˆ°€‰	UI%Q=}AI=)Q}I==PˆèÍÑÈ¡I==P¤°(€€€€€€€€€€€€€€€€‰	UI%Q=}AeQ!=8ˆèÍåÌ¹•á•ÕÑ…‰±”°€‰Y}Q15QIe}%M	1ˆè€ˆÄˆ°(€€€€€€€€€€€€€€€€‰Y}QIM}=9Q9Pˆè€‰½™˜ˆ°€‰Y}M!U1M}%M	1ˆè€ˆÄ‰ô¤(€€€ÁÉ¥¹Ğ¡˜‰MÑ…ÉÑ¥¹œ	ÕÉ¥Ñ¼İ•ˆ½¹Í½±”…Ğ¡ÑÑÀè¼¼ÄÈÜ¸À¸À¸ÄéíÁ½ÉÑôˆ¤(€€€ÁÉ¥¹Ğ ‰1½…°µ½‘•°½¹±ä¸AÑ½½±Ì‘¥Í…‰±•¸AÉ•ÍÌÑÉ°­Ñ¼ÍÑ½À¸ˆ°™±ÕÍ õQÉÕ”¤(€€€±½­}™€ô…ÅÕ¥É•}ÉÕ¹Ñ¥µ•}±½¬¡ÉÕ¹Ñ¥µ”¤(€€€ÑÉäè(€€€€€€€…É¡¥Ù•€ô…É¡¥Ù•}İ½É­™±½İ}‘…Ñ„¡ÉÕ¹Ñ¥µ”¤(€€€€€€€¥˜…É¡¥Ù•è(€€€€€€€€€€€ÁÉ¥¹Ğ¡˜‰É¡¥Ù•ÁÉ¥½ÈÙ”İ½É­™±½ÜÍÑ…Ñ”…Ğí…É¡¥Ù•‘ôì±½…°	ÕÉ¥Ñ¼µ•µ½Éä¥ÌÕ¹¡…¹•¸ˆ¤(€€€€€€€ÁÉ½•ÍÌ€ôÍÕ‰ÁÉ½•ÍÌ¹A½Á•¸¡m¹½‘”°ÍÑÈ¡•Ù”¤°€‰‘•Øˆ°€ˆ´µ¡½ÍĞˆ°€ˆÄÈÜ¸À¸À¸Äˆ°€ˆ´µÁ½ÉĞˆ°€ˆÈÀÀÀˆ°(€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€ˆ´µ¹¼µÕ¤ˆ°€ˆ´µ¹¼µ‘•™…Õ±Ğµ•áÑ•¹Í¥½¹Ì‰t°İõÉÕ¹Ñ¥µ”°•¹Øõ•¹Ø¤(€€€€€€€‰É¥‘”€ôÍÕ‰ÁÉ½•ÍÌ¹A½Á•¸¡m¹½‘”°ÍÑÈ¡ÉÕ¹Ñ¥µ”€¼€‰±¥ˆ½İ•ˆµ‰É¥‘”¹µ©Ìˆ¥t°İõÉÕ¹Ñ¥µ”°•¹Øõ•¹Ø¤(€€€€€€€	ÕÉ¥Ñ½!…¹‘±•È¹•Ù•}Á½ÉĞ€ô€ÈÀÀÀ(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•ÉÙ•È€ôQ¡É•…‘¥¹!QQAM•ÉÙ•È  ˆÄÈÜ¸À¸À¸Äˆ°Á½ÉĞ¤°	ÕÉ¥Ñ½!…¹‘±•È¤(€€€€€€€€€€€İ¥Ñ Í•ÉÙ•Èè(€€€€€€€€€€€€€€€Í•ÉÙ•È¹Í•ÉÙ•}™½É•Ù•È ¤(€€€€€€€™¥¹…±±äè(€€€€€€€€€€€‰É¥‘”¹Ñ•Éµ¥¹…Ñ” ¤(€€€€€€€€€€€‰É¥‘”¹İ…¥Ğ¡Ñ¥µ•½ÕĞôÄÔ¤(€€€€€€€€€€€ÁÉ½•ÍÌ¹Ñ•Éµ¥¹…Ñ” ¤(€€€€€€€€€€€ÁÉ½•ÍÌ¹İ…¥Ğ¡Ñ¥µ•½ÕĞôÄÔ¤(€€€™¥¹…±±äè(€€€€€€€½Ì¹±½Í”¡±½­}™¤(
