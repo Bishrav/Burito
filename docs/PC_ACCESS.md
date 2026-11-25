@@ -1,1 +1,222 @@
-®•y€hr∑öµÎ-≠Ê¶}”©z∂≠äâÁ¢⁄^Æh≠µÁEj)^v⁄≠Ê≠zÀky©ütÍ^≠´b¢yË∂ó´ö+my—ZäWù∂á+y´^≤⁄ﬁjg›:ó´jÿ®ûz-•ÍÊä€^tåÅ•±îÅÖπêÅÖ¡¡±•çÖ—•Ω∏ÅÖççïÕÃ()	’…•—ºÅπΩ‹Å°ÖÃÅï·¡±•ç•–Å°ΩÕ–Å—ΩΩ±Ã∞Å•∏ÅÖëë•—•Ω∏Å—ºÅ—°îÅ•πŸïπ—Ω…‰ÅÕ’µµÖ…‰Ë()ÅQΩΩ∞ÅÅÖ¡Öâ•±•—‰ÅÅ¡¡…ΩŸÖ∞Å)Ä¥¥¥ÅÄ¥¥¥ÅÄ¥¥¥Å)ÅÅô•±ïÕÄÅÅ	…Ω›ÕîÅôΩ±ëï…Ã∞Å…ïÖêÅâΩ’πëïêÅUQ¥‡Å—ï·–∞ÅÕïÖ…ç†Åô•±ïπÖµïÃÅÅ9ºÅï·—…ÑÅ¡…Ωµ¡–Å)ÅÅÖ¡¡±•çÖ—•ΩπÕÄÅÅ•πêÅ…ïù•Õ—ï…ïêÅëïÕ≠—Ω¿Å±Ö’πç°ï…ÃÅÖπêÅ—°ï•»Åï·Öç–Å%ÃΩ°ÖÕ°ïÃÅÅ9ºÅï·—…ÑÅ¡…Ωµ¡–Å)ÅÅΩ¡ïπ}Ö¡¡±•çÖ—•ΩπÄÅÅM’âµ•–ÅÑÅ±Ö’πç†Å…ï≈’ïÕ–ÅôΩ»ÅÑÅÕï±ïç—ïê∞Å’πç°ÖπùïêÅ±Ö’πç°ï»ÅÅŸï…‰Å±Ö’πç†Å)ÅÅëïÕ≠—Ω¡}›•πëΩ›ÕÄÅÅ=∏µëïµÖπêÅÕπÖ¡Õ°Ω–ÅΩòÅ-]•∏Å•π—ï…πÖ∞Å%Ã∞Å…ïÕΩ’…çîÅç±ÖÕÕïÃ∞ÅçÖ¡—•ΩπÃ∞ÅëïÕ≠—Ω¿Ωµ•π•µ•ÈïêΩÖç—•ŸîÅÕ—Ö—îÅÅ9ºÅï·—…ÑÅ¡…Ωµ¡–ÏÅΩπ±‰Åï·¡ΩÕïêÅâ‰ÅÄ¥µïπÖâ±îµëïÕ≠—Ω¿µçΩπ—…Ω±ÄÅ)ÅÅôΩç’Õ}›•πëΩ›ÄÅÅUπµ•π•µ•ÈîÅÖπêÅôΩç’ÃÅΩπîÅï·Öç–Å›•πëΩ‹Åâ‰Å•π—ï…πÖ∞Å%ÅÅŸï…‰ÅôΩç’ÃÅ)ÅÅëïÕ≠—Ω¡}•πÕï…—}—ï·—ÄÅÅ%πÕï…–Åï·Öç–ÅΩ›πï»µÖ¡¡…ΩŸïêÅ—ï·–ÅÖ–Å—°îÅçÖ…ï–Å•∏ÅÑÅôΩç’Õïê∞ÅÖççïÕÕ•â±îÅπÖ—•ŸîÅ—ï·–Åô•ï±êÏÅëΩïÃÅπΩ–Å…ï¡±ÖçîÅ—ï·–ÅΩ»ÅÖççïÕÃÅ—°îÅÕÂÕ—ï¥Åç±•¡âΩÖ…êÅÅIï≈’•…ïÃÅÄ¥µïπÖâ±îµëïÕ≠—Ω¿µçΩπ—…Ω±ÄÏÅïÖç†Å•πÕï…—•Ω∏ÅÕ°Ω›ÃÅï·Öç–Å—ï·–ÅÖπêÅëïÕ—•πÖ—•Ω∏Å›•πëΩ‹ÅôΩ»ÅÖ¡¡…ΩŸÖ∞Å)ÅÅç±•¡âΩÖ…ë}›…•—ï}—ï·—ÄÅÅ]…•—îÅï·Öç–ÅΩ›πï»µÖ¡¡…ΩŸïêÅΩ»Å=Hµï·—…Öç—ïêÅ—ï·–Å—ºÅ—°îÅ±ΩçÖ∞ÅÕÂÕ—ï¥Åç±•¡âΩÖ…êÏÅëΩïÃÅπΩ–Å…ïÖêÅ—°îÅç±•¡âΩÖ…êÅΩ»Å…ï≈’•…îÅ	…ÖŸîÅÅIï≈’•…ïÃÅÄ¥µïπÖâ±îµëïÕ≠—Ω¿µçΩπ—…Ω±Ä∞Å±ΩçÖ∞ÅÅ›∞µçΩ¡ÂÄÅΩ»ÅÅ·ç±•¡Ä∞ÅÖπêÅÕï¡Ö…Ö—îÅÖ¡¡…ΩŸÖ∞ÅÕ°Ω›•πúÅÖ±∞Å—ï·–Å)ÅÅ•πÕ¡ïç—}›•πëΩ›ÄÅÅô—ï»ÅÖ¡¡…ΩŸÖ∞∞ÅôΩç’ÃÅΩπîÅï·Öç–Å›•πëΩ‹ÅÖπêÅ•µµïë•Ö—ï±‰Å=HÅ•—ÃÅÖç—•ŸîÅ›•πëΩ‹ÅÅ=πîÅÖ¡¡…ΩŸÖ∞ÅçΩŸï…ÃÅôΩç’ÃÅÖπêÅçÖ¡—’…îÅ)ÅÅâ…Ω›Õï…}ÕïÖ…ç°ÄÅÅMïÖ…ç†ÅΩπîÅï·Öç–Å≈’ï…‰Å•∏Å—°îÅ…ïù’±Ö»Å	…ÖŸîÅ¡…Ωô•±î∞Å—°ï∏ÅçÖ¡—’…îÅ•—ÃÅÖç—•ŸîÅ›•πëΩ‹ÅΩπçîÅ›•—†Å±ΩçÖ∞Å=HÅÅŸï…‰ÅÕïÖ…ç†ÅÖπêÅçÖ¡—’…îÅ’πëï»ÅΩπîÅï·¡±•ç•–ÅÖ¡¡…ΩŸÖ∞ÏÅ≈’ï…‰ÅµÖ‰Å…ïµÖ•∏Å•∏Åâ…Ω›Õï»Å°•Õ—Ω…‰ÏÅΩ¡–Å•∏Å›•—†ÅÄ¥µïπÖâ±îµâ…Ω›Õï»µÕïÖ…ç°ÄÅ)ÅÅâ…Ω›Õï…}πÖŸ•ùÖ—ïÄÅÅ=¡ï∏ÅÖ∏Åï·Öç–Å!QQ@Ω!QQALÅUI0Å•∏Å—°îÅÖç—•ŸîÅ	…ÖŸîÅ—ÖàÅÅŸï…‰ÅπÖŸ•ùÖ—•Ω∏Å…ï≈’•…ïÃÅÖ¡¡…ΩŸÖ∞Å)ÅÅâ…Ω›Õï…}…ïÖë}¡ÖùïÄ∞ÅÅâ…Ω›Õï…}¡Öùï}Öç—•ΩπÄÅÅIïÖêÅÖπêÅâ…•ïô±‰ÅÕ’µµÖ…•ÈîÅŸ•Õ•â±îÅ—ï·–Åô…Ω¥Å—°îÅÖç—•ŸîÅ	…ÖŸîÅ¡ÖùîÅ’Õ•πúÅ—°îÅçΩπô•ù’…ïêÅ±ΩçÖ∞ÅµΩëï∞ÏÅç±•ç¨ÅÑÅ’π•≈’îÅŸ•Õ•â±îÅ±Öâï∞∞Åô•±∞ÅÑÅπΩ∏µ¡ÖÕÕ›Ω…êÅô•ï±ê∞Å¡…ïÕÃÅπ—ï»ΩQÖàΩÕçÖ¡î∞ÅÕç…Ω±∞∞ÅΩ»ÅùºÅâÖç¨ΩôΩ…›Ö…êÅÅ=¡–Å•∏Å›•—†ÅÄ¥µïπÖâ±îµâ…Ω›Õï»µçΩπ—…Ω±ÄÏÅù…Öπ–ÅΩπîÅÕ•—îÅΩ»ÅÖ±∞Å!QQ@Ω!QQALÅÕ•—ïÃÅô…Ω¥Å—°îÅï·—ïπÕ•Ω∏Å¡Ω¡’¿ÏÅïŸï…‰Å…ïÖêΩÖç—•Ω∏ÅÖÕ≠ÃÅÖ¡¡…ΩŸÖ∞Å)ÅÅâ…Ω›Õï…}çΩ¡Â}—ï·—ÄÅÅ]…•—îÅï·Öç–ÅΩ›πï»µÖ¡¡…ΩŸïêÅ—ï·–Åô…Ω¥Å—°îÅΩ›πï»ÅΩ»Åç’……ïπ–Å¡ÖùîÅ…ïÕ’±–Å—ºÅ—°îÅÕÂÕ—ï¥Åç±•¡âΩÖ…êÏÅç±•¡âΩÖ…êÅ…ïÖëÃÅÖ…îÅπΩ–ÅÖŸÖ•±Öâ±îÅÅIï≈’•…ïÃÅÄ¥µïπÖâ±îµâ…Ω›Õï»µçΩπ—…Ω±Ä∞ÅΩ¡—•ΩπÖ∞Åç±•¡âΩÖ…êÅ¡ï…µ•ÕÕ•Ω∏Åô…Ω¥Å—°îÅï·—ïπÕ•Ω∏Å¡Ω¡’¿∞ÅÖπêÅÑÅÕï¡Ö…Ö—îÅÖ¡¡…ΩŸÖ∞ÅÕ°Ω›•πúÅ—°îÅô’±∞Å—ï·–ÅôΩ»ÅïŸï…‰ÅçΩ¡‰Å)ÅÅâ…Ω›Õï…}—ÖâÕÄÅÅIïÖêÅ—°îÅΩ¡ï∏µ—ÖàÅçΩ’π–Å…ï¡Ω…—ïêÅâ‰Å—°îÅΩ¡—•ΩπÖ∞Å	…ÖŸîÅï·—ïπÕ•Ω∏ÅÅŸï…‰Å…ïÖêÅ…ï≈’•…ïÃÅÖ¡¡…ΩŸÖ∞ÏÅï·—ïπÕ•Ω∏ÅÕïπëÃÅΩπ±‰ÅÑÅçΩ’π–ÏÅΩ¡–Å•∏Å›•—†ÅÄ¥µïπÖâ±îµâ…ÖŸîµ—ÖâÕÄÅ()Q°ïÕîÅ…’∏Å—°…Ω’ù†ÅÑÅ±ΩçÖ∞ÅAÂ—°Ω∏Åâ…•ëùîÅ’Õ•πúÅ—°îÅπΩ…µÖ∞ÅÖççΩ’π–ùÃÅ¡ï…µ•ÕÕ•ΩπÃ∏)Q°ï‰ÅÖ…îÅπΩ–ÅïŸîùÃÅâ’•±–µ•∏ÅÕÖπëâΩ‡Åô•±îÅ—ΩΩ±Ã∏ÅïôÖ’±–ÅÕ°ï±∞∞Åô•±îµ›…•—î∞Å›ïà∞)ùïπï…•åÅÖùïπ–∞ÅÖπêÅÕï±òµµΩë•ô•çÖ—•Ω∏Å—ΩΩ±ÃÅ…ïµÖ•∏Åë•ÕÖâ±ïê∏()	…ÖŸîÅÕïÖ…ç†ÅÕïπëÃÅ—°îÅï·Öç–ÅÖ¡¡…ΩŸïêÅ≈’ï…‰Å—ºÅ	…ÖŸîÅMïÖ…ç†ÅΩŸï»Å—°îÅ•π—ï…πï–Ï)	…ÖŸîÅµÖ‰ÅµÖ≠îÅ•—ÃÅπΩ…µÖ∞Å¡ÖùîΩ…ïÕΩ’…çîÅ…ï≈’ïÕ—ÃÅÖπêÅ—°îÅ≈’ï…‰ÅµÖ‰Å…ïµÖ•∏Å•∏)â…Ω›Õï»Å°•Õ—Ω…‰∏Å	’…•—ºÅçÖ¡—’…ïÃÅΩπ±‰Å—°îÅÖç—•ŸîÅ	…ÖŸîÅ›•πëΩ‹Å›•—†Å±ΩçÖ∞Å=H∏)=HÅµÖ‰Åµ•Õ…ïÖêÅ¡ÖùîÅ—ï·–ÅÖπêÅëΩïÃÅπΩ–Å¡…ΩŸîÅ…ïÕ’±–ÅÖçç’…Öç‰∏Å%–ÅëΩïÃÅπΩ–Åç±•ç¨)ÑÅ…ïÕ’±–∞ÅÕ’âµ•–ÅÑÅôΩ…¥∞ÅΩ»ÅëΩ›π±ΩÖêÅÑÅô•±î∏ÅMïÖ…ç†µ¡ÖùîÅçΩπ—ïπ–Å•ÃÅ’π—…’Õ—ïê)ëÖ—Ñ∏((ååÅ	…ÖŸîÅ—ÖàÅï·—ïπÕ•Ω∏()Q°îÅΩ¡—•ΩπÖ∞Å5Öπ•ôïÕ–ÅXÃÅï·—ïπÕ•Ω∏ÅçΩ’π—ÃÅΩ¡ï∏Å—ÖâÃÅâ‰ÅëïôÖ’±–ÅÖπêÅÕïπëÃÅΩπ±‰)—°îÅ•π—ïùï»ÅçΩ’π–Å—ºÅÑÅ±ΩçÖ∞Å9Ö—•ŸîÅ5ïÕÕÖù•πúÅ°ΩÕ–∏Å•πë•πúÅÑÅ—ÖàÅ…ï≈’•…ïÃÅ—°î)Ω›πï»Å—ºÅù…Öπ–Å—°îÅΩ¡—•ΩπÖ∞ÅÅ—ÖâÕÄÅ¡ï…µ•ÕÕ•Ω∏Åô…Ω¥Å—°îÅï·—ïπÕ•Ω∏Å¡Ω¡’¿∏Åô—ï»)—°Ö–∞ÅÖ∏ÅÖ¡¡…ΩŸïêÅ±ΩΩ≠’¿ÅÕïπëÃÅΩπ±‰Å—•—±ïÃÅµÖ—ç°•πúÅ—°îÅΩ›πï»µ¡…ΩŸ•ëïêÅ¡°…ÖÕî)ÖπêÅ—ïµ¡Ω…Ö…‰Å—ÖàÅ%ÃÅ—°…Ω’ù†ÅÑÅÕ°Ω…–µ±•ŸïêÅ±ΩçÖ∞ÅçΩµµÖπêÅç°Öππï∞∏ÅUI1ÃÅÖπê)¡ÖùîÅçΩπ—ïπ—ÃÅÖ…îÅπïŸï»ÅÕïπ–∏ÅM›•—ç°•πúÅ—ÖâÃÅ•ÃÅÑÅÕï¡Ö…Ö—îÅÖ¡¡…ΩŸÖ∞µùÖ—ïê)Öç—•Ω∏ÅâΩ’πêÅ—ºÅΩπîÅï·Öç–Å—•—±îÅÖπêÅ%ÏÅÕ—Ö±îÅΩ»Å…ïπÖµïêÅ—ÖâÃÅÖ…îÅ…ï©ïç—ïê∏)Q°îÅçΩ’π–ÅÕπÖ¡Õ°Ω–Å•ÃÅÕ°Ω…–µ±•ŸïêÅ•∏ÅÅa}IU9Q%5}%IÄÏÅ	’…•—ºÅ…ï©ïç—ÃÅÕπÖ¡Õ°Ω—Ã)Ω±ëï»Å—°Ö∏Äƒ‘ÅÕïçΩπëÃ∏ÅQÖàÅ—•—±ïÃÅÖ…îÅπΩ–Å›…•——ï∏Å—ºÅ±ΩùÃÅΩ»Å¡ï…Õ•Õ—ïπ–ÅµïµΩ…‰∏()QºÅ•πÕ—Ö±∞Å•–ÅµÖπ’Ö±±‰Ë((ƒ∏Å=¡ï∏ÅÅâ…ÖŸîËºΩï·—ïπÕ•ΩπÕÄ∞ÅïπÖâ±îÅïŸï±Ω¡ï»ÅµΩëî∞Åç°ΩΩÕîÄ®©1ΩÖêÅ’π¡Öç≠ïê®®∞(ÄÄÅÖπêÅÕï±ïç–ÅÅ¯Ω	’…•—ºΩ…’π—•µîΩâ…Ω›Õï»µï·—ïπÕ•ΩπÄ∏(»∏ÅΩ¡‰Å—°îÅï·—ïπÕ•Ω∏Å%ÅÕ°Ω›∏ÅΩ∏Å•—ÃÅçÖ…ê∏(Ã∏Å%∏Å-ΩπÕΩ±î∞Å…’∏ÅÅâÖÕ†Å¯Ω	’…•—ºΩÕç…•¡—ÃΩ•πÕ—Ö±∞µâ…ÖŸîµ—Öàµ°ΩÕ–πÕ†ÅaQ9M%=9}%Ä∞(ÄÄÅ…ï¡±Öç•πúÅÅaQ9M%=9}%ÄÅ›•—†Å—°Ö–Å%∏(–∏ÅIïÕ—Ö…–Å	…ÖŸîÅ=…•ù•∏ÅÕºÅ•–ÅçΩππïç—ÃÅ—ºÅ—°îÅ±ΩçÖ∞Å°ΩÕ–∏ÅQ°îÅï·—ïπÕ•Ω∏Å¡Ω¡’¿(ÄÄÅë•Õ¡±ÖÂÃÅ—°îÅçΩ’π–Å•–ÅÕïïÃ∏(‘∏ÅM—Ö…–Å	’…•—ºÅ›•—†ÅÄ¥µïπÖâ±îµâ…ÖŸîµ—ÖâÕÄÅÖπêÅÖ¡¡…ΩŸîÅÑÅ—ÖàµçΩ’π–Å…ïÖê∏(ÿ∏ÅQºÅ±ΩçÖ—îÅΩ»ÅÕ›•—ç†Å—ÖâÃ∞ÅΩ¡ï∏Å—°îÅ	’…•—ºÅï·—ïπÕ•Ω∏Å¡Ω¡’¿ÅÖπêÅç°ΩΩÕî(ÄÄÄ®©πÖâ±îÅ—ÖàÅ±Öâï±Ã®®ÅΩπçî∏ÅQ°ï∏Å	’…•—ºÅÖÕ≠ÃÅÖ¡¡…ΩŸÖ∞ÅôΩ»ÅïÖç†Å—•—±îÅÕïÖ…ç†(ÄÄÅÖπêÅÕï¡Ö…Ö—ï±‰ÅôΩ»ÅïÖç†Å—ÖàÅÕ›•—ç†∏(‹∏ÅQºÅ…ïÖêÅΩ»ÅΩ¡ï…Ö—îÅÑÅ¡Öùî∞ÅÕ—Ö…–Åç°Ö–Å›•—†ÅÄ¥µïπÖâ±îµâ…Ω›Õï»µçΩπ—…Ω±ÄÅÖπê(ÄÄÅΩ¡ï∏Å—°îÅï·—ïπÕ•Ω∏Å¡Ω¡’¿∏Å°ΩΩÕîÄ®©πÖâ±îÅ—°•ÃÅÕ•—î®®ÅôΩ»ÅΩπîÅΩ…•ù•∏ÅΩ»(ÄÄÄ®©πÖâ±îÅÖ±∞Å›ïâÕ•—ïÃ®®ÅΩπçîÅôΩ»Å…ïù’±Ö»Å!QQ@Ω!QQALÅ¡ÖùïÃ∏Å	…ΩÖêÅÖççïÕÃÅ•Ã(ÄÄÅù…Öπ—ïêÅΩπ±‰ÅÖô—ï»Å—°îÅâ…Ω›Õï»ùÃÅ¡ï…µ•ÕÕ•Ω∏Å¡…Ωµ¡–∏ÅAÖùîÅ—ï·–Å•ÃÅ…ï—’…πïê(ÄÄÅΩπ±‰Å—ºÅ—°îÅ±ΩçÖ∞Å	’…•—ºÅµΩëï∞ÅÖô—ï»ÅÖ¡¡…ΩŸÖ∞ÏÅïÖç†Åç±•ç¨∞Å—ï·–Åïπ—…‰∞ÅÕç…Ω±∞∞(ÄÄÅ≠ï‰Å¡…ïÕÃ∞ÅΩ»Å°•Õ—Ω…‰ÅπÖŸ•ùÖ—•Ω∏ÅÖ±ÕºÅ…ï≈’•…ïÃÅ•—ÃÅΩ›∏ÅÖ¡¡…ΩŸÖ∞∏ÅAÖÕÕ›Ω…êÅÖπêÅô•±îÅô•ï±ëÃ(ÄÄÅÖ…îÅ…ïô’Õïê∏ÅM’âµ•——•πú∞ÅÕïπë•πú∞Å¡’…ç°ÖÕ•πú∞Å¡’â±•Õ°•πú∞ÅΩ»ÅëïÕ—…’ç—•Ÿî(ÄÄÅÖç—•ΩπÃÅπïïêÅÑÅÕï¡Ö…Ö—îÅï·¡±•ç•–ÅÖ¡¡…ΩŸÖ∞ÅÖ–Å—°îÅÖç—•Ω∏Å¡…Ωµ¡–∏((ååÅM—Ö…–ÅÖπêÅ—ïÕ–()·•–Å—°îÅç’……ïπ–Åç°Ö–Å›•—†Å—…∞≠∞Å—°ï∏Å’ÕîÅ—°îÅÖ±∞µ—ΩΩ±ÃÅ±ΩçÖ∞ÅëïÕ≠—Ω¿Å¡…Ωô•±îË()ÅÅÅâÖÕ†)çêÅ¯Ω	’…•—º(∏ΩÕç…•¡—ÃΩÕ—Ö…–µç°Ö–πÕ†)ÅÅÄ()Q°•ÃÅÕï—ÃÅ—°îÅâ…Ö•∏Åë…•Ÿî∞ÅµΩëï∞∞ÅÖπêÅçΩπ—ï·–ÅÕ•Èî∞Å—°ï∏Åï·¡ΩÕïÃÅÕç…ïï∏Å=H∞)-]•∏ÅëïÕ≠—Ω¿ÅçΩπ—…Ω±Ã∞Å	…ÖŸîÅ—ÖàΩ¡ÖùîΩÕïÖ…ç†Å—ΩΩ±Ã∞ÅÖπêÅ±ΩçÖ∞Åç±•¡âΩÖ…êÅ›…•—•πú∏)Q°îÅÕç…•¡–Åç°ïç≠ÃÅ—°Ö–ÅÄΩµπ–Ωâ’…•—ºµâ…Ö•πÄÅ•ÃÅµΩ’π—ïêÅâïôΩ…îÅ’Õ•πúÅ•–∏Å9ï›±‰)ÖëëïêÅAÅçÖ¡Öâ•±•—•ïÃÅÕ°Ω’±êÅâîÅÖëëïêÅ—ºÅ—°•ÃÅΩπîÅ±Ö’πç°ï»∏ÅÖç†ÅÕïπÕ•—•Ÿî)…ïÖêÅΩ»ÅÖç—•Ω∏ÅÕ—•±∞ÅÖÕ≠ÃÅôΩ»Å•—ÃÅΩ›∏ÅÖ¡¡…ΩŸÖ∞ÏÅ—°•ÃÅΩπ±‰ÅµÖ≠ïÃÅ—°îÅ—ΩΩ±Ã)ÖŸÖ•±Öâ±îÅ•∏Å—°îÅÕïÕÕ•Ω∏∏ÅAï…ÕΩπÖ∞ÅôÖç—ÃÅ…ïµÖ•∏Åï·ç±’ëïêÅ’π±ïÕÃÅÕï¡Ö…Ö—ï±‰)ïπÖâ±ïê∏()M—Ö…–ÅÑÅπï‹ÅçΩπŸï…ÕÖ—•Ω∏∏ÅÕ¨Ë((¯ÅUÕîÅ—°îÅô•±ïÃÅ—ΩΩ∞Å—ºÅ±•Õ–Å¯ΩΩç’µïπ—Ã∏ÅIï¡Ω…–Åï·Öç–ÅπÖµïÃ∞ÅπΩ–Åù’ïÕÕïÃ∏()Q°ï∏Å—ïÕ–ÅÑÅ≠πΩ›∏Å¡’â±•åÅÕΩ’…çîÅô•±îË((¯ÅUÕîÅ—°îÅô•±ïÃÅ—ΩΩ∞Å—ºÅ…ïÖêÅ—°îÅô•…Õ–Åô•ŸîÅ±•πïÃÅΩòÅ¯Ω	’…•—ºΩI5πµê∏ÅM—Ö—îÅ—°îÅ¡Ö—†ÅÂΩ‘Å…ïÖê∏()Ω»ÅÖ¡¡±•çÖ—•Ω∏Åë•ÕçΩŸï…‰Ë((¯ÅUÕîÅÖ¡¡±•çÖ—•ΩπÃÅ—ºÅô•πêÅΩ±¡°•∏∏ÅºÅπΩ–Å±Ö’πç†Å•–ÅÂï–∏()=π±‰ÅÖô—ï»Å—°ïÕîÅ›Ω…¨∞ÅÖÕ¨Å	’…•—ºÅ—ºÅΩ¡ï∏ÅΩ±¡°•∏∏ÅQ°îÅ±Ö’πç†Å—ΩΩ∞Å…ï≈’•…ïÃÅÖ∏)Ω›πï»ÅÖ¡¡…ΩŸÖ∞Å•∏Å—°îÅç°Ö–ÅU$∏Å¡¡…ΩŸîÅ—°îÅÕ¡ïç•ô•åÅÖ¡¡±•çÖ—•Ω∏ÅÂΩ‘Å…ï≈’ïÕ—ïê∏)Q°îÅ—ΩΩ∞Åç°ïç≠ÃÅ—°îÅ±Ö’πç°ï»Å°ÖÕ†ÅÖπêÅ±Ö’πç°ïÃÅÑÅ¡…•ŸÖ—îÅÕπÖ¡Õ°Ω–ÅΩòÅ—°îÅÖ¡¡…ΩŸïê)âÂ—ïÃ∏ÅÅÕ’ççïÕÕô’∞Å…ï≈’ïÕ–ÅëΩïÃÅπΩ–ÅŸï…•ô‰ÅÑÅŸ•Õ•â±îÅΩ»Å’ÕÖâ±îÅ›•πëΩ‹∏((ååÅ]°Ö–ÅÖççïÕÃÅµïÖπÃ()=…ë•πÖ…‰Åë•…ïç—Ω…•ïÃÅÖç…ΩÕÃÅÄΩÄÅçÖ∏ÅâîÅâ…Ω›ÕïêÅÕ’â©ïç–Å—ºÅ1•π’‡Å¡ï…µ•ÕÕ•ΩπÃ∞)•πç±’ë•πúÅÖççïÕÕ•â±îÅµΩ’π—ïêÅÕ—Ω…Öùî∏ÅMÂµ±•π¨Å—Ö…ùï—ÃÅÖ…îÅç°ïç≠ïêÅÖùÖ•πÕ–Å—°î)ÕÖµîÅ¡Ω±•ç‰∞ÅÖπêÅÖç—’Ö∞Å¡Ö—†ÅΩ¡ïπÃÅ…ï©ïç–Å…ï¡±ÖçïêÅÕÂµ±•π¨ÅçΩµ¡Ωπïπ—Ã∏)Q°•ÃÅëΩïÃÅπΩ–Åù…Öπ–ÅÖëµ•π•Õ—…Ö—Ω»Å¡…•Ÿ•±ïùïÃÅΩ»ÅâÂ¡ÖÕÃÅ¡ï…µ•ÕÕ•Ω∏Åï……Ω…Ã∏()ΩµµΩ∏Åç…ïëïπ—•Ö∞ÅÕ—Ω…ïÃ∞Å≠ï‰ΩëÖ—ÖâÖÕîÅô•±ïÃ∞Å¡…•ŸÖ—îÅ	’…•—ºÅÕ—Ω…Öùî∞Åâ…Ω›Õï»)¡…Ωô•±ïÃ∞ÅÄΩ¡…ΩçÄ∞ÅÄΩÕÂÕÄ∞ÅÄΩëïŸÄ∞ÅÄΩ…’πÄ∞ÅÖπêÅÕï±ïç—ïêÅÕÂÕ—ï¥Åç…ïëïπ—•Ö∞ÅôΩ±ëï…Ã)Ö…îÅï·ç±’ëïê∏Å•…ïç—Ω…‰Å±•Õ—•πùÃÅµÖ‰ÅÕ°Ω‹ÅÑÅ¡…Ω—ïç—ïêÅïπ—…‰ùÃÅπÖµîÅ›•—°Ω’–)ù…Öπ—•πúÅ¡ï…µ•ÕÕ•Ω∏Å—ºÅΩ¡ï∏Å•–∏ÅQ°ïÕîÅï·ç±’Õ•ΩπÃÅçÖππΩ–Åëï—ïç–ÅïŸï…‰ÅÕïç…ï–Å•∏)Ö∏ÅÖ…â•—…Ö…‰ÅëΩç’µïπ–ÏÅ’ÕîÅÄ¥µπºµô•±ïÕÄÅ—ºÅë•ÕÖâ±îÅÖ±∞Åô•±îΩÖ¡¡±•çÖ—•Ω∏Å—ΩΩ±Ã∏()Qï·–Å…ïÖëÃÅÕ’¡¡Ω…–Å…ïù’±Ö»ÅUQ¥‡Åô•±ïÃÅ’¿Å—ºÄ»‘ÿÅ-•∏ÅÖç†Å…ïÕ¡ΩπÕîÅ…ï—’…πÃÅÑ)âΩ’πëïêÅ±•πîÅ…ÖπùîÅÖπêÅÖ–ÅµΩÕ–Ä‡∞¿¿¿Åç°Ö…Öç—ï…Ã∞Å›•—†Å—°îÅï·Öç–Å¡Ö—†∞Å—•µïÕ—Öµ¿∞)ÖπêÅçΩπ—ïπ–Å°ÖÕ†∏Å	•πÖ…‰Åô•±ïÃ∞Å•µÖùïÃ∞ÅAÃ∞ÅÖ…ç°•ŸïÃ∞Åµïë•Ñ∞ÅÖπêÅ±Ö…ùîÅô•±ïÃ)πïïêÅëïë•çÖ—ïêÅ…ïÖëï…ÃÅ—°Ö–ÅÖ…îÅπΩ–Å•µ¡±ïµïπ—ïêÅ°ï…î∏ÅÅô•±ïπÖµîÅÕïÖ…ç†Å±ΩΩ≠Ã)Ö–ÅπÖµïÃ∞ÅπΩ–ÅçΩπ—ïπ—Ã∞ÅÕ≠•¡ÃÅ°ïÖŸ‰Åëï¡ïπëïπç‰ΩçÖç°îÅ—…ïïÃ∞Å…ï—’…πÃÅÖ–ÅµΩÕ–(Ã¿ÅµÖ—ç°ïÃ∞ÅÖπêÅï·Öµ•πïÃÅÖ–ÅµΩÕ–Ä»¿∞¿¿¿Åïπ—…•ïÃ∏Å•…ïç–Åâ…Ω›Õ•πúÅÕ’¡¡Ω…—ÃÅ¡Öù•πú∏()¡¡±•çÖ—•Ω∏Åë•ÕçΩŸï…‰ÅçΩŸï…ÃÅΩ…ë•πÖ…‰ÅÄπëïÕ≠—Ω¡ÄÅô•±ïÃÅ•∏ÅÕÂÕ—ï¥∞Å’Õï»∞ÅMπÖ¿∞)ÖπêÅ±Ö—¡Ö¨Å±Ö’πç°ï»Åë•…ïç—Ω…•ïÃ∏ÅMÂµ±•π¨Å±Ö’πç°ï…ÃÅÖπêÅπΩπ…ïù’±Ö»Å±Ö’πç°ï…Ã)Ö…îÅÕ≠•¡¡ïê∞ÅÕºÅ—°•ÃÅ•ÃÅπΩ–ÅÑÅ±•Õ–ÅΩòÅïŸï…‰Åï·ïç’—Öâ±îÅΩ»Å•πÕ—Ö±±ïêÅ¡Öç≠Öùî∏)MΩµîÅëïÕ≠—Ω¿µ±Ö’πç°ï»Åâï°ÖŸ•Ω…ÃÅµÖ‰ÅπΩ–Å›Ω…¨Åô…Ω¥Å—°îÅ¡…•ŸÖ—îÅÕπÖ¡Õ°Ω–Å±ΩçÖ—•Ω∏∏)9ºÅï·ïç’—Öâ±îÅçΩµµÖπêÅ±•πîÅΩ»ÅUI0Å•ÃÅÖççï¡—ïêÅô…Ω¥Å—°îÅµΩëï∞ÅôΩ»Å±Ö’πç°•πú∏((ååÅ	Ω’πëÖ…•ïÃ()Q°ï…îÅ•ÃÅπºÅÖ…â•—…Ö…‰ÅÕ°ï±∞Åï·ïç’—•Ω∏∞Åô•±îÅïë•—•πúΩëï±ï—•Ω∏∞ÅÖççΩ’π–ÅÖççïÕÃ∞)Ω»ÅΩ’—âΩ’πêÅµïÕÕÖù•πúÅ•∏Å—°ïÕîÅ—ΩΩ±Ã∏Å¡¡±•çÖ—•Ω∏µ›•πëΩ‹ÅçΩπ—…Ω∞Å•ÃÅÑÅÕï¡Ö…Ö—î)Ω¡–µ•∏Å-]•∏Å•π—ïù…Ö—•Ω∏ÅëïÕç…•âïêÅâï±Ω‹∏)∏ÅΩ¡—•ΩπÖ∞ÅΩπîµÕ°Ω–ÅÕç…ïï∏Å=HÅ—ΩΩ∞Å•ÃÅÖŸÖ•±Öâ±îÅΩπ±‰Å›°ï∏ÅÑÅç°Ö–Å•ÃÅÕ—Ö…—ïê)›•—†ÅÄ¥µïπÖâ±îµÕç…ïï∏µ…ïÖëÄÄ°ÖπêÅ›•—°Ω’–ÅÄ¥µπºµô•±ïÕÄ§∏ÅÖç†ÅçÖ¡—’…îÅ…ï≈’•…ïÃ)Ö¡¡…ΩŸÖ∞∏Å-ÅM¡ïç—Öç±îÅçÖ¡—’…ïÃÅ—°îÅô’±∞ÅÕç…ïï∏ÅΩ»ÅÖç—•ŸîÅÖ¡¿Å›•πëΩ‹Å—ºÅÑÅ¡…•ŸÖ—îÅ—ïµ¡Ω…Ö…‰ÅôΩ±ëï»Ï)QïÕÕï…Öç–Å…ïÖëÃÅ—°îÅ•µÖùîÅ±ΩçÖ±±‰∞ÅÖπêÅ—°îÅ•µÖùîÅ•ÃÅëï±ï—ïêÅ•µµïë•Ö—ï±‰ÅÖô—ï»)¡…ΩçïÕÕ•πú∏Å=π±‰ÅâΩ’πëïêÅ…ïçΩùπ•ÈïêÅ—ï·–ÅÖπêÅÖ¡¡…Ω·•µÖ—îÅ±•πîÅçΩΩ…ë•πÖ—ïÃÅÖ…î)…ï—’…πïêÅ—ºÅ°ï±¿Å	’…•—ºÅë•Õ—•πù’•Õ†ÅÕ¡±•–µÕç…ïï∏Å…ïù•ΩπÃ∏Å=HÅçÖ∏Åµ•Õ…ïÖêÅ—ï·–)ÖπêÅëΩïÃÅπΩ–Å•ëïπ—•ô‰ÅΩâ©ïç—ÃÅΩ»Å›°•ç†ÅÖ¡¿ÅΩ›πÃÅÑÅ…ïù•Ω∏∏ÅIï—’…πïêÅ—ï·–ÅµÖ‰Å…ïµÖ•∏)•∏Å±ΩçÖ∞ÅŸîÅÕïÕÕ•Ω∏Å°•Õ—Ω…‰∏Å9ºÅâÖç≠ù…Ω’πêÅçÖ¡—’…îÅΩçç’…Ã∏ÅQ°îÅÖ¡¡…ΩŸÖ∞)…ïÕï…ŸÖ—•Ω∏ÅÖπêÅëÂπÖµ•åÅ—ΩΩ∞Å±•Õ–Å±•µ•–Å	’…•—ºÅ—ºÅΩπîÅÖ——ïµ¡—ïêÅçÖ¡—’…îÅ¡ï»)’Õï»ÅµïÕÕÖùîÏÅÕïπêÅÑÅπï‹ÅµïÕÕÖùîÅ—ºÅ…ï≈’ïÕ–ÅÖπΩ—°ï»ÅŸ•ï‹∏()]°ï∏Å—°îÅΩ›πï»ÅÕÖÂÃÉäq—°îÅ¡Öùóät∞Éäq°ï…óät∞ÅΩ»Éäq›°Ö–Å•ÃÅΩ∏ÅÕç…ïïªätÅ›•—°Ω’–ÅπÖµ•πú)Ö∏ÅÖ¡¿∞Å	’…•—ºÅ—…ïÖ—ÃÅ—°Ö–ÅÖÃÅ—°îÅŸ•Õ•â±îÅëïÕ≠—Ω¿ÅÖπêÅ’ÕïÃÅÖ¡¡…ΩŸïêÅÕç…ïï∏Å=H∞)πΩ–Å	…ÖŸîÅ¡ÖùîÅ…ïÖë•πú∏Å%òÅµ’±—•¡±îÅ›•πëΩ›Ã∞Åë•Õ¡±ÖÂÃ∞ÅΩ»Å=HÅ…ïù•ΩπÃÅçΩ’±êÅâî)—°îÅÕΩ’…çî∞Å•–ÅÖÕ≠ÃÅ›°•ç†ÅΩπîÅâïôΩ…îÅçΩ¡Â•πú∏Å9ÖµïêÅ	…ÖŸîÅ…ï≈’ïÕ—ÃÅ’ÕîÅ—°î)	…ÖŸîÅ—ΩΩ±Ã∏Åïπï…•åÅÕç…ïï∏Å=HÅπïïëÃÅÄ¥µïπÖâ±îµÕç…ïï∏µ…ïÖëÄÅÖ–Åç°Ö–ÅÕ—Ö…—’¿∏()M—Ö…–Å›•—†ÅÄ¥µïπÖâ±îµëïÕ≠—Ω¿µçΩπ—…Ω±ÄÅÖÃÅ›ï±∞Å›°ï∏Å	’…•—ºÅÕ°Ω’±êÅ±ΩçÖ—îÅÖ∏ÅÖ¡¿)›•πëΩ‹ÅÖπêÅôΩç’ÃÅ•–ÅâïôΩ…îÅçÖ¡—’…•πúÅΩπ±‰Å—°îÅÖç—•ŸîÅ›•πëΩ‹∏ÅQ°îÅçΩµâ•πïê)Å•πÕ¡ïç—}›•πëΩ›ÄÅÖ¡¡…ΩŸÖ∞Å≠ïï¡ÃÅÑÅÕïçΩπêÅë•Ö±ΩúÅô…Ω¥ÅÕ—ïÖ±•πúÅôΩç’ÃÅâï—›ïï∏)Öç—•ŸÖ—•Ω∏ÅÖπêÅçÖ¡—’…î∏Å-ùÃÅ-]•∏Å›•πëΩ‹)ÕπÖ¡Õ°Ω–Å•πç±’ëïÃÅçÖ¡—•ΩπÃÅôΩ»Å—°îÅç’……ïπ–Å…ï≈’ïÕ–ÅΩπ±‰∏Å%–Å•ÃÅ≈’ï…•ïêÅΩ∏)ëïµÖπêÅ—°…Ω’ù†ÅÑÅ—ïµ¡Ω…Ö…‰Å-]•∏ÅÕç…•¡–ÅÖπêÅÑÅ¡…•ŸÖ—î∞ÅçΩ……ï±Ö—ïê∞ÅΩπîµ…ï≈’ïÕ–)µ	’ÃÅÕï…Ÿ•çî∏ÅÖ¡—•ΩπÃÅÖ…îÅ…ï—’…πïêÅ—ºÅ±ΩçÖ∞Åç°Ö–Å°•Õ—Ω…‰Åâ’–ÅÖ…îÅπΩ–Å›…•——ï∏)—ºÅ±ΩùÃ∞Å—°îÅÖççïÕÃÅÖ’ë•–Å—Ö…ùï–∞ÅΩ»ÅÖ¡¿ÅÖç—•Ÿ•—‰ÅÕ’µµÖ…•ïÃ∏ÅQ°îÅôΩç’ÃÅ—ΩΩ∞)…ïç°ïç≠ÃÅ—°îÅï·Öç–Å•π—ï…πÖ∞Å%ÅÖ–Åï·ïç’—•Ω∏Å—•µî∞Å—°ï∏Å’πµ•π•µ•ÈïÃÅÖπêÅÖç—•ŸÖ—ïÃ)—°Ö–Å›•πëΩ‹∏Å%–ÅµÖ‰ÅÕ›•—ç†ÅŸ•…—’Ö∞ÅëïÕ≠—Ω¡ÃÏÅÅôΩç’Õ}›•πëΩ›ÄÅ•—Õï±òÅçÖππΩ–Åç±•ç¨)Ω»Å—Â¡î∏ÅY•Õ•â±îÅ—ï·–Å=HÅ…ïµÖ•πÃÅÑÅÕï¡Ö…Ö—îÅÖ¡¡…ΩŸïêÅÕ—ï¿∏Å]•—†ÅëïÕ≠—Ω¿ÅçΩπ—…Ω∞)ïπÖâ±ïê∞ÅÅëïÕ≠—Ω¡}•πÕï…—}—ï·—ÄÅçÖ∏Å¡±ÖçîÅï·Öç–ÅÖ¡¡…ΩŸïêÅ—ï·–ÅÖ–Å—°îÅçÖ…ï–Å•∏ÅÑ)ôΩç’ÕïêÅPµMA$Åïë•—Öâ±îÅô•ï±ê∏Å%–ÅŸï…•ô•ïÃÅ—°îÅëïÕ—•πÖ—•Ω∏Å›•πëΩ‹Å•ÃÅÖç—•Ÿî∞)ëΩïÃÅπΩ–Å…ï¡±ÖçîÅï·•Õ—•πúÅ—ï·–∞ÅÖπêÅëΩïÃÅπΩ–Å…ïÖêÅΩ»ÅµΩë•ô‰Å—°îÅÕÂÕ—ï¥Åç±•¡âΩÖ…ê∏)Ω»Åâ…Ω›Õï»µ—ºµπÖ—•ŸîÅ—…ÖπÕôï»∞ÅÅâ…Ω›Õï…}çΩ¡Â}—ï·—ÄÅ›…•—ïÃÅï·Öç–Å—ï·–Åô…Ω¥Å—°î)Ω›πï»ÅΩ»ÅÑÅç’……ïπ–Å¡ÖùîÅ…ïÕ’±–Å—ºÅ—°îÅÕÂÕ—ï¥Åç±•¡âΩÖ…êÅÖô—ï»Å•—ÃÅΩ›∏ÅÖ¡¡…ΩŸÖ∞∏)Iï±ΩÖêÅ—°îÅ’π¡Öç≠ïêÅï·—ïπÕ•Ω∏ÅÖπêÅù…Öπ–Å•—ÃÅΩ¡—•ΩπÖ∞Åç±•¡âΩÖ…êµ›…•—îÅ¡ï…µ•ÕÕ•Ω∏)ΩπçîÏÅïŸï…‰ÅçΩ¡‰ÅÕ—•±∞Å…ï≈’•…ïÃÅÑÅÕï¡Ö…Ö—îÅÖ¡¡…ΩŸÖ∞ÅÕ°Ω›•πúÅ—°îÅô’±∞Å—ï·–∏)	’…•—ºÅçÖππΩ–Å…ïÖêÅç±•¡âΩÖ…êÅçΩπ—ïπ—Ã∏ÅÅ±Ö—ï»ÅÅëïÕ≠—Ω¡}•πÕï…—}—ï·—ÄÅ¡±ÖçïÃÅ—°î)ÕÖµîÅ—ï·–ÅÖ–Å—°îÅëïÕ—•πÖ—•Ω∏Åô•ï±êÅ›•—°Ω’–ÅÕ•µ’±Ö—•πúÅ—…∞≠XÏÅâΩ—†ÅÖç—•ΩπÃÅµ’Õ–)…ï¡Ω…–ÅÕ’ççïÕÃÅâïôΩ…îÅ	’…•—ºÅç±Ö•µÃÅ—°îÅ—…ÖπÕôï»ÅçΩµ¡±ï—ïê∏)Åµ•ÕÕ•πúÅ-]•∏Å›•πëΩ‹ÅëΩïÃÅπΩ–Å¡…ΩŸîÅ—°îÅÖ¡¿Å¡…ΩçïÕÃÅ•ÃÅÕ—Ω¡¡ïê∞ÅÕ•πçîÅ—…Ö‰µΩπ±‰)ÖπêÅâÖç≠ù…Ω’πêÅÖ¡¡ÃÅµÖ‰Å°ÖŸîÅπºÅµÖπÖùïêÅ›•πëΩ‹∏ÅÅÖç—•Ÿï}›•πëΩ›ÄÅ=HÅ…ïÖëÃÅ—°î)ôΩç’ÕïêÅ›•πëΩ‹ÅÖô—ï»ÅÖ¡¡…ΩŸÖ∞ÏÅÅô’±±}Õç…ïïπÄÅ…ïµÖ•πÃÅÖŸÖ•±Öâ±îÅôΩ»ÅëïÕ≠—Ω¿µ›•ëî)≈’ïÕ—•ΩπÃ∏Å-]•∏Å›•πëΩ‹ÅçΩπ—…Ω∞Å•ÃÅç’……ïπ—±‰ÅÕçΩ¡ïêÅ—ºÅ-Å]ÖÂ±Öπê∏)I’∏Å—°îÅ±ΩçÖ∞Å¡…ΩâîÅ›•—†ÅÅâÖÕ†ÅÕç…•¡—ÃΩ¡…Ωâï}≠›•π}›•πëΩ›ÃπÕ°Ä∏Å%–Å¡…•π—ÃÅ—°î)Õç…•¡–Å±ΩÖêÅ%∞Å…’∏Å…ïÕ’±–∞Å›°ï—°ï»Å—°îÅµ	’ÃÅ…ï¡Ω…–ÅÖ……•Ÿïê∞ÅÖπêÅ—°îÅ…Ö‹Å)M=8)¡ÖÂ±ΩÖê∞Å—°ï∏Å’π±ΩÖëÃÅ—°îÅ’π•≈’îÅÕç…•¡–ÅÖπêÅ…ïµΩŸïÃÅ•—ÃÅ—ïµ¡Ω…Ö…‰ÅÕΩ’…çî∏)=¡ïπ•πúÅÖ∏ÅÖ¡¿ÅëΩïÃÅπΩ–Åù…Öπ–ÅÖççïÕÃÅ—ºÅïŸï…Â—°•πúÅ•πÕ•ëîÅ•–∏Å9Ö—•ŸîÅ—ï·–)•πÕï…—•Ω∏ÅΩπ±‰ÅÕ’¡¡Ω…—ÃÅÑÅ’π•≈’îÅôΩç’ÕïêÅÖççïÕÕ•â±îÅô•ï±êÏÅ’πÕ’¡¡Ω…—ïêÅΩ»)Öµâ•ù’Ω’ÃÅô•ï±ëÃÅÖ…îÅ…ï©ïç—ïê∏Å=—°ï»ÅÖ¡¿µÕ¡ïç•ô•åÅA%ÃÅÖπêÅÕçΩ¡ïêÅ›…•—îÅÖç—•ΩπÃ)Ö…îÅ±Ö—ï»Å•π—ïù…Ö—•ΩπÃ∏ÅIïÖêÅÖççïÕÃÅëΩïÃÅπΩ–ÅµïÖ∏ÅïŸï…‰Åô•±îÅ°ÖÃÅâïï∏Å•πëï·ïê)Ω»ÅµïµΩ…•Èïê∏()Q°îÅç’……ïπ–ÅµΩëï∞ÅçΩπô•ù’…Ö—•Ω∏Å•ÃÅ±ΩçÖ∞µΩπ±‰∏ÅIï≈’ïÕ—ïêÅï·çï…¡—ÃÅïπ—ï»Å±ΩçÖ∞)ç°Ö–ΩÕïÕÕ•Ω∏Å°•Õ—Ω…‰ÏÅëï±ï—•πúÅÑÅÕΩ’…çîÅô•±îÅëΩïÃÅπΩ–Åëï±ï—îÅ¡…•Ω»Åç°Ö–ÅçΩπ—ïπ–∏)ç—•ΩπÃÅÖ…îÅ±ΩùùïêÅ±ΩçÖ±±‰Å›•—†ÅÖç—•Ω∏∞Å—Ö…ùï–∞Å—•µî∞ÅÖπêÅΩ’—çΩµî∞Å…ï—Ö•π•πú)—°îÅπï›ïÕ–Ä»∞¿¿¿ÅÖ’ë•–Å…ïçΩ…ëÃÏÅô•±îÅçΩπ—ïπ—ÃÅÖ…îÅπΩ–ÅçΩ¡•ïêÅ•π—ºÅ—°îÅÖ’ë•–Å±Ωú∏)¡¡…ΩŸïêÅ±Ö’πç°ï»ÅÕπÖ¡Õ°Ω—ÃÅÖ…îÅ…ï—Ö•πïêÅ’πëï»Å¡…•ŸÖ—îÅ	’…•—ºÅÕ—Ω…Öùî∏ÅMΩ’…çî)çΩëîÅÖπêÅÕÂπ—°ï—•åÅ—ïÕ—ÃÅÖ…îÅ¡’Õ°ïêÅ—ºÅ•—!’à∞ÅπΩ–Åô•±îÅçΩπ—ïπ—Ã∞Å•πŸïπ—Ω…‰∞)Ö¡¡±•çÖ—•Ω∏Å±•Õ—Ã∞Å±Ö’πç°ï»ÅÕπÖ¡Õ°Ω—Ã∞ÅΩ»ÅÖ’ë•–Å…ïçΩ…ëÃ∏()QºÅïπÖâ±îÅ—°îÅΩπîµÕ°Ω–ÅÕç…ïï∏Å=HÅ—ΩΩ∞ÅôΩ»ÅÑÅÕïÕÕ•Ω∏Ë()ÅÅÅâÖÕ†)çêÅ¯Ω	’…•—º)¡Â—°Ω∏ÃÄµ¥Åâ’…•—ºÅç°Ö–Ä¥µµΩëï∞Åâ’…•—ºµ±ΩçÖ∞Ë·àÄ¥µçΩπ—ï·–µ—Ω≠ïπÃÄ‡ƒ‰»Ä¥µïπÖâ±îµÕç…ïï∏µ…ïÖê)ÅÅÄ()Ω»ÅπÖµïêµÖ¡¿Å›•πëΩ‹Åëï—ïç—•Ω∏∞ÅôΩç’Ã∞ÅÖπêÅÖç—•Ÿîµ›•πëΩ‹Å=H∞ÅïπÖâ±îÅâΩ—†Ë()ÅÅÅâÖÕ†)¡Â—°Ω∏ÃÄµ¥Åâ’…•—ºÅç°Ö–Ä¥µµΩëï∞Åâ’…•—ºµ±ΩçÖ∞Ë·àÄ¥µçΩπ—ï·–µ—Ω≠ïπÃÄ‡ƒ‰»Åp(ÄÄ¥µïπÖâ±îµÕç…ïï∏µ…ïÖêÄ¥µïπÖâ±îµëïÕ≠—Ω¿µçΩπ—…Ω∞)ÅÅÄ()Ω»Å—°îÅâ…Ω›Õï»ÅÖç—•Ω∏∞ÅÖëêÅÄ¥µïπÖâ±îµâ…Ω›Õï»µÕïÖ…ç°ÄÅÖ±ΩπùÕ•ëî)Ä¥µïπÖâ±îµëïÕ≠—Ω¿µçΩπ—…Ω∞Ä¥µïπÖâ±îµÕç…ïï∏µ…ïÖëÄ∏Å	’…•—ºÅ¡…ïÕïπ—ÃÅ—°îÅï·Öç–Å≈’ï…‰)ÖπêÅΩπîµÕ°Ω–Å±ΩçÖ∞Å=HÅçÖ¡—’…îÅôΩ»ÅÖ¡¡…ΩŸÖ∞∞Å—°ï∏ÅΩ¡ïπÃÅÑÅô•·ïê)Å°——¡ÃËºΩÕïÖ…ç†πâ…ÖŸîπçΩ¥ΩÕïÖ…ç°ÄÅUI0Å•∏Å—°îÅ…ïù•Õ—ï…ïêÅ	…ÖŸîÅ=…•ù•∏Å±Ö’πç°ï»∏)=π±‰Å—°Ö–Å≈’ï…‰Å•ÃÅÕïπ–ÏÅç°Ö–Å°•Õ—Ω…‰∞ÅµïµΩ…‰∞Åô•±ïÃ∞ÅÖπêÅ•πôï……ïêÅçΩπ—ï·–ÅÖ…î)πΩ–ÅÖëëïê∏Å-]•∏Å•ëïπ—•ô•ïÃÅ—°îÅ	…ÖŸîÅ›•πëΩ‹ÅÖπêÅ±ΩçÖ∞Å=HÅç°ïç≠ÃÅ•—ÃÅŸ•Õ•â±î)—ï·–∏Å=HÅçÖ∏Åµ•Õ…ïÖêÅ—ï·–ÅÖπêÅëΩïÃÅπΩ–Å¡…ΩŸîÅ…ïÕ’±–ÅÖçç’…Öç‰∏ÅQ°îÅ—ïµ¡Ω…Ö…‰)•µÖùîÅ•ÃÅëï±ï—ïêÏÅ=HÅ—ï·–ÅµÖ‰Å…ïµÖ•∏Å•∏Å±ΩçÖ∞Åç°Ö–Å°•Õ—Ω…‰∏ÅQ°•ÃÅÖç—•Ω∏ÅëΩïÃ)πΩ–Åç±•ç¨Å…ïÕ’±—Ã∞Åô•±∞ÅΩ»ÅÕ’âµ•–ÅôΩ…µÃ∞ÅΩ»ÅëΩ›π±ΩÖêÅô•±ïÃ∏()Q°ï∏Åï·¡±•ç•—±‰ÅÖÕ¨Å	’…•—ºÅ—ºÅ…ïÖêÅ—°îÅç’……ïπ–ÅÕç…ïï∏ÅÖπêÅÖ¡¡…ΩŸîÅ—°îÅï·Öç–)çÖ¡—’…îÅ•∏Å—°îÅç°Ö–∏ÅÅÕ¡ïç—Öç±ïÄÅÖπêÅÅ—ïÕÕï…Öç—ÄÅµ’Õ–ÅÖ±…ïÖë‰ÅâîÅ•πÕ—Ö±±ïê∏ÅQ°î)—ΩΩ∞Å•ÃÅÖâÕïπ–Åâ‰ÅëïôÖ’±–ÅÖπêÅ’πÖŸÖ•±Öâ±îÅ›°ï∏ÅÄ¥µπºµô•±ïÕÄÅΩ»ÅÄ¥µÖç—•Ÿ•—‰µΩπ±ÂÄ)•ÃÅ’Õïê∏ÅQ°•ÃÅ•ÃÅÑÅô•…Õ–ÅëïÕ≠—Ω¿µçΩπ—ï·–ÅÕ±•çîÏÅŸ•Õ’Ö∞ÅÕçïπîÅ’πëï…Õ—Öπë•πúÅÖπê)ùïπï…Ö∞ÅëïÕ≠—Ω¿Å—Â¡•πúΩç±•ç≠•πúÅ…ïµÖ•∏Åô’—’…îÅ•π—ïù…Ö—•ΩπÃ∏()Q°îÅâÖç≠ïπêÅÖπêÅçΩµ¡•±ïêÅ—ΩΩ∞Åë•ÕçΩŸï…‰Å›ï…îÅ—ïÕ—ïêÅ±ΩçÖ±±‰∏ÅQ°îÅ…ïÕ—…•ç—ïê)ëïŸï±Ω¡µïπ–ÅÕïÕÕ•Ω∏ÅçÖππΩ–Å…ïÖç†Å—°îÅµΩëï∞ÅÕï…Ÿï»ÅΩ»Å±Ö’πç†ÅëïÕ≠—Ω¿ÅÖ¡¡ÃÏ)µΩëï∞µ•π•—•Ö—ïêÅ—ΩΩ∞Å’ÕîÅÖπêÅÖç—’Ö∞ÅëïÕ≠—Ω¿Å±Ö’πç°•πúÅ…ï≈’•…îÅΩ›πï»µ…’∏Å—ïÕ—•πú∏
+# File and application access
+
+Burito now has explicit host tools, in addition to the inventory summary:
+
+| Tool | Capability | Approval |
+| --- | --- | --- |
+| `files` | Browse folders, read bounded UTF-8 text, search filenames | No extra prompt |
+| `applications` | Find registered desktop launchers and their exact IDs/hashes | No extra prompt |
+| `open_application` | Submit a launch request for a selected, unchanged launcher | Every launch |
+| `desktop_windows` | On-demand snapshot of KWin internal IDs, resource classes, captions, desktop/minimized/active state | No extra prompt; only exposed by `--enable-desktop-control` |
+| `focus_window` | Unminimize and focus one exact window by internal ID | Every focus |
+| `desktop_insert_text` | Insert exact owner-approved text at the caret in a focused, accessible native text field; does not replace text or access the system clipboard | Requires `--enable-desktop-control`; each insertion shows exact text and destination window for approval |
+| `clipboard_write_text` | Write exact owner-approved or OCR-extracted text to the local system clipboard; does not read the clipboard or require Brave | Requires `--enable-desktop-control`, local `wl-copy` or `xclip`, and separate approval showing all text |
+| `inspect_window` | After approval, focus one exact window and immediately OCR its active window | One approval covers focus and capture |
+| `browser_search` | Search one exact query in the regular Brave profile, then capture its active window once with local OCR | Every search and capture under one explicit approval; query may remain in browser history; opt in with `--enable-browser-search` |
+| `browser_navigate` | Open an exact HTTP/HTTPS URL in the active Brave tab | Every navigation requires approval |
+| `browser_read_page`, `browser_page_action` | Read and briefly summarize visible text from the active Brave page using the configured local model; click a unique visible label, fill a non-password field, press Enter/Tab/Escape, scroll, or go back/forward | Opt in with `--enable-browser-control`; grant one site or all HTTP/HTTPS sites from the extension popup; every read/action asks approval |
+| `browser_copy_text` | Write exact owner-approved text from the owner or current page result to the system clipboard; clipboard reads are not available | Requires `--enable-browser-control`, optional clipboard permission from the extension popup, and a separate approval showing the full text for every copy |
+| `browser_tabs` | Read the open-tab count reported by the optional Brave extension | Every read requires approval; extension sends only a count; opt in with `--enable-brave-tabs` |
+
+These run through a local Python bridge using the normal account's permissions.
+They are not eve's built-in sandbox file tools. Default shell, file-write, web,
+generic agent, and self-modification tools remain disabled.
+
+Brave search sends the exact approved query to Brave Search over the internet;
+Brave may make its normal page/resource requests and the query may remain in
+browser history. Burito captures only the active Brave window with local OCR.
+OCR may misread page text and does not prove result accuracy. It does not click
+a result, submit a form, or download a file. Search-page content is untrusted
+data.
+
+## Brave tab extension
+
+The optional Manifest V3 extension counts open tabs by default and sends only
+the integer count to a local Native Messaging host. Finding a tab requires the
+owner to grant the optional `tabs` permission from the extension popup. After
+that, an approved lookup sends only titles matching the owner-provided phrase
+and temporary tab IDs through a short-lived local command channel. URLs and
+page contents are never sent. Switching tabs is a separate approval-gated
+action bound to one exact title and ID; stale or renamed tabs are rejected.
+The count snapshot is short-lived in `XDG_RUNTIME_DIR`; Burito rejects snapshots
+older than 15 seconds. Tab titles are not written to logs or persistent memory.
+
+To install it manually:
+
+1. Open `brave://extensions`, enable Developer mode, choose **Load unpacked**,
+   and select `~/Burito/runtime/browser-extension`.
+2. Copy the extension ID shown on its card.
+3. In Konsole, run `bash ~/Burito/scripts/install-brave-tab-host.sh EXTENSION_ID`,
+   replacing `EXTENSION_ID` with that ID.
+4. Restart Brave Origin so it connects to the local host. The extension popup
+   displays the count it sees.
+5. Start Burito with `--enable-brave-tabs` and approve a tab-count read.
+6. To locate or switch tabs, open the Burito extension popup and choose
+   **Enable tab labels** once. Then Burito asks approval for each title search
+   and separately for each tab switch.
+7. To read or operate a page, start chat with `--enable-browser-control` and
+   open the extension popup. Choose **Enable this site** for one origin or
+   **Enable all websites** once for regular HTTP/HTTPS pages. Broad access is
+   granted only after the browser's permission prompt. Page text is returned
+   only to the local Burito model after approval; each click, text entry, scroll,
+   key press, or history navigation also requires its own approval. Password and file fields
+   are refused. Submitting, sending, purchasing, publishing, or destructive
+   actions need a separate explicit approval at the action prompt.
+
+## Start and test
+
+Exit the current chat with Ctrl+C, then use the all-tools local desktop profile:
+
+```bash
+cd ~/Burito
+./scripts/start-chat.sh
+```
+
+This sets the brain drive, model, and context size, then exposes screen OCR,
+KWin desktop controls, Brave tab/page/search tools, and local clipboard writing.
+The script checks that `/mnt/burito-brain` is mounted before using it. Newly
+added PC capabilities should be added to this one launcher. Each sensitive
+read or action still asks for its own approval; this only makes the tools
+available in the session. Personal facts remain excluded unless separately
+enabled.
+
+Start a new conversation. Ask:
+
+> Use the files tool to list ~/Documents. Report exact names, not guesses.
+
+Then test a known public source file:
+
+> Use the files tool to read the first five lines of ~/Burito/README.md. State the path you read.
+
+For application discovery:
+
+> Use applications to find Dolphin. Do not launch it yet.
+
+Only after these work, ask Burito to open Dolphin. The launch tool requires an
+owner approval in the chat UI. Approve the specific application you requested.
+The tool checks the launcher hash and launches a private snapshot of the approved
+bytes. A successful request does not verify a visible or usable window.
+
+## What access means
+
+Ordinary directories across `/` can be browsed subject to Linux permissions,
+including accessible mounted storage. Symlink targets are checked against the
+same policy, and actual path opens reject replaced symlink components.
+This does not grant administrator privileges or bypass permission errors.
+
+Common credential stores, key/database files, private Burito storage, browser
+profiles, `/proc`, `/sys`, `/dev`, `/run`, and selected system credential folders
+are excluded. Directory listings may show a protected entry's name without
+granting permission to open it. These exclusions cannot detect every secret in
+an arbitrary document; use `--no-files` to disable all file/application tools.
+
+Text reads support regular UTF-8 files up to 256 KiB. Each response returns a
+bounded line range and at most 8,000 characters, with the exact path, timestamp,
+and content hash. Binary files, images, PDFs, archives, media, and large files
+need dedicated readers that are not implemented here. A filename search looks
+at names, not contents, skips heavy dependency/cache trees, returns at most
+30 matches, and examines at most 20,000 entries. Direct browsing supports paging.
+
+Application discovery covers ordinary `.desktop` files in system, user, Snap,
+and Flatpak launcher directories. Symlink launchers and nonregular launchers
+are skipped, so this is not a list of every executable or installed package.
+Some desktop-launcher behaviors may not work from the private snapshot location.
+No executable command line or URL is accepted from the model for launching.
+
+## Boundaries
+
+There is no arbitrary shell execution, file editing/deletion, account access,
+or outbound messaging in these tools. Application-window control is a separate
+opt-in KWin integration described below.
+An optional one-shot screen OCR tool is available only when a chat is started
+with `--enable-screen-read` (and without `--no-files`). Each capture requires
+approval. KDE Spectacle captures the full screen or active app window to a private temporary folder;
+Tesseract reads the image locally, and the image is deleted immediately after
+processing. Only bounded recognized text and approximate line coordinates are
+returned to help Burito distinguish split-screen regions. OCR can misread text
+and does not identify objects or which app owns a region. Returned text may remain
+in local Eve session history. No background capture occurs. The approval
+reservation and dynamic tool list limit Burito to one attempted capture per
+user message; send a new message to request another view.
+
+When the owner says ‚Äúthe page‚Äù, ‚Äúhere‚Äù, or ‚Äúwhat is on screen‚Äù without naming
+an app, Burito treats that as the visible desktop and uses approved screen OCR,
+not Brave page reading. If multiple windows, displays, or OCR regions could be
+the source, it asks which one before copying. Named Brave requests use the
+Brave tools. Generic screen OCR needs `--enable-screen-read` at chat startup.
+
+Start with `--enable-desktop-control` as well when Burito should locate an app
+window and focus it before capturing only the active window. The combined
+`inspect_window` approval keeps a second dialog from stealing focus between
+activation and capture. KDE's KWin window
+snapshot includes captions for the current request only. It is queried on
+demand through a temporary KWin script and a private, correlated, one-request
+D-Bus service. Captions are returned to local chat history but are not written
+to logs, the access audit target, or app activity summaries. The focus tool
+rechecks the exact internal ID at execution time, then unminimizes and activates
+that window. It may switch virtual desktops; `focus_window` itself cannot click
+or type. Visible text OCR remains a separate approved step. With desktop control
+enabled, `desktop_insert_text` can place exact approved text at the caret in a
+focused AT-SPI editable field. It verifies the destination window is active,
+does not replace existing text, and does not read or modify the system clipboard.
+For browser-to-native transfer, `browser_copy_text` writes exact text from the
+owner or a current page result to the system clipboard after its own approval.
+Reload the unpacked extension and grant its optional clipboard-write permission
+once; every copy still requires a separate approval showing the full text.
+Burito cannot read clipboard contents. A later `desktop_insert_text` places the
+same text at the destination field without simulating Ctrl+V; both actions must
+report success before Burito claims the transfer completed.
+A missing KWin window does not prove the app process is stopped, since tray-only
+and background apps may have no managed window. `active_window` OCR reads the
+focused window after approval; `full_screen` remains available for desktop-wide
+questions. KWin window control is currently scoped to KDE Wayland.
+Run the local probe with `bash scripts/probe_kwin_windows.sh`. It prints the
+script load ID, run result, whether the D-Bus report arrived, and the raw JSON
+payload, then unloads the unique script and removes its temporary source.
+Opening an app does not grant access to everything inside it. Native text
+insertion only supports a unique focused accessible field; unsupported or
+ambiguous fields are rejected. Other app-specific APIs and scoped write actions
+are later integrations. Read access does not mean every file has been indexed
+or memorized.
+
+The current model configuration is local-only. Requested excerpts enter local
+chat/session history; deleting a source file does not delete prior chat content.
+Actions are logged locally with action, target, time, and outcome, retaining
+the newest 2,000 audit records; file contents are not copied into the audit log.
+Approved launcher snapshots are retained under private Burito storage. Source
+code and synthetic tests are pushed to GitHub, not file contents, inventory,
+application lists, launcher snapshots, or audit records.
+
+To enable the one-shot screen OCR tool for a session:
+
+```bash
+cd ~/Burito
+python3 -m burito chat --model burito-local:8b --context-tokens 8192 --enable-screen-read
+```
+
+For named-app window detection, focus, and active-window OCR, enable both:
+
+```bash
+python3 -m burito chat --model burito-local:8b --context-tokens 8192 \
+  --enable-screen-read --enable-desktop-control
+```
+
+For the browser action, add `--enable-browser-search` alongside
+`--enable-desktop-control --enable-screen-read`. Burito presents the exact query
+and one-shot local OCR capture for approval, then opens a fixed
+`https://search.brave.com/search` URL in the registered Brave Origin launcher.
+Only that query is sent; chat history, memory, files, and inferred context are
+not added. KWin identifies the Brave window and local OCR checks its visible
+text. OCR can misread text and does not prove result accuracy. The temporary
+image is deleted; OCR text may remain in local chat history. This action does
+not click results, fill or submit forms, or download files.
+
+Then explicitly ask Burito to read the current screen and approve the exact
+capture in the chat. `spectacle` and `tesseract` must already be installed. The
+tool is absent by default and unavailable when `--no-files` or `--activity-only`
+is used. This is a first desktop-context slice; visual scene understanding and
+general desktop typing/clicking remain future integrations.
+
+The backend and compiled tool discovery were tested locally. The restricted
+development session cannot reach the model server or launch desktop apps;
+model-initiated tool use and actual desktop launching require owner-run testing.

@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Run in a normal Kubuntu terminal. Installs only into this checkout.
+# Run in a normal Linux terminal. Installs into this checkout.
 set -euo pipefail
 burito_root="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")/.." && pwd)"
 burito_node_version="v26.13.1"
@@ -82,15 +82,5 @@ fi
 cd -- "$burito_root/runtime"
 export npm_config_fetch_retries=1
 export npm_config_fetch_timeout=60000
-if [[ -f package-lock.json ]]; then
-    npm ci --no-audit --no-fund
-else
-    npm install --save-exact --no-audit --no-fund eve@latest ai@latest zod@latest @ai-sdk/openai-compatible@latest
-fi
-if [[ ! -d node_modules/@ai-sdk/openai-compatible ]]; then
-    npm install --save-exact --no-audit --no-fund @ai-sdk/openai-compatible@latest
-fi
-echo 'Runtime packages installed. No agent or cloud model has been started.'
-echo 'Next: inspect runtime/node_modules/eve/docs/README.md and select a model.'
-echo 'A local Node installation does not change your shell profile or system Node.'
-echo 'Keep runtime/package.json and runtime/package-lock.json for the next development step and commit after review.'
+npm ci --no-audit --no-fund
+echo 'Runtime packages installed from package-lock.json.'

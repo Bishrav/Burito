@@ -1,1 +1,241 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tŒ5½Ù”	ÕÉ¥Ñ¼Ñ¼…¹½Ñ¡•È1¥¹Õàµ…¡¥¹”()Q¡¥ÌÕ¥‘”µ½Ù•ÌÑ¡”±½…°	ÕÉ¥Ñ¼¡•­½ÕĞ…¹¥ÑÌÁÉ¥Ù…Ñ”‘…Ñ„Ñ¼…¹½Ñ¡•È)1¥¹Õà½µÁÕÑ•È¸Q¡”½‘”…¹Ñ¡”µ•µ½Éä‘…Ñ…‰…Í”…É”Í•Á…É…Ñ”èÑ¡”½‘”¥Ì¥¸)ø½	ÕÉ¥Ñ½€ìÁ•ÉÍ½¹…°µ•µ½Éä°±½ÍÍ…Éä•¹ÑÉ¥•Ì°…¹­¹½İ±•‘”É•½É‘Ì±¥Ù”¥¸)€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ…€½¸Ñ¡”•áÑ•É¹…°	UI%Q=}	I%9€‘É¥Ù”¸((¨©9•Ù•È™½Éµ…Ğ½ÈÉ•Á…ÉÑ¥Ñ¥½¸Ñ¡”•á¥ÍÑ¥¹œ‰É…¥¸‘É¥Ù”‘ÕÉ¥¹œµ¥É…Ñ¥½¸¸¨¨%Ğ¥Ì)…±É•…‘ä•áĞĞ…¹½¹Ñ…¥¹ÌÑ¡”	ÕÉ¥Ñ¼‘…Ñ„‘¥É•Ñ½Éä¸Q¡”•á¥ÍÑ¥¹œ‘É¥Ù”UU%¥Ì)”ÀÈÑ…ˆä´ØààĞ´ĞĞàÈµ…™‘µ•‘‰”Äàå•‰˜É€ì½¹™¥É´¥Ğİ¥Ñ ‰±­¥‘€½¸Ñ¡”Ñ…É•Ğ)µ…¡¥¹”‰•™½É”ÕÍ¥¹œ¥Ğ¸((ŒŒ€Ä¸AÉ•Á…É”Ñ¡”½±µ…¡¥¹”()MÑ½À	ÕÉ¥Ñ¼İ¥Ñ ÑÉ°­€¸½¹™¥É´Ñ¡”Í½ÕÉ”ÑÉ•”¥Ì±•…¸…¹Ñ¡…ĞÑ¡”‰É…¥¸)‘É¥Ù”¥Ìµ½Õ¹Ñ•è()‰…Í )ø½	ÕÉ¥Ñ¼)¥ĞÍÑ…ÑÕÌ€´µÍ¡½ÉĞ)™¥¹‘µ¹Ğ€µP€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸€µ¼QIP±M=UI±MQeA±=AQ%=9L)€()Q¡”ÕÉÉ•¹Ğ‘•Ù•±½Áµ•¹Ğ½‘”¥Ì½¸¥Ñ!Õˆ°Í¼„‰Õ¹‘±”¥Ì¹½Ğ¹••‘•™½ÈÑ¡¥Ì)µ¥É…Ñ¥½¸¸%˜å½Ô±…Ñ•È¡…Ù”±½…°½µµ¥ÑÌÑ¡…Ğ…É”¹½ĞÁÕÍ¡•°„¥Ğ‰Õ¹‘±”)ÁÉ•Í•ÉÙ•ÌÑ¡•´…¹Ñ¡”™Õ±°¥Ğ¡¥ÍÑ½Éä½¸Ñ¡”•áÑ•É¹…°‘É¥Ù”è()‰…Í )¥Ğ‰Õ¹‘±”É•…Ñ”€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”€´µ…±°)±Ì€µ± €½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”)€()%˜¥ĞÍÑ…ÑÕÌ€´µÍ¡½ÉÑ€±¥ÍÑÌÍ½ÕÉ”¡…¹•Ì°É•Ù¥•Ü…¹½µµ¥ĞÑ¡•´‰•™½É”)É•…Ñ¥¹œ„‰Õ¹‘±”¸Q¡”‰Õ¹‘±”½¹Ñ…¥¹ÌÍ½ÕÉ”¡¥ÍÑ½Éä°¹½Ğµ½‘•°İ•¥¡ÑÌ°)ÉÕ¹Ñ¥µ”¹½‘•}µ½‘Õ±•Í€°Ù”ÌÑ•µÁ½É…ÉäÍ•ÍÍ¥½¸ÍÑ…Ñ”°‰É½İÍ•ÈÁÉ½™¥±•Ì°½È)ÁÉ¥Ù…Ñ”	ÕÉ¥Ñ¼‘…Ñ„¸Q¡”ÁÉ¥Ù…Ñ”‘…Ñ„…±É•…‘äÉ•Í¥‘•Ì…Ğ)€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ…€½¸Ñ¡”Í…µ”‘É¥Ù”¸()-••À…¸¥¹‘•Á•¹‘•¹Ğ‰…­ÕÀ½˜€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ…€½¸„‘¥™™•É•¹ĞÁ¡åÍ¥…°)‘•Ù¥”¸5½Ù¥¹œ„Í¥¹±”‘É¥Ù”¥Ì¹½Ğ„‰…­ÕÀ¸((ŒŒ€È¸ÑÑ… …¹µ½Õ¹ĞÑ¡”•á¥ÍÑ¥¹œ‘É¥Ù”()=¸Ñ¡”¹•Ü1¥¹Õà½µÁÕÑ•È°¥¹ÍÁ•Ğ‘•Ù¥•Ì™¥ÉÍĞè()‰…Í )±Í‰±¬€µ˜)ÍÕ‘¼‰±­¥)€()¥¹Ñ¡”Á…ÉÑ¥Ñ¥½¸±…‰•±±•	UI%Q=}	I%9€…¹Ù•É¥™äÑ¡…Ğ¥ÑÌUU%¥ÌÑ¡”)•áÁ•Ñ•½¹”…‰½Ù”…¹™¥±•ÍåÍÑ•´¥Ì•áĞĞ¸%˜Ñ¡”‘•Í­Ñ½À¡…Ì…±É•…‘äµ½Õ¹Ñ•)¥Ğ°¥¹ÍÁ•ĞÑ¡”…ÑÕ…°µ½Õ¹Ğè()‰…Í )™¥¹‘µ¹Ğ€µP€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸€µ¼QIP±M=UI±MQeA±=AQ%=9L)€()%˜Ñ¡”Á…ÉÑ¥Ñ¥½¸¥Ì¹½Ğµ½Õ¹Ñ•°É•…Ñ”Ñ¡”µ½Õ¹ĞÁ½¥¹Ğ…¹µ½Õ¹ĞÑ¡”Ù•É¥™¥•)UU%€¡‘¼¹½ĞÍÕ‰ÍÑ¥ÑÕÑ”…¹½Ñ¡•È‘¥Í¬¤è()‰…Í )ÍÕ‘¼µ­‘¥È€µÀ€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸)ÍÕ‘¼µ½Õ¹ĞUU%õ”ÀÈÑ…ˆä´ØààĞ´ĞĞàÈµ…™‘µ•‘‰”Äàå•‰˜È€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸)€()Y•É¥™ä¥Ğ¥ÌÑ¡”•áÁ•Ñ••áÑ•É¹…°•áĞĞ‘¥Í¬°µ½Õ¹Ñ•É•…½İÉ¥Ñ”°…¹½¹Ñ…¥¹Ì)Ñ¡”•á¥ÍÑ¥¹œ‘…Ñ…€‘¥É•Ñ½Éäè()‰…Í )™¥¹‘µ¹Ğ€µP€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸€µ¼QIP±M=UI±MQeA±=AQ%=9L)±Ì€µ±€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ„)€()%˜Ñ¡”‘É¥Ù”‘½•Ì¹½Ğ…ÁÁ•…È…Ğ€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¹€…ÕÑ½µ…Ñ¥…±±ä°…‘Ñ¡”UU%)Ñ¼€½•ÑŒ½™ÍÑ…‰€½¹±ä…™Ñ•È¡•­¥¹œÑ¡…Ğ¹¼•¹ÑÉä™½È¥Ğ…±É•…‘ä•á¥ÍÑÌ¸Q¡”)É•½µµ•¹‘••¹ÑÉä¥Ìè()Ñ•áĞ)UU%õ”ÀÈÑ…ˆä´ØààĞ´ĞĞàÈµ…™‘µ•‘‰”Äàå•‰˜È€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸•áĞĞ‘•™…Õ±ÑÌ±¹½™…¥°±àµÍåÍÑ•µ¹‘•Ù¥”µÑ¥µ•½ÕĞôÄÁÌ€À€È)€()Q¡•¸ÉÕ¸ÍÕ‘¼µ½Õ¹Ğ€µ…€…¹¡•¬™¥¹‘µ¹Ñ€……¥¸¸¼¹½ĞÉÕ¸™¥±•ÍåÍÑ•´É•Á…¥È)½È™½Éµ…ÑÑ¥¹œ½µµ…¹‘Ì…ÌÁ…ÉĞ½˜É½ÕÑ¥¹”Í•ÑÕÀ¸()Q¡”‘…Ñ„‘¥É•Ñ½Éä¥ÌÁÉ¥Ù…Ñ”€¡µ½‘”€ÜÀÁ€¤¸%˜Ñ¡”…½Õ¹ĞU%‘¥™™•ÉÌ‰•Ñİ••¸)µ…¡¥¹•Ì°¥¹ÍÁ•Ğ½İ¹•ÉÍ¡¥Àİ¥Ñ ¥€µÕ€…¹ÍÑ…Ğ€µŒ€œ•Ô€•„€•¸€‰•™½É”)¡…¹¥¹œ…¹åÑ¡¥¹œ¸=¹±ä½ÉÉ•Ğ½İ¹•ÉÍ¡¥À…™Ñ•È½¹™¥Éµ¥¹œÑ¡”µ½Õ¹Ñ•‘•Ù¥”)¥ÌÑ¡”•áÁ•Ñ•	UI%Q=}	I%9€‘¥Í¬ì¹•Ù•ÈÉ•ÕÉÍ¥Ù•±ä¡…¹”Á•Éµ¥ÍÍ¥½¹Ì½¸)…¸Õ¹Ù•É¥™¥•µ½Õ¹Ğ¸((ŒŒ€Ì¸I•ÍÑ½É”Ñ¡”ÁÉ½©•ĞÍ½ÕÉ”()±½¹”Ñ¡”ÕÉÉ•¹Ğ½‘”™É½´¥Ñ!Õˆè()‰…Í )¥Ğ±½¹”¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½	¥Í¡É…Ø½	ÕÉ¥Ñ¼¹¥Ğø½	ÕÉ¥Ñ¼)ø½	ÕÉ¥Ñ¼)¥Ğ±½œ€´Ä€´µ½¹•±¥¹”)€()%˜™ÕÑÕÉ”±½…°½µµ¥ÑÌ¡…Ù”¹½Ğ‰••¸ÁÕÍ¡•…¹„‰Õ¹‘±”İ…ÌÉ•…Ñ•½¸Ñ¡”½±)µ…¡¥¹”°±½¹”Ñ¡…Ğ‰Õ¹‘±”¥¹ÍÑ•…è()‰…Í )¥Ğ±½¹”€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”ø½	ÕÉ¥Ñ¼)€()¡½½Í”½¹”µ•Ñ¡½ì‘¼¹½Ğ±½¹”½Ù•È…¸•á¥ÍÑ¥¹œø½	ÕÉ¥Ñ½€‘¥É•Ñ½Éä¸½µÁ…É”)Ñ¡”±…Ñ•ÍĞ½µµ¥Ğİ¥Ñ Ñ¡”½±µ…¡¥¹”‰•™½É”É•±å¥¹œ½¸Ñ¡”¥Ñ!Õˆ±½¹”¸((ŒŒ€Ğ¸%¹ÍÑ…±°ÉÕ¹Ñ¥µ”…¹±½…°µ½‘•°()Q¡”ÁÉ½©•ĞÍ•ÑÕÀÍÉ¥ÁĞ¥¹ÍÑ…±±ÌÑ¡”±½­•Ù”½$ÉÕ¹Ñ¥µ”‘•Á•¹‘•¹¥•Ì…¹)‘½İ¹±½…‘Ì„Ù•É¥™¥•¡•­½ÕĞµ±½…°9½‘”Ù•ÉÍ¥½¸¥˜ÍåÍÑ•´9½‘”€ÈĞ¬¥Ì…‰Í•¹Ğ¸)IÕ¸¥Ğ™É½´Ñ¡”±½¹•É•Á½Í¥Ñ½Éäè()‰…Í )ø½	ÕÉ¥Ñ¼)‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í )€()%¹ÍÑ…±°=±±…µ„ÕÍ¥¹œ¥ÑÌÕÉÉ•¹Ğ½™™¥¥…°1¥¹Õà¥¹ÍÑÉÕÑ¥½¹Ì¥˜¥Ğ¥Ì…‰Í•¹Ğ¸)Q¡•¸¡•¬Ñ¡”¹•Üµ…¡¥¹”ÌAT½YI4…¹¥¹ÍÑ…±°Ñ¡”±½…°µ½‘•°¸Q¡”¡•­•µ¥¸)5½‘•±™¥±”ÕÍ•ÌÅİ•¸Ìèá‰€…¹…¸€àÄäÈµÑ½­•¸½¹Ñ•áĞè()‰…Í )½±±…µ„ÁÕ±°Åİ•¸Ìèáˆ)½±±…µ„É•…Ñ”‰ÕÉ¥Ñ¼µ±½…°èáˆ€µ˜½¹™¥œ½½±±…µ„½5½‘•±™¥±”)½±±…µ„±¥ÍĞ)€()5½‘•°İ•¥¡ÑÌ…É”¹½Ğ¥¹±Õ‘•¥¸Ñ¡”¥Ğ‰Õ¹‘±”½È‰É…¥¸‘…Ñ„‘¥É•Ñ½Éä¸Q¡”)‘½İ¹±½…¹••‘Ì¥¹Ñ•É¹•Ğ…¹Í•Ù•É…°¥…‰åÑ•Ì½˜™É•”ÍÑ½É…”¸Q¡”µ½‘•°…¹)½¹Ñ•áĞµÕÍĞ™¥ĞÑ¡”¹•Üµ…¡¥¹”ì¥˜Ñ¡•ä‘¼¹½Ğ°Í•±•Ğ„½µÁ…Ñ¥‰±”±½…°)µ½‘•°…¹ÕÁ‘…Ñ”Ñ¡”±…Õ¹ ½¹™¥ÕÉ…Ñ¥½¸‘•±¥‰•É…Ñ•±ä¸	ÕÉ¥Ñ¼ÌÉ•Õ±…È)±…Õ¹¡•Èµ…­•Ì¹¼…ÕÑ½µ…Ñ¥Œ±½Õ™…±±‰…¬¸()¡•¬½È¥¹ÍÑ…±°Ñ¡”•‘Õ…Ñ¥½¸±•ÍÍ½¹Ì¥¸Ñ¡”µ¥É…Ñ•‘…Ñ„‘¥É•Ñ½Éäè()‰…Í )	UI%Q=}Q}%Hô½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ„ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼Í¡½½°±¥ÍĞ)€()%˜¡½µ”¹¡½¹•ÍÑå€¥Ìµ¥ÍÍ¥¹œ°¥¹ÍÑ…±°±•ÍÍ½¹Ìè()‰…Í )	UI%Q=}Q}%Hô½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ„ÁåÑ¡½¸Ì€µ´‰ÕÉ¥Ñ¼Í¡½½°¥¹ÍÑ…±°)€((ŒŒ€Ô¸M•ĞÕÀ	É…Ù”…¹‘•Í­Ñ½ÀÑ½½±Ì()	É…Ù”‰É½İÍ•ÈÁ•Éµ¥ÍÍ¥½¹Ì…¹•áÑ•¹Í¥½¸¥¹ÍÑ…±±…Ñ¥½¸…É”±½…°Ñ¼•… µ…¡¥¹”¸)UÍ”mA…•ÍÌÍ•ÑÕÁt¡A}ML¹µ¤è((Ä¸%¸	É…Ù”°½Á•¸‰É…Ù”è¼½•áÑ•¹Í¥½¹Í€°ÑÕÉ¸½¸•Ù•±½Á•Èµ½‘”°…¹¡½½Í”(€€€¨©1½…Õ¹Á…­•¨¨™½Èø½	ÕÉ¥Ñ¼½ÉÕ¹Ñ¥µ”½‰É½İÍ•Èµ•áÑ•¹Í¥½¹€¸(È¸½ÁäÑ¡”•áÑ•¹Í¥½¸%‘¥ÍÁ±…å•‰ä	É…Ù”¸(Ì¸%¹ÍÑ…±°Ñ¡”¹…Ñ¥Ù”µ•ÍÍ…¥¹œ¡½ÍĞ™½ÈÑ¡¥Ìµ…¡¥¹”è((€€‰…Í (€€‰…Í ø½	ÕÉ¥Ñ¼½ÍÉ¥ÁÑÌ½¥¹ÍÑ…±°µ‰É…Ù”µÑ…ˆµ¡½ÍĞ¹Í e=UI}aQ9M%=9}%(€€€((Ğ¸I•ÍÑ…ÉĞ	É…Ù”=É¥¥¸¸É½´Ñ¡”	ÕÉ¥Ñ¼•áÑ•¹Í¥½¸Á½ÁÕÀ°É…¹ĞÑ…ˆµ±…‰•°…¹(€€Á…”…•ÍÌ…Ì¹••‘•¸ƒŠq¹…‰±”…±°İ•‰Í¥Ñ•ÏŠt½Ù•ÉÌÉ•Õ±…È!QQ@½!QQALÍ¥Ñ•Ìì(€€Ñ¡”‰É½İÍ•ÈÌÁ•Éµ¥ÍÍ¥½¸ÁÉ½µÁĞÍÑ¥±°…ÁÁ±¥•Ì¸	ÕÉ¥Ñ¼Í•Á…É…Ñ•±ä…Í­Ì‰•™½É”(€€•… Á…”É•……¹‰É½İÍ•È…Ñ¥½¸¸(Ô¸-]¥¸İ¥¹‘½Ü±¥ÍÑ¥¹œ½™½ÕÌÉ•ÅÕ¥É•Ì-A±…Íµ„]…å±…¹¸MÉ••¸=H¥ÌÍ•Á…É…Ñ”(€€…¹ÍÑ¥±°…Í­Ì…ÁÁÉ½Ù…°™½È•… …ÁÑÕÉ”¸=Ñ¡•È‘•Í­Ñ½À•¹Ù¥É½¹µ•¹ÑÌµ…ä¹½Ğ(€€ÍÕÁÁ½ÉĞ-]¥¸Ñ½½±Ì¸((ŒŒ€Ø¸MÑ…ÉĞ…¹Ù•É¥™ä()Q¡”…±°µÑ½½±Ì±…Õ¹¡•ÈÍ•±•ÑÌ€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ…€°Ñ¡”±½…°µ½‘•°°…¹…¸(àÄäÈµÑ½­•¸½¹Ñ•áĞ¸%ĞÉ•™ÕÍ•ÌÑ¼ÍÑ…ÉĞ¥˜Ñ¡”•áÁ•Ñ•‰É…¥¸‘É¥Ù”¥Ì…‰Í•¹Ğè()‰…Í )ø½	ÕÉ¥Ñ¼(¸½ÍÉ¥ÁÑÌ½ÍÑ…ÉĞµ¡…Ğ¹Í )€()MÑ…ÉĞİ¥Ñ Í¥µÁ±”¡•­Ìè…Í¬™½ÈÑ¡”¥¹ÍÑ…±±•±•ÍÍ½¸°É•…„¡…Éµ±•ÍÌÁÕ‰±¥Œ)İ•‰Á…”…™Ñ•ÈÉ…¹Ñ¥¹œÑ¡…ĞÍ¥Ñ”…•ÍÌ°…¹Ñ•ÍĞİ¥¹‘½Ü±¥ÍÑ¥¹œ¥˜Ñ¡¥Ì¥Ì-)]…å±…¹¸ÁÁÉ½Ù”½¹±äÑ¡”½Á•É…Ñ¥½¸å½ÔÉ•ÅÕ•ÍÑ•¸‘€´µ¥¹±Õ‘”µÁ•ÉÍ½¹…±€)•áÁ±¥¥Ñ±ä¥˜å½Ôİ…¹ĞÁ•ÉÍ½¹…°™…ÑÌ¥¹±Õ‘•™½È„¡…Ğ¸MÑ½Àİ¥Ñ ÑÉ°­€¸((ŒŒI•…‘äµÑ¼µÁ…ÍÑ”ÁÉ½µÁĞ™½È½‘•à½¸Ñ¡”¹•Ü1¥¹Õàµ…¡¥¹”()Ñ•áĞ)M•ĞÕÀµä•á¥ÍÑ¥¹œ	ÕÉ¥Ñ¼ÁÉ½©•Ğ½¸Ñ¡¥Ì1¥¹Õàµ…¡¥¹”ÕÍ¥¹œÑ¡”É•Á½Í¥Ñ½Éä¥¸)ø½	ÕÉ¥Ñ¼…¹Ñ¡”•áÑ•É¹…°	UI%Q=}	I%8‘É¥Ù”¸]½É¬¥¸Íµ…±°ÍÑ•ÁÌ…¹Ù•É¥™ä)•… É•ÍÕ±Ğ¸	•¥¸İ¥Ñ É•…µ½¹±ä¡•­Ìè¥¹ÍÁ•ĞÑ¡”=L°AåÑ¡½¸°9½‘”°AT°)ÍÑ½É…”‘•Ù¥•Ì°™¥±•ÍåÍÑ•´UU%Ì°µ½Õ¹ÑÌ°…¹ø½	ÕÉ¥Ñ¼¥ĞÍÑ…ÑÕÌ¸Q¡”•á¥ÍÑ¥¹œ)‰É…¥¸‘É¥Ù”¥Ì•áĞĞİ¥Ñ UU%”ÀÈÑ…ˆä´ØààĞ´ĞĞàÈµ…™‘µ•‘‰”Äàå•‰˜È°±…‰•°)	UI%Q=}	I%8¸%ÑÌÁÉ¥Ù…Ñ”	ÕÉ¥Ñ¼‘…Ñ„¥Ì€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ„¸9•Ù•È™½Éµ…Ğ°)É•Á…ÉÑ¥Ñ¥½¸°•É…Í”°½ÈÉÕ¸™¥±•ÍåÍÑ•´É•Á…¥È½¸…¹ä‘É¥Ù”¸Y•É¥™äÑ¡”UU%…¹)±…‰•°‰•™½É”µ½Õ¹Ñ¥¹œìÍÑ½À¥˜Ñ¡•ä‘¼¹½Ğµ…Ñ ¸%˜„É•ÅÕ¥É•ÁÉ¥Ù¥±••¡…¹”)½È½İ¹•ÉÍ¡¥ÀÉ•Á…¥È¥Ì¹••‘•°•áÁ±…¥¸Ñ¡”•á…Ğ¡…¹”…¹İ¡ä‰•™½É”‘½¥¹œ¥Ğ¸()%˜ø½	ÕÉ¥Ñ¼¥Ì…‰Í•¹Ğ°±½¹”Ñ¡”ÕÉÉ•¹ĞÁÉ½©•Ğ™É½´)¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½	¥Í¡É…Ø½	ÕÉ¥Ñ¼¹¥Ğ¸%˜¥Ñ!Õˆ¥ÌÕ¹…Ù…¥±…‰±”…¹(½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”•á¥ÍÑÌ°±½¹”Ñ¡…Ğ‰Õ¹‘±”¥¹ÍÑ•…Ñ¼ÁÉ•Í•ÉÙ”)…¹äÕ¹ÁÕÍ¡•İ½É¬¸¼¹½Ğ½Ù•ÉİÉ¥Ñ”…¸•á¥ÍÑ¥¹œ¡•­½ÕĞ½È‘¥Í…É±½…°)¡…¹•Ì¸-••ÀÁ•ÉÍ½¹…°‘…Ñ„°‰É½İÍ•È)ÁÉ½™¥±•Ì°É•‘•¹Ñ¥…±Ì°…¹Ñ¡”ME1¥Ñ”‘…Ñ…‰…Í”½ÕĞ½˜¥Ğ¸()=¹”Ñ¡”‘¥Í¬¥Ì½ÉÉ•Ñ±äµ½Õ¹Ñ•…Ğ€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸…¹Ñ¡”¡•­½ÕĞ¥Ì)Ù•É¥™¥•°¥¹ÍÑ…±°Ñ¡”Á¥¹¹•ÉÕ¹Ñ¥µ”ÕÍ¥¹œ‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í ¸¡•¬)AT½YI4‰•™½É”‘½İ¹±½…‘¥¹œµ½‘•°İ•¥¡ÑÌ¸Q¡”É•Á½Í¥Ñ½Éä5½‘•±™¥±”ÕÍ•Ì)Åİ•¸Ìèáˆİ¥Ñ …¸€àÄäÈµÑ½­•¸½¹Ñ•áĞì¥¹ÍÑ…±°½É•…Ñ”‰ÕÉ¥Ñ¼µ±½…°èáˆ½¹±ä¥˜¥Ğ)™¥ÑÌÑ¡¥Ìµ…¡¥¹”¸¼¹½Ğ½¹™¥ÕÉ”±½Õ™…±±‰…¬¸Y•É¥™äÑ¡”•á¥ÍÑ¥¹œ(½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ„É•µ…¥¹Ì¥¸ÕÍ”…¹¥ÌİÉ¥Ñ…‰±”‰äµä…½Õ¹Ğİ¥Ñ¡½ÕĞ)¡…¹¥¹œÕ¹É•±…Ñ•Á•Éµ¥ÍÍ¥½¹Ì¸¡•¬İ¡•Ñ¡•È¡½µ”¹¡½¹•ÍÑä¥Ì¥¹ÍÑ…±±•…¹)¥¹ÍÑ…±°±•ÍÍ½¹Ì½¹±ä¥˜¥Ğ¥Ìµ¥ÍÍ¥¹œ¸()M•ĞÕÀÑ¡”	É…Ù”•áÑ•¹Í¥½¸…¹¹…Ñ¥Ù”µ•ÍÍ…¥¹œ¡½ÍĞ™½±±½İ¥¹œ‘½Ì½A}ML¹µ¸)UÍ”Ñ¡”•áÑ•¹Í¥½¸%Í¡½İ¸½¸Ñ¡¥Ìµ…¡¥¹”¸¼¹½ĞÉ•…Á…ÍÍİ½É‘Ì½È•áÁ½Í”)ÁÉ¥Ù…Ñ”‰É½İÍ•È½¹Ñ•¹Ğ¸É…¹Ğ…±°µİ•‰Í¥Ñ”Á•Éµ¥ÍÍ¥½¸½¹±ä¥˜$¡½½Í”¥Ğì­••À)Á•Èµ…Ñ¥½¸…ÁÁÉ½Ù…±Ì•¹…‰±•¸-]¥¸İ¥¹‘½Ü½¹ÑÉ½±ÌÉ•ÅÕ¥É”-A±…Íµ„]…å±…¹¸()¥¹¥Í ‰äÉÕ¹¹¥¹œÑ¡”	ÕÉ¥Ñ¼‘¥…¹½ÍÑ¥Ì…¹½¹™¥Éµ¥¹œÑ¡”µ½‘•°¥Ì…Ù…¥±…‰±”¸)MÑ…ÉĞ€¸½ÍÉ¥ÁÑÌ½ÍÑ…ÉĞµ¡…Ğ¹Í ½¹±ä…™Ñ•ÈÑ¡”ÍÑ½É…”°µ½‘•°°…¹•áÑ•¹Í¥½¸Í•ÑÕÀ)¥ÌÉ•…‘ä¸¼¹½ĞÁÕÍ Ñ¼¥Ñ!Õˆ°¡…¹”ÍåÍÑ•´‘É¥Ù•ÉÌ°É•µ½Ù”‘…Ñ„°½Èİ•…­•¸)…ÁÁÉ½Ù…°…Ñ•ÌÕ¹±•ÍÌ$•áÁ±¥¥Ñ±ä…Í¬¸I•Á½ÉĞİ¡…Ğå½ÔÙ•É¥™¥•…¹…¹åÑ¡¥¹œ)Ñ¡…Ğ¹••‘Ìµä‘•¥Í¥½¸¸9•Ù•È±…¥´±¥Ù”‘•Í­Ñ½À½‰É½İÍ•È‰•¡…Ù¥½Èİ…ÌÑ•ÍÑ•)Õ¹±•ÍÌå½Ô…ÑÕ…±±ä½‰Í•ÉÙ•Ñ¡…ĞÉ•ÍÕ±Ğ¸)€((ŒŒQÉ½Õ‰±•Í¡½½Ñ¥¹œÁ½¥¹Ñ•ÉÌ((´€¨©	É…¥¸‘É¥Ù”µ¥ÍÍ¥¹œ½É•…µ½¹±äè¨¨ÍÑ½À	ÕÉ¥Ñ¼ìÙ•É¥™äÑ¡”UU%°µ½Õ¹ĞÍ½ÕÉ”°(€™¥±•ÍåÍÑ•´°µ½Õ¹Ğ½ÁÑ¥½¹Ì°…¹½İ¹•ÉÍ¡¥À‰•™½É”¡…¹¥¹œÁ•Éµ¥ÍÍ¥½¹Ì¸(´€¨©Ù”ÉÕ¹Ñ¥µ”µ¥ÍÍ¥¹œè¨¨É•ÉÕ¸‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í¡€™É½´ø½	ÕÉ¥Ñ½€¸(´€¨©1½…°µ½‘•°Õ¹…Ù…¥±…‰±”è¨¨¡•¬½±±…µ„±¥ÍÑ€°Ñ¡”=±±…µ„Í•ÉÙ¥”°…¹(€½¹™¥œ½½±±…µ„½5½‘•±™¥±•€¸(´€¨©	É…Ù”Ñ½½±ÌÕ¹…Ù…¥±…‰±”è¨¨¡•¬Ñ¡”•áÑ•¹Í¥½¸¥Ì±½…‘•°Ñ¡”¹…Ñ¥Ù”¡½ÍĞ(€İ…Ì¥¹ÍÑ…±±•İ¥Ñ Ñ¡”½ÉÉ•Ğ%°	É…Ù”İ…ÌÉ•ÍÑ…ÉÑ•°…¹Í¥Ñ”Á•Éµ¥ÍÍ¥½¹Ì(€İ•É”É…¹Ñ•¸(´€¨©]¥¹‘½Ü±¥ÍĞ½™½ÕÌÕ¹…Ù…¥±…‰±”è¨¨½¹™¥É´-A±…Íµ„]…å±…¹…¹-]¥¸(€ÍÉ¥ÁÑ¥¹œ¸MÉ••¸=H¥Ì„Í•Á…É…Ñ”Ñ½½°…¹‘½•Ì¹½ĞÉ•Á±…”İ¥¹‘½Ü±¥ÍÑ¥¹œ¸(
+# Move Burito to another Linux machine
+
+This guide moves the local Burito checkout and its private data to another
+Linux computer. The code and the memory database are separate: the code is in
+`~/Burito`; personal memory, glossary entries, and knowledge records live in
+`/mnt/burito-brain/data` on the external `BURITO_BRAIN` drive.
+
+**Never format or repartition the existing brain drive during migration.** It is
+already ext4 and contains the Burito data directory. The existing drive UUID is
+`ce024ab9-6884-4482-afdd-edbe189ebcf2`; confirm it with `blkid` on the target
+machine before using it.
+
+## 1. Prepare the old machine
+
+Stop Burito with `Ctrl+C`. Confirm the source tree is clean and that the brain
+drive is mounted:
+
+```bash
+cd ~/Burito
+git status --short
+findmnt -T /mnt/burito-brain -o TARGET,SOURCE,FSTYPE,OPTIONS
+```
+
+The current development code is on GitHub, so a bundle is not needed for this
+migration. If you later have local commits that are not pushed, a Git bundle
+preserves them and the full Git history on the external drive:
+
+```bash
+git bundle create /mnt/burito-brain/Burito.bundle --all
+ls -lh /mnt/burito-brain/Burito.bundle
+```
+
+If `git status --short` lists source changes, review and commit them before
+creating a bundle. The bundle contains source history, not model weights,
+runtime `node_modules`, Eve's temporary session state, browser profiles, or
+private Burito data. The private data already resides at
+`/mnt/burito-brain/data` on the same drive.
+
+Keep an independent backup of `/mnt/burito-brain/data` on a different physical
+device. Moving a single drive is not a backup.
+
+## 2. Attach and mount the existing drive
+
+On the new Linux computer, inspect devices first:
+
+```bash
+lsblk -f
+sudo blkid
+```
+
+Find the partition labelled `BURITO_BRAIN` and verify that its UUID is the
+expected one above and filesystem is ext4. If the desktop has already mounted
+it, inspect the actual mount:
+
+```bash
+findmnt -T /mnt/burito-brain -o TARGET,SOURCE,FSTYPE,OPTIONS
+```
+
+If the partition is not mounted, create the mount point and mount the verified
+UUID (do not substitute another disk):
+
+```bash
+sudo mkdir -p /mnt/burito-brain
+sudo mount UUID=ce024ab9-6884-4482-afdd-edbe189ebcf2 /mnt/burito-brain
+```
+
+Verify it is the expected external ext4 disk, mounted read/write, and contains
+the existing `data` directory:
+
+```bash
+findmnt -T /mnt/burito-brain -o TARGET,SOURCE,FSTYPE,OPTIONS
+ls -ld /mnt/burito-brain/data
+```
+
+If the drive does not appear at `/mnt/burito-brain` automatically, add the UUID
+to `/etc/fstab` only after checking that no entry for it already exists. The
+recommended entry is:
+
+```text
+UUID=ce024ab9-6884-4482-afdd-edbe189ebcf2 /mnt/burito-brain ext4 defaults,nofail,x-systemd.device-timeout=10s 0 2
+```
+
+Then run `sudo mount -a` and check `findmnt` again. Do not run filesystem repair
+or formatting commands as part of routine setup.
+
+The data directory is private (mode `700`). If the account UID differs between
+machines, inspect ownership with `id -u` and `stat -c '%u %a %n'` before
+changing anything. Only correct ownership after confirming the mounted device
+is the expected `BURITO_BRAIN` disk; never recursively change permissions on
+an unverified mount.
+
+## 3. Restore the project source
+
+Clone the current code from GitHub:
+
+```bash
+git clone https://github.com/Bishrav/Burito.git ~/Burito
+cd ~/Burito
+git log -1 --oneline
+```
+
+If future local commits have not been pushed and a bundle was created on the old
+machine, clone that bundle instead:
+
+```bash
+git clone /mnt/burito-brain/Burito.bundle ~/Burito
+```
+
+Choose one method; do not clone over an existing `~/Burito` directory. Compare
+the latest commit with the old machine before relying on the GitHub clone.
+
+## 4. Install runtime and local model
+
+The project setup script installs the locked Eve/AI runtime dependencies and
+downloads a verified checkout-local Node version if system Node 24+ is absent.
+Run it from the cloned repository:
+
+```bash
+cd ~/Burito
+bash scripts/setup-runtime.sh
+```
+
+Install Ollama using its current official Linux instructions if it is absent.
+Then check the new machine's GPU/VRAM and install the local model. The checked-in
+Modelfile uses `qwen3:8b` and an 8192-token context:
+
+```bash
+ollama pull qwen3:8b
+ollama create burito-local:8b -f config/ollama/Modelfile
+ollama list
+```
+
+Model weights are not included in the Git bundle or brain data directory. The
+download needs internet and several gigabytes of free storage. The model and
+context must fit the new machine; if they do not, select a compatible local
+model and update the launch configuration deliberately. Burito's regular
+launcher makes no automatic cloud fallback.
+
+Check or install the education lessons in the migrated data directory:
+
+```bash
+BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito school list
+```
+
+If `home.honesty` is missing, install lessons:
+
+```bash
+BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito school install
+```
+
+## 5. Set up Brave and desktop tools
+
+Brave browser permissions and extension installation are local to each machine.
+Use [PC access setup](PC_ACCESS.md):
+
+1. In Brave, open `brave://extensions`, turn on Developer mode, and choose
+   **Load unpacked** for `~/Burito/runtime/browser-extension`.
+2. Copy the extension ID displayed by Brave.
+3. Install the native messaging host for this machine:
+
+   ```bash
+   bash ~/Burito/scripts/install-brave-tab-host.sh YOUR_EXTENSION_ID
+   ```
+
+4. Restart Brave Origin. From the Burito extension popup, grant tab-label and
+   page access as needed. â€œEnable all websitesâ€ covers regular HTTP/HTTPS sites;
+   the browser's permission prompt still applies. Burito separately asks before
+   each page read and browser action.
+5. KWin window listing/focus requires KDE Plasma Wayland. Screen OCR is separate
+   and still asks approval for each capture. Other desktop environments may not
+   support KWin tools.
+
+## 6. Start and verify
+
+The all-tools launcher selects `/mnt/burito-brain/data`, the local model, and an
+8192-token context. It refuses to start if the expected brain drive is absent:
+
+```bash
+cd ~/Burito
+./scripts/start-chat.sh
+```
+
+Start with simple checks: ask for the installed lesson, read a harmless public
+webpage after granting that site access, and test window listing if this is KDE
+Wayland. Approve only the operation you requested. Add `--include-personal`
+explicitly if you want personal facts included for a chat. Stop with `Ctrl+C`.
+
+## Ready-to-paste prompt for Codex on the new Linux machine
+
+```text
+Set up my existing Burito project on this Linux machine using the repository in
+~/Burito and the external BURITO_BRAIN drive. Work in small steps and verify
+each result. Begin with read-only checks: inspect the OS, Python, Node, GPU,
+storage devices, filesystem UUIDs, mounts, and ~/Burito Git status. The existing
+brain drive is ext4 with UUID ce024ab9-6884-4482-afdd-edbe189ebcf2, label
+BURITO_BRAIN. Its private Burito data is /mnt/burito-brain/data. Never format,
+repartition, erase, or run filesystem repair on any drive. Verify the UUID and
+label before mounting; stop if they do not match. If a required privileged change
+or ownership repair is needed, explain the exact change and why before doing it.
+
+If ~/Burito is absent, clone the current project from
+https://github.com/Bishrav/Burito.git. If GitHub is unavailable and
+/mnt/burito-brain/Burito.bundle exists, clone that bundle instead to preserve
+any unpushed work. Do not overwrite an existing checkout or discard local
+changes. Keep personal data, browser
+profiles, credentials, and the SQLite database out of Git.
+
+Once the disk is correctly mounted at /mnt/burito-brain and the checkout is
+verified, install the pinned runtime using bash scripts/setup-runtime.sh. Check
+GPU/VRAM before downloading model weights. The repository Modelfile uses
+qwen3:8b with an 8192-token context; install/create burito-local:8b only if it
+fits this machine. Do not configure cloud fallback. Verify the existing
+/mnt/burito-brain/data remains in use and is writable by my account without
+changing unrelated permissions. Check whether home.honesty is installed and
+install lessons only if it is missing.
+
+Set up the Brave extension and native messaging host following docs/PC_ACCESS.md.
+Use the extension ID shown on this machine. Do not read passwords or expose
+private browser content. Grant all-website permission only if I choose it; keep
+per-action approvals enabled. KWin window controls require KDE Plasma Wayland.
+
+Finish by running the Burito diagnostics and confirming the model is available.
+Start ./scripts/start-chat.sh only after the storage, model, and extension setup
+is ready. Do not push to GitHub, change system drivers, remove data, or weaken
+approval gates unless I explicitly ask. Report what you verified and anything
+that needs my decision. Never claim live desktop/browser behavior was tested
+unless you actually observed that result.
+```
+
+## Troubleshooting pointers
+
+- **Brain drive missing/read-only:** stop Burito; verify the UUID, mount source,
+  filesystem, mount options, and ownership before changing permissions.
+- **Eve runtime missing:** rerun `bash scripts/setup-runtime.sh` from `~/Burito`.
+- **Local model unavailable:** check `ollama list`, the Ollama service, and
+  `config/ollama/Modelfile`.
+- **Brave tools unavailable:** check the extension is loaded, the native host
+  was installed with the correct ID, Brave was restarted, and site permissions
+  were granted.
+- **Window list/focus unavailable:** confirm KDE Plasma Wayland and KWin
+  scripting. Screen OCR is a separate tool and does not replace window listing.

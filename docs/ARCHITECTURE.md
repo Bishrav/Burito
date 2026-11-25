@@ -1,5 +1,17 @@
 # Architecture
 
+## Current boundaries and next change
+
+Python owns SQLite storage, retrieval and host operations. Eve assembles local
+context and proposes tool calls, with Ollama serving inference on loopback.
+Approval and host input validation are separate from the model. The immediate
+desktop change after recovery is a thin Hyprland and KWin adapter, preserving
+existing entry points and using synthetic fixtures before live operations.
+
+Keep Core, Memory, Reasoning, Awareness, Actions, Guardian, Research and the
+Interface as logical boundaries in this codebase. Add Vision, Voice, Connect,
+Learning and Scheduler when their roadmap prerequisites pass. Use durable
+state and clear permissions before splitting services or adding agents.
 ```text
 Text / voice / desktop panel
            |

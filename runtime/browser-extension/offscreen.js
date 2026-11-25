@@ -1,1 +1,26 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¡É½µ”¹ÉÕ¹Ñ¥µ”¹½¹5•ÍÍ…”¹…‘‘1¥ÍÑ•¹•È ¡µ•ÍÍ…”°}Í•¹‘•È°Í•¹‘I•ÍÁ½¹Í”¤€ôøì(€¥˜€¡µ•ÍÍ…”ü¹Ñ…É•Ð€„ôô€‰ÕÉ¥Ñ¼µ½™™ÍÉ••¸œñðµ•ÍÍ…”ü¹ÑåÁ”€„ôô€½ÁäµÑ•áÐœ¤É•ÑÕÉ¸ì(€¥˜€¡ÑåÁ•½˜µ•ÍÍ…”¹Ñ•áÐ€„ôô€ÍÑÉ¥¹œœñð€…µ•ÍÍ…”¹Ñ•áÐñðµ•ÍÍ…”¹Ñ•áÐ¹±•¹Ñ €ø€ÔÀÀÀ¤ì(€€€Í•¹‘I•ÍÁ½¹Í”¡ì½¬è™…±Í”°•ÉÉ½Èè€±¥Á‰½…ÉÑ•áÐµÕÍÐ½¹Ñ…¥¸€ÇŠLÔ°ÀÀÀ¡…É…Ñ•ÉÌ¸œô¤ì(€€€É•ÑÕÉ¸ì(€ô(€€¡…Íå¹Œ€ ¤€ôøì(€€€ÑÉäì(€€€€€…Ý…¥Ð¹…Ù¥…Ñ½È¹±¥Á‰½…É¹ÝÉ¥Ñ•Q•áÐ¡µ•ÍÍ…”¹Ñ•áÐ¤ì(€€€€€Í•¹‘I•ÍÁ½¹Í”¡ì½¬èÑÉÕ”ô¤ì(€€€ô…Ñ ì(€€€€€½¹ÍÐ…É•„€ô‘½Õµ•¹Ð¹É•…Ñ•±•µ•¹Ð Ñ•áÑ…É•„œ¤ì(€€€€€…É•„¹Ù…±Õ”€ôµ•ÍÍ…”¹Ñ•áÐì(€€€€€…É•„¹Í•ÑÑÑÉ¥‰ÕÑ” É•…‘½¹±äœ°€œœ¤ì(€€€€€…É•„¹ÍÑå±”¹Á½Í¥Ñ¥½¸€ô€™¥á•œì(€€€€€…É•„¹ÍÑå±”¹½Á…¥Ñä€ô€œÀœì(€€€€€‘½Õµ•¹Ð¹‰½‘ä¹…ÁÁ•¹¡…É•„¤ì(€€€€€…É•„¹Í•±•Ð ¤ì(€€€€€±•Ð½¬€ô™…±Í”ì(€€€€€ÑÉäì½¬€ô‘½Õµ•¹Ð¹•á•½µµ…¹ ½Áäœ¤ìô…Ñ ì€¼¨É•Á½ÉÐ‰•±½Ü€¨¼ô(€€€€€…É•„¹É•µ½Ù” ¤ì(€€€€€Í•¹‘I•ÍÁ½¹Í”¡½¬€üì½¬èÑÉÕ”ô€èì½¬è™…±Í”°•ÉÉ½Èè€Q¡”‰É½ÝÍ•ÈÉ•©•Ñ•Ñ¡”±¥Á‰½…ÉÝÉ¥Ñ”¸œô¤ì(€€€ô(€ô¤ ¤ì(€É•ÑÕÉ¸ÑÉÕ”ì)ô¤ì(
+chrome.runtime.onMessage.addListener((message, _sender, sendResponse) => {
+  if (message?.target !== 'burito-offscreen' || message?.type !== 'copy-text') return;
+  if (typeof message.text !== 'string' || !message.text || message.text.length > 5000) {
+    sendResponse({ ok: false, error: 'Clipboard text must contain 1â€“5,000 characters.' });
+    return;
+  }
+  (async () => {
+    try {
+      await navigator.clipboard.writeText(message.text);
+      sendResponse({ ok: true });
+    } catch {
+      const area = document.createElement('textarea');
+      area.value = message.text;
+      area.setAttribute('readonly', '');
+      area.style.position = 'fixed';
+      area.style.opacity = '0';
+      document.body.append(area);
+      area.select();
+      let ok = false;
+      try { ok = document.execCommand('copy'); } catch { /* report below */ }
+      area.remove();
+      sendResponse(ok ? { ok: true } : { ok: false, error: 'The browser rejected the clipboard write.' });
+    }
+  })();
+  return true;
+});

@@ -1,1 +1,39 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^tŒ„½ÕÍÈ½‰¥¸½•¹Ø‰…Í )Í•Ð€µ•Õ¼Á¥Á•™…¥°()¥˜ml€Œ€µ¹”€Äñð€„€ˆÄˆ€õøym„µÁuìÌÉôutìÑ¡•¸(€•¡¼€‰UÍ…”è€À€ðÌÈµ¡…É…Ñ•Èµ•áÑ•¹Í¥½¸µ¥øˆ€ø˜È(€•á¥Ð€È)™¤()AI=)Q}I==Pôˆ¡€ˆ¡‘¥É¹…µ”€ˆ‘í	M!}M=UIlÁuôˆ¤¼¸¸ˆ€˜˜ÁÝ¤ˆ)aQ9M%=9}%ôˆÄˆ)!=MQ}AQ ôˆ‘AI=)Q}I==P½ÍÉ¥ÁÑÌ½‰É…Ù”µÑ…ˆµ¡½ÍÐ¹Áäˆ)!=MQ}95ô‰½´¹‰ÕÉ¥Ñ¼¹‰É…Ù•}Ñ…‰Ìˆ)¡µ½€­à€ˆ‘!=MQ}AQ ˆ()™½È	I=]MI}%H¥¸€ˆ‘!=5¼¹½¹™¥œ½	É…Ù•M½™ÑÝ…É”½	É…Ù”µ=É¥¥¸½9…Ñ¥Ù•5•ÍÍ…¥¹!½ÍÑÌˆì‘¼(€µ­‘¥È€µÀ€ˆ‘	I=]MI}%Hˆ(€ÁåÑ¡½¸Ì€´€ˆ‘	I=]MI}%H¼‘!=MQ}95¹©Í½¸ˆ€ˆ‘!=MQ}AQ ˆ€ˆ‘aQ9M%=9}%ˆ€ððAdœ)¥µÁ½ÉÐ©Í½¸)¥µÁ½ÉÐ½Ì)¥µÁ½ÉÐÍåÌ()Á…Ñ °¡½ÍÑ}Á…Ñ °•áÑ•¹Í¥½¹}¥€ôÍåÌ¹…ÉÙlÄét)Ñ•µÁ½É…Éä€ôÁ…Ñ €¬€œ¹ÑµÀœ)Ý¥Ñ ½Á•¸¡Ñ•µÁ½É…Éä°€Üœ°•¹½‘¥¹œôÕÑ˜´àœ¤…Ì½ÕÑÁÕÐè(€€€©Í½¸¹‘ÕµÀ¡ì(€€€€€€€€¹…µ”œè€½´¹‰ÕÉ¥Ñ¼¹‰É…Ù•}Ñ…‰Ìœ°(€€€€€€€€‘•ÍÉ¥ÁÑ¥½¸œè€M¡…É•Ì½¹±äÑ¡”	É…Ù”Ñ…ˆ½Õ¹ÐÝ¥Ñ 	ÕÉ¥Ñ¼œ°(€€€€€€€€Á…Ñ œè¡½ÍÑ}Á…Ñ °(€€€€€€€€ÑåÁ”œè€ÍÑ‘¥¼œ°(€€€€€€€€…±±½Ý•‘}½É¥¥¹Ìœèm˜¡É½µ”µ•áÑ•¹Í¥½¸è¼½í•áÑ•¹Í¥½¹}¥‘ô¼t°(€€€ô°½ÕÑÁÕÐ°Í•Á…É…Ñ½ÉÌô œ°œ°€œèœ¤¤(€€€½ÕÑÁÕÐ¹ÝÉ¥Ñ” q¸œ¤)½Ì¹¡µ½¡Ñ•µÁ½É…Éä°€Á¼ØÀÀ¤)½Ì¹É•Á±…”¡Ñ•µÁ½É…Éä°Á…Ñ ¤)Ad)‘½¹”()•¡¼€‰%¹ÍÑ…±±•Ñ¡”±½…°Ñ…ˆµ½Õ¹Ð¡½ÍÐ™½È	É…Ù”=É¥¥¸¸ˆ)•¡¼€‰%ÐÍÑ½É•Ì½¹±ä„Í¡½ÉÐµ±¥Ù•½Õ¹Ð¥¸a}IU9Q%5}%H°¹•Ù•ÈÑ…ˆÑ¥Ñ±•Ì½ÈUI1Ì¸ˆ
+#!/usr/bin/env bash
+set -euo pipefail
+
+if [[ $# -ne 1 || ! "$1" =~ ^[a-p]{32}$ ]]; then
+  echo "Usage: $0 <32-character-extension-id>" >&2
+  exit 2
+fi
+
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+EXTENSION_ID="$1"
+HOST_PATH="$PROJECT_ROOT/scripts/brave-tab-host.py"
+HOST_NAME="com.burito.brave_tabs"
+chmod +x "$HOST_PATH"
+
+for BROWSER_DIR in "$HOME/.config/BraveSoftware/Brave-Origin/NativeMessagingHosts"; do
+  mkdir -p "$BROWSER_DIR"
+  python3 - "$BROWSER_DIR/$HOST_NAME.json" "$HOST_PATH" "$EXTENSION_ID" <<'PY'
+import json
+import os
+import sys
+
+path, host_path, extension_id = sys.argv[1:]
+temporary = path + '.tmp'
+with open(temporary, 'w', encoding='utf-8') as output:
+    json.dump({
+        'name': 'com.burito.brave_tabs',
+        'description': 'Shares only the Brave tab count with Burito',
+        'path': host_path,
+        'type': 'stdio',
+        'allowed_origins': [f'chrome-extension://{extension_id}/'],
+    }, output, separators=(',', ':'))
+    output.write('\n')
+os.chmod(temporary, 0o600)
+os.replace(temporary, path)
+PY
+done
+
+echo "Installed the local tab-count host for Brave Origin."
+echo "It stores only a short-lived count in XDG_RUNTIME_DIR, never tab titles or URLs."

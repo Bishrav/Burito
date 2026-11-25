@@ -1,1 +1,23 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‰É½ÝÍ•É9…Ù¥…Ñ”€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€=Á•¸Ñ¡”•á…Ð½Ý¹•ÈµÉ•ÅÕ•ÍÑ•!QQ@½!QQALUI0¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Ñ…ˆ¸UÍ”Ñ¡¥ÌÝ¡•¸Ñ¡”½Ý¹•È…Í­ÌÑ¼½Á•¸„Ý•‰Í¥Ñ”½È„Ñ…ˆÍ•…É ™¥¹‘Ì¹¼µ…Ñ¡¥¹œÍ¥Ñ”¸½•Ì¹½ÐÉ•…Á…”½¹Ñ•¹ÑÌìÁ…”É•…‘¥¹œ…¹Í¥Ñ”Á•Éµ¥ÍÍ¥½¸…É”Í•Á…É…Ñ”¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ì(€€€ÕÉ°èè¹ÍÑÉ¥¹œ ¤¹ÑÉ¥´ ¤¹µ¥¸ à¤¹µ…à ÈÀÀÀ¤¹ÕÉ° ¤¹É•™¥¹” ¡Ù…±Õ”¤€ôøì(€€€€€ÑÉäì(€€€€€€€½¹ÍÐÁ…ÉÍ•€ô¹•ÜUI0¡Ù…±Õ”¤ì(€€€€€€€É•ÑÕÉ¸l¡ÑÑÀèœ°€¡ÑÑÁÌèt¹¥¹±Õ‘•Ì¡Á…ÉÍ•¹ÁÉ½Ñ½½°¤€˜˜€…Á…ÉÍ•¹ÕÍ•É¹…µ”€˜˜€…Á…ÉÍ•¹Á…ÍÍÝ½Éì(€€€€€ô…Ñ ìÉ•ÑÕÉ¸™…±Í”ìô(€€€ô°€=¹±ä!QQ@½!QQALUI1ÌÝ¥Ñ¡½ÕÐ•µ‰•‘‘•É•‘•¹Ñ¥…±Ì…É”…±±½Ý•¸œ¤°(€ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôø=Á•¸Ñ¡¥Ì•á…ÐUI0¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Ñ…ˆýq¹q¸‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹ÕÉ°¥õq¹q¹Q¡¥Ì¡…¹•ÌÑ¡”…Ñ¥Ù”Ñ…ˆÌÁ…”¸	ÕÉ¥Ñ¼Ý¥±°¹½ÐÉ•…Ñ¡”Á…”Õ¹Ñ¥°„Í•Á…É…Ñ”…ÁÁÉ½Ù•É•ÅÕ•ÍÐ¹€°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}Á…•}…Ñ¥½¸œ°‰É½ÝÍ•É}…Ñ¥½¸è€¹…Ù¥…Ñ”œ°€¸¸¹¥¹ÁÕÐô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ  ¤€ôøÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€ôôô€œÄœ€˜˜ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}	I=]MI}=9QI=0€ôôô€œÄœ€ü‰É½ÝÍ•É9…Ù¥…Ñ”€è¹Õ±°¤ì(
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const browserNavigate = defineTool({
+  description: 'Open the exact owner-requested HTTP/HTTPS URL in the active Brave tab. Use this when the owner asks to open a website or a tab search finds no matching site. Does not read page contents; page reading and site permission are separate.',
+  inputSchema: z.object({
+    url: z.string().trim().min(8).max(2000).url().refine((value) => {
+      try {
+        const parsed = new URL(value);
+        return ['http:', 'https:'].includes(parsed.protocol) && !parsed.username && !parsed.password;
+      } catch { return false; }
+    }, 'Only HTTP/HTTPS URLs without embedded credentials are allowed.'),
+  }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => `Open this exact URL in the active Brave tab?\n\n${JSON.stringify(input.url)}\n\nThis changes the active tab's page. Burito will not read the page until a separate approved request.`,
+  },
+  execute: (input, ctx) => hostAccess({ action: 'browser_page_action', browser_action: 'navigate', ...input }, ctx.abortSignal, true),
+});
+
+export default defineDynamic(() => process.env.BURITO_PC_ACCESS === '1' && process.env.BURITO_BROWSER_CONTROL === '1' ? browserNavigate : null);

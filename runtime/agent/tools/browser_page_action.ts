@@ -1,1 +1,34 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‰É½ÝÍ•ÉA…•Ñ¥½¸€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€A•É™½É´½¹”Á…”…Ñ¥½¸…™Ñ•È½Ý¹•È…ÁÁÉ½Ù…°è±¥¬½¹”Õ¹¥ÅÕ•±äµ…Ñ¡•Ù¥Í¥‰±”±…‰•°€¡Á…ÍÌ¥Ð…ÌÑ…É•Ðì™½È½µÁ…Ñ¥‰¥±¥Ñä°„±¥¬±…‰•°ÍÕÁÁ±¥•…ÌÑ•áÐ¥Ì…±Í¼…•ÁÑ•¤°™¥±°½¹”Õ¹¥ÅÕ•±äµ…Ñ¡•¹½¸µÁ…ÍÍÝ½É™¥•±°ÁÉ•ÍÌ¹Ñ•È½Q…ˆ½Í…Á”¥¸„¹…µ•™¥•±°ÍÉ½±°°½È¹…Ù¥…Ñ”‰…¬½™½ÉÝ…É¸… …Ñ¥½¸É•ÅÕ¥É•Ì…ÁÁÉ½Ù…°¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ì(€€€…Ñ¥½¸èè¹•¹Õ´¡l±¥­}Ñ•áÐœ°€ÑåÁ•}Ñ•áÐœ°€ÁÉ•ÍÍ}­•äœ°€ÍÉ½±°œ°€‰…¬œ°€™½ÉÝ…Ét¤°(€€€Ñ…É•Ðèè¹ÍÑÉ¥¹œ ¤¹µ…à ÈÀÀ¤¹½ÁÑ¥½¹…° ¤°(€€€Ñ•áÐèè¹ÍÑÉ¥¹œ ¤¹µ…à ÈÀÀÀ¤¹½ÁÑ¥½¹…° ¤°(€€€­•äèè¹•¹Õ´¡l¹Ñ•Èœ°€Q…ˆœ°€Í…Á”t¤¹½ÁÑ¥½¹…° ¤°(€€€‘¥É•Ñ¥½¸èè¹•¹Õ´¡lÕÀœ°€‘½Ý¸t¤¹½ÁÑ¥½¹…° ¤°(€€€…µ½Õ¹Ðèè¹¹Õµ‰•È ¤¹¥¹Ð ¤¹µ¥¸ ÔÀ¤¹µ…à ÈÀÀÀ¤¹½ÁÑ¥½¹…° ¤°(€ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôøì(€€€€€½¹ÍÐÑ…É•Ð€ô¥¹ÁÕÐ¹Ñ…É•Ðñð€¡¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€±¥­}Ñ•áÐœ€ü¥¹ÁÕÐ¹Ñ•áÐ€èÕ¹‘•™¥¹•¤ì(€€€€€½¹ÍÐ¥ÉÉ•Ù•ÉÍ¥‰±”€ô¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€±¥­}Ñ•áÐœ€˜˜€½qˆ¡Í•¹‘ñÍÕ‰µ¥ÑñÁÕ‰±¥Í¡ñÁ½ÍÑñÁ…åñ‰Õåñ‘•±•Ñ•ñÉ•µ½Ù•ñ½¹™¥ÉµñÁ±…”½É‘•È¥qˆ½¤¹Ñ•ÍÐ¡Ñ…É•Ðñð€œœ¤ì(€€€€€¥˜€¡¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€ÑåÁ•}Ñ•áÐœ¤É•ÑÕÉ¸QåÁ”Ñ¡¥Ì•á…ÐÑ•áÐ¥¹Ñ¼Ñ¡”Õ¹¥ÅÕ•±äµ…Ñ¡¥¹œÙ¥Í¥‰±”™¥•±€‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹Ñ…É•Ð¥ô¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Ñ…ˆýq¹q¸‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹Ñ•áÐ¥õq¹q¹Q¡¥Ì‘½•Ì¹½ÐÍÕ‰µ¥ÐÑ¡”™½É´¹€ì(€€€€€¥˜€¡¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€±¥­}Ñ•áÐœ¤É•ÑÕÉ¸±¥¬Ñ¡”½¹”Ù¥Í¥‰±”½¹ÑÉ½°µ…Ñ¡¥¹œ€‘í)M=8¹ÍÑÉ¥¹¥™ä¡Ñ…É•Ð¥ô¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Ñ…ˆü‘í¥ÉÉ•Ù•ÉÍ¥‰±”€ü€œQ¡¥Ìµ…äÍ•¹¥¹™½Éµ…Ñ¥½¸½Èµ…­”…¸•áÑ•É¹…°½‘•ÍÑÉÕÑ¥Ù”¡…¹”¸œ€è€œõ€ì(€€€€€¥˜€¡¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€ÁÉ•ÍÍ}­•äœ¤É•ÑÕÉ¸AÉ•ÍÌ€‘í¥¹ÁÕÐ¹­•åô¥¸Ñ¡”Ù¥Í¥‰±”™¥•±€‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹Ñ…É•Ð¥ô¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Ñ…ˆü¹Ñ•Èµ…äÍÕ‰µ¥Ð„™½É´¹€ì(€€€€€¥˜€¡¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€ÍÉ½±°œ¤É•ÑÕÉ¸MÉ½±°€‘í¥¹ÁÕÐ¹‘¥É•Ñ¥½¹ô€‘í¥¹ÁÕÐ¹…µ½Õ¹ÑôÁ¥á•±Ì¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Á…”ý€ì(€€€€€É•ÑÕÉ¸9…Ù¥…Ñ”€‘í¥¹ÁÕÐ¹…Ñ¥½¹ô¥¸Ñ¡”…Ñ¥Ù”	É…Ù”Ñ…ˆý€ì(€€€ô°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}Á…•}…Ñ¥½¸œ°‰É½ÝÍ•É}…Ñ¥½¸è¥¹ÁÕÐ¹…Ñ¥½¸°(€€€Ñ…É•Ðè¥¹ÁÕÐ¹Ñ…É•Ðñð€¡¥¹ÁÕÐ¹…Ñ¥½¸€ôôô€±¥­}Ñ•áÐœ€ü¥¹ÁÕÐ¹Ñ•áÐ€èÕ¹‘•™¥¹•¤°(€€€Ñ•áÐè¥¹ÁÕÐ¹Ñ•áÐ°­•äè¥¹ÁÕÐ¹­•ä°‘¥É•Ñ¥½¸è¥¹ÁÕÐ¹‘¥É•Ñ¥½¸°(€€€…µ½Õ¹Ðè¥¹ÁÕÐ¹…µ½Õ¹Ðô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ  ¤€ôøÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€ôôô€œÄœ€˜˜ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}	I=]MI}=9QI=0€ôôô€œÄœ€ü‰É½ÝÍ•ÉA…•Ñ¥½¸€è¹Õ±°¤ì
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const browserPageAction = defineTool({
+  description: 'Perform one page action after owner approval: click one uniquely matched visible label (pass it as target; for compatibility, a click label supplied as text is also accepted), fill one uniquely matched non-password field, press Enter/Tab/Escape in a named field, scroll, or navigate back/forward. Each action requires approval.',
+  inputSchema: z.object({
+    action: z.enum(['click_text', 'type_text', 'press_key', 'scroll', 'back', 'forward']),
+    target: z.string().max(200).optional(),
+    text: z.string().max(2000).optional(),
+    key: z.enum(['Enter', 'Tab', 'Escape']).optional(),
+    direction: z.enum(['up', 'down']).optional(),
+    amount: z.number().int().min(50).max(2000).optional(),
+  }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => {
+      const target = input.target || (input.action === 'click_text' ? input.text : undefined);
+      const irreversible = input.action === 'click_text' && /\b(send|submit|publish|post|pay|buy|delete|remove|confirm|place order)\b/i.test(target || '');
+      if (input.action === 'type_text') return `Type this exact text into the uniquely matching visible field ${JSON.stringify(input.target)} in the active Brave tab?\n\n${JSON.stringify(input.text)}\n\nThis does not submit the form.`;
+      if (input.action === 'click_text') return `Click the one visible control matching ${JSON.stringify(target)} in the active Brave tab?${irreversible ? ' This may send information or make an external/destructive change.' : ''}`;
+      if (input.action === 'press_key') return `Press ${input.key} in the visible field ${JSON.stringify(input.target)} in the active Brave tab? Enter may submit a form.`;
+      if (input.action === 'scroll') return `Scroll ${input.direction} ${input.amount} pixels in the active Brave page?`;
+      return `Navigate ${input.action} in the active Brave tab?`;
+    },
+  },
+  execute: (input, ctx) => hostAccess({ action: 'browser_page_action', browser_action: input.action,
+    target: input.target || (input.action === 'click_text' ? input.text : undefined),
+    text: input.text, key: input.key, direction: input.direction,
+    amount: input.amount }, ctx.abortSignal, true),
+});
+
+export default defineDynamic(() => process.env.BURITO_PC_ACCESS === '1' && process.env.BURITO_BROWSER_CONTROL === '1' ? browserPageAction : null);

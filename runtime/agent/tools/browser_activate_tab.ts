@@ -1,1 +1,16 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‰É½ÝÍ•ÉÑ¥Ù…Ñ•Q…ˆ€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€Ñ¥Ù…Ñ”½¹”•á…Ð	É…Ù”Ñ…ˆ™É½´„É••¹Ð‰É½ÝÍ•É}™¥¹‘}Ñ…‰ÌÉ•ÍÕ±Ð¸Q¡”½Ý¹•ÈµÕÍÐ…ÁÁÉ½Ù”Ñ¡”ÍÁ•¥™¥ŒÑ¥Ñ±”…¹Ñ…ˆ%¸I•™ÕÍ•Ì¥˜Ñ¡”Ñ…ˆ‘¥Í…ÁÁ•…É•½È¥ÑÌÑ¥Ñ±”¡…¹•¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ìÑ…‰}¥èè¹¹Õµ‰•È ¤¹¥¹Ð ¤¹¹½¹¹•…Ñ¥Ù” ¤°•áÁ•Ñ•‘}Ñ¥Ñ±”èè¹ÍÑÉ¥¹œ ¤¹µ¥¸ Ä¤¹µ…à ÔÄÈ¤ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôøMÝ¥Ñ 	É…Ù”Ñ¼Ñ¡”Ñ…ˆÑ¥Ñ±•€‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹•áÁ•Ñ•‘}Ñ¥Ñ±”¥ô€¡Ñ…ˆ%€‘í¥¹ÁÕÐ¹Ñ…‰}¥‘ô¤ý€°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}…Ñ¥Ù…Ñ•}Ñ…ˆœ°€¸¸¹¥¹ÁÕÐô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ  ¤€ôøÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€ôôô€œÄœ€˜˜ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}	IY}Q	L€ôôô€œÄœ€ü‰É½ÝÍ•ÉÑ¥Ù…Ñ•Q…ˆ€è¹Õ±°¤ì
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const browserActivateTab = defineTool({
+  description: 'Activate one exact Brave tab from a recent browser_find_tabs result. The owner must approve the specific title and tab ID. Refuses if the tab disappeared or its title changed.',
+  inputSchema: z.object({ tab_id: z.number().int().nonnegative(), expected_title: z.string().min(1).max(512) }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => `Switch Brave to the tab titled ${JSON.stringify(input.expected_title)} (tab ID ${input.tab_id})?`,
+  },
+  execute: (input, ctx) => hostAccess({ action: 'browser_activate_tab', ...input }, ctx.abortSignal, true),
+});
+
+export default defineDynamic(() => process.env.BURITO_PC_ACCESS === '1' && process.env.BURITO_BRAVE_TABS === '1' ? browserActivateTab : null);

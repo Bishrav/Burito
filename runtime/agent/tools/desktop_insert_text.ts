@@ -1,1 +1,23 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‘•Í­Ñ½Á%¹Í•ÉÑQ•áÐ€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€™Ñ•È‘•Í­Ñ½Á}Ý¥¹‘½ÝÌ¥‘•¹Ñ¥™¥•ÌÑ¡”•á…Ð‘•ÍÑ¥¹…Ñ¥½¸Ý¥¹‘½Ü°¥¹Í•ÉÐ½Ý¹•ÈµÉ•ÅÕ•ÍÑ•Ñ•áÐ…ÐÑ¡”…É•Ð¥¸¥ÑÌÕÉÉ•¹Ñ±ä™½ÕÍ•…•ÍÍ¥‰±”Ñ•áÐ™¥•±¸Q¡¥Ì™½ÕÍ•ÌÑ¡…Ð•á…ÐÝ¥¹‘½Ü…¹¥¹Í•ÉÑÌÝ¥Ñ¡½ÕÐÉ•Á±…¥¹œ•á¥ÍÑ¥¹œÑ•áÐ¸I•ÅÕ¥É•Ì€´µ•¹…‰±”µ‘•Í­Ñ½Àµ½¹ÑÉ½°…¹•áÁ±¥¥Ð…ÁÁÉ½Ù…°Í¡½Ý¥¹œÑ¡”™Õ±°Ñ•áÐ…¹‘•ÍÑ¥¹…Ñ¥½¸¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ì(€€€¥¹Ñ•É¹…±%èè¹ÍÑÉ¥¹œ ¤¹É••à ½ylÀ´å„µ™µµuìÌÙô¼¤°(€€€•áÁ•Ñ•‘}…ÁÑ¥½¸èè¹ÍÑÉ¥¹œ ¤¹µ¥¸ Ä¤¹µ…à ÔÄÈ¤°(€€€Ñ•áÐèè¹ÍÑÉ¥¹œ ¤¹µ¥¸ Ä¤¹µ…à ÔÀÀÀ¤°(€ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôø½ÕÌÑ¡”Ý¥¹‘½Ü€‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹•áÁ•Ñ•‘}…ÁÑ¥½¸¥ô€ ‘í¥¹ÁÕÐ¹¥¹Ñ•É¹…±%‘ô¤…¹¥¹Í•ÉÐÑ¡¥Ì•á…ÐÑ•áÐ…Ð¥ÑÌ™½ÕÍ••‘¥Ñ…‰±”™¥•±üá¥ÍÑ¥¹œÑ•áÐÝ¥±°¹½Ð‰”É•Á±…•¹q¹q¸‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹Ñ•áÐ¥õ€°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‘•Í­Ñ½Á}¥¹Í•ÉÑ}Ñ•áÐœ°€¸¸¹¥¹ÁÕÐô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ  ¤€ôø(€ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€ôôô€œÄœ€˜˜ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}M-Q=A}=9QI=0€ôôô€œÄœ(€€€€ü‘•Í­Ñ½Á%¹Í•ÉÑQ•áÐ€è¹Õ±°°(¤ì(
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const desktopInsertText = defineTool({
+  description: 'After desktop_windows identifies the exact destination window, insert owner-requested text at the caret in its currently focused accessible text field. This focuses that exact window and inserts without replacing existing text. Requires --enable-desktop-control and explicit approval showing the full text and destination.',
+  inputSchema: z.object({
+    internalId: z.string().regex(/^[0-9a-fA-F-]{36}$/),
+    expected_caption: z.string().min(1).max(512),
+    text: z.string().min(1).max(5000),
+  }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => `Focus the window ${JSON.stringify(input.expected_caption)} (${input.internalId}) and insert this exact text at its focused editable field? Existing text will not be replaced.\n\n${JSON.stringify(input.text)}`,
+  },
+  execute: (input, ctx) => hostAccess({ action: 'desktop_insert_text', ...input }, ctx.abortSignal, true),
+});
+
+export default defineDynamic(() =>
+  process.env.BURITO_PC_ACCESS === '1' && process.env.BURITO_DESKTOP_CONTROL === '1'
+    ? desktopInsertText : null,
+);

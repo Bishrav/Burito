@@ -1,1 +1,121 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tŒ	ÕÉ¥Ñ¼()	ÕÉ¥Ñ¼¥Ì„±½…°µ™¥ÉÍĞÁ•ÉÍ½¹…°…ÍÍ¥ÍÑ…¹Ğ‰Õ¥±Ğ…É½Õ¹„±½…°±…¹Õ…”µ½‘•°°)•áÁ±¥¥Ğ±½…°µ•µ½Éä°…¹½İ¹•Èµ…ÁÁÉ½Ù•Ñ½½±Ì¸%Ğ…¸…¹Íİ•È™É½´Í…Ù•)­¹½İ±•‘”°É•µ•µ‰•È…ÁÁÉ½Ù•™…ÑÌ…¹‘•™¥¹¥Ñ¥½¹Ì°¥¹ÍÁ•ĞÍ•±•Ñ•‘•Í­Ñ½À)İ¥¹‘½İÌ°…¹İ½É¬İ¥Ñ 	É…Ù”Á…•Ìİ¡•¸Ñ¡”É•ÅÕ¥É•Á•Éµ¥ÍÍ¥½¹Ì…É”•¹…‰±•¸()	ÕÉ¥Ñ¼¥Ì…¸•Ù½±Ù¥¹œÁÉ½©•Ğ°¹½Ğ„ÁÉ½µ¥Í”½˜Õ¹É•ÍÑÉ¥Ñ•½È™Õ±±äÉ•±¥…‰±”)½µÁÕÑ•È½¹ÑÉ½°¸Ù•ÉäÍÉ••¸½Á…”É•……¹‰É½İÍ•È½È‘•Í­Ñ½À…Ñ¥½¸É•µ…¥¹Ì)‰½Õ¹‘•‰äÑ¡”Ñ½½°…¹¥ÑÌ…ÁÁÉ½Ù…°ÁÉ½µÁĞ¸%Ğ‘½•Ì¹½ĞÉÕ¸…É‰¥ÑÉ…ÉäÍ¡•±°)½µµ…¹‘Ì°É•…Ñ¡”±¥Á‰½…É°½È½‰Í•ÉÙ”Ñ¡”‘•Í­Ñ½À½¹Ñ¥¹Õ½ÕÍ±ä¸((ŒŒEÕ¥¬ÍÑ…ÉĞ()Q¡”ÍÑ…¹‘…É±½…°‘•Í­Ñ½À±…Õ¹¡•È…ÍÍÕµ•ÌÑ¡”±½…°µ½‘•°‰ÕÉ¥Ñ¼µ±½…°èá‰€)¥Ì…±É•…‘ä…Ù…¥±…‰±”…¹Ñ¡”•áÑ•É¹…°‰É…¥¸‘É¥Ù”¥Ìµ½Õ¹Ñ•…Ğ)€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¹€è()‰…Í )ø½	ÕÉ¥Ñ¼(¸½ÍÉ¥ÁÑÌ½ÍÑ…ÉĞµ¡…Ğ¹Í )€()AÉ•ÍÌÑÉ°­€Ñ¼±•…Ù”Ñ¡”¡…Ğ¸Q¡”±…Õ¹¡•È•¹…‰±•ÌÑ¡”¥µÁ±•µ•¹Ñ•±½…°)‘•Í­Ñ½À…¹	É…Ù”Ñ½½±Ì¸… Í•¹Í¥Ñ¥Ù”É•…½È…Ñ¥½¸ÍÑ¥±°É•ÅÕ¥É•Ì¥ÑÌ½İ¸)…ÁÁÉ½Ù…°¸A•ÉÍ½¹…°™…ÑÌ…É”•á±Õ‘•‰ä‘•™…Õ±Ğì…‘€´µ¥¹±Õ‘”µÁ•ÉÍ½¹…±€Ñ¼)Ñ¡”±…Õ¹¡•È½µµ…¹½¹±äİ¡•¸å½Ôİ…¹ĞÑ¡•´¥¹±Õ‘•¥¸Ñ¡…Ğ¡…Ğ¸((ŒŒ¥ÉÍĞµÑ¥µ”1¥¹ÕàÍ•ÑÕÀ()I•…Ñ¡”m™¥ÉÍĞ±½…°½¹Ù•ÉÍ…Ñ¥½¸Õ¥‘•t¡‘½Ì½%IMQ}!P¹µ¤™½ÈÉÕ¹Ñ¥µ”°)=±±…µ„°µ½‘•°°…¹™¥ÉÍĞµ¡…ĞÍ•ÑÕÀ¸%¸Í¡½ÉĞ°¥¹ÍÑ…±°Ñ¡”Á¥¹¹•Ù”ÉÕ¹Ñ¥µ”)‘•Á•¹‘•¹¥•Ì¥¸Ñ¡¥Ì¡•­½ÕĞ°¥¹ÍÑ…±°=±±…µ„°½‰Ñ…¥¸„½µÁ…Ñ¥‰±”±½…°µ½‘•°°)…¹É•…Ñ”	ÕÉ¥Ñ¼Ì±½…°=±±…µ„µ½‘•°½¹™¥ÕÉ…Ñ¥½¸è()‰…Í )ø½	ÕÉ¥Ñ¼)‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í )½±±…µ„ÁÕ±°Åİ•¸Ìèáˆ)½±±…µ„É•…Ñ”‰ÕÉ¥Ñ¼µ±½…°èáˆ€µ˜½¹™¥œ½½±±…µ„½5½‘•±™¥±”)€()Q¡”=±±…µ„µ½‘•°¥Ì±½…°Ñ¼Ñ¡”µ…¡¥¹”…¹¥Ì¹½ĞÁ…ÉĞ½˜Ñ¡”¥ĞÉ•Á½Í¥Ñ½Éä¸)¡•¬ATµ•µ½Éä…¹Ñ¡”¹•Üµ…¡¥¹”Ì…Á…‰¥±¥Ñ¥•Ì‰•™½É”¡½½Í¥¹œ„µ½‘•°¸((ŒŒ5½Ù¥¹œ	ÕÉ¥Ñ¼Ñ¼…¹½Ñ¡•È1¥¹Õàµ…¡¥¹”()Q¡”‰É…¥¸‘É¥Ù”½¹Ñ…¥¹ÌÁ•ÉÍ¥ÍÑ•¹Ğ±½…°‘…Ñ„ìÑ¡”É•Á½Í¥Ñ½Éä½¹Ñ…¥¹ÌÑ¡”)ÁÉ½É…´¸Q¡”ÕÉÉ•¹Ğ½‘”¥Ì½¸¥Ñ!Õˆ¸%˜å½Ô±…Ñ•È¡…Ù”Õ¹ÁÕÍ¡•±½…°)½µµ¥ÑÌ°É•…Ñ”„¥Ğ‰Õ¹‘±”½¸Ñ¡”‰É…¥¸‘É¥Ù”Ñ¼ÑÉ…¹Í™•ÈÑ¡•´…¹Ñ¡•¥È)¡¥ÍÑ½Éäè()‰…Í )ø½	ÕÉ¥Ñ¼)¥ĞÍÑ…ÑÕÌ€´µÍ¡½ÉĞ)¥Ğ‰Õ¹‘±”É•…Ñ”€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”€´µ…±°)€()=¸Ñ¡”¹•Üµ…¡¥¹”°µ½Õ¹ĞÑ¡”•á¥ÍÑ¥¹œ‰É…¥¸‘É¥Ù”İ¥Ñ¡½ÕĞ™½Éµ…ÑÑ¥¹œ¥Ğ¸½È)Ñ¡”ÕÉÉ•¹ĞÁÕÍ¡•½‘”°±½¹”¥Ñ!ÕˆìÕÍ”Ñ¡”‰Õ¹‘±”½¹±äÑ¼¥¹±Õ‘”™ÕÑÕÉ”)Õ¹ÁÕÍ¡•½µµ¥ÑÌè()‰…Í )¥Ğ±½¹”¡ÑÑÁÌè¼½¥Ñ¡Õˆ¹½´½	¥Í¡É…Ø½	ÕÉ¥Ñ¼¹¥Ğø½	ÕÉ¥Ñ¼(ŒQ¼¥¹±Õ‘”Õ¹ÁÕÍ¡•½µµ¥ÑÌ¥¹ÍÑ•…°ÕÍ”è(Œ¥Ğ±½¹”€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”ø½	ÕÉ¥Ñ¼)ø½	ÕÉ¥Ñ¼)‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í )€()M•”Ñ¡”½µÁ±•Ñ”m¹•Ü1¥¹Õàµ¥É…Ñ¥½¸Õ¥‘•t¡‘½Ì½9]}1%9Ua}5%IQ%=8¹µ¤™½È)µ½Õ¹Ñ¥¹œÑ¡”‘¥Í¬°Í•ÑÑ¥¹œÕÀÑ¡”µ½‘•°…¹	É…Ù”•áÑ•¹Í¥½¸°…¹„É•…‘äµÑ¼µÁ…ÍÑ”)½‘•àÁÉ½µÁĞ¸((ŒŒ1½…°µ•µ½Éä…¹ÍÑ½É…”()	ÕÉ¥Ñ¼ÍÑ½É•Ìµ•µ½É¥•Ì°±½ÍÍ…Éä•¹ÑÉ¥•Ì°±•ÍÍ½¹Ì°…¹¥µÁ½ÉÑ•­¹½İ±•‘”¥¸)¥ÑÌ±½…°‘…Ñ„‘¥É•Ñ½Éä¸Q¡”‘•™…Õ±Ğ™½±±½İÌÑ¡”a‘…Ñ„±½…Ñ¥½¸ìÍ•Ğ)	UI%Q=}Q}%I€Ñ¼Í•±•Ğ…¹½Ñ¡•È…‰Í½±ÕÑ”Á…Ñ ¸Q¡”‘•Í­Ñ½À±…Õ¹¡•ÈÕÍ•Ì)€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ…€…¹É•™ÕÍ•ÌÑ¼ÍÑ…ÉĞ¥˜Ñ¡”•áÁ•Ñ•‘É¥Ù”¥Ì¹½Ğ)µ½Õ¹Ñ•¸-••ÀÑ¡¥Ì‘…Ñ„½ÕĞ½˜¥Ñ!Õˆ¸	…¬¥ĞÕÀÑ¼„Í•Á…É…Ñ”‘•ÍÑ¥¹…Ñ¥½¸¸()Q¡”ME1¥Ñ”‘…Ñ„¥Ì±½…°…¹Õ¹•¹ÉåÁÑ•¸UÍ”½Á•É…Ñ¥¹œµÍåÍÑ•´‘¥Í¬•¹ÉåÁÑ¥½¸)Ñ¼ÁÉ½Ñ•Ğ¥Ğ…ĞÉ•ÍĞ¸•±•Ñ¥¹œ„‘…Ñ…‰…Í”É•½É‘½•Ì¹½Ğ•É…Í”½Á¥•Ì¥¸)•áÑ•É¹…°‰…­ÕÁÌ½ÈÕ…É…¹Ñ•”™½É•¹Í¥Œ•É…ÍÕÉ”™É½´ÍÑ½É…”µ•‘¥„¸((ŒŒ	É…Ù”…¹‘•Í­Ñ½À…•ÍÌ()Q¡”½ÁÑ¥½¹…°	É…Ù”•áÑ•¹Í¥½¸…¹¹…Ñ¥Ù”µ•ÍÍ…¥¹œ¡½ÍĞ…É”¥¹ÍÑ…±±•™É½´Ñ¡¥Ì)É•Á½Í¥Ñ½Éä¸½±±½ÜmA…•ÍÌÍ•ÑÕÁt¡‘½Ì½A}ML¹µ¤Ñ¼±½…Ñ¡”Õ¹Á…­•)•áÑ•¹Í¥½¸°¥¹ÍÑ…±°Ñ¡”¡½ÍĞ™½ÈÑ¡”‘¥ÍÁ±…å••áÑ•¹Í¥½¸%°…¹É…¹ĞÍ¥Ñ”)Á•Éµ¥ÍÍ¥½¹Ì¸e½Ô…¸É…¹Ğ…•ÍÌÑ¼½¹”Í¥Ñ”½È…±°É•Õ±…È!QQ@½!QQALÍ¥Ñ•Ìì)Ñ¡”‰É½İÍ•ÈÍÑ¥±°…Í­ÌÍ•Á…É…Ñ•±ä‰•™½É”Á…”É•…‘Ì…¹…Ñ¥½¹Ì¸Q¡”•áÑ•¹Í¥½¸)‘½•Ì¹½ĞÍ•¹Á…”½¹Ñ•¹ÑÌÕ¹Ñ¥°…¸…ÁÁÉ½Ù•É•…¥ÌÉ•ÅÕ•ÍÑ•¸()-]¥¸İ¥¹‘½Ü±¥ÍÑ¥¹œ…¹™½ÕÌÉ•ÅÕ¥É”-A±…Íµ„İ¥Ñ ]…å±…¹¸MÉ••¸=H¥Ì„)Í•Á…É…Ñ”½¹”µÍ¡½Ğ…ÁÁÉ½Ù•É•…¸=Hµ…äµ¥ÍÉ•…Ñ•áĞ…¹‘½•Ì¹½Ğ¥‘•¹Ñ¥™ä)Ù¥ÍÕ…°½‰©•ÑÌ¸İ¥¹‘½ÜÑ¥Ñ±”¥‘•¹Ñ¥™¥•Ìµ•Ñ…‘…Ñ„°¹½ĞÑ¡”Á…”½¹Ñ•¹ÑÌ¸((ŒŒ1•…É¸µ½É”((´mI½…‘µ…Át¡‘½Ì½I=5@¹µ¤(´mÕÉÉ•¹ĞÍÑ…ÑÕÍt¡‘½Ì½MQQUL¹µ¤(´mÉ¡¥Ñ•ÑÕÉ”…¹ÑÉÕÍĞ‰½Õ¹‘…É¥•Ít¡‘½Ì½I!%QQUI¹µ¤(´m¥ÉÍĞ±½…°½¹Ù•ÉÍ…Ñ¥½¸…¹µ½‘•°Í•ÑÕÁt¡‘½Ì½%IMQ}!P¹µ¤(´m9•Ü1¥¹Õàµ¥É…Ñ¥½¸…¹½‘•àÁÉ½µÁÑt¡‘½Ì½9]}1%9Ua}5%IQ%=8¹µ¤(´mA…¹	É…Ù”Ñ½½±Ít¡‘½Ì½A}ML¹µ¤(´m1½…°A¥¹Ù•¹Ñ½Éåt¡‘½Ì½A}]I9ML¹µ¤(´m-¹½İ±•‘”±¥‰É…Éåt¡‘½Ì½-9=]1¹µ¤(´m±½ÍÍ…Éåt¡‘½Ì½1=MMId¹µ¤(´m=İ¹•ÈÕ¥‘…¹”…¹™••‘‰…­t¡‘½Ì½1I9%9¹µ¤(´m=ÁÑ¥½¹…°½¹±¥¹”É•Í•…É¡t¡‘½Ì½=91%9}IMI ¹µ¤(´mÕÑ½µ…Ñ¥Œ¥Ñ!Õˆ¡•­½ÕĞÕÁ‘…Ñ•Ít¡‘½Ì½UQ=}UAQ¹µ¤()	ÕÉ¥Ñ¼¥Ì±½…°µ™¥ÉÍĞ°‰ÕĞ‰É½İÍ•ÈÍ•…É ÕÍ•ÌÑ¡”¥¹Ñ•É¹•Ğİ¡•¸•áÁ±¥¥Ñ±ä)É•ÅÕ•ÍÑ•…¹…ÁÁÉ½Ù•¸=¹±¥¹”Á…”½¹Ñ•¹Ğ¥ÌÑÉ•…Ñ•…ÌÕ¹ÑÉÕÍÑ•É•™•É•¹”)‘…Ñ„¸±½Õµ½‘•°™…±±‰…¬¥Ì¹½Ğ•¹…‰±•‰äÑ¡”ÍÑ…¹‘…É±…Õ¹¡•È¸
+# Burito
+
+Start with the [Ryoku setup](docs/RYOKU_SETUP.md), [status](docs/STATUS.md),
+and [security boundaries](docs/SECURITY.md). See the [recovery report](docs/RECOVERY_REPORT.md)
+for the integrity gate and current verification. The migration guide describes
+the separate external brain drive and KDE-era desktop setup.
+Burito is a local-first personal assistant built around a local language model,
+explicit local memory, and owner-approved tools. It can answer from saved
+knowledge, remember approved facts and definitions, inspect selected desktop
+windows, and work with Brave pages when the required permissions are enabled.
+
+Burito is an evolving project, not a promise of unrestricted or fully reliable
+computer control. Every screen/page read and browser or desktop action remains
+bounded by the tool and its approval prompt. It does not run arbitrary shell
+commands, read the clipboard, or observe the desktop continuously.
+
+## Quick start
+
+The standard local desktop launcher assumes the local model `burito-local:8b`
+is already available and the external brain drive is mounted at
+`/mnt/burito-brain`:
+
+```bash
+cd ~/Burito
+./scripts/start-chat.sh
+```
+
+Press `Ctrl+C` to leave the chat. The launcher enables the implemented local
+desktop and Brave tools. Each sensitive read or action still requires its own
+approval. Personal facts are excluded by default; add `--include-personal` to
+the launcher command only when you want them included in that chat.
+
+## First-time Linux setup
+
+Read the [first local conversation guide](docs/FIRST_CHAT.md) for runtime,
+Ollama, model, and first-chat setup. In short, install the pinned Eve runtime
+dependencies in this checkout, install Ollama, obtain a compatible local model,
+and create Burito's local Ollama model configuration:
+
+```bash
+cd ~/Burito
+bash scripts/setup-runtime.sh
+ollama pull qwen3:8b
+ollama create burito-local:8b -f config/ollama/Modelfile
+```
+
+The Ollama model is local to the machine and is not part of the Git repository.
+Check GPU memory and the new machine's capabilities before choosing a model.
+
+## Moving Burito to another Linux machine
+
+The brain drive contains persistent local data; the repository contains the
+program. The current code is on GitHub. If you later have unpushed local
+commits, create a Git bundle on the brain drive to transfer them and their
+history:
+
+```bash
+cd ~/Burito
+git status --short
+git bundle create /mnt/burito-brain/Burito.bundle --all
+```
+
+On the new machine, mount the existing brain drive without formatting it. For
+the current pushed code, clone GitHub; use the bundle only to include future
+unpushed commits:
+
+```bash
+git clone https://github.com/Bishrav/Burito.git ~/Burito
+# To include unpushed commits instead, use:
+# git clone /mnt/burito-brain/Burito.bundle ~/Burito
+cd ~/Burito
+bash scripts/setup-runtime.sh
+```
+
+See the complete [new Linux migration guide](docs/NEW_LINUX_MIGRATION.md) for
+mounting the disk, setting up the model and Brave extension, and a ready-to-paste
+Codex prompt.
+
+## Local memory and storage
+
+Burito stores memories, glossary entries, lessons, and imported knowledge in
+its local data directory. The default follows the XDG data location; set
+`BURITO_DATA_DIR` to select another absolute path. The desktop launcher uses
+`/mnt/burito-brain/data` and refuses to start if the expected drive is not
+mounted. Keep this data out of GitHub. Back it up to a separate destination.
+
+The SQLite data is local and unencrypted. Use operating-system disk encryption
+to protect it at rest. Deleting a database record does not erase copies in
+external backups or guarantee forensic erasure from storage media.
+
+## Brave and desktop access
+
+The optional Brave extension and native messaging host are installed from this
+repository. Follow [PC access setup](docs/PC_ACCESS.md) to load the unpacked
+extension, install the host for the displayed extension ID, and grant site
+permissions. You can grant access to one site or all regular HTTP/HTTPS sites;
+the browser still asks separately before page reads and actions. The extension
+does not send page contents until an approved read is requested.
+
+KWin window listing and focus require KDE Plasma with Wayland. Screen OCR is a
+separate one-shot approved read. OCR may misread text and does not identify
+visual objects. A window title identifies metadata, not the page contents.
+
+## Learn more
+
+- [Roadmap](docs/ROADMAP.md)
+- [Current status](docs/STATUS.md)
+- [Architecture and trust boundaries](docs/ARCHITECTURE.md)
+- [First local conversation and model setup](docs/FIRST_CHAT.md)
+- [New Linux migration and Codex prompt](docs/NEW_LINUX_MIGRATION.md)
+- [PC and Brave tools](docs/PC_ACCESS.md)
+- [Local PC inventory](docs/PC_AWARENESS.md)
+- [Knowledge library](docs/KNOWLEDGE.md)
+- [Glossary](docs/GLOSSARY.md)
+- [Owner guidance and feedback](docs/LEARNING.md)
+- [Optional online research](docs/ONLINE_RESEARCH.md)
+- [Automatic GitHub checkout updates](docs/AUTO_UPDATE.md)
+
+Burito is local-first, but browser search uses the internet when explicitly
+requested and approved. Online page content is treated as untrusted reference
+data. Cloud model fallback is not enabled by the standard launcher.

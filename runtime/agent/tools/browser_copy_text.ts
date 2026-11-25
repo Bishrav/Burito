@@ -1,1 +1,24 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‰É½ÝÍ•É½ÁåQ•áÐ€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€½Áä•á…ÐÑ•áÐÍÕÁÁ±¥•‰äÑ¡”½Ý¹•È½È•áÑÉ…Ñ•™É½´Ñ¡”…Ñ¥Ù”	É…Ù”Á…”¥¹Ñ¼Ñ¡”ÍåÍÑ•´±¥Á‰½…É¸9•Ù•ÈÉ•…Ñ¡”±¥Á‰½…É¸I•ÅÕ¥É•Ì€´µ•¹…‰±”µ‰É½ÝÍ•Èµ½¹ÑÉ½°°½ÁÑ¥½¹…°±¥Á‰½…ÉÁ•Éµ¥ÍÍ¥½¸™É½´Ñ¡”	ÕÉ¥Ñ¼•áÑ•¹Í¥½¸Á½ÁÕÀ°…¹„Í•Á…É…Ñ”…ÁÁÉ½Ù…°Í¡½Ý¥¹œÑ¡”™Õ±°Ñ•áÐ™½È•Ù•Éä½Áä¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ìÑ•áÐèè¹ÍÑÉ¥¹œ ¤¹µ¥¸ Ä¤¹µ…à ÔÀÀÀ¤ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôø½ÁäÑ¡¥Ì•á…ÐÑ•áÐÑ¼Ñ¡”ÍåÍÑ•´±¥Á‰½…ÉüQ¡¥ÌÝÉ¥Ñ•Ì½¹±äì	ÕÉ¥Ñ¼…¹¹½ÐÉ•…å½ÕÈ±¥Á‰½…É¸Q¡”Ñ•áÐ¥ÌÍ•¹Ð½¹±ä½Ù•ÈÑ¡”±½…°	É…Ù”•áÑ•¹Í¥½¸½¹¹•Ñ¥½¸¹q¹q¸‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹Ñ•áÐ¥õ€°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}½Áå}Ñ•áÐœ°Ñ•áÐè¥¹ÁÕÐ¹Ñ•áÐô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ ¡Ñà¤€ôøì(€¥˜€¡ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€„ôô€œÄœñðÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}	I=]MI}=9QI=0€„ôô€œÄœ¤É•ÑÕÉ¸¹Õ±°ì(€½¹ÍÐÉ•ÅÕ•ÍÐ€ô€¡Ñà¹ÑÕÉ¸ü¹¥¹ÁÕÐ€üümt¤(€€€€¹™¥±Ñ•È ¡Á…ÉÐ¤€ôøÁ…ÉÐ¹­¥¹€ôôô€Ñ•áÐœ¤(€€€€¹µ…À ¡Á…ÉÐ¤€ôøÁ…ÉÐ¹Ñ•áÐ¤(€€€€¹©½¥¸ œ€œ¤ì(€É•ÑÕÉ¸€½qˆ¡‰É…Ù•ñ‰É½ÝÍ•ÉñÑ…‰ñÕÉ±ñÝ•‰Í¥Ñ•ñÝ•‰Á…•ñÝ•‰qÌ­Í¥Ñ•ñµ…¥±ñå½ÕÑÕ‰”¥qˆ½¤¹Ñ•ÍÐ¡É•ÅÕ•ÍÐ¤(€€€€ü‰É½ÝÍ•É½ÁåQ•áÐ€è¹Õ±°ì)ô¤ì
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const browserCopyText = defineTool({
+  description: 'Copy exact text supplied by the owner or extracted from the active Brave page into the system clipboard. Never read the clipboard. Requires --enable-browser-control, optional clipboard permission from the Burito extension popup, and a separate approval showing the full text for every copy.',
+  inputSchema: z.object({ text: z.string().min(1).max(5000) }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => `Copy this exact text to the system clipboard? This writes only; Burito cannot read your clipboard. The text is sent only over the local Brave extension connection.\n\n${JSON.stringify(input.text)}`,
+  },
+  execute: (input, ctx) => hostAccess({ action: 'browser_copy_text', text: input.text }, ctx.abortSignal, true),
+});
+
+export default defineDynamic((ctx) => {
+  if (process.env.BURITO_PC_ACCESS !== '1' || process.env.BURITO_BROWSER_CONTROL !== '1') return null;
+  const request = (ctx.turn?.input ?? [])
+    .filter((part) => part.kind === 'text')
+    .map((part) => part.text)
+    .join(' ');
+  return /\b(brave|browser|tab|url|website|webpage|web\s+site|gmail|youtube)\b/i.test(request)
+    ? browserCopyText : null;
+});

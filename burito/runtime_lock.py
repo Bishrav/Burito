@@ -1,1 +1,44 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tˆˆ‰5ÕÑÕ…°•á±ÕÍ¥½¸™½È	ÕÉ¥Ñ¼•¹ÑÉäÁ½¥¹ÑÌÑ¡…ĞÍ¡…É”•Ù”ÉÕ¹Ñ¥µ”ÍÑ…Ñ”¸ˆˆˆ()¥µÁ½ÉĞ™¹Ñ°)¥µÁ½ÉĞ½Ì)™É½´Á…Ñ¡±¥ˆ¥µÁ½ÉĞA…Ñ )™É½´‘…Ñ•Ñ¥µ”¥µÁ½ÉĞ‘…Ñ•Ñ¥µ”°Ñ¥µ•é½¹”(()‘•˜…ÅÕ¥É•}ÉÕ¹Ñ¥µ•}±½¬¡ÉÕ¹Ñ¥µ”¤è(€€€€ˆˆ‰ÅÕ¥É”Ñ¡”Á•ÈµÉÕ¹Ñ¥µ”•á±ÕÍ¥Ù”±½¬…¹É•ÑÕÉ¸¥ÑÌ½Á•¸‘•ÍÉ¥ÁÑ½È¸ˆˆˆ(€€€ÉÕ¹Ñ¥µ”€ôA…Ñ ¡ÉÕ¹Ñ¥µ”¤(€€€ÍÑ…Ñ•}‘¥É•Ñ½Éä€ôÉÕ¹Ñ¥µ”€¼€ˆ¹•Ù”ˆ(€€€ÍÑ…Ñ•}‘¥É•Ñ½Éä¹µ­‘¥È¡µ½‘”ôÁ¼ÜÀÀ°Á…É•¹ÑÌõQÉÕ”°•á¥ÍÑ}½¬õQÉÕ”¤(€€€¥˜ÍÑ…Ñ•}‘¥É•Ñ½Éä¹¥Í}Íåµ±¥¹¬ ¤½ÈÍÑ…Ñ•}‘¥É•Ñ½Éä¹ÍÑ…Ğ ¤¹ÍÑ}Õ¥€„ô½Ì¹•ÑÕ¥ ¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰•Ù”ÍÑ…Ñ”‘¥É•Ñ½ÉäµÕÍĞ‰”½İ¹•‰äå½Ô…¹¹½Ğ„Íåµ±¥¹¬ˆ¤(€€€ÍÑ…Ñ•}‘¥É•Ñ½Éä¹¡µ½ Á¼ÜÀÀ¤(€€€±½­}Á…Ñ €ôÍÑ…Ñ•}‘¥É•Ñ½Éä€¼€‰‰ÕÉ¥Ñ¼µÉÕ¹Ñ¥µ”¹±½¬ˆ(€€€±½­}™€ô½Ì¹½Á•¸¡±½­}Á…Ñ °½Ì¹=}IPğ½Ì¹=}I]Hğ½Ì¹=}9==11=\°€Á¼ØÀÀ¤(€€€ÑÉäè(€€€€€€€™¹Ñ°¹™±½¬¡±½­}™°™¹Ñ°¹1=-}`ğ™¹Ñ°¹1=-}9¤(€€€•á•ÁĞ	±½­¥¹%=ÉÉ½È…Ì•ÉÉ½Èè(€€€€€€€½Ì¹±½Í”¡±½­}™¤(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È (€€€€€€€€€€€€‰¹½Ñ¡•È	ÕÉ¥Ñ¼½Ù”ÉÕ¹Ñ¥µ”¥Ì…±É•…‘äÕÍ¥¹œÑ¡¥ÌÁÉ½©•ĞÍÑ…Ñ”¸€ˆ(€€€€€€€€€€€€‰±½Í”¥ÑÌ¡…Ğ½Èİ•ˆ½¹Í½±”‰•™½É”ÍÑ…ÉÑ¥¹œ…¹½Ñ¡•È¸ˆ(€€€€€€€€¤™É½´•ÉÉ½È(€€€É•ÑÕÉ¸±½­}™(()‘•˜…É¡¥Ù•}İ½É­™±½İ}‘…Ñ„¡ÉÕ¹Ñ¥µ”¤è(€€€€ˆˆ‰AÉ•Í•ÉÙ”ÁÉ¥½ÈÙ”‘•ØÅÕ•Õ•ÌÍ¼‘•±¥Ù•É¥•ÌÍ¥¹•‰ä…¸½±ÉÕ¸Í•É•Ğ…É•¸ĞÉ•Á±…å•¸ˆˆˆ(€€€ÍÑ…Ñ•}‘¥É•Ñ½Éä€ôA…Ñ ¡ÉÕ¹Ñ¥µ”¤€¼€ˆ¹•Ù”ˆ(€€€İ½É­™±½İ}‘…Ñ„€ôÍÑ…Ñ•}‘¥É•Ñ½Éä€¼€ˆ¹İ½É­™±½Üµ‘…Ñ„ˆ(€€€ÑÉäè(€€€€€€€¥¹™¼€ôİ½É­™±½İ}‘…Ñ„¹±ÍÑ…Ğ ¤(€€€•á•ÁĞ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€É•ÑÕÉ¸9½¹”(€€€¥˜€¡İ½É­™±½İ}‘…Ñ„¹¥Í}Íåµ±¥¹¬ ¤½È¹½Ğİ½É­™±½İ}‘…Ñ„¹¥Í}‘¥È ¤(€€€€€€€€€€€½È¥¹™¼¹ÍÑ}Õ¥€„ô½Ì¹•ÑÕ¥ ¤¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰Ù”İ½É­™±½Ü‘…Ñ„µÕÍĞ‰”…¸½İ¹•‘¥É•Ñ½Éä°¹½Ğ„Íåµ±¥¹¬ˆ¤(€€€ÍÑ…µÀ€ô‘…Ñ•Ñ¥µ”¹¹½Ü¡Ñ¥µ•é½¹”¹ÕÑŒ¤¹ÍÑÉ™Ñ¥µ” ˆ•d•´•‘P• •4•L¸•™hˆ¤(€€€…É¡¥Ù•€ôÍÑ…Ñ•}‘¥É•Ñ½Éä€¼˜ˆ¹İ½É­™±½Üµ‘…Ñ„¹‰…­ÕÀµíÍÑ…µÁôˆ(€€€½Ì¹É•Á±…”¡İ½É­™±½İ}‘…Ñ„°…É¡¥Ù•¤(€€€É•ÑÕÉ¸…É¡¥Ù•
+"""Mutual exclusion for Burito entry points that share eve runtime state."""
+
+import fcntl
+import os
+from pathlib import Path
+from datetime import datetime, timezone
+
+
+def acquire_runtime_lock(runtime):
+    """Acquire the per-runtime exclusive lock and return its open descriptor."""
+    runtime = Path(runtime)
+    state_directory = runtime / ".eve"
+    state_directory.mkdir(mode=0o700, parents=True, exist_ok=True)
+    if state_directory.is_symlink() or state_directory.stat().st_uid != os.getuid():
+        raise ValueError("eve state directory must be owned by you and not a symlink")
+    state_directory.chmod(0o700)
+    lock_path = state_directory / "burito-runtime.lock"
+    lock_fd = os.open(lock_path, os.O_CREAT | os.O_RDWR | os.O_NOFOLLOW, 0o600)
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError as error:
+        os.close(lock_fd)
+        raise ValueError(
+            "Another Burito/Eve runtime is already using this project state. "
+            "Close its chat or web console before starting another."
+        ) from error
+    return lock_fd
+
+
+def archive_workflow_data(runtime):
+    """Preserve prior Eve dev queues so deliveries signed by an old run secret aren't replayed."""
+    state_directory = Path(runtime) / ".eve"
+    workflow_data = state_directory / ".workflow-data"
+    try:
+        info = workflow_data.lstat()
+    except FileNotFoundError:
+        return None
+    if (workflow_data.is_symlink() or not workflow_data.is_dir()
+            or info.st_uid != os.getuid()):
+        raise ValueError("Eve workflow data must be an owned directory, not a symlink")
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S.%fZ")
+    archived = state_directory / f".workflow-data.backup-{stamp}"
+    os.replace(workflow_data, archived)
+    return archived

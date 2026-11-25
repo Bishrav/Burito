@@ -10,4 +10,8 @@ const openApplication = defineTool({
   execute: (input, ctx) => hostAccess({ action: 'launch', ...input }, ctx.abortSignal, true),
 });
 
-export default defineDynamic(() => process.env.BURITO_PC_ACCESS === '1' ? openApplication : null);
+export function resolveOpenApplication(environment = process.env) {
+  return environment.BURITO_PC_ACCESS === '1' ? openApplication : null;
+}
+
+export default defineDynamic(() => resolveOpenApplication());

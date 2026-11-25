@@ -1,1 +1,31 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^u¥µÁ½ÉĞì…±±Ìô™É½´€•Ù”½•Ù•¹ÑÌœì)¥µÁ½ÉĞì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉĞì…±İ…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉĞìèô™É½´€é½œì)¥µÁ½ÉĞì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍĞµ…•ÍÌ¹µ©Ìœì()½¹ÍĞ¥¹ÍÁ•Ñ]¥¹‘½Ü€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€™Ñ•È‘•Í­Ñ½Á}İ¥¹‘½İÌ¥‘•¹Ñ¥™¥•Ì½¹”Õ¹¥ÅÕ”Ñ…É•Ğ…¹Ñ¡”½İ¹•È…Í­Ìİ¡…ĞÑ¡…Ğ…ÁÀÍ¡½İÌ°É•ÅÕ•ÍĞ½¹”…ÁÁÉ½Ù…°Ñ¡…Ğİ¥±°Õ¹µ¥¹¥µ¥é”½™½ÕÌÑ¡…Ğ•á…Ğİ¥¹‘½Ü…¹¥µµ•‘¥…Ñ•±ä…ÁÑÕÉ”½¹±ä¥ÑÌ…Ñ¥Ù”İ¥¹‘½Ü™½È±½…°=H¸AÉ½Ù¥‘”Ñ¡”•á…Ğ¥¹Ñ•É¹…±%™É½´Ñ¡”±…Ñ•ÍĞÍ¹…ÁÍ¡½Ğ¸Q¡”É•ÍÕ±Ğ¥¹±Õ‘•ÌÑ…‰}ÍÑÉ¥Á}…¹‘¥‘…Ñ•}±¥¹•Ì™É½´Ñ¡”Ñ½À€ÄÔ”½˜Ñ¡”İ¥¹‘½Ü™½ÈÑ…ˆµ‰…ÈÅÕ•ÍÑ¥½¹ÌìÑ¡•Í”…É”=H…¹‘¥‘…Ñ•Ì°¹½Ğ„Ù•É¥™¥•½Õ¹Ğ¸™Ñ•È½¹”ÍÕ•ÍÍ™Õ°…ÁÑÕÉ”°…¹Íİ•ÈÑ¡”½İ¹•È¥¹ÍÑ•…½˜•¹‘¥¹œ½¸Ñ¡”Ñ½½°É•ÍÕ±Ğ¸%Ğ‘½•Ì¹½Ğ±¥¬°ÑåÁ”°½ÈÍÑ½É”Ñ¡”ÍÉ••¹Í¡½Ğ¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ğ¡ì(€€€¥¹Ñ•É¹…±%èè¹ÍÑÉ¥¹œ ¤¹É••à ½ylÀ´å„µ™µµuìÌÙô¼¤°(€ô¤°(€…ÁÁÉ½Ù…°èì(€€€ÁÉ½µÁĞè€ ¤€ôø€U¹µ¥¹¥µ¥é”½™½ÕÌÑ¡”Í•±•Ñ•…ÁÀİ¥¹‘½Ü€¡Ñ¡¥Ìµ…äÍİ¥Ñ Ù¥ÉÑÕ…°‘•Í­Ñ½ÁÌ¤°Ñ¡•¸¥µµ•‘¥…Ñ•±ä…ÁÑÕÉ”Ñ¡…Ğ…Ñ¥Ù”İ¥¹‘½Ü½¹”™½È±½…°=HüQ¡”Ñ•µÁ½É…Éä¥µ…”¥Ì‘•±•Ñ•ì=HÑ•áĞµ…äÉ•µ…¥¸¥¸±½…°¡…Ğ¡¥ÍÑ½Éä¸œ°(€€€É•ÅÕ•ÍĞè…Íå¹Œ€¡Ñà¤€ôøì(€€€€€…İ…¥Ğ¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€ÍÉ••¹}É•Í•ÉÙ”œ°Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°(€€€€€€€ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°¤ì(€€€€€É•ÑÕÉ¸€ÕÍ•Èµ…ÁÁÉ½Ù…°œì(€€€ô°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕĞ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€¥¹ÍÁ•Ñ}İ¥¹‘½Üœ°€¸¸¹¥¹ÁÕĞ°(€€€Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉĞ‘•™…Õ±Ğ‘•™¥¹•å¹…µ¥Œ ¡Ñà¤€ôøì(€¥˜€¡ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€„ôô€œÄœñğÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}M-Q=A}=9QI=0€„ôô€œÄœñğ(€€€€€ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}MI9}I€„ôô€œÄœ¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€É•…‘}ÍÉ••¸œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€¥¹ÍÁ•Ñ}İ¥¹‘½Üœ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€‰É½İÍ•É}Í•…É œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€É•ÑÕÉ¸¥¹ÍÁ•Ñ]¥¹‘½Üì)ô¤ì
+import { calls } from 'eve/events';
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const inspectWindow = defineTool({
+  description: 'After desktop_windows identifies one unique target and the owner asks what that app shows, request one approval that will unminimize/focus that exact window and immediately capture only its active window for local OCR. Provide the exact internalId from the latest snapshot. The result includes tab_strip_candidate_lines from the top 15% of the window for tab-bar questions; these are OCR candidates, not a verified count. After one successful capture, answer the owner instead of ending on the tool result. It does not click, type, or store the screenshot.',
+  inputSchema: z.object({
+    internalId: z.string().regex(/^[0-9a-fA-F-]{36}$/),
+  }),
+  approval: {
+    prompt: () => 'Unminimize/focus the selected app window (this may switch virtual desktops), then immediately capture that active window once for local OCR? The temporary image is deleted; OCR text may remain in local chat history.',
+    request: async (ctx) => {
+      await hostAccess({ action: 'screen_reserve', session_id: ctx.session.id,
+        turn_id: ctx.session.turn.id, call_id: ctx.callId }, ctx.abortSignal);
+      return 'user-approval';
+    },
+  },
+  execute: (input, ctx) => hostAccess({ action: 'inspect_window', ...input,
+    session_id: ctx.session.id, turn_id: ctx.session.turn.id, call_id: ctx.callId }, ctx.abortSignal, true),
+});
+
+export default defineDynamic((ctx) => {
+  if (process.env.BURITO_PC_ACCESS !== '1' || process.env.BURITO_DESKTOP_CONTROL !== '1' ||
+      process.env.BURITO_SCREEN_READ !== '1') return null;
+  if (ctx.turn?.id && calls(ctx.view, { name: 'read_screen', turnId: ctx.turn.id }).length > 0) return null;
+  if (ctx.turn?.id && calls(ctx.view, { name: 'inspect_window', turnId: ctx.turn.id }).length > 0) return null;
+  if (ctx.turn?.id && calls(ctx.view, { name: 'browser_search', turnId: ctx.turn.id }).length > 0) return null;
+  return inspectWindow;
+});

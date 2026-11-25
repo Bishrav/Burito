@@ -1,1 +1,203 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tŒMÑ…ÑÕÌ((ŒŒ%µÁ±•µ•¹Ñ•((´Õ±°ÍÑ…•É½…‘µ…À…¹…É¡¥Ñ•ÑÕÉ”‘•¥Í¥½¹Ì¸(´I•…µ½¹±äµ…¡¥¹”‘¥…¹½ÍÑ¥Ìİ¥Ñ ‰½Õ¹‘•½µµ…¹•á•ÕÑ¥½¸¸(´1½…°ME1¥Ñ”µ•µ½Éäè•áÁ±¥¥ĞÉ•…Ñ¥½¸°±¥ÍÑ¥¹œ°‘•±•Ñ¥½¸°ÁÉ½Ù•¹…¹”¸(´AÉ¥Ù…Ñ”ÍÑ½É…”‘•™…Õ±ÑÌ½ÕÑÍ¥‘”¥Ğì¹¼ÍÉ••¸…ÁÑÕÉ”½È¥¹Ù•¹Ñ½ÉäÕÁ±½…‘Ì¸(´MÑ…¹‘…Éµ±¥‰É…ÉäÑ•ÍÑÌ…¹¥Ñ!ÕˆÑ¥½¹ÌÑ•ÍĞ½¹™¥ÕÉ…Ñ¥½¸¸(´¥…¹½ÍÑ¥Ì‘¥ÍÑ¥¹Õ¥Í „±½…‘•9Y%%‘É¥Ù•Èİ¥Ñ ¡¥‘‘•¸‘•Ù¥”™¥±•Ì™É½´(€•Ù¥‘•¹”½˜„¡½ÍĞ‘É¥Ù•È™…¥±ÕÉ”¸(´%¹Ñ•É…Ñ¥Ù”±½…°¡½µ”•‘Õ…Ñ¥½¸°µ•µ½Éä½ÉÉ•Ñ¥½¸°½¹Í¥ÍÑ•¹ĞÁÉ¥Ù…Ñ”‰…­ÕÁÌ¸(´UÍ•Èµ±½…°9½‘”½•Ù”¥¹ÍÑ…±±•È…¹¥¹¥Ñ¥…°…•¹Ğ¥‘•¹Ñ¥Ñä¥¹ÍÑÉÕÑ¥½¹Ì¸(´Y•ÉÍ¥½¹••±•Ù•¸µ±•ÍÍ½¸‰•¥¹¹•ÈÕÉÉ¥Õ±Õ´°±½…°­¹½İ±•‘”¥¹ÍÑ…±±…Ñ¥½¸°(€Í½ÕÉ”ÁÉ½Ù•¹…¹”°µ…¹Õ…°É•Ù¥•ÜÁÉ½µÁÑÌ°…¹Í•Á…É…Ñ”Á•ÉÍ½¹…°½•¹•É…°ÍÑ½É•Ì¸(´	½Õ¹‘•°½¹”µ±•ÍÍ½¸½¹Ñ•áĞ‰Õ¥±‘•ÈìÁ•ÉÍ½¹…°™…ÑÌ•á±Õ‘•‰ä‘•™…Õ±Ğ¸(´1½…°µ…¡¥¹”¥¹Ù•¹Ñ½Éä°‰½Õ¹‘•¡½µ”µ™¥±”µ•Ñ…‘…Ñ„¡…¹”‘•Ñ•Ñ¥½¸°„(€ÍåÍÑ•µÕÍ•ÈÑ¥µ•È¥¹ÍÑ…±±•È°Á…ÕÍ”½ÍÑ…ÑÕÌ½¹ÑÉ½±Ì°…¹‰½Õ¹‘•±½…°¡…Ğ(€¥¹Ù•¹Ñ½ÉäÍÕµµ…É¥•Ì¸Q¥µ•È…Ñ¥Ù…Ñ¥½¸µÕÍĞ‰”Ù•É¥™¥•¥¸-½¹Í½±”¸(´áÁ±¥¥Ğ¡½ÍĞ™¥±”‰É½İÍ¥¹œ°‰½Õ¹‘•UQ´àÉ•…‘¥¹œ°™¥±•¹…µ”Í•…É °‘•Í­Ñ½À(€…ÁÁ±¥…Ñ¥½¸‘¥Í½Ù•Éä°…¹…ÁÁÉ½Ù•±…Õ¹ É•ÅÕ•ÍÑÌ¸€´µ¹¼µ™¥±•Í€‘¥Í…‰±•Ì(€Ñ¡•Í”Ñ½½±Ì¸Q¡”½İ¹•ÈÙ•É¥™¥•™½±‘•È±¥ÍÑ¥¹œ°„I5•á•ÉÁĞ½±¥¹”½Õ¹Ğ°(€…ÁÁ±¥…Ñ¥½¸‘¥Í½Ù•Éä°…¹„Ù¥Í¥‰±”½±Á¡¥¸±…Õ¹ ¸(´¥á•Ñ¡”¥¹Ù•¹Ñ½ÉäÍ•ÉÙ¥”ÌÅÕ½Ñ•]½É­¥¹¥É•Ñ½ÉäÁ…Ñ °İ¡¥ ÍåÍÑ•µ(€É•©•Ñ•…ĞÍÑ…ÉÑÕÀ¸MÑ…ÑÕÌ¹½ÜÉ•Á½ÉÑÌ‰½Ñ Ñ¥µ•È…¹Í•ÉÙ¥”‘•Ñ…¥±Ì¸(€Q¡”½İ¹•Èµ…¹Õ…±±ä½ÉÉ•Ñ•Ñ¡”•¹•É…Ñ•Õ¹¥Ğ…¹½¹™¥Éµ•Ñ¡”Ñ¥µ•È¥Ì(€…Ñ¥Ù”ì¥ÑÌ™¥ÉÍĞÍ…¸½µÁ±•Ñ•…¹„Íå¹Ñ¡•Ñ¥Œ™¥±”µ…‘‘¥Ñ¥½¸•Ù•¹Ğ…ÁÁ•…É•¸(´=ÁĞµ¥¸-]¥¸½‰Í•ÉÙ•ÈÉ•½É‘Ì™½É•É½Õ¹…ÁÀ%Ì¥¹Ñ¼Ñ¡”ÁÉ¥Ù…Ñ”±½…°(€‘…Ñ…‰…Í”¸Q¡”½İ¹•ÈÙ•É¥™¥•-½¹Í½±”…¹½±Á¡¥¸•Ù•¹ÑÌ…¹½¹™¥Éµ•Á…ÕÍ”(€‘¥Í…‰±•Ì‰½Ñ Ñ¡”-]¥¸ÍÉ¥ÁĞ…¹½±±•Ñ½Èİ¡¥±”É•Ñ…¥¹¥¹œ	ÕÉ¥Ñ¼É•½É‘Ì¸(´ÁÀ½¹Ñ•áĞ±…‰•±Ì…¸‰”…‘‘•°±¥ÍÑ•°ÕÁ‘…Ñ•°½ÈÉ•µ½Ù•İ¥Ñ ÁÉ½Ù•¹…¹”(€Í•Á…É…Ñ¥¹œ½İ¹•Èµ½¹™¥Éµ•¹½Ñ•Ì™É½´•¹•É¥Œ…ÁÀµÉ½±”‘•ÍÉ¥ÁÑ¥½¹Ì¸I•Á½ÉÑÌ(€‘¼¹½ĞÑÉ•…Ğ•¥Ñ¡•È…Ì¥¹™•ÉÉ•¥¹Ñ•É•ÍÑÌ¸Ñ¥Ù¥Ñä±•…ÈÉ•µ½Ù•ÌÑ¡”±½…°(€•Ù•¹ÑÌ…¹±…‰•±ÌÑ½•Ñ¡•È¸(´1½…°¡…Ğ…¸É••¥Ù”„‰½Õ¹‘•Í•Ù•¸µ‘…ä…Ñ¥Ù¥ÑäÍÕµµ…Éä½¹±äİ¥Ñ Ñ¡”(€•áÁ±¥¥Ğ€´µ¥¹±Õ‘”µ…Ñ¥Ù¥Ñå€™±…œ¸€´µ…Ñ¥Ù¥Ñäµ½¹±å€…‘‘¥Ñ¥½¹…±±ä•á±Õ‘•Ì(€A¥¹Ù•¹Ñ½Éä°Á•ÉÍ½¹…°™…ÑÌ°…¹AÑ½½±Ì¸Ñ¥Ù¥ÑäÉ•µ…¥¹Ì•á±Õ‘•™É½´(€¹½Éµ…°¡…Ğ¸(´=İ¹•È™••‘‰…¬…¸‰”•áÁ±¥¥Ñ±äÉ•½É‘•°±¥ÍÑ•°…¹‘•±•Ñ•¥¸Ñ¡”ÁÉ¥Ù…Ñ”(€±½…°‘…Ñ…‰…Í”¸9½Éµ…°¡…ĞÉ••¥Ù•Ì¥Ğ½¹±äİ¥Ñ €´µ¥¹±Õ‘”µ™••‘‰…­€ì(€…Ñ¥Ù¥Ñäµ½¹±ä¡…Ğ•á±Õ‘•Ì¥Ğ¸••‘‰…¬¥Ì½¹Ñ•áĞ°¹½Ğµ½‘•°µİ•¥¡ĞÑÉ…¥¹¥¹œ¸(´MÕ•ÍÑ¥½¹Ì…¸‰”µ…¹Õ…±±äÉ•½É‘•İ¥Ñ ½İ¹•Èµ•¹Ñ•É••Ù¥‘•¹”°É•Ù¥•İ•(€…ÌÁ•¹‘¥¹œ½…•ÁÑ•½‘¥Íµ¥ÍÍ•°±¥ÍÑ•°…¹‘•±•Ñ•¸á…Ğ¹½Éµ…±¥é•Ñ•áĞ(€‘ÕÁ±¥…Ñ•ÌÉ•ÕÍ”Ñ¡”½É¥¥¹…°•¹ÑÉä…¹…ÁÁ•¹•Ù¥‘•¹”¸M¥µ¥±…Èµ‰ÕĞµ‘¥™™•É•¹Ğ(€İ½É‘¥¹œ¥Ì¹½Ğå•Ğ‘•Ñ•Ñ•ìÍÕ•ÍÑ¥½¹Ì…É”¹½Ğå•Ğ•¹•É…Ñ•½ÈÍÕÉ™…•‰ä(€	ÕÉ¥Ñ¼…ÕÑ½µ…Ñ¥…±±ä¸(´1½…°¡…Ğ…¸½ÁÑ¥½¹…±±äÉ••¥Ù”„ÕÉ…Ñ•	ÕÉ¥Ñ¼É•Á½Í¥Ñ½Éäµ…À…¹ÕÉÉ•¹Ğ(€µ¥±•ÍÑ½¹”İ¥Ñ €´µ¥¹±Õ‘”µÁÉ½©•Ñ€¸Ñ¥Ù¥Ñäµ½¹±äÍ•ÍÍ¥½¹Ì•á±Õ‘”¥ĞìÑ¡”µ…À(€‘½•Ì¹½ĞÉ…¹Ğ™¥±”…•ÍÌ…¹¥¹ÍÑÉÕÑÌÑ¡”µ½‘•°¹½ĞÑ¼¥¹Ù•¹ĞÕ¹±¥ÍÑ•Á…Ñ¡Ì¸(´Q¡”¡…Ğ±…Õ¹¡•È±•…ÉÌ¥¹¡•É¥Ñ••Ù”‘•Ù•±½Áµ•¹ĞÅÕ•Õ”µÉ½ÕÑ¥¹œÙ…É¥…‰±•Ì(€…¹Ñ…­•Ì„Á•ÈµÉÕ¹Ñ¥µ”±½¬Í¼„Í•½¹	ÕÉ¥Ñ¼¡…Ğ…¹¹½ĞÍ¡…É”Ñ¡”Í…µ”(€±½…°İ½É­™±½ÜÍÑ…Ñ”½¹ÕÉÉ•¹Ñ±ä¸(´=É‘¥¹…Éä±½…°¡…ÑÌ…¸½ÁĞ¥¸Ñ¼ÕÀÑ¼™¥Ù”É••¹ĞÁ•¹‘¥¹œ½È…•ÁÑ•(€ÍÕ•ÍÑ¥½¹Ìİ¥Ñ Ñ¡•¥È•Ù¥‘•¹”ÕÍ¥¹œ€´µ¥¹±Õ‘”µÍÕ•ÍÑ¥½¹Í€¸¥Íµ¥ÍÍ•¥Ñ•µÌ(€…É”•á±Õ‘•°…Ñ¥Ù¥Ñäµ½¹±äµ½‘”™½É•ÌÑ¡¥Ì½™˜°…¹Ñ¡”½¹Ñ•áĞ¥Ì¹½Ğ(€Á•Éµ¥ÍÍ¥½¸Ñ¼…Ğ¸(´AÉ¥Ù…Ñ”½İ¹•È±½ÍÍ…ÉäÍÕÁÁ½ÉÑÌ•áÁ±¥¥ĞÑ•É´‘•™¥¹¥Ñ¥½¹Ì°É•ÑÉ¥•Ù…°…±½¹Í¥‘”(€Á•ÉÍ½¹…°µ•µ½Éä°‘ÕÁ±¥…Ñ”‘•Ñ•Ñ¥½¸°ÕÁ‘…Ñ”°±¥ÍÑ¥¹œ°…¹‘•±•Ñ¥½¸¸¸(€…ÁÁÉ½Ù…°µ…Ñ•Ù”Ñ½½°Í…Ù•Ì„‘•™¥¹¥Ñ¥½¸½¹±ä…™Ñ•ÈÑ¡”½İ¹•È½¹™¥ÉµÌ‰½Ñ (€Ñ¡”µ•…¹¥¹œ…¹Ñ¡”Í…Ù”É•ÅÕ•ÍĞ¸Q¡”İ•ˆU$‘½•Ì¹½Ğå•Ğ•áÁ½Í”Ù”…ÁÁÉ½Ù…°(€¥¹Ñ•É…Ñ¥½¹ÌìÕÍ”Ñ¡”¥¹Ñ•É…Ñ¥Ù”±½…°Ù”¡…Ğ™½ÈÑ¡¥Ìİ½É­™±½Ü¸(´¸…ÁÁÉ½Ù…°µ…Ñ•±½…°¡…ĞÑ½½°…¸½ÉÉ•Ğ…¸•á¥ÍÑ¥¹œ½İ¹•È™…Ğİ¡•¸(€Á•ÉÍ½¹…°µ•µ½Éä¥Ì•áÁ±¥¥Ñ±ä¥¹±Õ‘•¸%ĞÉ•ÅÕ¥É•Ì…¸•áÁ±¥¥Ğ½İ¹•ÈÉ•ÅÕ•ÍĞ°(€Í¡½İÌÑ¡”½±…¹É•Á±…•µ•¹ĞÑ•áĞ™½È…ÁÁÉ½Ù…°°…¹¡•­ÌÑ¡”½É¥¥¹…°Ù…±Õ”(€¡…Ì¹½Ğ¡…¹•‰•™½É”İÉ¥Ñ¥¹œ¸9•Ü™…ÑÌ…É”¹½ĞÍ¥±•¹Ñ±äÍ…Ù•¸Q¡¥ÌÁ…Ñ (€ÍÑ¥±°¹••‘Ì½İ¹•ÈÙ•É¥™¥…Ñ¥½¸¥¸„™É•Í ¡…Ğ¸(´¸½ÁĞµ¥¸°…ÁÁÉ½Ù…°µ…Ñ•ÍÉ••¸=HÑ½½°…ÁÑÕÉ•Ì½¹”™Õ±°ÍÉ••¸İ¥Ñ -(€MÁ•Ñ…±”…¹•áÑÉ…ÑÌÑ•áĞ±½…±±äİ¥Ñ Q•ÍÍ•É…Ğ¸%µ…•ÌÕÍ”„ÁÉ¥Ù…Ñ”(€Ñ•µÁ½É…Éä‘¥É•Ñ½Éä…¹…É”‘•±•Ñ•…™Ñ•È=Hì=HÑ•áĞµ…äÉ•µ…¥¸¥¸Ù”(€Í•ÍÍ¥½¸¡¥ÍÑ½Éä¸Q¡¥Ì¥Ì¹½Ğ½¹Ñ¥¹Õ½ÕÌ½‰Í•ÉÙ…Ñ¥½¸½ÈÙ¥ÍÕ…°Í•¹”(€Õ¹‘•ÉÍÑ…¹‘¥¹œ¸=HÁÉ•Í•ÉÙ•Ì…ÁÁÉ½á¥µ…Ñ”Ñ•áĞ(€½½É‘¥¹…Ñ•Ì™½ÈÍÁ±¥ĞµÍÉ••¸ÍÕµµ…É¥•Ì¸Á•ÈµÑÕÉ¸É•Í•ÉÙ…Ñ¥½¸±¥µ¥ÑÌ¥ĞÑ¼(€½¹”…ÑÑ•µÁÑ•…ÁÑÕÉ”Á•ÈÕÍ•Èµ•ÍÍ…”¸%ĞÉ•ÅÕ¥É•Ì½İ¹•ÈµÉÕ¸Ù•É¥™¥…Ñ¥½¸¸(´¸…‘‘¥Ñ¥½¹…°½ÁĞµ¥¸-İ¥¹‘½Ü‰É¥‘”±¥ÍÑÌ-]¥¸µµ…¹…•İ¥¹‘½İÌ½¸‘•µ…¹°(€¥¹±Õ‘¥¹œÑÉ…¹Í¥•¹Ğ…ÁÑ¥½¹Ì°É•Í½ÕÉ”±…ÍÌ°¥¹Ñ•É¹…°%°‘•Í­Ñ½À…¹(€µ¥¹¥µ¥é•½…Ñ¥Ù”ÍÑ…Ñ”¸I•ÍÁ½¹Í•ÌÕÍ”„Í¡½ÉĞµ±¥Ù•½ÉÉ•±…Ñ•µ	ÕÌÍ•ÉÙ¥”ì(€…ÁÑ¥½¹Ì…É”¹½ĞİÉ¥ÑÑ•¸Ñ¼±½Ì½È…Õ‘¥ĞÑ…É•ÑÌ¸½ÕÍ¥¹œ½¹”•á…Ğİ¥¹‘½Ü(€É•ÅÕ¥É•Ì…ÁÁÉ½Ù…°…¹É•Ù…±¥‘…Ñ•Ì¥ÑÌ¥¹Ñ•É¹…°%‰•™½É”(€Õ¹µ¥¹¥µ¥é¥¹œ½…Ñ¥Ù…Ñ¥¹œ¥Ğ¸½µ‰¥¹•…ÁÁÉ½Ù•¥¹ÍÁ•Ğ(€…Ñ¥½¸™½ÕÍ•ÌÑ¡”•á…Ğİ¥¹‘½Ü…¹¥µµ•‘¥…Ñ•±ä…ÁÑÕÉ•Ì¥Ğ™½È±½…°=H¸(€Q¥Ñ±•Ì…ÁÁ•…È¥¸±½…°¡…ĞÑ½½°É•ÍÕ±ÑÌ‰ÕĞ…É”¹½Ğ…‘‘•Ñ¼Ñ¡”½¹Ñ¥¹Õ½ÕÌ(€…Ñ¥Ù¥Ñä‘…Ñ…‰…Í”¸…­”µµ	ÕÌÑ•ÍÑÌ½Ù•ÈÑ¡”‰É¥‘”ì±¥Ù”-]¥¸‰•¡…Ù¥½È¥Ì(€ÍÑ¥±°Õ¹Ù•É¥™¥•¸M•”‘½Ì½A}ML¹µ‘€™½ÈÑ¡”‘•Í­Ñ½ÀÁÉ½‰”¸(´=ÁÑ¥½¹…°	É…Ù”M•…É ¥Ì•áÁ½Í•½¹±äİ¥Ñ €´µ•¹…‰±”µ‰É½İÍ•ÈµÍ•…É¡€…¹…¸(€•áÁ±¥¥ĞÁ•ÈµÅÕ•Éä…ÁÁÉ½Ù…°¸%ĞÍ•¹‘Ì½¹±äÑ¡”•á…ĞÅÕ•ÉäÑ¼„™¥á•	É…Ù”(€M•…É UI0¥¸Ñ¡”É•Õ±…È	É…Ù”ÁÉ½™¥±”€¡	É…Ù”µ…äµ…­”¥ÑÌ¹½Éµ…°(€Á…”½É•Í½ÕÉ”É•ÅÕ•ÍÑÌìÑ¡”ÅÕ•Éäµ…äÉ•µ…¥¸¥¸‰É½İÍ•È¡¥ÍÑ½Éä¤°Ñ¡•¸(€…ÁÑÕÉ•ÌÑ¡”…Ñ¥Ù”	É…Ù”İ¥¹‘½Ü½¹”İ¥Ñ ±½…°=H¸%Ğ¹•Ù•È±¥­Ì°(€ÍÕ‰µ¥ÑÌ°½È‘½İ¹±½…‘Ì¸=H…¸µ¥ÍÉ•…Ñ•áĞ…¹‘½•Ì¹½ĞÁÉ½Ù”É•ÍÕ±Ğ(€…ÕÉ…ä¸Q¡¥ÌÁ…Ñ ÍÑ¥±°¹••‘Ì…¸½İ¹•ÈµÉÕ¸¡•¬¸(´¸½ÁÑ¥½¹…°	É…Ù”Ñ…ˆ•áÑ•¹Í¥½¸½Õ¹ÑÌÑ…‰Ì‰ä‘•™…Õ±Ğ¸]¥Ñ ½ÁÑ¥½¹…°(€Ñ…‰Í€Á•Éµ¥ÍÍ¥½¸°¥ĞÍÕÁÁ½ÉÑÌ…ÁÁÉ½Ù…°µ…Ñ•Ñ¥Ñ±”µ…Ñ¡¥¹œ…¹Íİ¥Ñ¡¥¹œ(€Ñ¼…¸•á…ĞÑ…ˆ¸Q¥Ñ±•Ì…É”ÑÉ…¹Í¥•¹Ğ±½…°É•ÍÁ½¹Í”‘…Ñ„½¹±äìUI1Ì…¹Á…”(€½¹Ñ•¹ÑÌ…É”¹½Ğ½±±•Ñ•¸Q¡”½İ¹•ÈµÕÍĞÉ•±½…Ñ¡”Õ¹Á…­••áÑ•¹Í¥½¸…¹(€É…¹ĞÑ…ˆµ±…‰•°Á•Éµ¥ÍÍ¥½¸™É½´¥ÑÌÁ½ÁÕÀ‰•™½É”ÕÍ¥¹œ™¥¹½Íİ¥Ñ ¸(´	…Í¥Œ	É…Ù”Á…”…•ÍÌ¥Ì¥µÁ±•µ•¹Ñ•‰•¡¥¹€´µ•¹…‰±”µ‰É½İÍ•Èµ½¹ÑÉ½±€¸(€%ĞÍÕÁÁ½ÉÑÌ…ÁÁÉ½Ù•Ù¥Í¥‰±”µÑ•áĞÉ•…‘Ì°Õ¹¥ÅÕ•±ä±…‰•±•±¥­Ì…¹(€¹½¸µÁ…ÍÍİ½É™¥•±•¹ÑÉä°¹Ñ•È½Q…ˆ½Í…Á”°ÍÉ½±±¥¹œ°…¹‰…¬½™½Éİ…É¸(€M¥Ñ”½É¥¥¹ÌÉ•ÅÕ¥É”„Á½ÁÕÀÁ•Éµ¥ÍÍ¥½¸É…¹Ğì•Ù•ÉäÉ•……¹…Ñ¥½¸…Í­Ì(€…ÁÁÉ½Ù…°¸Q¡”½İ¹•ÈÉ•Á½ÉÑÌÍÕ•ÍÍ™Õ°Á…”É•…‘¥¹œ°Á¡É…Í”±½½­ÕÀ°…¹(€	É…Ù”Í•…É ¸±¥­Ì°™½É´•¹ÑÉä°…¹É½ÍÌµ…ÁÀÑÉ…¹Í™•ÈÍÑ¥±°¹••½İ¹•È(€Ù•É¥™¥…Ñ¥½¸¸(´Í½Á•°…ÁÁÉ½Ù…°µ…Ñ•¹…Ñ¥Ù”Ñ•áĞ¥¹Í•ÉÑ¥½¸Ñ½½°™½ÕÍ•Ì½¹”•á…Ğ(€-]¥¸µµ…¹…•İ¥¹‘½Ü…¹¥¹Í•ÉÑÌ•á…ĞÑ•áĞ…Ğ¥ÑÌ™½ÕÍ•PµMA$•‘¥Ñ…‰±”(€™¥•±İ¥Ñ¡½ÕĞÉ•Á±…¥¹œ•á¥ÍÑ¥¹œÑ•áĞ¸%Ğ¥Ì…Ù…¥±…‰±”½¹±äİ¥Ñ (€€´µ•¹…‰±”µ‘•Í­Ñ½Àµ½¹ÑÉ½±€°‘½•Ì¹½ĞÑ½Õ Ñ¡”ÍåÍÑ•´±¥Á‰½…É°…¹¡…Ì¹½Ğ(€‰••¸Ù•É¥™¥•¥¸Ñ¡”½İ¹•ÈÌ±¥Ù”‘•Í­Ñ½À¸(´¸½ÁÑ¥½¹…°°…ÁÁÉ½Ù…°µ…Ñ•‰É½İÍ•É}½Áå}Ñ•áÑ€Ñ½½°İÉ¥Ñ•Ì•á…ĞÑ•áĞÑ¼Ñ¡”(€ÍåÍÑ•´±¥Á‰½…ÉÑ¡É½Õ Ñ¡”±½…°	É…Ù”•áÑ•¹Í¥½¸¸Q¡”•áÑ•¹Í¥½¸É•ÅÕ•ÍÑÌ(€İÉ¥Ñ”µ½¹±ä±¥Á‰½…ÉÁ•Éµ¥ÍÍ¥½¸½¹”ì•… ½ÁäÍÑ¥±°Í¡½İÌÑ¡”•á…ĞÑ•áĞ(€™½È…ÁÁÉ½Ù…°¸9¼±¥Á‰½…ÉÉ•…¥Ì¥µÁ±•µ•¹Ñ•¸	É½İÍ•ÈµÑ¼µ¹…Ñ¥Ù”ÑÉ…¹Í™•È(€…¸½ÁäÑ¡•¸¥¹Í•ÉĞÑ¡”Í…µ”Ñ•áĞ°‰ÕĞÉ•ÅÕ¥É•Ì•áÑ•¹Í¥½¸É•±½…½Á•Éµ¥ÍÍ¥½¸(€…¹½İ¹•ÈµÉÕ¸¡•­Ìì¥Ğ¥Ì¹½Ğ„Í¥µÕ±…Ñ•ÑÉ°­X…¹¡…Ì¹½Ğ‰••¸Ù•É¥™¥•(€¥¸Ñ¡”½İ¹•ÈÌ±¥Ù”Í•ÍÍ¥½¸¸(´Í•Á…É…Ñ”±½…°±¥Á‰½…É‘}İÉ¥Ñ•}Ñ•áÑ€Ñ½½°…¸½Áä•á…ĞÑ•áĞÑ…­•¸™É½´(€ÍÉ••¸=H½È…¹½Ñ¡•È…ÁÁÉ½Ù•Í½ÕÉ”İ¥Ñ¡½ÕĞ„	É…Ù”İ¥¹‘½Ü°İ¡•¸İ°µ½Áå€(€½Èá±¥Á€¥Ì¥¹ÍÑ…±±•¸%Ğ¥ÌİÉ¥Ñ”µ½¹±ä…¹É•ÅÕ¥É•Ì…ÁÁÉ½Ù…°Í¡½İ¥¹œ…±°(€Ñ•áĞ¸MÉ••¸µÍ½ÕÉ”Í•±•Ñ¥½¸ÉÕ±•Ì¹½Ü‘•™…Õ±Ğ•¹•É¥ŒƒŠqÁ…”½¡•É”½½¸ÍÉ••»Št(€É•ÅÕ•ÍÑÌÑ¼Ñ¡”Ù¥Í¥‰±”‘•Í­Ñ½Àì…µ‰¥Õ½ÕÌİ¥¹‘½İÌ½ÈÍÉ••¸É•¥½¹ÌÉ•ÅÕ¥É”(€±…É¥™¥…Ñ¥½¸¸Q¡•Í”Á…Ñ¡ÌÉ•µ…¥¸Õ¹Ù•É¥™¥•½¸Ñ¡”½İ¹•ÈÌµ…¡¥¹”¸(´Ù”Ì±½…°‘•ØÑÉ…¹ÍÁ½ÉĞÕÍ•Ì„Á•ÈµÁÉ½•ÍÌÍ•É•Ğ¸	ÕÉ¥Ñ¼…É¡¥Ù•ÌÑ¡”(€ÁÉ•Ù¥½ÕÌ€¹İ½É­™±½Üµ‘…Ñ…€‘¥É•Ñ½Éä‰•™½É”ÍÑ…ÉÑ¥¹œ¡…Ğ½Èİ•ˆ°ÁÉ•Ù•¹Ñ¥¹œ(€Á•ÉÍ¥ÍÑ•ÅÕ•Õ”‘•±¥Ù•É¥•Ì™É½´…¸•…É±¥•ÈÁÉ½•ÍÌ™É½´‰•¥¹œÉ•ÑÉ¥•İ¥Ñ „(€ÍÑ…±”Í•É•Ğ¸É¡¥Ù•ÌÍÑ…ä±½…°Õ¹‘•ÈÉÕ¹Ñ¥µ”¼¹•Ù•€ìÑ¡”Í•Á…É…Ñ”	ÕÉ¥Ñ¼(€µ•µ½Éä‘…Ñ…‰…Í”¥ÌÕ¹Ñ½Õ¡•¸(´Q¡”…•¹ĞÁÉ½µÁĞİ…ÌÉ•‘Õ•ÍÕ‰ÍÑ…¹Ñ¥…±±ä…™Ñ•È…¸€á,µ½¹Ñ•áĞÍ•ÍÍ¥½¸(€™…¥±•‰•™½É”¥ÑÌ™¥ÉÍĞÑÕÉ¸¸1…É”A¥¹Ù•¹Ñ½Éä‘…Ñ„¥Ì¹½Ü½µ¥ÑÑ•Õ¹±•ÍÌ(€Ñ¡”½İ¹•È…Í­Ì…‰½ÕĞA‘•Ñ…¥±Ì°…¹É•ÑÉ¥•Ù•½¹Ñ•áĞ¥Ì…ÁÁ•É•±…Ñ¥Ù”Ñ¼(€Ñ¡”½¹™¥ÕÉ•½¹Ñ•áĞİ¥¹‘½Ü¸	Õ¥±ÍÕ••‘Ìì„±¥Ù”€á,¡…ĞÑÕÉ¸ÍÑ¥±°(€¹••‘Ì½İ¹•ÈÙ•É¥™¥…Ñ¥½¸¸(´=ÁÑ¥½¹…°1$½¹±¥¹”É•Í•…É ¥Ì¥Í½±…Ñ•™É½´Ñ¡”±½…°¡…Ğµ½‘•°¸%Ğ¥Ì(€…‰Í•¹ĞÕ¹±•ÍÌ€´µ•¹…‰±”µ½¹±¥¹•€¥ÌÁ…ÍÍ•°É•ÅÕ¥É•Ì…¸•áÁ±¥¥Ğ…Ñ•İ…ä­•ä(€…¹…¹Íİ•Èµ½‘•°°…¹…Í­Ì™½È…ÁÁÉ½Ù…°™½È•… •á…ĞÅÕ•Éä¸=¹±äÑ¡…ĞÅÕ•Éä(€¥ÌÍ•¹Ğì½¹Ù•ÉÍ…Ñ¥½¸½¹Ñ•áĞ¥Ì¹½Ğ™½Éİ…É‘•¸Ñ¥Ù¥Ñäµ½¹±ä¡…ĞÉ•©•ÑÌ(€½¹±¥¹”µ½‘”¸1¥Ù”ÁÉ½Ù¥‘•ÈÍÕ•ÍÌ°‘•¹¥…°°Ñ¥µ•½ÕĞ°…¹½ÕÑ…”Á…Ñ¡ÌÉ•µ…¥¸(€Õ¹Ù•É¥™¥•ìÍ•”‘½Ì½=91%9}IMI ¹µ‘€¸(´M…™”¡•­½ÕĞ…ÕÑ¼µÕÁ‘…Ñ”ÍÉ¥ÁÑÌ…¹„Á•ÈµÕÍ•ÈÍåÍÑ•µÑ¥µ•È…É”ÁÉ•Á…É•¸(€Q¡•ä™•Ñ •Ù•Éä€ÄÔµ¥¹ÕÑ•Ì…¹™…ÍĞµ™½Éİ…É½¹±ä„±•…¸µ…¥¹€ÑÉ…­¥¹œ(€½É¥¥¸½µ…¥¹€ìÑ¡•ä‘•™•Èİ¡¥±”Ù”¥Ì…Ñ¥Ù”°É•©•Ğ‘¥Ù•É•¹”°…¹‘•™•È(€‘•Á•¹‘•¹äµµ…¹¥™•ÍĞ¡…¹•Ì¸Q¡”Ñ¥µ•ÈÍÑ¥±°¹••‘ÌÑ¼‰”•¹…‰±•™É½´Ñ¡”(€½İ¹•ÈÌ-½¹Í½±”¸M•”‘½Ì½UQ=}UAQ¹µ‘€¸(´AÉ•Á…É•±½…°µµ½‘•°½¹™¥ÕÉ…Ñ¥½¸°É•…µ½¹±ä±•ÍÍ½¸‰É¥‘”°…¹¡…Ğ±…Õ¹¡•È¸(€1½…°AåÑ¡½¸Ñ•ÍÑÌ½Ù•È½¹Ñ•áĞÍ•±•Ñ¥½¸°½ÉÉ•Ñ¥½¸°…¹±…Õ¹¡•È‰½Õ¹‘…É¥•Ìì(€%¹ÍÑ…±±••Ù”‘¥Í½Ù•Éä½µÁ¥±•Ì…¹•áÁ½Í•Ì½¹±äÑ¡”Ñ¡É•”…ÕÑ¡½É•AÑ½½±Ì¸(€Q¡”½İ¹•È½µÁ±•Ñ•„±½…°µ½‘•°½¹Ù•ÉÍ…Ñ¥½¸ì…¹Íİ•ÈµÅÕ…±¥ÑäÉ•Ñ•ÍÑ¥¹œÉ•µ…¥¹Ì¸((ŒŒ9½Ğ¥µÁ±•µ•¹Ñ•()Õ±±ä•Ù…±Õ…Ñ•$¡…Ğ°½µÁ±•Ñ”¡å‰É¥É½ÕÑ¥¹œ°Í•µ…¹Ñ¥ŒÉ•ÑÉ¥•Ù…°°Ù½¥”°½¹Ñ¥¹Õ½ÕÌÍÉ••¸½‰Í•ÉÙ…Ñ¥½¸°)ÁÉ½…Ñ¥Ù”ÍÕ•ÍÑ¥½¹Ì°¡…Ğ…ÕÑ½ÍÑ…ÉĞ°•¹•É…°‘•Í­Ñ½ÀU$½¹ÑÉ½°°…ÕÑ½µ…Ñ¥ŒÑÉ…¥¹¥¹œ°)•¹ÉåÁÑ¥½¸°Í¡•‘Õ±•‰…­ÕÁÌ°É•ÍÑ½É”Ñ½½±¥¹œ°…¹…ÕÑ½¹½µ½ÕÌ•á•ÕÑ¥½¸¸)ÕÑ½µ…Ñ¥Œ¥¹Ñ•É•ÍĞ¥¹™•É•¹”°½İ¹•ÈµÉ•Ù¥•İ•ÍÕ•ÍÑ¥½¹Ì°±½¬µÍÑ…Ñ”¡…¹‘±¥¹œ°)…¹„Ù¥Í¥‰±”½‰Í•ÉÙ•ÈÍÑ…ÑÕÌ¥¹‘¥…Ñ½È…É”ÍÑ¥±°™ÕÑÕÉ”İ½É¬¸ÁÀ™½É•É½Õ¹)Ñ¥µ”¥Ì¹½ĞÑÉ•…Ñ•…ÌÁÉ½½˜½˜…Ñ¥Ù”ÕÍ”½È¥¹Ñ•É•ÍĞ¸)IÕ¹Ñ¥µ”‘•Á•¹‘•¹ä¥¹ÍÑ…±±…Ñ¥½¸ÍÕ••‘•Ñ¡É½Õ Ñ¡”¹½Éµ…°‘•Í­Ñ½ÀÑ•Éµ¥¹…°¸)9½‘”€ÈØ¸ÄÌ¸Ä…¹•Ù”€Ä¸À¸ÀµÉŒ¸Äà…É”¥¹ÍÑ…±±•¸á…ĞÁ…­…”Ù•ÉÍ¥½¹Ì…¹Ñ¡”)•¹•É…Ñ•±½­™¥±”…É”½µµ¥ÑÑ•¸%¹ÍÑ…±±•µÙ•ÉÍ¥½¸‘½Õµ•¹Ñ…Ñ¥½¸İ…Ì¡•­•ì)‘¥Í½Ù•ÉäÉ•Á½ÉÑÌé•É¼•ÉÉ½ÉÌ¸Q¡”…Ñ•İ…äµ…Ñ…±½œİ…É¹¥¹œ¥¸Ñ¡”É•ÍÑÉ¥Ñ•)Í¡•±°‘½•Ì¹½Ğ‰±½¬Ñ¡¥Ì±½…°½¹™¥ÕÉ…Ñ¥½¸°İ¡¥ ÍÕÁÁ±¥•Ì¥ÑÌ½¹Ñ•áĞÍ¥é”¸)Q¡”½İ¹•È½µÁ±•Ñ•„™¥ÉÍĞ¡…Ğİ¥Ñ ‰ÕÉ¥Ñ¼µ±½…°èá‰€Ñ¡É½Õ Ñ¡”±…Õ¹¡•È¸)Q¡”…¹Íİ•ÈÍ•Á…É…Ñ•Õ•ÍÍ•Ì‰ÕĞ½¹™ÕÍ•ÕÍ•ÈµÉ•Á½ÉÑ••Ù¥‘•¹”İ¥Ñ ‘¥É•Ğ)½‰Í•ÉÙ…Ñ¥½¸¸!½µ”¡½¹•ÍÑä±•ÍÍ½¸É•Ù¥Í¥½¸€È…¹ÍÑ…¹‘¥¹œ¥¹ÍÑÉÕÑ¥½¹Ì¹½Üµ…­”)Ñ¡…Ğ‘¥ÍÑ¥¹Ñ¥½¸•áÁ±¥¥ĞìÉ•Ù¥Í•µ½‘•°‰•¡…Ù¥½È…İ…¥ÑÌ…¸½İ¹•ÈµÉÕ¸É•Ñ•ÍĞ¸)A•ÉÍ½¹…°µµ•µ½ÉäÉ•ÑÉ¥•Ù…°½½ÉÉ•Ñ¥½¸…¹…ÑÕ…°ATÁ±…•µ•¹ĞÉ•µ…¥¸Õ¹Ù•É¥™¥•¸)•™…Õ±Ğµ½‘•°…Ñ¥½¸Ñ½½±Ì…¹‘•Ù•±½Áµ•¹Ğ•áÑ•¹Í¥½¹Ì…É”‘¥Í…‰±•ìÑ¡”…ÕÑ¡½É•)…ÁÁ±¥…Ñ¥½¸µ±…Õ¹ Ñ½½°É•ÅÕ¥É•Ì½İ¹•È…ÁÁÉ½Ù…°¸1$Ñ•±•µ•ÑÉä)…¹ÑÉ…”½¹Ñ•¹Ğ…ÁÑÕÉ”…É”‘¥Í…‰±•‰äÑ¡”±…Õ¹¡•È¸((ŒŒ9•áĞ()!½ÍĞATÙ•É¥™¥…Ñ¥½¸ÍÕ••‘•¥¸Ñ¡”½İ¹•ÈÌ¹½Éµ…°Ñ•Éµ¥¹…°èIQ`€ÔÀÜÀ°(ÄÈÈÈÜ5¥YI4°9Y%%‘É¥Ù•È€ÔäÔ¸ää¸ÀÈ¸Q¡”É•ÍÑÉ¥Ñ•Í•ÍÍ¥½¸Ìµ¥ÍÍ¥¹œAT)‘•Ù¥”™¥±•Ì‘¼¹½ĞÉ•ÅÕ¥É”„‘É¥Ù•ÈÉ•¥¹ÍÑ…±°¸((Ä¸I•Ñ•ÍĞÑ¡”¡½¹•ÍÑäÅÕ•ÍÑ¥½¸¥¸„™É•Í ¡…Ğ…™Ñ•È¥¹ÍÑ…±±¥¹œ±•ÍÍ½¸É•Ù¥Í¥½¸€È¸(€€¥±”½…ÁÁ±¥…Ñ¥½¸Ñ½½°…±±Ì¡…Ù”Á…ÍÍ•Ñ¡”¥¹¥Ñ¥…°½İ¹•ÈµÉÕ¸¡•­Ì¸(È¸%¹ÍÁ•Ğ½±±…µ„ÁÍ€‘ÕÉ¥¹œ…¸…Ñ¥Ù”µ½‘•°Í•ÍÍ¥½¸Ñ¼Ù•É¥™äATÁ±…•µ•¹Ğì(€€µ•…ÍÕÉ”İ…É´É•ÍÁ½¹Í”Ñ¥µ•ÌÍ•Á…É…Ñ•±ä™É½´Ñ¡”™¥ÉÍĞ½‰Í•ÉÙ•€ĞàµÍ•½¹•á¡…¹”¸(Ì¸Y•É¥™äÁ•ÉÍ½¹…°µµ•µ½ÉäÉ•ÑÉ¥•Ù…°…¹Ñ¡”…ÁÁÉ½Ù…°µ…Ñ•½ÉÉ•Ñ¥½¸Ñ½½°¥¸„(€€™É•Í ¡…Ğì½¹™¥É´Ñ¡”•‘¥Ñ•™…Ğ¥ÌÕÍ•¥¸„±…Ñ•È¡…Ğ…¹…¸‰”(€€‘•±•Ñ•¸9•Ü™…ÑÌ…É”ÍÑ¥±°…‘‘•Ñ¡É½Õ Ñ¡”1$¸(Ğ¸Y•É¥™äÁÉ½©•ĞµÉ½Õ¹‘•…¹Íİ•ÉÌ…¹½ÁĞµ¥¸ÍÕ•ÍÑ¥½¸½¹Ñ•áĞ¥¸-½¹Í½±”¸(€€1…Ñ•È…‘Í•µ…¹Ñ¥Œ‘ÕÁ±¥…Ñ”‘•Ñ•Ñ¥½¸…¹ÍÕ•ÍÑ¥½¸•¹•É…Ñ¥½¸½¹±äİ¥Ñ (€€•áÁ±¥¥Ğ•Ù¥‘•¹”…¹½İ¹•ÈÉ•Ù¥•Ü‰•™½É”É•ÕÉÉ•¹”¸(Ô¸‘Ñ¡”‰…Í¥Œ‘•Í­Ñ½À¥¹Ñ•É™…”…É½Õ¹İ½É­¥¹œÑ•áĞ¡…Ğ°™½±±½İ•‰äÙ½¥”¸(Ø¸Y•É¥™ä½ÁÑ¥½¹…°½¹±¥¹”É•Í•…É …ÁÁÉ½Ù…°°ÅÕ•Éäµ½¹±ä½¹Ñ•áĞ‰½Õ¹‘…É¥•Ì°(€€½™™±¥¹”‰•¡…Ù¥½È°…¹™…¥±ÕÉ”…Í•ÌìÑ¡•¸…‘Á•ÉÍ¥ÍÑ•¹Ğ‰Õ‘•Ğ±¥µ¥ÑÌ…¹(€€É½ÕÑ¥¹œÑ•±•µ•ÑÉä‰•™½É”½¹Í¥‘•É¥¹œ…¹ä±½Õ¡…Ğµ½‘”¸()Q¡”¥¹Ñ•¹‘•€ĞQÙ½±Õµ”É•µ…¥¹ÌÕ¹¥‘•¹Ñ¥™¥•¸Q¡”ÕÉÉ•¹Ğ1¥¹Õà™¥±•ÍåÍÑ•´¡…Ì)•¹½Õ ™É•”ÍÁ…”™½ÈÑ¡¥Ì¥¹¥Ñ¥…°Íµ…±°µ½‘•°ìÕÍ”¥Ğ™½ÈÑ¡”™¥ÉÍĞÍµ½­”Ñ•ÍĞ°)İ¥Ñ¡½ÕĞÉ•Á…ÉÑ¥Ñ¥½¹¥¹œ½È¡…¹¥¹œ]¥¹‘½İÌÙ½±Õµ•Ì¸A±…¸±…É”±¥‰É…É¥•Ì…¹)µ½‘•°½±±•Ñ¥½¹Ì½¹±ä…™Ñ•È½¹™¥Éµ¥¹œÑ¡”¥¹Ñ•¹‘•ÍÑ½É…”µ½Õ¹Ğ¸()Q¡”½İ¹•ÈÉ•Á½ÉÑÌ=±±…µ„¥¹ÍÑ…±±•…¹Ñ¡”Åİ•¸Ìèá‰€ÁÕ±°½µÁ±•Ñ•¸Q¡”)É•ÍÑÉ¥Ñ•Í•ÍÍ¥½¸…¹¹½Ğ…•ÍÌ±½½Á‰…¬Í½­•ÑÌÑ¼¥¹‘•Á•¹‘•¹Ñ±äÙ•É¥™äÑ¡”)Í•ÉÙ•È¸Q¡”½İ¹•ÈÍÑ…ÉÑ•„½¹Ù•ÉÍ…Ñ¥½¸ÕÍ¥¹œ‰ÕÉ¥Ñ¼µ±½…°èá‰€İ¥Ñ …¸(àÄäÈµÑ½­•¸½¹Ñ•áĞ¸½¹Ñ¥¹Õ”İ¥Ñ Ñ¡”Ñ…É•Ñ•Ù•É¥™¥…Ñ¥½¸ÍÑ•ÁÌ…‰½Ù”¸(
+# Status
+
+## Current verification
+
+Phase 0 recovery is in the dedicated recovery worktree. The historical records
+below include prior KDE observations. Consult the [recovery report](RECOVERY_REPORT.md)
+for current checks and [Ryoku setup](RYOKU_SETUP.md) for current host compatibility.
+## Implemented
+
+- Full staged roadmap and architecture decisions.
+- Read-only machine diagnostics with bounded command execution.
+- Local SQLite memory: explicit creation, listing, deletion, provenance.
+- Private storage defaults outside Git; no screen capture or inventory uploads.
+- Standard-library tests and GitHub Actions test configuration.
+- Diagnostics distinguish a loaded NVIDIA driver with hidden device files from
+  evidence of a host driver failure.
+- Interactive local home education, memory correction, consistent private backups.
+- User-local Node/eve installer and initial agent identity instructions.
+- Versioned eleven-lesson beginner curriculum, local knowledge installation,
+  source provenance, manual review prompts, and separate personal/general stores.
+- Bounded, one-lesson context builder; personal facts excluded by default.
+- Local machine inventory, bounded home-file metadata change detection, a
+  systemd user timer installer, pause/status controls, and bounded local chat
+  inventory summaries. Timer activation must be verified in Konsole.
+- Explicit host file browsing, bounded UTF-8 reading, filename search, desktop
+  application discovery, and approved launch requests. `--no-files` disables
+  these tools. The owner verified folder listing, a README excerpt/line count,
+  application discovery, and a visible Dolphin launch.
+- Fixed the inventory service's quoted WorkingDirectory path, which systemd
+  rejected at startup. Status now reports both timer and service details.
+  The owner manually corrected the generated unit and confirmed the timer is
+  active; its first scan completed and a synthetic file-addition event appeared.
+- Opt-in KWin observer records foreground app IDs into the private local
+  database. The owner verified Konsole and Dolphin events and confirmed pause
+  disables both the KWin script and collector while retaining Burito records.
+- App context labels can be added, listed, updated, or removed with provenance
+  separating owner-confirmed notes from generic app-role descriptions. Reports
+  do not treat either as inferred interests. Activity clear removes the local
+  events and labels together.
+- Local chat can receive a bounded seven-day activity summary only with the
+  explicit `--include-activity` flag. `--activity-only` additionally excludes
+  PC inventory, personal facts, and PC tools. Activity remains excluded from
+  normal chat.
+- Owner feedback can be explicitly recorded, listed, and deleted in the private
+  local database. Normal chat receives it only with `--include-feedback`;
+  activity-only chat excludes it. Feedback is context, not model-weight training.
+- Suggestions can be manually recorded with owner-entered evidence, reviewed
+  as pending/accepted/dismissed, listed, and deleted. Exact normalized text
+  duplicates reuse the original entry and append evidence. Similar-but-different
+  wording is not yet detected; suggestions are not yet generated or surfaced by
+  Burito automatically.
+- Local chat can optionally receive a curated Burito repository map and current
+  milestone with `--include-project`. Activity-only sessions exclude it; the map
+  does not grant file access and instructs the model not to invent unlisted paths.
+- The chat launcher clears inherited eve development queue-routing variables
+  and takes a per-runtime lock so a second Burito chat cannot share the same
+  local workflow state concurrently.
+- Ordinary local chats can opt in to up to five recent pending or accepted
+  suggestions with their evidence using `--include-suggestions`. Dismissed items
+  are excluded, activity-only mode forces this off, and the context is not
+  permission to act.
+- Private owner glossary supports explicit term definitions, retrieval alongside
+  personal memory, duplicate detection, update, listing, and deletion. An
+  approval-gated Eve tool saves a definition only after the owner confirms both
+  the meaning and the save request. The web UI does not yet expose Eve approval
+  interactions; use the interactive local Eve chat for this workflow.
+- An approval-gated local chat tool can correct an existing owner fact when
+  personal memory is explicitly included. It requires an explicit owner request,
+  shows the old and replacement text for approval, and checks the original value
+  has not changed before writing. New facts are not silently saved. This path
+  still needs owner verification in a fresh chat.
+- An opt-in, approval-gated screen OCR tool captures one full screen with KDE
+  Spectacle and extracts text locally with Tesseract. Images use a private
+  temporary directory and are deleted after OCR; OCR text may remain in Eve
+  session history. This is not continuous observation or visual scene
+  understanding. OCR preserves approximate text
+  coordinates for split-screen summaries. A per-turn reservation limits it to
+  one attempted capture per user message. It requires owner-run verification.
+- An additional opt-in KDE window bridge lists KWin-managed windows on demand,
+  including transient captions, resource class, internal ID, desktop and
+  minimized/active state. Responses use a short-lived correlated D-Bus service;
+  captions are not written to logs or audit targets. Focusing one exact window
+  requires approval and revalidates its internal ID before
+  unminimizing/activating it. A combined approved inspect
+  action focuses the exact window and immediately captures it for local OCR.
+  Titles appear in local chat tool results but are not added to the continuous
+  activity database. Fake-D-Bus tests cover the bridge; live KWin behavior is
+  still unverified. See `docs/PC_ACCESS.md` for the desktop probe.
+- Optional Brave Search is exposed only with `--enable-browser-search` and an
+  explicit per-query approval. It sends only the exact query to a fixed Brave
+  Search URL in the regular Brave profile (Brave may make its normal
+  page/resource requests; the query may remain in browser history), then
+  captures the active Brave window once with local OCR. It never clicks,
+  submits, or downloads. OCR can misread text and does not prove result
+  accuracy. This path still needs an owner-run check.
+- An optional Brave tab extension counts tabs by default. With optional
+  `tabs` permission, it supports approval-gated title matching and switching
+  to an exact tab. Titles are transient local response data only; URLs and page
+  contents are not collected. The owner must reload the unpacked extension and
+  grant tab-label permission from its popup before using find/switch.
+- Basic Brave page access is implemented behind `--enable-browser-control`.
+  It supports approved visible-text reads, uniquely labeled clicks and
+  non-password field entry, Enter/Tab/Escape, scrolling, and back/forward.
+  Site origins require a popup permission grant; every read and action asks
+  approval. The owner reports successful page reading, phrase lookup, and
+  Brave search. Clicks, form entry, and cross-app transfer still need owner
+  verification.
+- A scoped, approval-gated native text insertion tool focuses one exact
+  KWin-managed window and inserts exact text at its focused AT-SPI editable
+  field without replacing existing text. It is available only with
+  `--enable-desktop-control`, does not touch the system clipboard, and has not
+  been verified in the owner's live desktop.
+- An optional, approval-gated `browser_copy_text` tool writes exact text to the
+  system clipboard through the local Brave extension. The extension requests
+  write-only clipboard permission once; each copy still shows the exact text
+  for approval. No clipboard read is implemented. Browser-to-native transfer
+  can copy then insert the same text, but requires extension reload/permission
+  and owner-run checks; it is not a simulated Ctrl+V and has not been verified
+  in the owner's live session.
+- A separate local `clipboard_write_text` tool can copy exact text taken from
+  screen OCR or another approved source without a Brave window, when `wl-copy`
+  or `xclip` is installed. It is write-only and requires approval showing all
+  text. Screen-source selection rules now default generic â€œpage/here/on screenâ€
+  requests to the visible desktop; ambiguous windows or screen regions require
+  clarification. These paths remain unverified on the owner's machine.
+- Eve's local dev transport uses a per-process secret. Burito archives the
+  previous `.workflow-data` directory before starting chat or web, preventing
+  persisted queue deliveries from an earlier process from being retried with a
+  stale secret. Archives stay local under `runtime/.eve`; the separate Burito
+  memory database is untouched.
+- The agent prompt was reduced substantially after an 8K-context session
+  failed before its first turn. Large PC inventory data is now omitted unless
+  the owner asks about PC details, and retrieved context is capped relative to
+  the configured context window. Build succeeds; a live 8K chat turn still
+  needs owner verification.
+- Optional CLI online research is isolated from the local chat model. It is
+  absent unless `--enable-online` is passed, requires an explicit Gateway key
+  and answer model, and asks for approval for each exact query. Only that query
+  is sent; conversation context is not forwarded. Activity-only chat rejects
+  online mode. Live provider success, denial, timeout, and outage paths remain
+  unverified; see `docs/ONLINE_RESEARCH.md`.
+- Safe checkout auto-update scripts and a per-user systemd timer are prepared.
+  They fetch every 15 minutes and fast-forward only a clean `main` tracking
+  `origin/main`; they defer while Eve is active, reject divergence, and defer
+  dependency-manifest changes. The timer still needs to be enabled from the
+  owner's Konsole. See `docs/AUTO_UPDATE.md`.
+- Prepared local-model configuration, read-only lesson bridge, and chat launcher.
+  Local Python tests cover context selection, correction, and launcher boundaries;
+  Installed eve discovery compiles and exposes only the three authored PC tools.
+  The owner completed a local model conversation; answer-quality retesting remains.
+
+## Not implemented
+
+Fully evaluated AI chat, complete hybrid routing, semantic retrieval, voice, continuous screen observation,
+proactive suggestions, chat autostart, general desktop UI control, automatic training,
+encryption, scheduled backups, restore tooling, and autonomous execution.
+Automatic interest inference, owner-reviewed suggestions, lock-state handling,
+and a visible observer status indicator are still future work. App foreground
+time is not treated as proof of active use or interest.
+Runtime dependency installation succeeded through the normal desktop terminal.
+Node 26.13.1 and eve 1.0.0-rc.18 are installed. Exact package versions and the
+generated lockfile are committed. Installed-version documentation was checked;
+discovery reports zero errors. The gateway-catalog warning in the restricted
+shell does not block this local configuration, which supplies its context size.
+The owner completed a first chat with `burito-local:8b` through the launcher.
+The answer separated guesses but confused user-reported evidence with direct
+observation. Home honesty lesson revision 2 and standing instructions now make
+that distinction explicit; revised model behavior awaits an owner-run retest.
+Personal-memory retrieval/correction and actual GPU placement remain unverified.
+Default model action tools and development extensions are disabled; the authored
+application-launch tool requires owner approval. CLI telemetry
+and trace content capture are disabled by the launcher.
+
+## Next
+
+Host GPU verification succeeded in the owner's normal terminal: RTX 5070,
+12227 MiB VRAM, NVIDIA driver 595.99.02. The restricted session's missing GPU
+device files do not require a driver reinstall.
+
+1. Retest the honesty question in a fresh chat after installing lesson revision 2.
+   File/application tool calls have passed the initial owner-run checks.
+2. Inspect `ollama ps` during an active model session to verify GPU placement;
+   measure warm response times separately from the first observed 48-second exchange.
+3. Verify personal-memory retrieval and the approval-gated correction tool in a
+   fresh chat; confirm the edited fact is used in a later chat and can be
+   deleted. New facts are still added through the CLI.
+4. Verify project-grounded answers and opt-in suggestion context in Konsole.
+   Later add semantic duplicate detection and suggestion generation only with
+   explicit evidence and owner review before recurrence.
+5. Add the basic desktop interface around working text chat, followed by voice.
+6. Verify optional online research approval, query-only context boundaries,
+   offline behavior, and failure cases; then add persistent budget limits and
+   routing telemetry before considering any cloud chat mode.
+
+The intended 4 TB volume remains unidentified. The current Linux filesystem has
+enough free space for this initial small model; use it for the first smoke test,
+without repartitioning or changing Windows volumes. Plan large libraries and
+model collections only after confirming the intended storage mount.
+
+The owner reports Ollama installed and the `qwen3:8b` pull completed. The
+restricted session cannot access loopback sockets to independently verify the
+server. The owner started a conversation using `burito-local:8b` with an
+8192-token context. Continue with the targeted verification steps above.
