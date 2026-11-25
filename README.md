@@ -1,113 +1,1 @@
-# Burito
-
-A personal hybrid assistant for Kubuntu: local memory, offline reasoning,
-online research, useful suggestions, and progressively verified automation.
-
-**Status: first local text conversation completed; quality checks in progress.**
-Screen observation is not implemented. The optional PC inventory timer
-collects local metadata when enabled; it does not capture screens or file contents.
-The separate runtime installer downloads packages only when explicitly run.
-
-## Start here
-
-Python 3.11+ is sufficient; the foundation uses only the standard library.
-
-```bash
-python3 -m burito doctor
-python3 -m burito init
-python3 -m burito teach
-python3 -m burito remember "I prefer short explanations" --source owner
-python3 -m burito memories
-python3 -m burito correct MEMORY_ID "I prefer detailed explanations"
-python3 -m burito forget MEMORY_ID
-python3 -m burito feedback add correction "Prefer suggestions grounded in a named project task."
-python3 -m burito feedback list
-python3 -m burito suggestions list --status pending
-python3 -m burito backup /absolute/path/to/an/existing/folder/burito-backup.sqlite3
-python3 -m unittest discover -s tests -v
-```
-
-Commands run from this repository. Memory is stored outside the repository,
-under `$XDG_DATA_HOME/burito` or `~/.local/share/burito`. Set
-`BURITO_DATA_DIR` to an absolute path on your intended storage volume to
-use a different location. The directory must be owned by your account.
-The current database is local and unencrypted; use OS disk encryption for
-at-rest protection. Never commit personal data, hardware reports, or secrets.
-
-`forget` removes an entry from the live database; it does not erase external
-backups or guarantee forensic erasure from the storage medium.
-
-Feedback is separate from confirmed personal facts. Add it only after reviewing
-a suggestion yourself. A future ordinary chat can use it with
-`--include-feedback`; activity-only chats always exclude it. This records owner
-guidance locally and does not train model weights.
-
-## Plan
-
-- [Complete roadmap](docs/ROADMAP.md)
-- [Architecture and trust boundaries](docs/ARCHITECTURE.md)
-- [First milestone and machine setup](docs/SETUP.md)
-- [Progress and next work](docs/STATUS.md)
-- [Owner-reviewed suggestions](docs/SUGGESTIONS.md)
-- [Teaching Burito together](docs/LEARNING.md)
-- [Local PC inventory and change detection](docs/PC_AWARENESS.md)
-- [Using files and applications from chat](docs/PC_ACCESS.md)
-
-To establish a computer inventory and enable periodic metadata checks after login:
-
-```bash
-python3 -m burito pc scan
-python3 -m burito pc enable
-python3 -m burito pc monitor-status
-```
-
-These commands collect local inventory and file metadata, not screenshots or
-file contents. Run `python3 -m burito pc pause` to stop collection. See the scope
-and limits in the PC-awareness guide before treating the inventory as complete.
-
-Start its general education separately from your personal preferences:
-
-```bash
-python3 -m burito school install
-python3 -m burito school list
-python3 -m burito school lesson home.honesty
-```
-
-This installs three home-foundation lessons locally. Eleven introductory lessons
-are available in total, including IT and health literacy. Sources and review
-prompts accompany each lesson. Stored references are not model training or
-demonstrated understanding.
-The owner completed a first exchange through the chat launcher. The lesson and
-personal-memory bridge still need behavioral checks. See [first local conversation](docs/FIRST_CHAT.md) for setup
-gates and limitations. Preview the selected lesson with:
-
-```bash
-python3 -m burito context --lesson home.honesty
-```
-
-The agent runtime preparation uses eve (TypeScript), with a local desktop companion.
-This Python foundation checks the machine and stores explicitly supplied
-memories while GPU, storage, and model setup are resolved. In a normal Kubuntu
-terminal with internet access, install runtime packages with:
-
-```bash
-cd ~/Burito
-bash scripts/setup-runtime.sh
-```
-
-This downloads Node 26.13.1 from nodejs.org if Node 24+ and npm are unavailable,
-checks the archive against its HTTPS-served SHA-256 manifest, and installs it
-inside `.tools/`. It then installs eve, ai, zod, and the OpenAI-compatible adapter
-in `runtime/`, saving exact
-versions and a lockfile. This can take several minutes. It does not use sudo,
-change drivers, download AI models, start a chat, or enable observation.
-The runtime is installed and its generated lockfile is committed. Subsequent
-runs use `npm ci` against that lockfile. Installed-version discovery and tests
-pass; a first local model exchange completed, with answer-quality issues being retested.
-
-See the [eve setup documentation](https://eve.dev/docs/getting-started).
-
-Learning initially means retrieving knowledge, remembering approved facts,
-and testing procedures. Model fine-tuning is a separate later experiment.
-Installing this repository does not make a system that can do everything or
-improve itself without supervision.
+¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^tŒ	ÕÉ¥Ñ¼()	ÕÉ¥Ñ¼¥Ì„±½…°µ™¥ÉÍĞÁ•ÉÍ½¹…°…ÍÍ¥ÍÑ…¹Ğ‰Õ¥±Ğ…É½Õ¹„±½…°±…¹Õ…”µ½‘•°°)•áÁ±¥¥Ğ±½…°µ•µ½Éä°…¹½İ¹•Èµ…ÁÁÉ½Ù•Ñ½½±Ì¸%Ğ…¸…¹Íİ•È™É½´Í…Ù•)­¹½İ±•‘”°É•µ•µ‰•È…ÁÁÉ½Ù•™…ÑÌ…¹‘•™¥¹¥Ñ¥½¹Ì°¥¹ÍÁ•ĞÍ•±•Ñ•‘•Í­Ñ½À)İ¥¹‘½İÌ°…¹İ½É¬İ¥Ñ 	É…Ù”Á…•Ìİ¡•¸Ñ¡”É•ÅÕ¥É•Á•Éµ¥ÍÍ¥½¹Ì…É”•¹…‰±•¸()	ÕÉ¥Ñ¼¥Ì…¸•Ù½±Ù¥¹œÁÉ½©•Ğ°¹½Ğ„ÁÉ½µ¥Í”½˜Õ¹É•ÍÑÉ¥Ñ•½È™Õ±±äÉ•±¥…‰±”)½µÁÕÑ•È½¹ÑÉ½°¸Ù•ÉäÍÉ••¸½Á…”É•……¹‰É½İÍ•È½È‘•Í­Ñ½À…Ñ¥½¸É•µ…¥¹Ì)‰½Õ¹‘•‰äÑ¡”Ñ½½°…¹¥ÑÌ…ÁÁÉ½Ù…°ÁÉ½µÁĞ¸%Ğ‘½•Ì¹½ĞÉÕ¸…É‰¥ÑÉ…ÉäÍ¡•±°)½µµ…¹‘Ì°É•…Ñ¡”±¥Á‰½…É°½È½‰Í•ÉÙ”Ñ¡”‘•Í­Ñ½À½¹Ñ¥¹Õ½ÕÍ±ä¸((ŒŒEÕ¥¬ÍÑ…ÉĞ()Q¡”ÍÑ…¹‘…É±½…°‘•Í­Ñ½À±…Õ¹¡•È…ÍÍÕµ•ÌÑ¡”±½…°µ½‘•°‰ÕÉ¥Ñ¼µ±½…°èá‰€)¥Ì…±É•…‘ä…Ù…¥±…‰±”…¹Ñ¡”•áÑ•É¹…°‰É…¥¸‘É¥Ù”¥Ìµ½Õ¹Ñ•…Ğ)€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¹€è()‰…Í )ø½	ÕÉ¥Ñ¼(¸½ÍÉ¥ÁÑÌ½ÍÑ…ÉĞµ¡…Ğ¹Í )€()AÉ•ÍÌÑÉ°­€Ñ¼±•…Ù”Ñ¡”¡…Ğ¸Q¡”±…Õ¹¡•È•¹…‰±•ÌÑ¡”¥µÁ±•µ•¹Ñ•±½…°)‘•Í­Ñ½À…¹	É…Ù”Ñ½½±Ì¸… Í•¹Í¥Ñ¥Ù”É•…½È…Ñ¥½¸ÍÑ¥±°É•ÅÕ¥É•Ì¥ÑÌ½İ¸)…ÁÁÉ½Ù…°¸A•ÉÍ½¹…°™…ÑÌ…É”•á±Õ‘•‰ä‘•™…Õ±Ğì…‘€´µ¥¹±Õ‘”µÁ•ÉÍ½¹…±€Ñ¼)Ñ¡”±…Õ¹¡•È½µµ…¹½¹±äİ¡•¸å½Ôİ…¹ĞÑ¡•´¥¹±Õ‘•¥¸Ñ¡…Ğ¡…Ğ¸((ŒŒ¥ÉÍĞµÑ¥µ”1¥¹ÕàÍ•ÑÕÀ()I•…Ñ¡”m™¥ÉÍĞ±½…°½¹Ù•ÉÍ…Ñ¥½¸Õ¥‘•t¡‘½Ì½%IMQ}!P¹µ¤™½ÈÉÕ¹Ñ¥µ”°)=±±…µ„°µ½‘•°°…¹™¥ÉÍĞµ¡…ĞÍ•ÑÕÀ¸%¸Í¡½ÉĞ°¥¹ÍÑ…±°Ñ¡”Á¥¹¹•Ù”ÉÕ¹Ñ¥µ”)‘•Á•¹‘•¹¥•Ì¥¸Ñ¡¥Ì¡•­½ÕĞ°¥¹ÍÑ…±°=±±…µ„°½‰Ñ…¥¸„½µÁ…Ñ¥‰±”±½…°µ½‘•°°)…¹É•…Ñ”	ÕÉ¥Ñ¼Ì±½…°=±±…µ„µ½‘•°½¹™¥ÕÉ…Ñ¥½¸è()‰…Í )ø½	ÕÉ¥Ñ¼)‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í )½±±…µ„ÁÕ±°Åİ•¸Ìèáˆ)½±±…µ„É•…Ñ”‰ÕÉ¥Ñ¼µ±½…°èáˆ€µ˜½¹™¥œ½½±±…µ„½5½‘•±™¥±”)€()Q¡”=±±…µ„µ½‘•°¥Ì±½…°Ñ¼Ñ¡”µ…¡¥¹”…¹¥Ì¹½ĞÁ…ÉĞ½˜Ñ¡”¥ĞÉ•Á½Í¥Ñ½Éä¸)¡•¬ATµ•µ½Éä…¹Ñ¡”¹•Üµ…¡¥¹”Ì…Á…‰¥±¥Ñ¥•Ì‰•™½É”¡½½Í¥¹œ„µ½‘•°¸((ŒŒ5½Ù¥¹œ	ÕÉ¥Ñ¼Ñ¼…¹½Ñ¡•È1¥¹Õàµ…¡¥¹”()Q¡”‰É…¥¸‘É¥Ù”½¹Ñ…¥¹ÌÁ•ÉÍ¥ÍÑ•¹Ğ±½…°‘…Ñ„ìÑ¡”É•Á½Í¥Ñ½Éä½¹Ñ…¥¹ÌÑ¡”)ÁÉ½É…´¸Q¡”ÕÉÉ•¹Ğ±½…°½‘”µ…ä¥¹±Õ‘”½µµ¥ÑÌÑ¡…Ğ…É”¹½Ğ½¸¥Ñ!Õˆå•Ğ¸)UÍ”„¥Ğ‰Õ¹‘±”½¸Ñ¡”‰É…¥¸‘É¥Ù”Ñ¼ÑÉ…¹Í™•ÈÑ¡…Ğ½‘”…¹¥ÑÌ¡¥ÍÑ½Éäè()‰…Í )ø½	ÕÉ¥Ñ¼)¥ĞÍÑ…ÑÕÌ€´µÍ¡½ÉĞ)¥Ğ‰Õ¹‘±”É•…Ñ”€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”€´µ…±°)€()=¸Ñ¡”¹•Üµ…¡¥¹”°µ½Õ¹ĞÑ¡”•á¥ÍÑ¥¹œ‰É…¥¸‘É¥Ù”İ¥Ñ¡½ÕĞ™½Éµ…ÑÑ¥¹œ¥Ğ°Ñ¡•¸è()‰…Í )¥Ğ±½¹”€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½	ÕÉ¥Ñ¼¹‰Õ¹‘±”ø½	ÕÉ¥Ñ¼)ø½	ÕÉ¥Ñ¼)‰…Í ÍÉ¥ÁÑÌ½Í•ÑÕÀµÉÕ¹Ñ¥µ”¹Í )€()M•”Ñ¡”½µÁ±•Ñ”m¹•Ü1¥¹Õàµ¥É…Ñ¥½¸Õ¥‘•t¡‘½Ì½9]}1%9Ua}5%IQ%=8¹µ¤™½È)µ½Õ¹Ñ¥¹œÑ¡”‘¥Í¬°Í•ÑÑ¥¹œÕÀÑ¡”µ½‘•°…¹	É…Ù”•áÑ•¹Í¥½¸°…¹„É•…‘äµÑ¼µÁ…ÍÑ”)½‘•àÁÉ½µÁĞ¸((ŒŒ1½…°µ•µ½Éä…¹ÍÑ½É…”()	ÕÉ¥Ñ¼ÍÑ½É•Ìµ•µ½É¥•Ì°±½ÍÍ…Éä•¹ÑÉ¥•Ì°±•ÍÍ½¹Ì°…¹¥µÁ½ÉÑ•­¹½İ±•‘”¥¸)¥ÑÌ±½…°‘…Ñ„‘¥É•Ñ½Éä¸Q¡”‘•™…Õ±Ğ™½±±½İÌÑ¡”a‘…Ñ„±½…Ñ¥½¸ìÍ•Ğ)	UI%Q=}Q}%I€Ñ¼Í•±•Ğ…¹½Ñ¡•È…‰Í½±ÕÑ”Á…Ñ ¸Q¡”‘•Í­Ñ½À±…Õ¹¡•ÈÕÍ•Ì)€½µ¹Ğ½‰ÕÉ¥Ñ¼µ‰É…¥¸½‘…Ñ…€…¹É•™ÕÍ•ÌÑ¼ÍÑ…ÉĞ¥˜Ñ¡”•áÁ•Ñ•‘É¥Ù”¥Ì¹½Ğ)µ½Õ¹Ñ•¸-••ÀÑ¡¥Ì‘…Ñ„½ÕĞ½˜¥Ñ!Õˆ¸	…¬¥ĞÕÀÑ¼„Í•Á…É…Ñ”‘•ÍÑ¥¹…Ñ¥½¸¸()Q¡”ME1¥Ñ”‘…Ñ„¥Ì±½…°…¹Õ¹•¹ÉåÁÑ•¸UÍ”½Á•É…Ñ¥¹œµÍåÍÑ•´‘¥Í¬•¹ÉåÁÑ¥½¸)Ñ¼ÁÉ½Ñ•Ğ¥Ğ…ĞÉ•ÍĞ¸•±•Ñ¥¹œ„‘…Ñ…‰…Í”É•½É‘½•Ì¹½Ğ•É…Í”½Á¥•Ì¥¸)•áÑ•É¹…°‰…­ÕÁÌ½ÈÕ…É…¹Ñ•”™½É•¹Í¥Œ•É…ÍÕÉ”™É½´ÍÑ½É…”µ•‘¥„¸((ŒŒ	É…Ù”…¹‘•Í­Ñ½À…•ÍÌ()Q¡”½ÁÑ¥½¹…°	É…Ù”•áÑ•¹Í¥½¸…¹¹…Ñ¥Ù”µ•ÍÍ…¥¹œ¡½ÍĞ…É”¥¹ÍÑ…±±•™É½´Ñ¡¥Ì)É•Á½Í¥Ñ½Éä¸½±±½ÜmA…•ÍÌÍ•ÑÕÁt¡‘½Ì½A}ML¹µ¤Ñ¼±½…Ñ¡”Õ¹Á…­•)•áÑ•¹Í¥½¸°¥¹ÍÑ…±°Ñ¡”¡½ÍĞ™½ÈÑ¡”‘¥ÍÁ±…å••áÑ•¹Í¥½¸%°…¹É…¹ĞÍ¥Ñ”)Á•Éµ¥ÍÍ¥½¹Ì¸e½Ô…¸É…¹Ğ…•ÍÌÑ¼½¹”Í¥Ñ”½È…±°É•Õ±…È!QQ@½!QQALÍ¥Ñ•Ìì)Ñ¡”‰É½İÍ•ÈÍÑ¥±°…Í­ÌÍ•Á…É…Ñ•±ä‰•™½É”Á…”É•…‘Ì…¹…Ñ¥½¹Ì¸Q¡”•áÑ•¹Í¥½¸)‘½•Ì¹½ĞÍ•¹Á…”½¹Ñ•¹ÑÌÕ¹Ñ¥°…¸…ÁÁÉ½Ù•É•…¥ÌÉ•ÅÕ•ÍÑ•¸()-]¥¸İ¥¹‘½Ü±¥ÍÑ¥¹œ…¹™½ÕÌÉ•ÅÕ¥É”-A±…Íµ„İ¥Ñ ]…å±…¹¸MÉ••¸=H¥Ì„)Í•Á…É…Ñ”½¹”µÍ¡½Ğ…ÁÁÉ½Ù•É•…¸=Hµ…äµ¥ÍÉ•…Ñ•áĞ…¹‘½•Ì¹½Ğ¥‘•¹Ñ¥™ä)Ù¥ÍÕ…°½‰©•ÑÌ¸İ¥¹‘½ÜÑ¥Ñ±”¥‘•¹Ñ¥™¥•Ìµ•Ñ…‘…Ñ„°¹½ĞÑ¡”Á…”½¹Ñ•¹ÑÌ¸((ŒŒ1•…É¸µ½É”((´mI½…‘µ…Át¡‘½Ì½I=5@¹µ¤(´mÕÉÉ•¹ĞÍÑ…ÑÕÍt¡‘½Ì½MQQUL¹µ¤(´mÉ¡¥Ñ•ÑÕÉ”…¹ÑÉÕÍĞ‰½Õ¹‘…É¥•Ít¡‘½Ì½I!%QQUI¹µ¤(´m¥ÉÍĞ±½…°½¹Ù•ÉÍ…Ñ¥½¸…¹µ½‘•°Í•ÑÕÁt¡‘½Ì½%IMQ}!P¹µ¤(´m9•Ü1¥¹Õàµ¥É…Ñ¥½¸…¹½‘•àÁÉ½µÁÑt¡‘½Ì½9]}1%9Ua}5%IQ%=8¹µ¤(´mA…¹	É…Ù”Ñ½½±Ít¡‘½Ì½A}ML¹µ¤(´m1½…°A¥¹Ù•¹Ñ½Éåt¡‘½Ì½A}]I9ML¹µ¤(´m-¹½İ±•‘”±¥‰É…Éåt¡‘½Ì½-9=]1¹µ¤(´m±½ÍÍ…Éåt¡‘½Ì½1=MMId¹µ¤(´m=İ¹•ÈÕ¥‘…¹”…¹™••‘‰…­t¡‘½Ì½1I9%9¹µ¤(´m=ÁÑ¥½¹…°½¹±¥¹”É•Í•…É¡t¡‘½Ì½=91%9}IMI ¹µ¤(´mÕÑ½µ…Ñ¥Œ¥Ñ!Õˆ¡•­½ÕĞÕÁ‘…Ñ•Ít¡‘½Ì½UQ=}UAQ¹µ¤()	ÕÉ¥Ñ¼¥Ì±½…°µ™¥ÉÍĞ°‰ÕĞ‰É½İÍ•ÈÍ•…É ÕÍ•ÌÑ¡”¥¹Ñ•É¹•Ğİ¡•¸•áÁ±¥¥Ñ±ä)É•ÅÕ•ÍÑ•…¹…ÁÁÉ½Ù•¸=¹±¥¹”Á…”½¹Ñ•¹Ğ¥ÌÑÉ•…Ñ•…ÌÕ¹ÑÉÕÍÑ•É•™•É•¹”)‘…Ñ„¸±½Õµ½‘•°™…±±‰…¬¥Ì¹½Ğ•¹…‰±•‰äÑ¡”ÍÑ…¹‘…É±…Õ¹¡•È¸
