@@ -1,1 +1,19 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ±¥Á‰½…É‘]É¥Ñ•Q•áÐ€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€]É¥Ñ”•á…Ð½Ý¹•ÈµÁÉ½Ù¥‘•½ÈÍÉ••¸½Á…”µ•áÑÉ…Ñ•Ñ•áÐÑ¼Ñ¡”±½…°ÍåÍÑ•´±¥Á‰½…É¸Q¡¥Ì¥ÌÝÉ¥Ñ”µ½¹±ä…¹‘½•Ì¹½ÐÉ•ÅÕ¥É”…¸½Á•¸‰É½ÝÍ•È¸I•ÅÕ¥É•Ì€´µ•¹…‰±”µ‘•Í­Ñ½Àµ½¹ÑÉ½°°„±½…°Ý°µ½Áä½Èá±¥À•á•ÕÑ…‰±”°…¹Í•Á…É…Ñ”…ÁÁÉ½Ù…°Í¡½Ý¥¹œÑ¡”™Õ±°Ñ•áÐ™½È•Ù•ÉäÝÉ¥Ñ”¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ìÑ•áÐèè¹ÍÑÉ¥¹œ ¤¹µ¥¸ Ä¤¹µ…à ÔÀÀÀ¤ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôø½ÁäÑ¡¥Ì•á…ÐÑ•áÐÑ¼Ñ¡”±½…°ÍåÍÑ•´±¥Á‰½…Éü	ÕÉ¥Ñ¼…¸ÝÉ¥Ñ”‰ÕÐ…¹¹½ÐÉ•…±¥Á‰½…É½¹Ñ•¹ÑÌ¹q¹q¸‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹Ñ•áÐ¥õ€°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€±¥Á‰½…É‘}ÝÉ¥Ñ•}Ñ•áÐœ°Ñ•áÐè¥¹ÁÕÐ¹Ñ•áÐô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ  ¤€ôø(€ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€ôôô€œÄœ€˜˜ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}M-Q=A}=9QI=0€ôôô€œÄœ(€€€€ü±¥Á‰½…É‘]É¥Ñ•Q•áÐ€è¹Õ±°°(¤ì(
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const clipboardWriteText = defineTool({
+  description: 'Write exact owner-provided or screen/page-extracted text to the local system clipboard. This is write-only and does not require an open browser. Requires --enable-desktop-control, a local wl-copy or xclip executable, and separate approval showing the full text for every write.',
+  inputSchema: z.object({ text: z.string().min(1).max(5000) }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => `Copy this exact text to the local system clipboard? Burito can write but cannot read clipboard contents.\n\n${JSON.stringify(input.text)}`,
+  },
+  execute: (input, ctx) => hostAccess({ action: 'clipboard_write_text', text: input.text }, ctx.abortSignal, true),
+});
+
+export default defineDynamic(() =>
+  process.env.BURITO_PC_ACCESS === '1' && process.env.BURITO_DESKTOP_CONTROL === '1'
+    ? clipboardWriteText : null,
+);

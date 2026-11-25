@@ -1,1 +1,16 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐì…±Ý…åÌô™É½´€•Ù”½Ñ½½±Ì½…ÁÁÉ½Ù…°œì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‰É½ÝÍ•É¥¹‘Q…‰Ì€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€¥¹	É…Ù”Ñ…‰ÌÝ¡½Í”Ù¥Í¥‰±”Ñ¥Ñ±”µ…Ñ¡•ÌÑ¡”½Ý¹•ÈµÁÉ½Ù¥‘•Á¡É…Í”¸I•ÑÕÉ¹Ì½¹±äµ…Ñ¡¥¹œÑ…ˆ%Ì…¹Ñ¥Ñ±•Ì°¹•Ù•ÈUI1Ì½ÈÁ…”½¹Ñ•¹ÑÌ¸I•ÅÕ¥É•Ì½Ý¹•È…ÁÁÉ½Ù…°…¹Ñ¡”½ÁÑ¥½¹…°	É…Ù”Ñ…ˆµ±…‰•°Á•Éµ¥ÍÍ¥½¸¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ìÅÕ•Éäèè¹ÍÑÉ¥¹œ ¤¹ÑÉ¥´ ¤¹µ¥¸ Ä¤¹µ…à ÄÀÀ¤ô¤°(€…ÁÁÉ½Ù…°èì(€€€É•ÅÕ•ÍÐè…±Ý…åÌ ¤°(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôø1½½¬™½È	É…Ù”Ñ…‰ÌÝ¥Ñ „Ñ¥Ñ±”µ…Ñ¡¥¹œ€‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹ÅÕ•Éä¥ôü=¹±äµ…Ñ¡¥¹œÑ…ˆÑ¥Ñ±•Ì…¹Ñ•µÁ½É…ÉäÑ…ˆ%ÌÝ¥±°‰”Í¡…É•ì¹¼UI1Ì½ÈÁ…”½¹Ñ•¹ÑÌ…É”É•…¹€°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}™¥¹‘}Ñ…‰Ìœ°€¸¸¹¥¹ÁÕÐô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ  ¤€ôøÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€ôôô€œÄœ€˜˜ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}	IY}Q	L€ôôô€œÄœ€ü‰É½ÝÍ•É¥¹‘Q…‰Ì€è¹Õ±°¤ì(
+import { defineDynamic, defineTool } from 'eve/tools';
+import { always } from 'eve/tools/approval';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const browserFindTabs = defineTool({
+  description: 'Find Brave tabs whose visible title matches the owner-provided phrase. Returns only matching tab IDs and titles, never URLs or page contents. Requires owner approval and the optional Brave tab-label permission.',
+  inputSchema: z.object({ query: z.string().trim().min(1).max(100) }),
+  approval: {
+    request: always(),
+    prompt: ({ input }) => `Look for Brave tabs with a title matching ${JSON.stringify(input.query)}? Only matching tab titles and temporary tab IDs will be shared; no URLs or page contents are read.`,
+  },
+  execute: (input, ctx) => hostAccess({ action: 'browser_find_tabs', ...input }, ctx.abortSignal, true),
+});
+
+export default defineDynamic(() => process.env.BURITO_PC_ACCESS === '1' && process.env.BURITO_BRAVE_TABS === '1' ? browserFindTabs : null);

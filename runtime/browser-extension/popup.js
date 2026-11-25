@@ -1,1 +1,93 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¡É½µ”¹Ñ…‰Ì¹ÅÕ•Éä¡íô°€¡Ñ…‰Ì¤€ôøì(€½¹ÍÐ½Õ¹Ð€ô‘½Õµ•¹Ð¹•Ñ±•µ•¹Ñ	å% ½Õ¹Ðœ¤ì(€¥˜€¡¡É½µ”¹ÉÕ¹Ñ¥µ”¹±…ÍÑÉÉ½È¤ì(€€€½Õ¹Ð¹Ñ•áÑ½¹Ñ•¹Ð€ô€U¹…Ù…¥±…‰±”œì(€€€É•ÑÕÉ¸ì(€ô(€½Õ¹Ð¹Ñ•áÑ½¹Ñ•¹Ð€ôMÑÉ¥¹œ¡Ñ…‰Ì¹±•¹Ñ ¤ì)ô¤ì()½¹ÍÐ•¹…‰±”€ô‘½Õµ•¹Ð¹•Ñ±•µ•¹Ñ	å% •¹…‰±”œ¤ì)½¹ÍÐ•¹…‰±•M¥Ñ”€ô‘½Õµ•¹Ð¹•Ñ±•µ•¹Ñ	å% •¹…‰±”µÍ¥Ñ”œ¤ì)½¹ÍÐ•¹…‰±•±°€ô‘½Õµ•¹Ð¹•Ñ±•µ•¹Ñ	å% •¹…‰±”µ…±°œ¤ì)½¹ÍÐ•¹…‰±•½Áä€ô‘½Õµ•¹Ð¹•Ñ±•µ•¹Ñ	å% •¹…‰±”µ½Áäœ¤ì)½¹ÍÐÍÑ…ÑÕÌ€ô‘½Õµ•¹Ð¹•Ñ±•µ•¹Ñ	å% ÍÑ…ÑÕÌœ¤ì)¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹½¹Ñ…¥¹Ì¡ìÁ•Éµ¥ÍÍ¥½¹ÌèlÑ…‰Ìtô°€¡É…¹Ñ•¤€ôøì(€¥˜€¡É…¹Ñ•¤ì(€€€•¹…‰±”¹Ñ•áÑ½¹Ñ•¹Ð€ô€Q…ˆ±…‰•±Ì•¹…‰±•œì(€€€•¹…‰±”¹‘¥Í…‰±•€ôÑÉÕ”ì(€ô)ô¤ì()¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹½¹Ñ…¥¹Ì¡ìÁ•Éµ¥ÍÍ¥½¹Ìèl±¥Á‰½…É‘]É¥Ñ”tô°€¡É…¹Ñ•¤€ôøì(€¥˜€¡É…¹Ñ•¤ì(€€€•¹…‰±•½Áä¹Ñ•áÑ½¹Ñ•¹Ð€ô€±¥Á‰½…É½Áä•¹…‰±•œì(€€€•¹…‰±•½Áä¹‘¥Í…‰±•€ôÑÉÕ”ì(€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ô€	ÕÉ¥Ñ¼…¸ÝÉ¥Ñ”•á…ÐÑ•áÐ½¹±ä…™Ñ•È•… ½Áä…ÁÁÉ½Ù…°¸±¥Á‰½…ÉÉ•…‘¥¹œ¥Ì¹½Ð•¹…‰±•¸œì(€ô)ô¤ì)•¹…‰±•½Áä¹…‘‘Ù•¹Ñ1¥ÍÑ•¹•È ±¥¬œ°€ ¤€ôøì(€¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹É•ÅÕ•ÍÐ¡ìÁ•Éµ¥ÍÍ¥½¹Ìèl±¥Á‰½…É‘]É¥Ñ”tô°€¡É…¹Ñ•¤€ôøì(€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ôÉ…¹Ñ•(€€€€€€ü€±¥Á‰½…É½Áä•¹…‰±•¸	ÕÉ¥Ñ¼ÍÑ¥±°…Í­Ì‰•™½É”•Ù•Éä•á…ÐµÑ•áÐ½Áäì±¥Á‰½…ÉÉ•…‘¥¹œ¥Ì¹½Ð•¹…‰±•¸œ(€€€€€€è€±¥Á‰½…ÉÁ•Éµ¥ÍÍ¥½¸¹½ÐÉ…¹Ñ•¸	ÕÉ¥Ñ¼…¹¹½Ð½ÁäÑ•áÐ¥¹Ñ¼Ñ¡”ÍåÍÑ•´±¥Á‰½…É¸œì(€€€¥˜€¡É…¹Ñ•¤ì(€€€€€•¹…‰±•½Áä¹Ñ•áÑ½¹Ñ•¹Ð€ô€±¥Á‰½…É½Áä•¹…‰±•œì(€€€€€•¹…‰±•½Áä¹‘¥Í…‰±•€ôÑÉÕ”ì(€€€ô(€ô¤ì)ô¤ì)•¹…‰±”¹…‘‘Ù•¹Ñ1¥ÍÑ•¹•È ±¥¬œ°€ ¤€ôøì(€¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹É•ÅÕ•ÍÐ¡ìÁ•Éµ¥ÍÍ¥½¹ÌèlÑ…‰Ìtô°€¡É…¹Ñ•¤€ôøì(€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ôÉ…¹Ñ•€ü€Q…ˆ±…‰•±Ì•¹…‰±•¸	ÕÉ¥Ñ¼…Í­Ì‰•™½É”•… ±½½­ÕÀ¸œ€è€A•Éµ¥ÍÍ¥½¸¹½ÐÉ…¹Ñ•ìÑ…ˆÑ¥Ñ±•ÌÉ•µ…¥¸Õ¹…Ù…¥±…‰±”¸œì(€€€¥˜€¡É…¹Ñ•¤ì(€€€€€•¹…‰±”¹Ñ•áÑ½¹Ñ•¹Ð€ô€Q…ˆ±…‰•±Ì•¹…‰±•œì(€€€€€•¹…‰±”¹‘¥Í…‰±•€ôÑÉÕ”ì(€€€ô(€ô¤ì)ô¤ì()½¹ÍÐ…±±]•‰=É¥¥¹Ì€ôl¡ÑÑÀè¼¼¨¼¨œ°€¡ÑÑÁÌè¼¼¨¼¨tì)¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹½¹Ñ…¥¹Ì¡ìÁ•Éµ¥ÍÍ¥½¹ÌèlÍÉ¥ÁÑ¥¹œt°½É¥¥¹Ìè…±±]•‰=É¥¥¹Ìô°€¡É…¹Ñ•¤€ôøì(€¥˜€¡É…¹Ñ•¤ì(€€€•¹…‰±•±°¹Ñ•áÑ½¹Ñ•¹Ð€ô€±°Ý•‰Í¥Ñ•Ì•¹…‰±•œì(€€€•¹…‰±•±°¹‘¥Í…‰±•€ôÑÉÕ”ì(€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ô€	ÕÉ¥Ñ¼…¸…•ÍÌÉ•Õ±…È!QQ@½!QQALÍ¥Ñ•Ì¸… Á…”É•…½È…Ñ¥½¸ÍÑ¥±°É•ÅÕ¥É•Ì	ÕÉ¥Ñ¼…ÁÁÉ½Ù…°¸œì(€ô)ô¤ì()•¹…‰±•±°¹…‘‘Ù•¹Ñ1¥ÍÑ•¹•È ±¥¬œ°€ ¤€ôøì(€¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹É•ÅÕ•ÍÐ¡ìÁ•Éµ¥ÍÍ¥½¹ÌèlÍÉ¥ÁÑ¥¹œt°½É¥¥¹Ìè…±±]•‰=É¥¥¹Ìô°€¡É…¹Ñ•¤€ôøì(€€€¥˜€¡É…¹Ñ•¤ì(€€€€€•¹…‰±•±°¹Ñ•áÑ½¹Ñ•¹Ð€ô€±°Ý•‰Í¥Ñ•Ì•¹…‰±•œì(€€€€€•¹…‰±•±°¹‘¥Í…‰±•€ôÑÉÕ”ì(€€€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ô€¹…‰±•™½ÈÉ•Õ±…È!QQ@½!QQALÍ¥Ñ•Ì¸	ÕÉ¥Ñ¼ÍÑ¥±°…Í­Ì‰•™½É”•… Á…”É•…½È…Ñ¥½¸¸œì(€€€ô•±Í”ì(€€€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ô€A•Éµ¥ÍÍ¥½¸¹½ÐÉ…¹Ñ•¸	ÕÉ¥Ñ¼…¸ÍÑ¥±°‰”•¹…‰±•½¹”Í¥Ñ”…Ð„Ñ¥µ”¸œì(€€€ô(€ô¤ì)ô¤ì()•¹…‰±•M¥Ñ”¹…‘‘Ù•¹Ñ1¥ÍÑ•¹•È ±¥¬œ°€ ¤€ôøì(€¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹½¹Ñ…¥¹Ì¡ìÁ•Éµ¥ÍÍ¥½¹ÌèlÑ…‰Ìtô°€¡¡…ÍQ…‰Ì¤€ôøì(€€€¥˜€ …¡…ÍQ…‰Ì¤ì(€€€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ô€¹…‰±”Ñ…ˆ±…‰•±Ì™¥ÉÍÐÑ¼É…¹Ð…•ÍÌÑ¼½¹”Í¥Ñ”°½È¡½½Í”¹…‰±”…±°Ý•‰Í¥Ñ•Ì¸œì(€€€€€É•ÑÕÉ¸ì(€€€ô(€€€¡É½µ”¹Ñ…‰Ì¹ÅÕ•Éä¡ì…Ñ¥Ù”èÑÉÕ”°±…ÍÑ½ÕÍ•‘]¥¹‘½ÜèÑÉÕ”ô°€¡Ñ…‰Ì¤€ôøì(€€€€€½¹ÍÐ…Ñ¥Ù”€ôÑ…‰Ìü¹lÁtì(€€€€€±•ÐÕÉ°ì(€€€€€ÑÉäìÕÉ°€ô¹•ÜUI0¡…Ñ¥Ù”ü¹ÕÉ°ñð€œœ¤ìô…Ñ ì€¼¨¡…¹‘±•‰•±½Ü€¨¼ô(€€€€€¥˜€ …ÕÉ°ñð€…l¡ÑÑÀèœ°€¡ÑÑÁÌèt¹¥¹±Õ‘•Ì¡ÕÉ°¹ÁÉ½Ñ½½°¤¤ì(€€€€€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ô€=Á•¸„É•Õ±…È!QQ@½È!QQALÁ…”™¥ÉÍÐ¸œì(€€€€€€€É•ÑÕÉ¸ì(€€€€€ô(€€€€€½¹ÍÐ½É¥¥¸€ô€‘íÕÉ°¹½É¥¥¹ô¼©€ì(€€€€€¡É½µ”¹Á•Éµ¥ÍÍ¥½¹Ì¹É•ÅÕ•ÍÐ¡ìÁ•Éµ¥ÍÍ¥½¹ÌèlÍÉ¥ÁÑ¥¹œt°½É¥¥¹Ìèm½É¥¥¹tô°€¡É…¹Ñ•¤€ôøì(€€€€€€€ÍÑ…ÑÕÌ¹Ñ•áÑ½¹Ñ•¹Ð€ôÉ…¹Ñ•(€€€€€€€€€€üÁÁÉ½Ù•™½È€‘íÕÉ°¹¡½ÍÑô¸	ÕÉ¥Ñ¼ÍÑ¥±°…Í­Ì‰•™½É”•… É•…½È…Ñ¥½¸¹€(€€€€€€€€€€èM¥Ñ”Á•Éµ¥ÍÍ¥½¸¹½ÐÉ…¹Ñ•™½È€‘íÕÉ°¹¡½ÍÑô¹€ì(€€€€€ô¤ì(€€€ô¤ì(€ô¤ì)ô¤ì
+chrome.tabs.query({}, (tabs) => {
+  const count = document.getElementById('count');
+  if (chrome.runtime.lastError) {
+    count.textContent = 'Unavailable';
+    return;
+  }
+  count.textContent = String(tabs.length);
+});
+
+const enable = document.getElementById('enable');
+const enableSite = document.getElementById('enable-site');
+const enableAll = document.getElementById('enable-all');
+const enableCopy = document.getElementById('enable-copy');
+const status = document.getElementById('status');
+chrome.permissions.contains({ permissions: ['tabs'] }, (granted) => {
+  if (granted) {
+    enable.textContent = 'Tab labels enabled';
+    enable.disabled = true;
+  }
+});
+
+chrome.permissions.contains({ permissions: ['clipboardWrite'] }, (granted) => {
+  if (granted) {
+    enableCopy.textContent = 'Clipboard copy enabled';
+    enableCopy.disabled = true;
+    status.textContent = 'Burito can write exact text only after each copy approval. Clipboard reading is not enabled.';
+  }
+});
+enableCopy.addEventListener('click', () => {
+  chrome.permissions.request({ permissions: ['clipboardWrite'] }, (granted) => {
+    status.textContent = granted
+      ? 'Clipboard copy enabled. Burito still asks before every exact-text copy; clipboard reading is not enabled.'
+      : 'Clipboard permission not granted. Burito cannot copy text into the system clipboard.';
+    if (granted) {
+      enableCopy.textContent = 'Clipboard copy enabled';
+      enableCopy.disabled = true;
+    }
+  });
+});
+enable.addEventListener('click', () => {
+  chrome.permissions.request({ permissions: ['tabs'] }, (granted) => {
+    status.textContent = granted ? 'Tab labels enabled. Burito asks before each lookup.' : 'Permission not granted; tab titles remain unavailable.';
+    if (granted) {
+      enable.textContent = 'Tab labels enabled';
+      enable.disabled = true;
+    }
+  });
+});
+
+const allWebOrigins = ['http://*/*', 'https://*/*'];
+chrome.permissions.contains({ permissions: ['scripting'], origins: allWebOrigins }, (granted) => {
+  if (granted) {
+    enableAll.textContent = 'All websites enabled';
+    enableAll.disabled = true;
+    status.textContent = 'Burito can access regular HTTP/HTTPS sites. Each page read or action still requires Burito approval.';
+  }
+});
+
+enableAll.addEventListener('click', () => {
+  chrome.permissions.request({ permissions: ['scripting'], origins: allWebOrigins }, (granted) => {
+    if (granted) {
+      enableAll.textContent = 'All websites enabled';
+      enableAll.disabled = true;
+      status.textContent = 'Enabled for regular HTTP/HTTPS sites. Burito still asks before each page read or action.';
+    } else {
+      status.textContent = 'Permission not granted. Burito can still be enabled one site at a time.';
+    }
+  });
+});
+
+enableSite.addEventListener('click', () => {
+  chrome.permissions.contains({ permissions: ['tabs'] }, (hasTabs) => {
+    if (!hasTabs) {
+      status.textContent = 'Enable tab labels first to grant access to one site, or choose Enable all websites.';
+      return;
+    }
+    chrome.tabs.query({ active: true, lastFocusedWindow: true }, (tabs) => {
+      const active = tabs?.[0];
+      let url;
+      try { url = new URL(active?.url || ''); } catch { /* handled below */ }
+      if (!url || !['http:', 'https:'].includes(url.protocol)) {
+        status.textContent = 'Open a regular HTTP or HTTPS page first.';
+        return;
+      }
+      const origin = `${url.origin}/*`;
+      chrome.permissions.request({ permissions: ['scripting'], origins: [origin] }, (granted) => {
+        status.textContent = granted
+          ? `Approved for ${url.host}. Burito still asks before each read or action.`
+          : `Site permission not granted for ${url.host}.`;
+      });
+    });
+  });
+});

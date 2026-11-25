@@ -1,1 +1,29 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì…±±Ìô™É½´€•Ù”½•Ù•¹ÑÌœì)¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐ‰É½ÝÍ•ÉM•…É €ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€M•…É Ñ¡”•á…Ð½Ý¹•ÈµÉ•ÅÕ•ÍÑ•ÅÕ•Éä¥¸Ñ¡”É•Õ±…È	É…Ù”ÁÉ½™¥±”°Ñ¡•¸™½ÕÌÑ¡”…Ñ¥Ù”	É…Ù”Ý¥¹‘½Ü…¹…ÁÑÕÉ”¥Ð½¹”Ý¥Ñ ±½…°=H¸¼¹½Ð…‘½¹Ù•ÉÍ…Ñ¥½¸°µ•µ½Éä°™¥±”°…Ñ¥Ù¥Ñä°½È¥¹™•ÉÉ•½¹Ñ•áÐ¸½•Ì¹½Ð±¥¬É•ÍÕ±ÑÌ°ÍÕ‰µ¥Ð™½ÉµÌ°½È‘½Ý¹±½…™¥±•Ì¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ì(€€€ÅÕ•Éäèè¹ÍÑÉ¥¹œ ¤¹ÑÉ¥´ ¤¹µ¥¸ Ä¤¹µ…à ÔÀÀ¤¹É••à ½ymyqÔÀÀÀÀµqÔÀÀÅ™qÔÀÀÝ™t¬¼¤°(€ô¤°(€…ÁÁÉ½Ù…°èì(€€€ÁÉ½µÁÐè€¡ì¥¹ÁÕÐô¤€ôøM•…É 	É…Ù”¥¸å½ÕÈÉ•Õ±…ÈÁÉ½™¥±”™½ÈÑ¡¥Ì•á…ÐÅÕ•Éäè€‘í)M=8¹ÍÑÉ¥¹¥™ä¡¥¹ÁÕÐ¹ÅÕ•Éä¥ôü	ÕÉ¥Ñ¼Ý¥±°Í•¹Ñ¡”ÅÕ•ÉäÑ¼	É…Ù”M•…É ½Ù•ÈÑ¡”¥¹Ñ•É¹•Ð°™½ÕÌÑ¡”…Ñ¥Ù”	É…Ù”Ý¥¹‘½Ü°…¹…ÁÑÕÉ”Ñ¡…ÐÝ¥¹‘½Ü½¹”Ý¥Ñ ±½…°=H¸Q¡”ÅÕ•Éäµ…äÉ•µ…¥¸¥¸å½ÕÈ‰É½ÝÍ•È¡¥ÍÑ½Éä¸9¼É•ÍÕ±ÐÝ¥±°‰”±¥­•°¹¼™½É´ÍÕ‰µ¥ÑÑ•°…¹¹¼™¥±”‘½Ý¹±½…‘•¹€°(€€€É•ÅÕ•ÍÐè…Íå¹Œ€¡Ñà¤€ôøì(€€€€€…Ý…¥Ð¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}Í•…É¡}É•Í•ÉÙ”œ°Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°(€€€€€€€ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°¤ì(€€€€€É•ÑÕÉ¸€ÕÍ•Èµ…ÁÁÉ½Ù…°œì(€€€ô°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€‰É½ÝÍ•É}Í•…É œ°€¸¸¹¥¹ÁÕÐ°(€€€Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°°ÑÉÕ”¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ ¡Ñà¤€ôøì(€¥˜€¡ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€„ôô€œÄœñðÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}	I=]MI}MI €„ôô€œÄœ¤É•ÑÕÉ¸¹Õ±°ì(€€¼¼¼¹½Ð±•Ð…¸…•¹ÐÉ•ÑÉä„Í•…É ¥¸Ñ¡”Í…µ”½Ý¹•ÈÑÕÉ¸¸=¹”…ÁÁÉ½Ù•(€€¼¼¥¹Ù½…Ñ¥½¸µÕÍÐÁÉ½‘Õ”½¹”…¹ÍÝ•È°•Ù•¸Ý¡•¸Ñ¡”É•ÍÕ±Ð¥Ì…µ‰¥Õ½ÕÌ¸(€¥˜€¡Ñà¹ÑÕÉ¸ü¹¥€˜˜…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€‰É½ÝÍ•É}Í•…É œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€É•ÑÕÉ¸‰É½ÝÍ•ÉM•…É ì)ô¤ì(
+import { calls } from 'eve/events';
+import { defineDynamic, defineTool } from 'eve/tools';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const browserSearch = defineTool({
+  description: 'Search the exact owner-requested query in the regular Brave profile, then focus the active Brave window and capture it once with local OCR. Do not add conversation, memory, file, activity, or inferred context. Does not click results, submit forms, or download files.',
+  inputSchema: z.object({
+    query: z.string().trim().min(1).max(500).regex(/^[^\u0000-\u001f\u007f]+$/),
+  }),
+  approval: {
+    prompt: ({ input }) => `Search Brave in your regular profile for this exact query: ${JSON.stringify(input.query)}? Burito will send the query to Brave Search over the internet, focus the active Brave window, and capture that window once with local OCR. The query may remain in your browser history. No result will be clicked, no form submitted, and no file downloaded.`,
+    request: async (ctx) => {
+      await hostAccess({ action: 'browser_search_reserve', session_id: ctx.session.id,
+        turn_id: ctx.session.turn.id, call_id: ctx.callId }, ctx.abortSignal);
+      return 'user-approval';
+    },
+  },
+  execute: (input, ctx) => hostAccess({ action: 'browser_search', ...input,
+    session_id: ctx.session.id, turn_id: ctx.session.turn.id, call_id: ctx.callId }, ctx.abortSignal, true),
+});
+
+export default defineDynamic((ctx) => {
+  if (process.env.BURITO_PC_ACCESS !== '1' || process.env.BURITO_BROWSER_SEARCH !== '1') return null;
+  // Do not let an agent retry a search in the same owner turn. One approved
+  // invocation must produce one answer, even when the result is ambiguous.
+  if (ctx.turn?.id && calls(ctx.view, { name: 'browser_search', turnId: ctx.turn.id }).length > 0) return null;
+  return browserSearch;
+});

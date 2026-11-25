@@ -1,1 +1,11 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚŞjgİ:—«jØ¨z-¥êæŠÛ^uì(€€‰µ…¹¥™•ÍÑ}Ù•ÉÍ¥½¸ˆè€Ì°(€€‰¹…µ”ˆè€‰	ÕÉ¥Ñ¼	É…Ù”½¹ÑÉ½°ˆ°(€€‰Ù•ÉÍ¥½¸ˆè€ˆÄ¸Ğ¸Àˆ°(€€‰‘•ÍÉ¥ÁÑ¥½¸ˆè€‰AÉ½Ù¥‘•Ì…ÁÁÉ½Ù•±½…°Ñ…ˆ±½½­ÕÀ…¹Ù¥Í¥‰±”µÁ…”½¹ÑÉ½±Ì™½È	ÕÉ¥Ñ¼¸ˆ°(€€‰Á•Éµ¥ÍÍ¥½¹Ìˆèl‰¹…Ñ¥Ù•5•ÍÍ…¥¹œˆ°€‰½™™ÍÉ••¸‰t°(€€‰½ÁÑ¥½¹…±}Á•Éµ¥ÍÍ¥½¹Ìˆèl‰Ñ…‰Ìˆ°€‰ÍÉ¥ÁÑ¥¹œˆ°€‰±¥Á‰½…É‘]É¥Ñ”‰t°(€€‰½ÁÑ¥½¹…±}¡½ÍÑ}Á•Éµ¥ÍÍ¥½¹Ìˆèl‰¡ÑÑÀè¼¼¨¼¨ˆ°€‰¡ÑÑÁÌè¼¼¨¼¨‰t°(€€‰‰…­É½Õ¹ˆèì€‰Í•ÉÙ¥•}İ½É­•Èˆè€‰Í•ÉÙ¥”µİ½É­•È¹©Ìˆô°(€€‰…Ñ¥½¸ˆèì€‰‘•™…Õ±Ñ}Á½ÁÕÀˆè€‰Á½ÁÕÀ¹¡Ñµ°ˆ°€‰‘•™…Õ±Ñ}Ñ¥Ñ±”ˆè€‰	ÕÉ¥Ñ¼‰É½İÍ•È…•ÍÌˆô)ô(
+{
+  "manifest_version": 3,
+  "name": "Burito Brave Control",
+  "version": "1.4.0",
+  "description": "Provides approved local tab lookup and visible-page controls for Burito.",
+  "permissions": ["nativeMessaging", "offscreen"],
+  "optional_permissions": ["tabs", "scripting", "clipboardWrite"],
+  "optional_host_permissions": ["http://*/*", "https://*/*"],
+  "background": { "service_worker": "service-worker.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Burito browser access" }
+}

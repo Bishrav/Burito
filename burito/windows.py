@@ -1,1 +1,392 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^tˆˆ‰=¸µ‘•µ…¹-]¥¸Ý¥¹‘½ÜÍ¹…ÁÍ¡½ÑÌ…¹…ÁÁÉ½Ù…°µ…Ñ•™½ÕÌÉ•ÅÕ•ÍÑÌ¸ˆˆˆ()¥µÁ½ÉÐ©Í½¸)¥µÁ½ÉÐ½Ì)™É½´Á…Ñ¡±¥ˆ¥µÁ½ÉÐA…Ñ )¥µÁ½ÉÐÉ”)¥µÁ½ÉÐÍ¡ÕÑ¥°)¥µÁ½ÉÐÍÕ‰ÁÉ½•ÍÌ)¥µÁ½ÉÐÑ•µÁ™¥±”)¥µÁ½ÉÐÑ¥µ”)¥µÁ½ÉÐÕÕ¥(()]%9=]}%€ôÉ”¹½µÁ¥±”¡È‰ylÀ´å„µ™µµuìÌÙôˆ¤)5a}IA=IQ}	eQL€ô€ÈÔÙ|ÀÀÀ)U1Q}Q%5=UP€ô€Ô¸À(()±…ÍÌ]¥¹‘½Ý	É¥‘•ÉÉ½È¡Y…±Õ•ÉÉ½È¤è(€€€€ˆˆ‰-]¥¸É•ÅÕ•ÍÐ™…¥±•°Ý¥Ñ ¥ÑÌ½µÁ±•Ñ•ÍÑ…•Ì¥¹±Õ‘•¥¸Ñ¡”µ•ÍÍ…”¸ˆˆˆ(()±…ÍÌ-]¥¹	ÕÍÉÉ½È¡]¥¹‘½Ý	É¥‘•ÉÉ½È¤è(€€€Á…ÍÌ(()‘•˜}©Í}ÍÑÉ¥¹œ¡Ù…±Õ”¤è(€€€É•ÑÕÉ¸©Í½¸¹‘ÕµÁÌ¡ÍÑÈ¡Ù…±Õ”¤°•¹ÍÕÉ•}…Í¥¤õQÉÕ”¤(()‘•˜}­Ý¥¹}ÍÉ¥ÁÐ¡…Ñ¥½¸°Ñ½­•¸°É•ÍÕ±Ñ}Í•ÉÙ¥”°¥¹Ñ•É¹…±}¥õ9½¹”¤è(€€€€ˆˆ‰	Õ¥±„½¹”µÍ¡½ÐÍÉ¥ÁÐÑ¡…ÐÉ•Á½ÉÑÌÉ•ÍÕ±ÑÌÑ¡É½Õ Ñ¡”ÁÉ¥Ù…Ñ”µ	ÕÌÍ•ÉÙ¥”¸ˆˆˆ(€€€•¹½‘•‘}Ñ½­•¸€ô}©Í}ÍÑÉ¥¹œ¡Ñ½­•¸¤(€€€•¹½‘•‘}Í•ÉÙ¥”€ô}©Í}ÍÑÉ¥¹œ¡É•ÍÕ±Ñ}Í•ÉÙ¥”¤(€€€ÍÉ¥ÁÐ€ô€œœœ)™Õ¹Ñ¥½¸É•Á½ÉÐ¡É•ÍÕ±Ð¤ì(€É•ÍÕ±Ð¹Ñ½­•¸€ôQ=-8ì(€…±±	ÕÌ¡MIY%°€ˆ¼ˆ°€‰½Éœ¹‰ÕÉ¥Ñ¼¹]¥¹‘½ÝÌˆ°€‰É•Á½ÉÐˆ°)M=8¹ÍÑÉ¥¹¥™ä¡É•ÍÕ±Ð¤°™Õ¹Ñ¥½¸ ¤íô¤ì)ô)™Õ¹Ñ¥½¸•Ñ]¥¹‘½ÝÌ ¤ì(€¥˜€¡ÑåÁ•½˜Ý½É­ÍÁ…”¹Ý¥¹‘½Ý1¥ÍÐ€ôôô€‰™Õ¹Ñ¥½¸ˆ¤É•ÑÕÉ¸Ý½É­ÍÁ…”¹Ý¥¹‘½Ý1¥ÍÐ ¤ì(€¥˜€¡ÑåÁ•½˜Ý½É­ÍÁ…”¹±¥•¹Ñ1¥ÍÐ€ôôô€‰™Õ¹Ñ¥½¸ˆ¤É•ÑÕÉ¸Ý½É­ÍÁ…”¹±¥•¹Ñ1¥ÍÐ ¤ì(€Ñ¡É½Ü¹•ÜÉÉ½È ‰-]¥¸•áÁ½Í•Ì¹•¥Ñ¡•ÈÝ½É­ÍÁ…”¹Ý¥¹‘½Ý1¥ÍÐ ¤¹½È±¥•¹Ñ1¥ÍÐ ¤¸ˆ¤ì)ô)™Õ¹Ñ¥½¸É½Ü¡Ü¤ì(€±•Ð‘•Í­Ñ½À€ô¹Õ±°ì(€ÑÉäì(€€€¥˜€¡Ü¹‘•Í­Ñ½À¤‘•Í­Ñ½À€ôMÑÉ¥¹œ¡Ü¹‘•Í­Ñ½À¹¹…µ”ñðÜ¹‘•Í­Ñ½À¹¥ñðÜ¹‘•Í­Ñ½À¤ì(€ô…Ñ €¡”¤íô(€É•ÑÕÉ¸ì(€€€¥¹Ñ•É¹…±%èMÑÉ¥¹œ¡Ü¹¥¹Ñ•É¹…±%¤¹É•Á±…” ½míõt½œ°€ˆˆ¤°(€€€É•Í½ÕÉ•±…ÍÌèMÑÉ¥¹œ¡Ü¹É•Í½ÕÉ•±…ÍÌñðÜ¹É•Í½ÕÉ•9…µ”ñð€ˆˆ¤°(€€€…ÁÑ¥½¸èMÑÉ¥¹œ¡Ü¹…ÁÑ¥½¸ñð€ˆˆ¤¹Í±¥” À°€ÌÀÀ¤°(€€€‘•Í­Ñ½Àè‘•Í­Ñ½À°(€€€µ¥¹¥µ¥é•è€„…Ü¹µ¥¹¥µ¥é•°(€€€½¹ÕÉÉ•¹Ñ•Í­Ñ½Àè€„…Ü¹½¹ÕÉÉ•¹Ñ•Í­Ñ½À°(€€€…Ñ¥Ù”è€„…Ü¹…Ñ¥Ù”(€ôì)ô)½¹ÍÐQ=-8€ô€œœœ€¬•¹½‘•‘}Ñ½­•¸€¬€œœœì)½¹ÍÐMIY%€ô€œœœ€¬•¹½‘•‘}Í•ÉÙ¥”€¬€œœœì)ÑÉäì(œœœ(€€€¥˜…Ñ¥½¸€ôô€‰±¥ÍÐˆè(€€€€€€€ÍÉ¥ÁÐ€¬ô€œœœ(€½¹ÍÐÝ¥¹‘½ÝÌ€ô•Ñ]¥¹‘½ÝÌ ¤¹™¥±Ñ•È¡Ü€ôø€„…Ü¤¹µ…À¡É½Ü¤ì(€É•Á½ÉÐ¡í½¬èÑÉÕ”°Ý¥¹‘½ÝÌèÝ¥¹‘½ÝÌ¹Í±¥” ´ÄÀÀ¥ô¤ì(œœœ(€€€•±¥˜…Ñ¥½¸€ôô€‰™½ÕÌˆè(€€€€€€€ÍÉ¥ÁÐ€¬ô€œœœ(€½¹ÍÐÑ…É•Ñ%€ô€œœœ€¬}©Í}ÍÑÉ¥¹œ¡¥¹Ñ•É¹…±}¥¤€¬€œœœì(€½¹ÍÐÑ…É•Ð€ô•Ñ]¥¹‘½ÝÌ ¤¹™¥¹¡Ü€ôøÜ€˜˜MÑÉ¥¹œ¡Ü¹¥¹Ñ•É¹…±%¤¹É•Á±…” ½míõt½œ°€ˆˆ¤€ôôôÑ…É•Ñ%¤ì(€¥˜€ …Ñ…É•Ð¤ì(€€€É•Á½ÉÐ¡í½¬è™…±Í”°•ÉÉ½Èè€‰]¥¹‘½Ü%¹¼±½¹•È•á¥ÍÑÌ¸‰ô¤ì(€ô•±Í”ì(€€€¥˜€¡Ñ…É•Ð¹µ¥¹¥µ¥é•¤Ñ…É•Ð¹µ¥¹¥µ¥é•€ô™…±Í”ì(€€€Ý½É­ÍÁ…”¹…Ñ¥Ù•]¥¹‘½Ü€ôÑ…É•Ðì(€€€É•Á½ÉÐ¡í½¬èÑÉÕ”°Ý¥¹‘½ÜèÉ½Ü¡Ñ…É•Ð¥ô¤ì(€ô(œœœ(€€€•±Í”è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È ‰U¹­¹½Ý¸-]¥¸Ý¥¹‘½Ü…Ñ¥½¸ˆ¤(€€€ÍÉ¥ÁÐ€¬ô€œœœ)ô…Ñ €¡”¤ì(€É•Á½ÉÐ¡í½¬è™…±Í”°•ÉÉ½ÈèMÑÉ¥¹œ¡”¤¹Í±¥” À°€ÌÀÀ¥ô¤ì)ô(œœœ(€€€É•ÑÕÉ¸ÍÉ¥ÁÐ(()±…ÍÌ}I•Á½ÉÑ%¹‰½àè(€€€€ˆˆ‰½ÉÉ•±…Ñ”½¹”µÍ¡½Ð)M=8É•Á½ÉÑÌìµ¥Íµ…Ñ¡•Ñ½­•¹Ì…É”¥¹½É•¸ˆˆˆ((€€€‘•˜}}¥¹¥Ñ}|¡Í•±˜°Ñ½­•¸¤è(€€€€€€€Í•±˜¹Ñ½­•¸€ôÑ½­•¸(€€€€€€€Í•±˜¹Á…å±½…€ô9½¹”(€€€€€€€Í•±˜¹É•…‘ä€ô…±Í”((€€€‘•˜É••¥Ù”¡Í•±˜°É…Ý}Á…å±½…¤è(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡É…Ý}Á…å±½…°ÍÑÈ¤½È±•¸¡É…Ý}Á…å±½…¹•¹½‘” ‰ÕÑ˜´àˆ¤¤€ø5a}IA=IQ}	eQLè(€€€€€€€€€€€É•ÑÕÉ¸…±Í”(€€€€€€€ÑÉäè(€€€€€€€€€€€Á…å±½…€ô©Í½¸¹±½…‘Ì¡É…Ý}Á…å±½…¤(€€€€€€€•á•ÁÐ€¡©Í½¸¹)M=9•½‘•ÉÉ½È°U¹¥½‘•ÉÉ½È¤è(€€€€€€€€€€€É•ÑÕÉ¸…±Í”(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡Á…å±½…°‘¥Ð¤½ÈÁ…å±½…¹•Ð ‰Ñ½­•¸ˆ¤€„ôÍ•±˜¹Ñ½­•¸è(€€€€€€€€€€€É•ÑÕÉ¸…±Í”(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡Á…å±½…¹•Ð ‰½¬ˆ¤°‰½½°¤è(€€€€€€€€€€€Á…å±½…€ôì‰Ñ½­•¸ˆèÍ•±˜¹Ñ½­•¸°€‰½¬ˆè…±Í”°€‰•ÉÉ½Èˆè€‰-]¥¸Í•¹Ð…¸¥¹Ù…±¥É•Á½ÉÐ¸‰ô(€€€€€€€Í•±˜¹Á…å±½…€ôÁ…å±½…(€€€€€€€Í•±˜¹É•…‘ä€ôQÉÕ”(€€€€€€€É•ÑÕÉ¸QÉÕ”(()±…ÍÌ}	ÕÍI•Á½ÉÑ¡…¹¹•°è(€€€€ˆˆ‰M¡½ÉÐµ±¥Ù•µ	ÕÌÍ•ÉÙ¥”Ñ¡…ÐÉ••¥Ù•ÌÉ•Á½ÉÑÌÝ¡¥±”1¥ˆ‘¥ÍÁ…Ñ¡•Ì¸ˆˆˆ((€€€‘•˜}}¥¹¥Ñ}|¡Í•±˜°Ñ½­•¸¤è(€€€€€€€ÑÉäè(€€€€€€€€€€€¥µÁ½ÉÐ‘‰ÕÌ(€€€€€€€€€€€¥µÁ½ÉÐ‘‰ÕÌ¹Í•ÉÙ¥”(€€€€€€€€€€€™É½´‘‰ÕÌ¹µ…¥¹±½½À¹±¥ˆ¥µÁ½ÉÐ	ÕÍ5…¥¹1½½À(€€€€€€€€€€€™É½´¤¹É•Á½Í¥Ñ½Éä¥µÁ½ÉÐ1¥ˆ(€€€€€€€•á•ÁÐ%µÁ½ÉÑÉÉ½È…Ì•ÉÉ½Èè(€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È (€€€€€€€€€€€€€€€€‰AåÑ¡½¸µ	ÕÌ…¹1¥ˆ‰¥¹‘¥¹Ì…É”É•ÅÕ¥É•™½ÈÑ¡”-]¥¸Ý¥¹‘½Ü‰É¥‘”¸ˆ(€€€€€€€€€€€€¤™É½´•ÉÉ½È((€€€€€€€	ÕÍ5…¥¹1½½À¡Í•Ñ}…Í}‘•™…Õ±ÐõQÉÕ”¤(€€€€€€€Í•±˜¹}‘‰ÕÌ€ô‘‰ÕÌ(€€€€€€€Í•±˜¹}±¥ˆ€ô1¥ˆ(€€€€€€€Í•±˜¹¥¹‰½à€ô}I•Á½ÉÑ%¹‰½à¡Ñ½­•¸¤(€€€€€€€Í•±˜¹±½½À€ô1¥ˆ¹5…¥¹1½½À ¤(€€€€€€€Í•±˜¹Í•ÉÙ¥•}¹…µ”€ô€‰½Éœ¹‰ÕÉ¥Ñ¼¹]¥¹‘½ÝÌ¹Hˆ€¬Ñ½­•¸(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹‰ÕÌ€ô‘‰ÕÌ¹M•ÍÍ¥½¹	ÕÌ ¤(€€€€€€€€€€€Í•±˜¹‰ÕÍ}¹…µ”€ô‘‰ÕÌ¹Í•ÉÙ¥”¹	ÕÍ9…µ” (€€€€€€€€€€€€€€€Í•±˜¹Í•ÉÙ¥•}¹…µ”°‰ÕÌõÍ•±˜¹‰ÕÌ°‘½}¹½Ñ}ÅÕ•Õ”õQÉÕ”¤(€€€€€€€•á•ÁÐ‘‰ÕÌ¹	ÕÍá•ÁÑ¥½¸…Ì•ÉÉ½Èè(€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È ‰½Õ±¹½ÐÉ•¥ÍÑ•È	ÕÉ¥Ñ¼ÌÑ•µÁ½É…ÉäÝ¥¹‘½ÜµÉ•ÍÕ±ÐÍ•ÉÙ¥”¸ˆ¤™É½´•ÉÉ½È((€€€€€€€¥¹‰½à€ôÍ•±˜¹¥¹‰½à(€€€€€€€±½½À€ôÍ•±˜¹±½½À((€€€€€€€±…ÍÌI•ÍÕ±ÑI••¥Ù•È¡‘‰ÕÌ¹Í•ÉÙ¥”¹=‰©•Ð¤è(€€€€€€€€€€€‘‰ÕÌ¹Í•ÉÙ¥”¹µ•Ñ¡½ ‰½Éœ¹‰ÕÉ¥Ñ¼¹]¥¹‘½ÝÌˆ°¥¹}Í¥¹…ÑÕÉ”ô‰Ìˆ°½ÕÑ}Í¥¹…ÑÕÉ”ôˆˆ¤(€€€€€€€€€€€‘•˜É•Á½ÉÐ¡Í•±˜°Á…å±½…¤è(€€€€€€€€€€€€€€€¥˜¥¹‰½à¹É••¥Ù”¡ÍÑÈ¡Á…å±½…¤¤è(€€€€€€€€€€€€€€€€€€€±½½À¹ÅÕ¥Ð ¤((€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹É••¥Ù•È€ôI•ÍÕ±ÑI••¥Ù•È¡Í•±˜¹‰ÕÍ}¹…µ”°€ˆ¼ˆ¤(€€€€€€€•á•ÁÐá•ÁÑ¥½¸è(€€€€€€€€€€€Í•±˜¹‰ÕÍ}¹…µ”¹É•±•…Í” ¤(€€€€€€€€€€€É…¥Í”((€€€‘•˜Ý…¥Ð¡Í•±˜°Ñ¥µ•½ÕÐ¤è(€€€€€€€¥˜Í•±˜¹¥¹‰½à¹É•…‘äè(€€€€€€€€€€€É•ÑÕÉ¸Í•±˜¹¥¹‰½à¹Á…å±½…(€€€€€€€¥˜Ñ¥µ•½ÕÐ€ðô€Àè(€€€€€€€€€€€É•ÑÕÉ¸9½¹”((€€€€€€€‘•˜½¹}Ñ¥µ•½ÕÐ ¤è(€€€€€€€€€€€Í•±˜¹±½½À¹ÅÕ¥Ð ¤(€€€€€€€€€€€É•ÑÕÉ¸…±Í”((€€€€€€€Ñ¥µ•É}¥€ôÍ•±˜¹}±¥ˆ¹Ñ¥µ•½ÕÑ}…‘¡µ…à Ä°¥¹Ð¡Ñ¥µ•½ÕÐ€¨€ÄÀÀÀ¤¤°½¹}Ñ¥µ•½ÕÐ¤(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹±½½À¹ÉÕ¸ ¤(€€€€€€€™¥¹…±±äè(€€€€€€€€€€€ÑÉäè(€€€€€€€€€€€€€€€Í•±˜¹}±¥ˆ¹Í½ÕÉ•}É•µ½Ù”¡Ñ¥µ•É}¥¤(€€€€€€€€€€€•á•ÁÐá•ÁÑ¥½¸è(€€€€€€€€€€€€€€€Á…ÍÌ(€€€€€€€É•ÑÕÉ¸Í•±˜¹¥¹‰½à¹Á…å±½…¥˜Í•±˜¹¥¹‰½à¹É•…‘ä•±Í”9½¹”((€€€‘•˜±½Í”¡Í•±˜¤è(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹É••¥Ù•È¹É•µ½Ù•}™É½µ}½¹¹•Ñ¥½¸ ¤(€€€€€€€•á•ÁÐá•ÁÑ¥½¸è(€€€€€€€€€€€Á…ÍÌ(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹‰ÕÍ}¹…µ”¹É•±•…Í” ¤(€€€€€€€•á•ÁÐá•ÁÑ¥½¸è(€€€€€€€€€€€Á…ÍÌ(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹‰ÕÌ¹±½Í” ¤(€€€€€€€•á•ÁÐá•ÁÑ¥½¸è(€€€€€€€€€€€Á…ÍÌ(()±…ÍÌ}-]¥¹	ÕÌè(€€€‘•˜}}¥¹¥Ñ}|¡Í•±˜°‘‰ÕÍ}Í•¹¤è(€€€€€€€Í•±˜¹‘‰ÕÍ}Í•¹€ô‘‰ÕÍ}Í•¹((€€€‘•˜}…±°¡Í•±˜°Á…Ñ °¥¹Ñ•É™…”°µ•Ñ¡½°…ÉÕµ•¹ÑÌô ¤°Ñ¥µ•½ÕÐôÈ¸À°(€€€€€€€€€€€€€ÁÉ¥¹Ñ}É•Á±äõQÉÕ”¤è(€€€€€€€½µµ…¹€ômÍ•±˜¹‘‰ÕÍ}Í•¹°€ˆ´µÍ•ÍÍ¥½¸‰t(€€€€€€€¥˜ÁÉ¥¹Ñ}É•Á±äè(€€€€€€€€€€€½µµ…¹¹…ÁÁ•¹ ˆ´µÁÉ¥¹ÐµÉ•Á±äõ±¥Ñ•É…°ˆ¤(€€€€€€€½µµ…¹¹•áÑ•¹¡lˆ´µ‘•ÍÐõ½Éœ¹­‘”¹-]¥¸ˆ°Á…Ñ °¥¹Ñ•É™…”€¬€ˆ¸ˆ€¬µ•Ñ¡½‘t¤(€€€€€€€½µµ…¹¹•áÑ•¹ ‰ÍÑÉ¥¹œèˆ€¬ÍÑÈ¡…ÉÕµ•¹Ð¤™½È…ÉÕµ•¹Ð¥¸…ÉÕµ•¹ÑÌ¤(€€€€€€€ÑÉäè(€€€€€€€€€€€É•ÍÕ±Ð€ôÍÕ‰ÁÉ½•ÍÌ¹ÉÕ¸¡½µµ…¹°…ÁÑÕÉ•}½ÕÑÁÕÐõQÉÕ”°Ñ•áÐõQÉÕ”°(€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€€Ñ¥µ•½ÕÐõµ…à À¸Ä°Ñ¥µ•½ÕÐ¤°¡•¬õ…±Í”¤(€€€€€€€•á•ÁÐÍÕ‰ÁÉ½•ÍÌ¹Q¥µ•½ÕÑáÁ¥É•…Ì•ÉÉ½Èè(€€€€€€€€€€€É…¥Í”-]¥¹	ÕÍÉÉ½È ‰µ	ÕÌ…±°Ñ¼-]¥¸Ñ¥µ•½ÕÐ¸ˆ¤™É½´•ÉÉ½È(€€€€€€€¥˜É•ÍÕ±Ð¹É•ÑÕÉ¹½‘”è(€€€€€€€€€€€‘•Ñ…¥°€ô€¡É•ÍÕ±Ð¹ÍÑ‘•ÉÈ½ÈÉ•ÍÕ±Ð¹ÍÑ‘½ÕÐ¤¹ÍÑÉ¥À ¥lèÌÀÁt(€€€€€€€€€€€É…¥Í”-]¥¹	ÕÍÉÉ½È¡‘•Ñ…¥°½È€‰µ	ÕÌ…±°Ñ¼-]¥¸™…¥±•¸ˆ¤(€€€€€€€É•ÑÕÉ¸É•ÍÕ±Ð¹ÍÑ‘½ÕÐ¹ÍÑÉ¥À ¤((€€€‘•˜Õ¹±½…¡Í•±˜°ÍÉ¥ÁÑ}¹…µ”°Ñ¥µ•½ÕÐôÄ¸À¤è(€€€€€€€Í•±˜¹}…±° ˆ½MÉ¥ÁÑ¥¹œˆ°€‰½Éœ¹­‘”¹­Ý¥¸¹MÉ¥ÁÑ¥¹œˆ°€‰Õ¹±½…‘MÉ¥ÁÐˆ°(€€€€€€€€€€€€€€€€€€€¡ÍÉ¥ÁÑ}¹…µ”°¤°Ñ¥µ•½ÕÐõÑ¥µ•½ÕÐ¤((€€€‘•˜±½…¡Í•±˜°ÍÉ¥ÁÑ}Á…Ñ °ÍÉ¥ÁÑ}¹…µ”°Ñ¥µ•½ÕÐôÈ¸À¤è(€€€€€€€É•Á±ä€ôÍ•±˜¹}…±° ˆ½MÉ¥ÁÑ¥¹œˆ°€‰½Éœ¹­‘”¹­Ý¥¸¹MÉ¥ÁÑ¥¹œˆ°€‰±½…‘MÉ¥ÁÐˆ°(€€€€€€€€€€€€€€€€€€€€€€€€€€€¡ÍÉ¥ÁÑ}Á…Ñ °ÍÉ¥ÁÑ}¹…µ”¤°Ñ¥µ•½ÕÐõÑ¥µ•½ÕÐ¤(€€€€€€€µ…Ñ €ôÉ”¹Í•…É ¡È‰q‰¥¹ÐÌÉqÌ¬ ´ýq¬¤ˆ°É•Á±ä¤(€€€€€€€¥˜¹½Ðµ…Ñ è(€€€€€€€€€€€µ…Ñ €ôÉ”¹Í•…É ¡Èˆ üð…qL¤ ´ýq¬¤ ü…qL¤ˆ°É•Á±ä¤(€€€€€€€¥˜¹½Ðµ…Ñ è(€€€€€€€€€€€É…¥Í”-]¥¹	ÕÍÉÉ½È ‰-]¥¸É•ÑÕÉ¹•¹¼ÍÉ¥ÁÐ%™É½´±½…‘MÉ¥ÁÐ ¤¸ˆ¤(€€€€€€€É•ÑÕÉ¸¥¹Ð¡µ…Ñ ¹É½ÕÀ Ä¤¤((€€€‘•˜ÉÕ¸¡Í•±˜°ÍÉ¥ÁÑ}¥°Ñ¥µ•½ÕÐôÈ¸À¤è(€€€€€€€ÑÉäè(€€€€€€€€€€€Í•±˜¹}…±°¡˜ˆ½MÉ¥ÁÑ¥¹œ½MÉ¥ÁÑíÍÉ¥ÁÑ}¥‘ôˆ°€‰½Éœ¹­‘”¹­Ý¥¸¹MÉ¥ÁÐˆ°(€€€€€€€€€€€€€€€€€€€€€€€‰ÉÕ¸ˆ°Ñ¥µ•½ÕÐõÑ¥µ•½ÕÐ¤(€€€€€€€€€€€É•ÑÕÉ¸€‰Á±…Íµ„Øˆ(€€€€€€€•á•ÁÐ-]¥¹	ÕÍÉÉ½È…Ì•ÉÉ½Èè(€€€€€€€€€€€‘•Ñ…¥°€ôÍÑÈ¡•ÉÉ½È¤¹…Í•™½± ¤(€€€€€€€€€€€¥˜¹½Ð…¹ä¡µ…É­•È¥¸‘•Ñ…¥°™½Èµ…É­•È¥¸(€€€€€€€€€€€€€€€€€€€€€€€ ‰Õ¹­¹½Ý¹½‰©•Ðˆ°€‰Õ¹­¹½Ý¸½‰©•Ðˆ°€‰¹¼ÍÕ ½‰©•Ðˆ¤¤è(€€€€€€€€€€€€€€€É…¥Í”(€€€€€€€€€€€Í•±˜¹}…±°¡˜ˆ½íÍÉ¥ÁÑ}¥‘ôˆ°€‰½Éœ¹­‘”¹­Ý¥¸¹MÉ¥ÁÐˆ°€‰ÉÕ¸ˆ°(€€€€€€€€€€€€€€€€€€€€€€Ñ¥µ•½ÕÐõÑ¥µ•½ÕÐ¤(€€€€€€€€€€€É•ÑÕÉ¸€‰Á±…Íµ„Ôµ™…±±‰…¬ˆ(()‘•˜}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¤è(€€€É•ÑÕÉ¸€¡˜‰±½…‘•‘}¥õíÍÑ…•l±½…‘•‘}¥uô°ÉÕ¹}…±±•õíÍÑÈ¡ÍÑ…•lÉÕ¹}…±±•t¤¹±½Ý•È ¥ô°€ˆ(€€€€€€€€€€€˜‰É•Á½ÉÑ}É••¥Ù•õíÍÑÈ¡ÍÑ…•lÉ•Á½ÉÑ}É••¥Ù•t¤¹±½Ý•È ¥ôˆ¤(()‘•˜}Á•É™½Éµ}É•ÅÕ•ÍÐ¡…Ñ¥½¸°Ñ½­•¸°ÍÉ¥ÁÑ}¹…µ”°ÍÉ¥ÁÑ}Á…Ñ °ÑÉ…¹ÍÁ½ÉÐ°¡…¹¹•°°(€€€€€€€€€€€€€€€€€€€€¥¹Ñ•É¹…±}¥õ9½¹”°Ñ¥µ•½ÕÐõU1Q}Q%5=UP°±½¬õÑ¥µ”¹µ½¹½Ñ½¹¥Œ¤è(€€€€ˆˆ‰IÕ¸Ñ¡”±¥™•å±”……¥¹ÍÐ¥¹©•Ñ•ÑÉ…¹ÍÁ½ÉÐ½¡…¹¹•°¥¹Ñ•É™…•Ì¸ˆˆˆ(€€€‘•…‘±¥¹”€ô±½¬ ¤€¬Ñ¥µ•½ÕÐ(€€€ÍÑ…”€ôì‰±½…‘•‘}¥ˆè9½¹”°€‰ÉÕ¹}…±±•ˆè…±Í”°€‰É•Á½ÉÑ}É••¥Ù•ˆè…±Í•ô(€€€ÁÉ¥µ…Éå}•ÉÉ½È€ô9½¹”(€€€É•ÍÕ±Ð€ô9½¹”((€€€‘•˜É•µ…¥¹¥¹œ ¤è(€€€€€€€Ù…±Õ”€ô‘•…‘±¥¹”€´±½¬ ¤(€€€€€€€¥˜Ù…±Õ”€ðô€Àè(€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È¡˜‰-]¥¸Ý¥¹‘½ÜÉ•ÅÕ•ÍÐÑ¥µ•½ÕÐ€¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ¤(€€€€€€€É•ÑÕÉ¸Ù…±Õ”((€€€ÑÉäè(€€€€€€€ÑÉ…¹ÍÁ½ÉÐ¹Õ¹±½…¡ÍÉ¥ÁÑ}¹…µ”°Ñ¥µ•½ÕÐõµ¥¸ Ä¸À°É•µ…¥¹¥¹œ ¤¤¤(€€€€€€€ÍÑ…•l‰±½…‘•‘}¥‰t€ôÑÉ…¹ÍÁ½ÉÐ¹±½…¡ÍÉ¥ÁÑ}Á…Ñ °ÍÉ¥ÁÑ}¹…µ”°Ñ¥µ•½ÕÐõÉ•µ…¥¹¥¹œ ¤¤(€€€€€€€¥˜ÍÑ…•l‰±½…‘•‘}¥‰t€ð€Àè(€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È (€€€€€€€€€€€€€€€˜‰-]¥¸É•©•Ñ•Ñ¡”Ñ•µÁ½É…ÉäÍÉ¥ÁÐÝ¥Ñ ±½…¥íÍÑ…•l±½…‘•‘}¥uô€ˆ(€€€€€€€€€€€€€€€˜ˆ¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ¤(€€€€€€€ÍÑ…•l‰ÉÕ¹}…±±•‰t€ôQÉÕ”(€€€€€€€ÑÉ…¹ÍÁ½ÉÐ¹ÉÕ¸¡ÍÑ…•l‰±½…‘•‘}¥‰t°Ñ¥µ•½ÕÐõÉ•µ…¥¹¥¹œ ¤¤((€€€€€€€Ý¡¥±”QÉÕ”è(€€€€€€€€€€€É•Á½ÉÐ€ô¡…¹¹•°¹Ý…¥Ð¡É•µ…¥¹¥¹œ ¤¤(€€€€€€€€€€€¥˜É•Á½ÉÐ¥Ì9½¹”è(€€€€€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È¡˜‰-]¥¸Ý¥¹‘½ÜÉ•ÅÕ•ÍÐÑ¥µ•½ÕÐ€¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ¤(€€€€€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡É•Á½ÉÐ°‘¥Ð¤½ÈÉ•Á½ÉÐ¹•Ð ‰Ñ½­•¸ˆ¤€„ôÑ½­•¸è(€€€€€€€€€€€€€€€½¹Ñ¥¹Õ”(€€€€€€€€€€€ÍÑ…•l‰É•Á½ÉÑ}É••¥Ù•‰t€ôQÉÕ”(€€€€€€€€€€€É•ÍÕ±Ð€ôÉ•Á½ÉÐ(€€€€€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡É•Á½ÉÐ¹•Ð ‰½¬ˆ¤°‰½½°¤è(€€€€€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È (€€€€€€€€€€€€€€€€€€€˜‰-]¥¸É•ÑÕÉ¹•…¸¥¹Ù…±¥É•Á½ÉÐ€¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ¤(€€€€€€€€€€€¥˜¹½ÐÉ•Á½ÉÑl‰½¬‰tè(€€€€€€€€€€€€€€€‘•Ñ…¥°€ôÍÑÈ¡É•Á½ÉÐ¹•Ð ‰•ÉÉ½Èˆ°€‰-]¥¸ÍÉ¥ÁÐÉ•Á½ÉÑ•™…¥±ÕÉ”¸ˆ¤¥lèÌÀÁt(€€€€€€€€€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È¡˜‰í‘•Ñ…¥±ô€¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ¤(€€€€€€€€€€€‰É•…¬(€€€•á•ÁÐá•ÁÑ¥½¸…Ì•ÉÉ½Èè(€€€€€€€ÁÉ¥µ…Éå}•ÉÉ½È€ô•ÉÉ½È(€€€™¥¹…±±äè(€€€€€€€ÑÉäè(€€€€€€€€€€€ÑÉ…¹ÍÁ½ÉÐ¹Õ¹±½…¡ÍÉ¥ÁÑ}¹…µ”°Ñ¥µ•½ÕÐôÄ¸À¤(€€€€€€€•á•ÁÐá•ÁÑ¥½¸…Ì±•…¹ÕÁ}•ÉÉ½Èè(€€€€€€€€€€€¥˜ÁÉ¥µ…Éå}•ÉÉ½È¥Ì9½¹”è(€€€€€€€€€€€€€€€ÁÉ¥µ…Éå}•ÉÉ½È€ô]¥¹‘½Ý	É¥‘•ÉÉ½È (€€€€€€€€€€€€€€€€€€€˜‰-]¥¸É•ÑÕÉ¹•„É•ÍÕ±Ð‰ÕÐÕ¹±½…‘MÉ¥ÁÐ ¤±•…¹ÕÀ™…¥±•èíÍÑÈ¡±•…¹ÕÁ}•ÉÉ½È¥lèÌÀÁuô€ˆ(€€€€€€€€€€€€€€€€€€€˜ˆ¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ¤((€€€¥˜ÁÉ¥µ…Éå}•ÉÉ½È¥Ì¹½Ð9½¹”è(€€€€€€€¥˜¥Í¥¹ÍÑ…¹”¡ÁÉ¥µ…Éå}•ÉÉ½È°]¥¹‘½Ý	É¥‘•ÉÉ½È¤è(€€€€€€€€€€€É…¥Í”ÁÉ¥µ…Éå}•ÉÉ½È(€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È (€€€€€€€€€€€˜‰-]¥¸É•ÅÕ•ÍÐ™…¥±•èíÍÑÈ¡ÁÉ¥µ…Éå}•ÉÉ½È¥lèÌÀÁuô€¡í}ÍÑ…•}Ñ•áÐ¡ÍÑ…”¥ô¤¸ˆ(€€€€€€€€¤™É½´ÁÉ¥µ…Éå}•ÉÉ½È(€€€É•ÑÕÉ¸É•ÍÕ±Ð(()‘•˜}É•ÅÕ•ÍÐ¡…Ñ¥½¸°¥¹Ñ•É¹…±}¥õ9½¹”°Ñ¥µ•½ÕÐõU1Q}Q%5=UP¤è(€€€Í•ÍÍ¥½¹}ÑåÁ”€ô½Ì¹•¹Ù¥É½¸¹•Ð ‰a}MMM%=9}QeAˆ¤(€€€¥˜Í•ÍÍ¥½¹}ÑåÁ”…¹Í•ÍÍ¥½¹}ÑåÁ”€„ô€‰Ý…å±…¹ˆè(€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È ‰Q¡”-]¥¸Ý¥¹‘½Ü‰É¥‘”ÕÉÉ•¹Ñ±äÉ•ÅÕ¥É•Ì„-]…å±…¹Í•ÍÍ¥½¸¸ˆ¤(€€€‘‰ÕÍ}Í•¹€ôÍ¡ÕÑ¥°¹Ý¡¥  ‰‘‰ÕÌµÍ•¹ˆ¤(€€€¥˜¹½Ð‘‰ÕÍ}Í•¹è(€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È ‰‘‰ÕÌµÍ•¹¥ÌÉ•ÅÕ¥É•™½ÈÑ¡”-Ý¥¹‘½Ü‰É¥‘”¸ˆ¤((€€€Ñ½­•¸€ôÕÕ¥¹ÕÕ¥Ð ¤¹¡•à(€€€ÍÉ¥ÁÑ}¹…µ”€ô€‰‰ÕÉ¥Ñ¼µ½¹”´ˆ€¬Ñ½­•¸(€€€¡…¹¹•°€ô}	ÕÍI•Á½ÉÑ¡…¹¹•°¡Ñ½­•¸¤(€€€ÑÉäè(€€€€€€€Ý¥Ñ Ñ•µÁ™¥±”¹Q•µÁ½É…Éå¥É•Ñ½Éä¡ÁÉ•™¥àô‰‰ÕÉ¥Ñ¼µ­Ý¥¸´ˆ¤…Ì‘¥É•Ñ½Éäè(€€€€€€€€€€€½Ì¹¡µ½¡‘¥É•Ñ½Éä°€Á¼ÜÀÀ¤(€€€€€€€€€€€ÍÉ¥ÁÑ}Á…Ñ €ôA…Ñ ¡‘¥É•Ñ½Éä¤€¼€‰µ…¥¸¹©Ìˆ(€€€€€€€€€€€ÍÉ¥ÁÑ}Á…Ñ ¹ÝÉ¥Ñ•}Ñ•áÐ (€€€€€€€€€€€€€€€}­Ý¥¹}ÍÉ¥ÁÐ¡…Ñ¥½¸°Ñ½­•¸°¡…¹¹•°¹Í•ÉÙ¥•}¹…µ”°¥¹Ñ•É¹…±}¥¤°(€€€€€€€€€€€€€€€•¹½‘¥¹œô‰ÕÑ˜´àˆ¤(€€€€€€€€€€€É•ÑÕÉ¸}Á•É™½Éµ}É•ÅÕ•ÍÐ (€€€€€€€€€€€€€€€…Ñ¥½¸°Ñ½­•¸°ÍÉ¥ÁÑ}¹…µ”°ÍÑÈ¡ÍÉ¥ÁÑ}Á…Ñ ¤°}-]¥¹	ÕÌ¡‘‰ÕÍ}Í•¹¤°(€€€€€€€€€€€€€€€¡…¹¹•°°¥¹Ñ•É¹…±}¥õ¥¹Ñ•É¹…±}¥°Ñ¥µ•½ÕÐõÑ¥µ•½ÕÐ¤(€€€™¥¹…±±äè(€€€€€€€¡…¹¹•°¹±½Í” ¤(()‘•˜±¥ÍÑ}Ý¥¹‘½ÝÌ ¤è(€€€€ˆˆ‰I•ÑÕÉ¸„ÑÉ…¹Í¥•¹ÐÍ¹…ÁÍ¡½Ðì…ÁÑ¥½¹Ì…É”¹½ÐÝÉ¥ÑÑ•¸Ñ¼±½Ì½ÈÍÑ½É…”¸ˆˆˆ(€€€É•ÍÕ±Ð€ô}É•ÅÕ•ÍÐ ‰±¥ÍÐˆ¤(€€€Ý¥¹‘½ÝÌ€ôÉ•ÍÕ±Ð¹•Ð ‰Ý¥¹‘½ÝÌˆ¤(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡Ý¥¹‘½ÝÌ°±¥ÍÐ¤è(€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È ‰-]¥¸É•ÑÕÉ¹•„Ý¥¹‘½ÜÉ•Á½ÉÐÝ¥Ñ¡½ÕÐ„Ý¥¹‘½ÝÌ±¥ÍÐ¸ˆ¤(€€€É•ÑÕÉ¸ì(€€€€€€€€‰Ý¥¹‘½ÝÌˆèÝ¥¹‘½ÝÌ°(€€€€€€€€‰Í½Á”ˆè€‰ÕÉÉ•¹Ð-]¥¸µµ…¹…•…ÁÁ±¥…Ñ¥½¸Ý¥¹‘½ÝÌì…ÁÑ¥½¹Ì…É”É•ÑÕÉ¹•½¹±ä™½ÈÑ¡¥ÌÉ•ÅÕ•ÍÐ¸ˆ°(€€€€€€€€‰¹½Ñ”ˆè€‰µ¥ÍÍ¥¹œÝ¥¹‘½Ü…¸µ•…¸Ñ¡”…ÁÀ¡…Ì¹¼-]¥¸µµ…¹…•Ý¥¹‘½Ü°¥¹±Õ‘¥¹œÑÉ…äµ½¹±ä½È‰…­É½Õ¹…ÁÁÌì¥Ð‘½•Ì¹½ÐÁÉ½Ù”Ñ¡”ÁÉ½•ÍÌ¥ÌÍÑ½ÁÁ•¸ˆ°(€€€ô(()‘•˜™½ÕÍ}Ý¥¹‘½Ü¡¥¹Ñ•É¹…±}¥¤è(€€€€ˆˆ‰½ÕÌ½¹”•á…Ð-]¥¸Ý¥¹‘½Ü¸…±±•È•¹™½É•Ì•áÁ±¥¥Ð½Ý¹•È…ÁÁÉ½Ù…°¸ˆˆˆ(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡¥¹Ñ•É¹…±}¥°ÍÑÈ¤½È¹½Ð]%9=]}%¹™Õ±±µ…Ñ ¡¥¹Ñ•É¹…±}¥¤è(€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È ‰%¹Ù…±¥¥¹Ñ•É¹…°Ý¥¹‘½Ü%ì±¥ÍÐÝ¥¹‘½ÝÌ……¥¸¸ˆ¤(€€€É•ÍÕ±Ð€ô}É•ÅÕ•ÍÐ ‰™½ÕÌˆ°¥¹Ñ•É¹…±}¥õ¥¹Ñ•É¹…±}¥¤(€€€Ý¥¹‘½Ü€ôÉ•ÍÕ±Ð¹•Ð ‰Ý¥¹‘½Üˆ¤(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡Ý¥¹‘½Ü°‘¥Ð¤½ÈÝ¥¹‘½Ü¹•Ð ‰¥¹Ñ•É¹…±%ˆ¤€„ô¥¹Ñ•É¹…±}¥è(€€€€€€€É…¥Í”]¥¹‘½Ý	É¥‘•ÉÉ½È ‰-]¥¸‘¥¹½Ð½¹™¥É´™½ÕÌ™½ÈÑ¡”É•ÅÕ•ÍÑ•Ý¥¹‘½Ü%¸ˆ¤(€€€É•ÑÕÉ¸ì‰ÍÑ…ÑÕÌˆè€‰™½ÕÍ•ˆ°€‰Ý¥¹‘½ÜˆèÝ¥¹‘½Ýô(()‘•˜™½ÕÍ}…¹‘}É•…‘}Ý¥¹‘½Ü¡¥¹Ñ•É¹…±}¥¤è(€€€€ˆˆ‰½ÕÌ½¹”…ÁÁÉ½Ù•Ý¥¹‘½Ü°Ñ¡•¸ÕÍ”Ñ¡”Í•Á…É…Ñ”…ÁÁÉ½Ù•±½…°=HÁ…Ñ ¸ˆˆˆ(€€€™É½´€¹…•ÍÌ¥µÁ½ÉÐÉ•…‘}ÍÉ••¹}Ñ•áÐ(€€€™½ÕÍ•€ô™½ÕÍ}Ý¥¹‘½Ü¡¥¹Ñ•É¹…±}¥¤(€€€…ÁÑÕÉ”€ôÉ•…‘}ÍÉ••¹}Ñ•áÐ ‰…Ñ¥Ù•}Ý¥¹‘½Üˆ¤(€€€€ŒAÉ•Í•ÉÙ”½½É‘¥¹…Ñ•Ì‰•Í¥‘”=HÑ•áÐÝ¡¥±”­••Á¥¹œÑ¡”Ñ½½°É•ÍÕ±ÐÍµ…±°(€€€€Œ•¹½Õ Ñ¼ÍÕÉÙ¥Ù”Ù”½¹Ñ•áÐ½µÁ…Ñ¥½¸¸(€€€Í½ÕÉ•}±¥¹•Ì€ô…ÁÑÕÉ”¹•Ð ±¥¹•Ìœ°mt¤(€€€‰½Õ¹‘•‘}±¥¹•Ì°É•µ…¥¹¥¹œ€ômt°€ÔÀÀÀ(€€€™½ÈÍ½ÕÉ”¥¸Í½ÕÉ•}±¥¹•ÍlèØÁtè(€€€€€€€Ñ•áÐ€ôÍÑÈ¡Í½ÕÉ”¹•Ð Ñ•áÐœ°€œœ¤¥léÉ•µ…¥¹¥¹t(€€€€€€€‰½Õ¹‘•‘}±¥¹•Ì¹…ÁÁ•¹¡ì(€€€€€€€€€€€€á}Á•É•¹ÐœèÍ½ÕÉ”¹•Ð á}Á•É•¹Ðœ¤°(€€€€€€€€€€€€å}Á•É•¹ÐœèÍ½ÕÉ”¹•Ð å}Á•É•¹Ðœ¤°(€€€€€€€€€€€€Ñ•áÐœèÑ•áÐ°(€€€€€€€ô¤(€€€€€€€É•µ…¥¹¥¹œ€´ô±•¸¡Ñ•áÐ¤(€€€€€€€¥˜É•µ…¥¹¥¹œ€ðô€Àè(€€€€€€€€€€€‰É•…¬(€€€…ÁÑÕÉ•l±¥¹•Ìt€ô‰½Õ¹‘•‘}±¥¹•Ì(€€€€ŒAÉ•Í•ÉÙ”Ñ¡”Íµ…±°Ñ½ÀÍÑÉ¥ÀÍ•Á…É…Ñ•±äÍ¼Ñ…ˆµ‰…ÈÅÕ•ÍÑ¥½¹Ì‘¼¹½Ð¹••(€€€€ŒÑ¼¥¹™•È±…‰•±Ì™É½´Á…”Ñ•áÐ¸Q¡•Í”É•µ…¥¸=H…¹‘¥‘…Ñ•Ì°¹½ÐÙ•É¥™¥•Ñ…‰Ì¸(€€€…ÁÑÕÉ•lÑ…‰}ÍÑÉ¥Á}…¹‘¥‘…Ñ•}±¥¹•Ìt€ôl(€€€€€€€ìá}Á•É•¹Ðœè±¥¹”¹•Ð á}Á•É•¹Ðœ¤°€å}Á•É•¹Ðœè±¥¹”¹•Ð å}Á•É•¹Ðœ¤°(€€€€€€€€€Ñ•áÐœèÍÑÈ¡±¥¹”¹•Ð Ñ•áÐœ°€œœ¤¥lèÌÀÁuô(€€€€€€€™½È±¥¹”¥¸Í½ÕÉ•}±¥¹•Ì(€€€€€€€¥˜¥Í¥¹ÍÑ…¹”¡±¥¹”°‘¥Ð¤(€€€€€€€…¹¥Í¥¹ÍÑ…¹”¡±¥¹”¹•Ð å}Á•É•¹Ðœ¤°±¥ÍÐ¤(€€€€€€€…¹±•¸¡±¥¹•lå}Á•É•¹Ðt¤€ôô€È(€€€€€€€…¹¥Í¥¹ÍÑ…¹”¡±¥¹•lå}Á•É•¹ÐulÁt°€¡¥¹Ð°™±½…Ð¤¤(€€€€€€€…¹±¥¹•lå}Á•É•¹ÐulÁt€ðô€ÄÔ(€€€ulèÌÁt(€€€…ÁÑÕÉ•lÑ½Ñ…±}±¥¹•}½Õ¹Ðt€ô±•¸¡Í½ÕÉ•}±¥¹•Ì¤(€€€…ÁÑÕÉ•lÑÉÕ¹…Ñ•t€ô…ÁÑÕÉ”¹•Ð ÑÉÕ¹…Ñ•œ°…±Í”¤½È±•¸¡‰½Õ¹‘•‘}±¥¹•Ì¤€ð±•¸¡Í½ÕÉ•}±¥¹•Ì¤(€€€…ÁÑÕÉ”¹Á½À µ•Ñ¡½œ°9½¹”¤(€€€…ÁÑÕÉ”¹Á½À ¹½Ñ”œ°9½¹”¤(€€€É•ÑÕÉ¸ì‰ÍÑ…ÑÕÌˆè€‰™½ÕÍ•‘}…¹‘}…ÁÑÕÉ•ˆ°€‰Ý¥¹‘½Üˆè™½ÕÍ•‘l‰Ý¥¹‘½Ü‰t°(€€€€€€€€€€€€‰…ÁÑÕÉ”ˆè…ÁÑÕÉ•ô(
+"""On-demand KWin window snapshots and approval-gated focus requests."""
+
+import json
+import os
+from pathlib import Path
+import re
+import shutil
+import subprocess
+import tempfile
+import time
+import uuid
+
+
+WINDOW_ID = re.compile(r"^[0-9a-fA-F-]{36}$")
+MAX_REPORT_BYTES = 256_000
+DEFAULT_TIMEOUT = 5.0
+
+
+class WindowBridgeError(ValueError):
+    """A KWin request failed, with its completed stages included in the message."""
+
+
+class KWinDBusError(WindowBridgeError):
+    pass
+
+
+def _js_string(value):
+    return json.dumps(str(value), ensure_ascii=True)
+
+
+def _kwin_script(action, token, result_service, internal_id=None):
+    """Build a one-shot script that reports results through the private D-Bus service."""
+    encoded_token = _js_string(token)
+    encoded_service = _js_string(result_service)
+    script = '''
+function report(result) {
+  result.token = TOKEN;
+  callDBus(SERVICE, "/", "org.burito.Windows", "report", JSON.stringify(result), function() {});
+}
+function getWindows() {
+  if (typeof workspace.windowList === "function") return workspace.windowList();
+  if (typeof workspace.clientList === "function") return workspace.clientList();
+  throw new Error("KWin exposes neither workspace.windowList() nor clientList().");
+}
+function row(w) {
+  let desktop = null;
+  try {
+    if (w.desktop) desktop = String(w.desktop.name || w.desktop.id || w.desktop);
+  } catch (e) {}
+  return {
+    internalId: String(w.internalId).replace(/[{}]/g, ""),
+    resourceClass: String(w.resourceClass || w.resourceName || ""),
+    caption: String(w.caption || "").slice(0, 300),
+    desktop: desktop,
+    minimized: !!w.minimized,
+    onCurrentDesktop: !!w.onCurrentDesktop,
+    active: !!w.active
+  };
+}
+const TOKEN = ''' + encoded_token + ''';
+const SERVICE = ''' + encoded_service + ''';
+try {
+'''
+    if action == "list":
+        script += '''
+  const windows = getWindows().filter(w => !!w).map(row);
+  report({ok: true, windows: windows.slice(-100)});
+'''
+    elif action == "focus":
+        script += '''
+  const targetId = ''' + _js_string(internal_id) + ''';
+  const target = getWindows().find(w => w && String(w.internalId).replace(/[{}]/g, "") === targetId);
+  if (!target) {
+    report({ok: false, error: "Window ID no longer exists."});
+  } else {
+    if (target.minimized) target.minimized = false;
+    workspace.activeWindow = target;
+    report({ok: true, window: row(target)});
+  }
+'''
+    else:
+        raise ValueError("Unknown KWin window action")
+    script += '''
+} catch (e) {
+  report({ok: false, error: String(e).slice(0, 300)});
+}
+'''
+    return script
+
+
+class _ReportInbox:
+    """Correlate one-shot JSON reports; mismatched tokens are ignored."""
+
+    def __init__(self, token):
+        self.token = token
+        self.payload = None
+        self.ready = False
+
+    def receive(self, raw_payload):
+        if not isinstance(raw_payload, str) or len(raw_payload.encode("utf-8")) > MAX_REPORT_BYTES:
+            return False
+        try:
+            payload = json.loads(raw_payload)
+        except (json.JSONDecodeError, UnicodeError):
+            return False
+        if not isinstance(payload, dict) or payload.get("token") != self.token:
+            return False
+        if not isinstance(payload.get("ok"), bool):
+            payload = {"token": self.token, "ok": False, "error": "KWin sent an invalid report."}
+        self.payload = payload
+        self.ready = True
+        return True
+
+
+class _DBusReportChannel:
+    """Short-lived D-Bus service that receives reports while GLib dispatches."""
+
+    def __init__(self, token):
+        try:
+            import dbus
+            import dbus.service
+            from dbus.mainloop.glib import DBusGMainLoop
+            from gi.repository import GLib
+        except ImportError as error:
+            raise WindowBridgeError(
+                "Python D-Bus and GLib bindings are required for the KWin window bridge."
+            ) from error
+
+        DBusGMainLoop(set_as_default=True)
+        self._dbus = dbus
+        self._glib = GLib
+        self.inbox = _ReportInbox(token)
+        self.loop = GLib.MainLoop()
+        self.service_name = "org.burito.Windows.R" + token
+        try:
+            self.bus = dbus.SessionBus()
+            self.bus_name = dbus.service.BusName(
+                self.service_name, bus=self.bus, do_not_queue=True)
+        except dbus.DBusException as error:
+            raise WindowBridgeError("Could not register Burito's temporary window-result service.") from error
+
+        inbox = self.inbox
+        loop = self.loop
+
+        class ResultReceiver(dbus.service.Object):
+            @dbus.service.method("org.burito.Windows", in_signature="s", out_signature="")
+            def report(self, payload):
+                if inbox.receive(str(payload)):
+                    loop.quit()
+
+        try:
+            self.receiver = ResultReceiver(self.bus_name, "/")
+        except Exception:
+            self.bus_name.release()
+            raise
+
+    def wait(self, timeout):
+        if self.inbox.ready:
+            return self.inbox.payload
+        if timeout <= 0:
+            return None
+
+        def on_timeout():
+            self.loop.quit()
+            return False
+
+        timer_id = self._glib.timeout_add(max(1, int(timeout * 1000)), on_timeout)
+        try:
+            self.loop.run()
+        finally:
+            try:
+                self._glib.source_remove(timer_id)
+            except Exception:
+                pass
+        return self.inbox.payload if self.inbox.ready else None
+
+    def close(self):
+        try:
+            self.receiver.remove_from_connection()
+        except Exception:
+            pass
+        try:
+            self.bus_name.release()
+        except Exception:
+            pass
+        try:
+            self.bus.close()
+        except Exception:
+            pass
+
+
+class _KWinDBus:
+    def __init__(self, dbus_send):
+        self.dbus_send = dbus_send
+
+    def _call(self, path, interface, method, arguments=(), timeout=2.0,
+              print_reply=True):
+        command = [self.dbus_send, "--session"]
+        if print_reply:
+            command.append("--print-reply=literal")
+        command.extend(["--dest=org.kde.KWin", path, interface + "." + method])
+        command.extend("string:" + str(argument) for argument in arguments)
+        try:
+            result = subprocess.run(command, capture_output=True, text=True,
+                                    timeout=max(0.1, timeout), check=False)
+        except subprocess.TimeoutExpired as error:
+            raise KWinDBusError("D-Bus call to KWin timed out.") from error
+        if result.returncode:
+            detail = (result.stderr or result.stdout).strip()[:300]
+            raise KWinDBusError(detail or "D-Bus call to KWin failed.")
+        return result.stdout.strip()
+
+    def unload(self, script_name, timeout=1.0):
+        self._call("/Scripting", "org.kde.kwin.Scripting", "unloadScript",
+                   (script_name,), timeout=timeout)
+
+    def load(self, script_path, script_name, timeout=2.0):
+        reply = self._call("/Scripting", "org.kde.kwin.Scripting", "loadScript",
+                           (script_path, script_name), timeout=timeout)
+        match = re.search(r"\bint32\s+(-?\d+)", reply)
+        if not match:
+            match = re.search(r"(?<!\S)(-?\d+)(?!\S)", reply)
+        if not match:
+            raise KWinDBusError("KWin returned no script ID from loadScript().")
+        return int(match.group(1))
+
+    def run(self, script_id, timeout=2.0):
+        try:
+            self._call(f"/Scripting/Script{script_id}", "org.kde.kwin.Script",
+                       "run", timeout=timeout)
+            return "plasma6"
+        except KWinDBusError as error:
+            detail = str(error).casefold()
+            if not any(marker in detail for marker in
+                       ("unknownobject", "unknown object", "no such object")):
+                raise
+            self._call(f"/{script_id}", "org.kde.kwin.Script", "run",
+                       timeout=timeout)
+            return "plasma5-fallback"
+
+
+def _stage_text(stage):
+    return (f"loaded_id={stage['loaded_id']}, run_called={str(stage['run_called']).lower()}, "
+            f"report_received={str(stage['report_received']).lower()}")
+
+
+def _perform_request(action, token, script_name, script_path, transport, channel,
+                     internal_id=None, timeout=DEFAULT_TIMEOUT, clock=time.monotonic):
+    """Run the lifecycle against injected transport/channel interfaces."""
+    deadline = clock() + timeout
+    stage = {"loaded_id": None, "run_called": False, "report_received": False}
+    primary_error = None
+    result = None
+
+    def remaining():
+        value = deadline - clock()
+        if value <= 0:
+            raise WindowBridgeError(f"KWin window request timed out ({_stage_text(stage)}).")
+        return value
+
+    try:
+        transport.unload(script_name, timeout=min(1.0, remaining()))
+        stage["loaded_id"] = transport.load(script_path, script_name, timeout=remaining())
+        if stage["loaded_id"] < 0:
+            raise WindowBridgeError(
+                f"KWin rejected the temporary script with load id {stage['loaded_id']} "
+                f"({_stage_text(stage)}).")
+        stage["run_called"] = True
+        transport.run(stage["loaded_id"], timeout=remaining())
+
+        while True:
+            report = channel.wait(remaining())
+            if report is None:
+                raise WindowBridgeError(f"KWin window request timed out ({_stage_text(stage)}).")
+            if not isinstance(report, dict) or report.get("token") != token:
+                continue
+            stage["report_received"] = True
+            result = report
+            if not isinstance(report.get("ok"), bool):
+                raise WindowBridgeError(
+                    f"KWin returned an invalid report ({_stage_text(stage)}).")
+            if not report["ok"]:
+                detail = str(report.get("error", "KWin script reported failure."))[:300]
+                raise WindowBridgeError(f"{detail} ({_stage_text(stage)}).")
+            break
+    except Exception as error:
+        primary_error = error
+    finally:
+        try:
+            transport.unload(script_name, timeout=1.0)
+        except Exception as cleanup_error:
+            if primary_error is None:
+                primary_error = WindowBridgeError(
+                    f"KWin returned a result but unloadScript() cleanup failed: {str(cleanup_error)[:300]} "
+                    f"({_stage_text(stage)}).")
+
+    if primary_error is not None:
+        if isinstance(primary_error, WindowBridgeError):
+            raise primary_error
+        raise WindowBridgeError(
+            f"KWin request failed: {str(primary_error)[:300]} ({_stage_text(stage)})."
+        ) from primary_error
+    return result
+
+
+def _request(action, internal_id=None, timeout=DEFAULT_TIMEOUT):
+    session_type = os.environ.get("XDG_SESSION_TYPE")
+    if session_type and session_type != "wayland":
+        raise WindowBridgeError("The KWin window bridge currently requires a KDE Wayland session.")
+    dbus_send = shutil.which("dbus-send")
+    if not dbus_send:
+        raise WindowBridgeError("dbus-send is required for the KDE window bridge.")
+
+    token = uuid.uuid4().hex
+    script_name = "burito-once-" + token
+    channel = _DBusReportChannel(token)
+    try:
+        with tempfile.TemporaryDirectory(prefix="burito-kwin-") as directory:
+            os.chmod(directory, 0o700)
+            script_path = Path(directory) / "main.js"
+            script_path.write_text(
+                _kwin_script(action, token, channel.service_name, internal_id),
+                encoding="utf-8")
+            return _perform_request(
+                action, token, script_name, str(script_path), _KWinDBus(dbus_send),
+                channel, internal_id=internal_id, timeout=timeout)
+    finally:
+        channel.close()
+
+
+def list_windows():
+    """Return a transient snapshot; captions are not written to logs or storage."""
+    result = _request("list")
+    windows = result.get("windows")
+    if not isinstance(windows, list):
+        raise WindowBridgeError("KWin returned a window report without a windows list.")
+    return {
+        "windows": windows,
+        "scope": "Current KWin-managed application windows; captions are returned only for this request.",
+        "note": "A missing window can mean the app has no KWin-managed window, including tray-only or background apps; it does not prove the process is stopped.",
+    }
+
+
+def focus_window(internal_id):
+    """Focus one exact KWin window. Caller enforces explicit owner approval."""
+    if not isinstance(internal_id, str) or not WINDOW_ID.fullmatch(internal_id):
+        raise WindowBridgeError("Invalid internal window ID; list windows again.")
+    result = _request("focus", internal_id=internal_id)
+    window = result.get("window")
+    if not isinstance(window, dict) or window.get("internalId") != internal_id:
+        raise WindowBridgeError("KWin did not confirm focus for the requested window ID.")
+    return {"status": "focused", "window": window}
+
+
+def focus_and_read_window(internal_id):
+    """Focus one approved window, then use the separate approved local OCR path."""
+    from .access import read_screen_text
+    focused = focus_window(internal_id)
+    capture = read_screen_text("active_window")
+    # Preserve coordinates beside OCR text while keeping the tool result small
+    # enough to survive Eve context compaction.
+    source_lines = capture.get('lines', [])
+    bounded_lines, remaining = [], 5000
+    for source in source_lines[:60]:
+        text = str(source.get('text', ''))[:remaining]
+        bounded_lines.append({
+            'x_percent': source.get('x_percent'),
+            'y_percent': source.get('y_percent'),
+            'text': text,
+        })
+        remaining -= len(text)
+        if remaining <= 0:
+            break
+    capture['lines'] = bounded_lines
+    # Preserve the small top strip separately so tab-bar questions do not need
+    # to infer labels from page text. These remain OCR candidates, not verified tabs.
+    capture['tab_strip_candidate_lines'] = [
+        {'x_percent': line.get('x_percent'), 'y_percent': line.get('y_percent'),
+         'text': str(line.get('text', ''))[:300]}
+        for line in source_lines
+        if isinstance(line, dict)
+        and isinstance(line.get('y_percent'), list)
+        and len(line['y_percent']) == 2
+        and isinstance(line['y_percent'][0], (int, float))
+        and line['y_percent'][0] <= 15
+    ][:30]
+    capture['total_line_count'] = len(source_lines)
+    capture['truncated'] = capture.get('truncated', False) or len(bounded_lines) < len(source_lines)
+    capture.pop('method', None)
+    capture.pop('note', None)
+    return {"status": "focused_and_captured", "window": focused["window"],
+            "capture": capture}

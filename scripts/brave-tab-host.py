@@ -1,1 +1,240 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^tŒ„½ÕÍÈ½‰¥¸½•¹ØÁåÑ¡½¸Ì(ˆˆ‰	É…Ù”9…Ñ¥Ù”5•ÍÍ…¥¹œ¡½ÍÐ™½È½Õ¹ÐÍ¹…ÁÍ¡½ÑÌ…¹…ÁÁÉ½Ù•Ñ…ˆÉ•ÅÕ•ÍÑÌ¸ˆˆˆ()¥µÁ½ÉÐ©Í½¸)¥µÁ½ÉÐ½Ì)™É½´Á…Ñ¡±¥ˆ¥µÁ½ÉÐA…Ñ )¥µÁ½ÉÐÍÑ…Ð)¥µÁ½ÉÐÍÑÉÕÐ)¥µÁ½ÉÐÍåÌ)¥µÁ½ÉÐÑ¥µ”(()5a}5MM€ô€ÄÌÄÀÜÈ(()‘•˜}ÍÑ…Ñ•}Á…Ñ  ¤è(€€€ÉÕ¹Ñ¥µ•}‘¥È€ô½Ì¹•¹Ù¥É½¸¹•Ð a}IU9Q%5}%Hœ¤(€€€¥˜¹½ÐÉÕ¹Ñ¥µ•}‘¥Èè(€€€€€€€É…¥Í”IÕ¹Ñ¥µ•ÉÉ½È a}IU9Q%5}%H¥ÌÕ¹…Ù…¥±…‰±”œ¤(€€€‘¥É•Ñ½Éä€ôA…Ñ ¡ÉÕ¹Ñ¥µ•}‘¥È¤(€€€¥¹™¼€ô‘¥É•Ñ½Éä¹ÍÑ…Ð ¤(€€€¥˜¹½ÐÍÑ…Ð¹M}%M%H¡¥¹™¼¹ÍÑ}µ½‘”¤½È¥¹™¼¹ÍÑ}Õ¥€„ô½Ì¹•ÑÕ¥ ¤è(€€€€€€€É…¥Í”IÕ¹Ñ¥µ•ÉÉ½È a}IU9Q%5}%H¥Ì¹½Ð½Ý¹•‰äÑ¡¥ÌÕÍ•Èœ¤(€€€É•ÑÕÉ¸‘¥É•Ñ½Éä€¼€‰ÕÉ¥Ñ¼µ‰É…Ù”µÑ…ˆµ½Õ¹Ð¹©Í½¸œ(()‘•˜}ÉÕ¹Ñ¥µ•}‘¥È ¤è(€€€Á…Ñ €ô}ÍÑ…Ñ•}Á…Ñ  ¤¹Á…É•¹Ð(€€€É•ÑÕÉ¸Á…Ñ (()‘•˜}ÝÉ¥Ñ•}½Õ¹Ð¡½Õ¹Ð¤è(€€€Ñ…É•Ð€ô}ÍÑ…Ñ•}Á…Ñ  ¤(€€€‘…Ñ„€ô©Í½¸¹‘ÕµÁÌ¡ì½Õ¹Ðœè½Õ¹Ð°€ÕÁ‘…Ñ•‘}…ÐœèÑ¥µ”¹Ñ¥µ” ¥ô°Í•Á…É…Ñ½ÉÌô œ°œ°€œèœ¤¤¹•¹½‘” ¤(€€€Ñ•µÁ½É…Éä€ôÑ…É•Ð¹Ý¥Ñ¡}¹…µ”¡˜œ¹íÑ…É•Ð¹¹…µ•ô¹í½Ì¹•ÑÁ¥ ¥ô¹ÑµÀœ¤(€€€™€ô½Ì¹½Á•¸¡Ñ•µÁ½É…Éä°½Ì¹=}]I=91dð½Ì¹=}IPð½Ì¹=}a0ð½Ì¹=}9==11=\°€Á¼ØÀÀ¤(€€€ÑÉäè(€€€€€€€Ý¥Ñ ½Ì¹™‘½Á•¸¡™°€Ýˆœ¤…Ì½ÕÑÁÕÐè(€€€€€€€€€€€½ÕÑÁÕÐ¹ÝÉ¥Ñ”¡‘…Ñ„¤(€€€€€€€€€€€½ÕÑÁÕÐ¹™±ÕÍ  ¤(€€€€€€€€€€€½Ì¹™Íå¹Œ¡½ÕÑÁÕÐ¹™¥±•¹¼ ¤¤(€€€€€€€½Ì¹É•Á±…”¡Ñ•µÁ½É…Éä°Ñ…É•Ð¤(€€€€€€€½Ì¹¡µ½¡Ñ…É•Ð°€Á¼ØÀÀ¤(€€€™¥¹…±±äè(€€€€€€€ÑÉäè(€€€€€€€€€€€Ñ•µÁ½É…Éä¹Õ¹±¥¹¬ ¤(€€€€€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€€€€€Á…ÍÌ(()‘•˜}…Ñ½µ¥}©Í½¸¡Á…Ñ °É•½É¤è(€€€‘…Ñ„€ô©Í½¸¹‘ÕµÁÌ¡É•½É°Í•Á…É…Ñ½ÉÌô œ°œ°€œèœ¤¤¹•¹½‘” ¤(€€€¥˜±•¸¡‘…Ñ„¤€ø5a}5MMè(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È 9…Ñ¥Ù”µ•ÍÍ…¥¹œÉ•ÍÁ½¹Í”¥ÌÑ½¼±…É”œ¤(€€€Ñ•µÁ½É…Éä€ôÁ…Ñ ¹Ý¥Ñ¡}¹…µ”¡˜œ¹íÁ…Ñ ¹¹…µ•ô¹í½Ì¹•ÑÁ¥ ¥ô¹ÑµÀœ¤(€€€™€ô½Ì¹½Á•¸¡Ñ•µÁ½É…Éä°½Ì¹=}]I=91dð½Ì¹=}IPð½Ì¹=}a0ð½Ì¹=}9==11=\°€Á¼ØÀÀ¤(€€€ÑÉäè(€€€€€€€Ý¥Ñ ½Ì¹™‘½Á•¸¡™°€Ýˆœ¤…Ì½ÕÑÁÕÐè(€€€€€€€€€€€½ÕÑÁÕÐ¹ÝÉ¥Ñ”¡‘…Ñ„¤(€€€€€€€€€€€½ÕÑÁÕÐ¹™±ÕÍ  ¤(€€€€€€€€€€€½Ì¹™Íå¹Œ¡½ÕÑÁÕÐ¹™¥±•¹¼ ¤¤(€€€€€€€½Ì¹É•Á±…”¡Ñ•µÁ½É…Éä°Á…Ñ ¤(€€€€€€€½Ì¹¡µ½¡Á…Ñ °€Á¼ØÀÀ¤(€€€™¥¹…±±äè(€€€€€€€ÑÉäè(€€€€€€€€€€€Ñ•µÁ½É…Éä¹Õ¹±¥¹¬ ¤(€€€€€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€€€€€Á…ÍÌ(()‘•˜}Ñ…­•}½µµ…¹ ¤è(€€€Á…Ñ €ô}ÉÕ¹Ñ¥µ•}‘¥È ¤€¼€‰ÕÉ¥Ñ¼µ‰É…Ù”µ½µµ…¹¹©Í½¸œ(€€€ÑÉäè(€€€€€€€™€ô½Ì¹½Á•¸¡Á…Ñ °½Ì¹=}I=91dð½Ì¹=}9==11=\ð½Ì¹=}9=9	1=,¤(€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€É•ÑÕÉ¸9½¹”(€€€ÑÉäè(€€€€€€€¥¹™¼€ô½Ì¹™ÍÑ…Ð¡™¤(€€€€€€€¥˜¹½ÐÍÑ…Ð¹M}%MI¡¥¹™¼¹ÍÑ}µ½‘”¤½È¥¹™¼¹ÍÑ}Õ¥€„ô½Ì¹•ÑÕ¥ ¤½È¥¹™¼¹ÍÑ}µ½‘”€˜€Á¼ÀÜÜ½È¥¹™¼¹ÍÑ}Í¥é”€ø€ÄØÌàÐè(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€Ý¥Ñ ½Ì¹™‘½Á•¸¡™°€Èœ°•¹½‘¥¹œôÕÑ˜´àœ¤…ÌÍ½ÕÉ”è(€€€€€€€€€€€™€ô9½¹”(€€€€€€€€€€€½µµ…¹€ô©Í½¸¹±½…¡Í½ÕÉ”¤(€€€™¥¹…±±äè(€€€€€€€¥˜™¥Ì¹½Ð9½¹”è(€€€€€€€€€€€½Ì¹±½Í”¡™¤(€€€ÑÉäè(€€€€€€€Á…Ñ ¹Õ¹±¥¹¬ ¤(€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€Á…ÍÌ(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡½µµ…¹°‘¥Ð¤½È¹½Ð¥Í¥¹ÍÑ…¹”¡½µµ…¹¹•Ð É•ÅÕ•ÍÑ}¥œ¤°ÍÑÈ¤è(€€€€€€€É•ÑÕÉ¸9½¹”(€€€¥˜±•¸¡½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤€„ô€ÌÈ½È…¹ä¡ ¹½Ð¥¸€œÀÄÈÌÐÔØÜàå…‰‘•˜œ™½È ¥¸½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤è(€€€€€€€É•ÑÕÉ¸9½¹”(€€€¥˜Ñ¥µ”¹Ñ¥µ” ¤€´™±½…Ð¡½µµ…¹¹•Ð É•ÅÕ•ÍÑ•‘}…Ðœ°€À¤¤€ø€ÄÔè(€€€€€€€É•ÑÕÉ¸9½¹”(€€€­¥¹€ô½µµ…¹¹•Ð ½µµ…¹œ¤(€€€¥˜­¥¹€ôô€™¥¹œè(€€€€€€€ÅÕ•Éä€ô½µµ…¹¹•Ð ÅÕ•Éäœ¤(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡ÅÕ•Éä°ÍÑÈ¤½È¹½ÐÅÕ•Éä¹ÍÑÉ¥À ¤½È±•¸¡ÅÕ•Éä¤€ø€ÄÀÀè(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€}µ…É­}Á•¹‘¥¹œ¡½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤(€€€€€€€É•ÑÕÉ¸ìÉ•ÅÕ•ÍÑ}¥œè½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t°€½µµ…¹œè­¥¹°€ÅÕ•ÉäœèÅÕ•Éåô(€€€¥˜­¥¹€ôô€…Ñ¥Ù…Ñ”œè(€€€€€€€Ñ…‰}¥°Ñ¥Ñ±”€ô½µµ…¹¹•Ð Ñ…‰}¥œ¤°½µµ…¹¹•Ð •áÁ•Ñ•‘}Ñ¥Ñ±”œ¤(€€€€€€€¥˜¥Í¥¹ÍÑ…¹”¡Ñ…‰}¥°‰½½°¤½È¹½Ð¥Í¥¹ÍÑ…¹”¡Ñ…‰}¥°¥¹Ð¤½ÈÑ…‰}¥€ð€À½È¹½Ð¥Í¥¹ÍÑ…¹”¡Ñ¥Ñ±”°ÍÑÈ¤½È¹½ÐÑ¥Ñ±”½È±•¸¡Ñ¥Ñ±”¤€ø€ÔÄÈè(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€}µ…É­}Á•¹‘¥¹œ¡½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤(€€€€€€€É•ÑÕÉ¸ìÉ•ÅÕ•ÍÑ}¥œè½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t°€½µµ…¹œè­¥¹°€Ñ…‰}¥œèÑ…‰}¥°€•áÁ•Ñ•‘}Ñ¥Ñ±”œèÑ¥Ñ±•ô(€€€¥˜­¥¹€ôô€É•…‘}Á…”œè(€€€€€€€}µ…É­}Á•¹‘¥¹œ¡½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤(€€€€€€€É•ÑÕÉ¸ìÉ•ÅÕ•ÍÑ}¥œè½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t°€½µµ…¹œè­¥¹‘ô(€€€¥˜­¥¹€ôô€½Áå}Ñ•áÐœè(€€€€€€€Ñ•áÐ€ô½µµ…¹¹•Ð Ñ•áÐœ¤(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡Ñ•áÐ°ÍÑÈ¤½È¹½ÐÑ•áÐ½È±•¸¡Ñ•áÐ¤€ø€ÔÀÀÀ½È…¹ä¡½É¡ ¤€ôô€À™½È ¥¸Ñ•áÐ¤è(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€}µ…É­}Á•¹‘¥¹œ¡½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤(€€€€€€€É•ÑÕÉ¸ìÉ•ÅÕ•ÍÑ}¥œè½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t°€½µµ…¹œè­¥¹°€Ñ•áÐœèÑ•áÑô(€€€¥˜­¥¹€ôô€Á…•}…Ñ¥½¸œè(€€€€€€€‘…Ñ„€ô½µµ…¹¹•Ð ‘…Ñ„œ¤(€€€€€€€…±±½Ý•€ôì±¥­}Ñ•áÐœ°€ÑåÁ•}Ñ•áÐœ°€ÍÉ½±°œ°€‰…¬œ°€™½ÉÝ…Éœ°€ÁÉ•ÍÍ}­•äœ°€¹…Ù¥…Ñ”ô(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡‘…Ñ„°‘¥Ð¤½È‘…Ñ„¹•Ð …Ñ¥½¸œ¤¹½Ð¥¸…±±½Ý•è(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€¥˜‘…Ñ…l…Ñ¥½¸t¥¸ì±¥­}Ñ•áÐœ°€ÑåÁ•}Ñ•áÐœ°€ÁÉ•ÍÍ}­•äôè(€€€€€€€€€€€Ñ…É•Ð€ô‘…Ñ„¹•Ð Ñ…É•Ðœ¤(€€€€€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡Ñ…É•Ð°ÍÑÈ¤½È¹½ÐÑ…É•Ð½È±•¸¡Ñ…É•Ð¤€ø€ÈÀÀè(€€€€€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€¥˜‘…Ñ…l…Ñ¥½¸t€ôô€ÑåÁ•}Ñ•áÐœ…¹€¡¹½Ð¥Í¥¹ÍÑ…¹”¡‘…Ñ„¹•Ð Ñ•áÐœ¤°ÍÑÈ¤½È±•¸¡‘…Ñ…lÑ•áÐt¤€ø€ÈÀÀÀ¤è(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€¥˜‘…Ñ…l…Ñ¥½¸t€ôô€ÍÉ½±°œ…¹€¡‘…Ñ„¹•Ð ‘¥É•Ñ¥½¸œ¤¹½Ð¥¸ìÕÀœ°€‘½Ý¸ô(€€€€€€€€€€€€€€€½È¥Í¥¹ÍÑ…¹”¡‘…Ñ„¹•Ð …µ½Õ¹Ðœ¤°‰½½°¤½È¹½Ð¥Í¥¹ÍÑ…¹”¡‘…Ñ„¹•Ð …µ½Õ¹Ðœ¤°¥¹Ð¤(€€€€€€€€€€€€€€€½È¹½Ð€ÔÀ€ðô‘…Ñ…l…µ½Õ¹Ðt€ðô€ÈÀÀÀ¤è(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€¥˜‘…Ñ…l…Ñ¥½¸t€ôô€ÁÉ•ÍÍ}­•äœ…¹€¡‘…Ñ„¹•Ð ­•äœ¤¹½Ð¥¸ì¹Ñ•Èœ°€Q…ˆœ°€Í…Á”ô(€€€€€€€€€€€€€€€½È¹½Ð¥Í¥¹ÍÑ…¹”¡‘…Ñ„¹•Ð Ñ…É•Ðœ¤°ÍÑÈ¤½È¹½Ð‘…Ñ…lÑ…É•Ðt¤è(€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€¥˜‘…Ñ…l…Ñ¥½¸t€ôô€¹…Ù¥…Ñ”œè(€€€€€€€€€€€ÕÉ°€ô‘…Ñ„¹•Ð ÕÉ°œ¤(€€€€€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡ÕÉ°°ÍÑÈ¤½È¹½ÐÕÉ°½È±•¸¡ÕÉ°¤€ø€ÈÀÀÀ½È…¹ä¡½É¡ ¤€ð€ÌÈ™½È ¥¸ÕÉ°¤è(€€€€€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€}µ…É­}Á•¹‘¥¹œ¡½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t¤(€€€€€€€É•ÑÕÉ¸ìÉ•ÅÕ•ÍÑ}¥œè½µµ…¹‘lÉ•ÅÕ•ÍÑ}¥t°€½µµ…¹œè­¥¹°€‘…Ñ„œè‘…Ñ…ô(€€€É•ÑÕÉ¸9½¹”(()‘•˜}µ…É­}Á•¹‘¥¹œ¡É•ÅÕ•ÍÑ}¥¤è(€€€Á…Ñ €ô}ÉÕ¹Ñ¥µ•}‘¥È ¤€¼˜‰ÕÉ¥Ñ¼µ‰É…Ù”µÁ•¹‘¥¹œµíÉ•ÅÕ•ÍÑ}¥‘ôœ(€€€™€ô½Ì¹½Á•¸¡Á…Ñ °½Ì¹=}]I=91dð½Ì¹=}IPð½Ì¹=}a0ð½Ì¹=}9==11=\°€Á¼ØÀÀ¤(€€€Ý¥Ñ ½Ì¹™‘½Á•¸¡™°€Üœ°•¹½‘¥¹œô…Í¥¤œ¤…Ìµ…É­•Èè(€€€€€€€µ…É­•È¹ÝÉ¥Ñ”¡ÍÑÈ¡Ñ¥µ”¹Ñ¥µ” ¤¤¤(()‘•˜}ÝÉ¥Ñ•}½µµ…¹‘}É•ÍÕ±Ð¡µ•ÍÍ…”¤è(€€€É•ÅÕ•ÍÑ}¥€ôµ•ÍÍ…”¹•Ð É•ÅÕ•ÍÑ}¥œ¤(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡É•ÅÕ•ÍÑ}¥°ÍÑÈ¤½È±•¸¡É•ÅÕ•ÍÑ}¥¤€„ô€ÌÈ½È…¹ä¡ ¹½Ð¥¸€œÀÄÈÌÐÔØÜàå…‰‘•˜œ™½È ¥¸É•ÅÕ•ÍÑ}¥¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È %¹Ù…±¥É•ÅÕ•ÍÐ%œ¤(€€€Á•¹‘¥¹}Á…Ñ €ô}ÉÕ¹Ñ¥µ•}‘¥È ¤€¼˜‰ÕÉ¥Ñ¼µ‰É…Ù”µÁ•¹‘¥¹œµíÉ•ÅÕ•ÍÑ}¥‘ôœ(€€€ÑÉäè(€€€€€€€Á•¹‘¥¹}¥¹™¼€ôÁ•¹‘¥¹}Á…Ñ ¹ÍÑ…Ð ¤(€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€É•ÑÕÉ¸(€€€¥˜€¡¹½ÐÍÑ…Ð¹M}%MI¡Á•¹‘¥¹}¥¹™¼¹ÍÑ}µ½‘”¤½ÈÁ•¹‘¥¹}¥¹™¼¹ÍÑ}Õ¥€„ô½Ì¹•ÑÕ¥ ¤(€€€€€€€€€€€½ÈÁ•¹‘¥¹}¥¹™¼¹ÍÑ}µ½‘”€˜€Á¼ÀÜÜ½ÈÑ¥µ”¹Ñ¥µ” ¤€´Á•¹‘¥¹}¥¹™¼¹ÍÑ}µÑ¥µ”€ø€ÄÔ¤è(€€€€€€€ÑÉäè(€€€€€€€€€€€Á•¹‘¥¹}Á…Ñ ¹Õ¹±¥¹¬ ¤(€€€€€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€€€€€Á…ÍÌ(€€€€€€€É•ÑÕÉ¸(€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡µ•ÍÍ…”¹•Ð ½¬œ¤°‰½½°¤è(€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È %¹Ù…±¥½µµ…¹É•ÍÕ±Ðœ¤(€€€É•½É€ôìÉ•ÅÕ•ÍÑ}¥œèÉ•ÅÕ•ÍÑ}¥°€½¬œèµ•ÍÍ…•l½¬uô(€€€¥˜µ•ÍÍ…•l½¬tè(€€€€€€€É•ÍÕ±Ð€ôµ•ÍÍ…”¹•Ð É•ÍÕ±Ðœ¤(€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡É•ÍÕ±Ð°‘¥Ð¤è(€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È %¹Ù…±¥½µµ…¹É•ÍÕ±ÐÁ…å±½…œ¤(€€€€€€€É•½É‘lÉ•ÍÕ±Ðt€ôÉ•ÍÕ±Ð(€€€•±Í”è(€€€€€€€É•½É‘l•ÉÉ½Èt€ôÍÑÈ¡µ•ÍÍ…”¹•Ð •ÉÉ½Èœ°€	É…Ù”É•©•Ñ•Ñ¡”É•ÅÕ•ÍÐœ¤¥lèÌÀÁt(€€€}…Ñ½µ¥}©Í½¸¡}ÉÕ¹Ñ¥µ•}‘¥È ¤€¼˜‰ÕÉ¥Ñ¼µ‰É…Ù”µÉ•ÍÁ½¹Í”µíÉ•ÅÕ•ÍÑ}¥‘ô¹©Í½¸œ°É•½É¤(€€€ÑÉäè(€€€€€€€Á•¹‘¥¹}Á…Ñ ¹Õ¹±¥¹¬ ¤(€€€•á•ÁÐ¥±•9½Ñ½Õ¹‘ÉÉ½Èè(€€€€€€€Á…ÍÌ(()‘•˜}É•…‘}•á…Ð¡ÍÑÉ•…´°Í¥é”¤è(€€€¡Õ¹­Ì€ômt(€€€É•µ…¥¹¥¹œ€ôÍ¥é”(€€€Ý¡¥±”É•µ…¥¹¥¹œè(€€€€€€€¡Õ¹¬€ôÍÑÉ•…´¹É•…¡É•µ…¥¹¥¹œ¤(€€€€€€€¥˜¹½Ð¡Õ¹¬è(€€€€€€€€€€€¥˜¹½Ð¡Õ¹­Ìè(€€€€€€€€€€€€€€€É•ÑÕÉ¸9½¹”(€€€€€€€€€€€É…¥Í”=ÉÉ½È 9…Ñ¥Ù”µ•ÍÍ…¥¹œ™É…µ”•¹‘••…É±äœ¤(€€€€€€€¡Õ¹­Ì¹…ÁÁ•¹¡¡Õ¹¬¤(€€€€€€€É•µ…¥¹¥¹œ€´ô±•¸¡¡Õ¹¬¤(€€€É•ÑÕÉ¸ˆœœ¹©½¥¸¡¡Õ¹­Ì¤(()‘•˜}Í•¹¡É•ÍÁ½¹Í”¤è(€€€Á…å±½…€ô©Í½¸¹‘ÕµÁÌ¡É•ÍÁ½¹Í”°Í•Á…É…Ñ½ÉÌô œ°œ°€œèœ¤¤¹•¹½‘” ¤(€€€ÍåÌ¹ÍÑ‘½ÕÐ¹‰Õ™™•È¹ÝÉ¥Ñ”¡ÍÑÉÕÐ¹Á…¬ œñ$œ°±•¸¡Á…å±½…¤¤¤(€€€ÍåÌ¹ÍÑ‘½ÕÐ¹‰Õ™™•È¹ÝÉ¥Ñ”¡Á…å±½…¤(€€€ÍåÌ¹ÍÑ‘½ÕÐ¹‰Õ™™•È¹™±ÕÍ  ¤(()‘•˜µ…¥¸ ¤è(€€€Ý¡¥±”QÉÕ”è(€€€€€€€¡•…‘•È€ô}É•…‘}•á…Ð¡ÍåÌ¹ÍÑ‘¥¸¹‰Õ™™•È°€Ð¤(€€€€€€€¥˜¡•…‘•È¥Ì9½¹”è(€€€€€€€€€€€É•ÑÕÉ¸€À(€€€€€€€±•¹Ñ €ôÍÑÉÕÐ¹Õ¹Á…¬ œñ$œ°¡•…‘•È¥lÁt(€€€€€€€¥˜¹½Ð€À€ð±•¹Ñ €ðô5a}5MMè(€€€€€€€€€€€É•ÑÕÉ¸€Ä(€€€€€€€É…Ü€ô}É•…‘}•á…Ð¡ÍåÌ¹ÍÑ‘¥¸¹‰Õ™™•È°±•¹Ñ ¤(€€€€€€€ÑÉäè(€€€€€€€€€€€µ•ÍÍ…”€ô©Í½¸¹±½…‘Ì¡É…Ü¤(€€€€€€€€€€€¥˜¹½Ð¥Í¥¹ÍÑ…¹”¡µ•ÍÍ…”°‘¥Ð¤½È¹½Ð¥Í¥¹ÍÑ…¹”¡µ•ÍÍ…”¹•Ð ÑåÁ”œ¤°ÍÑÈ¤è(€€€€€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È %¹Ù…±¥9…Ñ¥Ù”5•ÍÍ…¥¹œµ•ÍÍ…”œ¤(€€€€€€€€€€€¥˜µ•ÍÍ…•lÑåÁ”t€ôô€Ñ…‰}½Õ¹Ðœè(€€€€€€€€€€€€€€€½Õ¹Ð€ôµ•ÍÍ…”¹•Ð ½Õ¹Ðœ¤(€€€€€€€€€€€€€€€¥˜¥Í¥¹ÍÑ…¹”¡½Õ¹Ð°‰½½°¤½È¹½Ð¥Í¥¹ÍÑ…¹”¡½Õ¹Ð°¥¹Ð¤½È¹½Ð€À€ðô½Õ¹Ð€ðô€ÄÀÀÀÀè(€€€€€€€€€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È %¹Ù…±¥Ñ…ˆ½Õ¹Ðœ¤(€€€€€€€€€€€€€€€}ÝÉ¥Ñ•}½Õ¹Ð¡½Õ¹Ð¤(€€€€€€€€€€€€€€€}Í•¹¡ì½¬œèQÉÕ•ô¤(€€€€€€€€€€€•±¥˜µ•ÍÍ…•lÑåÁ”t€ôô€Á½±°œè(€€€€€€€€€€€€€€€½µµ…¹€ô}Ñ…­•}½µµ…¹ ¤(€€€€€€€€€€€€€€€}Í•¹¡ìÑåÁ”œè€½µµ…¹œ°€¨©½µµ…¹‘ô¥˜½µµ…¹•±Í”ìÑåÁ”œè€¥‘±”ô¤(€€€€€€€€€€€•±¥˜µ•ÍÍ…•lÑåÁ”t€ôô€½µµ…¹‘}É•ÍÕ±Ðœè(€€€€€€€€€€€€€€€}ÝÉ¥Ñ•}½µµ…¹‘}É•ÍÕ±Ð¡µ•ÍÍ…”¤(€€€€€€€€€€€€€€€}Í•¹¡ì½¬œèQÉÕ•ô¤(€€€€€€€€€€€•±Í”è(€€€€€€€€€€€€€€€É…¥Í”Y…±Õ•ÉÉ½È U¹ÍÕÁÁ½ÉÑ•9…Ñ¥Ù”5•ÍÍ…¥¹œµ•ÍÍ…”œ¤(€€€€€€€•á•ÁÐ€¡Y…±Õ•ÉÉ½È°=MÉÉ½È°IÕ¹Ñ¥µ•ÉÉ½È°=ÉÉ½È¤è(€€€€€€€€€€€€Œ9•Ù•È±½œ‰É½ÝÍ•È‘…Ñ„½ÈÁÉ½Ñ½½°¥¹ÁÕÐ¸(€€€€€€€€€€€}Í•¹¡ì½¬œè…±Í•ô¤(()¥˜}}¹…µ•}|€ôô€}}µ…¥¹}|œè(€€€É…¥Í”MåÍÑ•µá¥Ð¡µ…¥¸ ¤¤(
+#!/usr/bin/env python3
+"""Brave Native Messaging host for count snapshots and approved tab requests."""
+
+import json
+import os
+from pathlib import Path
+import stat
+import struct
+import sys
+import time
+
+
+MAX_MESSAGE = 131072
+
+
+def _state_path():
+    runtime_dir = os.environ.get('XDG_RUNTIME_DIR')
+    if not runtime_dir:
+        raise RuntimeError('XDG_RUNTIME_DIR is unavailable')
+    directory = Path(runtime_dir)
+    info = directory.stat()
+    if not stat.S_ISDIR(info.st_mode) or info.st_uid != os.getuid():
+        raise RuntimeError('XDG_RUNTIME_DIR is not owned by this user')
+    return directory / 'burito-brave-tab-count.json'
+
+
+def _runtime_dir():
+    path = _state_path().parent
+    return path
+
+
+def _write_count(count):
+    target = _state_path()
+    data = json.dumps({'count': count, 'updated_at': time.time()}, separators=(',', ':')).encode()
+    temporary = target.with_name(f'.{target.name}.{os.getpid()}.tmp')
+    fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+    try:
+        with os.fdopen(fd, 'wb') as output:
+            output.write(data)
+            output.flush()
+            os.fsync(output.fileno())
+        os.replace(temporary, target)
+        os.chmod(target, 0o600)
+    finally:
+        try:
+            temporary.unlink()
+        except FileNotFoundError:
+            pass
+
+
+def _atomic_json(path, record):
+    data = json.dumps(record, separators=(',', ':')).encode()
+    if len(data) > MAX_MESSAGE:
+        raise ValueError('Native messaging response is too large')
+    temporary = path.with_name(f'.{path.name}.{os.getpid()}.tmp')
+    fd = os.open(temporary, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+    try:
+        with os.fdopen(fd, 'wb') as output:
+            output.write(data)
+            output.flush()
+            os.fsync(output.fileno())
+        os.replace(temporary, path)
+        os.chmod(path, 0o600)
+    finally:
+        try:
+            temporary.unlink()
+        except FileNotFoundError:
+            pass
+
+
+def _take_command():
+    path = _runtime_dir() / 'burito-brave-command.json'
+    try:
+        fd = os.open(path, os.O_RDONLY | os.O_NOFOLLOW | os.O_NONBLOCK)
+    except FileNotFoundError:
+        return None
+    try:
+        info = os.fstat(fd)
+        if not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid() or info.st_mode & 0o077 or info.st_size > 16384:
+            return None
+        with os.fdopen(fd, 'r', encoding='utf-8') as source:
+            fd = None
+            command = json.load(source)
+    finally:
+        if fd is not None:
+            os.close(fd)
+    try:
+        path.unlink()
+    except FileNotFoundError:
+        pass
+    if not isinstance(command, dict) or not isinstance(command.get('request_id'), str):
+        return None
+    if len(command['request_id']) != 32 or any(ch not in '0123456789abcdef' for ch in command['request_id']):
+        return None
+    if time.time() - float(command.get('requested_at', 0)) > 15:
+        return None
+    kind = command.get('command')
+    if kind == 'find':
+        query = command.get('query')
+        if not isinstance(query, str) or not query.strip() or len(query) > 100:
+            return None
+        _mark_pending(command['request_id'])
+        return {'request_id': command['request_id'], 'command': kind, 'query': query}
+    if kind == 'activate':
+        tab_id, title = command.get('tab_id'), command.get('expected_title')
+        if isinstance(tab_id, bool) or not isinstance(tab_id, int) or tab_id < 0 or not isinstance(title, str) or not title or len(title) > 512:
+            return None
+        _mark_pending(command['request_id'])
+        return {'request_id': command['request_id'], 'command': kind, 'tab_id': tab_id, 'expected_title': title}
+    if kind == 'read_page':
+        _mark_pending(command['request_id'])
+        return {'request_id': command['request_id'], 'command': kind}
+    if kind == 'copy_text':
+        text = command.get('text')
+        if not isinstance(text, str) or not text or len(text) > 5000 or any(ord(ch) == 0 for ch in text):
+            return None
+        _mark_pending(command['request_id'])
+        return {'request_id': command['request_id'], 'command': kind, 'text': text}
+    if kind == 'page_action':
+        data = command.get('data')
+        allowed = {'click_text', 'type_text', 'scroll', 'back', 'forward', 'press_key', 'navigate'}
+        if not isinstance(data, dict) or data.get('action') not in allowed:
+            return None
+        if data['action'] in {'click_text', 'type_text', 'press_key'}:
+            target = data.get('target')
+            if not isinstance(target, str) or not target or len(target) > 200:
+                return None
+        if data['action'] == 'type_text' and (not isinstance(data.get('text'), str) or len(data['text']) > 2000):
+            return None
+        if data['action'] == 'scroll' and (data.get('direction') not in {'up', 'down'}
+                or isinstance(data.get('amount'), bool) or not isinstance(data.get('amount'), int)
+                or not 50 <= data['amount'] <= 2000):
+            return None
+        if data['action'] == 'press_key' and (data.get('key') not in {'Enter', 'Tab', 'Escape'}
+                or not isinstance(data.get('target'), str) or not data['target']):
+            return None
+        if data['action'] == 'navigate':
+            url = data.get('url')
+            if not isinstance(url, str) or not url or len(url) > 2000 or any(ord(ch) < 32 for ch in url):
+                return None
+        _mark_pending(command['request_id'])
+        return {'request_id': command['request_id'], 'command': kind, 'data': data}
+    return None
+
+
+def _mark_pending(request_id):
+    path = _runtime_dir() / f'burito-brave-pending-{request_id}'
+    fd = os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL | os.O_NOFOLLOW, 0o600)
+    with os.fdopen(fd, 'w', encoding='ascii') as marker:
+        marker.write(str(time.time()))
+
+
+def _write_command_result(message):
+    request_id = message.get('request_id')
+    if not isinstance(request_id, str) or len(request_id) != 32 or any(ch not in '0123456789abcdef' for ch in request_id):
+        raise ValueError('Invalid request ID')
+    pending_path = _runtime_dir() / f'burito-brave-pending-{request_id}'
+    try:
+        pending_info = pending_path.stat()
+    except FileNotFoundError:
+        return
+    if (not stat.S_ISREG(pending_info.st_mode) or pending_info.st_uid != os.getuid()
+            or pending_info.st_mode & 0o077 or time.time() - pending_info.st_mtime > 15):
+        try:
+            pending_path.unlink()
+        except FileNotFoundError:
+            pass
+        return
+    if not isinstance(message.get('ok'), bool):
+        raise ValueError('Invalid command result')
+    record = {'request_id': request_id, 'ok': message['ok']}
+    if message['ok']:
+        result = message.get('result')
+        if not isinstance(result, dict):
+            raise ValueError('Invalid command result payload')
+        record['result'] = result
+    else:
+        record['error'] = str(message.get('error', 'Brave rejected the request'))[:300]
+    _atomic_json(_runtime_dir() / f'burito-brave-response-{request_id}.json', record)
+    try:
+        pending_path.unlink()
+    except FileNotFoundError:
+        pass
+
+
+def _read_exact(stream, size):
+    chunks = []
+    remaining = size
+    while remaining:
+        chunk = stream.read(remaining)
+        if not chunk:
+            if not chunks:
+                return None
+            raise EOFError('Native messaging frame ended early')
+        chunks.append(chunk)
+        remaining -= len(chunk)
+    return b''.join(chunks)
+
+
+def _send(response):
+    payload = json.dumps(response, separators=(',', ':')).encode()
+    sys.stdout.buffer.write(struct.pack('<I', len(payload)))
+    sys.stdout.buffer.write(payload)
+    sys.stdout.buffer.flush()
+
+
+def main():
+    while True:
+        header = _read_exact(sys.stdin.buffer, 4)
+        if header is None:
+            return 0
+        length = struct.unpack('<I', header)[0]
+        if not 0 < length <= MAX_MESSAGE:
+            return 1
+        raw = _read_exact(sys.stdin.buffer, length)
+        try:
+            message = json.loads(raw)
+            if not isinstance(message, dict) or not isinstance(message.get('type'), str):
+                raise ValueError('Invalid Native Messaging message')
+            if message['type'] == 'tab_count':
+                count = message.get('count')
+                if isinstance(count, bool) or not isinstance(count, int) or not 0 <= count <= 10000:
+                    raise ValueError('Invalid tab count')
+                _write_count(count)
+                _send({'ok': True})
+            elif message['type'] == 'poll':
+                command = _take_command()
+                _send({'type': 'command', **command} if command else {'type': 'idle'})
+            elif message['type'] == 'command_result':
+                _write_command_result(message)
+                _send({'ok': True})
+            else:
+                raise ValueError('Unsupported Native Messaging message')
+        except (ValueError, OSError, RuntimeError, EOFError):
+            # Never log browser data or protocol input.
+            _send({'ok': False})
+
+
+if __name__ == '__main__':
+    raise SystemExit(main())

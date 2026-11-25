@@ -1,1 +1,43 @@
-¨¥yÛhr·šµë-­æ¦}Ó©z¶­Š‰ç¢Ú^®h­µçEj)^vÚ­æ­zËky©Ÿtê^­«b¢yè¶—«š+myÑZŠW¶‡+y«^²ÚÞjgÝ:—«jØ¨žz-¥êæŠÛ^u¥µÁ½ÉÐì…±±Ìô™É½´€•Ù”½•Ù•¹ÑÌœì)¥µÁ½ÉÐì‘•™¥¹•å¹…µ¥Œ°‘•™¥¹•Q½½°ô™É½´€•Ù”½Ñ½½±Ìœì)¥µÁ½ÉÐìèô™É½´€é½œì)¥µÁ½ÉÐì¡½ÍÑ•ÍÌô™É½´€œ¸¸¼¸¸½±¥ˆ½¡½ÍÐµ…•ÍÌ¹µ©Ìœì()½¹ÍÐÉ•…‘MÉ••¸€ô‘•™¥¹•Q½½°¡ì(€‘•ÍÉ¥ÁÑ¥½¸è€…ÁÑÕÉ”Ñ¡”ÕÉÉ•¹Ð™Õ±°ÍÉ••¸½ÈÑ¡”ÕÉÉ•¹Ñ±ä…Ñ¥Ù”…ÁÁ±¥…Ñ¥½¸Ý¥¹‘½Ü…Ðµ½ÍÐ½¹”Á•ÈÕÍ•Èµ•ÍÍ…”…¹•áÑÉ…ÐÙ¥Í¥‰±”Ñ•áÐÝ¥Ñ ±½…°=H¸½È„¹…µ•…ÁÀ°™¥ÉÍÐÕÍ”‘•Í­Ñ½Á}Ý¥¹‘½ÝÌ°Ñ¡•¸É•ÅÕ•ÍÐ…ÁÁÉ½Ù…°Ñ¼™½ÕÌÑ¡”•á…Ð…ÁÀÝ¥¹‘½Ü°Ñ¡•¸…ÁÑÕÉ”Í½Á”…Ñ¥Ù•}Ý¥¹‘½Ü¸Q¡”…ÁÑÕÉ”É•ÅÕ¥É•Ì½Ý¹•È…ÁÁÉ½Ù…°¸Q¡”¥µ…”¥ÌÑ•µÁ½É…Éä…¹‘•±•Ñ•…™Ñ•È=Hì½¹±äÉ•½¹¥é•Ñ•áÐ…¹½½É‘¥¹…Ñ•Ì…É”É•ÑÕÉ¹•¸=H‘½•Ì¹½Ð‘•ÍÉ¥‰”Ù¥ÍÕ…°½‰©•ÑÌ¸™Ñ•È½¹”É•ÍÕ±Ð°ÍÑ½À…±±¥¹œÑ¡¥ÌÑ½½°…¹…¹ÍÝ•È¸œ°(€¥¹ÁÕÑM¡•µ„èè¹½‰©•Ð¡ìÍ½Á”èè¹•¹Õ´¡l™Õ±±}ÍÉ••¸œ°€…Ñ¥Ù•}Ý¥¹‘½Üt¤ô¤°(€…ÁÁÉ½Ù…°èì(€€€ÁÉ½µÁÐè€ ¤€ôø€…ÁÑÕÉ”Ñ¡”É•ÅÕ•ÍÑ•ÍÉ••¸Í½Á”½¹”…¹•áÑÉ…ÐÑ•áÐ±½…±±äüQ¡”¥µ…”¥ÌÑ•µÁ½É…ÉäìÉ•½¹¥é•Ñ•áÐµ…äÉ•µ…¥¸¥¸±½…°¡…Ð¡¥ÍÑ½Éä¸œ°(€€€É•ÅÕ•ÍÐè…Íå¹Œ€¡Ñà¤€ôøì(€€€€€…Ý…¥Ð¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€ÍÉ••¹}É•Í•ÉÙ”œ°Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°(€€€€€€€ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°¤ì(€€€€€É•ÑÕÉ¸€ÕÍ•Èµ…ÁÁÉ½Ù…°œì(€€€ô°(€ô°(€•á•ÕÑ”è€¡¥¹ÁÕÐ°Ñà¤€ôø¡½ÍÑ•ÍÌ¡ì…Ñ¥½¸è€ÍÉ••¹}É•…œ°€¸¸¹¥¹ÁÕÐ°(€€€Í•ÍÍ¥½¹}¥èÑà¹Í•ÍÍ¥½¸¹¥°ÑÕÉ¹}¥èÑà¹Í•ÍÍ¥½¸¹ÑÕÉ¸¹¥°…±±}¥èÑà¹…±±%ô°Ñà¹…‰½ÉÑM¥¹…°¤°)ô¤ì()•áÁ½ÉÐ‘•™…Õ±Ð‘•™¥¹•å¹…µ¥Œ ¡Ñà¤€ôøì(€¥˜€¡ÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}A}ML€„ôô€œÄœñðÁÉ½•ÍÌ¹•¹Ø¹	UI%Q=}MI9}I€„ôô€œÄœ¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€ …Ñà¹ÑÕÉ¸ü¹¥ñð…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€É•…‘}ÍÉ••¸œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€¥¹ÍÁ•Ñ}Ý¥¹‘½Üœ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€¥˜€¡…±±Ì¡Ñà¹Ù¥•Ü°ì¹…µ”è€‰É½ÝÍ•É}Í•…É œ°ÑÕÉ¹%èÑà¹ÑÕÉ¸¹¥ô¤¹±•¹Ñ €ø€À¤É•ÑÕÉ¸¹Õ±°ì(€½¹ÍÐÉ•ÅÕ•ÍÐ€ô€¡Ñà¹ÑÕÉ¸¹¥¹ÁÕÐ€üümt¤¹™¥±Ñ•È ¡Á…ÉÐ¤€ôøÁ…ÉÐ¹­¥¹€ôôô€Ñ•áÐœ¤¹µ…À ¡Á…ÉÐ¤€ôøÁ…ÉÐ¹Ñ•áÐ¤¹©½¥¸ œ€œ¤ì(€½¹ÍÐ•áÁ±¥¥Ñ±å•Í­Ñ½À€ô€½qˆ¡ÍÉ••¹ñ‘•Í­Ñ½Áñµ½¹¥Ñ½Éñ™Õ±±qÌ­ÍÉ••¹ñ½È¥qˆ½¤¹Ñ•ÍÐ¡É•ÅÕ•ÍÐ¤ì(€½¹ÍÐ¹…µ•Í	É½ÝÍ•È€ô€½qˆ¡‰É…Ù•ñ‰É½ÝÍ•ÉñÑ…‰ñÕÉ±ñÝ•‰Í¥Ñ•ñÝ•‰Á…•ñÝ•‰qÌ­Í¥Ñ•ñµ…¥±ñå½ÕÑÕ‰”¥qˆ½¤¹Ñ•ÍÐ¡É•ÅÕ•ÍÐ¤ì(€½¹ÍÐ¥ÍA…•½±±½ÝÕÀ€ô€½qˆ¡……¥¹ñÉ•¡•­ñ¡•¬ üéqÌ­Ñ¡”¤ýqÌ­Á…•ñÉ•… üéqÌ­Ñ¡”¤ýqÌ­Á…•ñÝ¡…Ð üèÍð¥Ì¥qÌ¬ üé½¹ñ¥¸¥qÌ¬ üé¥ÑñÑ¡•qÌ­Á…”¤¥qˆ½¤¹Ñ•ÍÐ¡É•ÅÕ•ÍÐ¤ì(€½¹ÍÐÉ•™•ÉÍQ½¥ÉÍÑA…•%Ñ•´€ô€½qˆ¡™¥ÉÍÑñÑ½À¥qˆ¹ìÀ°ÌÕõqˆ¡Ù¥‘•½ñÉ•ÍÕ±Ññ¥Ñ•µñ±¥¹¬¥qˆ½¤¹Ñ•ÍÐ¡É•ÅÕ•ÍÐ¤(€€€ñð€½qˆ¡½Á•¹ñÁ±…åñÝ…Ñ¡ñ±¥¬¥qˆ¹ìÀ°ÌÕõqˆ¡Ù¥‘•½ñÉ•ÍÕ±Ññ¥Ñ•µñ±¥¹¬¥qˆ½¤¹Ñ•ÍÐ¡É•ÅÕ•ÍÐ¤ì(€½¹ÍÐ…±±…±±Ì€ô…±±Ì¡Ñà¹Ù¥•Ü¤ì(€½¹ÍÐ±…Ñ•ÍÑ	É½ÝÍ•È€ô…±±…±±Ì¹™¥±Ñ•È ¡…±°¤€ôø(€€€l‰É½ÝÍ•É}É•…‘}Á…”œ°€‰É½ÝÍ•É}¹…Ù¥…Ñ”œ°€‰É½ÝÍ•É}Á…•}…Ñ¥½¸œ°€‰É½ÝÍ•É}…Ñ¥Ù…Ñ•}Ñ…ˆt¹¥¹±Õ‘•Ì¡…±°¹¹…µ”¤°(€€¤¹…Ð ´Ä¤ì(€½¹ÍÐ±…Ñ•ÍÑ•Í­Ñ½Á…ÁÑÕÉ”€ô…±±…±±Ì¹™¥±Ñ•È ¡…±°¤€ôø(€€€lÉ•…‘}ÍÉ••¸œ°€¥¹ÍÁ•Ñ}Ý¥¹‘½Üt¹¥¹±Õ‘•Ì¡…±°¹¹…µ”¤°(€€¤¹…Ð ´Ä¤ì(€½¹ÍÐ‰É½ÝÍ•É½¹Ñ•áÑ%ÍÕÉÉ•¹Ð€ô	½½±•…¸¡±…Ñ•ÍÑ	É½ÝÍ•È¤(€€€€˜˜€ …±…Ñ•ÍÑ•Í­Ñ½Á…ÁÑÕÉ”ñð±…Ñ•ÍÑ	É½ÝÍ•È¹ÍÑ…ÉÑ•‘Ð€øô±…Ñ•ÍÑ•Í­Ñ½Á…ÁÑÕÉ”¹ÍÑ…ÉÑ•‘Ð¤ì(€¥˜€ …•áÁ±¥¥Ñ±å•Í­Ñ½À€˜˜€¡¹…µ•Í	É½ÝÍ•Èñð€ ¡¥ÍA…•½±±½ÝÕÀñðÉ•™•ÉÍQ½¥ÉÍÑA…•%Ñ•´¤€˜˜‰É½ÝÍ•É½¹Ñ•áÑ%ÍÕÉÉ•¹Ð¤¤¤É•ÑÕÉ¸¹Õ±°ì(€É•ÑÕÉ¸É•…‘MÉ••¸ì)ô¤ì(
+import { calls } from 'eve/events';
+import { defineDynamic, defineTool } from 'eve/tools';
+import { z } from 'zod';
+import { hostAccess } from '../../lib/host-access.mjs';
+
+const readScreen = defineTool({
+  description: 'Capture the current full screen or the currently active application window at most once per user message and extract visible text with local OCR. For a named app, first use desktop_windows, then request approval to focus the exact app window, then capture scope active_window. The capture requires owner approval. The image is temporary and deleted after OCR; only recognized text and coordinates are returned. OCR does not describe visual objects. After one result, stop calling this tool and answer.',
+  inputSchema: z.object({ scope: z.enum(['full_screen', 'active_window']) }),
+  approval: {
+    prompt: () => 'Capture the requested screen scope once and extract text locally? The image is temporary; recognized text may remain in local chat history.',
+    request: async (ctx) => {
+      await hostAccess({ action: 'screen_reserve', session_id: ctx.session.id,
+        turn_id: ctx.session.turn.id, call_id: ctx.callId }, ctx.abortSignal);
+      return 'user-approval';
+    },
+  },
+  execute: (input, ctx) => hostAccess({ action: 'screen_read', ...input,
+    session_id: ctx.session.id, turn_id: ctx.session.turn.id, call_id: ctx.callId }, ctx.abortSignal),
+});
+
+export default defineDynamic((ctx) => {
+  if (process.env.BURITO_PC_ACCESS !== '1' || process.env.BURITO_SCREEN_READ !== '1') return null;
+  if (!ctx.turn?.id || calls(ctx.view, { name: 'read_screen', turnId: ctx.turn.id }).length > 0) return null;
+  if (calls(ctx.view, { name: 'inspect_window', turnId: ctx.turn.id }).length > 0) return null;
+  if (calls(ctx.view, { name: 'browser_search', turnId: ctx.turn.id }).length > 0) return null;
+  const request = (ctx.turn.input ?? []).filter((part) => part.kind === 'text').map((part) => part.text).join(' ');
+  const explicitlyDesktop = /\b(screen|desktop|monitor|full\s+screen|ocr)\b/i.test(request);
+  const namesBrowser = /\b(brave|browser|tab|url|website|webpage|web\s+site|gmail|youtube)\b/i.test(request);
+  const isPageFollowup = /\b(again|recheck|check(?:\s+the)?\s+page|read(?:\s+the)?\s+page|what(?:'s| is)\s+(?:on|in)\s+(?:it|the\s+page))\b/i.test(request);
+  const refersToFirstPageItem = /\b(first|top)\b.{0,35}\b(video|result|item|link)\b/i.test(request)
+    || /\b(open|play|watch|click)\b.{0,35}\b(video|result|item|link)\b/i.test(request);
+  const allCalls = calls(ctx.view);
+  const latestBrowser = allCalls.filter((call) =>
+    ['browser_read_page', 'browser_navigate', 'browser_page_action', 'browser_activate_tab'].includes(call.name),
+  ).at(-1);
+  const latestDesktopCapture = allCalls.filter((call) =>
+    ['read_screen', 'inspect_window'].includes(call.name),
+  ).at(-1);
+  const browserContextIsCurrent = Boolean(latestBrowser)
+    && (!latestDesktopCapture || latestBrowser.startedAt >= latestDesktopCapture.startedAt);
+  if (!explicitlyDesktop && (namesBrowser || ((isPageFollowup || refersToFirstPageItem) && browserContextIsCurrent))) return null;
+  return readScreen;
+});

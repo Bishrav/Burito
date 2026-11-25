@@ -1,12 +1,15 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import openApplication from '../agent/tools/open_application.ts';
+import { resolveOpenApplication } from '../agent/tools/open_application.ts';
 import { hostAccess } from '../lib/host-access.mjs';
 
 test('application tool requires approval before execution', async () => {
+  assert.equal(resolveOpenApplication({}), null);
+  assert.equal(resolveOpenApplication({ BURITO_PC_ACCESS: '0' }), null);
+  const openApplication = resolveOpenApplication({ BURITO_PC_ACCESS: '1' });
   assert.equal(typeof openApplication.approval, 'function');
   const decision = await openApplication.approval({ toolInput: { app_id: 'test:demo.desktop' } });
-  assert.ok(decision === true || decision === 'user-approval');
+  assert.equal(decision, 'user-approval');
 });
 
 test('disabled PC access and cloud mode stop before the host bridge', async () => {
