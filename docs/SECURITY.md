@@ -28,3 +28,14 @@ same-origin Origin, limits chat bodies, and exposes no generic Eve proxy.
 The internal chat bridge requires a per-start token and accepts session IDs it
 created. Eve's independent loopback development listener still follows Eve's
 local-development trust model. Keep it off shared or remote interfaces.
+
+The web transcript is separate from personal memory and stays outside Git. Chat
+logs omit paths, search queries, message bodies and model reasoning. Browser
+Markdown is rendered with DOM text nodes, a limited markup grammar and HTTP(S)
+links. Web conversation tools remain disabled, including when replaying history
+or retrying after cancellation. A runtime approval event is reported and the
+web turn ends without approval.
+
+Deleting a conversation removes its SQLite transcript. The temporary Eve
+workflow store holds recent run events until graceful server shutdown. An
+abrupt crash can leave its owned temporary directory behind.

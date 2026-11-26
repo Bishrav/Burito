@@ -1,4 +1,5 @@
 # Architecture
+See the [cognitive architecture map](COGNITIVE_ARCHITECTURE.md) for planned responsibilities and research gates.
 
 ## Current boundaries and next change
 
@@ -33,6 +34,31 @@ The offline desktop companion owns memory, capture controls, policy enforcement,
 and audit records. The cloud is optional and does not own the personal database.
 The exact local-model adapter and eve persistence configuration must be tested
 for offline operation before selecting the production integration.
+
+## Web conversation lifecycle
+
+The web process owns one exclusive, private SQLite transcript store. A browser
+request UUID maps to one stored user turn, and a retry replaces the failed
+attempt in that same turn. A live delivery owns the only active reply slot.
+Eve emits text deltas through the internal bridge, and Stop forwards cancellation
+against the active Eve delivery. The web worker keeps saving progress when a
+browser disconnects. A new application process marks unfinished turns as
+interrupted and keeps their partial reply and original message.
+
+Each new turn uses an isolated Eve session with bounded reference data built
+from completed transcript turns. The context builder keeps recent exchanges
+and ranks older excerpts by query overlap. Excerpts preserve speaker attribution
+and wording. They can be incomplete, and a prior assistant reply is not evidence
+of a fact or action. Personality settings use an allowlist and carry no authority.
+System and approval instructions remain in the agent configuration.
+
+Transcript files are mode 600 in an owned private directory outside the source
+tree. By default normal web startup uses the XDG state directory. Temporary
+testing uses a disposable lesson database and a separate transcript location.
+An explicit `--conversation-dir` outside Git lets a synthetic test exercise
+persistence across web process restarts. The brain mount is excluded from
+conversation storage. The web runtime's volatile Eve state lives in a separate
+temporary directory and is discarded after a graceful shutdown.
 
 ## Memory categories
 

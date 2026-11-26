@@ -112,3 +112,32 @@ request approval to focus a stable window ID. KWin keeps its existing listing
 and focus implementation. OCR and native-field insertion retain their existing
 KDE-specific requirements. Window captions are transient and excluded from
 host access audit records.
+
+### Synthetic conversation persistence and evaluation
+
+To test restart behavior without opening private brain data, create an empty
+temporary directory and pass it separately from the lesson database.
+
+```bash
+conversation_state=$(mktemp -d)
+python3 -m burito web --temporary-data --conversation-dir "$conversation_state" --model burito-local --context-tokens 8192
+```
+
+Reuse the same directory in a subsequent launch to reopen the synthetic chats.
+Normal startup uses the XDG state directory for transcripts and still requires
+the brain drive for lessons. The evaluator creates its own private temporary
+state and uses only synthetic text. Run it with the locked runtime installed
+and Ollama already running.
+
+```bash
+python3 scripts/evaluate-conversation.py
+python3 scripts/evaluate-conversation.py --phase1-root /path/to/prepared/phase-1
+```
+
+The optional baseline compares full reply arrival in Phase 1 with first visible
+text and total time in Phase 2. The reported tokens per second use provider
+output-token accounting, including reasoning when Ollama reports it.
+
+For an isolated offline smoke test, launch a separate Ollama process inside a
+network namespace with only loopback enabled, then run
+`python3 scripts/evaluate-conversation.py --offline-smoke` inside that namespace.

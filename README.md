@@ -1,4 +1,5 @@
 # Burito
+See the [digital human vision](docs/DIGITAL_HUMAN_VISION.md), [roadmap](docs/ROADMAP.md), and [current status](docs/STATUS.md).
 
 Start with the [Ryoku setup](docs/RYOKU_SETUP.md), [status](docs/STATUS.md),
 and [security boundaries](docs/SECURITY.md). See the [recovery report](docs/RECOVERY_REPORT.md)

@@ -9,6 +9,7 @@ from pathlib import Path
 import secrets
 import shutil
 import signal
+import socket
 import subprocess
 import sys
 import tempfile
@@ -16,11 +17,14 @@ import threading
 from urllib.parse import urlsplit
 
 from .chat import ROOT
+from .conversation_api import ConversationAPI
+from .conversations import default_directory, open_store
 from .notifications import notify_chat_complete
-from .runtime_lock import acquire_runtime_lock, archive_workflow_data
+from .runtime_lock import acquire_runtime_lock
 
 LOOPBACK = "127.0.0.1"
 BRAIN_MOUNT = Path("/mnt/burito-brain")
+BRAIN_UUID = "ce024ab9-6884-4482-afdd-edbe189ebcf2"
 EVE_PORT = 2000
 BRIDGE_PORT = 2001
 MAX_BODY = 20_000
@@ -42,7 +46,7 @@ def runtime_request(port, path, *, body=None, token=None, timeout=2, host=LOOPBA
         connection.close()
 
 
-def local_status(endpoint, model, token):
+def local_status(endpoint, model, token, eve_port=EVE_PORT, bridge_port=BRIDGE_PORT, eve_process=None):
     def probe(port, path, **kwargs):
         try:
             status, data = runtime_request(port, path, **kwargs)
@@ -50,8 +54,10 @@ def local_status(endpoint, model, token):
         except (OSError, ValueError, http.client.HTTPException):
             return {}
 
-    eve = probe(EVE_PORT, "/eve/v1/health").get("status") == "ready"
-    bridge = probe(BRIDGE_PORT, "/health", token=token).get("status") == "ready"
+    eve = ((eve_process is None or eve_process.poll() is None)
+           and probe(eve_port, "/eve/v1/health").get("status") == "ready"
+           and (eve_process is None or eve_process.poll() is None))
+    bridge = probe(bridge_port, "/health", token=token).get("status") == "ready"
     models = probe(endpoint.port or 80, "/api/tags", host=endpoint.hostname).get("models")
     ollama = isinstance(models, list)
     name = model if ":" in model.rsplit("/", 1)[-1] else model + ":latest"
@@ -65,7 +71,8 @@ def local_status(endpoint, model, token):
     }
 
 
-class BuritoHandler(SimpleHTTPRequestHandler):
+class BuritoHandler(ConversationAPI, SimpleHTTPRequestHandler):
+    notify_conversation = staticmethod(notify_chat_complete)
     protocol_version = "HTTP/1.1"
 
     def __init__(self, *args, **kwargs):
@@ -74,6 +81,13 @@ class BuritoHandler(SimpleHTTPRequestHandler):
     def setup(self):
         super().setup()
         self.connection.settimeout(10)
+
+    def end_headers(self):
+        self.send_header("X-Content-Type-Options", "nosniff")
+        self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header("Content-Security-Policy",
+                         "default-src 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'")
+        super().end_headers()
 
     def send_json(self, status, data):
         payload = json.dumps(data).encode()
@@ -102,18 +116,28 @@ class BuritoHandler(SimpleHTTPRequestHandler):
         if not self.trusted_request():
             return
         if self.path in ("/api/status", "/eve/v1/health"):
-            status = local_status(self.server.endpoint, self.server.model, self.server.token)
+            status = local_status(self.server.endpoint, self.server.model, self.server.token,
+                                  getattr(self.server, "eve_port", EVE_PORT),
+                                  getattr(self.server, "bridge_port", BRIDGE_PORT),
+                                  getattr(self.server, "eve_process", None))
             self.send_json(200 if status["status"] == "ready" else 503, status)
-        else:
+        elif not self.conversation_route("GET"):
             super().do_GET()
 
-    def do_POST(self):
+    def log_request(self, code="-", size="-"):
+        self.log_message("%s %s", self.command, code)
+
+    def do_PATCH(self):
         self.close_connection = True
-        if not self.trusted_request():
-            return
-        if self.path != "/api/chat":
+        if self.trusted_request() and not self.conversation_route("PATCH"):
             self.send_json(404, {"error": "Unknown Burito route."})
-            return
+
+    def do_DELETE(self):
+        self.close_connection = True
+        if self.trusted_request() and not self.conversation_route("DELETE"):
+            self.send_json(404, {"error": "Unknown Burito route."})
+
+    def request_body(self):
         if self.headers.get_content_type() != "application/json" or self.headers.get_all("Transfer-Encoding"):
             self.send_json(415, {"error": "Send a bounded JSON request."})
             return
@@ -130,9 +154,48 @@ class BuritoHandler(SimpleHTTPRequestHandler):
         except TimeoutError:
             self.send_json(408, {"error": "Timed out reading the chat request."})
             return
+        if len(body) != size:
+            self.send_json(400, {"error": "Incomplete chat request."})
+            return None
+        return body
+
+    def json_request(self):
+        body = self.request_body()
+        if body is None:
+            return None
+        try:
+            value = json.loads(body)
+            if not isinstance(value, dict):
+                raise ValueError
+        except (ValueError, RecursionError):
+            self.send_json(400, {"error": "Send a JSON object."})
+            return None
+        return value
+
+    def bridge_request(self, route, data):
+        return runtime_request(getattr(self.server, "bridge_port", BRIDGE_PORT), route, body=json.dumps(data).encode(),
+                               token=self.server.token, timeout=8)
+
+    def eve_alive(self):
+        process = getattr(self.server, "eve_process", None)
+        return process is None or process.poll() is None
+
+    def do_POST(self):
+        self.close_connection = True
+        if not self.trusted_request() or self.conversation_route("POST"):
+            return
+        if self.path != "/api/chat":
+            self.send_json(404, {"error": "Unknown Burito route."})
+            return
+        body = self.request_body()
+        if body is None:
+            return
+        if not self.eve_alive():
+            self.send_json(503, {"error": "This web session’s Eve process stopped."})
+            return
         try:
             status, data = runtime_request(
-                BRIDGE_PORT, "/chat", body=body, token=self.server.token, timeout=125
+                getattr(self.server, "bridge_port", BRIDGE_PORT), "/chat", body=body, token=self.server.token, timeout=125
             )
         except (OSError, ValueError, http.client.HTTPException):
             status, data = 502, {"error": "The local Eve conversation bridge is unavailable."}
@@ -151,13 +214,26 @@ def _stop_process(process):
             process.wait()
 
 
+def brain_available():
+    if not BRAIN_MOUNT.is_mount():
+        return False
+    try:
+        result = subprocess.run(["findmnt", "--mountpoint", str(BRAIN_MOUNT),
+                                 "--noheadings", "--output", "UUID,FSTYPE"],
+                                capture_output=True, text=True, timeout=3, check=True)
+    except (OSError, subprocess.SubprocessError):
+        return False
+    data = BRAIN_MOUNT / "data"
+    return result.stdout.split() == [BRAIN_UUID, "ext4"] and not data.is_symlink() and data.is_dir()
+
+
 def _terminate_web(_signum, _frame):
     raise SystemExit(0)
 
 
 def serve(model, context_tokens, port=8765, lesson="home.honesty", include_personal=False,
           include_system=False, include_activity=False, include_feedback=False,
-          include_project=False, include_suggestions=False, temporary_data=False, notify=False):
+          include_project=False, include_suggestions=False, temporary_data=False, notify=False, conversation_dir=None):
     from .context import build_context
     from .memory import Memory
     from .school import School
@@ -171,7 +247,7 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
     model = model.strip()
     if not model or not 4096 <= context_tokens <= 131072:
         raise ValueError("Choose an installed local model and a valid context size.")
-    if not temporary_data and not (BRAIN_MOUNT.is_mount() and (BRAIN_MOUNT / "data").is_dir()):
+    if not temporary_data and not brain_available():
         raise ValueError("Burito Brain drive is unavailable. Mount it or use --temporary-data for an isolated session.")
     runtime = ROOT / "runtime"
     env = os.environ.copy()
@@ -193,6 +269,20 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
         directory = BRAIN_MOUNT / "data"
         if temporary_data:
             directory = Path(stack.enter_context(tempfile.TemporaryDirectory(prefix="burito-web-")))
+        if conversation_dir is not None:
+            conversation_data = Path(conversation_dir)
+        elif temporary_data:
+            conversation_data = directory / "transcripts"
+        else:
+            conversation_data = default_directory()
+        if conversation_data.resolve().is_relative_to(BRAIN_MOUNT.resolve()):
+            raise ValueError("The brain drive is reserved for existing personal data.")
+        # Worktrees share the main repository path; reject storage anywhere in it.
+        checkout = ROOT
+        while checkout.parent.name == ".tools":
+            checkout = checkout.parent.parent
+        store = stack.enter_context(open_store(conversation_data, checkout))
+        workflow_data = stack.enter_context(tempfile.TemporaryDirectory(prefix="burito-eve-", dir="/tmp"))
         memory = Memory(directory)
         if temporary_data:
             School(memory).install()
@@ -208,18 +298,28 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
                     "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
                     "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
                     "BURITO_INCLUDE_KNOWLEDGE": "1", "BURITO_DATA_DIR": str(directory),
-                    "BURITO_PC_ACCESS": "0", "BURITO_PROJECT_ROOT": str(ROOT),
+                    "BURITO_PC_ACCESS": "0", "BURITO_WEB_CONVERSATION": "1", "BURITO_PROJECT_ROOT": str(ROOT),
                     "BURITO_PYTHON": sys.executable, "EVE_TELEMETRY_DISABLED": "1",
-                    "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1"})
+                    "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1",
+                    "EVE_DEV_STATE_DIR": workflow_data})
         server = stack.enter_context(ThreadingHTTPServer((LOOPBACK, port), BuritoHandler))
         server.endpoint, server.model, server.token = endpoint, model, secrets.token_urlsafe(32)
-        server.notify = notify
-        archive_workflow_data(runtime)
-        process = subprocess.Popen([node, str(eve), "dev", "--host", LOOPBACK, "--port", str(EVE_PORT),
-                                    "--no-ui", "--no-default-extensions"], cwd=runtime, env=env)
+        server.notify, server.conversations = notify, store
+        server.context_tokens = context_tokens
+        with socket.socket() as eve_socket, socket.socket() as bridge_socket:
+            eve_socket.bind((LOOPBACK, 0))
+            bridge_socket.bind((LOOPBACK, 0))
+            server.eve_port = eve_socket.getsockname()[1]
+            server.bridge_port = bridge_socket.getsockname()[1]
+        process = subprocess.Popen([node, str(eve), "dev", "--host", LOOPBACK, "--port", str(server.eve_port),
+                                    "--no-ui", "--no-default-extensions"], cwd=runtime, env=env,
+                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        server.eve_process = process
         stack.callback(_stop_process, process)
         bridge = subprocess.Popen([node, str(runtime / "lib/web-bridge.mjs")], cwd=runtime,
-                                  env={**env, "BURITO_BRIDGE_TOKEN": server.token})
+                                  env={**env, "BURITO_BRIDGE_TOKEN": server.token,
+                                       "BURITO_EVE_PORT": str(server.eve_port),
+                                       "BURITO_BRIDGE_PORT": str(server.bridge_port)})
         stack.callback(_stop_process, bridge)
         if threading.current_thread() is threading.main_thread():
             previous_handler = signal.signal(signal.SIGTERM, _terminate_web)

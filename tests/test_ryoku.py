@@ -47,6 +47,24 @@ class DesktopAdapterTests(unittest.TestCase):
             focus.assert_called_once_with("a" * 36)
 
 
+class BrainMountTests(unittest.TestCase):
+    def test_web_storage_requires_verified_ext4_uuid(self):
+        from unittest.mock import MagicMock
+
+        mount = MagicMock()
+        (mount / "data").is_symlink.return_value = False
+        (mount / "data").is_dir.return_value = True
+        with patch.object(web, "BRAIN_MOUNT", mount), patch.object(web.subprocess, "run") as probe:
+            mount.is_mount.return_value = False
+            self.assertFalse(web.brain_available())
+            probe.assert_not_called()
+            mount.is_mount.return_value = True
+            probe.return_value.stdout = "different-volume ext4\n"
+            self.assertFalse(web.brain_available())
+            probe.return_value.stdout = f"{web.BRAIN_UUID} ext4\n"
+            self.assertTrue(web.brain_available())
+
+
 class WebIntegrationTests(unittest.TestCase):
     def setUp(self):
         try:
@@ -70,6 +88,14 @@ class WebIntegrationTests(unittest.TestCase):
             return response.status, json.loads(response.read())
         finally:
             connection.close()
+
+    def test_exited_owned_eve_is_unready_even_when_health_endpoint_answers(self):
+        from unittest.mock import Mock
+        with patch("burito.web.runtime_request", return_value=(200, {"status": "ready", "models": []})) as request:
+            result = web.local_status(urlsplit("http://127.0.0.1:11434/v1"), "demo", "test-token",
+                                      eve_port=23456, eve_process=Mock(poll=Mock(return_value=1)))
+        self.assertFalse(result["eve"])
+        self.assertTrue(all(call.args[0] != 23456 for call in request.call_args_list))
 
     def test_readiness_requires_installed_model_and_both_runtime_processes(self):
         def runtime(port, path, **kwargs):

@@ -39,6 +39,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     gateway_key = environment.pop("AI_GATEWAY_API_KEY", None)
     gateway_model = environment.pop("BURITO_GATEWAY_MODEL", None)
     environment.pop("BURITO_ONLINE_ENABLED", None)
+    environment.pop("BURITO_WEB_CONVERSATION", None)
     if enable_online:
         if not gateway_key or not gateway_model:
             raise ValueError(

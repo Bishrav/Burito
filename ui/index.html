@@ -6,7 +6,7 @@
   <meta name="theme-color" content="#080d12">
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
   <title>Burito // Local Assistant Console</title>
-  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./style-2.css"><link rel="stylesheet" href="./style-3.css"><link rel="stylesheet" href="./style-4.css">
+  <link rel="stylesheet" href="./style.css"><link rel="stylesheet" href="./style-2.css"><link rel="stylesheet" href="./style-3.css"><link rel="stylesheet" href="./style-4.css"><link rel="stylesheet" href="./conversation.css">
 </head>
 <body>
   <div class="app-shell">
@@ -15,7 +15,7 @@
         <span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i></span>
         <span><b>BURITO</b><small>PERSONAL ASSISTANT // LOCAL CONSOLE</small></span>
       </a>
-      <div class="top-state"><span class="state-dot"></span><span>INTERFACE PREVIEW</span><span class="divider">/</span><span class="muted">ASSISTANT CONNECTION NOT CONFIGURED</span></div>
+      <div class="top-state"><span class="state-dot"></span><span>LOCAL CONVERSATIONS</span></div>
       <div class="top-right"><time id="clock">--:--:--</time><button class="icon-button" type="button" aria-label="Open settings" data-nav="settings">⌘</button></div>
     </header>
 
@@ -51,9 +51,35 @@
 
       <div class="content-grid">
         <section class="panel assistant-panel" id="assistant">
-          <div class="panel-heading"><div><span class="eyebrow">02 / INTERACTION</span><h2>Assistant channel</h2></div><span class="pill neutral">IDLE</span></div>
-          <div class="empty-chat" id="conversation"><div class="empty-glyph">✳</div><b>Local assistant channel</b><p id="connectionMessage">Checking the Burito runtime on this computer…</p></div>
-          <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Ask Burito something…" autocomplete="off"><button type="submit" aria-label="Send message">↑</button></div><div class="composer-meta"><span id="connectionStatus" role="status">CHECKING LOCAL CONNECTION</span><span>ENTER TO SEND</span></div></form>
+          <div class="panel-heading"><h2 id="chat-title">Conversations</h2><details id="settings"><summary>Personality</summary><form id="personality"></form></details></div>
+          <div class="chat-layout">
+            <aside class="chat-sidebar" aria-label="Conversation history">
+              <button id="new-chat" type="button">New chat</button>
+              <label for="chat-search">Search conversations</label>
+              <input id="chat-search" type="search" maxlength="120" autocomplete="off">
+              <nav id="chat-history" aria-label="Saved conversations"></nav>
+              <button id="more-chats" type="button" hidden>More conversations</button>
+            </aside>
+            <div class="chat-main">
+              <div class="chat-actions">
+                <button id="rename-chat" type="button">Rename</button>
+                <button id="delete-chat" type="button">Delete</button>
+                <button id="older-turns" type="button" hidden>Older messages</button>
+              </div>
+              <div id="conversation" aria-label="Conversation messages"></div>
+              <p id="connectionMessage" class="chat-note">Checking local services…</p>
+              <form class="composer" id="composer">
+                <label for="message">MESSAGE</label>
+                <div class="composer-row"><input id="message" type="text" maxlength="2400" placeholder="Ask Burito something…" autocomplete="off"><button id="send-message" type="submit">Send</button></div>
+                <div class="chat-actions">
+                  <button id="stop-reply" type="button" disabled>Stop</button>
+                  <button id="retry-reply" type="button" disabled>Retry</button>
+                  <span id="connectionStatus" role="status">Checking local connection</span>
+                </div>
+                <small id="turn-metrics"></small>
+              </form>
+            </div>
+          </div>
         </section>
         <section class="panel context-panel">
           <div class="panel-heading"><div><span class="eyebrow">03 / CONTEXT CONTROL</span><h2>What Burito may use</h2></div><span class="pill neutral">PREVIEW ONLY</span></div>
@@ -76,6 +102,6 @@
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script src="./app.js" defer></script>
+  <script type="module" src="./app.js"></script>
 </body>
 </html>
