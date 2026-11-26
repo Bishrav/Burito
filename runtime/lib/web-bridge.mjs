@@ -1,11 +1,13 @@
 import { createServer } from 'node:http';
 import { Client } from 'eve/client';
+import { cancelTurn, streamTurn } from './stream-turn.mjs';
 
 const token = process.env.BURITO_BRIDGE_TOKEN;
 if (!token) throw new Error('Start the web bridge through Burito.');
 
-const client = new Client({ baseUrl: 'http://127.0.0.1:2000' });
+const client = new Client({ baseUrl: `http://127.0.0.1:${process.env.BURITO_EVE_PORT || 2000}` });
 const sessions = new Set();
+const active = new Map();
 const server = createServer(async (request, response) => {
   function json(status, value) {
     response.writeHead(status, {'content-type': 'application/json; charset=utf-8'});
@@ -18,7 +20,7 @@ const server = createServer(async (request, response) => {
   if (request.method === 'GET' && request.url === '/health') {
     return json(200, {status: 'ready'});
   }
-  if (request.method !== 'POST' || request.url !== '/chat') {
+  if (request.method !== 'POST' || !['/chat', '/stream', '/cancel'].includes(request.url)) {
     return json(404, {error: 'Unknown bridge route.'});
   }
 
@@ -35,6 +37,31 @@ const server = createServer(async (request, response) => {
   } catch {
     return json(400, {error: 'Invalid JSON chat request.'});
   }
+  if (request.url === '/cancel') {
+    const turn = active.get(input?.requestId);
+    if (!turn) return json(409, {error: 'This reply is no longer active.'});
+    try {
+      await cancelTurn(turn);
+      return json(202, {status: 'stopping'});
+    } catch {
+      return json(502, {error: 'Eve could not accept the stop request.'});
+    }
+  }
+  if (request.url === '/stream') {
+    if (!/^[a-f0-9]{32}$/.test(input?.requestId ?? '') || typeof input?.message !== 'string') {
+      return json(400, {error: 'Invalid streaming turn.'});
+    }
+    if (active.size) return json(409, {error: 'Another reply is active.'});
+    const turn = {};
+    active.set(input.requestId, turn);
+    try {
+      await streamTurn(client, input, response, turn);
+    } finally {
+      active.delete(input.requestId);
+      response.end();
+    }
+    return;
+  }
   if (typeof input?.message !== 'string' || !input.message.trim()) {
     return json(400, {error: 'Enter a message.'});
   }
@@ -42,6 +69,8 @@ const server = createServer(async (request, response) => {
     return json(409, {error: 'This chat session is no longer available. Start a new chat.'});
   }
 
+  if (active.size) return json(409, {error: 'Another reply is active.'});
+  active.set('legacy', {});
   try {
     const message = input.message.trim();
     let session, delivery;
@@ -60,6 +89,8 @@ const server = createServer(async (request, response) => {
     return json(200, {sessionId: session.id, status: result.status, reply: result.reply});
   } catch {
     return json(502, {error: 'The local conversation failed. Check Eve and Ollama availability.'});
+  } finally {
+    active.delete('legacy');
   }
 });
-server.listen(2001, '127.0.0.1', () => console.log('Burito Eve client bridge listening on 127.0.0.1:2001'));
+server.listen(Number(process.env.BURITO_BRIDGE_PORT || 2001), '127.0.0.1');

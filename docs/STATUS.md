@@ -9,7 +9,14 @@ See the [development log](DEVELOPMENT_LOG.md) for current host checks and
 [Ryoku setup](RYOKU_SETUP.md) for startup instructions.
 
 Startup with the private brain database and live KWin operations remain unverified.
-KWin regression tests passed. Phase 2 implementation has yet to start.
+KWin regression tests passed.
+
+The Phase 2 worktree adds live text deltas, private transcript storage, conversation
+search and management, a six-setting personality, bounded reference context,
+and cancellation and retry controls. Review evidence and remaining live checks
+in the [development log](DEVELOPMENT_LOG.md). Application restart and SQLite
+reopen passed with synthetic data. A physical PC shutdown and reboot remains
+unverified. Phase 3 implementation has yet to start.
 
 ## Implemented
 

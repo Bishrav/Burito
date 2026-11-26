@@ -144,6 +144,7 @@ def main(argv=None):
     web.add_argument("--context-tokens", type=int, required=True)
     web.add_argument("--port", type=int, default=8765)
     web.add_argument("--notify", action="store_true", help="Show a generic desktop notification for successful replies")
+    web.add_argument("--conversation-dir", help="Absolute private transcript directory outside the checkout")
     web.add_argument("--temporary-data", action="store_true", help="Use an isolated temporary lesson database")
     web.add_argument("--lesson", default="home.honesty")
     web.add_argument("--include-project", action="store_true")
@@ -209,7 +210,7 @@ def main(argv=None):
             serve(args.model, args.context_tokens, port=args.port, lesson=args.lesson,
                   include_project=args.include_project, include_feedback=args.include_feedback,
                   include_suggestions=args.include_suggestions, include_activity=args.include_activity,
-                  temporary_data=args.temporary_data, notify=args.notify)
+                  temporary_data=args.temporary_data, notify=args.notify, conversation_dir=args.conversation_dir)
         elif args.command == "pc":
             if args.pc_command == "enable":
                 print(enable())

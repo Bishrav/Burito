@@ -1,0 +1,36 @@
+.engine-panel, .context-panel { display: none }
+.content-grid:not(.lower-grid) { display: block }
+.assistant-panel { min-width: 0 }
+.chat-layout { display: grid; grid-template-columns: minmax(11rem, 22%) minmax(0, 1fr); gap: 1rem }
+.chat-sidebar { display: grid; align-content: start; gap: .65rem; min-width: 0 }
+.chat-sidebar nav { display: grid; gap: .35rem; max-height: 25rem; overflow: auto }
+.chat-sidebar :is(button, input), .chat-actions button, #settings :is(button, select), .copy-text {
+  border: 1px solid #425c67; border-radius: .35rem; background: #111d24; color: #e0ebf0;
+  padding: .45rem .7rem; font: inherit; min-width: 0
+}
+.chat-sidebar label, .chat-note, #turn-metrics { color: #aec1cb; font-size: .85rem }
+.chat-sidebar nav button { text-align: left; overflow-wrap: anywhere }
+.chat-sidebar [aria-current="true"] { border-color: #7adbe4; background: #1b3943 }
+.chat-main { min-width: 0 }
+.chat-actions { display: flex; align-items: center; flex-wrap: wrap; gap: .55rem; margin-block: .55rem }
+#conversation { max-height: 60vh; min-height: 14rem; overflow: auto; overflow-wrap: anywhere }
+#settings { position: relative }
+#settings form { display: grid; gap: .5rem; margin-block: .5rem; min-width: 10rem }
+#settings label { display: flex; gap: .5rem; justify-content: space-between; align-items: center }
+#conversation .chat-message :is(p, ul, ol, blockquote, pre) { margin: .5rem 0; line-height: 1.55 }
+#conversation .chat-message pre { white-space: pre; overflow-x: auto; padding: .65rem; background: #101b20; border-radius: .35rem }
+#conversation .chat-message > p { white-space: pre-wrap }
+#conversation .chat-message h3 { font-size: 1rem; margin-block: .5rem }
+#conversation .chat-message a { color: #8ee7f4; text-decoration: underline }
+#conversation .chat-message code { font-family: var(--mono, monospace) }
+#conversation .chat-message .token-string { color: #bde391 }
+#conversation .chat-message .token-keyword { color: #b0c4ff }
+#conversation .chat-message .token-comment { color: #a9bac2 }
+#conversation .copy-text { font-size: .75rem; margin-block: .35rem }
+#conversation .chat-message blockquote { border-inline-start: 2px solid #648e9d; padding-inline-start: .7rem }
+:where(.chat-layout, #settings) :focus-visible { outline: 2px solid #7adbe4; outline-offset: 2px }
+:where(.chat-layout, #settings) button:disabled { opacity: .5; cursor: default }
+@media (max-width: 760px) {
+  .chat-layout { grid-template-columns: minmax(0, 1fr) }
+  .chat-sidebar nav { max-height: 9rem }
+}

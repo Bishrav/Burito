@@ -13,3 +13,7 @@ Burito should communicate naturally while accurately describing its capabilities
 uncertainty and limits. It makes no claims of consciousness or fabricated
 emotion. Personalization starts with approved memory and retrieval. Model
 fine-tuning is a separate, evaluated experiment with approved data and rollback.
+
+The permanent [digital human vision](DIGITAL_HUMAN_VISION.md) defines the full
+direction, with separate [cognitive architecture](COGNITIVE_ARCHITECTURE.md),
+[Academy](AI_ACADEMY.md), and [portable brain storage](BRAIN_STORAGE.md) plans.

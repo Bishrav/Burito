@@ -31,7 +31,16 @@ database, readiness reporting, optional generic desktop notifications,
 Hyprland window enumeration and active-window confirmation, and synthetic
 scoped file reads and approved Gio launches. KWin remains available through the
 existing implementation and regression tests. See the [development log](DEVELOPMENT_LOG.md)
-for host evidence and remaining release checks. Phase 2 starts with a separate implementation plan.
+for host evidence and remaining release checks. Phase 2 adds live Eve text, private traceable turn recovery,
+and configurable conversation behavior.
+
+### Phase 2 release checks
+
+Evaluate follow-ups, corrections, ambiguity, long context, interruption, retry,
+authorization boundaries and local runtime failures with synthetic messages.
+Verify playback of a live turn in Brave and recovery from process restart.
+Record machine reboot evidence separately before marking that scenario verified.
+Persistent personal memory and advanced retrieval remain in Phase 3.
 
 ## Product direction
 
@@ -202,3 +211,11 @@ activity logs. Avoid "100% automated" as a target; automate proven workflows.
 Complete milestone 0 hardware/storage work, then one end-to-end text workflow
 in milestone 1. Keep the later roadmap adaptable. Voice, observation, and
 autonomy must build on a working memory and reasoning layer.
+
+## Parallel research tracks
+
+The [Academy curriculum](AI_ACADEMY.md) and [cognitive architecture](COGNITIVE_ARCHITECTURE.md)
+advance through synthetic evaluations and source verification while Phase 2 is
+stabilized. Promote results only after comparison to a baseline, safety checks,
+owner approval and a rollback plan. The [portable brain](BRAIN_STORAGE.md)
+requires its own verified storage and recovery gates before Phase 3 integration.
