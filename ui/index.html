@@ -34,8 +34,8 @@
 
     <main id="overview" class="main-content">
       <section class="welcome-row">
-        <div><p class="eyebrow">PERSONAL COMPUTING SYSTEM <span>•</span> PREVIEW BUILD</p><h1>Your workspace,<br><em>at a glance.</em></h1><p class="intro">A local-first command surface for Burito. The interface is ready; live assistant data will appear after the runtime is connected.</p></div>
-        <div class="connection-card"><div class="card-top"><span class="eyebrow">LOCAL RUNTIME</span><span class="pill amber"><i></i> NOT CONNECTED</span></div><div class="connection-body"><span class="connection-glyph">⌬</span><div><b>Burito agent</b><small>Runtime health has not been checked.</small></div></div><div class="connection-foot"><span>MODEL</span><b>Unknown</b><span class="foot-sep">·</span><span>MODE</span><b>Local-first</b></div></div>
+        <div><p class="eyebrow">PERSONAL COMPUTING SYSTEM <span>•</span> PREVIEW BUILD</p><h1>Your workspace,<br><em>at a glance.</em></h1><p class="intro">A local-first command surface for Burito. Chat with the local assistant when Eve and the selected Ollama model are ready.</p></div>
+        <div class="connection-card"><div class="card-top"><span class="eyebrow">LOCAL RUNTIME</span><span class="pill amber"><i></i> NOT CONNECTED</span></div><div class="connection-body"><span class="connection-glyph">⌬</span><div><b>Burito agent</b><small id="runtimeSummary">Checking local services…</small></div></div><div class="connection-foot"><span>MODEL</span><b id="runtimeModel">Unknown</b><span class="foot-sep">·</span><span>MODE</span><b>Local-first</b></div></div>
       </section>
 
       <section class="engine-panel panel" aria-label="Burito engine visualization">
@@ -53,7 +53,7 @@
         <section class="panel assistant-panel" id="assistant">
           <div class="panel-heading"><div><span class="eyebrow">02 / INTERACTION</span><h2>Assistant channel</h2></div><span class="pill neutral">IDLE</span></div>
           <div class="empty-chat" id="conversation"><div class="empty-glyph">✳</div><b>Local assistant channel</b><p id="connectionMessage">Checking the Burito runtime on this computer…</p></div>
-          <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Ask Burito something…" autocomplete="off"><button type="submit" aria-label="Send message">↑</button></div><div class="composer-meta"><span id="connectionStatus">CHECKING LOCAL CONNECTION</span><span>ENTER TO SEND</span></div></form>
+          <form class="composer" id="composer"><label for="message">MESSAGE</label><div class="composer-row"><input id="message" type="text" placeholder="Ask Burito something…" autocomplete="off"><button type="submit" aria-label="Send message">↑</button></div><div class="composer-meta"><span id="connectionStatus" role="status">CHECKING LOCAL CONNECTION</span><span>ENTER TO SEND</span></div></form>
         </section>
         <section class="panel context-panel">
           <div class="panel-heading"><div><span class="eyebrow">03 / CONTEXT CONTROL</span><h2>What Burito may use</h2></div><span class="pill neutral">PREVIEW ONLY</span></div>
@@ -72,7 +72,7 @@
         <section class="panel compact-panel" id="memory"><div class="panel-heading"><div><span class="eyebrow">04 / MEMORY</span><h2>Personal memory</h2></div><span class="pill neutral">NOT LOADED</span></div><p class="panel-copy">Your saved facts stay local. They are excluded from a chat unless you explicitly include them.</p><button class="text-button" data-nav="memory">Explore memory <span>↗</span></button></section>
         <section class="panel compact-panel" id="activity"><div class="panel-heading"><div><span class="eyebrow">05 / OBSERVATION</span><h2>Activity summary</h2></div><span class="pill neutral">NOT LOADED</span></div><p class="panel-copy">No activity records are displayed because the interface is not connected to Burito’s local data.</p><button class="text-button" data-nav="activity">Review privacy controls <span>↗</span></button></section>
       </div>
-      <footer><span>BURITO / LOCAL-FIRST ASSISTANT</span><span>PREVIEW UI · NO LIVE DATA · NO PC ACTIONS</span><span id="date">—</span></footer>
+      <footer><span>BURITO / LOCAL-FIRST ASSISTANT</span><span>LOCAL CHAT · PC ACTIONS DISABLED IN WEB</span><span id="date">—</span></footer>
     </main>
   </div>
   <div class="toast" id="toast" role="status" aria-live="polite"></div>

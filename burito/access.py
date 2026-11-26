@@ -861,14 +861,14 @@ def dispatch(request, memory=None, allowed_roots=None):
         elif action in ('windows', 'focus_window', 'inspect_window'):
             if os.environ.get('BURITO_DESKTOP_CONTROL') != '1':
                 raise ValueError('Desktop window access is disabled for this chat')
-            from . import windows
+            from . import desktop, windows
             if action == 'windows':
-                result = windows.list_windows()
+                result = desktop.list_windows()
             else:
                 if os.environ.get('BURITO_APPROVED_WINDOW_FOCUS') != '1':
                     raise ValueError('Window focus requires the approved eve tool path')
                 if action == 'focus_window':
-                    result = windows.focus_window(request.get('internalId'))
+                    result = desktop.focus_window(request.get('internalId'))
                 else:
                     if os.environ.get('BURITO_SCREEN_READ') != '1':
                         raise ValueError('Active-window OCR is disabled for this chat')
@@ -920,7 +920,7 @@ def audit(action, request, outcome, memory=None):
                 # Window captions are transient response data and never enter the audit log.
                 target = ('Approved native text insertion' if action == 'desktop_insert_text'
                           else 'Approved local clipboard write' if action == 'clipboard_write_text'
-                          else 'KWin window request')
+                          else 'Desktop window request')
             elif action == 'browser_search':
                 # Search terms can contain sensitive user text; never persist them in the audit log.
                 target = 'Approved Brave search'

@@ -24,6 +24,15 @@ The sequence below supersedes the historical milestones retained in this file.
 
 See [vision](VISION.md), [security](SECURITY.md), and [innovation](INNOVATION.md).
 
+### Phase 1 verification
+
+Phase 1 verifies the local Eve and Ollama web path with a temporary
+database, readiness reporting, optional generic desktop notifications,
+Hyprland window enumeration and active-window confirmation, and synthetic
+scoped file reads and approved Gio launches. KWin remains available through the
+existing implementation and regression tests. See the [development log](DEVELOPMENT_LOG.md)
+for host evidence and remaining release checks. Phase 2 starts with a separate implementation plan.
+
 ## Product direction
 
 Build a personal second brain that understands the owner's goals, remembers

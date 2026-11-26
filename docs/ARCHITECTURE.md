@@ -4,9 +4,11 @@
 
 Python owns SQLite storage, retrieval and host operations. Eve assembles local
 context and proposes tool calls, with Ollama serving inference on loopback.
-Approval and host input validation are separate from the model. The immediate
-desktop change after recovery is a thin Hyprland and KWin adapter, preserving
-existing entry points and using synthetic fixtures before live operations.
+Approval and host input validation are separate from the model. The desktop adapter selects Hyprland in its session and retains the KWin bridge.
+Hyprland focus validates compositor-issued stable IDs and confirms the active
+window after dispatch. The web console serves only the chat and readiness APIs
+to the browser. Its private bridge forwards turns to Eve, which calls Ollama on
+loopback. Web chat leaves desktop actions in the separately scoped CLI path.
 
 Keep Core, Memory, Reasoning, Awareness, Actions, Guardian, Research and the
 Interface as logical boundaries in this codebase. Add Vision, Voice, Connect,
@@ -15,7 +17,7 @@ state and clear permissions before splitting services or adding agents.
 ```text
 Text / voice / desktop panel
            |
-Local coordinator (eve runtime, planned)
+Local coordinator (Eve runtime)
            |
            +-- Local memory and document retrieval
            +-- Model router --> local model / permitted cloud context

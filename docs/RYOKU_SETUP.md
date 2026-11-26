@@ -88,3 +88,27 @@ Once the runtime is recovered, set `BURITO_LOCAL_MODEL=burito-local` and `BURITO
 | Android | When a Flutter client exists, use the official Flutter SDK with its bundled Dart, the Android SDK and JDK required by that project's Gradle tooling. Check `flutter doctor -v` and `adb devices`. Host KVM is accessible for eventual emulator use. iOS building and signing belongs on the Apple Silicon MacBook with Xcode. [Flutter Android setup](https://docs.flutter.dev/platform-integration/android/setup) |
 | REST and WebSocket | The installed Node runtime and curl are enough for local REST and WebSocket development. Node has a WebSocket client. Review the recovered runtime before selecting a server dependency. |
 | Private remote access | A future device can use an authenticated application API over Tailscale or WireGuard, or an SSH local port forward. Keep direct Ollama access bound to loopback. Approve any host service, VPN enrollment, or remote access change separately. |
+
+
+## Phase 1 web console
+
+From the Phase 1 worktree with Ollama already running, install the locked
+runtime, then start an isolated web session.
+
+```bash
+bash scripts/setup-environment.sh --runtime
+python3 -m burito web --temporary-data --model burito-local --context-tokens 8192
+```
+
+Open `http://127.0.0.1:8765/` directly. The console checks Eve, its chat bridge
+and the selected model before enabling the composer. Add `--notify` to request
+a generic desktop notification on completed replies. Each temporary run creates
+its own lesson database. Normal startup expects the mounted brain drive and
+does not fall back to an internal database. For the desktop launcher, set
+`BURITO_WEB_MODEL=burito-local` if that is the installed alias.
+
+CLI sessions with `--enable-desktop-control` can list Hyprland 0.57+ windows and
+request approval to focus a stable window ID. KWin keeps its existing listing
+and focus implementation. OCR and native-field insertion retain their existing
+KDE-specific requirements. Window captions are transient and excluded from
+host access audit records.

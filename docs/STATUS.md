@@ -2,9 +2,15 @@
 
 ## Current verification
 
-Phase 0 recovery is in the dedicated recovery worktree. The historical records
-below include prior KDE observations. Consult the [recovery report](RECOVERY_REPORT.md)
-for current checks and [Ryoku setup](RYOKU_SETUP.md) for current host compatibility.
+Phase 0 is merged into main at `cd61b76`. Phase 1 adds a verified
+loopback-only web chat path, status reporting, opt-in notifications and a Hyprland
+window adapter. The historical records below include prior KDE observations.
+See the [development log](DEVELOPMENT_LOG.md) for current host checks and
+[Ryoku setup](RYOKU_SETUP.md) for startup instructions.
+
+Startup with the private brain database and live KWin operations remain unverified.
+KWin regression tests passed. Phase 2 implementation has yet to start.
+
 ## Implemented
 
 - Full staged roadmap and architecture decisions.
