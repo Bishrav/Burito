@@ -21,3 +21,10 @@ before durable automation. Owner approval is required for sensitive operations
 and external side effects. The current loopback development runtime is for a
 trusted local session. Review each integration before enabling it against
 private data.
+
+
+The Phase 1 browser-facing listener checks the literal loopback Host and
+same-origin Origin, limits chat bodies, and exposes no generic Eve proxy.
+The internal chat bridge requires a per-start token and accepts session IDs it
+created. Eve's independent loopback development listener still follows Eve's
+local-development trust model. Keep it off shared or remote interfaces.

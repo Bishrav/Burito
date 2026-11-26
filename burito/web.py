@@ -1,90 +1,183 @@
-"""Loopback-only web console and Eve API bridge."""
+"""Loopback-only web console with a narrow Eve conversation API."""
 
+from contextlib import ExitStack
 import http.client
+from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+import json
 import os
 from pathlib import Path
+import secrets
 import shutil
+import signal
 import subprocess
 import sys
-from http.server import SimpleHTTPRequestHandler, ThreadingHTTPServer
+import tempfile
+import threading
+from urllib.parse import urlsplit
 
 from .chat import ROOT
+from .notifications import notify_chat_complete
 from .runtime_lock import acquire_runtime_lock, archive_workflow_data
+
+LOOPBACK = "127.0.0.1"
+BRAIN_MOUNT = Path("/mnt/burito-brain")
+EVE_PORT = 2000
+BRIDGE_PORT = 2001
+MAX_BODY = 20_000
+
+
+def runtime_request(port, path, *, body=None, token=None, timeout=2, host=LOOPBACK):
+    headers = {"Content-Type": "application/json"} if body is not None else {}
+    if token:
+        headers["Authorization"] = f"Bearer {token}"
+    connection = http.client.HTTPConnection(host, port, timeout=timeout)
+    try:
+        connection.request("POST" if body is not None else "GET", path, body, headers)
+        response = connection.getresponse()
+        payload = response.read(512_001)
+        if len(payload) > 512_000:
+            raise ValueError("Local runtime response is too large")
+        return response.status, json.loads(payload)
+    finally:
+        connection.close()
+
+
+def local_status(endpoint, model, token):
+    def probe(port, path, **kwargs):
+        try:
+            status, data = runtime_request(port, path, **kwargs)
+            return data if status == 200 and isinstance(data, dict) else {}
+        except (OSError, ValueError, http.client.HTTPException):
+            return {}
+
+    eve = probe(EVE_PORT, "/eve/v1/health").get("status") == "ready"
+    bridge = probe(BRIDGE_PORT, "/health", token=token).get("status") == "ready"
+    models = probe(endpoint.port or 80, "/api/tags", host=endpoint.hostname).get("models")
+    ollama = isinstance(models, list)
+    name = model if ":" in model.rsplit("/", 1)[-1] else model + ":latest"
+    installed = ollama and any(
+        isinstance(row, dict) and row.get("name") in (model, name) for row in models
+    )
+    return {
+        "status": "ready" if eve and bridge and installed else "unavailable",
+        "eve": eve, "bridge": bridge, "ollama": ollama, "modelInstalled": installed,
+        "model": model,
+    }
 
 
 class BuritoHandler(SimpleHTTPRequestHandler):
     protocol_version = "HTTP/1.1"
-    eve_port = 2000
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=str(ROOT / "ui"), **kwargs)
 
+    def setup(self):
+        super().setup()
+        self.connection.settimeout(10)
+
+    def send_json(self, status, data):
+        payload = json.dumps(data).encode()
+        self.send_response(status)
+        self.send_header("Content-Type", "application/json; charset=utf-8")
+        self.send_header("Content-Length", str(len(payload)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        if self.command != "HEAD":
+            self.wfile.write(payload)
+
+    def trusted_request(self):
+        host = f"{LOOPBACK}:{self.server.server_port}"
+        origins = self.headers.get_all("Origin")
+        if self.headers.get_all("Host") == [host] and origins in (None, [f"http://{host}"]):
+            return True
+        self.close_connection = True
+        self.send_json(403, {"error": "Use the Burito loopback address directly."})
+        return False
+
+    def do_HEAD(self):
+        if self.trusted_request():
+            super().do_HEAD()
+
     def do_GET(self):
-        if self.path.startswith("/eve/v1/"):
-            return self.proxy()
-        if self.path == "/" or self.path == "/index.html":
-            self.path = "/index.html"
-        return super().do_GET()
+        if not self.trusted_request():
+            return
+        if self.path in ("/api/status", "/eve/v1/health"):
+            status = local_status(self.server.endpoint, self.server.model, self.server.token)
+            self.send_json(200 if status["status"] == "ready" else 503, status)
+        else:
+            super().do_GET()
 
     def do_POST(self):
-        if self.path == "/api/chat":
-            self.proxy(port=2001, path="/chat")
-        elif self.path.startswith("/eve/v1/"):
-            self.proxy()
-        else:
-            self.send_error(404)
-
-    def proxy(self, port=None, path=None):
-        connection = http.client.HTTPConnection("127.0.0.1", port or self.eve_port, timeout=3600)
-        headers = {key: value for key, value in self.headers.items()
-                   if key.lower() not in {"host", "connection", "accept-encoding"}}
-        headers["Host"] = f"127.0.0.1:{self.eve_port}"
-        body = self.rfile.read(int(self.headers.get("Content-Length", "0"))) if self.command == "POST" else None
+        self.close_connection = True
+        if not self.trusted_request():
+            return
+        if self.path != "/api/chat":
+            self.send_json(404, {"error": "Unknown Burito route."})
+            return
+        if self.headers.get_content_type() != "application/json" or self.headers.get_all("Transfer-Encoding"):
+            self.send_json(415, {"error": "Send a bounded JSON request."})
+            return
+        length = self.headers.get_all("Content-Length") or []
+        if len(length) != 1 or not length[0].isascii() or not length[0].isdecimal() or len(length[0]) > 6:
+            self.send_json(400, {"error": "Invalid content length."})
+            return
+        size = int(length[0])
+        if not 0 < size <= MAX_BODY:
+            self.send_json(413, {"error": "Chat request is too large or empty."})
+            return
         try:
-            connection.request(self.command, path or self.path, body=body, headers=headers)
-            response = connection.getresponse()
-            self.send_response(response.status, response.reason)
-            for key, value in response.getheaders():
-                if key.lower() not in {"connection", "transfer-encoding", "content-length", "content-encoding"}:
-                    self.send_header(key, value)
-            self.send_header("Transfer-Encoding", "chunked")
-            self.send_header("Cache-Control", "no-store")
-            self.end_headers()
-            while True:
-                # read1 returns an available upstream chunk immediately. read(8192)
-                # can buffer the live token stream until the model turn finishes.
-                chunk = response.read1(8192)
-                if not chunk:
-                    break
-                self.wfile.write(f"{len(chunk):X}\r\n".encode() + chunk + b"\r\n")
-                self.wfile.flush()
-            self.wfile.write(b"0\r\n\r\n")
-        except (OSError, http.client.HTTPException) as error:
-            if not self.wfile.closed:
-                try:
-                    self.send_error(502, f"Local Eve runtime unavailable: {error}")
-                except (BrokenPipeError, ConnectionResetError):
-                    pass
-        finally:
-            connection.close()
+            body = self.rfile.read(size)
+        except TimeoutError:
+            self.send_json(408, {"error": "Timed out reading the chat request."})
+            return
+        try:
+            status, data = runtime_request(
+                BRIDGE_PORT, "/chat", body=body, token=self.server.token, timeout=125
+            )
+        except (OSError, ValueError, http.client.HTTPException):
+            status, data = 502, {"error": "The local Eve conversation bridge is unavailable."}
+        if status == 200 and self.server.notify:
+            data["notificationAccepted"] = notify_chat_complete()
+        self.send_json(status, data)
 
-    def log_message(self, format, *args):
-        print("Burito UI:", format % args)
+
+def _stop_process(process):
+    if process.poll() is None:
+        process.terminate()
+        try:
+            process.wait(timeout=10)
+        except subprocess.TimeoutExpired:
+            process.kill()
+            process.wait()
+
+
+def _terminate_web(_signum, _frame):
+    raise SystemExit(0)
 
 
 def serve(model, context_tokens, port=8765, lesson="home.honesty", include_personal=False,
           include_system=False, include_activity=False, include_feedback=False,
-          include_project=False, include_suggestions=False):
+          include_project=False, include_suggestions=False, temporary_data=False, notify=False):
     from .context import build_context
-    build_context(lesson, include_personal, include_system=include_system,
-                  include_activity=include_activity, include_feedback=include_feedback,
-                  include_project=include_project, include_suggestions=include_suggestions)
-    brain_mount = Path("/mnt/burito-brain")
-    if not brain_mount.is_mount():
-        raise ValueError("Burito Brain drive is not mounted at /mnt/burito-brain; refusing to start with local fallback storage")
+    from .memory import Memory
+    from .school import School
+
+    endpoint = urlsplit(os.environ.get("BURITO_LOCAL_URL") or "http://127.0.0.1:11434/v1")
+    if (endpoint.scheme != "http" or endpoint.hostname not in {LOOPBACK, "::1"}
+            or endpoint.username or endpoint.password or endpoint.query or endpoint.fragment
+            or endpoint.path.rstrip("/") != "/v1"):
+        raise ValueError("Web chat requires a local Ollama HTTP endpoint.")
+    endpoint.port  # Validate an explicit port before starting the children.
+    model = model.strip()
+    if not model or not 4096 <= context_tokens <= 131072:
+        raise ValueError("Choose an installed local model and a valid context size.")
+    if not temporary_data and not (BRAIN_MOUNT.is_mount() and (BRAIN_MOUNT / "data").is_dir()):
+        raise ValueError("Burito Brain drive is unavailable. Mount it or use --temporary-data for an isolated session.")
     runtime = ROOT / "runtime"
     env = os.environ.copy()
-    for key in ("WORKFLOW_LOCAL_BASE_URL", "EVE_DEV_WORKFLOW_TRANSPORT_SECRET", "EVE_DEV_WORKER_APP_ROOT"):
+    for key in ("WORKFLOW_LOCAL_BASE_URL", "EVE_DEV_WORKFLOW_TRANSPORT_SECRET", "EVE_DEV_WORKER_APP_ROOT",
+                "AI_GATEWAY_API_KEY", "BURITO_GATEWAY_MODEL", "BURITO_ONLINE_ENABLED",
+                "BURITO_MEMORY_WRITES", "BURITO_GLOSSARY_WRITES"):
         env.pop(key, None)
     node_dirs = sorted((ROOT / ".tools").glob("node-*/bin"), reverse=True)
     if node_dirs:
@@ -92,39 +185,44 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
     node = shutil.which("node", path=env.get("PATH"))
     eve = runtime / "node_modules/.bin/eve"
     if not node or not eve.exists():
-        raise ValueError("Runtime is missing; run bash scripts/setup-runtime.sh")
-    env.update({"BURITO_MODE": "local", "BURITO_LOCAL_MODEL": model,
-                "BURITO_CONTEXT_TOKENS": str(context_tokens), "BURITO_LESSON_ID": lesson,
-                "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
-                "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
-                "BURITO_INCLUDE_ACTIVITY": "1" if include_activity else "0",
-                "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
-                "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
-                "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
-                "BURITO_INCLUDE_KNOWLEDGE": "1",
-                "BURITO_DATA_DIR": str(brain_mount / "data"),
-                "BURITO_PC_ACCESS": "0", "BURITO_PROJECT_ROOT": str(ROOT),
-                "BURITO_PYTHON": sys.executable, "EVE_TELEMETRY_DISABLED": "1",
-                "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1"})
-    print(f"Starting Burito web console at http://127.0.0.1:{port}")
-    print("Local model only. PC tools disabled. Press Ctrl+C to stop.", flush=True)
-    lock_fd = acquire_runtime_lock(runtime)
-    try:
-        archived = archive_workflow_data(runtime)
-        if archived:
-            print(f"Archived prior Eve workflow state at {archived}; local Burito memory is unchanged.")
-        process = subprocess.Popen([node, str(eve), "dev", "--host", "127.0.0.1", "--port", "2000",
+        raise ValueError("Runtime is missing. Run bash scripts/setup-runtime.sh.")
+
+    with ExitStack() as stack:
+        lock_fd = acquire_runtime_lock(runtime)
+        stack.callback(os.close, lock_fd)
+        directory = BRAIN_MOUNT / "data"
+        if temporary_data:
+            directory = Path(stack.enter_context(tempfile.TemporaryDirectory(prefix="burito-web-")))
+        memory = Memory(directory)
+        if temporary_data:
+            School(memory).install()
+        build_context(lesson, include_personal, memory=memory, include_system=include_system,
+                      include_activity=include_activity, include_feedback=include_feedback,
+                      include_project=include_project, include_suggestions=include_suggestions)
+        env.update({"BURITO_MODE": "local", "BURITO_LOCAL_MODEL": model,
+                    "BURITO_CONTEXT_TOKENS": str(context_tokens), "BURITO_LESSON_ID": lesson,
+                    "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
+                    "BURITO_INCLUDE_SYSTEM": "1" if include_system else "0",
+                    "BURITO_INCLUDE_ACTIVITY": "1" if include_activity else "0",
+                    "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
+                    "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
+                    "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
+                    "BURITO_INCLUDE_KNOWLEDGE": "1", "BURITO_DATA_DIR": str(directory),
+                    "BURITO_PC_ACCESS": "0", "BURITO_PROJECT_ROOT": str(ROOT),
+                    "BURITO_PYTHON": sys.executable, "EVE_TELEMETRY_DISABLED": "1",
+                    "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1"})
+        server = stack.enter_context(ThreadingHTTPServer((LOOPBACK, port), BuritoHandler))
+        server.endpoint, server.model, server.token = endpoint, model, secrets.token_urlsafe(32)
+        server.notify = notify
+        archive_workflow_data(runtime)
+        process = subprocess.Popen([node, str(eve), "dev", "--host", LOOPBACK, "--port", str(EVE_PORT),
                                     "--no-ui", "--no-default-extensions"], cwd=runtime, env=env)
-        bridge = subprocess.Popen([node, str(runtime / "lib/web-bridge.mjs")], cwd=runtime, env=env)
-        BuritoHandler.eve_port = 2000
-        try:
-            server = ThreadingHTTPServer(("127.0.0.1", port), BuritoHandler)
-            with server:
-                server.serve_forever()
-        finally:
-            bridge.terminate()
-            bridge.wait(timeout=15)
-            process.terminate()
-            process.wait(timeout=15)
-    finally:
-        os.close(lock_fd)
+        stack.callback(_stop_process, process)
+        bridge = subprocess.Popen([node, str(runtime / "lib/web-bridge.mjs")], cwd=runtime,
+                                  env={**env, "BURITO_BRIDGE_TOKEN": server.token})
+        stack.callback(_stop_process, bridge)
+        if threading.current_thread() is threading.main_thread():
+            previous_handler = signal.signal(signal.SIGTERM, _terminate_web)
+            stack.callback(signal.signal, signal.SIGTERM, previous_handler)
+        print(f"Burito web console at http://{LOOPBACK}:{server.server_port}/", flush=True)
+        server.serve_forever()

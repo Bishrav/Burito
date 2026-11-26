@@ -110,7 +110,7 @@ class AccessTests(unittest.TestCase):
     def test_window_captions_are_not_written_to_access_audit(self):
         with tempfile.TemporaryDirectory() as directory, \
              patch.dict(os.environ, {'BURITO_DESKTOP_CONTROL': '1'}), \
-             patch('burito.windows.list_windows', return_value={
+             patch('burito.desktop.list_windows', return_value={
                  'windows': [{'internalId': 'a' * 36, 'caption': 'synthetic private title'}]}):
             memory = Memory(Path(directory) / 'private')
             result = dispatch({'action': 'windows'}, memory)
@@ -118,7 +118,7 @@ class AccessTests(unittest.TestCase):
             connection = memory._connect()
             try:
                 target = connection.execute('SELECT target FROM pc_access_audit').fetchone()[0]
-                self.assertEqual(target, 'KWin window request')
+                self.assertEqual(target, 'Desktop window request')
                 self.assertNotIn('synthetic private title', target)
             finally:
                 connection.close()

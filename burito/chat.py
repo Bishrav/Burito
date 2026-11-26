@@ -111,7 +111,7 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     else:
         print("Screen reading disabled. Start with --enable-screen-read to expose the approval-gated tool.")
     if pc_access and enable_desktop_control:
-        print("On-demand KDE windows/focus and approval-gated native-field insertion enabled; insertion does not use the clipboard.")
+        print("On-demand Hyprland or KWin window listing and focus enabled. Native-field insertion requires KWin.")
         clipboard_writers = [name for name in ("wl-copy", "xclip") if shutil.which(name)]
         if clipboard_writers:
             print(f"Approval-gated local clipboard writing enabled via {', '.join(clipboard_writers)}; clipboard reading is unavailable.")
