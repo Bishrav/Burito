@@ -8,6 +8,9 @@ from burito.context import build_context
 from burito.memory import Memory
 from burito.school import School
 from burito.chat import chat
+from academy.progress import AcademyProgress
+from burito.learning import Experiences
+from burito.projects import Projects
 
 
 class ContextTests(unittest.TestCase):
@@ -48,6 +51,60 @@ class ContextTests(unittest.TestCase):
         with patch('burito.chat.shutil.which', return_value=None):
             with self.assertRaisesRegex(ValueError, 'setup-runtime.sh'):
                 chat('synthetic-model', 8192)
+
+    def test_cognitive_context_is_opt_in_and_uses_saved_records(self):
+        with tempfile.TemporaryDirectory() as directory:
+            memory = Memory(directory)
+            School(memory).install()
+            project = Projects(memory).create("Synthetic Atlas", "Validate a local index")
+            experience = Experiences(memory).record(
+                "Recover a synthetic index", "Temporary fixture", "Rebuild the test index",
+                attempted_actions=["Ran the fixture check"],
+                observed_results=["The check passed"],
+                verified_lessons=["Rebuild only after confirming the source records"],
+                outcome="succeeded", verification="direct_observation",
+                evidence=[{"source": "synthetic test", "text": "Exit code 0"}],
+            )
+            AcademyProgress(memory).record(
+                "synthetic.linear-regression", "Synthetic linear regression",
+                stage="algorithm_implemented", sources=[{
+                    "url": "https://example.org/linear-regression", "title": "Synthetic source",
+                    "license": "CC0", "verified": True}],
+                evidence=["Deterministic exercise passed"], evidence_source="synthetic test",
+            )
+            hidden = build_context(memory=memory, include_system=False,
+                                   knowledge_query="Atlas index")
+            self.assertNotIn(project["id"], str(hidden))
+            self.assertNotIn(experience["id"], str(hidden))
+            self.assertNotIn("synthetic.linear-regression", str(hidden))
+            selected = build_context(
+                memory=memory, include_system=False, include_project=True,
+                include_experiences=True, include_academy=True,
+                knowledge_query="Atlas index regression",
+            )
+            self.assertEqual(selected["remembered_projects"][0]["id"], project["id"])
+            self.assertEqual(selected["experience_records"][0]["id"], experience["id"])
+            self.assertEqual(selected["academy_progress"][0]["topic_id"],
+                             "synthetic.linear-regression")
+            self.assertTrue(any(item["implementation"] == "academy/linear_regression.py"
+                                for item in selected["academy_topics"]))
+            self.assertEqual(selected["experience_records"][0]["evidence"][0]["source"],
+                             "synthetic test")
+            personal_only = build_context(memory=memory, include_personal=True,
+                include_system=False, knowledge_query="Atlas index regression")
+            self.assertNotIn(project["id"], {row["id"] for row in personal_only["personal_facts"]})
+            self.assertNotIn(experience["id"], {row["id"] for row in personal_only["personal_facts"]})
+
+    def test_context_retrieval_caps_long_queries_instead_of_failing(self):
+        with tempfile.TemporaryDirectory() as directory:
+            memory = Memory(directory)
+            School(memory).install()
+            memory.remember("Synthetic bounded query target", "test")
+            result = build_context(memory=memory, include_personal=True,
+                include_system=False, knowledge_query=" ".join(f"token{i}" for i in range(40)))
+            self.assertEqual(result["personal_facts"], [])
+            self.assertEqual(build_context(memory=memory, include_personal=True,
+                include_system=False, knowledge_query="What were we doing yesterday?")["personal_facts"], [])
 
     def test_launcher_enforces_local_mode_and_explicit_memory_selection(self):
         with tempfile.TemporaryDirectory() as directory:

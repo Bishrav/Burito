@@ -58,8 +58,8 @@ After `ollama pull qwen3:8b` completes, create a named local configuration:
 
 ```bash
 cd ~/Burito
-ollama create burito-local:8b -f config/ollama/Modelfile
-ollama show --modelfile burito-local:8b
+ollama create burito-local:latest -f config/ollama/Modelfile
+ollama show --modelfile burito-local:latest
 ```
 
 The committed Modelfile sets `num_ctx 8192`; the corresponding Burito launcher
@@ -101,16 +101,20 @@ unless `--include-personal` is explicitly added. The launcher
 uses an installed system or checkout-local Node and starts `eve dev --no-default-extensions` in
 `runtime/`. It sets the Python interpreter and project location for the read-only
 context bridge. Personal facts require `--include-personal`; the default is off.
-Use `--include-project` to give Burito a small curated repository map and current
-milestone. This does not enable file tools; paths outside the supplied map are
-unverified. Use `--include-feedback` separately to include your explicit feedback,
-or `--include-suggestions` to include recent pending and accepted sugg…334 tokens truncated…y
-summary, add `--activity-only` to the chat command. This excludes PC inventory,
+Use `--include-project` for saved owner-maintained project objectives,
+milestones, decisions, tasks and evidence. Use `--include-experiences` for
+matching recorded task outcomes and `--include-academy` for progress and local
+knowledge references. The desktop web launcher enables these three bounded
+scopes. Personal facts remain off; the local CLI can add `--include-personal`
+separately. These scopes enable no file tools and grant no permission to act.
+Use `--include-feedback` separately for explicit feedback, or
+`--include-suggestions` for reviewed suggestions. To include an app activity
+summary, add `--include-activity`; `--activity-only` excludes PC inventory,
 personal facts, and PC tools for that chat. Activity data is excluded from
 ordinary chats and is not sent to a cloud model. Example:
 
 ```bash
-python3 -m burito chat --model burito-local:8b --context-tokens 8192 --activity-only
+python3 -m burito chat --model burito-local:latest --context-tokens 8192 --activity-only
 ```
 
 Treat any pattern as a hypothesis and review its evidence. Time in a foreground

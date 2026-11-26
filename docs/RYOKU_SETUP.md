@@ -2,6 +2,35 @@
 
 Audit performed on 2026-11-25 against GitHub HEAD `35d7f6b`. The setup commands below run from the checkout with the existing shell and toolchain.
 
+## Latest host verification — 2026-11-26
+
+The host is Ryoku CachyOS/Arch with Hyprland, i9-14900K, RTX 5070 (12 GB),
+32 GB RAM, and a Kingston 2 TB NVMe. Host `nvidia-smi` reports driver
+620.70.06 and CUDA UMD 13.5. From the owner session, a short local Ollama
+request to `burito-local:latest` succeeded. During `ollama ps`, Qwen3 8B used
+the `llamacpp` runner, 100% GPU, 8,192 context, and 6.3 GB of model memory.
+Ollama 0.40.18 is installed at
+`/home/burito/Burito/.tools/ollama-0.40.18/bin/ollama`; no driver, server or
+model was installed or downloaded during this check. The restricted Codex
+namespace does not expose GPU device nodes or host loopback, so its failed
+`nvidia-smi`/API calls do not contradict this host test.
+
+The Transcend StoreJet enclosure contains WDC WD40NPJZ-00CCDT0, serial
+`WD-WX12D25FPSS5`, 4.00 TB nominal ext4 volume, UUID
+`9428a980-24a6-45b2-a0a6-5e057c819406`, mounted read/write at
+`/mnt/burito-brain`. The root is burito-owned mode 700, and `df` reports
+3.6 TiB free. `findmnt --verify --verbose` reports zero errors and warnings.
+An authorized unique 163,840-byte scratch write/read/fsync/SHA-256 test passed
+and removed only its own file. The v1 manifest and empty v1 memory database
+were subsequently created and tested with synthetic data. The owner reports
+SMART passed; this session could not query it without the owner's sudo
+password. Reboot persistence and an independent durable backup remain unverified.
+
+The previous USB 2.0 path produced CRC/read errors. Kernel logs after the
+SuperSpeed reconnect show no later read/CRC error, but record one unsupported
+discard command during setup. The mount and small write test do not guarantee
+future drive reliability.
+
 ## Reproduce the setup
 
 Run `python3 scripts/check-source-integrity.py` with Node 26 on PATH before installing dependencies. The failure notes below describe the original audit of `35d7f6b`. See the recovery report for the corrected tree.
@@ -41,7 +70,8 @@ Pacman has 824 candidate updates according to the cached sync databases. Project
 
 ## Ollama and storage
 
-The only visible physical drive was the 1.8 TiB NVMe. The checkout resolves to Btrfs on `/dev/nvme0n1p8`, with about 82 GiB reported available before setup. The intended 4 TB drive was absent from the host block-device listing. Confirm its identity, mounted filesystem, writable project directory, and free space before placing private data there.
+The 2026-11-25 initial audit saw only the 1.8 TiB NVMe and did not see the
+external drive. That snapshot is superseded by the host verification above.
 
 ```bash
 bash scripts/setup-environment.sh --install-ollama

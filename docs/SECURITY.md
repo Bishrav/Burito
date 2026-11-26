@@ -22,6 +22,23 @@ and external side effects. The current loopback development runtime is for a
 trusted local session. Review each integration before enabling it against
 private data.
 
+Default private-memory access is bound to the configured brain mount UUID and
+filesystem. If that identity is unavailable or mismatched, SQLite is not opened
+and no fallback directory is created. An explicit `BURITO_DATA_DIR` override
+is treated as an owner-selected storage location; use it only for verified
+storage or isolated synthetic tests.
+
+Project, experience and Academy context are explicit runtime scopes selected
+through bounded local retrieval. The desktop web launcher opts into these
+non-personal records; personal facts remain excluded unless separately enabled
+in a supported local CLI path. Retrieved content is untrusted data and cannot
+override system policy or grant tool access.
+
+Project and Academy context are opt-in. Experience records distinguish
+attempts from observed outcomes. Skill proposals require verified successful
+source experiences but remain non-executable even when accepted; no skill
+executor or permission-promotion path is implemented.
+
 
 The Phase 1 browser-facing listener checks the literal loopback Host and
 same-origin Origin, limits chat bodies, and exposes no generic Eve proxy.

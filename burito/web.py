@@ -19,12 +19,11 @@ from urllib.parse import urlsplit
 from .chat import ROOT
 from .conversation_api import ConversationAPI
 from .conversations import default_directory, open_store
+from .memory import BRAIN_DATA, BRAIN_MOUNT, BRAIN_UUID, Memory, brain_available
 from .notifications import notify_chat_complete
 from .runtime_lock import acquire_runtime_lock
 
 LOOPBACK = "127.0.0.1"
-BRAIN_MOUNT = Path("/mnt/burito-brain")
-BRAIN_UUID = "ce024ab9-6884-4482-afdd-edbe189ebcf2"
 EVE_PORT = 2000
 BRIDGE_PORT = 2001
 MAX_BODY = 20_000
@@ -214,28 +213,15 @@ def _stop_process(process):
             process.wait()
 
 
-def brain_available():
-    if not BRAIN_MOUNT.is_mount():
-        return False
-    try:
-        result = subprocess.run(["findmnt", "--mountpoint", str(BRAIN_MOUNT),
-                                 "--noheadings", "--output", "UUID,FSTYPE"],
-                                capture_output=True, text=True, timeout=3, check=True)
-    except (OSError, subprocess.SubprocessError):
-        return False
-    data = BRAIN_MOUNT / "data"
-    return result.stdout.split() == [BRAIN_UUID, "ext4"] and not data.is_symlink() and data.is_dir()
-
-
 def _terminate_web(_signum, _frame):
     raise SystemExit(0)
 
 
 def serve(model, context_tokens, port=8765, lesson="home.honesty", include_personal=False,
           include_system=False, include_activity=False, include_feedback=False,
-          include_project=False, include_suggestions=False, temporary_data=False, notify=False, conversation_dir=None):
+          include_project=False, include_suggestions=False, include_experiences=False,
+          include_academy=False, temporary_data=False, notify=False, conversation_dir=None):
     from .context import build_context
-    from .memory import Memory
     from .school import School
 
     endpoint = urlsplit(os.environ.get("BURITO_LOCAL_URL") or "http://127.0.0.1:11434/v1")
@@ -266,7 +252,7 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
     with ExitStack() as stack:
         lock_fd = acquire_runtime_lock(runtime)
         stack.callback(os.close, lock_fd)
-        directory = BRAIN_MOUNT / "data"
+        directory = BRAIN_DATA
         if temporary_data:
             directory = Path(stack.enter_context(tempfile.TemporaryDirectory(prefix="burito-web-")))
         if conversation_dir is not None:
@@ -288,7 +274,9 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
             School(memory).install()
         build_context(lesson, include_personal, memory=memory, include_system=include_system,
                       include_activity=include_activity, include_feedback=include_feedback,
-                      include_project=include_project, include_suggestions=include_suggestions)
+                      include_project=include_project, include_suggestions=include_suggestions,
+                      include_experiences=include_experiences, include_academy=include_academy,
+                      include_knowledge=include_academy)
         env.update({"BURITO_MODE": "local", "BURITO_LOCAL_MODEL": model,
                     "BURITO_CONTEXT_TOKENS": str(context_tokens), "BURITO_LESSON_ID": lesson,
                     "BURITO_INCLUDE_PERSONAL_MEMORY": "1" if include_personal else "0",
@@ -297,7 +285,10 @@ def serve(model, context_tokens, port=8765, lesson="home.honesty", include_perso
                     "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
                     "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
                     "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
-                    "BURITO_INCLUDE_KNOWLEDGE": "1", "BURITO_DATA_DIR": str(directory),
+                    "BURITO_INCLUDE_EXPERIENCES": "1" if include_experiences else "0",
+                    "BURITO_INCLUDE_ACADEMY": "1" if include_academy else "0",
+                    "BURITO_INCLUDE_KNOWLEDGE": "1" if include_academy else "0",
+                    "BURITO_DATA_DIR": str(directory),
                     "BURITO_PC_ACCESS": "0", "BURITO_WEB_CONVERSATION": "1", "BURITO_PROJECT_ROOT": str(ROOT),
                     "BURITO_PYTHON": sys.executable, "EVE_TELEMETRY_DISABLED": "1",
                     "EVE_TRACES_CONTENT": "off", "EVE_SCHEDULES_DISABLED": "1",

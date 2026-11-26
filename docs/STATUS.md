@@ -8,21 +8,100 @@ window adapter. The historical records below include prior KDE observations.
 See the [development log](DEVELOPMENT_LOG.md) for current host checks and
 [Ryoku setup](RYOKU_SETUP.md) for startup instructions.
 
-Startup with the private brain database and live KWin operations remain unverified.
-KWin regression tests passed.
+Synthetic startup against the verified permanent brain has now passed. No
+pre-existing private memory database was found or migrated. Live KWin behavior
+remains unverified; KWin regression tests passed.
 
-The Phase 2 worktree adds live text deltas, private transcript storage, conversation
-search and management, a six-setting personality, bounded reference context,
-and cancellation and retry controls. Review evidence and remaining live checks
-in the [development log](DEVELOPMENT_LOG.md). Application restart and SQLite
-reopen passed with synthetic data. A physical PC shutdown and reboot remains
-unverified. Phase 3 implementation has yet to start.
+Phase 2 is merged through PR #3 at `6e26054`. It provides live text deltas,
+private transcripts, conversation search and management, configurable
+personality, bounded context, cancellation and retry. Synthetic application
+restart and SQLite recovery passed. Physical reboot remains unverified.
+GitHub Actions run `45784416473` passed all four required jobs.
+
+Phase 3 is underway on `feature/phase-3-memory-foundation`. Host inspection
+verified the WDC WD40NPJZ-00CCDT0 in the Transcend StoreJet 25H3 enclosure, ext4
+UUID `9428a980-24a6-45b2-a0a6-5e057c819406`, mounted read/write at
+`/mnt/burito-brain`; `findmnt --verify` passed. A non-overwriting synthetic
+write/read/fsync/checksum test passed. The existing `/memory` and `/manifest`
+directories are reused. The version-1 manifest records the transactional
+SQLite schema migration from v1 to v2. At migration time there were no memory
+rows; the database passed `integrity_check`. Six non-personal Academy topic
+progress records have since been added and verified after a fresh process.
+Synthetic tests cover fresh-process
+retrieval, correction history, explicit-key conflicts, deletion and temporary
+backup/restore. No private memory content was migrated or inspected.
+
+SMART health remains owner-reported and could not be independently queried
+without the owner's sudo password. An earlier USB 2.0 CRC/read failure remains
+in the boot log; after moving to SuperSpeed no further read/CRC error was seen,
+though setup logged an unsupported discard operation. Reboot persistence and
+independent durable backup remain unverified.
+
+Host checks verified NVIDIA 620.70.06 and local Ollama 0.40.18. A live
+`burito-local:latest` inference ran on the RTX 5070 at 100% GPU, 8,192 context,
+with 6.3 GB reported model memory. No model or driver was installed. Python and
+Node regression counts are recorded in the development log. Node 26's test
+runner is configured to execute all eight test cases rather than count only
+the four test files.
+
+Latest Phase 3 verification: 133 Python tests passed on Python 3.11 and 133 on
+Python 3.14; all nine Node test cases, Eve discovery, 153 source-integrity
+checks, shell syntax and `git diff --check` passed. The Eve context bridge now
+retrieves bounded, query-selected project, experience, Academy and knowledge
+records. The desktop web launcher opts into project, experience and Academy
+scopes; personal memory remains off. A normal local Eve/Ollama web session
+answered four synthetic scenarios for project continuity, experience evidence,
+Academy progress and personal-memory opt-out. First-text times were 1695, 211,
+220 and 173 ms; total times were 3124, 1368, 1450 and 819 ms. The three
+retrieval responses passed expected-term checks; the private marker was not
+returned. Three synthetic brain records were deleted afterward.
+
+The live follow-up (“And what is blocking it?”) returned the saved synthetic
+blocker in the latest run after fixing project ranking. Two of three recorded
+follow-up checks passed an exact expected-term assertion; one earlier response
+did not pass that assertion and was not retained, so it may have paraphrased or
+missed the record. Reference resolution is demonstrated, but its exact-answer
+consistency remains an acceptance gap.
+
+Earlier host verification confirmed `/mnt/burito-brain` as ext4 UUID
+`9428a980-24a6-45b2-a0a6-5e057c819406`, mounted read/write, with about 3.6 TiB
+free. The latest 2026-11-27 check sees the expected UUID mounted read-only;
+`lsblk` identifies the WDC drive, but its device nodes were unavailable to
+`smartctl` in this command environment. No remount or write was attempted.
+Read-only SQLite integrity is `ok`; six Academy progress rows remain and
+no synthetic test markers remain. Three existing home lesson references were
+added because permanent web startup otherwise had no selected lesson; repeated
+installation is idempotent. Fresh `burito-local:latest` inference succeeded; Ollama reports Qwen3
+8B, 100% GPU placement, 6.3 GB model memory and 8192 context on RTX 5070 / driver
+620.70.06. Retrieval v2 (1,011 temporary records, 13 cases) measured P@5 0.240,
+recall@5 1.000, MRR 0.933, median 1.157 ms and p95 1.204 ms; it is not directly
+comparable to v1 because the cases and normalization changed.
+
+Independent backup remains blocked: the current block inventory shows only the
+brain HDD and internal NVMe, so no separate physical target was available. The
+owner reports successful SMART short and extended tests, but their logs remain
+unverified here. Physical reboot remains unverified. No private
+memories were read, migrated or altered. Phase 3 is not complete.
 
 ## Implemented
 
 - Full staged roadmap and architecture decisions.
 - Read-only machine diagnostics with bounded command execution.
 - Local SQLite memory: explicit creation, listing, deletion, provenance.
+- Schema-v2 memory categories and provenance, correction history, exact
+  duplicate lookup, explicit-key conflict review and fail-closed migrations.
+- Private project continuity with objectives, milestones, tasks, dependencies,
+  decisions, blockers, next actions and evidence. Context is opt-in and bounded;
+  completed tasks require directly observed or independently verified evidence.
+- Structured experiences distinguish attempts from verified successful
+  outcomes. Skill proposals cite verified experiences and remain
+  non-executable even after owner review.
+- Persistent Academy progress events use the private memory store. Tested CPU
+  teaching code covers mathematical foundations and several classical ML
+  algorithms.
+- Synthetic retrieval evaluation and isolated intent classification report
+  metrics, latency, baseline comparison and limitations; the ML candidate is
+  not integrated into production.
 - Private storage defaults outside Git; no screen capture or inventory uploads.
 - Standard-library tests and GitHub Actions test configuration.
 - Diagnostics distinguish a loaded NVIDIA driver with hidden device files from
@@ -62,9 +141,11 @@ unverified. Phase 3 implementation has yet to start.
   duplicates reuse the original entry and append evidence. Similar-but-different
   wording is not yet detected; suggestions are not yet generated or surfaced by
   Burito automatically.
-- Local chat can optionally receive a curated Burito repository map and current
-  milestone with `--include-project`. Activity-only sessions exclude it; the map
-  does not grant file access and instructs the model not to invent unlisted paths.
+- Local chat can opt into owner-maintained project context with `--include-project`;
+  matching task experiences with `--include-experiences`; and Academy progress,
+  curriculum metadata and local knowledge with `--include-academy`. The desktop
+  web launcher enables these bounded scopes. Personal memory remains separate
+  and excluded by default. Context grants no file or action permission.
 - The chat launcher clears inherited eve development queue-routing variables
   and takes a per-runtime lock so a second Burito chat cannot share the same
   local workflow state concurrently.
@@ -162,55 +243,34 @@ unverified. Phase 3 implementation has yet to start.
   Installed eve discovery compiles and exposes only the three authored PC tools.
   The owner completed a local model conversation; answer-quality retesting remains.
 
-## Not implemented
+## Current Phase 3 boundaries
 
-Fully evaluated AI chat, complete hybrid routing, semantic retrieval, voice, continuous screen observation,
-proactive suggestions, chat autostart, general desktop UI control, automatic training,
-encryption, scheduled backups, restore tooling, and autonomous execution.
-Automatic interest inference, owner-reviewed suggestions, lock-state handling,
-and a visible observer status indicator are still future work. App foreground
-time is not treated as proof of active use or interest.
-Runtime dependency installation succeeded through the normal desktop terminal.
-Node 26.13.1 and eve 1.0.0-rc.18 are installed. Exact package versions and the
-generated lockfile are committed. Installed-version documentation was checked;
-discovery reports zero errors. The gateway-catalog warning in the restricted
-shell does not block this local configuration, which supplies its context size.
-The owner completed a first chat with `burito-local:8b` through the launcher.
-The answer separated guesses but confused user-reported evidence with direct
-observation. Home honesty lesson revision 2 and standing instructions now make
-that distinction explicit; revised model behavior awaits an owner-run retest.
-Personal-memory retrieval/correction and actual GPU placement remain unverified.
-Default model action tools and development extensions are disabled; the authored
-application-launch tool requires owner approval. CLI telemetry
-and trace content capture are disabled by the launcher.
+- Only a synthetic record was written to the new brain database and then
+  deleted. No private database or prior conversation was migrated.
+- Project, experience, skill proposal and Academy records reuse the memory row
+  format as bounded, versioned JSON records rather than separate relational
+  tables. General language contradiction detection, automated consolidation,
+  duplicate merging and retention expiry are not implemented.
+- FTS5 remains lexical. The broadened 13-case synthetic suite reports P@5 0.240,
+  recall@5 1.000 and MRR 0.933. One relevant result ranks below first; embeddings
+  and calibrated relevance thresholds are not implemented.
+- Academy progress and algorithms do not establish course mastery or production
+  capability. Intent classification did not outperform the deterministic rule
+  baseline and remains isolated. No production LLM weights were changed.
+- Skill proposals have no executor. Accepting one grants no permissions.
+- Temporary synthetic backup and restore passed. A durable independent backup
+  target and recovery procedure are not yet established. SMART results remain
+  owner-reported; actual reboot persistence remains unverified.
 
 ## Next
 
-Host GPU verification succeeded in the owner's normal terminal: RTX 5070,
-12227 MiB VRAM, NVIDIA driver 595.99.02. The restricted session's missing GPU
-device files do not require a driver reinstall.
-
-1. Retest the honesty question in a fresh chat after installing lesson revision 2.
-   File/application tool calls have passed the initial owner-run checks.
-2. Inspect `ollama ps` during an active model session to verify GPU placement;
-   measure warm response times separately from the first observed 48-second exchange.
-3. Verify personal-memory retrieval and the approval-gated correction tool in a
-   fresh chat; confirm the edited fact is used in a later chat and can be
-   deleted. New facts are still added through the CLI.
-4. Verify project-grounded answers and opt-in suggestion context in Konsole.
-   Later add semantic duplicate detection and suggestion generation only with
-   explicit evidence and owner review before recurrence.
-5. Add the basic desktop interface around working text chat, followed by voice.
-6. Verify optional online research approval, query-only context boundaries,
-   offline behavior, and failure cases; then add persistent budget limits and
-   routing telemetry before considering any cloud chat mode.
-
-The intended 4 TB volume remains unidentified. The current Linux filesystem has
-enough free space for this initial small model; use it for the first smoke test,
-without repartitioning or changing Windows volumes. Plan large libraries and
-model collections only after confirming the intended storage mount.
-
-The owner reports Ollama installed and the `qwen3:8b` pull completed. The
-restricted session cannot access loopback sockets to independently verify the
-server. The owner started a conversation using `burito-local:8b` with an
-8192-token context. Continue with the targeted verification steps above.
+1. Independently inspect SMART health and the extended-test result from the
+   owner's terminal using a stable device path; no second self-test was started.
+2. Establish and test a durable independent backup target before migrating any
+   private data; the same-drive temporary restore is not independent protection.
+3. Improve FTS5 precision on a broader owner-approved or licensed evaluation set;
+   current metrics use small hand-authored synthetic examples.
+4. Expand the Academy curriculum and exercises incrementally; several requested
+   algorithms and all production capability evaluations remain unfinished.
+5. Verify physical reboot persistence and keep private-memory migration gated.
+6. Keep Phase 4 out of scope until Phase 3 acceptance criteria pass.

@@ -11,8 +11,11 @@ The sequence below supersedes the historical milestones retained in this file.
    KWin. Test approved launches, file reads and notifications on the host.
 2. **Conversation**. Add streaming, interruption, clarification, summaries and
    user-controlled tone. Measure latency and multi-turn task success.
-3. **Memory**. Add attributable episodic, procedural and project records, conflict
-   handling and hybrid retrieval. Evaluate retrieval, correction and deletion.
+3. **Memory**. Verify BURITO_BRAIN identity and recovery before integrating
+   persistent memory. Extend existing attributable SQLite records with safe
+   correction, conflict review, retention, project continuity and evidence-based
+   experience/skill proposals. Persist Academy progress and measure diverse
+   retrieval before introducing embeddings or vector indexes.
 4. **Voice and vision**. Benchmark local components and verify opt-in capture and
    visible controls before enabling hands-free or screen features.
 5. **Companions**. Verify pairing, revocation, encrypted transport and locked-PC
@@ -84,6 +87,17 @@ upload screenshots, complete memory, credentials, or unrelated files.
 
 Exit: tested offline, online, timeout, exhausted-budget, provider-failure, and
 connection-loss paths. Failed external writes are reconciled before retrying.
+
+Current Phase 3 branch work now includes schema-v2 attributable memory,
+opt-in project continuity, evidence-backed experiences, non-executable skill
+proposals, persistent Academy progress, tested CPU math/classical-ML exercises,
+and an FTS5 evaluation harness. The Eve runtime now retrieves bounded project,
+experience and Academy context on request; local synthetic conversations
+verified project blockers, prior experience evidence, Academy progress and a
+personal-memory opt-out. Cross-process persistence on the physical brain and
+130-test Python regression runs have passed. Retrieval ranking, independent
+backup, SMART access, physical reboot and broader Academy coverage remain open;
+this is progress, not Phase 3 completion.
 
 Current progress: an optional CLI-only online research tool is implemented as
 an explicitly enabled, per-query approval-gated capability. It sends only the
@@ -215,7 +229,23 @@ autonomy must build on a working memory and reasoning layer.
 ## Parallel research tracks
 
 The [Academy curriculum](AI_ACADEMY.md) and [cognitive architecture](COGNITIVE_ARCHITECTURE.md)
-advance through synthetic evaluations and source verification while Phase 2 is
-stabilized. Promote results only after comparison to a baseline, safety checks,
-owner approval and a rollback plan. The [portable brain](BRAIN_STORAGE.md)
-requires its own verified storage and recovery gates before Phase 3 integration.
+advance through synthetic evaluations and source verification in parallel with
+the production phases. Promote results only after comparison to a baseline,
+safety checks, owner approval and a rollback plan. The [portable brain](BRAIN_STORAGE.md)
+requires verified storage and recovery gates before persistent-memory integration.
+
+### Phase 3 gates
+
+- The volume identity, ext4 mount and capacity are verified, and the live
+  schema has been upgraded transactionally with zero memory rows. Do not import
+  or migrate private records until independent backup storage and restoration
+  are verified. Temporary synthetic state must be explicitly selected.
+- First implement one isolated, CPU-only Academy algorithm and its reproducible
+  test. Keep reference collection, algorithm correctness, model training and
+  measured production improvement as separate claims.
+- Synthetic checks cover persistence/reopen, provenance, correction history,
+  explicit-key conflict review, deletion and unsupported schema refusal. Project
+  continuity and runtime experience/Academy retrieval now have synthetic
+  evidence. General memory consolidation, retention expiry, an independent
+  backup target and restore, physical reboot, and broader retrieval quality are
+  still open acceptance items.

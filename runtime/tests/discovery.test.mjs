@@ -1,10 +1,12 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
-import { readFileSync } from 'node:fs';
+import { spawnSync } from 'node:child_process';
 
 test('installed eve starts with no default or eagerly registered tools', () => {
-  // The preceding check:discovery command compiles fresh public CLI output.
-  const info = JSON.parse(readFileSync(new URL('../.eve-info.json', import.meta.url), 'utf8'));
+  const result = spawnSync('eve', ['info', '--json'], { encoding: 'utf8',
+    env: { ...process.env, EVE_TELEMETRY_DISABLED: '1', EVE_TRACES_CONTENT: 'off' } });
+  assert.equal(result.status, 0, result.stderr);
+  const info = JSON.parse(result.stdout);
   assert.equal(info.status, 'ready');
   assert.equal(info.diagnostics.errors, 0);
   // Eve resolves dynamic PC tools at the first model call.

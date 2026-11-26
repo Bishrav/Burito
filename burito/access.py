@@ -213,7 +213,15 @@ def _approved_application_snapshot(app_id, expected_sha256, directories=None):
     data = Path(app['desktop_file']).read_bytes()
     if hashlib.sha256(data).hexdigest() != expected_sha256:
         raise ValueError('Application launcher changed before launch')
-    snapshot_dir = Memory().directory / 'launchers' / expected_sha256
+    cache_home = Path(os.environ.get('XDG_CACHE_HOME') or Path.home() / '.cache')
+    if not cache_home.is_absolute():
+        raise ValueError('Application snapshot cache must be an absolute path')
+    snapshot_root = cache_home / 'burito' / 'launchers'
+    snapshot_root.mkdir(parents=True, exist_ok=True, mode=0o700)
+    if snapshot_root.is_symlink() or snapshot_root.stat().st_uid != os.getuid():
+        raise ValueError('Application snapshot cache must be owned by you and not a symlink')
+    snapshot_root.chmod(0o700)
+    snapshot_dir = snapshot_root / expected_sha256
     snapshot_dir.mkdir(parents=True, exist_ok=True, mode=0o700)
     snapshot = snapshot_dir / Path(app['desktop_file']).name
     try:
@@ -804,6 +812,7 @@ def begin_screen_capture(session_id, turn_id, call_id, memory=None):
 def dispatch(request, memory=None, allowed_roots=None):
     """Bridge used by model tools; read operations require no approval prompt."""
     action = request.get('action')
+    audit_connection = None
     try:
         if action == 'list':
             result = list_files(request['path'], request.get('offset', 0), request.get('limit', 60), allowed_roots)
@@ -815,6 +824,7 @@ def dispatch(request, memory=None, allowed_roots=None):
             all_apps = applications(request.get('query', ''))
             result = {'applications': all_apps[:60], 'truncated': len(all_apps) > 60}
         elif action == 'launch':
+            audit_connection = (memory if memory is not None else Memory())._connect()
             # A bridge call is not itself proof of approval; require launcher-side gate too.
             if os.environ.get('BURITO_APPROVED_APP_LAUNCH') != '1':
                 raise ValueError('Application launch requires the approved eve tool path')
@@ -903,15 +913,27 @@ def dispatch(request, memory=None, allowed_roots=None):
         else:
             raise ValueError('Unknown PC access action')
     except (ValueError, OSError, KeyError, subprocess.TimeoutExpired) as error:
-        audit(action, request, 'failed', memory)
+        try:
+            if audit_connection is not None:
+                audit(action, request, 'failed', memory, audit_connection)
+            elif action != 'launch':
+                audit(action, request, 'failed', memory)
+        finally:
+            if audit_connection is not None:
+                audit_connection.close()
         raise ValueError(str(error)) from error
-    audit(action, request, 'success', memory)
+    try:
+        audit(action, request, 'success', memory, audit_connection)
+    finally:
+        if audit_connection is not None:
+            audit_connection.close()
     return result
 
 
-def audit(action, request, outcome, memory=None):
+def audit(action, request, outcome, memory=None, connection=None):
     memory = memory if memory is not None else Memory()
-    connection = memory._connect()
+    owns_connection = connection is None
+    connection = connection if connection is not None else memory._connect()
     try:
         with connection:
             connection.execute('''CREATE TABLE IF NOT EXISTS pc_access_audit (
@@ -934,4 +956,5 @@ def audit(action, request, outcome, memory=None):
                                (datetime.now(timezone.utc).isoformat(), str(action)[:30], target, outcome))
             connection.execute('DELETE FROM pc_access_audit WHERE id NOT IN (SELECT id FROM pc_access_audit ORDER BY id DESC LIMIT 2000)')
     finally:
-        connection.close()
+        if owns_connection:
+            connection.close()

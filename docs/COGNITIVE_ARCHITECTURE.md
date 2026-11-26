@@ -24,6 +24,16 @@ corrections and retention. Separate owner statements, observations, inferences,
 research claims and verified facts. Support correction, conflict resolution,
 deletion and export before relying on persistent retrieval.
 
+Current Phase 3 retrieval reuses the owner-fact table and a temporary FTS5
+index for each opted-in query. Schema v2 adds categories, nullable confidence,
+verification provenance, owner-defined claim keys, retention label, timestamps
+and active/superseded state. Corrections save prior values; deletion cascades to
+revision and conflict records. Explicit claim keys detect competing values for
+owner review. The CLI exposes history and conflict review. This does not infer
+arbitrary natural-language contradictions, implement expiry, or provide general
+memory consolidation. Matching records retain their IDs and source labels; an
+unresolved conflict is passed into context as data, never as an instruction.
+
 ## Research hypotheses and evaluation
 
 Use ACT-R and Soar to study activation, declarative versus procedural stores,

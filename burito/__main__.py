@@ -6,7 +6,7 @@ import sqlite3
 import sys
 import subprocess
 from .doctor import report
-from .memory import Memory
+from .memory import Memory, MEMORY_CATEGORIES, VERIFICATION_STATES
 from .education import teach
 from .school import School, catalog
 from .context import build_context
@@ -18,6 +18,9 @@ from .feedback import Feedback, RATINGS
 from .suggestions import Suggestions, EVIDENCE_SOURCES, REVIEW_STATES
 from .knowledge import Knowledge
 from .glossary import Glossary
+from .projects import Projects
+from .learning import Experiences, SkillProposals
+from academy.progress import AcademyProgress, STAGES as ACADEMY_STAGES
 
 
 def main(argv=None):
@@ -49,8 +52,110 @@ def main(argv=None):
     remember = commands.add_parser("remember", help="Store an explicitly provided fact")
     remember.add_argument("content")
     remember.add_argument("--source", default="owner")
+    remember.add_argument("--category", choices=sorted(MEMORY_CATEGORIES), default="semantic")
+    remember.add_argument("--verification", choices=sorted(VERIFICATION_STATES), default="owner_statement")
+    remember.add_argument("--confidence", type=float)
+    remember.add_argument("--claim-key", help="Optional owner-defined key for same-claim conflict review")
     commands.add_parser("memories", help="List stored facts as JSON")
+    memory_history = commands.add_parser("memory-history", help="Show prior versions of a memory")
+    memory_history.add_argument("id")
+    memory_conflicts = commands.add_parser("memory-conflicts", help="List unresolved memory conflicts")
+    memory_conflicts.add_argument("--all", action="store_true", help="Include resolved and dismissed conflicts")
+    resolve_conflict = commands.add_parser("memory-conflict-resolve", help="Resolve or supersede a reviewed conflict")
+    resolve_conflict.add_argument("id", type=int)
+    resolve_conflict.add_argument("resolution", choices=("resolved", "dismissed", "superseded"))
+    resolve_conflict.add_argument("--supersede-memory", help="Memory ID to deactivate when superseding")
     commands.add_parser("teach", help="Teach Burito your basic preferences locally")
+    project = commands.add_parser("project", help="Maintain private, owner-controlled project continuity")
+    project_commands = project.add_subparsers(dest="project_command", required=True)
+    project_create = project_commands.add_parser("create", help="Create a project record")
+    project_create.add_argument("name")
+    project_create.add_argument("objective")
+    project_list = project_commands.add_parser("list", help="List saved projects")
+    project_list.add_argument("--status", choices=("active", "paused", "closed"))
+    project_show = project_commands.add_parser("show", help="Show one project")
+    project_show.add_argument("id")
+    project_update = project_commands.add_parser("update", help="Update project status and next actions")
+    project_update.add_argument("id")
+    project_update.add_argument("--status", choices=("active", "paused", "closed"))
+    project_update.add_argument("--objective")
+    project_update.add_argument("--milestone")
+    project_update.add_argument("--next-action", action="append")
+    project_item = project_commands.add_parser("add-item", help="Add a milestone, task, decision, blocker, or reference")
+    project_item.add_argument("id")
+    project_item.add_argument("--kind", required=True, choices=("milestone", "task", "decision", "blocker", "reference"))
+    project_item.add_argument("--title", required=True)
+    project_item.add_argument("--details", default="")
+    project_item.add_argument("--status")
+    project_item.add_argument("--depends-on", action="append", default=[])
+    project_item.add_argument("--evidence")
+    project_item.add_argument("--evidence-source")
+    project_item.add_argument("--evidence-verification",
+        choices=("owner_statement", "direct_observation", "independently_verified"),
+        default="owner_statement")
+    project_update_item = project_commands.add_parser("update-item", help="Update a project item and attach evidence")
+    project_update_item.add_argument("id")
+    project_update_item.add_argument("item_id")
+    project_update_item.add_argument("--status")
+    project_update_item.add_argument("--details")
+    project_update_item.add_argument("--evidence")
+    project_update_item.add_argument("--evidence-source")
+    project_update_item.add_argument("--evidence-verification",
+        choices=("owner_statement", "direct_observation", "independently_verified"),
+        default="owner_statement")
+    project_delete = project_commands.add_parser("delete", help="Delete a project and its correction history")
+    project_delete.add_argument("id")
+    experience = commands.add_parser("experience", help="Record verified task experience")
+    experience_commands = experience.add_subparsers(dest="experience_command", required=True)
+    experience_record = experience_commands.add_parser("record", help="Record an attempt and its observed outcome")
+    experience_record.add_argument("--objective", required=True)
+    experience_record.add_argument("--context", required=True)
+    experience_record.add_argument("--approach", required=True)
+    experience_record.add_argument("--action", action="append", required=True)
+    experience_record.add_argument("--result", action="append", default=[])
+    experience_record.add_argument("--error", action="append", default=[])
+    experience_record.add_argument("--recovery", action="append", default=[])
+    experience_record.add_argument("--lesson", action="append", default=[])
+    experience_record.add_argument("--outcome", choices=("attempted", "succeeded", "failed", "inconclusive"), default="attempted")
+    experience_record.add_argument("--verification", choices=("unverified", "direct_observation", "independently_verified"), default="unverified")
+    experience_record.add_argument("--evidence", action="append", default=[])
+    experience_record.add_argument("--evidence-source", action="append", default=[])
+    experience_commands.add_parser("list", help="List recorded experiences")
+    skill = commands.add_parser("skill", help="Propose and review reusable skills; proposals cannot execute")
+    skill_commands = skill.add_subparsers(dest="skill_command", required=True)
+    skill_propose = skill_commands.add_parser("propose", help="Propose a skill from verified experiences")
+    skill_propose.add_argument("--purpose", required=True)
+    skill_propose.add_argument("--experience", action="append", required=True)
+    skill_propose.add_argument("--input", action="append", default=[])
+    skill_propose.add_argument("--precondition", action="append", required=True)
+    skill_propose.add_argument("--tool", action="append", default=[])
+    skill_propose.add_argument("--permission", action="append", default=[])
+    skill_propose.add_argument("--step", action="append", required=True)
+    skill_propose.add_argument("--expected", required=True)
+    skill_propose.add_argument("--verification-method", required=True)
+    skill_propose.add_argument("--failure", action="append", default=[])
+    skill_propose.add_argument("--recovery", action="append", default=[])
+    skill_propose.add_argument("--version", type=int, default=1)
+    skill_list = skill_commands.add_parser("list", help="List skill proposals")
+    skill_review = skill_commands.add_parser("review", help="Accept or reject a proposal without enabling execution")
+    skill_review.add_argument("id")
+    skill_review.add_argument("decision", choices=("accepted", "rejected"))
+    skill_review.add_argument("--note", default="")
+    academy = commands.add_parser("academy", help="Track evidence-based private Academy progress")
+    academy_commands = academy.add_subparsers(dest="academy_command", required=True)
+    academy_record = academy_commands.add_parser("record", help="Record a topic stage and evidence")
+    academy_record.add_argument("topic_id")
+    academy_record.add_argument("title")
+    academy_record.add_argument("--stage", choices=ACADEMY_STAGES, default="planned")
+    academy_record.add_argument("--prerequisite", action="append", default=[])
+    academy_record.add_argument("--source", action="append", default=[])
+    academy_record.add_argument("--source-title", action="append", default=[])
+    academy_record.add_argument("--source-license", action="append", default=[])
+    academy_record.add_argument("--verify-sources", action="store_true",
+                                help="Mark supplied source links as owner-verified; imports remain separate")
+    academy_record.add_argument("--evidence", action="append", default=[])
+    academy_record.add_argument("--evidence-source", default="owner evaluation")
+    academy_commands.add_parser("list", help="List persistent topic progress")
     correct = commands.add_parser("correct", help="Correct an existing owner-provided fact")
     correct.add_argument("id")
     correct.add_argument("content")
@@ -99,11 +204,15 @@ def main(argv=None):
     context.add_argument("--include-feedback", action="store_true",
                          help="Include explicit owner feedback in this context")
     context.add_argument("--include-project", action="store_true",
-                         help="Include the curated Burito repository map and current milestone")
+                         help="Include saved, owner-maintained project records")
     context.add_argument("--include-suggestions", action="store_true",
                          help="Include recent pending and accepted suggestions with evidence")
     context.add_argument("--include-knowledge", action="store_true",
                          help="Search the local knowledge library for this prompt")
+    context.add_argument("--include-experiences", action="store_true",
+                         help="Include matching verified task experience records")
+    context.add_argument("--include-academy", action="store_true",
+                         help="Include persistent Academy progress and evidence")
     context.add_argument("--query", default="", help=argparse.SUPPRESS)
     context.add_argument("--max-chars", type=int, default=12000, help=argparse.SUPPRESS)
     context.add_argument("--activity-only", action="store_true",
@@ -119,9 +228,13 @@ def main(argv=None):
     conversation.add_argument("--include-feedback", action="store_true",
                               help="Include explicit owner feedback in this chat")
     conversation.add_argument("--include-project", action="store_true",
-                              help="Include a curated Burito repository map and current milestone")
+                              help="Include saved, owner-maintained project records")
     conversation.add_argument("--include-suggestions", action="store_true",
                               help="Include recent pending and accepted suggestions with evidence")
+    conversation.add_argument("--include-experiences", action="store_true",
+                              help="Include matching task experiences in local context")
+    conversation.add_argument("--include-academy", action="store_true",
+                              help="Include persistent Academy progress in local context")
     conversation.add_argument("--activity-only", action="store_true",
                               help="Use only activity data; exclude PC inventory, personal facts, and PC tools")
     conversation.add_argument("--enable-online", action="store_true",
@@ -147,7 +260,14 @@ def main(argv=None):
     web.add_argument("--conversation-dir", help="Absolute private transcript directory outside the checkout")
     web.add_argument("--temporary-data", action="store_true", help="Use an isolated temporary lesson database")
     web.add_argument("--lesson", default="home.honesty")
-    web.add_argument("--include-project", action="store_true")
+    web.add_argument("--include-project", action="store_true",
+                     help="Include saved project records in web chat")
+    web.add_argument("--include-personal", action="store_true",
+                     help="Include matching explicitly stored personal facts in web chat")
+    web.add_argument("--include-experiences", action="store_true",
+                     help="Include matching experiences in web chat")
+    web.add_argument("--include-academy", action="store_true",
+                     help="Include Academy progress and local knowledge in web chat")
     web.add_argument("--include-feedback", action="store_true")
     web.add_argument("--include-suggestions", action="store_true")
     web.add_argument("--include-activity", action="store_true")
@@ -191,6 +311,8 @@ def main(argv=None):
                                            include_project=args.include_project,
                                            include_suggestions=args.include_suggestions,
                                            include_knowledge=args.include_knowledge,
+                                           include_experiences=args.include_experiences,
+                                           include_academy=args.include_academy,
                                            knowledge_query=args.query,
                                            max_chars=args.max_chars), indent=2))
         elif args.command == "chat":
@@ -199,6 +321,8 @@ def main(argv=None):
                         include_activity=args.include_activity, activity_only=args.activity_only,
                         include_feedback=args.include_feedback, include_project=args.include_project,
                         include_suggestions=args.include_suggestions,
+                        include_experiences=args.include_experiences,
+                        include_academy=args.include_academy,
                         enable_online=args.enable_online,
                         enable_screen_read=args.enable_screen_read,
                         enable_desktop_control=args.enable_desktop_control,
@@ -208,7 +332,9 @@ def main(argv=None):
         elif args.command == "web":
             from .web import serve
             serve(args.model, args.context_tokens, port=args.port, lesson=args.lesson,
-                  include_project=args.include_project, include_feedback=args.include_feedback,
+                  include_personal=args.include_personal, include_project=args.include_project,
+                  include_experiences=args.include_experiences, include_academy=args.include_academy,
+                  include_feedback=args.include_feedback,
                   include_suggestions=args.include_suggestions, include_activity=args.include_activity,
                   temporary_data=args.temporary_data, notify=args.notify, conversation_dir=args.conversation_dir)
         elif args.command == "pc":
@@ -244,6 +370,91 @@ def main(argv=None):
                 print("Application label removed")
             elif args.activity_command == "clear":
                 print(json.dumps(activity.clear(), indent=2))
+        elif args.command == "project":
+            memory = Memory()
+            store = Projects(memory)
+            if args.project_command == "create":
+                print(json.dumps(store.create(args.name, args.objective), indent=2))
+            elif args.project_command == "list":
+                print(json.dumps(store.list(args.status), indent=2))
+            elif args.project_command == "show":
+                project_record = store.get(args.id)
+                if project_record is None:
+                    print("Project not found", file=sys.stderr)
+                    return 1
+                print(json.dumps(project_record, indent=2))
+            elif args.project_command == "update":
+                if not any((args.status, args.objective, args.milestone, args.next_action)):
+                    raise ValueError("Specify at least one project field to update")
+                print(json.dumps(store.update(args.id, status=args.status,
+                    objective=args.objective, current_milestone=args.milestone,
+                    next_actions=args.next_action), indent=2))
+            elif args.project_command in {"add-item", "update-item"}:
+                evidence = None
+                if args.evidence is not None or args.evidence_source is not None:
+                    if not args.evidence or not args.evidence_source:
+                        raise ValueError("Evidence text and evidence source must be supplied together")
+                    evidence = [{"text": args.evidence, "source": args.evidence_source,
+                                 "verification": args.evidence_verification}]
+                if args.project_command == "add-item":
+                    print(json.dumps(store.add_item(args.id, args.kind, args.title,
+                        details=args.details, status=args.status, evidence=evidence,
+                        depends_on=args.depends_on), indent=2))
+                else:
+                    print(json.dumps(store.update_item(args.id, args.item_id,
+                        status=args.status, details=args.details, evidence=evidence), indent=2))
+            elif args.project_command == "delete":
+                if store.get(args.id) is None or not memory.forget(args.id):
+                    print("Project not found", file=sys.stderr)
+                    return 1
+                print("Project and its revision history deleted")
+        elif args.command == "academy":
+            progress = AcademyProgress(Memory())
+            if args.academy_command == "list":
+                print(json.dumps(progress.list(), indent=2))
+            else:
+                sizes = {len(args.source), len(args.source_title), len(args.source_license)}
+                if len(sizes) != 1:
+                    raise ValueError("Each source requires one URL, title, and license field")
+                sources = [{"url": url, "title": title, "license": license,
+                            "verified": args.verify_sources}
+                           for url, title, license in zip(args.source, args.source_title,
+                                                          args.source_license)]
+                print(json.dumps(progress.record(args.topic_id, args.title,
+                    prerequisites=args.prerequisite, sources=sources, stage=args.stage,
+                    evidence=args.evidence, evidence_source=args.evidence_source), indent=2))
+        elif args.command == "experience":
+            store = Experiences(Memory())
+            if args.experience_command == "record":
+                if len(args.evidence) != len(args.evidence_source):
+                    raise ValueError("Each evidence entry requires one --evidence-source")
+                evidence = [{"text": text, "source": source}
+                            for text, source in zip(args.evidence, args.evidence_source)]
+                record = store.record(args.objective, args.context, args.approach,
+                    attempted_actions=args.action, observed_results=args.result,
+                    errors=args.error, recovery_steps=args.recovery,
+                    verified_lessons=args.lesson, outcome=args.outcome,
+                    verification=args.verification, evidence=evidence)
+                print(json.dumps(record, indent=2))
+            else:
+                print(json.dumps(store.list(), indent=2))
+        elif args.command == "skill":
+            store = SkillProposals(Memory())
+            if args.skill_command == "propose":
+                print(json.dumps(store.propose(args.purpose, args.experience,
+                    inputs=args.input, preconditions=args.precondition,
+                    required_tools=args.tool, permissions=args.permission,
+                    procedure=args.step, expected_outcome=args.expected,
+                    verification_method=args.verification_method,
+                    failure_conditions=args.failure, recovery_strategy=args.recovery,
+                    version=args.version), indent=2))
+            elif args.skill_command == "list":
+                print(json.dumps(store.list(), indent=2))
+            elif not store.review(args.id, args.decision, args.note):
+                print("Skill proposal not found", file=sys.stderr)
+                return 1
+            else:
+                print("Proposal reviewed; it remains non-executable")
         elif args.command == "feedback":
             feedback_store = Feedback()
             if args.feedback_command == "add":
@@ -320,9 +531,19 @@ def main(argv=None):
                         return 1
                     print("Glossary term deleted")
             elif args.command == "remember":
-                print(memory.remember(args.content, args.source))
+                print(memory.remember(args.content, args.source, args.category, args.confidence,
+                                      args.verification, args.claim_key))
             elif args.command == "memories":
                 print(json.dumps(memory.list(), indent=2))
+            elif args.command == "memory-history":
+                print(json.dumps(memory.history(args.id), indent=2))
+            elif args.command == "memory-conflicts":
+                print(json.dumps(memory.conflicts("all" if args.all else "unresolved"), indent=2))
+            elif args.command == "memory-conflict-resolve":
+                if not memory.resolve_conflict(args.id, args.resolution, args.supersede_memory):
+                    print("Unresolved memory conflict not found", file=sys.stderr)
+                    return 1
+                print(f"Memory conflict marked {args.resolution}")
             elif args.command == "teach":
                 teach(memory)
             elif args.command == "correct":

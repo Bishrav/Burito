@@ -11,7 +11,8 @@ if ! curl --silent --fail "$url/api/status" >/dev/null 2>&1; then
     echo "Burito web is starting; waiting for its local health endpoint..."
   else
     echo "Starting Burito’s local model and desktop console..."
-    (cd "$repo_root" && nohup setsid python3 -m burito web --model "${BURITO_WEB_MODEL:-burito-local:8b}" --context-tokens 8192 \
+    (cd "$repo_root" && nohup setsid python3 -m burito web --model "${BURITO_WEB_MODEL:-burito-local:latest}" --context-tokens 8192 \
+      --include-project --include-experiences --include-academy \
       >"$state_dir/web.log" 2>&1 </dev/null & echo $! >"$state_dir/web.pid")
   fi
   for _ in {1..90}; do

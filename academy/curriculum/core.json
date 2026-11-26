@@ -1,0 +1,66 @@
+{
+  "format": "burito-academy-curriculum",
+  "schema": 1,
+  "topics": [
+    {
+      "id": "math.vectors-matrices",
+      "title": "Vectors and matrices",
+      "prerequisites": ["Algebra and functions"],
+      "objectives": ["Compute vector dot products", "Multiply compatible matrices", "Check dimensions and finite values"],
+      "implementation": "academy/foundations.py",
+      "exercise": "Multiply a 2x2 matrix by a vector and verify the result by hand.",
+      "completion": "Tests cover rectangular dimensions, incompatible shapes, and known products.",
+      "sources": [{"url": "https://ocw.mit.edu/courses/18-06-linear-algebra-spring-2010/", "title": "MIT 18.06 Linear Algebra", "author": "Gilbert Strang and MIT OpenCourseWare", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    },
+    {
+      "id": "math.probability-statistics",
+      "title": "Probability and descriptive statistics",
+      "prerequisites": ["Arithmetic and fractions"],
+      "objectives": ["Compute mean and variance", "Distinguish population and sample variance", "Interpret probability values"],
+      "implementation": "academy/foundations.py",
+      "exercise": "Compute the population variance of a deterministic finite list.",
+      "completion": "Tests include known values, invalid probabilities, and sample/population distinction.",
+      "sources": [{"url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/", "title": "MIT 18.05 Introduction to Probability and Statistics", "author": "Jeremy Orloff, Jennifer French Kamrin, and MIT OpenCourseWare", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    },
+    {
+      "id": "math.conditional-probability-bayes",
+      "title": "Conditional probability and Bayes theorem",
+      "prerequisites": ["math.probability-statistics"],
+      "objectives": ["Compute conditional probability", "Apply Bayes theorem", "Check zero-probability evidence"],
+      "implementation": "academy/foundations.py",
+      "exercise": "Compute a posterior probability from a prior, sensitivity, and false-positive rate.",
+      "completion": "Tests verify a hand-computed posterior and reject impossible inputs.",
+      "sources": [{"url": "https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/", "title": "MIT 18.05 Introduction to Probability and Statistics", "author": "Jeremy Orloff, Jennifer French Kamrin, and MIT OpenCourseWare", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    },
+    {
+      "id": "math.calculus-gradients",
+      "title": "Derivatives and gradients",
+      "prerequisites": ["Algebra and functions"],
+      "objectives": ["Estimate a derivative numerically", "Compare partial derivatives", "Check finite numerical results"],
+      "implementation": "academy/foundations.py",
+      "exercise": "Estimate the derivative of x squared at x=3 and compare with 6.",
+      "completion": "Central finite differences match the analytic derivative within tolerance.",
+      "sources": [{"url": "https://ocw.mit.edu/courses/18-01-single-variable-calculus-fall-2005/", "title": "MIT 18.01 Single Variable Calculus", "author": "Jason Starr and MIT OpenCourseWare", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    },
+    {
+      "id": "ml.gradient-descent-loss",
+      "title": "Gradient descent and loss functions",
+      "prerequisites": ["math.vectors-matrices", "math.calculus-gradients"],
+      "objectives": ["Minimize a differentiable objective", "Observe loss changes", "Reject non-finite gradients"],
+      "implementation": "academy/foundations.py",
+      "exercise": "Minimize a two-variable convex quadratic from a fixed initial point.",
+      "completion": "Seed-free deterministic descent approaches the known minimum and reduces loss.",
+      "sources": [{"url": "https://cs229.stanford.edu/notes_archive/cs229-notes-all/cs229-notes1.pdf", "title": "CS229 Lecture Notes: Linear Regression and Optimization", "author": "Stanford University", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    },
+    {
+      "id": "ml.linear-regression",
+      "title": "Linear regression",
+      "prerequisites": ["math.vectors-matrices", "math.probability-statistics", "ml.gradient-descent-loss"],
+      "objectives": ["Fit a line analytically and by gradient descent", "Evaluate on held-out points", "Report undefined R squared honestly"],
+      "implementation": "academy/linear_regression.py",
+      "exercise": "Fit a seeded synthetic line and score separate test points.",
+      "completion": "Analytical and gradient implementations recover the known slope and intercept.",
+      "sources": [{"url": "https://cs229.stanford.edu/notes_archive/cs229-notes-all/cs229-notes1.pdf", "title": "CS229 Lecture Notes: Linear Regression", "author": "Stanford University", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    }
+  ]
+}

@@ -183,21 +183,25 @@ The current model configuration is local-only. Requested excerpts enter local
 chat/session history; deleting a source file does not delete prior chat content.
 Actions are logged locally with action, target, time, and outcome, retaining
 the newest 2,000 audit records; file contents are not copied into the audit log.
-Approved launcher snapshots are retained under private Burito storage. Source
-code and synthetic tests are pushed to GitHub, not file contents, inventory,
+Approved launcher snapshots are retained under the owner-only
+`$XDG_CACHE_HOME/burito/launchers` cache (or `~/.cache` when unset), separate
+from the brain volume. Source launchers are rehashed before each launch. The
+launch action requires an available brain connection for its audit record and
+keeps that verified storage descriptor open through the action. Source code
+and synthetic tests are pushed to GitHub, not file contents, inventory,
 application lists, launcher snapshots, or audit records.
 
 To enable the one-shot screen OCR tool for a session:
 
 ```bash
 cd ~/Burito
-python3 -m burito chat --model burito-local:8b --context-tokens 8192 --enable-screen-read
+python3 -m burito chat --model burito-local:latest --context-tokens 8192 --enable-screen-read
 ```
 
 For named-app window detection, focus, and active-window OCR, enable both:
 
 ```bash
-python3 -m burito chat --model burito-local:8b --context-tokens 8192 \
+python3 -m burito chat --model burito-local:latest --context-tokens 8192 \
   --enable-screen-read --enable-desktop-control
 ```
 

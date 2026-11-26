@@ -21,13 +21,13 @@ read -rsp 'AI Gateway key: ' AI_GATEWAY_API_KEY
 printf '\n'
 export AI_GATEWAY_API_KEY
 export BURITO_GATEWAY_MODEL=openai/gpt-5.4-nano
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito chat \
-  --model burito-local:8b --context-tokens 8192 \
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito chat \
+  --model burito-local:latest --context-tokens 8192 \
   --enable-online --no-files --no-system
 ```
 
 This model ID is an example. Use a model currently available to your Gateway
-account. The local `burito-local:8b` model handles the conversation. The
+account. The local `burito-local:latest` model handles the conversation. The
 Gateway model is used only inside the explicitly approved online research
 request. You can omit `--no-files` or `--no-system` if you want those local
 contexts in the conversation; they are still never included in the outgoing
