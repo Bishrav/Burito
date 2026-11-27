@@ -11,8 +11,11 @@ The sequence below supersedes the historical milestones retained in this file.
    KWin. Test approved launches, file reads and notifications on the host.
 2. **Conversation**. Add streaming, interruption, clarification, summaries and
    user-controlled tone. Measure latency and multi-turn task success.
-3. **Memory**. Add attributable episodic, procedural and project records, conflict
-   handling and hybrid retrieval. Evaluate retrieval, correction and deletion.
+3. **Memory**. Verify BURITO_BRAIN identity and recovery before integrating
+   persistent memory. Extend existing attributable SQLite records with safe
+   correction, conflict review, retention, project continuity and evidence-based
+   experience/skill proposals. Persist Academy progress and measure diverse
+   retrieval before introducing embeddings or vector indexes.
 4. **Voice and vision**. Benchmark local components and verify opt-in capture and
    visible controls before enabling hands-free or screen features.
 5. **Companions**. Verify pairing, revocation, encrypted transport and locked-PC
@@ -84,6 +87,29 @@ upload screenshots, complete memory, credentials, or unrelated files.
 
 Exit: tested offline, online, timeout, exhausted-budget, provider-failure, and
 connection-loss paths. Failed external writes are reconciled before retrying.
+
+Current Phase 3 work includes schema-v2 attributable memory, opt-in project
+continuity, evidence-backed experiences, non-executable skill proposals,
+persistent Academy progress, tested CPU math/classical-ML exercises, and an
+FTS5 evaluation harness. The Eve runtime retrieves bounded project, experience
+and Academy context on request. Synthetic live conversations tested project
+follow-ups, decisions, blockers, experience evidence, Academy progress,
+corrections, deletions, conflicts, memory opt-out, missing facts and retrieved
+prompt injection. Labeled-secret redaction withheld a synthetic token in two
+post-fix trials; this heuristic is limited and is not comprehensive secret
+detection. The schema-v2 brain backup to a separate NVMe and isolated restore
+passed, preserving six Academy records. Automatic brain mounting, database
+integrity and post-reboot inference/runtime checks passed. The owner accepts
+the risk that loss of the computer could destroy both brain and backup.
+Off-machine backup/restore is deferred infrastructure work, not a blocker for
+Phase 3 integration; it remains required before migrating important or
+irreplaceable private memories.
+Python suites passed 138 tests on both supported versions; Node, Eve discovery
+and source integrity also passed. FTS5 remains lexical (P@5 0.240, recall@5
+1.000, MRR 0.933 on the 13-case synthetic suite). Owner-reported SMART tests
+passed; live KWin remains unverified. Off-machine backup/restore is deferred
+with explicit owner risk acceptance and remains a prerequisite to private-memory
+migration. Phase 3 integration may proceed with these limitations documented.
 
 Current progress: an optional CLI-only online research tool is implemented as
 an explicitly enabled, per-query approval-gated capability. It sends only the
@@ -215,7 +241,38 @@ autonomy must build on a working memory and reasoning layer.
 ## Parallel research tracks
 
 The [Academy curriculum](AI_ACADEMY.md) and [cognitive architecture](COGNITIVE_ARCHITECTURE.md)
-advance through synthetic evaluations and source verification while Phase 2 is
-stabilized. Promote results only after comparison to a baseline, safety checks,
-owner approval and a rollback plan. The [portable brain](BRAIN_STORAGE.md)
-requires its own verified storage and recovery gates before Phase 3 integration.
+advance through synthetic evaluations and source verification in parallel with
+the production phases. Promote results only after comparison to a baseline,
+safety checks, owner approval and a rollback plan. The [portable brain](BRAIN_STORAGE.md)
+requires verified storage and recovery gates before persistent-memory integration.
+
+### Phase 3 gates
+
+- The volume identity, ext4 mount and capacity are verified, and the live
+  schema has been upgraded transactionally with zero memory rows. Do not import
+  or migrate private records until independent backup storage and restoration
+  are verified. Temporary synthetic state must be explicitly selected.
+- First implement one isolated, CPU-only Academy algorithm and its reproducible
+  test. Keep reference collection, algorithm correctness, model training and
+  measured production improvement as separate claims.
+- Synthetic checks cover persistence/reopen, provenance, correction history,
+  explicit-key conflict review, deletion and unsupported schema refusal. Project
+  continuity and runtime experience/Academy retrieval now have synthetic
+  evidence. Physical reboot passed. General memory consolidation, retention
+  expiry, off-machine backup/restore, and broader retrieval quality remain open.
+  The owner accepts deferring off-machine recovery for this release; it remains
+  a prerequisite before migrating important private memories. A verified NVMe
+  backup on a separate drive protects against brain-disk failure but not host loss.
+
+### 2026-11-27 integration checkpoint
+
+Phase 3 PR #4 is open from `feature/phase-3-memory-foundation` to `main`.
+Feature checkpoint `aaee19d` and normal merge commit `f258efa` preserve the
+research-oriented README history. GitHub Actions run `45987228199` passed all
+four jobs for `f258efa`. Local regression results were 138 Python tests on each
+supported version, nine Node tests, Eve discovery, and 153 source-integrity
+checks. This is a release candidate: physical reboot mount persistence passed.
+Live KWin remains unverified. The owner accepts deferring off-machine recovery
+for this release, with the risk that loss of the computer may destroy both
+copies; off-machine recovery remains required before important private-memory
+migration.

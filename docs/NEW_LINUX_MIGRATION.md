@@ -3,11 +3,11 @@
 This guide moves the local Burito checkout and its private data to another
 Linux computer. The code and the memory database are separate: the code is in
 `~/Burito`; personal memory, glossary entries, and knowledge records live in
-`/mnt/burito-brain/data` on the external `BURITO_BRAIN` drive.
+`/mnt/burito-brain/memory` on the external `BURITO_BRAIN` drive.
 
 **Never format or repartition the existing brain drive during migration.** It is
-already ext4 and contains the Burito data directory. The existing drive UUID is
-`ce024ab9-6884-4482-afdd-edbe189ebcf2`; confirm it with `blkid` on the target
+already ext4 and contains Burito's existing directory structure. The current
+drive UUID is `9428a980-24a6-45b2-a0a6-5e057c819406`; confirm it with `blkid` on the target
 machine before using it.
 
 ## 1. Prepare the old machine
@@ -34,9 +34,9 @@ If `git status --short` lists source changes, review and commit them before
 creating a bundle. The bundle contains source history, not model weights,
 runtime `node_modules`, Eve's temporary session state, browser profiles, or
 private Burito data. The private data already resides at
-`/mnt/burito-brain/data` on the same drive.
+`/mnt/burito-brain/memory` on the same drive.
 
-Keep an independent backup of `/mnt/burito-brain/data` on a different physical
+Keep an independent backup of `/mnt/burito-brain/memory` on a different physical
 device. Moving a single drive is not a backup.
 
 ## 2. Attach and mount the existing drive
@@ -61,15 +61,15 @@ UUID (do not substitute another disk):
 
 ```bash
 sudo mkdir -p /mnt/burito-brain
-sudo mount UUID=ce024ab9-6884-4482-afdd-edbe189ebcf2 /mnt/burito-brain
+sudo mount UUID=9428a980-24a6-45b2-a0a6-5e057c819406 /mnt/burito-brain
 ```
 
 Verify it is the expected external ext4 disk, mounted read/write, and contains
-the existing `data` directory:
+the existing `memory` and `manifest` directories:
 
 ```bash
 findmnt -T /mnt/burito-brain -o TARGET,SOURCE,FSTYPE,OPTIONS
-ls -ld /mnt/burito-brain/data
+ls -ld /mnt/burito-brain/memory /mnt/burito-brain/manifest
 ```
 
 If the drive does not appear at `/mnt/burito-brain` automatically, add the UUID
@@ -77,13 +77,14 @@ to `/etc/fstab` only after checking that no entry for it already exists. The
 recommended entry is:
 
 ```text
-UUID=ce024ab9-6884-4482-afdd-edbe189ebcf2 /mnt/burito-brain ext4 defaults,nofail,x-systemd.device-timeout=10s 0 2
+UUID=9428a980-24a6-45b2-a0a6-5e057c819406 /mnt/burito-brain ext4 defaults,nofail,noatime,x-systemd.device-timeout=15s 0 2
 ```
 
 Then run `sudo mount -a` and check `findmnt` again. Do not run filesystem repair
 or formatting commands as part of routine setup.
 
-The data directory is private (mode `700`). If the account UID differs between
+The brain mount root is owner-only (mode `700`); the memory database and brain
+manifest are owner-only (mode `600`). If the account UID differs between
 machines, inspect ownership with `id -u` and `stat -c '%u %a %n'` before
 changing anything. Only correct ownership after confirming the mounted device
 is the expected `BURITO_BRAIN` disk; never recursively change permissions on
@@ -126,7 +127,7 @@ Modelfile uses `qwen3:8b` and an 8192-token context:
 
 ```bash
 ollama pull qwen3:8b
-ollama create burito-local:8b -f config/ollama/Modelfile
+ollama create burito-local:latest -f config/ollama/Modelfile
 ollama list
 ```
 
@@ -139,13 +140,13 @@ launcher makes no automatic cloud fallback.
 Check or install the education lessons in the migrated data directory:
 
 ```bash
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito school list
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito school list
 ```
 
 If `home.honesty` is missing, install lessons:
 
 ```bash
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito school install
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito school install
 ```
 
 ## 5. Set up Brave and desktop tools
@@ -172,7 +173,7 @@ Use [PC access setup](PC_ACCESS.md):
 
 ## 6. Start and verify
 
-The all-tools launcher selects `/mnt/burito-brain/data`, the local model, and an
+The all-tools launcher selects `/mnt/burito-brain/memory`, the local model, and an
 8192-token context. It refuses to start if the expected brain drive is absent:
 
 ```bash
@@ -192,8 +193,8 @@ Set up my existing Burito project on this Linux machine using the repository in
 ~/Burito and the external BURITO_BRAIN drive. Work in small steps and verify
 each result. Begin with read-only checks: inspect the OS, Python, Node, GPU,
 storage devices, filesystem UUIDs, mounts, and ~/Burito Git status. The existing
-brain drive is ext4 with UUID ce024ab9-6884-4482-afdd-edbe189ebcf2, label
-BURITO_BRAIN. Its private Burito data is /mnt/burito-brain/data. Never format,
+brain drive is ext4 with UUID 9428a980-24a6-45b2-a0a6-5e057c819406, label
+BURITO_BRAIN. Burito memory is under /mnt/burito-brain/memory. Never format,
 repartition, erase, or run filesystem repair on any drive. Verify the UUID and
 label before mounting; stop if they do not match. If a required privileged change
 or ownership repair is needed, explain the exact change and why before doing it.
@@ -208,9 +209,9 @@ profiles, credentials, and the SQLite database out of Git.
 Once the disk is correctly mounted at /mnt/burito-brain and the checkout is
 verified, install the pinned runtime using bash scripts/setup-runtime.sh. Check
 GPU/VRAM before downloading model weights. The repository Modelfile uses
-qwen3:8b with an 8192-token context; install/create burito-local:8b only if it
+qwen3:8b with an 8192-token context; install/create burito-local:latest only if it
 fits this machine. Do not configure cloud fallback. Verify the existing
-/mnt/burito-brain/data remains in use and is writable by my account without
+/mnt/burito-brain/memory remains in use and is writable by my account without
 changing unrelated permissions. Check whether home.honesty is installed and
 install lessons only if it is missing.
 

@@ -31,4 +31,7 @@ to personal memory. An ordinary chat can opt in to up to five latest pending and
 accepted records, with their evidence, using `--include-suggestions`. Dismissed
 records are excluded. The suggestion text and evidence are data, not instructions;
 an accepted record never authorizes Burito to act. Activity-only chats exclude
-suggestions. Use `--include-project` separately for the curated repository map.
+suggestions. `--include-project` selects saved owner-maintained project records;
+`--include-experiences` selects matching task outcomes; and `--include-academy`
+selects Academy progress and local knowledge references. The desktop web launcher
+opts into those bounded non-personal scopes. Personal facts remain separate.

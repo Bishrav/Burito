@@ -62,7 +62,11 @@ PY
     --serve|--ollama)
         mode=$1
         shift
-        ollama_bin=$(command -v ollama || printf '%s\n' "$ollama_dir/bin/ollama")
+        if [[ -x "$ollama_dir/bin/ollama" ]]; then
+            ollama_bin="$ollama_dir/bin/ollama"
+        else
+            ollama_bin=$(command -v ollama) || { echo 'Ollama is not installed.' >&2; exit 1; }
+        fi
         if [[ "$mode" == --serve ]]; then
             umask 077
             mkdir -p "$OLLAMA_MODELS"

@@ -15,10 +15,10 @@ Private glossary retrieval is included when chat opts in to personal memory
 with `--include-personal`. Manage records from the project root:
 
 ```sh
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito glossary list
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito glossary search "term in a question"
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito glossary define "term" "owner-approved meaning" --source owner
-BURITO_DATA_DIR=/mnt/burito-brain/data python3 -m burito glossary forget RECORD_ID
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito glossary list
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito glossary search "term in a question"
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito glossary define "term" "owner-approved meaning" --source owner
+BURITO_DATA_DIR=/mnt/burito-brain/memory python3 -m burito glossary forget RECORD_ID
 ```
 
 The `define` command is an explicit owner action. Do not use it to store a

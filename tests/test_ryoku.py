@@ -1,13 +1,16 @@
 import http.client
 from http.server import ThreadingHTTPServer
 import json
+import os
 import queue
+from pathlib import Path
+import tempfile
 import threading
 import unittest
 from unittest.mock import patch
 from urllib.parse import urlsplit
 
-from burito import desktop, web
+from burito import desktop, doctor, web
 from burito.windows import WindowBridgeError
 
 
@@ -48,21 +51,130 @@ class DesktopAdapterTests(unittest.TestCase):
 
 
 class BrainMountTests(unittest.TestCase):
-    def test_web_storage_requires_verified_ext4_uuid(self):
-        from unittest.mock import MagicMock
+    def test_web_cli_passes_only_explicit_cognitive_scopes(self):
+        with patch("burito.web.serve") as serve:
+            from burito.__main__ import main
+            self.assertEqual(main(["web", "--model", "synthetic-model", "--context-tokens", "8192",
+                                   "--temporary-data", "--include-project", "--include-experiences",
+                                   "--include-academy"]), 0)
+        options = serve.call_args.kwargs
+        self.assertTrue(options["include_project"])
+        self.assertTrue(options["include_experiences"])
+        self.assertTrue(options["include_academy"])
+        self.assertFalse(options["include_personal"])
 
-        mount = MagicMock()
-        (mount / "data").is_symlink.return_value = False
-        (mount / "data").is_dir.return_value = True
-        with patch.object(web, "BRAIN_MOUNT", mount), patch.object(web.subprocess, "run") as probe:
-            mount.is_mount.return_value = False
-            self.assertFalse(web.brain_available())
-            probe.assert_not_called()
-            mount.is_mount.return_value = True
-            probe.return_value.stdout = "different-volume ext4\n"
-            self.assertFalse(web.brain_available())
-            probe.return_value.stdout = f"{web.BRAIN_UUID} ext4\n"
-            self.assertTrue(web.brain_available())
+    def test_web_opens_the_verified_memory_directory_not_a_parallel_database(self):
+        class ReachedMemory(Exception):
+            pass
+
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary) / "checkout"
+            eve = root / "runtime/node_modules/.bin/eve"
+            eve.parent.mkdir(parents=True)
+            eve.touch()
+            transcripts = Path(temporary) / "transcripts"
+            def memory_path(path):
+                self.assertEqual(path, web.BRAIN_DATA)
+                raise ReachedMemory
+
+            with patch.object(web, "ROOT", root), \
+                 patch.object(web, "brain_available", return_value=True), \
+                 patch.object(web.shutil, "which", return_value="/usr/bin/node"), \
+                 patch.object(web, "acquire_runtime_lock", return_value=os.open("/dev/null", os.O_RDONLY)), \
+                 patch.object(web, "Memory", side_effect=memory_path):
+                with self.assertRaises(ReachedMemory):
+                    web.serve("synthetic-model", 8192, conversation_dir=str(transcripts))
+
+    def test_web_storage_requires_verified_ext4_uuid(self):
+        from burito import memory
+
+        with tempfile.TemporaryDirectory() as temporary:
+            mount = Path(temporary) / "brain"
+            data = mount / "data"
+            data.mkdir(parents=True)
+            with patch.object(memory, "BRAIN_MOUNT", mount), patch.object(memory, "BRAIN_DATA", data), \
+                 patch.object(memory, "BRAIN_UUID", "expected"), patch.object(memory.subprocess, "run") as probe:
+                probe.return_value.stdout = "different-volume ext4 rw,noatime\n"
+                self.assertFalse(web.brain_available())
+                probe.return_value.stdout = "expected ext4 rw,noatime\n"
+                self.assertTrue(web.brain_available())
+
+
+class DefaultBrainSafetyTests(unittest.TestCase):
+    def test_missing_or_wrong_brain_never_creates_placeholder_database(self):
+        from burito import memory
+
+        with tempfile.TemporaryDirectory() as temporary:
+            mount = Path(temporary) / "brain"
+            data = mount / "data"
+            env = {"PATH": os.environ["PATH"]}
+            with patch.dict(os.environ, env, clear=True), \
+                 patch.object(memory, "BRAIN_MOUNT", mount), patch.object(memory, "BRAIN_DATA", data), \
+                 patch.object(memory.subprocess, "run", side_effect=FileNotFoundError):
+                self.assertEqual(memory.data_directory(), data)
+                with self.assertRaisesRegex(ValueError, "no fallback database"):
+                    memory.Memory().list()
+                self.assertFalse(mount.exists())
+
+    def test_approved_launch_is_blocked_without_auditable_brain(self):
+        from burito import memory
+
+        with tempfile.TemporaryDirectory() as temporary:
+            mount = Path(temporary) / "brain"
+            with patch.dict(os.environ, {"BURITO_APPROVED_APP_LAUNCH": "1"}, clear=True), \
+                 patch.object(memory, "BRAIN_MOUNT", mount), patch.object(memory, "BRAIN_DATA", mount / "data"), \
+                 patch.object(memory, "brain_available", return_value=False), \
+                 patch("burito.access.launch_application") as launch:
+                with self.assertRaisesRegex(ValueError, "no fallback database"):
+                    from burito.access import dispatch
+                    dispatch({"action": "launch", "app_id": "test:app.desktop", "sha256": "a" * 64})
+            launch.assert_not_called()
+            self.assertFalse(mount.exists())
+
+    def test_doctor_does_not_report_internal_free_space_as_brain_capacity(self):
+        with patch.dict(os.environ, {"PATH": os.environ["PATH"]}, clear=True), \
+             patch("burito.doctor.brain_status", return_value="unavailable"), \
+             patch("burito.doctor.probe", return_value={"ok": False, "detail": "not found"}), \
+             patch("burito.doctor.shutil.disk_usage") as disk_usage:
+            result = doctor.report()
+        self.assertIs(result["brain_available"], False)
+        self.assertIsNone(result["storage_free_gib"])
+        self.assertIsNone(result["storage_total_gib"])
+        disk_usage.assert_not_called()
+
+    def test_read_only_brain_is_reported_and_rejected_before_database_creation(self):
+        from burito import memory
+
+        with tempfile.TemporaryDirectory() as temporary:
+            mount = Path(temporary) / "brain"
+            data = mount / "memory"
+            data.mkdir(parents=True)
+            result = type("Result", (), {"stdout": "expected ext4 ro,nosuid,noatime"})()
+            with patch.object(memory, "BRAIN_MOUNT", mount), patch.object(memory, "BRAIN_DATA", data), \
+                 patch.object(memory, "BRAIN_UUID", "expected"), \
+                 patch.object(memory.subprocess, "run", return_value=result):
+                self.assertEqual(memory.brain_status(), "read_only")
+                with self.assertRaisesRegex(ValueError, "no fallback database"):
+                    memory.Memory().initialize()
+            self.assertFalse((data / "memory.sqlite3").exists())
+
+    def test_full_brain_is_rejected_before_database_creation(self):
+        from burito import memory
+
+        with tempfile.TemporaryDirectory() as temporary:
+            mount = Path(temporary) / "brain"
+            data = mount / "memory"
+            data.mkdir(parents=True)
+            result = type("Result", (), {"stdout": "expected ext4 rw,noatime"})()
+            no_space = type("Usage", (), {"free": 0})()
+            with patch.object(memory, "BRAIN_MOUNT", mount), patch.object(memory, "BRAIN_DATA", data), \
+                 patch.object(memory, "BRAIN_UUID", "expected"), \
+                 patch.object(memory.subprocess, "run", return_value=result), \
+                 patch.object(memory.shutil, "disk_usage", return_value=no_space):
+                self.assertEqual(memory.brain_status(), "full")
+                with self.assertRaisesRegex(ValueError, "no fallback database"):
+                    memory.Memory().initialize()
+            self.assertFalse((data / "memory.sqlite3").exists())
 
 
 class WebIntegrationTests(unittest.TestCase):

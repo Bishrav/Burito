@@ -72,3 +72,75 @@ No frontier pretraining or continuous production self-training.
 Reusable skills require approval of their purpose, preconditions, tools, inputs,
 scope, execution, expected results, verification, known failures, recovery and
 versions. An observed task never creates standing permission.
+
+## First measured implementation
+
+`academy/linear_regression.py` is the first isolated, standard-library teaching
+implementation. It fits a one-variable least-squares line and reports MSE, MAE
+and R² (undefined R² is `null` for constant targets). Tests use a deterministic
+synthetic training set and separate held-out points. The source basis is
+[Stanford CS229's linear regression notes](https://cs229.stanford.edu/notes_archive/cs229-notes-all/cs229-notes1.pdf)
+and [MIT OCW's curve-fitting lesson](https://ocw.mit.edu/courses/electrical-engineering-and-computer-science/6-00sc-introduction-to-computer-science-and-programming-spring-2011/unit-2/lecture-17-curve-fitting/);
+neither source has been downloaded or imported. This verifies the implementation
+and its tests only. It does not establish course completion, model training or
+improved production capability.
+
+The first memory-ranking baseline also reuses FTS5 with a volatile in-memory
+index: on 1,010 synthetic records, the top five were all relevant for the fixed
+`StudyCircle storage` query; 25 warm searches had a 1.190 ms median and 1.942 ms
+p95. This small local measurement does not predict HDD latency or establish a
+need for embeddings.
+
+## Operational starter registry
+
+`academy/curriculum/core.json` is the first versioned curriculum registry.
+It defines prerequisites, objectives, exercises and test-based completion
+criteria for vectors/matrices, descriptive statistics, probability and Bayes,
+calculus/gradients, gradient descent, and linear regression. Its sources are
+link-only: no third-party course files have been imported. MIT OCW 18.06 covers
+linear algebra; 18.05 covers probability, Bayesian inference and statistics;
+18.01 covers differentiation and integration; Stanford CS229 notes cover
+regression and optimization. Asset licenses must be checked before importing
+any course material.
+
+`academy/progress.py` stores topic events through the existing private memory
+database. Stages distinguish source verification, registration, retrieval,
+passed exercises, implementation, reproduced experiments, benchmarked
+capabilities and production approval. Passed work requires evidence; a topic
+cannot be marked mastered from a model explanation. `python -m burito academy`
+provides owner-managed progress commands. Automated tests use an isolated
+database. Six non-personal starter topic records are now persisted on the
+verified brain, each at `algorithm_implemented` with repository test evidence;
+this is not a claim of course mastery.
+
+The tested standard-library teaching code now includes vector/matrix operations,
+descriptive statistics, conditional probability, Bayes, finite-difference
+derivatives, gradient descent, closed-form and gradient-descent linear
+regression, L2-regularized binary logistic regression, k-nearest neighbors,
+a small CART-style decision tree, seeded k-means, classification metrics, and
+deterministic train/test and train/validation/test splitting. These are
+evaluated implementations, not evidence of course mastery or production
+language-model training.
+
+The isolated intent experiment compares deterministic rules with one-vs-rest
+logistic regression on 40 training and 20 hand-separated held-out synthetic
+phrases. The latest run gave 90% accuracy for both; candidate macro F1 was
+0.889 versus 0.899 for the rules. This shows no production benefit. The script
+records CPU and wall time, peak process RSS, settings and failure examples. The
+candidate is not used by Burito's runtime.
+
+## Retrieval evaluation
+
+`python -m academy.evaluations.memory_retrieval` evaluates the FTS5 baseline on
+1,011 temporary synthetic records. Its 13 cases cover exact and lexical
+paraphrase recall, temporal/project context, prior decisions, blockers, an
+experience, multiple relevant records, corrected/deleted records, conflicts,
+irrelevant input and an ambiguous query with no useful search terms. It checks
+personal-memory opt-out and conflict metadata. The current run measured
+precision@5 0.240, recall@5 1.000, MRR 0.933, 1.157 ms median and 1.204 ms p95
+over 60 warm searches. All positive relevant records were returned, though one
+was not ranked first. The prior eight-case 1,009-record metrics are not directly
+comparable because the query set and stopword/category filtering changed. These
+measurements use temporary storage and include rebuilding the FTS index, not
+HDD latency. No calibrated score threshold or embedding dependency is justified
+by this synthetic set.

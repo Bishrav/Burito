@@ -9,6 +9,15 @@ test('defaults to literal loopback and excludes personal data', () => {
   assert.equal(settings.baseURL, 'http://127.0.0.1:11434/v1');
   assert.equal(settings.includePersonal, false);
   assert.equal(settings.lesson, 'home.honesty');
+  assert.equal(settings.includeExperiences, false);
+  assert.equal(settings.includeAcademy, false);
+});
+
+test('cognitive records require explicit scopes', () => {
+  const settings = readSettings({ ...base, BURITO_INCLUDE_EXPERIENCES: '1',
+    BURITO_INCLUDE_ACADEMY: '1' });
+  assert.equal(settings.includeExperiences, true);
+  assert.equal(settings.includeAcademy, true);
 });
 
 test('does not accept remote endpoints or cloud fallback', () => {

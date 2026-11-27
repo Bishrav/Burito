@@ -31,7 +31,9 @@ A language model alone does not provide durable memory, reliable execution, or v
 
 ## Current capabilities
 
-The following describes the documented baseline on the public repository, not unpublished local work. See the [development log](docs/DEVELOPMENT_LOG.md) for evidence and limitations.
+This table includes the Phase 3 feature branch, which is not yet released to
+`main`. See the [development log](docs/DEVELOPMENT_LOG.md) and
+[status](docs/STATUS.md) for evidence and limitations.
 
 | Capability | Development status |
 | --- | --- |
@@ -45,7 +47,8 @@ The following describes the documented baseline on the public repository, not un
 | Optional Brave page and tab tools | Implemented with per-action approval; live coverage varies |
 | Optional online research | Explicit query approval; provider coverage incomplete |
 | Beginner lesson catalog and owner feedback | Implemented; not neural model training |
-| Advanced cognitive memory and portable brain integration | Phase 3 research and implementation |
+| Advanced cognitive memory and portable brain integration | Schema-v2 memory, project continuity, experience records, non-executable skill proposals and Academy progress; synthetic and isolated brain checks passed |
+| Mathematical and classical ML teaching code | Tested CPU implementations; isolated intent model did not beat the deterministic baseline and is not in production |
 | Voice, vision, paired mobile access and durable workflows | Planned |
 | Specialist agents and continual model improvement | Research roadmap |
 
@@ -113,7 +116,18 @@ Read the [Academy plan](docs/AI_ACADEMY.md).
 
 The intended storage hierarchy separates GPU inference, RAM working context, internal SSD runtime/caches and external durable storage. The dedicated brain is designed to preserve personal memory, knowledge, project history, experience, approved skills, research artifacts and model checkpoints independently of a particular model or operating system.
 
-A 4 TB external ext4 volume is the reference design. Full private-memory integration, versioned migration and independent backup/restore verification are Phase 3 requirements. Do not format an existing disk to follow this README.
+A 4 TB external ext4 volume is the reference design. The Phase 3 branch has a
+UUID-checked manifest, transactional schema-v2 migration, project continuity,
+evidence-based experience records, non-executable skill proposals and
+persistent Academy progress. Synthetic project continuity was verified across
+separate processes. Six Academy progress records are present on the brain. A
+checksummed SQLite backup to the separate internal NVMe and isolated restoration
+passed, including integrity and record-count checks; this is not an off-machine
+backup. Automatic mounting after a physical reboot has passed verification.
+The owner accepts the current same-host backup risk; off-machine recovery is
+deferred and remains required before migrating important or irreplaceable
+private memories. No private memories have been migrated. Do not format an
+existing disk to follow this README.
 
 See [brain storage and recovery](docs/BRAIN_STORAGE.md). A snapshot on the same disk is not an independent backup.
 
@@ -160,7 +174,7 @@ Install Ollama using its [official instructions](https://docs.ollama.com/linux) 
 
 ```bash
 ollama pull qwen3:8b
-ollama create burito-local:8b -f config/ollama/Modelfile
+ollama create burito-local:latest -f config/ollama/Modelfile
 ollama list
 ```
 
@@ -168,7 +182,11 @@ The model is downloaded separately and not distributed in this repository. Check
 
 ### 3. Explore local memory and chat
 
-The standard desktop launcher expects a verified external mount at `/mnt/burito-brain` and uses `/mnt/burito-brain/data` by default. The installed drive identity and private data location must be configured for the actual host. Never use a missing mount as a fallback for durable storage.
+The standard desktop launcher expects the verified BURITO_BRAIN ext4 volume
+mounted at `/mnt/burito-brain`; durable memory uses
+`/mnt/burito-brain/memory`. The runtime verifies the configured brain identity
+and refuses a local fallback when the expected brain is unavailable. Never
+format or repartition an existing brain disk to follow this README.
 
 ```bash
 python3 -m burito --help
@@ -220,7 +238,18 @@ The [GitHub Actions workflow](.github/workflows/tests.yml) defines the automated
 | 7 | Specialist agents | Measured coordination under central policy |
 | 8 | Continual learning | Evaluated personalization and controlled adaptation |
 
-Phase 0–2 form the documented development baseline. Phase 3 is the next integration milestone. The Academy and cognitive research tracks continue in parallel. See the [roadmap](docs/ROADMAP.md) and [status](docs/STATUS.md) for acceptance criteria rather than interpreting the phase count as a percentage of total effort.
+Phases 0–2 are integrated. Phase 3 is implemented on its feature branch; PR #4
+is open and its initial GitHub checks passed. Its web runtime can retrieve
+bounded project, experience and Academy context; personal memory remains
+excluded unless explicitly opted in. Synthetic live conversations exercised
+project follow-ups, corrections, deletion, memory opt-out and untrusted retrieved
+content through Eve and local Ollama. The Academy and cognitive research tracks
+continue in parallel. Live KWin behavior and off-machine recovery remain
+unverified. The owner accepts the current host-loss risk for this release;
+private-memory migration remains gated on off-machine recovery. See
+the [roadmap](docs/ROADMAP.md) and [status](docs/STATUS.md) for evidence and
+acceptance criteria rather than interpreting the phase count as a percentage of
+total effort.
 
 ## Security and privacy
 

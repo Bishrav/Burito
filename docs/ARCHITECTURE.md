@@ -75,6 +75,24 @@ separate tables. The foundation is not a vector
 index, conversational memory, or training pipeline. Private SQLite storage is
 outside the checkout; future services must enforce access control too.
 
+Phase 3 preserves this separation: existing `Memory`, `Knowledge`, and `School`
+SQLite/FTS5 components remain the initial persistence and retrieval path. The
+default memory path is the existing `/mnt/burito-brain/memory` directory. It
+validates filesystem UUID and type, requires the volume manifest and opens
+SQLite through a pinned directory descriptor. It does not create an XDG fallback.
+Explicit `BURITO_DATA_DIR` overrides remain available for isolated tests.
+Memory retrieval currently builds a temporary in-memory FTS5 index per query;
+it does not persist another index. Embeddings remain an evaluated extension.
+The Academy regression experiment is isolated under `academy/`.
+
+The Eve instruction bridge asks the existing Python context builder for selected
+records per turn. Project, experience and Academy scopes are separately opt-in,
+bounded and query-selected; Academy progress is distinct from curriculum
+metadata and imported knowledge. Personal facts use a separate category allowlist
+and remain off by default. Retrieved records are evidence, not instructions or
+permissions. The desktop web launcher opts into the three non-personal cognitive
+scopes; it does not enable personal memory or memory writes.
+
 ## Routing contract (planned)
 
 Classify the task's tools and data needs independently of the model. Local tasks

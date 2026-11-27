@@ -12,34 +12,34 @@ The doctor is read-only and makes no network requests. It reports selected
 hardware/runtime information, not environment secrets. Review any output before
 sharing it. An NVIDIA failure is a readiness finding, not proof the card is absent.
 
-## Findings from the development session
+## Latest host findings — 2026-11-26
 
-- Ubuntu 26.04.1, x86_64; owner reports Kubuntu desktop.
-- Intel i9-14900K, approximately 32 GB RAM; Wayland session.
-- RTX 5070 is detected through PCI and NVIDIA driver information. The NVIDIA
-  kernel module is loaded, but `/dev/nvidia*` is absent in the restricted session.
-  `nvidia-smi` here therefore does not establish a broken host driver. Verify it
-  in the normal desktop terminal before changing drivers.
-- The owner verified a working RTX 5070 with 12227 MiB VRAM and driver 595.99.02
-  in the normal terminal. No driver repair is indicated by that output.
-- Linux partition exposes roughly 73 GiB free; intended 4 TB storage is
-  not visible in this session. The first small model can use the existing Linux
-  filesystem. Do not partition or format disks, or assume Windows space is free.
-- Python 3.14 and checkout-local Node 26.13.1/npm are available.
-- Shell cannot resolve github.com; connected GitHub tools can access repository.
+- Ryoku CachyOS/Arch, Hyprland, x86_64; i9-14900K and 32 GB RAM.
+- RTX 5070, driver 620.70.06. Host `nvidia-smi` passed. A local response from
+  `burito-local:latest` ran with 100% GPU allocation, 8,192 context and 6.3 GB
+  Ollama-reported model memory. Do not reinstall the working driver or model.
+- Transcend StoreJet 25H3 with WDC WD40NPJZ-00CCDT0, ext4 UUID
+  `9428a980-24a6-45b2-a0a6-5e057c819406`, mounted read/write at
+  `/mnt/burito-brain`. `findmnt --verify` passed; root is mode 700 and about
+  3.6 TiB is free. SMART remains owner-reported because this session lacks the
+  sudo password needed to query it.
+- A synthetic write/read/fsync/checksum passed. A v1 brain manifest and empty
+  v1 SQLite memory database passed synthetic persistence, correction, deletion,
+  integrity and temporary backup/restore checks.
+- The Codex sandbox sees the mount read-only and cannot access GPU devices or
+  host loopback. Host checks were run in the normal execution context; these
+  sandbox restrictions are not host failures.
 
-These observations describe the exposed development environment; it may not
-expose every host device or installed program.
+Do not modify the Windows partitions, Ryoku Btrfs layout or the existing fstab
+entry. Physical reboot persistence and a durable independent backup remain
+unverified.
 
 ## GPU and storage gate
 
-Collect read-only output from `nvidia-smi`, `lspci -nnk`, `lsblk -f`, and
-`df -h` on the actual desktop. Confirm driver compatibility using the current
-Ubuntu/Kubuntu documentation before making changes. Do not reinstall drivers,
-disable Secure Boot, modify partitions, or mount unknown volumes automatically.
-Confirm the 4 TB volume, filesystem, ownership, and mount persistence. Keep
-models, memory, indexes, and backups in distinct directories; a second folder
-on the same disk is not an independent backup.
+For future changes, use read-only `nvidia-smi`, `lsblk -f`, `findmnt`, and `df`
+checks first. The current driver and brain mount are verified; do not reinstall
+them or duplicate the existing fstab entry. Keep backups on a different physical
+device; another folder on the brain disk is not an independent backup.
 
 ## Runtime gate
 

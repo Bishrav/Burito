@@ -14,7 +14,8 @@ ROOT = Path(__file__).resolve().parent.parent
 
 def chat(model, context_tokens, lesson="home.honesty", include_personal=False, include_system=True,
          pc_access=True, include_activity=False, activity_only=False, include_feedback=False,
-         include_project=False, include_suggestions=False, enable_online=False,
+         include_project=False, include_suggestions=False, include_experiences=False,
+         include_academy=False, enable_online=False,
          enable_screen_read=False, enable_desktop_control=False, enable_browser_search=False,
          enable_brave_tabs=False, enable_browser_control=False):
     if activity_only:
@@ -32,6 +33,8 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         include_feedback = False
         include_project = False
         include_suggestions = False
+        include_experiences = False
+        include_academy = False
     runtime = ROOT / "runtime"
     environment = os.environ.copy()
     # Never pass inherited gateway credentials to the local agent unless this
@@ -69,7 +72,9 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
     build_context(lesson, include_personal, include_system=include_system,
                   include_activity=include_activity, activity_only=activity_only,
                   include_feedback=include_feedback, include_project=include_project,
-                  include_suggestions=include_suggestions)
+                  include_suggestions=include_suggestions,
+                  include_experiences=include_experiences, include_academy=include_academy,
+                  include_knowledge=include_academy)
     environment.update({
         "BURITO_MODE": "local",
         "BURITO_LOCAL_MODEL": model,
@@ -81,6 +86,9 @@ def chat(model, context_tokens, lesson="home.honesty", include_personal=False, i
         "BURITO_INCLUDE_FEEDBACK": "1" if include_feedback else "0",
         "BURITO_INCLUDE_PROJECT": "1" if include_project else "0",
         "BURITO_INCLUDE_SUGGESTIONS": "1" if include_suggestions else "0",
+        "BURITO_INCLUDE_EXPERIENCES": "1" if include_experiences else "0",
+        "BURITO_INCLUDE_ACADEMY": "1" if include_academy else "0",
+        "BURITO_INCLUDE_KNOWLEDGE": "1" if include_academy else "0",
         "BURITO_GLOSSARY_WRITES": "1" if include_personal else "0",
         "BURITO_MEMORY_WRITES": "1" if include_personal else "0",
         "BURITO_PC_ACCESS": "1" if pc_access else "0",

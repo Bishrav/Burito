@@ -1,7 +1,7 @@
 # Model strategy
 
 Use Qwen3 8B Q4_K_M through local Ollama initially. The Modelfile allocates
-8,192 tokens. The migration launcher expects the `burito-local:8b` alias.
+8,192 tokens. The verified local alias is `burito-local:latest`.
 When verifying with a different installed alias, pass it explicitly.
 
 On the RTX 5070, the 8K test delivered 97.5 generation tokens/s with full GPU

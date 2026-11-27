@@ -93,11 +93,13 @@ class AccessTests(unittest.TestCase):
             app.write_text('[Desktop Entry]\nType=Application\nName=Demo App\nExec=/usr/bin/true\n')
             registry = {'test': root}
             found = applications(directories=registry)[0]
-            with patch.dict(os.environ, {'BURITO_DATA_DIR': str(root / 'private')}), \
+            with patch.dict(os.environ, {'BURITO_DATA_DIR': str(root / 'private'),
+                                         'XDG_CACHE_HOME': str(root / 'cache')}), \
                  patch('burito.access.subprocess.run', return_value=SimpleNamespace(returncode=0)) as run:
                 result = launch_application(found['app_id'], found['sha256'], registry)
                 launched_path = Path(run.call_args.args[0][2])
                 self.assertNotEqual(launched_path, app)
+                self.assertTrue(launched_path.is_relative_to(root / 'cache'))
                 self.assertEqual(launched_path.read_bytes(), app.read_bytes())
                 self.assertEqual(result['status'], 'launch_request_accepted')
 

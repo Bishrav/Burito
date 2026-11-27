@@ -72,6 +72,30 @@ class FoundationTests(unittest.TestCase):
                     self.assertEqual(main(["forget", identifier]), 0)
                     self.assertEqual(main(["forget", identifier]), 1)
 
+    def test_memory_revision_and_conflict_cli_are_owner_reviewable(self):
+        with tempfile.TemporaryDirectory() as directory, \
+             patch.dict(os.environ, {"BURITO_DATA_DIR": directory}), \
+             patch("builtins.print"):
+            self.assertEqual(main(["init"]), 0)
+            main(["remember", "Synthetic project uses backend A", "--category", "project",
+                  "--claim-key", "project backend"])
+            first_id = next(row["id"] for row in Memory().list()
+                            if row["content"] == "Synthetic project uses backend A")
+            main(["remember", "Synthetic project uses backend B", "--category", "project",
+                  "--claim-key", "project backend"])
+            self.assertEqual(main(["correct", first_id, "Synthetic corrected project backend",
+                                   "--expected", "Synthetic project uses backend A"]), 0)
+            self.assertEqual(main(["memory-history", first_id]), 0)
+            self.assertEqual(Memory().history(first_id)[0]["content"],
+                             "Synthetic project uses backend A")
+            conflict_id = Memory().conflicts()[0]["id"]
+            self.assertEqual(main(["memory-conflicts"]), 0)
+            self.assertEqual(main(["memory-conflict-resolve", str(conflict_id), "superseded",
+                                   "--supersede-memory", first_id]), 0)
+            records = {row["id"]: row for row in Memory().list(include_superseded=True)}
+            self.assertEqual(records[first_id]["active"], 0)
+            self.assertEqual(sum(row["active"] for row in records.values()), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
