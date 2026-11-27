@@ -69,6 +69,19 @@ measured goals. Keep inference and training workloads separate where they
 compete. Obtain approval for large downloads, private training and heavy runs.
 No frontier pretraining or continuous production self-training.
 
+## Sensory intelligence track
+
+The versioned curriculum registry also defines planned modules for digital
+audio sampling and spectral features, local speech recognition and evaluation,
+voice activity detection, and speech synthesis. Phase 4A implements a bounded
+CPU-only `whisper.cpp` transcription path and WER/CER evaluation helpers. It
+has only been objectively measured against one upstream English fixture. The
+owner reports acceptable transcription on representative English microphone
+recordings, but sample count, recording conditions, and quantitative accuracy
+are not recorded; no representative multilingual evaluation set exists.
+Curriculum entries describe objectives and future completion evidence, not
+Academy mastery. VAD and TTS remain planned and are not installed or enabled.
+
 Reusable skills require approval of their purpose, preconditions, tools, inputs,
 scope, execution, expected results, verification, known failures, recovery and
 versions. An observed task never creates standing permission.

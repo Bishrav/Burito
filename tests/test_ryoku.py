@@ -245,3 +245,35 @@ class WebIntegrationTests(unittest.TestCase):
         self.assertEqual((status, reply["reply"], reply["notificationAccepted"]), (200, "ready", True))
         self.assertEqual(received.get_nowait(), (web.BRIDGE_PORT, "/chat", {"message": "ready"}, "test-token"))
         self.assertTrue(received.empty())
+
+    def test_transcription_is_same_origin_bounded_and_returns_an_editable_transcript(self):
+        audio = b"synthetic encoded audio"
+        headers = {"Content-Type": "audio/webm;codecs=opus"}
+        with patch("burito.web.transcribe", return_value="synthetic words") as transcribe:
+            self.assertEqual(self.request("POST", "/api/transcribe?language=en", audio, {
+                **headers, "Origin": "https://external.example",
+            })[0], 403)
+            self.assertEqual(self.request("POST", "/api/transcribe?language=en", audio, {
+                "Content-Type": "text/plain",
+            })[0], 415)
+            status, result = self.request("POST", "/api/transcribe?language=en", audio, headers)
+        self.assertEqual((status, result), (200, {"text": "synthetic words", "language": "en"}))
+        transcribe.assert_called_once_with(audio, "audio/webm", "en")
+
+    def test_transcription_rejects_oversize_and_invalid_language(self):
+        with patch("burito.web.transcribe") as transcribe:
+            status, result = self.request("POST", "/api/transcribe?language=fr", b"audio",
+                                          {"Content-Type": "audio/webm"})
+            self.assertEqual((status, result), (400, {"error": "Choose English, Nepali, Hindi, or automatic language detection."}))
+            connection = http.client.HTTPConnection("127.0.0.1", self.port, timeout=3)
+            try:
+                connection.putrequest("POST", "/api/transcribe")
+                connection.putheader("Content-Type", "audio/webm")
+                connection.putheader("Content-Length", str(8 * 1024 * 1024 + 1))
+                connection.endheaders()
+                response = connection.getresponse()
+                status, result = response.status, json.loads(response.read())
+            finally:
+                connection.close()
+            self.assertEqual(status, 413)
+            transcribe.assert_not_called()
