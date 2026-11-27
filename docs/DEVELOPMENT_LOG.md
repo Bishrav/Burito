@@ -463,3 +463,152 @@ migration remain unverified. No private memories were read, migrated or altered.
 
 Do not begin Phase 4. Do not migrate private memories, back up to the same
 drive, remount or repair the filesystem, reboot, merge main, or force-push.
+
+### 2026-11-27 Day 2 release-candidate checkpoint
+
+Verified `/home/burito/Burito/.tools/phase-3-intelligence` on
+`feature/phase-3-memory-foundation`, clean at `ee80d50013ed42ec1dcf357c3ec1290cfe20874f`.
+GitHub's feature ref matched that commit; remote `main` is
+`59cc670c55759c39e31a3839d9188d0c1e4e02ec`. The README commit is present on
+remote main. A three-way README check reports six overlapping regions between
+main's research revision and the feature's Phase 3 updates. Preserve both
+histories and reconcile these sections explicitly before PR integration. The
+GitHub connector returned no check statuses or workflow runs for this commit.
+
+Owner-supplied SMART results were documented in `BRAIN_STORAGE.md`: overall
+health passed; short and extended tests completed without error; reallocated,
+pending, uncorrectable and UDMA CRC counters were zero; no SMART errors were
+logged; temperature 33 °C; power-on hours 48. This session did not independently
+read the SMART log.
+
+The currently visible brain mount is the expected ext4 UUID but read-only.
+`burito doctor` reported `read_only`. SQLite opened read-only and returned
+schema 2, `integrity_check=ok`, six total rows and six Academy progress records;
+no memory content was queried. The 98,304-byte database has not been backed up
+to an independent destination. The proposed path under `/home/burito/.local/
+share/burito-backups` resolves to the separate NVMe (`/dev/nvme0n1p8`) with
+71,909,986,304 bytes available and no existing symlink component. It was not
+created: this session sees `/home` read-only and requested owner approval.
+No restore test was attempted.
+
+Added a checksummed backup manifest containing schema, source brain identity
+when applicable, timestamp and restore compatibility. Verification uses
+owner-only regular files and no-follow descriptors; synthetic restoration and
+tamper detection tests passed. The actual independent destination remains
+uncreated pending approval and a writable `/home` mount.
+
+Current validation: 137 tests passed on Python 3.11 and 137 on Python 3.14,
+including loopback web integration with no skips; source integrity passed for
+153 files. Eve discovery followed by Node tests passed sequentially (9/9). An
+intentionally concurrent discovery/test attempt produced an empty Eve JSON
+response; the supported sequential CI order passed. Shell syntax checks passed.
+The reproducible 13-case FTS5 suite returned P@5 0.240, recall@5 1.000,
+MRR 0.933, median 1.169 ms and p95 1.211 ms over warm temporary-index searches.
+
+`nvidia-smi` saw RTX 5070, driver 620.70.06, 12,227 MiB VRAM and 835 MiB in
+use. The Ollama client is 0.40.18, but no server process or default model files
+were available in this execution environment. No model was downloaded and no
+fresh inference or multi-trial cognitive conversation evaluation was run.
+Earlier 100% GPU inference and conversational results remain historical
+evidence, not today's verification. No reboot, mount change, backup, private
+memory migration, merge, commit or push was performed today.
+
+#### Next actions
+
+1. Obtain approval before creating the independent backup destination. When
+   `/home` is writable, use `Memory.backup` and `Memory.verify_backup`; restore
+   only into isolated scratch and verify schema, six Academy records, synthetic
+   continuity and integrity. Do not overwrite the live brain.
+2. Re-run the actual local Ollama model and multi-trial synthetic cognitive
+   benchmark from the owner's normal Ryoku session; keep transcript and brain
+   fixtures outside Git and remove them after verification.
+3. Coordinate reboot verification with the owner; verify brain UUID/mount,
+   SQLite, Academy/project continuity, Ollama and GPU after boot.
+4. Resolve the six README overlaps while keeping the research content and
+   accurate Phase 3 status. Re-run the release gates and inspect CI before
+   proposing PR integration.
+5. Keep private-memory migration and Phase 4 gated. Live KWin remains
+   unverified.
+
+### 2026-11-27 host access, independent restore and live cognition
+
+Verified the exact Phase 3 worktree and preserved the six pre-existing modified
+files. `pwd`, branch and diff checks confirmed the feature worktree at
+`ee80d50013ed42ec1dcf357c3ec1290cfe20874f`; no Git operations changed its
+history. Host-scoped `findmnt` showed that the prior read-only observations
+were imposed by the Codex sandbox. On the physical host, `/home` is writable
+Btrfs on Kingston NVMe and `/mnt/burito-brain` is writable ext4 on the separate
+WDC HDD, UUID `9428a980-24a6-45b2-a0a6-5e057c819406`. The approved target parent
+resolved without symlinks, had burito ownership and about 67 GiB free.
+
+Created `/home/burito/.local/share/burito-backups` mode 700. `Memory.backup`
+created a 98,304-byte mode-600 SQLite online backup and private manifest.
+`Memory.verify_backup` confirmed SHA-256, schema v2, expected brain UUID and
+SQLite integrity. Restored using SQLite's backup API into a mode-700 temporary
+scratch directory on NVMe. Integrity and schema checks passed and all six
+Academy progress records were preserved. Fresh-process retrieval, synthetic
+project continuity, correction and deletion passed; the live brain was never
+overwritten. No private conversation/memory data was read or migrated. The
+backup is physically separate from the brain HDD but still on the same PC, so
+it does not establish off-machine disaster recovery.
+
+Ollama 0.40.18 had no active system/user service or process. The existing
+model store was found at the main checkout's ignored `models/ollama` path; the
+feature worktree's model directory is empty. Started one temporary server on
+`127.0.0.1` with the existing store, then stopped it after testing. The
+existing `burito-local:latest` alias returned `LOCAL_MODEL_READY`; `ollama ps`
+reported Qwen3 8B, 100% GPU, 8192 context, llamacpp, and 6.3 GB loaded. NVIDIA
+reported RTX 5070, driver 620.70.06, 12,227 MiB VRAM. No model or driver was
+installed.
+
+The live synthetic benchmark ran the real loopback web/Eve/Ollama streaming
+path. Across two trials each, project follow-up, next action, decision, blocker,
+experience lesson, Academy stage, corrected record, deleted record, conflict,
+personal-memory opt-out, prompt injection and missing-record honesty met their
+assertions after running memory-content scenarios with explicit opt-in. The
+first 26-turn broad run showed 18/24 assertions: the six failures were the
+corrected/deleted/conflict cases run with personal memory disabled, which
+correctly excluded those semantic records. Those cases passed in 2/2 subsequent
+explicit-opt-in trials. Personal opt-out passed in 2/2. Prompt-injection refusal
+initially echoed the synthetic token in 2/2 trials; deterministic credential-
+like value redaction was added before context reaches Eve. The new unit test
+checks redaction and the real runtime withheld the token in 2/2 post-fix trials.
+This guards obvious labeled secrets only; it is not complete secret detection.
+Across the broad run, median latency was 504 ms and p95 1,271 ms; post-fix
+injection median was 726 ms. Test cases and response scoring are synthetic and
+small; latency includes streamed request/response wall time, not TTFT.
+
+README comparison found exactly six overlapping regions between feature and
+main. The proposed resolution is to retain main's research introduction,
+architecture figure, limitations, reproducibility and security sections, and
+merge only accurate Phase 3 implementation/status facts into its capabilities,
+memory, brain, model alias, storage path and roadmap sections. No README merge
+or history rewrite was performed. Workflow `tests.yml` has `push` and
+`pull_request` triggers with no branch filter. The connector helper used earlier
+filters to PR-triggered runs, so it returned zero for this push. Direct GitHub
+API inspection found run `45877663332` for the feature branch and all four
+checks for `ee80d500` completed successfully: source-integrity, runtime-checks,
+Python 3.11 and Python 3.14. The feature branch is not protected; no settings
+were changed.
+
+No reboot was performed. Reboot persistence, off-machine backup/restore,
+live KWin operation and private-memory migration remain unverified. An
+owner-coordinated reboot checklist is: save and close work; verify backup
+checksum/restore first; close Burito/Ollama processes; reboot manually; check
+`findmnt -T /mnt/burito-brain`, compare UUID `9428a980-24a6-45b2-a0a6-5e057c819406`
+and ext4; run `python -m burito doctor`; check SQLite `PRAGMA integrity_check`
+and the six Academy rows; then start the local Ollama service and verify
+`ollama ps`, `nvidia-smi`, and a `burito-local:latest` response.
+
+Final local gates after the context-redaction change: 138 Python tests passed
+on Python 3.11 and 138 on Python 3.14 with no skips; Eve discovery passed; all
+9 Node cases passed sequentially; source integrity passed for 153 files;
+`bash -n scripts/*.sh` and `git diff --check` passed. The credential-pattern
+scan found no credential-like matches. No database, model blob, backup artifact
+or credential is staged. The existing documented brain UUID remains in the
+working documentation diff; it is not a credential, but it is host-specific.
+
+The local branch upstream was corrected to
+`origin/feature/phase-3-memory-foundation`; it now has no ahead/behind commits.
+This changed only local branch tracking configuration, not Git history or the
+worktree checkpoint.

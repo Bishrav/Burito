@@ -83,6 +83,34 @@ owner reports successful SMART short and extended tests, but their logs remain
 unverified here. Physical reboot remains unverified. No private
 memories were read, migrated or altered. Phase 3 is not complete.
 
+### 2026-11-27 release-candidate recheck
+
+The feature commit `ee80d50013ed42ec1dcf357c3ec1290cfe20874f` is on the remote
+feature branch; remote `main` remains `59cc670c55759c39e31a3839d9188d0c1e4e02ec`.
+No CI statuses or workflow runs were reported for the feature commit. A
+read-only integration check found six overlapping README merge regions; do not
+merge without resolving them while preserving the research-oriented README.
+
+The brain is currently mounted read-only. Read-only SQLite verification found
+schema 2, `integrity_check=ok`, and six Academy records. The proposed independent
+backup location is on the separate internal NVMe filesystem with about 67 GiB
+free, but does not exist and was not created; `/home` was read-only in this
+session and owner approval was requested. Synthetic backup/restore tests passed
+in temporary storage; no backup or restoration test on the independent physical
+destination has passed.
+
+Current local checks: 137 Python tests passed on Python 3.11 and 137 on 3.14,
+including loopback checks with no skips; Eve discovery and all nine Node cases
+passed when run sequentially. Source integrity checked 153 files. The new
+synthetic SQLite backup-manifest, restoration and tamper-detection tests passed.
+NVIDIA 620.70.06 and the RTX
+5070 were visible, but Ollama had no running server and no model files were
+visible under the default model directory; no fresh inference or multi-trial
+language-model cognition evaluation was possible in this session. The FTS5
+synthetic suite remained at P@5 0.240, recall@5 1.000 and MRR 0.933; this run's
+warm median/p95 were 1.169/1.211 ms. These are local synthetic measurements,
+not evidence of broad semantic retrieval.
+
 ## Implemented
 
 - Full staged roadmap and architecture decisions.
@@ -258,9 +286,10 @@ memories were read, migrated or altered. Phase 3 is not complete.
   capability. Intent classification did not outperform the deterministic rule
   baseline and remains isolated. No production LLM weights were changed.
 - Skill proposals have no executor. Accepting one grants no permissions.
-- Temporary synthetic backup and restore passed. A durable independent backup
-  target and recovery procedure are not yet established. SMART results remain
-  owner-reported; actual reboot persistence remains unverified.
+- An independent NVMe backup and isolated restore passed on 2026-11-27. It is
+  on the same computer, so off-machine recovery is still needed before any
+  private-memory migration. SMART results remain owner-reported; reboot
+  persistence remains unverified.
 
 ## Next
 
@@ -274,3 +303,54 @@ memories were read, migrated or altered. Phase 3 is not complete.
    algorithms and all production capability evaluations remain unfinished.
 5. Verify physical reboot persistence and keep private-memory migration gated.
 6. Keep Phase 4 out of scope until Phase 3 acceptance criteria pass.
+
+## 2026-11-27 host-access and live cognition update
+
+The read-only mount/GPU failures observed by the previous Codex process came
+from sandbox restrictions. Host-scoped checks confirmed `/home` is writable
+Kingston NVMe Btrfs and `/mnt/burito-brain` is writable ext4 on the separate
+WDC HDD with the expected UUID. The owner-approved, mode-700 backup directory
+was created on NVMe. A 98,304-byte schema-v2 SQLite online backup and manifest
+passed checksum, identity and integrity checks. Scratch restore preserved all
+six Academy records and passed fresh-process retrieval, synthetic project
+continuity, correction and deletion. No personal records were present or
+migrated; this is not an off-machine backup.
+
+The installed Ollama 0.40.18 server was inactive, with no duplicate service or
+process. One temporary server was bound to `127.0.0.1`, using the existing local
+model store. `burito-local:latest` (Qwen3 8B Q4_K_M) returned a real inference;
+Ollama reported 100% GPU, 8,192 context, llamacpp runner, and 6.3 GB model
+memory. NVIDIA driver 620.70.06 remained unchanged. Temporary servers were
+stopped after verification.
+
+A synthetic live evaluation used the actual web/Eve/Ollama streamed runtime,
+with two trials each for project follow-up/next action/decision/blocker,
+experience lesson, Academy stage, corrected/deleted/conflicting memory,
+personal-memory opt-out, unknown information and retrieved prompt injection.
+After enabling memory context only for the explicitly opted-in run and adding
+deterministic redaction of obvious credential-like values, all assertions
+passed in two trials per scenario. The first broad run's corrected/deleted/
+conflict assertions correctly failed while personal context was opted out;
+they passed with explicit opt-in. Before redaction, the model refused the
+injected instruction but echoed its synthetic token; after redaction it withheld
+the value in 2/2 live trials. Across 26 requests in the first run, median
+latency was 504 ms and p95 1,271 ms. Targeted post-fix injection trials had
+median 726 ms. These are small synthetic checks, not a broad generalization
+claim.
+
+`README.md` has six overlap regions when comparing feature content with the
+research-oriented main revision. No README history was changed. The workflow
+uses unfiltered `push` and `pull_request` triggers; GitHub's check-runs API shows
+all four jobs on `ee80d500` completed successfully. The earlier zero-run result
+came from a connector endpoint that filters to pull-request runs; a push run
+did exist. No PR has been created. The connected GitHub integration reported
+the feature branch is unprotected; no settings were changed.
+
+After the final context-redaction change, 138 Python tests passed on Python
+3.11 and 138 on Python 3.14 with no skips. Eve discovery, all nine Node cases,
+153 source-integrity checks, shell syntax, and `git diff --check` passed. The
+credential-pattern scan found no matches. The local branch now correctly tracks
+`origin/feature/phase-3-memory-foundation`, whose commit matches HEAD.
+
+Still unverified: actual reboot persistence, an off-machine backup/restore,
+live KWin behavior and private-memory migration.

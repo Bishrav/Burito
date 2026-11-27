@@ -21,12 +21,15 @@ successful ext4 read/write mounts. Earlier USB 2.0 CRC errors remain in the
 boot log; after the SuperSpeed reconnect, no further read/CRC errors were
 observed, though an unsupported discard command was logged during setup.
 
-The owner reports that both the SMART short and extended self-tests passed.
-This session could not independently verify the self-test log: `lsblk` exposed
-the drive, but `/dev/sda` and `/dev/sda1` were absent from this command
-namespace and `smartctl` returned “No such device.” No SMART test was started
-here. The current `findmnt` observation reports the expected brain UUID mounted
-read-only; no remount or write was attempted. An authorized scratch test wrote 163,840
+On 2026-11-27, the owner reported SMART overall health `PASSED`, short and
+extended self-tests completed without error, zero reallocated/pending/
+uncorrectable sectors and UDMA CRC errors, no logged SMART errors, 33 °C, and
+48 power-on hours. These are owner-executed results; this session did not
+independently inspect the SMART log or start another test. An earlier Codex
+sandbox observation reported the expected brain UUID as read-only. A later
+host-scoped check on 2026-11-27 confirmed that this was a sandbox restriction:
+both `/home` and `/mnt/burito-brain` are read/write on the physical host. No
+mount settings were changed. An authorized scratch test wrote 163,840
 synthetic bytes to a unique file, fsynced it, read it back with a matching
 SHA-256, removed only that file, and fsynced the mount directory. No existing
 file was overwritten. The owner reports a 4 GiB sustained read test passed
@@ -73,6 +76,16 @@ open is rejected. `burito doctor` reports brain storage unavailable and does not
 report free space from the internal disk as brain capacity. An explicit
 `BURITO_DATA_DIR` override is still supported for isolated tests.
 
+`Memory.backup(path)` writes a SQLite online-backup snapshot and an adjacent
+owner-only `path.manifest.json` with the database schema, source brain identity
+when applicable, creation time, SHA-256 and supported restore schema versions.
+`Memory.verify_backup(path)` checks the manifest, private regular-file
+permissions, checksum, schema and SQLite integrity through no-follow file
+descriptors. A synthetic test restored a snapshot into a separate scratch
+database and detected a changed artifact. The checksum detects accidental
+corruption; it is not a signature against an attacker able to replace both
+files.
+
 1. Inspect `lsblk`, filesystem UUIDs and exact mount sources with `findmnt`.
    Match the physical device, capacity, filesystem and expected UUID; reject a
    fallback directory on internal storage or an unexpected device. Read the
@@ -93,6 +106,42 @@ report free space from the internal disk as brain capacity. An explicit
    physical empty database is now version 2. Before importing private records,
    establish an independent backup and tested restore. Missing or changed brain
    identity blocks durable operations; revalidate identity on each open.
+
+## 2026-11-27 release-candidate recheck
+
+Read-only inspection again confirmed `/dev/sda1`, ext4 UUID
+`9428a980-24a6-45b2-a0a6-5e057c819406`, and about 3.6 TiB free. The mount was
+`ro`; `burito doctor` reported `read_only` and did not open a durable database
+for writing. SQLite read-only checks returned schema 2, `integrity_check=ok`,
+and six rows, all Academy progress records. No memory text was read. The live
+database is 98,304 bytes.
+
+The initial sandbox-only check saw `/home` and `/mnt/burito-brain` as
+read-only. See the host-scoped verification below for the actual host state and
+backup result. The proposed destination's parent was on the separate NVMe with
+about 67 GiB free and had no symlink components.
+
+### 2026-11-27 host-access and independent backup verification
+
+Host-scoped inspection showed `/home` read/write Btrfs on Kingston `nvme0n1p8`
+(filesystem UUID `5c077186-8501-4863-9055-2ff6f68980a5`) and BURITO_BRAIN
+read/write ext4 on the physically separate WDC `WD40NPJZ-00CCDT0` (`/dev/sda1`,
+expected UUID). The backup target's parent resolved without symlinks, was
+burito-owned, and had about 67 GiB free. With owner approval,
+`/home/burito/.local/share/burito-backups` was created mode 700. It is on the
+separate NVMe, not the brain HDD.
+
+`Memory.backup` produced
+`/home/burito/.local/share/burito-backups/brain-20261127T160923.sqlite3`
+(98,304 bytes, mode 600) and its owner-only manifest. The manifest checksum,
+schema v2, brain UUID and SQLite integrity all verified. The live database
+contains six Academy progress records and no other memory categories; no
+record content was read or printed. An isolated scratch restore on the NVMe
+passed SQLite integrity/schema checks, preserved all six Academy rows, and
+passed synthetic fresh-process retrieval, project continuity, correction and
+deletion checks. The live database was not overwritten. This verifies a backup
+and restore path but is not a substitute for a second off-machine copy; the
+backup remains exposed to host-level failure.
 
 ## Durable library and fast runtime
 

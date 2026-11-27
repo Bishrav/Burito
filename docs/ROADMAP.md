@@ -88,16 +88,22 @@ upload screenshots, complete memory, credentials, or unrelated files.
 Exit: tested offline, online, timeout, exhausted-budget, provider-failure, and
 connection-loss paths. Failed external writes are reconciled before retrying.
 
-Current Phase 3 branch work now includes schema-v2 attributable memory,
-opt-in project continuity, evidence-backed experiences, non-executable skill
-proposals, persistent Academy progress, tested CPU math/classical-ML exercises,
-and an FTS5 evaluation harness. The Eve runtime now retrieves bounded project,
-experience and Academy context on request; local synthetic conversations
-verified project blockers, prior experience evidence, Academy progress and a
-personal-memory opt-out. Cross-process persistence on the physical brain and
-130-test Python regression runs have passed. Retrieval ranking, independent
-backup, SMART access, physical reboot and broader Academy coverage remain open;
-this is progress, not Phase 3 completion.
+Current Phase 3 work includes schema-v2 attributable memory, opt-in project
+continuity, evidence-backed experiences, non-executable skill proposals,
+persistent Academy progress, tested CPU math/classical-ML exercises, and an
+FTS5 evaluation harness. The Eve runtime retrieves bounded project, experience
+and Academy context on request. Synthetic live conversations tested project
+follow-ups, decisions, blockers, experience evidence, Academy progress,
+corrections, deletions, conflicts, memory opt-out, missing facts and retrieved
+prompt injection. Labeled-secret redaction withheld a synthetic token in two
+post-fix trials; this heuristic is limited and is not comprehensive secret
+detection. The schema-v2 brain backup to a separate NVMe and isolated restore
+passed, preserving six Academy records. This is not off-machine recovery.
+Python suites passed 138 tests on both supported versions; Node, Eve discovery
+and source integrity also passed. FTS5 remains lexical (P@5 0.240, recall@5
+1.000, MRR 0.933 on the 13-case synthetic suite). Owner-reported SMART tests
+passed; reboot persistence, live KWin, off-machine backup and private-memory
+migration remain unverified. Phase 3 is not complete.
 
 Current progress: an optional CLI-only online research tool is implemented as
 an explicitly enabled, per-query approval-gated capability. It sends only the

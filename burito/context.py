@@ -1,10 +1,28 @@
 """Bounded reference context for the local-only conversation milestone."""
 
 import json
+import re
 from pathlib import Path
 
 from .memory import Memory
 from .school import School
+
+
+_SENSITIVE_VALUE = re.compile(
+    r"(?i)\b(password|passwd|passphrase|secret|api[\s_-]?key|access[\s_-]?token|token)"
+    r"(\s*(?:is|[:=])\s*|\s+)([^\s,;.!?]{8,})"
+)
+
+
+def _redact_context(value):
+    """Mask obvious credential-like values before untrusted text reaches the model."""
+    if isinstance(value, str):
+        return _SENSITIVE_VALUE.sub(lambda match: match.group(1) + match.group(2) + "[REDACTED]", value)
+    if isinstance(value, list):
+        return [_redact_context(item) for item in value]
+    if isinstance(value, dict):
+        return {key: _redact_context(item) for key, item in value.items()}
+    return value
 
 
 def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
@@ -238,4 +256,4 @@ def build_context(lesson_id="home.honesty", include_personal=False, memory=None,
             context.pop("knowledge_matches", None)
             context["knowledge_included"] = False
             context["truncated"] = True
-    return context
+    return _redact_context(context)

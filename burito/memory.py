@@ -1,5 +1,7 @@
 """Owner-supplied facts, kept outside the source checkout by default."""
 
+import hashlib
+import json
 import os
 from pathlib import Path
 import math
@@ -503,34 +505,177 @@ class Memory:
             connection.close()
 
     def backup(self, destination):
-        """Produce a consistent SQLite snapshot; never replace an existing file."""
+        """Write a consistent snapshot and a private, checksummed manifest."""
         destination = Path(destination)
         if not destination.is_absolute():
             raise ValueError("Backup destination must be an absolute path")
         # The parent must already exist: do not create folders on an unmounted disk.
         brain_mount = BRAIN_MOUNT.resolve()
         destination_parent = destination.parent.resolve()
+        parent_info = destination_parent.stat()
+        if not stat.S_ISDIR(parent_info.st_mode) or parent_info.st_uid != os.getuid():
+            raise ValueError("Backup directory must be an existing directory owned by you")
         if (destination.is_relative_to(BRAIN_MOUNT)
                 or destination_parent.is_relative_to(brain_mount)
-                or (brain_mount.exists()
-                    and destination_parent.stat().st_dev == brain_mount.stat().st_dev)):
+                or (brain_mount.exists() and parent_info.st_dev == brain_mount.stat().st_dev)):
             raise ValueError("Memory backups must be stored outside the brain filesystem")
-        fd = os.open(destination, os.O_CREAT | os.O_EXCL | os.O_RDWR | os.O_NOFOLLOW, 0o600)
-        os.close(fd)
+        if parent_info.st_mode & 0o077:
+            raise ValueError("Backup directory must be an existing owner-only directory")
+        destination = destination_parent / destination.name
+        manifest_path = Path(f"{destination}.manifest.json")
+        directory_fd = os.open(destination_parent, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        temporary = f".{destination.name}.{uuid.uuid4().hex}.tmp"
+        temporary_manifest = f"{temporary}.json"
         source = target = None
+        published_database = published_manifest = False
         try:
+            fd = os.open(temporary, os.O_CREAT | os.O_EXCL | os.O_RDWR | os.O_NOFOLLOW,
+                         0o600, dir_fd=directory_fd)
+            os.close(fd)
             source = self._connect()
-            target = sqlite3.connect(destination)
+            target = sqlite3.connect(destination_parent / temporary)
+            schema_version = source.execute("PRAGMA user_version").fetchone()[0]
             source.backup(target)
+            target.close()
+            target = None
+            fd = os.open(temporary, os.O_RDONLY | os.O_NOFOLLOW, dir_fd=directory_fd)
+            try:
+                digest = hashlib.sha256()
+                while chunk := os.read(fd, 1024 * 1024):
+                    digest.update(chunk)
+                os.fsync(fd)
+            finally:
+                os.close(fd)
+
+            source_brain = None
+            if self.directory.resolve().is_relative_to(brain_mount):
+                root_fd = os.open(brain_mount, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+                try:
+                    identity = ensure_brain_manifest(root_fd, BRAIN_UUID, True)
+                finally:
+                    os.close(root_fd)
+                source_brain = {"filesystem_uuid": BRAIN_UUID, "brain_id": identity["brain_id"]}
+            manifest = {
+                "format": "burito-sqlite-backup", "format_version": 1,
+                "database": destination.name, "database_schema_version": schema_version,
+                "source_brain": source_brain,
+                "created_at": datetime.now(timezone.utc).isoformat(),
+                "database_sha256": digest.hexdigest(),
+                "restore_compatibility": {"minimum_runtime": "0.1.0",
+                                           "supported_schema_versions": [1, DATABASE_SCHEMA_VERSION]},
+            }
+            payload = json.dumps(manifest, sort_keys=True, separators=(",", ":")).encode()
+            fd = os.open(temporary_manifest, os.O_CREAT | os.O_EXCL | os.O_WRONLY | os.O_NOFOLLOW,
+                         0o600, dir_fd=directory_fd)
+            try:
+                view = memoryview(payload)
+                while view:
+                    view = view[os.write(fd, view):]
+                os.fsync(fd)
+            finally:
+                os.close(fd)
+            os.link(temporary, destination.name, src_dir_fd=directory_fd,
+                    dst_dir_fd=directory_fd, follow_symlinks=False)
+            published_database = True
+            os.link(temporary_manifest, manifest_path.name, src_dir_fd=directory_fd,
+                    dst_dir_fd=directory_fd, follow_symlinks=False)
+            published_manifest = True
+            os.fsync(directory_fd)
         except BaseException:
             if target is not None:
                 target.close()
                 target = None
-            destination.unlink(missing_ok=True)
+            if published_manifest:
+                os.unlink(manifest_path.name, dir_fd=directory_fd)
+            if published_database:
+                os.unlink(destination.name, dir_fd=directory_fd)
             raise
         finally:
             if target is not None:
                 target.close()
             if source is not None:
                 source.close()
+            for name in (temporary, temporary_manifest):
+                try:
+                    os.unlink(name, dir_fd=directory_fd)
+                except FileNotFoundError:
+                    pass
+            os.close(directory_fd)
         return destination
+
+    def verify_backup(self, destination):
+        """Check backup identity, checksum, schema and SQLite integrity read-only."""
+        destination = Path(destination)
+        if not destination.is_absolute():
+            raise ValueError("Backup destination must be an absolute path")
+        parent = destination.parent.resolve()
+        destination = parent / destination.name
+        manifest_path = Path(f"{parent / destination.name}.manifest.json")
+        directory_fd = os.open(parent, os.O_RDONLY | os.O_DIRECTORY | os.O_NOFOLLOW)
+        database_fd = manifest_fd = None
+        try:
+            parent_info = os.fstat(directory_fd)
+            if parent_info.st_uid != os.getuid() or parent_info.st_mode & 0o077:
+                raise ValueError("Backup directory must be owner-only and owned by you")
+            database_fd = os.open(destination.name, os.O_RDONLY | os.O_NOFOLLOW,
+                                  dir_fd=directory_fd)
+            manifest_fd = os.open(manifest_path.name, os.O_RDONLY | os.O_NOFOLLOW,
+                                  dir_fd=directory_fd)
+            for fd in (database_fd, manifest_fd):
+                info = os.fstat(fd)
+                if (not stat.S_ISREG(info.st_mode) or info.st_uid != os.getuid()
+                        or info.st_mode & 0o077):
+                    raise ValueError("Backup files must be owner-private regular files")
+            payload = os.read(manifest_fd, 16385)
+            if len(payload) > 16384:
+                raise ValueError("Backup manifest is too large")
+            metadata = json.loads(payload)
+            if (not isinstance(metadata, dict)
+                    or metadata.get("format") != "burito-sqlite-backup"
+                    or type(metadata.get("format_version")) is not int
+                    or metadata["format_version"] != 1
+                    or metadata.get("database") != destination.name):
+                raise ValueError("Backup manifest format or database name is invalid")
+            compatibility = metadata.get("restore_compatibility")
+            supported_schemas = (compatibility.get("supported_schema_versions")
+                                 if isinstance(compatibility, dict) else None)
+            source_brain = metadata.get("source_brain")
+            checksum = metadata.get("database_sha256")
+            if (not isinstance(compatibility, dict)
+                    or not isinstance(compatibility.get("minimum_runtime"), str)
+                    or not isinstance(supported_schemas, list)
+                    or any(type(version) is not int for version in supported_schemas)
+                    or not isinstance(metadata.get("created_at"), str)
+                    or type(metadata.get("database_schema_version")) is not int
+                    or not isinstance(checksum, str) or len(checksum) != 64):
+                raise ValueError("Backup restore compatibility metadata is invalid")
+            try:
+                datetime.fromisoformat(metadata["created_at"])
+                if source_brain is not None:
+                    uuid.UUID(source_brain["filesystem_uuid"])
+                    uuid.UUID(source_brain["brain_id"])
+            except (KeyError, TypeError, ValueError) as error:
+                raise ValueError("Backup timestamp or source brain identity is invalid") from error
+            digest = hashlib.sha256()
+            while chunk := os.read(database_fd, 1024 * 1024):
+                digest.update(chunk)
+            if digest.hexdigest() != checksum:
+                raise ValueError("Backup checksum does not match its manifest")
+            connection = sqlite3.connect(f"file:/proc/self/fd/{database_fd}?mode=ro", uri=True)
+            try:
+                schema_version = connection.execute("PRAGMA user_version").fetchone()[0]
+                integrity = connection.execute("PRAGMA integrity_check").fetchone()[0]
+            finally:
+                connection.close()
+        finally:
+            if database_fd is not None:
+                os.close(database_fd)
+            if manifest_fd is not None:
+                os.close(manifest_fd)
+            os.close(directory_fd)
+        if (schema_version != metadata["database_schema_version"]
+                or schema_version not in (1, DATABASE_SCHEMA_VERSION)
+                or schema_version not in supported_schemas
+                or integrity != "ok"):
+            raise ValueError("Backup schema or SQLite integrity check failed")
+        return metadata

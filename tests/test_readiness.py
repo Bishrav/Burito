@@ -7,6 +7,8 @@ from unittest.mock import patch
 from burito.doctor import gpu_context
 from burito.education import teach
 from burito.memory import Memory
+from burito.projects import Projects
+from academy.progress import AcademyProgress
 
 
 class ReadinessTests(unittest.TestCase):
@@ -39,20 +41,79 @@ class ReadinessTests(unittest.TestCase):
             root = Path(directory)
             memory = Memory(root / 'memory')
             memory.remember('Synthetic original')
+            Projects(memory).create('Synthetic restore project', 'Check project recovery')
+            AcademyProgress(memory).record(
+                'synthetic.restore', 'Synthetic restore', stage='algorithm_implemented',
+                sources=[{'url': 'https://example.test/source', 'title': 'Synthetic source',
+                          'license': 'Synthetic', 'verified': True}],
+                evidence=['Synthetic restore unit test'],
+            )
             backup = memory.backup(root / 'snapshot.sqlite3')
+            manifest = memory.verify_backup(backup)
+            self.assertEqual(manifest['database_schema_version'], 2)
+            self.assertIsNone(manifest['source_brain'])
+            self.assertEqual(len(manifest['database_sha256']), 64)
             memory.remember('Later change')
             connection = sqlite3.connect(backup)
             try:
-                self.assertEqual(connection.execute('SELECT content FROM memories').fetchall(),
-                                 [('Synthetic original',)])
+                saved = {row[0] for row in connection.execute('SELECT content FROM memories')}
+                self.assertTrue(any('Synthetic original' in item for item in saved))
                 self.assertEqual(connection.execute('PRAGMA integrity_check').fetchone()[0], 'ok')
             finally:
                 connection.close()
             self.assertEqual(backup.stat().st_mode & 0o777, 0o600)
+            self.assertEqual(Path(f'{backup}.manifest.json').stat().st_mode & 0o777, 0o600)
+            connection = sqlite3.connect(backup)
+            restored_dir = root / 'restored-memory'
+            restored_dir.mkdir(mode=0o700)
+            restored = sqlite3.connect(restored_dir / 'memory.sqlite3')
+            try:
+                connection.backup(restored)
+                self.assertEqual(restored.execute('PRAGMA integrity_check').fetchone()[0], 'ok')
+            finally:
+                connection.close()
+                restored.close()
+            recovered = Memory(restored_dir)
+            self.assertEqual(recovered.search('Synthetic original', limit=1)[0]['content'],
+                             'Synthetic original')
+            self.assertEqual(Projects(recovered).list()[0]['objective'],
+                             'Check project recovery')
+            self.assertEqual(AcademyProgress(recovered).list()[0]['topic_id'],
+                             'synthetic.restore')
             with self.assertRaises(FileExistsError):
                 memory.backup(backup)
             with self.assertRaises(ValueError):
                 memory.backup('relative.sqlite3')
+
+    def test_backup_manifest_detects_changed_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            memory = Memory(root / 'memory')
+            backup = memory.backup(root / 'snapshot.sqlite3')
+            with backup.open('r+b') as snapshot:
+                snapshot.seek(0)
+                snapshot.write(b'X')
+            with self.assertRaisesRegex(ValueError, 'checksum'):
+                memory.verify_backup(backup)
+
+    def test_backup_verification_rejects_symlinked_artifacts(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            memory = Memory(root / 'memory')
+            backup = memory.backup(root / 'snapshot.sqlite3')
+            alias = root / 'alias.sqlite3'
+            alias.symlink_to(backup)
+            Path(f'{alias}.manifest.json').symlink_to(Path(f'{backup}.manifest.json'))
+            with self.assertRaises(OSError):
+                memory.verify_backup(alias)
+
+    def test_backup_requires_an_owner_only_destination_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            shared = root / 'shared'
+            shared.mkdir(mode=0o755)
+            with self.assertRaisesRegex(ValueError, 'owner-only'):
+                Memory(root / 'memory').backup(shared / 'snapshot.sqlite3')
 
     def test_failed_backup_leaves_no_partial_snapshot(self):
         with tempfile.TemporaryDirectory() as directory:
