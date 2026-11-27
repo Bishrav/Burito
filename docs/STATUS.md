@@ -295,8 +295,9 @@ not evidence of broad semantic retrieval.
 
 1. Independently inspect SMART health and the extended-test result from the
    owner's terminal using a stable device path; no second self-test was started.
-2. Establish and test a durable independent backup target before migrating any
-   private data; the same-drive temporary restore is not independent protection.
+2. Establish an off-machine backup and verified restore before migrating any
+   private data. The current NVMe copy protects against brain-disk failure, not
+   loss of the host.
 3. Improve FTS5 precision on a broader owner-approved or licensed evaluation set;
    current metrics use small hand-authored synthetic examples.
 4. Expand the Academy curriculum and exercises incrementally; several requested

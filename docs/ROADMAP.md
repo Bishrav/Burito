@@ -253,8 +253,9 @@ requires verified storage and recovery gates before persistent-memory integratio
   explicit-key conflict review, deletion and unsupported schema refusal. Project
   continuity and runtime experience/Academy retrieval now have synthetic
   evidence. General memory consolidation, retention expiry, an independent
-  backup target and restore, physical reboot, and broader retrieval quality are
-  still open acceptance items.
+  off-machine backup/restore, physical reboot, and broader retrieval quality
+  are still open acceptance items. A verified NVMe backup on a separate drive
+  protects against brain-disk failure but not loss of the host.
 
 ### 2026-11-27 integration checkpoint
 
