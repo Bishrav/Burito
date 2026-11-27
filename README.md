@@ -123,9 +123,11 @@ persistent Academy progress. Synthetic project continuity was verified across
 separate processes. Six Academy progress records are present on the brain. A
 checksummed SQLite backup to the separate internal NVMe and isolated restoration
 passed, including integrity and record-count checks; this is not an off-machine
-backup. Automatic mounting after a physical reboot remains unverified. No
-private memories have been migrated. Do not format an existing disk to follow
-this README.
+backup. Automatic mounting after a physical reboot has passed verification.
+The owner accepts the current same-host backup risk; off-machine recovery is
+deferred and remains required before migrating important or irreplaceable
+private memories. No private memories have been migrated. Do not format an
+existing disk to follow this README.
 
 See [brain storage and recovery](docs/BRAIN_STORAGE.md). A snapshot on the same disk is not an independent backup.
 
@@ -242,8 +244,9 @@ bounded project, experience and Academy context; personal memory remains
 excluded unless explicitly opted in. Synthetic live conversations exercised
 project follow-ups, corrections, deletion, memory opt-out and untrusted retrieved
 content through Eve and local Ollama. The Academy and cognitive research tracks
-continue in parallel. Physical reboot persistence, live KWin behavior,
-off-machine backup and private-memory migration remain unverified or gated. See
+continue in parallel. Live KWin behavior and off-machine recovery remain
+unverified. The owner accepts the current host-loss risk for this release;
+private-memory migration remains gated on off-machine recovery. See
 the [roadmap](docs/ROADMAP.md) and [status](docs/STATUS.md) for evidence and
 acceptance criteria rather than interpreting the phase count as a percentage of
 total effort.

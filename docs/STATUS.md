@@ -380,3 +380,64 @@ live KWin behavior, off-machine independent backup/restore, and any private
 memory migration. The verified NVMe backup is on the same computer and does not
 protect against loss of the host. Labeled-value context redaction is a limited
 heuristic, not comprehensive secret or prompt-injection protection.
+
+### 2026-11-27 post-reboot verification
+
+The owner rebooted at 20:07:47. Host-scoped verification after boot confirmed
+`/dev/sda1` mounted at `/mnt/burito-brain` as ext4 UUID
+`9428a980-24a6-45b2-a0a6-5e057c819406`, with `rw,noatime`. `findmnt --verify
+--verbose` passed with zero errors and warnings. `burito doctor` reported the
+brain ready, about 3,665 GiB free, and the RTX 5070 visible. The version-1 brain
+manifest matched the expected volume and schema 2. The SQLite database is an
+owner-private regular file (0600), schema 2, `integrity_check=ok`; an aggregate
+query counted all six Academy progress records without returning record text.
+The previously created NVMe backup passed `Memory.verify_backup` again,
+including SHA-256, schema, integrity and source brain UUID checks. No live
+database writes or private-memory reads occurred during these checks.
+
+An isolated synthetic cognitive test used four separate Python processes and a
+temporary database: project milestone/blocker/next-action continuity, exact
+memory retrieval, correction and revision-history retrieval passed; memory and
+project deletion then passed and deleted records were not retrievable in a
+subsequent process. The temporary store was removed. The six durable Academy
+records were not modified.
+
+Ollama was inactive after boot: no running server or user service was found.
+It was started manually, loopback-only, with the existing model store; no
+driver, model or weights were installed or changed. The existing
+`burito-local:latest` (Qwen3 8B Q4_K_M) returned a synthetic local response.
+`ollama ps` reported 100% GPU, 8,192 context and 6.3 GB loaded; `nvidia-smi`
+identified RTX 5070 / driver 620.70.06. Burito web then reported Eve, bridge,
+Ollama and model ready, and the local conversation endpoint returned a
+completed response. Temporary web transcripts and both test runtime processes
+were stopped/removed afterward. Automatic Ollama startup is not configured or
+verified; this was a manual launch.
+
+PR #4 remains open and mergeable. Latest head `6b6d5e3` passed GitHub Actions
+run `45988020128` (source integrity, runtime checks, Python 3.11, Python 3.14).
+The owner explicitly accepts deferring off-machine backup/restore for Phase 3
+release. The existing internal-NVMe backup is separate from the brain disk but
+cannot protect against loss of the computer; the owner accepts the risk that
+such a loss could destroy both copies. Off-machine backup and a verified restore
+remain required before migrating important or irreplaceable private memories.
+This is deferred infrastructure work, not a tested capability or completed
+requirement. Live KWin remains unverified. PR #4 is open; no PR merge or new
+commit has yet been made at this checkpoint.
+
+### 2026-11-27 owner risk acceptance and release authorization
+
+The owner authorized Phase 3 release integration while explicitly deferring
+off-machine backup and restoration. The owner has no additional suitable
+storage device and does not wish to use the MacBook or cloud storage. The owner
+accepts possible loss of both copies if the whole computer is lost or damaged.
+Verified evidence remains: operational 4 TB brain; checksummed backup on the
+independent internal NVMe and isolated restore; automatic brain mounting and
+database integrity after reboot; six surviving Academy records; synthetic
+cognitive tests; and local GPU inference. Off-machine recovery remains
+unverified, is not represented as completed, and is a hard precondition for
+migration of important or irreplaceable private memories.
+
+The same-host NVMe backup reduces risk from failure of the brain HDD only. No
+off-machine copy, private-memory migration, or live KWin test has been done.
+The owner authorized committing and pushing final documentation, updating PR
+#4, verifying fresh CI, and merging after required checks pass.

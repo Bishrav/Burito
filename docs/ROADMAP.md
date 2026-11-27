@@ -98,12 +98,18 @@ corrections, deletions, conflicts, memory opt-out, missing facts and retrieved
 prompt injection. Labeled-secret redaction withheld a synthetic token in two
 post-fix trials; this heuristic is limited and is not comprehensive secret
 detection. The schema-v2 brain backup to a separate NVMe and isolated restore
-passed, preserving six Academy records. This is not off-machine recovery.
+passed, preserving six Academy records. Automatic brain mounting, database
+integrity and post-reboot inference/runtime checks passed. The owner accepts
+the risk that loss of the computer could destroy both brain and backup.
+Off-machine backup/restore is deferred infrastructure work, not a blocker for
+Phase 3 integration; it remains required before migrating important or
+irreplaceable private memories.
 Python suites passed 138 tests on both supported versions; Node, Eve discovery
 and source integrity also passed. FTS5 remains lexical (P@5 0.240, recall@5
 1.000, MRR 0.933 on the 13-case synthetic suite). Owner-reported SMART tests
-passed; reboot persistence, live KWin, off-machine backup and private-memory
-migration remain unverified. Phase 3 is not complete.
+passed; live KWin remains unverified. Off-machine backup/restore is deferred
+with explicit owner risk acceptance and remains a prerequisite to private-memory
+migration. Phase 3 integration may proceed with these limitations documented.
 
 Current progress: an optional CLI-only online research tool is implemented as
 an explicitly enabled, per-query approval-gated capability. It sends only the
@@ -252,10 +258,11 @@ requires verified storage and recovery gates before persistent-memory integratio
 - Synthetic checks cover persistence/reopen, provenance, correction history,
   explicit-key conflict review, deletion and unsupported schema refusal. Project
   continuity and runtime experience/Academy retrieval now have synthetic
-  evidence. General memory consolidation, retention expiry, an independent
-  off-machine backup/restore, physical reboot, and broader retrieval quality
-  are still open acceptance items. A verified NVMe backup on a separate drive
-  protects against brain-disk failure but not loss of the host.
+  evidence. Physical reboot passed. General memory consolidation, retention
+  expiry, off-machine backup/restore, and broader retrieval quality remain open.
+  The owner accepts deferring off-machine recovery for this release; it remains
+  a prerequisite before migrating important private memories. A verified NVMe
+  backup on a separate drive protects against brain-disk failure but not host loss.
 
 ### 2026-11-27 integration checkpoint
 
@@ -264,6 +271,8 @@ Feature checkpoint `aaee19d` and normal merge commit `f258efa` preserve the
 research-oriented README history. GitHub Actions run `45987228199` passed all
 four jobs for `f258efa`. Local regression results were 138 Python tests on each
 supported version, nine Node tests, Eve discovery, and 153 source-integrity
-checks. This is a release candidate, not a completed release: physical reboot
-mount persistence, live KWin, off-machine backup/restore and private-memory
-migration remain unverified or gated.
+checks. This is a release candidate: physical reboot mount persistence passed.
+Live KWin remains unverified. The owner accepts deferring off-machine recovery
+for this release, with the risk that loss of the computer may destroy both
+copies; off-machine recovery remains required before important private-memory
+migration.

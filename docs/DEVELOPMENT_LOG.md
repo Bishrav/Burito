@@ -643,3 +643,59 @@ KWin behavior and off-machine backup/restore remain unverified; private-memory
 migration was not performed. The local GPU inference and synthetic live
 conversation results are prior verified evidence recorded above, not new tests
 from this integration pass.
+
+### 2026-11-27 post-reboot verification
+
+The owner rebooted at 20:07:47. Host-scoped read-only checks confirmed the
+expected ext4 brain UUID mounted `rw,noatime`; `findmnt --verify --verbose`
+returned zero errors and warnings. `burito doctor` reported brain readiness,
+3,665.4 GiB free and RTX 5070 availability. The private version-1 brain
+manifest matched expected filesystem identity and schema 2. The database was
+owner-private mode 0600; read-only SQLite checks reported schema 2,
+`integrity_check=ok`, and six Academy progress rows. No row content was read.
+`Memory.verify_backup` revalidated the existing NVMe backup checksum, source
+brain UUID, schema and integrity.
+
+Four separate Python processes exercised an isolated synthetic database:
+create/reopen/retrieve a project with milestone, blocker and next action;
+retrieve and correct a synthetic fact; read its correction history; delete both
+records; and confirm neither record was retrievable in a later process. The
+temporary database was removed, and the permanent Academy rows were untouched.
+
+Ollama was not running automatically after reboot and no user service was
+active. One manual server was started on `127.0.0.1:11434` using the existing
+model store. Existing Qwen3 8B Q4_K_M and `burito-local:latest` tags were
+available. A synthetic request returned `POST_REBOOT_LOCAL_OK`; `ollama ps`
+showed 100% GPU, context 8192, and 6.3 GB loaded. NVIDIA reported RTX 5070,
+driver 620.70.06. Burito web started with temporary data and transcript storage;
+`/api/status` reported Eve, bridge, Ollama, and selected model ready, and a
+conversation request completed with `POST_BOOT_BURITO_WEB_OK`. The manually
+started test services were stopped and temporary transcripts removed. Model
+weights and driver configuration were unchanged.
+
+The current roadmap identifies off-machine backup and restoration as an open
+Phase 3 acceptance item; it is mandatory for release under the current docs and
+has not been waived. The existing NVMe backup is on a separate disk but the
+same computer. PR #4 is open and mergeable, head `6b6d5e3`; latest Actions run
+`45988020128` passed all four jobs. The PR was not merged. Live KWin behavior,
+off-machine backup/restore, and private-memory migration remain open or gated.
+
+### 2026-11-27 owner risk acceptance and release authorization
+
+The owner explicitly authorized deferring off-machine backup and restoration
+for Phase 3 release. The owner has no additional suitable storage device and
+does not wish to use the MacBook or cloud storage. The owner accepts that loss
+or damage of the whole computer could destroy both the primary brain and the
+internal-NVMe backup. This changes the release gate only; it does not claim
+off-machine disaster recovery was tested or completed. The internal NVMe copy
+is verified and protects against failure of the brain HDD, but not host loss.
+A verified off-machine backup and restore remain mandatory before migration of
+important or irreplaceable private memories.
+
+Verified release evidence is the operational 4 TB brain, checksummed
+independent internal-NVMe backup with isolated restore, automatic brain mount
+and database integrity after reboot, six surviving Academy records, synthetic
+cross-process cognitive functionality, and post-reboot local GPU inference and
+web/Eve conversation. Live KWin remains unverified. The owner authorized the
+final documentation commit/push, PR #4 update, fresh CI verification and merge
+after required checks pass.
