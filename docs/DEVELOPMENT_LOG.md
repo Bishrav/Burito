@@ -612,3 +612,34 @@ The local branch upstream was corrected to
 `origin/feature/phase-3-memory-foundation`; it now has no ahead/behind commits.
 This changed only local branch tracking configuration, not Git history or the
 worktree checkpoint.
+
+### 2026-11-27 Phase 3 integration and PR checkpoint
+
+Committed the reviewed backup, restoration, context-redaction and documentation
+changes as `aaee19dff61020679308c64fbe5c3d611fce656a` using
+`fix: harden cognitive context and verify independent brain recovery`, then
+pushed normally to `origin/feature/phase-3-memory-foundation`. Fetched
+`origin/main` at `59cc670c55759c39e31a3839d9188d0c1e4e02ec` and merged it
+normally. The README's six overlapping regions were reconciled while preserving
+the research introduction, architecture diagram, methodology, reproducibility
+instructions, security boundaries and limitations. The resolved README names
+`burito-local:latest` and `/mnt/burito-brain/memory`, and describes the NVMe
+backup as same-host protection only. Merge commit
+`f258efa375395d73152b8a463035e73244470da0` was pushed without force; remote
+feature ref was verified at that SHA.
+
+Opened PR #4, “Phase 3: Persistent Cognitive Intelligence, Academy and Brain
+Resilience,” targeting `main`. Fresh GitHub Actions run `45987228199` for
+`f258efa` completed successfully in source-integrity, runtime-checks, Python
+3.11 and Python 3.14. Local post-README tests also passed: 138 tests per Python
+version without skips, Eve discovery, nine Node tests, 153 source-integrity
+checks, shell syntax, diff checks and outgoing artifact/credential scans. An
+initial sandbox run could not open loopback sockets and skipped five environment
+tests; host-scoped reruns passed all tests with no skips.
+
+PR #4 remains open and unmerged pending owner-coordinated physical reboot
+verification and explicit merge approval. The brain mount after reboot, live
+KWin behavior and off-machine backup/restore remain unverified; private-memory
+migration was not performed. The local GPU inference and synthetic live
+conversation results are prior verified evidence recorded above, not new tests
+from this integration pass.

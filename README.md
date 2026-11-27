@@ -236,8 +236,8 @@ The [GitHub Actions workflow](.github/workflows/tests.yml) defines the automated
 | 7 | Specialist agents | Measured coordination under central policy |
 | 8 | Continual learning | Evaluated personalization and controlled adaptation |
 
-Phases 0–2 are integrated. Phase 3 is implemented on its feature branch and
-awaiting pull-request review and release gates. Its web runtime can retrieve
+Phases 0–2 are integrated. Phase 3 is implemented on its feature branch; PR #4
+is open and its initial GitHub checks passed. Its web runtime can retrieve
 bounded project, experience and Academy context; personal memory remains
 excluded unless explicitly opted in. Synthetic live conversations exercised
 project follow-ups, corrections, deletion, memory opt-out and untrusted retrieved

@@ -255,3 +255,14 @@ requires verified storage and recovery gates before persistent-memory integratio
   evidence. General memory consolidation, retention expiry, an independent
   backup target and restore, physical reboot, and broader retrieval quality are
   still open acceptance items.
+
+### 2026-11-27 integration checkpoint
+
+Phase 3 PR #4 is open from `feature/phase-3-memory-foundation` to `main`.
+Feature checkpoint `aaee19d` and normal merge commit `f258efa` preserve the
+research-oriented README history. GitHub Actions run `45987228199` passed all
+four jobs for `f258efa`. Local regression results were 138 Python tests on each
+supported version, nine Node tests, Eve discovery, and 153 source-integrity
+checks. This is a release candidate, not a completed release: physical reboot
+mount persistence, live KWin, off-machine backup/restore and private-memory
+migration remain unverified or gated.

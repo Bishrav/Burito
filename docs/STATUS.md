@@ -354,3 +354,28 @@ credential-pattern scan found no matches. The local branch now correctly tracks
 
 Still unverified: actual reboot persistence, an off-machine backup/restore,
 live KWin behavior and private-memory migration.
+
+### 2026-11-27 Phase 3 integration update
+
+The reviewed eight-file checkpoint was committed as
+`aaee19dff61020679308c64fbe5c3d611fce656a`
+(`fix: harden cognitive context and verify independent brain recovery`). The
+feature branch then merged `origin/main` normally, retaining research README
+commit `59cc670c55759c39e31a3839d9188d0c1e4e02ec`. README overlaps were resolved
+to reflect verified Phase 3 status, `burito-local:latest`, and
+`/mnt/burito-brain/memory`. Merge commit:
+`f258efa375395d73152b8a463035e73244470da0`.
+
+PR #4 is open: https://github.com/Bishrav/Burito/pull/4. GitHub Actions run
+`45987228199` for merge commit `f258efa` completed successfully: source
+integrity, runtime checks, Python 3.11, and Python 3.14 all passed. Local merged
+tree verification also passed: 138 Python tests per version with no skips, Eve
+discovery, nine Node tests, 153 source-integrity checks, shell syntax and diff
+checks. No private database, backup, model weights or credential-like values
+were found in the outgoing tracked files. No pull request merge was performed.
+
+Release gates still open: physical reboot and automatic brain-mount persistence,
+live KWin behavior, off-machine independent backup/restore, and any private
+memory migration. The verified NVMe backup is on the same computer and does not
+protect against loss of the host. Labeled-value context redaction is a limited
+heuristic, not comprehensive secret or prompt-injection protection.
