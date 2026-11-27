@@ -36,6 +36,7 @@ def percentile(values, fraction):
 
 def evaluate(manifest):
     rows = []
+    peak_child_rss_kib = 0
     with manifest.open(encoding="utf-8", newline="") as stream:
         for line, row in enumerate(csv.reader(stream, delimiter="\t"), 1):
             if not row or (len(row) == 1 and not row[0].strip()):
@@ -45,6 +46,8 @@ def evaluate(manifest):
             name, language, reference = row
             if language not in ALLOWED_LANGUAGES:
                 raise ValueError(f"Line {line}: unsupported language selection.")
+            if not reference.strip():
+                raise ValueError(f"Line {line}: reference text must not be empty.")
             audio_path = (manifest.parent / name).resolve()
             if not audio_path.is_file() or audio_path.stat().st_size > MAX_AUDIO_BYTES:
                 raise ValueError(f"Line {line}: audio is missing or exceeds the configured limit.")
@@ -57,6 +60,7 @@ def evaluate(manifest):
             hypothesis = transcribe(audio_path.read_bytes(), "audio/wav", language)
             elapsed = time.perf_counter() - started
             after = resource.getrusage(resource.RUSAGE_CHILDREN)
+            peak_child_rss_kib = max(peak_child_rss_kib, after.ru_maxrss)
             words = lambda value: re.findall(r"\w+", value.casefold())
             ref_words, hyp_words = words(reference), words(hypothesis)
             ref_chars = re.sub(r"\s+", "", reference.casefold())
@@ -71,7 +75,6 @@ def evaluate(manifest):
                 "audio_seconds": duration,
                 "real_time_factor": elapsed / duration,
                 "child_cpu_seconds": after.ru_utime + after.ru_stime - before.ru_utime - before.ru_stime,
-                "child_peak_rss_mib": after.ru_maxrss / 1024,
             })
     if not rows:
         raise ValueError("The TSV contains no evaluation rows.")
@@ -79,7 +82,8 @@ def evaluate(manifest):
     grouped = {}
     for row in rows:
         grouped.setdefault(row["language"], []).append(row)
-    output = {"clips": len(rows), "languages": {}}
+    output = {"clips": len(rows), "evaluation_peak_child_rss_mib": peak_child_rss_kib / 1024,
+              "languages": {}}
     for language, group in grouped.items():
         output["languages"][language] = {
             "clips": len(group),
@@ -89,7 +93,6 @@ def evaluate(manifest):
             "p95_latency_seconds": percentile([item["latency_seconds"] for item in group], 0.95),
             "median_real_time_factor": statistics.median(item["real_time_factor"] for item in group),
             "child_cpu_seconds": sum(item["child_cpu_seconds"] for item in group),
-            "child_peak_rss_mib": max(item["child_peak_rss_mib"] for item in group),
         }
     return output
 
