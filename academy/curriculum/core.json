@@ -61,6 +61,49 @@
       "exercise": "Fit a seeded synthetic line and score separate test points.",
       "completion": "Analytical and gradient implementations recover the known slope and intercept.",
       "sources": [{"url": "https://cs229.stanford.edu/notes_archive/cs229-notes-all/cs229-notes1.pdf", "title": "CS229 Lecture Notes: Linear Regression", "author": "Stanford University", "license_review": "Link only; no content imported; verify each asset license before ingestion."}]
+    },
+    {
+      "id": "audio.digital-signal-fundamentals",
+      "title": "Digital audio sampling and spectral features",
+      "prerequisites": ["math.vectors-matrices", "math.probability-statistics"],
+      "objectives": ["Explain sample rate and quantization", "Inspect a bounded waveform", "Relate a spectrogram and mel features to speech recognition"],
+      "implementation": "Planned: standard-library waveform exercises and a version-pinned audio feature comparison.",
+      "exercise": "Generate a deterministic two-tone signal and verify its duration, sample count and dominant frequencies.",
+      "completion": "Numerical tests verify sample-rate conversion metadata, expected tone peaks and bounded input handling.",
+      "sources": [{"url": "https://www.w3.org/TR/mediacapture-streams/", "title": "Media Capture and Streams", "author": "W3C", "license_review": "Link only; no content imported."}]
+    },
+    {
+      "id": "audio.local-speech-recognition",
+      "title": "Local speech recognition and evaluation",
+      "prerequisites": ["audio.digital-signal-fundamentals", "math.probability-statistics"],
+      "objectives": ["Compare transcription hypotheses to references", "Calculate WER, CER and real-time factor", "Distinguish multilingual transcription from translation"],
+      "implementation": "burito/speech.py and scripts/benchmark_local_asr.py",
+      "exercise": "Evaluate short, licensed or owner-approved WAV clips in a separate train/evaluation set and report aggregate metrics without printing transcript text.",
+      "completion": "Tests verify edit-distance metrics; a representative owner-approved multilingual set and limitations are documented.",
+      "sources": [
+        {"url": "https://github.com/openai/whisper/blob/main/model-card.md", "title": "Whisper Model Card", "author": "OpenAI", "license_review": "Link only; no content imported."},
+        {"url": "https://github.com/ggml-org/whisper.cpp", "title": "whisper.cpp", "author": "ggml-org contributors", "license_review": "Engine and model licenses are checked separately before use or redistribution."}
+      ]
+    },
+    {
+      "id": "audio.voice-activity-detection",
+      "title": "Voice activity detection and turn boundaries",
+      "prerequisites": ["audio.digital-signal-fundamentals"],
+      "objectives": ["Measure speech start/end detection", "Quantify false starts and missed speech", "Separate VAD decisions from action authorization"],
+      "implementation": "Planned: CPU-compatible streaming VAD adapter and fixture evaluation.",
+      "exercise": "Compare silence/speech boundary predictions against labeled synthetic audio segments.",
+      "completion": "Latency, false-positive and false-negative metrics are measured on frozen fixtures.",
+      "sources": [{"url": "https://github.com/snakers4/silero-vad", "title": "Silero VAD", "author": "Silero contributors", "license_review": "Link only; review implementation and model licenses before adopting."}]
+    },
+    {
+      "id": "audio.speech-synthesis",
+      "title": "Local speech synthesis and streaming playback",
+      "prerequisites": ["audio.digital-signal-fundamentals"],
+      "objectives": ["Measure first-audio latency and real-time factor", "Handle chunk boundaries and cancellation", "Review engine and voice licenses independently"],
+      "implementation": "Planned: local TTS provider with cancellable sentence-level playback.",
+      "exercise": "Measure speech start latency and cancellation on synthetic text of increasing length.",
+      "completion": "Resource, cancellation and owner-rated intelligibility results are recorded for a license-reviewed voice.",
+      "sources": [{"url": "https://github.com/OHF-Voice/piper1-gpl", "title": "Piper TTS", "author": "Open Home Foundation voice contributors", "license_review": "Engine and each selected voice license must be reviewed separately."}]
     }
   ]
 }

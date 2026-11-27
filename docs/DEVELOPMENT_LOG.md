@@ -699,3 +699,86 @@ cross-process cognitive functionality, and post-reboot local GPU inference and
 web/Eve conversation. Live KWin remains unverified. The owner authorized the
 final documentation commit/push, PR #4 update, fresh CI verification and merge
 after required checks pass.
+
+### 2026-11-27 — Phase 3 release and Phase 4 research plan
+
+PR #4 merged into main at `6dc83b685498c55d2ce62b8bb6b8f0c38a6247f` after
+fresh CI passed. The owner accepted deferring off-machine backup/restore for
+release, acknowledging both primary brain and internal-NVMe backup could be
+lost with the computer. This is not a completed recovery capability; a tested
+off-machine backup and restore remain required before important or irreplaceable
+private-memory migration. Reboot persistence, isolated restoration, synthetic
+cognitive checks, and local GPU inference were verified. Live KWin remains
+unverified.
+
+Created `feature/phase-4-sensory-intelligence` from integrated main. Added a
+hardware-aware sensory plan covering push-to-talk first, local ASR, VAD, TTS,
+interruptions, one-shot opt-in vision, memory provenance/expiry, permission
+boundaries and reproducible evaluations. The repository's existing OCR and
+desktop approval paths are identified for reuse. The following Phase 4A entry
+records the first implemented slice. GPU concurrency, ASR language/accent
+accuracy, TTS voice licensing and live capture performance remain to be
+measured.
+
+### 2026-11-27 — Phase 4A local hearing vertical slice
+
+Inspected the physical Ryoku audio session: PipeWire/WirePlumber 1.6.11 are
+running, Brave is a PipeWire client, ALSA lists ALC897 capture devices, but
+PipeWire exposes only monitor sources and no physical microphone source. No
+audio was recorded and no Ryoku configuration was changed.
+
+Built upstream `whisper.cpp` commit `79b11911d9d38c4be2fc7dc8b4efeff3324c090f`
+as a CPU-only CLI. CMake 4.4.5 lives in an isolated ignored `.tools` uv
+environment; GCC 16.2.1 built the executable. Downloaded only multilingual
+`ggml-base.bin` (142 MiB) to verified BURITO_BRAIN `models/audio`, mode 600.
+Upstream SHA-1 and measured SHA-256
+`60ed5bc3dd14eea856493d334349b405782ddcaf0028d4b5df4088345fba2efe` matched.
+The engine and OpenAI model weights are MIT licensed. The setup script pins the
+source and checks mount UUID/filesystem/read-write state before model writes.
+
+Implemented a browser button that requests microphone permission only after
+click, caps recording at 15 seconds, allows capture cancellation, releases
+tracks, and presents the local transcript for owner editing; send still uses
+the existing chat form. Added a same-origin loopback route with 8 MiB request
+and 15-second/1 MiB decoded-audio bounds, fixed executable arguments, timeouts,
+private temporary files and cleanup. The route checks MIME, language, origin,
+and verified-brain model state. No raw audio is logged or retained.
+
+The real loopback route transcribed one 11-second upstream smoke fixture exactly:
+WER/CER 0.0 on this single item, 0.649 s latency, RTF 0.059, 2.04 child CPU
+seconds and 282 MiB peak child RSS. This is a local runtime smoke, not an
+owner-speech accuracy claim. Browser microphone testing, permission-denial UI
+in Brave, Nepali/Hindi/code-switch accuracy and VAD/TTS remain open. A local
+benchmark harness reads owner-prepared WAV/reference TSVs and prints aggregate
+WER/CER/latency/RTF/CPU/RSS only, without printing transcript content.
+
+The owner subsequently verified live speech-to-text in Brave using AirPods.
+The working PipeWire default capture source is
+`bluez_input.98:1C:A2:D6:65:85`; Brave is set to **System default**. This
+confirms the actual browser capture and transcription path; no broader
+language/accent accuracy claim is made. Editable transcript preview and explicit
+Send remain unchanged.
+
+The owner additionally verified Cancel, automatic stop at the 15-second cap,
+a clear denied-microphone message, and acceptable transcription on
+representative English recordings. No recording count, duration range, accent,
+noise condition, or WER/CER figure was supplied, so these remain qualitative
+owner verification rather than a measured accuracy benchmark. Nepali, Hindi,
+and mixed-language recognition remain unverified.
+
+Updated Eve's active system instructions to answer casual conversation directly,
+avoid the repeated stock greeting, and use an explicitly shared name only from
+the current conversation. Bounded web context now retains that short owner
+statement for long conversations; it is not written to persistent personal
+memory. Python tests cover retention beyond the recent-turn window. An initial
+live synthetic chat still produced the stock question after a name statement,
+so the instruction was tightened to stop after greetings, introductions, and
+brief acknowledgements. The follow-up three-turn Qwen test returned a short
+greeting, a brief name acknowledgement, and correct name recall. The synthetic
+conversation was deleted. This is one smoke test, not a broad style benchmark.
+
+The active web/Eve process was restarted to load the revised instructions. ASR
+preview remains editable and explicit Send is unchanged. Verification: 147
+Python tests passed on Python 3.11 and 147 on Python 3.14 (seven skips each),
+nine Node tests passed on the host, Eve discovery passed, 159 source files
+passed integrity, shell syntax checks and `git diff --check` passed.

@@ -21,6 +21,7 @@ OPTIONS = {
     "style": ("natural", "structured", "coaching"),
 }
 DEFAULTS = {name: values[0] for name, values in OPTIONS.items()}
+SESSION_NAME = re.compile(r"\b(?:my name (?:is|['’]s)|call me|you can call me)\s+(?!not\b|maybe\b|unknown\b)[\w'’-]{1,40}\b", re.IGNORECASE)
 
 
 class Conflict(ValueError):
@@ -269,6 +270,11 @@ def bounded_context(rows, message, context_tokens):
         earlier.append({"user_quote": excerpt(row["message"], 100),
                         "assistant_quote": excerpt(row["reply"], 140)})
     data = {"recent": list(reversed(recent)), "earlier_excerpts": earlier}
+    for row in rows:
+        match = SESSION_NAME.search(row["message"])
+        if match:
+            data["session_identity"] = {"owner_name_statement": match[0][:120]}
+            break
     while len(json.dumps(data, ensure_ascii=False).encode()) > budget:
         if len(data["earlier_excerpts"]) > 1:
             data["earlier_excerpts"].pop()

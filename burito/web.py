@@ -14,7 +14,7 @@ import subprocess
 import sys
 import tempfile
 import threading
-from urllib.parse import urlsplit
+from urllib.parse import parse_qs, urlsplit
 
 from .chat import ROOT
 from .conversation_api import ConversationAPI
@@ -22,6 +22,7 @@ from .conversations import default_directory, open_store
 from .memory import BRAIN_DATA, BRAIN_MOUNT, BRAIN_UUID, Memory, brain_available
 from .notifications import notify_chat_complete
 from .runtime_lock import acquire_runtime_lock
+from .speech import ALLOWED_LANGUAGES, MAX_AUDIO_BYTES, SpeechUnavailable, available as speech_available, transcribe
 
 LOOPBACK = "127.0.0.1"
 EVE_PORT = 2000
@@ -66,7 +67,7 @@ def local_status(endpoint, model, token, eve_port=EVE_PORT, bridge_port=BRIDGE_P
     return {
         "status": "ready" if eve and bridge and installed else "unavailable",
         "eve": eve, "bridge": bridge, "ollama": ollama, "modelInstalled": installed,
-        "model": model,
+        "model": model, "transcriptionAvailable": speech_available(),
     }
 
 
@@ -84,6 +85,7 @@ class BuritoHandler(ConversationAPI, SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("X-Content-Type-Options", "nosniff")
         self.send_header("Referrer-Policy", "no-referrer")
+        self.send_header("Permissions-Policy", "microphone=(self), camera=()")
         self.send_header("Content-Security-Policy",
                          "default-src 'self'; base-uri 'none'; frame-ancestors 'none'; object-src 'none'")
         super().end_headers()
@@ -158,6 +160,30 @@ class BuritoHandler(ConversationAPI, SimpleHTTPRequestHandler):
             return None
         return body
 
+    def audio_request_body(self):
+        if self.headers.get_content_type() not in {
+                "audio/webm", "audio/ogg", "audio/mp4", "audio/wav", "audio/x-wav"}:
+            self.send_json(415, {"error": "Use a supported browser audio recording format."})
+            return None
+        length = self.headers.get_all("Content-Length") or []
+        if (self.headers.get_all("Transfer-Encoding") or len(length) != 1
+                or not length[0].isascii() or not length[0].isdecimal() or len(length[0]) > 8):
+            self.send_json(400, {"error": "Invalid audio content length."})
+            return None
+        size = int(length[0])
+        if not 0 < size <= MAX_AUDIO_BYTES:
+            self.send_json(413, {"error": "Recording is empty or exceeds the 8 MiB limit."})
+            return None
+        try:
+            audio = self.rfile.read(size)
+        except TimeoutError:
+            self.send_json(408, {"error": "Timed out receiving the recording."})
+            return None
+        if len(audio) != size:
+            self.send_json(400, {"error": "Incomplete audio recording."})
+            return None
+        return audio
+
     def json_request(self):
         body = self.request_body()
         if body is None:
@@ -182,6 +208,37 @@ class BuritoHandler(ConversationAPI, SimpleHTTPRequestHandler):
     def do_POST(self):
         self.close_connection = True
         if not self.trusted_request() or self.conversation_route("POST"):
+            return
+        if urlsplit(self.path).path == "/api/transcribe":
+            audio = self.audio_request_body()
+            if audio is None:
+                return
+            try:
+                parameters = parse_qs(urlsplit(self.path).query, keep_blank_values=True, strict_parsing=True)
+            except ValueError:
+                self.send_json(400, {"error": "Invalid transcription options."})
+                return
+            if set(parameters) - {"language"}:
+                self.send_json(400, {"error": "Unsupported transcription option."})
+                return
+            languages = parameters.get("language", ["en"])
+            if len(languages) != 1 or not languages[0]:
+                self.send_json(400, {"error": "Choose one transcription language."})
+                return
+            language = languages[0]
+            if language not in ALLOWED_LANGUAGES:
+                self.send_json(400, {"error": "Choose English, Nepali, Hindi, or automatic language detection."})
+                return
+            try:
+                result = transcribe(audio, self.headers.get_content_type(), language or "en")
+            except SpeechUnavailable as error:
+                self.send_json(503, {"error": str(error)})
+            except TimeoutError as error:
+                self.send_json(504, {"error": str(error)})
+            except ValueError as error:
+                self.send_json(400, {"error": str(error)})
+            else:
+                self.send_json(200, {"text": result, "language": language or "en"})
             return
         if self.path != "/api/chat":
             self.send_json(404, {"error": "Unknown Burito route."})

@@ -100,6 +100,18 @@ class ConversationStoreTests(unittest.TestCase):
         self.assertIn("The Falcon pin is active only on Sunday.",
                       context["earlier_excerpts"][0]["assistant_quote"])
 
+    def test_explicit_name_stays_in_bounded_context_for_the_same_conversation(self):
+        rows = [{"message": "What is the next task?", "reply": "Review the tests."}] * 6
+        rows.append({"message": "My name is Mira.", "reply": "Nice to meet you, Mira."})
+        context, budget = bounded_context(rows, "What's my name?", 8192)
+        self.assertEqual(context["session_identity"], {"owner_name_statement": "My name is Mira"})
+        self.assertLessEqual(len(json.dumps(context, ensure_ascii=False).encode()), budget)
+
+    def test_negated_name_is_not_saved_as_session_identity(self):
+        context, _ = bounded_context([{"message": "My name is not Mira.", "reply": "Understood."}],
+                                     "What is my name?", 8192)
+        self.assertNotIn("session_identity", context)
+
     def test_rejects_storage_in_checkout_and_freeform_personality(self):
         with self.assertRaises(ValueError):
             with open_store(self.checkout / "state", self.checkout):

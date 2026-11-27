@@ -28,7 +28,13 @@
 #conversation .chat-message .token-comment { color: #a9bac2 }
 #conversation .copy-text { font-size: .75rem; margin-block: .35rem }
 #conversation .chat-message blockquote { border-inline-start: 2px solid #648e9d; padding-inline-start: .7rem }
+.voice-controls { display:flex; align-items:center; flex-wrap:wrap; gap:.55rem; margin-top:.6rem; padding:.65rem; border:1px solid #29434b; border-radius:.4rem; background:#0a1419 }
+.voice-controls button, .voice-controls select { border:1px solid #425c67; border-radius:.35rem; background:#111d24; color:#e0ebf0; padding:.45rem .7rem; font:inherit }
+.voice-controls [aria-pressed="true"] { border-color:#ff7b78; color:#ffc0b5; background:#321b1d }
+.voice-controls label, #voice-status { color:#aec1cb; font-size:.8rem }
+#voice-status { flex-basis:100% }
 :where(.chat-layout, #settings) :focus-visible { outline: 2px solid #7adbe4; outline-offset: 2px }
+:where(.voice-controls) :focus-visible { outline:2px solid #7adbe4; outline-offset:2px }
 :where(.chat-layout, #settings) button:disabled { opacity: .5; cursor: default }
 @media (max-width: 760px) {
   .chat-layout { grid-template-columns: minmax(0, 1fr) }

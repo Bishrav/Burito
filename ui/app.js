@@ -12,11 +12,20 @@ const stop = byId('stop-reply');
 const retry = byId('retry-reply');
 let selected = null;
 let current;
+let mediaRecorder;
 let ready = false;
+let voiceReady = false;
 let busy = false;
 let stopped = false;
 let activeRequest;
 let pending;
+let voiceStream;
+let voiceChunks = [];
+let voiceTimer;
+let voiceBusy = false;
+let voiceStarting = false;
+let cancelVoiceStart = false;
+let discardVoice = false;
 let reconcileRequest;
 let historyOffset = 0;
 let historyVersion = 0;
@@ -44,8 +53,10 @@ function lastTurn() {
 }
 function updateControls() {
   const running = lastTurn()?.status === 'running';
-  input.disabled = !ready || busy || running;
+  input.disabled = !ready || busy || voiceStarting || voiceBusy || running;
   byId('send-message').disabled = input.disabled;
+  byId('record-voice').disabled = !ready || !voiceReady || busy || voiceStarting || voiceBusy;
+  byId('voice-language').disabled = voiceStarting || voiceBusy || Boolean(mediaRecorder);
   stop.disabled = stopped || (!running && !activeRequest);
   retry.disabled = !ready || busy || running || !(pending || ['failed', 'cancelled', 'interrupted'].includes(lastTurn()?.status));
   for (const id of ['new-chat', 'rename-chat', 'delete-chat', 'older-turns']) {
@@ -171,6 +182,7 @@ async function healthCheck() {
     const response = await fetch('/api/status', {signal: AbortSignal.timeout(8000)});
     const health = await response.json();
     ready = response.ok && health.status === 'ready';
+    voiceReady = health.transcriptionAvailable === true;
     byId('runtimeModel').textContent = health.model || 'Unknown';
     unavailable = ready ? 'Local runtime ready'
       : !health.ollama ? 'Ollama is unavailable'
@@ -182,6 +194,7 @@ async function healthCheck() {
     unavailable = 'Burito web server is unavailable';
   }
   byId('runtimeSummary').textContent = unavailable;
+  if (!voiceReady && !mediaRecorder && !voiceBusy) byId('voice-status').textContent = 'Local transcription is not configured';
   const pill = document.querySelector('.connection-card .pill');
   pill.textContent = ready ? 'Local ready' : 'Unavailable';
   pill.classList.toggle('neutral', ready);
@@ -297,6 +310,148 @@ async function runTurn(payload) {
     input.focus();
   }
 }
+
+function releaseMicrophone() {
+  clearTimeout(voiceTimer);
+  voiceTimer = undefined;
+  for (const track of voiceStream?.getTracks() ?? []) track.stop();
+  voiceStream = undefined;
+  byId('record-voice').setAttribute('aria-pressed', 'false');
+  byId('record-voice').textContent = 'Record voice';
+  byId('cancel-voice').hidden = true;
+}
+
+async function transcribeRecording(blob) {
+  voiceBusy = true;
+  byId('voice-status').textContent = 'Transcribing locally…';
+  updateControls();
+  try {
+    const language = byId('voice-language').value;
+    const response = await fetch(`/api/transcribe?language=${encodeURIComponent(language)}`, {
+      method: 'POST',
+      headers: {'Content-Type': blob.type || 'audio/webm'},
+      body: blob,
+      signal: AbortSignal.timeout(60000),
+    });
+    const result = await response.json();
+    if (!response.ok) throw Error(result.error || `Transcription failed (${response.status}).`);
+    if (result.text) {
+      input.value = input.value.trim() ? `${input.value.trim()} ${result.text}` : result.text;
+    }
+    byId('voice-status').textContent = result.text
+      ? 'Transcript ready to review and edit; it has not been sent.'
+      : 'No speech detected. Nothing was sent.';
+    input.focus();
+  } catch (error) {
+    byId('voice-status').textContent = 'Transcription failed';
+    report(error.message);
+  } finally {
+    voiceBusy = false;
+    updateControls();
+  }
+}
+
+function finishRecording(discard = false) {
+  if (!mediaRecorder) return;
+  discardVoice = discard;
+  clearTimeout(voiceTimer);
+  byId('cancel-voice').hidden = true;
+  if (!discard) byId('voice-status').textContent = 'Recording stopped; processing locally…';
+  if (mediaRecorder.state !== 'inactive') mediaRecorder.stop();
+}
+
+async function startRecording() {
+  if (voiceStarting || mediaRecorder || busy || voiceBusy) return;
+  if (!navigator.mediaDevices?.getUserMedia || !window.MediaRecorder) {
+    byId('voice-status').textContent = 'This browser does not support microphone recording.';
+    return;
+  }
+  voiceStarting = true;
+  cancelVoiceStart = false;
+  byId('cancel-voice').hidden = false;
+  updateControls();
+  byId('voice-status').textContent = 'Waiting for browser microphone permission…';
+  try {
+    voiceStream = await navigator.mediaDevices.getUserMedia({
+      audio: {echoCancellation: true, noiseSuppression: true, autoGainControl: true},
+      video: false,
+    });
+  } catch (error) {
+    byId('voice-status').textContent = error.name === 'NotAllowedError'
+      ? 'Microphone permission was denied.'
+      : error.name === 'NotFoundError' ? 'No microphone is available to the browser.'
+        : 'Could not open the microphone.';
+    report(byId('voice-status').textContent);
+    voiceStarting = false;
+    byId('cancel-voice').hidden = true;
+    updateControls();
+    return;
+  }
+  if (cancelVoiceStart) {
+    for (const track of voiceStream.getTracks()) track.stop();
+    voiceStream = undefined;
+    voiceStarting = false;
+    byId('cancel-voice').hidden = true;
+    byId('voice-status').textContent = 'Microphone request cancelled.';
+    updateControls();
+    return;
+  }
+  const mimeType = ['audio/webm;codecs=opus', 'audio/ogg;codecs=opus', 'audio/webm']
+    .find(type => MediaRecorder.isTypeSupported(type));
+  try {
+    mediaRecorder = new MediaRecorder(voiceStream, mimeType ? {mimeType} : undefined);
+  } catch {
+    releaseMicrophone();
+    voiceStarting = false;
+    byId('voice-status').textContent = 'The browser could not start audio recording.';
+    updateControls();
+    return;
+  }
+  voiceChunks = [];
+  discardVoice = false;
+  mediaRecorder.addEventListener('dataavailable', event => {
+    if (event.data.size) voiceChunks.push(event.data);
+  });
+  mediaRecorder.addEventListener('stop', () => {
+    const recorder = mediaRecorder;
+    mediaRecorder = undefined;
+    const chunks = voiceChunks;
+    voiceChunks = [];
+    releaseMicrophone();
+    updateControls();
+    if (discardVoice) {
+      byId('voice-status').textContent = 'Recording discarded.';
+      return;
+    }
+    const blob = new Blob(chunks, {type: recorder.mimeType || 'audio/webm'});
+    chunks.length = 0;
+    if (!blob.size || blob.size > 8 * 1024 * 1024) {
+      byId('voice-status').textContent = 'Recording was empty or exceeded the 8 MiB limit.';
+      return;
+    }
+    transcribeRecording(blob);
+  }, {once: true});
+  mediaRecorder.start(250);
+  byId('record-voice').textContent = 'Stop and transcribe';
+  byId('record-voice').setAttribute('aria-pressed', 'true');
+  byId('cancel-voice').hidden = false;
+  byId('voice-status').textContent = 'Recording · microphone active · maximum 15 seconds';
+  voiceStarting = false;
+  updateControls();
+  voiceTimer = setTimeout(() => finishRecording(false), 15_000);
+}
+
+byId('record-voice').addEventListener('click', () => {
+  if (mediaRecorder) finishRecording(false);
+  else startRecording();
+});
+byId('cancel-voice').addEventListener('click', () => {
+  if (voiceStarting) {
+    cancelVoiceStart = true;
+    byId('cancel-voice').hidden = true;
+    byId('voice-status').textContent = 'Cancelling microphone request…';
+  } else finishRecording(true);
+});
 
 composer.addEventListener('submit', async event => {
   event.preventDefault();

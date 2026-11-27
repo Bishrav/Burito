@@ -2,6 +2,45 @@
 
 ## Current verification
 
+### Phase 3 release and Phase 4 planning (2026-11-27)
+
+Phase 3 was merged through PR #4. The owner accepted deferring off-machine
+backup and restoration: primary BURITO_BRAIN storage, an independent same-host
+NVMe backup and isolated restoration are verified; physical reboot persistence,
+synthetic cognitive functionality and local GPU inference passed. The owner
+accepts that whole-computer loss could destroy both copies. Off-machine disaster
+recovery remains unverified and deferred; it is required before migrating
+important or irreplaceable private memories. Live KWin behavior remains
+unverified. See the latest [development log](DEVELOPMENT_LOG.md) and
+[brain storage](BRAIN_STORAGE.md) evidence.
+
+Phase 4 work is on `feature/phase-4-sensory-intelligence`, based on merged main
+at `6dc83b685498c55d2ce62b8bb6b8f0c38a6247f`. The roadmap is
+[`PHASE_4_SENSORY_INTELLIGENCE.md`](PHASE_4_SENSORY_INTELLIGENCE.md). Phase 4A
+now builds pinned CPU-only whisper.cpp in ignored `.tools`, with one 142 MiB
+multilingual base model at `/mnt/burito-brain/models/audio/ggml-base.bin`.
+Installation checks the verified brain UUID and refuses to overwrite existing
+source/model files. The browser has explicit bounded capture, local
+transcription, editable preview and text submission; it never auto-sends.
+Qwen3 8B, system packages, drivers and system configuration are unchanged.
+The owner verified live speech-to-text in Brave using AirPods. The working
+PipeWire default capture source is `bluez_input.98:1C:A2:D6:65:85`; Brave's
+microphone selection is **System default**. The owner also verified Cancel,
+the 15-second recording limit, a clear denied-permission message, and
+acceptable transcription of representative English recordings. Sample count,
+accent/noise conditions, and quantitative accuracy are unmeasured; multilingual
+accuracy remains unbenchmarked. One 11-second upstream
+smoke clip matched its reference exactly (WER/CER 0.0 on one item; 0.649 s,
+RTF 0.059, 282 MiB child RSS). This is not representative accuracy evidence.
+The conversation system prompt now directs natural casual replies and avoids
+repeated stock greetings. Explicit owner name statements are carried only in
+that conversation's bounded transcript context, not persistent personal memory.
+After prompt refinement, one live synthetic three-turn Qwen conversation gave a
+brief greeting, acknowledged the name without a service prompt, and recalled the
+name on request; its temporary conversation was deleted. This is a smoke check,
+not a guarantee of identical behavior across prompts. Editable ASR transcripts
+remain unsent until the owner presses Send.
+
 Phase 0 is merged into main at `cd61b76`. Phase 1 adds a verified
 loopback-only web chat path, status reporting, opt-in notifications and a Hyprland
 window adapter. The historical records below include prior KDE observations.

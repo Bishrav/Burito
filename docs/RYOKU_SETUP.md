@@ -119,6 +119,35 @@ Once the runtime is recovered, set `BURITO_LOCAL_MODEL=burito-local` and `BURITO
 | REST and WebSocket | The installed Node runtime and curl are enough for local REST and WebSocket development. Node has a WebSocket client. Review the recovered runtime before selecting a server dependency. |
 | Private remote access | A future device can use an authenticated application API over Tailscale or WireGuard, or an SSH local port forward. Keep direct Ollama access bound to loopback. Approve any host service, VPN enrollment, or remote access change separately. |
 
+## Optional local speech recognition (Phase 4A)
+
+The current Phase 4A path uses the pinned CPU-only `whisper.cpp` CLI and one
+multilingual Whisper base model. With the expected BURITO_BRAIN mounted, run
+`bash scripts/setup-local-asr.sh`. The script verifies the configured brain
+UUID, ext4 filesystem and read/write mount before touching the model directory;
+it pins the source revision and verifies both published SHA-1 and recorded
+SHA-256 before accepting the model. Build tools live under ignored `.tools`,
+and the 142 MiB model is stored at
+`/mnt/burito-brain/models/audio/ggml-base.bin`. It does not modify system
+packages or GPU drivers. The tested CPU process used about 282 MiB peak RSS on
+one 11-second fixture; one exact transcription is a smoke check, not an accuracy
+claim. The benchmark harness accepts a local TSV of WAV paths, language codes
+and reference text and reports aggregate WER/CER and timing without printing
+transcripts: `python3 scripts/benchmark_local_asr.py --help`.
+
+The web console requests microphone permission only after the owner presses
+Record, caps capture at 15 seconds, offers cancellation, and presents an
+editable transcript; it does not submit automatically or retain raw audio.
+An earlier host snapshot found no physical source exposed by PipeWire. The owner
+verified live speech-to-text in Brave with AirPods using the
+`bluez_input.98:1C:A2:D6:65:85` PipeWire source and Brave's **System default**
+microphone selection. The owner also verified Cancel, the 15-second capture
+limit, a clear denied-permission message, and acceptable transcription of
+representative English recordings. Sample count, accent/noise conditions, and
+quantitative accuracy are unmeasured; multilingual accuracy remains open. Press
+Record and allow the browser's normal microphone prompt. Camera capture remains
+denied by the web policy.
+
 
 ## Phase 1 web console
 

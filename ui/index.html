@@ -71,6 +71,18 @@
               <form class="composer" id="composer">
                 <label for="message">MESSAGE</label>
                 <div class="composer-row"><input id="message" type="text" maxlength="2400" placeholder="Ask Burito something…" autocomplete="off"><button id="send-message" type="submit">Send</button></div>
+                <div class="voice-controls" aria-label="Local voice input">
+                  <button id="record-voice" type="button" aria-pressed="false">Record voice</button>
+                  <button id="cancel-voice" type="button" hidden>Cancel recording</button>
+                  <label for="voice-language">Transcription language</label>
+                  <select id="voice-language">
+                    <option value="en">English</option>
+                    <option value="ne">Nepali</option>
+                    <option value="hi">Hindi</option>
+                    <option value="auto">Detect automatically</option>
+                  </select>
+                  <span id="voice-status" role="status" aria-live="polite">Microphone off</span>
+                </div>
                 <div class="chat-actions">
                   <button id="stop-reply" type="button" disabled>Stop</button>
                   <button id="retry-reply" type="button" disabled>Retry</button>

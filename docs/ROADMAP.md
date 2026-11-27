@@ -27,6 +27,16 @@ The sequence below supersedes the historical milestones retained in this file.
 
 See [vision](VISION.md), [security](SECURITY.md), and [innovation](INNOVATION.md).
 
+### Phase 4 sensory intelligence plan
+
+Phase 3 is integrated. The implementation proposal for local push-to-talk,
+speech recognition/synthesis, turn interruption, opt-in vision, sensory
+context handling and hardware-aware evaluation is in
+[`PHASE_4_SENSORY_INTELLIGENCE.md`](PHASE_4_SENSORY_INTELLIGENCE.md). It is a
+research and sequencing plan. Phase 4A has a pinned CPU-only Whisper CLI and
+one base model on BURITO_BRAIN; the owner verified live Brave speech-to-text
+using an AirPods microphone. Broader accuracy evaluation remains open.
+
 ### Phase 1 verification
 
 Phase 1 verifies the local Eve and Ollama web path with a temporary
@@ -117,9 +127,9 @@ approved query. Live provider calls, approval denial, timeout, budget limits,
 and provider-failure behavior still need verification; this does not complete
 milestone 2. See `docs/ONLINE_RESEARCH.md`.
 
-## 3 — Voice and desktop presence
+## 3 — Voice and desktop presence (Phase 4)
 
-Add local speech recognition and speech synthesis, push-to-talk first, then
+Continue local speech recognition and add speech synthesis, push-to-talk first, then
 optional wake word. Provide listening/speaking indicators, interruption,
 mute, and text fallback. Add a desktop panel showing current task, memory,
 connection mode, and approvals. Measure accuracy with the owner's microphone
