@@ -31,11 +31,16 @@ class SpeechTests(unittest.TestCase):
             root = Path(root)
             model_dir = root / "models/audio"
             model_dir.mkdir(parents=True)
+            ffmpeg, whisper = root / "ffmpeg", root / "whisper-cli"
+            for executable in (ffmpeg, whisper):
+                executable.write_text("#!/bin/sh\nexit 0\n", encoding="utf-8")
+                executable.chmod(0o700)
             model = model_dir / "ggml-base.bin"
             model.write_bytes(b"synthetic model")
-            with patch.dict(os.environ, {"BURITO_WHISPER_MODEL": str(model)}, clear=True), \
+            with patch.dict(os.environ, {
+                    "BURITO_FFMPEG": str(ffmpeg), "BURITO_WHISPER_CLI": str(whisper),
+                    "BURITO_WHISPER_MODEL": str(model)}, clear=True), \
                  patch.object(speech, "BRAIN_MOUNT", root), patch.object(speech, "brain_available", return_value=False), \
-                 patch("burito.speech.shutil.which", return_value="/usr/bin/ffmpeg"), \
                  patch("burito.speech.subprocess.run") as run:
                 with self.assertRaisesRegex(speech.SpeechUnavailable, "brain volume"):
                     speech.transcribe(b"audio", "audio/webm")
